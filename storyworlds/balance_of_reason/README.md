@@ -6,6 +6,14 @@ In this fictional timeline the Chinese Communist Party converts to Muʿtazilī t
 
 The game is built around a question that makes the historical **Mihna** relevant again: what becomes of rational inquiry when a government insists on enforcing the correct creed?
 
+## Public playtest
+
+**[Play Balance of Reason on GitHub Pages](https://moralitylabai.github.io/GPTStoryworld/)**. GitHub's `gh-pages` deployment workflow has completed successfully. You can also run the site locally.
+
+The illustrated title screen offers **New campaign**, **Resume campaign**, **How to play**, and **Copy playtest link**. During a game, **Copy campaign link** creates a compact URL containing the policy decisions made so far. Opening it on another device reconstructs the national and faction state against the same `source_cards.json` version. Players with an existing autosave are asked before replacing it. The copied URL contains policy decisions and a non-cryptographic compatibility checksum, with no feedback responses or personal details.
+
+The **Feedback** screen can copy a field report and reproducible campaign link in one message, or download a JSON report. The player chooses what to share. No server receives playtest feedback.
+
 ## Play in a browser
 
 From this directory, start a local web server:
@@ -16,7 +24,7 @@ python3 -m http.server 8000
 
 Visit **http://localhost:8000**. Choose policy options with the mouse or keys **1**, **2**, or **3**. The national dashboard displays 16 bounded indicators while the coalition board shows 11 independently motivated constituencies. The highlighted faction has a chance to issue a countermove that year.
 
-**Save trace** exports the decisions, outcomes, 16 national scores and 11 coalition standings. **Resume trace** loads the record, verifies every turn against the same `source_cards.json` revision, and reconstructs the exact active scene. A compatibility fingerprint guards against accidentally resuming on an altered edition; this is a consistency check rather than a cryptographic authentication mechanism.
+**Copy campaign link** shares the reproducible policy history through a URL. **Save trace** exports the decisions, outcomes, 16 national scores and 11 coalition standings. **Resume trace** loads the record, verifies every turn against the same `source_cards.json` revision, and reconstructs the exact active scene. A compatibility fingerprint guards against accidentally resuming on an altered edition; this is a consistency check rather than a cryptographic authentication mechanism.
 
 **Export Sweepweave JSON** generates the full-metadata native storyworld in the browser. Open the repo-root `storyworld_reader.html` and select that JSON file to play it in the existing reader.
 
@@ -93,14 +101,14 @@ Everything after the fictional 2034 conversion is alternate history. This work a
 
 The visual frontend is implemented in `visuals.mjs` and `visuals.css`, loaded by the existing `index.html`. It provides an illustrated title/menu, contextual portraits, a clickable regional atlas, diplomacy view, an institutional policy codex, chronicle, gallery, responsive mobile layout and playtest feedback download. The original strategic engine still governs every choice and faction countermove.
 
-The project also has a clean **`gh-pages`** branch containing a root-level static copy of the site and four self-contained illustrated SVG backdrops. The repository owner can enable the public playtest at **[Repository Settings → Pages](https://github.com/MoralityLabAI/GPTStoryworld/settings/pages)**: choose **Deploy from a branch**, select **`gh-pages`** and **`/(root)`**, then Save. The intended site URL is **https://moralitylabai.github.io/GPTStoryworld/**. A URL only becomes shareable after GitHub reports a successful Pages deployment.
+The project also has a clean **`gh-pages`** branch containing a root-level static copy of the site and four self-contained illustrated SVG backdrops. The repository owner can enable the public playtest at **[Repository Settings → Pages](https://github.com/MoralityLabAI/GPTStoryworld/settings/pages)**: choose **Deploy from a branch**, select **`gh-pages`** and **`/(root)`**, then Save. The intended site URL is **https://moralitylabai.github.io/GPTStoryworld/**. The Pages build-and-deploy workflow has completed successfully for `gh-pages`; the published link above is intended for playtesting.
 
 The generated concept-art images have matching, optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
 
 The app autosaves a signed-index *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
 
 Tests include:
-- `node --test *.test.mjs` for storyworld parity, gameplay, portraits, atlas and trace integrity.
+- `node --test *.test.mjs` for storyworld parity, gameplay, portraits, atlas, trace integrity and source-pinned shareable campaigns.
 - `node browser-smoke.mjs` using a local Chrome/Chromium and `playwright-core` to verify the real UI from title screen through decisions, autosave/resume, mobile and feedback.
 - `.github/workflows/balance-of-reason-pages.yml` stages the playtest build after regression and headless browser checks. Branch deployment through `gh-pages` is the default. Optional GitHub Actions deployment can be enabled later.
 
