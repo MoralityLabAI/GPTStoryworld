@@ -97,6 +97,12 @@ Its Muʿtazilī material draws on the five classical principles, including divin
 
 Everything after the fictional 2034 conversion is alternate history. This work asserts neither a CCP conversion nor a forecast of world war.
 
+## Playtest comfort and production artwork
+
+Players can now see a **Policy consequences** panel after each decision. It shows changes since the previous turn to national indicators and independent faction standings. The same impact ledger is reconstructed when saved campaign traces are resumed.
+
+The generated high-resolution concept art is distributed as a seven-image WebP ZIP. The repo includes `tools/install_art_pack.py`, an archive-validated installer with automated tests, and a detailed guide at [assets/README.md](assets/README.md). An owner-run installation from a local checkout will publish those binaries to the PR and `gh-pages` branches. Until then, the live game uses the already-integrated vector illustrations.
+
 ## Illustrated GitHub Pages playtest (production frontend preview)
 
 The visual frontend is implemented in `visuals.mjs` and `visuals.css`, loaded by the existing `index.html`. It provides an illustrated title/menu, contextual portraits, a clickable regional atlas, diplomacy view, an institutional policy codex, chronicle, gallery, responsive mobile layout and playtest feedback download. The original strategic engine still governs every choice and faction countermove.
@@ -105,7 +111,7 @@ The project also has a clean **`gh-pages`** branch containing a root-level stati
 
 The generated concept-art images have matching, optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
 
-The app autosaves a signed-index *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
+The app autosaves an indexed, *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
 
 Tests include:
 - `node --test *.test.mjs` for storyworld parity, gameplay, portraits, atlas, trace integrity and source-pinned shareable campaigns.
