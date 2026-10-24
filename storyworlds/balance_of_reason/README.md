@@ -14,6 +14,12 @@ The illustrated title screen offers **New campaign**, **Resume campaign**, **How
 
 The **Feedback** screen can copy a field report and reproducible campaign link in one message, or download a JSON report. The player chooses what to share. No server receives playtest feedback.
 
+### Install the original art and play offline
+
+The title menu now has **Load pixel-art ZIP**. Select `balance-of-reason-production-art-pack.zip` directly, without extracting it or uploading anything to GitHub. The browser verifies seven WebP images and stores the full-resolution artwork locally with IndexedDB. You can replace it or use **Restore default SVG artwork** from the Gallery. Artwork stays on the same device and is independent of shared campaign links.
+
+The game also registers an offline cache on HTTPS and localhost. After one successful online visit, the campaign engine, scenes, map, and saved local progress can be used without a network connection. New storyworld editions still require an online refresh. The imported art remains available offline on browsers that allow local storage.
+
 ## Play in a browser
 
 From this directory, start a local web server:
@@ -119,7 +125,7 @@ The visual frontend is implemented in `visuals.mjs` and `visuals.css`, loaded by
 
 The project also has a clean **`gh-pages`** branch containing a root-level static copy of the site and four self-contained illustrated SVG backdrops. The repository owner can enable the public playtest at **[Repository Settings → Pages](https://github.com/MoralityLabAI/GPTStoryworld/settings/pages)**: choose **Deploy from a branch**, select **`gh-pages`** and **`/(root)`**, then Save. The intended site URL is **https://moralitylabai.github.io/GPTStoryworld/**. The Pages build-and-deploy workflow has completed successfully for `gh-pages`; the published link above is intended for playtesting.
 
-The generated concept-art images have matching, optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
+The browser can import the ZIP directly using **Load pixel-art ZIP**. Repository-wide hosting of the same artwork is also supported by placing the optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
 
 The app autosaves an indexed, *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
 
@@ -128,4 +134,4 @@ Tests include:
 - `node browser-smoke.mjs` using a local Chrome/Chromium and `playwright-core` to verify the real UI from title screen through decisions, autosave/resume, mobile and feedback.
 - `.github/workflows/balance-of-reason-pages.yml` stages the playtest build after regression and headless browser checks. Branch deployment through `gh-pages` is the default. Optional GitHub Actions deployment can be enabled later.
 
-The site is a public fictional-playtest build. All data remains client-side unless a player chooses to download and share a trace or report.
+The site is a public fictional-playtest build. Art imports, campaign autosaves, and feedback remain on the player's device unless they choose to share. A small, versioned service worker supports repeat visits offline.
