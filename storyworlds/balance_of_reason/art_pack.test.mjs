@@ -37,7 +37,7 @@ test('uncompressed ZIP method works for all seven assets',async()=>{
  assert.equal(Object.keys(result).length,7);
 });
 test('invalid, duplicate, truncated, oversized and unsupported images are rejected',async()=>{
- await assert.rejects(()=>extractArtZip(new Blob([Buffer.from('BAD ZIP')])),/invalid ZIP/);
+ await assert.rejects(()=>extractArtZip(new Blob([Buffer.alloc(64,33)])),/invalid ZIP/);
  const missing=new Blob([Buffer.concat([zipEntry('assets/hero.webp',pixel)])]);
  await assert.rejects(()=>extractArtZip(missing),/needs all seven/);
  const duplicate=new Blob([Buffer.concat([zipEntry('assets/hero.webp',pixel),zipEntry('assets/hero.webp',pixel)])]);
