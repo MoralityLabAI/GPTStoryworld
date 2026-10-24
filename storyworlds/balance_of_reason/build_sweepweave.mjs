@@ -4,6 +4,7 @@
 export function buildSweepweave(source){
   if(source?.acts?.length!==8 || source.acts.some(a=>a.events.length!==7))
     throw Error("Expected eight acts with seven policy scenes each");
+  if(source.version!==3||!Array.isArray(source.factions)||source.factions.length!==11)throw Error("Expected eleven autonomous factions in v3 source");
   const stamp=1792800000,metrics=source.metrics;
   const text=(value)=>({pointer_type:"String Constant",script_element_type:"Pointer",value});
   const constant=(value)=>({pointer_type:"Bounded Number Constant",script_element_type:"Pointer",value:Number(value.toFixed(6))});
@@ -44,6 +45,16 @@ export function buildSweepweave(source){
     if((d.G||0)>0)result.push(nudge("H",d.G*.3*factor),nudge("W",-d.G*.24*factor));
     if((d.F||0)>0)result.push(nudge("U",-d.F*.2*factor));
     if((d.H||0)>0)result.push(nudge("W",-d.H*.12*factor));
+    const effective=Object.fromEntries(Object.entries(d).map(([key,value])=>
+      [key,value*(value<0&&!success?1.26:factor)]));
+    const factionShifts=source.factions.map(faction=>{
+      const amount=Object.entries(faction.weights).reduce(
+        (total,[key,weight])=>total+(effective[key]||0)*weight,0)*.22;
+      const rounded=Math.max(-1,Math.min(1,Math.round(amount*100000)/100000));
+      return {id:faction.id,amount:rounded};
+    }).filter(x=>Math.abs(x.amount)>=.003).sort((a,b)=>
+      Math.abs(b.amount)-Math.abs(a.amount) || a.id.localeCompare(b.id)).slice(0,4);
+    for(const change of factionShifts)result.push(nudge("Coalition_Standing",change.amount,change.id));
     result.push(nudge(choiceIndex===0?"U":choiceIndex===1?"S":"T",success?.04:-.045,witness));
     return result;
   }
@@ -120,7 +131,7 @@ export function buildSweepweave(source){
     for(let j=0;j<act.events.length;j++){
       const [title,body,fallout,choices]=act.events[j];
       const id="page_"+act.year+"_0"+(j+1);
-      const successor=j+1===act.events.length?"page_"+act.year+"_crisis":"page_"+act.year+"_0"+(j+2);
+      const successor=j+1===act.events.length?"page_"+act.year+"_countermove":"page_"+act.year+"_0"+(j+2);
       const options=choices.map(([label,outcome,delta],index)=>{
         const test=index===0?(j===4?"D":j===5?"U":j===6?"C":j%2===0?"U":"A"):index===1?"P":"T";
         const threshold=index===0?(-.25+ai*.025):index===1?(.035+ai*.01):(-.08+ai*.018);
@@ -131,6 +142,34 @@ export function buildSweepweave(source){
       });
       ids.push(encounter(id,title,body,spool,options));
     }
+    const council=act.countermove;
+    if(!council || !source.factions.some(x=>x.id===council.faction))throw Error("Unknown annual countermove "+act.year);
+    const councilId="page_"+act.year+"_countermove";
+    const coalitionPtr=pointer("Coalition_Standing",1,council.faction);
+    const factionGate=(good)=>({
+      operator_type:"Arithmetic Comparator",script_element_type:"Operator",
+      operator_subtype:good?"Greater Than or Equal To":"Less Than",
+      operands:[coalitionPtr,constant(council.threshold)]
+    });
+    const factionOptions=council.options.map(([label,proposal,delta],index)=>({
+      id:councilId+"_opt_"+(index+1),text_script:text(label),visibility_script:true,
+      performability_script:true,
+      reactions:[true,false].map(good=>({
+        id:councilId+"_opt_"+(index+1)+(good?"_cooperate":"_resist"),
+        text_script:text((good?council.cooperative:council.hostile)+" "+proposal),
+        consequence_id:"page_"+act.year+"_crisis",
+        desirability_script:add(
+          op("Multiplication",[factionGate(good),constant(20)]),
+          pointer("Coalition_Standing",good?.08:-.08,council.faction),
+          constant(good?.02:.01)
+        ),
+        after_effects:[
+          ...effects(good?council.allyEffect:council.defectEffect,index,council.faction,good),
+          ...effects(delta,index,council.faction,good)
+        ]
+      }))
+    }));
+    ids.push(encounter(councilId,council.title,council.body+"\n\n"+council.cooperative+"\n\n"+council.hostile,spool,factionOptions));
     const [name,description,stake,obligation,hurt,fallout]=act.crisis;
     const crisis="page_"+act.year+"_crisis",standoff="page_"+act.year+"_standoff";
     ids.push(encounter(crisis,name+": First Exchange",
@@ -273,16 +312,20 @@ export function buildSweepweave(source){
     char_yusuf:{U:.35,L:.4,A:.25},char_fardad:{S:.45,B:.3,U:-.1},
     char_amal:{T:.55,B:-.25},char_samira:{W:.5,U:.15},char_ward:{B:-.2,T:.3}
   };
+  const factionInitial=Object.fromEntries(source.factions.map(f=>[f.id,f.initial]));
   const characters=source.cast.map(([id,name,pronoun])=>({
-    id,name,pronoun,bnumber_properties:Object.fromEntries(Object.entries(metrics).map(([k,value])=>[value,initialValues[id]?.[k]??0]))
+    id,name,pronoun,bnumber_properties:{
+      ...Object.fromEntries(Object.entries(metrics).map(([k,value])=>[value,initialValues[id]?.[k]??0])),
+      Coalition_Standing:factionInitial[id]??0
+    }
   }));
-  const authored_properties=Object.values(metrics).map((property_name,i)=>({
+  const authored_properties=[...Object.values(metrics),"Coalition_Standing"].map((property_name,i)=>({
     id:property_name,property_name,property_type:"bounded number",
     default_value:0,depth:0,attribution_target:"all cast members",affected_characters:[],
     creation_index:i,creation_time:stamp,modified_time:stamp
   }));
   return {
-    IFID:"SW-BALANCE-OF-REASON-RED-MIHNA-2034-V2",
+    IFID:"SW-BALANCE-OF-REASON-RED-MIHNA-2034-V3",
     title:source.title,storyworld_title:source.title,storyworld_author:"MoralityLabAI / GPTStoryworld",
     sweepweave_version:"0.1.9",creation_time:stamp,modified_time:stamp,debug_mode:false,
     display_mode:1,css_theme:"lilac",font_size:"16",language:"en",rating:"mature",
