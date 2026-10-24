@@ -2,6 +2,12 @@
 
 The illustration slots are already wired into `visuals.mjs`. SVG scenes in this directory provide a complete self-contained playable fallback for GitHub Pages.
 
+## Install from the hosted playtest
+
+Players can use **Load pixel-art ZIP** on the illustrated title screen or **Load illustrated art ZIP** in the Gallery. Choose the downloaded `balance-of-reason-production-art-pack.zip` directly. The browser verifies the required file names and WebP headers, limits decompression size, and stores the artwork locally in IndexedDB. It persists across reloads, including offline play, and can be reset through **Restore default SVG artwork**. The pack remains on the player's device.
+
+This optional player-side import complements the checked-in image workflow below. Campaign replay links share decisions rather than image files, so another player can import the same ZIP independently.
+
 ## Optional rendered art overrides
 
 Copy the following WebP files into this directory to use the concept art generated for this project. The frontend detects them and upgrades the visuals without changing any player logic.
