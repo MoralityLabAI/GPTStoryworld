@@ -18,6 +18,35 @@ Copy the following WebP files into this directory to use the concept art generat
 
 The first WebP layer is decorative background art. All buttons, statistics, region names, policy labels, portraits, and faction rankings are rendered as real browser elements, using the authored source rather than image-generated typography.
 
+## Production art installation
+
+The generated art pack is distributed as **`balance-of-reason-production-art-pack.zip`**. It contains seven optimized WebP files with exact filenames matching the player.
+
+From a checked-out `GPTStoryworld` repository:
+
+```sh
+python3 storyworlds/balance_of_reason/tools/install_art_pack.py /path/to/balance-of-reason-production-art-pack.zip --dry-run
+python3 storyworlds/balance_of_reason/tools/install_art_pack.py /path/to/balance-of-reason-production-art-pack.zip
+git add storyworlds/balance_of_reason/assets/*.webp storyworlds/balance_of_reason/assets/art_pack_manifest.json
+git commit -m "Add generated Balance of Reason production art"
+git push
+```
+
+On Windows, use `py -3` in place of `python3`. The installer checks archive paths, the seven required filenames, the WebP file headers, decompressed sizes and checksums. It writes an `art_pack_manifest.json` alongside the images. Re-running an unchanged pack is safe. Use `--replace` only to install a deliberately changed pack.
+
+The active public playtest currently publishes from `gh-pages`. To update that branch, use a dedicated worktree after fetching it:
+
+```sh
+git fetch origin gh-pages
+git worktree add ../bor-pages gh-pages
+python3 storyworlds/balance_of_reason/tools/install_art_pack.py /path/to/balance-of-reason-production-art-pack.zip --target ../bor-pages/assets
+git -C ../bor-pages add assets/
+git -C ../bor-pages commit -m "Publish high-resolution Balance of Reason art"
+git -C ../bor-pages push origin HEAD:gh-pages
+```
+
+If a local `gh-pages` branch is already checked out elsewhere, reuse that checkout rather than adding a second worktree. After GitHub's Pages deployment completes, the game automatically loads the new WebPs. The vector fallback stays in place for clients whose image request fails.
+
 ## Hosting
 
 For a GitHub Pages branch deploy, add these WebPs to the root `assets/` folder on `gh-pages` and commit them there. For the main repo development branch, add them under `storyworlds/balance_of_reason/assets/`. Once merged, the repository's Pages build workflow stages the same directory structure.
