@@ -1,2 +1,0 @@
-(= (score-world)
-   scores-recorded)

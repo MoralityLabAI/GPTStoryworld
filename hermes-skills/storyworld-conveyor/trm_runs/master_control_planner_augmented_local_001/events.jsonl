@@ -1,3 +1,0 @@
-{"ts": "2026-05-04T00:30:38Z", "event": "start", "train": "hermes-skills\\storyworld-conveyor\\trm_corpus\\master_control_planner_augmented_local_001\\train.jsonl", "val": "hermes-skills\\storyworld-conveyor\\trm_corpus\\master_control_planner_augmented_local_001\\val.jsonl"}
-{"ts": "2026-05-04T00:30:38Z", "event": "loaded_rows", "train_rows": 913, "val_rows": 3}
-{"ts": "2026-05-04T00:30:38Z", "event": "completed", "accuracy": 0.6667, "exact_episode_sequence_rate": 0.6667, "correct": 2, "total": 3}

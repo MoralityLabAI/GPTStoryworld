@@ -1,5 +1,0 @@
-{
-  "model": "o3",
-  "error_type": "PermissionDeniedError",
-  "error": "Error code: 403 - {'error': {'message': 'Project `proj_4lkk1vC6kpiIt7LYVNm29q5H` does not have access to model `o3`', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
-}

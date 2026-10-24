@@ -1,6 +1,0 @@
-world_id: SW-MUTAZILI-ASHARI-KALAM-EXAM-9B-RESEARCH
-title: The Two Lamps Examination: Mu'tazili And Ash'ari Kalam
-encounter_count: 34
-terminal_endings_count: 8
-terminal_endings: page_end_acquisition_synthesis,page_end_ashari_verdict,page_end_heretic_file,page_end_market_schism,page_end_mutazili_verdict,page_end_no_how_lantern,page_end_public_quiet,page_end_scribe_truth
-contract: revise one encounter at a time; keep IDs stable; keep syntax SWMD-0-MIN compatible.

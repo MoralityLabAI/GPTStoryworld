@@ -1,9 +1,0 @@
-{
-  "run_id": "symbolic_smoke",
-  "metta_bin": "",
-  "policy": {
-    "backend": "stub",
-    "model": "qwen-local-placeholder",
-    "temperature": 0.0
-  }
-}

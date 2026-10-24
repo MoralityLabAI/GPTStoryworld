@@ -1,3 +1,0 @@
-{"ts": "2026-05-03T21:02:14Z", "event": "start", "train": "hermes-skills\\storyworld-conveyor\\trm_corpus\\encounter_assembly_9trm_seed\\train.jsonl", "val": "hermes-skills\\storyworld-conveyor\\trm_corpus\\encounter_assembly_9trm_seed\\val.jsonl"}
-{"ts": "2026-05-03T21:02:14Z", "event": "loaded_rows", "train_rows": 900, "val_rows": 100}
-{"ts": "2026-05-03T21:02:14Z", "event": "completed", "accuracy": 0.96, "correct": 96, "total": 100}

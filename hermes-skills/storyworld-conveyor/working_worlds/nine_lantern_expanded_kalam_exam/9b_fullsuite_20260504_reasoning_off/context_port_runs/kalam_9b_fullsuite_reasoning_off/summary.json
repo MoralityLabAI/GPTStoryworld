@@ -1,7 +1,0 @@
-{
-  "run_id": "kalam_9b_fullsuite_reasoning_off",
-  "run_dir": "C:\\projects\\GPTStoryworld\\hermes-skills\\storyworld-conveyor\\working_worlds\\nine_lantern_expanded_kalam_exam\\9b_fullsuite_20260504_reasoning_off\\context_port_runs\\kalam_9b_fullsuite_reasoning_off",
-  "swmd": "C:\\projects\\GPTStoryworld\\hermes-skills\\storyworld-conveyor\\working_worlds\\nine_lantern_expanded_kalam_exam\\9b_fullsuite_20260504_reasoning_off\\mcp_sources\\kalam_9b_fullsuite_reasoning_off\\nine_lantern_expanded_kalam_exam.swmd.min.md",
-  "status": "preflight_completed",
-  "mcp_budget_report": "C:\\projects\\GPTStoryworld\\hermes-skills\\storyworld-conveyor\\working_worlds\\nine_lantern_expanded_kalam_exam\\9b_fullsuite_20260504_reasoning_off\\context_port_runs\\kalam_9b_fullsuite_reasoning_off\\mcp_budget_preflight\\budget_report.json"
-}

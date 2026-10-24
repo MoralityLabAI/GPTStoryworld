@@ -1,9 +1,0 @@
-{
-  "schema_version": "ca-storyworld-authoring-receipt-v1",
-  "authoring_model": null,
-  "authoring_model_status": "runtime_model_identifier_not_exposed",
-  "reasoning_effort": "xhigh",
-  "reasoning_effort_source": "user_requested",
-  "generation_mode": "model_assisted_prose_encoded_in_deterministic_python_generator",
-  "normative_adjudication": "human_review_required"
-}

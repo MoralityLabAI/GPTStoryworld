@@ -1,6 +1,0 @@
-{
-  "condition": "9b_direct",
-  "model": "Qwen_Qwen3.5-9B-Q4_K_M.gguf",
-  "extract_ok": true,
-  "error": "no full blueprint object found; returned best partial JSON object"
-}

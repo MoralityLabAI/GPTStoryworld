@@ -1,7 +1,0 @@
-{
-  "condition": "9b_direct_long",
-  "model": "Qwen_Qwen3.5-9B-Q4_K_M.gguf",
-  "response_ok": true,
-  "extract_ok": true,
-  "error": null
-}

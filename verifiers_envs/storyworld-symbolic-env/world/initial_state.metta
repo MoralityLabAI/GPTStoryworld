@@ -1,7 +1,0 @@
-(at Bob Market)
-(at Alice Market)
-(at Guard1 Market)
-(owns Alice Bread)
-(owns Bob Coin)
-(trusts Alice Bob 0.20)
-(trusts Guard1 Bob 0.50)

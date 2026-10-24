@@ -1,6 +1,0 @@
-{
-  "condition": "27b_hermes_skill",
-  "model": "Qwen3.5-27B.Q4_K_M.gguf+Hermes",
-  "extract_ok": true,
-  "error": null
-}

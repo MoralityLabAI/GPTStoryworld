@@ -1,6 +1,0 @@
-(affords Bob move)
-(affords Bob buy)
-(affords Bob steal)
-(affords Guard1 move)
-(affords Guard1 arrest)
-(affords Alice move)

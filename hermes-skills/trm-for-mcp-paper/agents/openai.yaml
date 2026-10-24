@@ -1,4 +1,0 @@
-interface:
-  display_name: "TRM For MCP Paper"
-  short_description: "Refresh figures and revise the TRM-for-MCP manuscript"
-  default_prompt: "Use $trm-for-mcp-paper to rebuild the paper assets, tighten the manuscript claims against the local trivia and storyworld artifacts, and compile the paper if a TeX toolchain is available."
