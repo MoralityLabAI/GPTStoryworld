@@ -90,6 +90,7 @@ async function run(){
   await page.getByRole('button',{name:/Close ×/}).click();
   await page.getByRole('button',{name:'Feedback'}).click();
   assert.equal(await page.locator('.feedback-form textarea').count(),5);
+  assert.equal(await page.getByRole('button',{name:'Copy report + replay link'}).count(),1);
   await page.getByRole('button',{name:/Close ×/}).click();
 
   await page.setViewportSize({width:390,height:780});
