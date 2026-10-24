@@ -1,8 +1,9 @@
+import {buildStoryworld} from './sweepweave_builder.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 
-const world=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url),'utf8'));
+const world=buildStoryworld(source);
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
 
 function evaluate(expression,state){
