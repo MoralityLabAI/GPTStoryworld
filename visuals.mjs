@@ -2,6 +2,8 @@
 // The original engine.mjs is the sole owner of decisions, state, turns and results.
 // This module only presents the current state and dispatches callbacks to the player.
 
+import {PLAYTEST_CHAPTERS} from './playtest_chapters.mjs';
+
 export const ART={
   hero:["assets/hero.webp","assets/hero.svg"],
   warroom:["assets/warroom.webp","assets/warroom.svg"],
@@ -108,7 +110,7 @@ function renderArtImage(key,alt,className=""){
 }
 
 export function mountVisualPlayer(config){
-  const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign,getCampaignLink}=config;
+  const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign,getCampaignLink,loadChapter}=config;
   const shell=document.querySelector(".shell");
   if(!shell||MOUNTS.has(shell))throw Error("Visual player already mounted or shell missing");
   let activeModal=null,selectedLocation=LOCATIONS[0],chosenFaction=null,selectedResearch=0;
@@ -135,8 +137,9 @@ export function mountVisualPlayer(config){
     if(resumeSaved()) {hideIntro();sync();}
   });
   const how=createButton("How to play",()=>openModal("guide"));
+  const previews=createButton("Playtest chapters",()=>openModal("chapters"));
   const share=createButton("Copy playtest link",()=>shareCampaign?.());
-  menuButtons.append(play,resume,how,share);stage.append(menuButtons);
+  menuButtons.append(play,resume,previews,how,share);stage.append(menuButtons);
   stage.append(regular("div","intro-foot","11 FACTIONS · 15 ENDINGS · 16 NATIONAL VARIABLES"));
   intro.append(stage);
   document.body.append(modal,intro);
@@ -318,6 +321,22 @@ export function mountVisualPlayer(config){
     }
     panel.append(gallery);
   }
+  function renderChapters(){
+    panelLayout("Playtest chapters · jump into the campaign");
+    panel.append(note("These preview routes replay ordinary earlier decisions through the current campaign engine. You can continue playing, save your progress, or send the replay link as usual."));
+    const grid=regular("div","chapter-grid");
+    for(const chapter of PLAYTEST_CHAPTERS){
+      const card=regular("section","chapter-card");
+      card.append(regular("span","chapter-year","YEAR "+chapter.year));
+      card.append(h("h3",chapter.title),h("strong",chapter.subtitle),note(chapter.description));
+      const button=createButton("Play this chapter",()=>{
+        if(loadChapter?.(chapter.id)!==false){closeModal();hideIntro();sync();}
+      },"chapter-start");
+      button.setAttribute("aria-label","Start "+chapter.title+" chapter");
+      card.append(button);grid.append(card);
+    }
+    panel.append(grid);
+  }
   function renderGuide(){
     panelLayout("How to play · a cabinet of reason");
     const content=regular("div","codex-columns");
@@ -327,7 +346,8 @@ export function mountVisualPlayer(config){
       ["Three choices, lasting effects","Select one policy each scene. Other factions may accept, resist or defect. Some outcomes differ even when you repeat the same choice."],
       ["Escalate carefully","Crisis warnings can cost prestige to withdraw. Continuing a war alert can destroy the entire campaign."],
       ["Use the atlas and diplomacy","Explore locations, inspect independent faction mandates, and review your own political chronicle at any time."],
-      ["Save and send feedback","Use Copy playtest link to share your campaign choices across devices. The link contains decisions only. Download full traces for audit and fill in the local feedback sheet for playtest notes."]
+      ["Save and send feedback","Use Copy playtest link to share your campaign choices across devices. The link contains decisions only. Download full traces for audit and fill in the local feedback sheet for playtest notes."],
+      ["Preview later chapters","Use Playtest chapters from the title screen to jump to a conflict while preserving the actual earlier decisions that produced its state."]
     ];
     for(const [title,body] of cards){
       const c=regular("section","card");c.append(h("h3",title),note(body));content.append(c);
@@ -401,6 +421,7 @@ export function mountVisualPlayer(config){
     else if(type==="research")renderResearch();
     else if(type==="chronicle")renderChronicle();
     else if(type==="gallery")renderGallery();
+    else if(type==="chapters")renderChapters();
     else if(type==="feedback")renderFeedback();
     else renderGuide();
   }
