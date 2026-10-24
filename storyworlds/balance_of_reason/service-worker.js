@@ -1,10 +1,11 @@
 /* Balance of Reason offline playtest.
    Scope is the hosting directory: GitHub Pages /GPTStoryworld/ or a local
    storyworlds/balance_of_reason/ server. No cross-site fetch interception. */
-const CACHE='bor-playtest-20261024-visual-v4';
+const CACHE='bor-playtest-20261024-visual-v5';
 const CORE=[
  './','./index.html','./engine.mjs','./trace_protocol.mjs','./share_route.mjs',
  './visuals.mjs','./visuals.css','./build_sweepweave.mjs',
+ './decision_impact.mjs','./playtest_chapters.mjs','./art_pack.mjs',
  './source_cards.json','./assets/crest.svg','./assets/hero.svg',
  './assets/warroom.svg','./assets/summit.svg','./assets/world.svg',
  './manifest.webmanifest'
