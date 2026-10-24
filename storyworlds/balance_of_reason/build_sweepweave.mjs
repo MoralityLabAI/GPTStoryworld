@@ -92,12 +92,12 @@ export function buildSweepweave(source){
   const catastrophic=op("And",[
     cmp("G","Greater Than or Equal To",.90),
     cmp("C","Less Than or Equal To",-.45),
-    cmp("B","Greater Than or Equal To",.72)
+    cmp("B","Greater Than or Equal To",.78)
   ]);
   const survivable=op("Or",[
     cmp("G","Less Than",.90),
     cmp("C","Greater Than",-.45),
-    cmp("B","Less Than",.72)
+    cmp("B","Less Than",.78)
   ]);
   function gatewayChoice(id,label,open,closed,openCondition,closedCondition){
     const stay=[nudge("G",0),nudge("C",0),nudge("B",0)];
@@ -199,8 +199,7 @@ export function buildSweepweave(source){
       starts_active:ai===0,encounters:ids});
   }
   const final="page_final_council",endingGate="page_ending_gate";
-  encounters.push({
-    ...(()=>{encounter(final,"The Fifth Article: Final Consultation",
+  encounter(final,"The Fifth Article: Final Consultation",
       "Istanbul, 2041. The World War of the Models has rewritten the summit agenda. Governments count obligations, jurists count freedoms, and displaced delegates count empty homes. Beijing must decide what leadership means.",
       "spool_final",[
         choice(final+"_equal","Recognize a rotating council with independent scholarly votes.",
@@ -215,10 +214,7 @@ export function buildSweepweave(source){
           "The development banks continue their work.",
           "The theological claim remains unresolved.",
           "T+.14 W+.11 B-.12 P+.04 S-.08 U+.04 D+.09 H-.05",2,"char_chen",endingGate,endingGate,"T",-.12)
-      ]);return {};})()
-  });
-  // The factory above creates the final encounter in order. Remove its no-op placeholder.
-  encounters.pop();
+      ]);
   const conds=(textCondition)=>{
     if(!textCondition || !textCondition.trim())return [];
     return textCondition.trim().split(/\s+/).map(term=>{
