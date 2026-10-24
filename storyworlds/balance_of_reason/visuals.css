@@ -153,3 +153,7 @@ button.minor:hover{background:#36434e}
 .chapter-start:hover{background:#8c453b!important}
 @media(max-width:840px){.chapter-grid{grid-template-columns:1fr}}
 @media(max-width:670px){.intro-stage{min-height:640px}.intro-actions{gap:7px}.intro-actions button{font-size:13px;min-width:120px;padding:11px 9px}}
+
+/* Player-installed full-resolution art stays local to their browser. */
+.art-pack-notice{position:absolute;z-index:1;left:6%;right:6%;bottom:20%;text-align:center;font:12px/1.5 ui-monospace,monospace;color:#ebd8a7;text-shadow:0 2px 8px #000;pointer-events:none}
+@media(max-width:670px){.art-pack-notice{bottom:39%;font-size:11px}.intro-actions button{min-width:128px}}
