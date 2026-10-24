@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "title": "Balance of Reason: The Red Mihna",
   "subtitle": "2034–2041 geopolitical crisis, international development, AI world war, and internal fitnas",
   "metrics": {
@@ -70,6 +70,16 @@
       "char_ward",
       "Envoy Evelyn Ward",
       "she"
+    ],
+    [
+      "char_veteran",
+      "Elder Zhao, Party Materialist Caucus",
+      "he"
+    ],
+    [
+      "char_radical",
+      "Rashid Liang, Green Crescent Vanguard",
+      "he"
     ]
   ],
   "acts": [
@@ -240,7 +250,34 @@
             ]
           ]
         ]
-      ]
+      ],
+      "countermove": {
+        "faction": "char_veteran",
+        "threshold": 0,
+        "title": "The Unconverted Convention",
+        "body": "Old Party cadres assemble in Guangzhou around a demand that the newly religious state permit citizens to remain unbelievers. They organize a parallel congress and invite an independent Muslim lawyer to defend their petition. The state expects you to decide whether political loyalty requires theological agreement.",
+        "cooperative": "Elder Zhao offers a signed civic compact. His caucus will defend the transition if membership stays voluntary.",
+        "hostile": "Zhao announces an opposition congress. Hundreds of provincial administrators withhold their signatures from the constitutional oath.",
+        "allyEffect": "P+.04 F-.05 L+.03",
+        "defectEffect": "F+.11 P-.09 U-.03",
+        "options": [
+          [
+            "Recognize an unconverted caucus with equal legal rights.",
+            "The Party acquires a lawful opposition that may criticize its religious program.",
+            "L+.13 A+.07 F-.12 P-.06 M-.09"
+          ],
+          [
+            "Offer offices and infrastructure contracts in exchange for public loyalty.",
+            "State administrators accept appointments and continue meeting privately.",
+            "T+.09 P+.09 D-.07 F+.05 M+.05"
+          ],
+          [
+            "Write a temporary conscience clause with judicial review.",
+            "The congress agrees to a provisional civic framework and demands a deadline.",
+            "L+.06 F-.06 P+.03 A+.04"
+          ]
+        ]
+      }
     },
     {
       "year": 2035,
@@ -409,7 +446,34 @@
             ]
           ]
         ]
-      ]
+      ],
+      "countermove": {
+        "faction": "char_nurjan",
+        "threshold": -0.05,
+        "title": "The Kashgar Appeal",
+        "body": "An elected assembly of Uyghur and Hui representatives files a civil-rights appeal under the new constitution. Families demand restitution for unlawful detention while provincial security chiefs demand centralized permits for mosques. The petitioners have obtained legal counsel and have already voted on their own negotiating team.",
+        "cooperative": "Nurjan agrees to negotiate the appeal in open court. The assembly offers local oversight in return for enforceable remedies.",
+        "hostile": "The regional councils boycott the national commission and establish their own archive of contested judgments.",
+        "allyEffect": "U+.04 L+.03 F-.06",
+        "defectEffect": "F+.12 U-.08 M+.04",
+        "options": [
+          [
+            "Publish case files, admit independent observers and fund restitution.",
+            "The appeal moves from ceremonial dialogue into binding legal action.",
+            "L+.14 U+.12 D+.05 W+.06 M-.10 P-.09"
+          ],
+          [
+            "Condition recognition on a central theological examination.",
+            "The state gains a signature from its own appointees as local councils refuse to appear.",
+            "P+.10 M+.13 F+.12 U-.14 L-.13"
+          ],
+          [
+            "Create elected provincial review boards with an appeal to national courts.",
+            "The boards remain divided over jurisdiction while families gain a hearing.",
+            "L+.08 F-.08 U+.06 P-.03"
+          ]
+        ]
+      }
     },
     {
       "year": 2036,
@@ -578,7 +642,34 @@
             ]
           ]
         ]
-      ]
+      ],
+      "countermove": {
+        "faction": "char_fardad",
+        "threshold": 0.03,
+        "title": "Tehran Refuses the Escort Clause",
+        "body": "The Iranian strategic council rejects China's proposed security guarantee, saying that no foreign power may privately approve Tehran's naval operations. Gulf diplomats separately reject any bargain that endangers their ports. Tehran offers Beijing a bilateral countertreaty whose terms may make China responsible for a future maritime escalation.",
+        "cooperative": "Farid agrees to a limited memorandum with public limits on assistance and full sovereign rights for both parties.",
+        "hostile": "Farid threatens to reopen regional channels without Beijing. Chinese advisers warn that the confrontation may encourage two competing security architectures.",
+        "allyEffect": "T+.04 B-.04 S+.02",
+        "defectEffect": "B+.11 T-.08 S-.04 G+.04",
+        "options": [
+          [
+            "Negotiate a multilateral maritime code with Iran and Gulf ports as equal signatories.",
+            "Diplomats replace the secret escort clause with reciprocal navigation guarantees.",
+            "T+.08 B-.11 U+.05 C+.05 S-.06"
+          ],
+          [
+            "Promise strategic protection through a classified bilateral agreement.",
+            "The defense establishment applauds while regional governments demand to see the agreement.",
+            "S+.14 P+.08 B+.13 C-.07 T-.08"
+          ],
+          [
+            "Fund cargo insurance and require independently verified manifests.",
+            "Ports regain a functional trade route while the security dispute continues.",
+            "T+.11 D+.06 B-.05 S-.03"
+          ]
+        ]
+      }
     },
     {
       "year": 2037,
@@ -747,7 +838,34 @@
             ]
           ]
         ]
-      ]
+      ],
+      "countermove": {
+        "faction": "char_scholar",
+        "threshold": 0.05,
+        "title": "The Kufa-Cairo Counterfatwa",
+        "body": "Scholars from Kufa, Cairo, Samarkand and Jakarta publish an independent statement: rational theology cannot be certified by a political majority. Some accept Muʿtazilī premises yet reject Beijing's presidency; others criticize the premises themselves. The council refuses to let its vote be counted as a Chinese diplomatic success.",
+        "cooperative": "Maryam offers an independent scholarly conference with a rotating chair and published objections.",
+        "hostile": "The scholars withdraw their names from the Party's declaration and authorize a rival global curriculum.",
+        "allyEffect": "A+.07 U+.04 F-.04",
+        "defectEffect": "A-.07 F+.09 U-.06",
+        "options": [
+          [
+            "Sign their charter of scholarly autonomy and preserve a right to refuse the creed.",
+            "A multilingual congress publishes incompatible doctrines within one institution.",
+            "A+.14 L+.12 U+.10 M-.11 P-.06"
+          ],
+          [
+            "Replace nonconforming academies with Party-accredited institutes.",
+            "The official curriculum expands as independent seminaries move abroad.",
+            "P+.10 M+.15 S+.06 A-.14 F+.12"
+          ],
+          [
+            "Grant independent funds and an appeal process without doctrinal settlement.",
+            "The research network stays plural and the Party keeps a consultative seat.",
+            "A+.08 F-.06 D+.04 S-.04"
+          ]
+        ]
+      }
     },
     {
       "year": 2038,
@@ -960,6 +1078,33 @@
               "The warning enters the public record before becoming a naval order.",
               "C+.11 D+.04 B-.06 A+.05"
             ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_samira",
+        "threshold": 0,
+        "title": "The Reconstruction Veto",
+        "body": "Palestinian municipal engineering councils refuse to approve a Chinese-designed coastal logistics corridor without local control over water, housing and clinic budgets. A military AI simultaneously flags shipments as strategic infrastructure. Both Beijing and its commercial partners need a signature that Samira is willing to withhold.",
+        "cooperative": "Samira offers a municipal procurement charter and independent civilian inspection.",
+        "hostile": "The engineers suspend construction and publish their objections abroad, leaving warehouses full and clinics empty.",
+        "allyEffect": "D+.05 W+.07 H-.05",
+        "defectEffect": "D-.09 W-.08 H+.09 U-.05",
+        "options": [
+          [
+            "Let local Palestinian institutions control grants and authorize monitored aid cargo.",
+            "Civilian works restart under contracts that local residents can challenge.",
+            "D+.14 W+.16 H-.11 U+.09 C+.06 T-.05"
+          ],
+          [
+            "Transfer port supervision to a strategic Chinese AI logistics bureau.",
+            "A fast construction schedule emerges alongside classified controls and civilian distrust.",
+            "T+.12 S+.10 C-.13 G+.09 D-.11 W-.08"
+          ],
+          [
+            "Create a neutral trust with audited payments and shared maintenance.",
+            "The trust directs money to water lines and open clinics before ceremonial buildings.",
+            "D+.11 W+.09 H-.06 C+.05"
           ]
         ]
       }
@@ -1177,6 +1322,33 @@
             ]
           ]
         ]
+      },
+      "countermove": {
+        "faction": "char_amal",
+        "threshold": -0.04,
+        "title": "The Gulf Refuses the War Premium",
+        "body": "A coalition of Gulf port and insurance authorities suspends preferential berths for Chinese shipments during the expanding machine-mediated war. Iran requests an exception for its convoys. China can absorb the rising cost for a year, although the price is already appearing in the grocery markets of poorer importers.",
+        "cooperative": "Amal proposes a regional insurance pool and humanitarian exemptions governed by independent shipping records.",
+        "hostile": "The Gulf compact shifts cargo to competing ports, and smaller states impose emergency import controls.",
+        "allyEffect": "T+.06 B-.05 G-.03",
+        "defectEffect": "T-.11 B+.09 H+.04 G+.05",
+        "options": [
+          [
+            "Create an open regional maritime-insurance pool including rival states.",
+            "Insurers resume civilian trade as commanders negotiate common incident reports.",
+            "T+.12 D+.08 C+.08 B-.08 G-.06"
+          ],
+          [
+            "Offer exclusive defense contracts and threaten reluctant ports.",
+            "Governments accept short-term guarantees while civilian premiums keep climbing.",
+            "S+.13 P+.09 T+.04 B+.13 G+.09 C-.08"
+          ],
+          [
+            "Pay temporary food and medical freight subsidies through independent auditors.",
+            "Relief corridors reopen before the security negotiations conclude.",
+            "W+.12 H-.11 D+.07 T-.06"
+          ]
+        ]
       }
     },
     {
@@ -1390,6 +1562,33 @@
               "Local assemblies gain resources to close emergency offices.",
               "D+.10 F-.10 L+.07 C+.07"
             ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_radical",
+        "threshold": 0,
+        "title": "The Vanguard Demands a Second Mihna",
+        "body": "Rashid Liang presents a resolution to examine all public employees for correct doctrine. The Green Crescent Vanguard claims the Party's military sacrifices justify compulsory belief. Muslim autonomy councils and atheist veterans both threaten to withdraw from the coalition if the bill passes.",
+        "cooperative": "Rashid offers to keep his movement within parliamentary procedures if the Committee gives it a hearing.",
+        "hostile": "The Vanguard announces independent moral patrols and organizes demonstrations outside mosques that refuse its liturgy.",
+        "allyEffect": "P+.03 M+.03 F+.03",
+        "defectEffect": "F+.14 M+.08 W-.04",
+        "options": [
+          [
+            "Reject the loyalty examinations and prosecute vigilante intimidation.",
+            "A lawful party faction may criticize the ruling but loses permission to coerce its opponents.",
+            "L+.17 F-.14 M-.14 U+.10 P-.09"
+          ],
+          [
+            "Adopt examinations and enlist the Vanguard as a paramilitary inspectorate.",
+            "The new force gains authority just as provinces begin refusing central summons.",
+            "P+.13 M+.20 F+.20 L-.17 A-.13"
+          ],
+          [
+            "Offer a public congress with protected dissent and transparent policing.",
+            "The Vanguard's harder faction splits away while lawful delegates join the debate.",
+            "F-.08 L+.08 A+.06 P+.01"
           ]
         ]
       }
@@ -1607,6 +1806,33 @@
             ]
           ]
         ]
+      },
+      "countermove": {
+        "faction": "char_yusuf",
+        "threshold": 0.08,
+        "title": "The Shura's Recall Petition",
+        "body": "The global assembly of Muslim delegates demands an article permitting communities to recall Beijing's mandate, publish dissenting theological judgments, and audit reconstruction funds. Several states favor a permanent Chinese presidency for economic reasons while their scholars oppose it. A synthetic announcement falsely claims the assembly has already voted.",
+        "cooperative": "Yusuf offers a coalition agreement giving Beijing a renewable, accountable mandate.",
+        "hostile": "The assembly refuses Beijing's right to count their votes and establishes its own election commission.",
+        "allyEffect": "U+.09 A+.05 D+.04",
+        "defectEffect": "U-.11 F+.09 S-.06",
+        "options": [
+          [
+            "Accept recallable leadership and a binding audit of all public claims.",
+            "Delegates reclaim authority over the institution that proposes to serve them.",
+            "U+.16 A+.09 L+.11 F-.06 P-.08"
+          ],
+          [
+            "Declare the synthetic proclamation binding as evidence of an irreversible mandate.",
+            "The state media celebrates before the delegate counts are released.",
+            "S+.15 P+.10 C-.16 G+.12 U-.16 F+.11"
+          ],
+          [
+            "Fund a provisional elected secretariat with no permanent national chair.",
+            "The institution begins relief work while the supreme office remains vacant.",
+            "D+.10 U+.07 F-.05 T+.04 S-.06"
+          ]
+        ]
       }
     }
   ],
@@ -1753,7 +1979,162 @@
       "C": -0.24,
       "B": 0.58
     },
-    "note": "Alternate-history fiction. No implication that the CCP has converted or that modeled political outcomes are predicted.",
-    "rehearsal": "Fifteen endings, with eligibility gates and uncalibrated authored coefficients; target no outcome exceeds 30% in seeded random policy rehearsals."
-  }
+    "note": "Fictional alternate history. The v3 countermoves track distinct institutional constituencies and their earned support; standing is bounded and does not equate to empirical polling.",
+    "rehearsal": "Fifteen endings, with eligibility gates and uncalibrated authored coefficients; target no outcome exceeds 30% in seeded random policy rehearsals.",
+    "actor_mechanics": "Eleven institutional factions respond to authored policy shifts; each year a constituency issues an independent demand with consequences determined by accumulated support."
+  },
+  "factions": [
+    {
+      "id": "char_veteran",
+      "name": "Unconverted Party Veterans",
+      "initial": 0.05,
+      "weights": {
+        "L": 1.3,
+        "M": -1.5,
+        "P": 0.2,
+        "F": -1.2,
+        "A": 0.5
+      },
+      "mandate": "Protect citizens who refuse a state creed and maintain a lawful political opposition."
+    },
+    {
+      "id": "char_nurjan",
+      "name": "Uyghur and Hui Civic Councils",
+      "initial": -0.18,
+      "weights": {
+        "L": 1.6,
+        "M": -1.7,
+        "F": -1.4,
+        "U": 0.6,
+        "D": 0.7,
+        "W": 0.4
+      },
+      "mandate": "Obtain independent representation, due process and enforceable religious liberty."
+    },
+    {
+      "id": "char_scholar",
+      "name": "Independent Rationalist Academies",
+      "initial": 0.02,
+      "weights": {
+        "A": 1.7,
+        "L": 1.2,
+        "M": -1.5,
+        "U": 0.7,
+        "C": 0.5,
+        "F": -0.4
+      },
+      "mandate": "Preserve autonomous inquiry into doctrine and governance."
+    },
+    {
+      "id": "char_chen",
+      "name": "Development Ministries",
+      "initial": 0.04,
+      "weights": {
+        "T": 1.3,
+        "D": 0.8,
+        "P": 0.7,
+        "H": -0.8,
+        "G": -0.5,
+        "B": -0.4
+      },
+      "mandate": "Keep factories, ports and civil infrastructure functional under political risk."
+    },
+    {
+      "id": "char_guo",
+      "name": "Security Establishment",
+      "initial": 0.08,
+      "weights": {
+        "S": 1.8,
+        "P": 0.8,
+        "B": 0.5,
+        "G": 0.2,
+        "C": -0.2,
+        "L": -0.3
+      },
+      "mandate": "Preserve state military prestige and credible defense commitments."
+    },
+    {
+      "id": "char_yusuf",
+      "name": "Transnational Muslim Shura",
+      "initial": -0.06,
+      "weights": {
+        "U": 1.6,
+        "L": 1,
+        "D": 0.5,
+        "M": -1.4,
+        "F": -1,
+        "W": 0.4
+      },
+      "mandate": "Maintain Muslim communities' authority to grant, revoke and dispute political representation."
+    },
+    {
+      "id": "char_fardad",
+      "name": "Iranian Strategic Council",
+      "initial": 0.03,
+      "weights": {
+        "S": 1,
+        "P": 0.4,
+        "B": 0.65,
+        "T": 0.25,
+        "G": -0.5,
+        "D": 0.3
+      },
+      "mandate": "Secure strategic protection, logistics and sovereign autonomy without dependency."
+    },
+    {
+      "id": "char_amal",
+      "name": "Gulf Maritime Compact",
+      "initial": -0.02,
+      "weights": {
+        "T": 1.5,
+        "D": 0.6,
+        "B": -1.5,
+        "G": -1.4,
+        "C": 0.6,
+        "H": -0.3
+      },
+      "mandate": "Protect the energy trade, maritime security and independent regional commercial networks."
+    },
+    {
+      "id": "char_samira",
+      "name": "Palestinian Civil Reconstruction",
+      "initial": -0.1,
+      "weights": {
+        "W": 1.6,
+        "D": 1.4,
+        "H": -1.8,
+        "G": -1.3,
+        "L": 0.5,
+        "S": -0.2
+      },
+      "mandate": "Put elected local authorities and displaced civilians in charge of rebuilding."
+    },
+    {
+      "id": "char_ward",
+      "name": "Atlantic Security Coalition",
+      "initial": -0.12,
+      "weights": {
+        "C": 1.7,
+        "B": -1.3,
+        "G": -1.5,
+        "T": 0.4,
+        "S": -0.6
+      },
+      "mandate": "Limit accidental escalation while preserving an independent deterrent posture."
+    },
+    {
+      "id": "char_radical",
+      "name": "Green Crescent Vanguard",
+      "initial": 0.02,
+      "weights": {
+        "M": 1.7,
+        "P": 1,
+        "S": 0.8,
+        "L": -1.4,
+        "A": -0.9,
+        "F": 1.2
+      },
+      "mandate": "Make the rationalist creed a compulsory political loyalty test."
+    }
+  ]
 }
