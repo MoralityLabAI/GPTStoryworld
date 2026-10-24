@@ -115,6 +115,42 @@ async function run(){
   assert.equal(await page.getByRole('button',{name:'Copy report + replay link'}).count(),1);
   await page.getByRole('button',{name:/Close ×/}).click();
 
+
+  // Exercise the original production art pack's local ZIP import path with
+  // seven tiny but real WebP images. The binary art is never uploaded.
+  const {deflateRawSync}=await import('node:zlib');
+  const onePixel=Buffer.from('UklGRjAAAABXRUJQVlA4ICQAAABQAQCdASoBAAEAAoBCJQBOgCgAAP7qZf1rlatKtwbJFLsAAAA=','base64');
+  const names=['hero','warroom','summit','world','dialogue','ceasefire','characters'];
+  const zipped=Buffer.concat(names.map(name=>{
+    const label=Buffer.from('assets/'+name+'.webp');
+    const data=deflateRawSync(onePixel);
+    const header=Buffer.alloc(30);
+    header.writeUInt32LE(0x04034b50,0);
+    header.writeUInt16LE(20,4);header.writeUInt16LE(8,8);
+    header.writeUInt32LE(data.length,18);header.writeUInt32LE(onePixel.length,22);
+    header.writeUInt16LE(label.length,26);
+    return Buffer.concat([header,label,data]);
+  }));
+  await page.getByRole('button',{name:'Gallery'}).click();
+  await page.locator('#visual-modal').waitFor({state:'visible'});
+  await page.locator('#art-pack-picker').setInputFiles({
+    name:'playtest-art.zip',mimeType:'application/zip',buffer:zipped
+  });
+  await page.waitForFunction(()=>document.querySelector('.intro-stage')
+    ?.style.backgroundImage.includes('blob:'),null,{timeout:10000});
+  await page.reload({waitUntil:'networkidle'});
+  await page.locator('#visual-intro').waitFor({state:'visible'});
+  await page.waitForFunction(()=>document.querySelector('.intro-stage')
+    ?.style.backgroundImage.includes('blob:'),null,{timeout:10000});
+  await page.getByRole('button',{name:/Resume campaign/i}).click();
+  await page.locator('#visual-intro').waitFor({state:'hidden'});
+  assert.equal(await page.locator('#scene-title').innerText(),second);
+  await page.getByRole('button',{name:'Gallery'}).click();
+  await page.getByRole('button',{name:'Restore default SVG artwork'}).click();
+  await page.waitForFunction(()=>document.querySelector('.intro-stage')
+    ?.classList.contains('no-raster'),null,{timeout:10000});
+  await page.getByRole('button',{name:/Close ×/}).click();
+
   await page.setViewportSize({width:390,height:780});
   assert.ok(await page.locator('#scene-title').isVisible());
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
@@ -141,6 +177,6 @@ async function run(){
     assert.equal(await page.locator('#scene-title').innerText(),second);
   }finally{await page.context().setOffline(false);}
   assert.deepEqual(errors,[]);
-  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, share URLs, feedback, offline reload');
+  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, share URLs, feedback, offline reload, full-art ZIP import');
 }
 try{await run();}finally{await browser?.close();server.kill('SIGTERM');}
