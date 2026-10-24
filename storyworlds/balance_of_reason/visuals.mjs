@@ -12,7 +12,7 @@ export const ART={
   portraits:["assets/characters.webp","assets/hero.svg"]
 };
 const $=id=>document.getElementById(id);
-const S=document.createElement.bind(document);
+const S=(tag)=>document.createElement(tag);
 const regular=(tag,className,text)=>{
   const e=S(tag);
   if(className)e.className=className;
