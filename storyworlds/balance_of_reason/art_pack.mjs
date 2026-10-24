@@ -37,7 +37,19 @@ export async function extractArtZip(archive){
       else{
         check(typeof DecompressionStream==="function","this browser cannot unpack deflated ZIP archives");
         const deflated=new Blob([bytes.slice(startData,endData)]);
-        content=new Uint8Array(await new Response(deflated.stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer());
+        const reader=deflated.stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader();
+        const pieces=[];let total=0;
+        try{
+          while(true){
+            const {done,value}=await reader.read();
+            if(done)break;
+            total+=value.byteLength;
+            if(total>4*1024*1024){await reader.cancel();throw Error("Image expansion exceeds 4 MB");}
+            pieces.push(value);
+          }
+        }finally{reader.releaseLock();}
+        content=new Uint8Array(total);
+        let pointer=0;for(const piece of pieces){content.set(piece,pointer);pointer+=piece.length;}
       }
       check(content.length===actualSize,"corrupt image size "+name);
       check(isWebP(content),"invalid WebP image "+name);
