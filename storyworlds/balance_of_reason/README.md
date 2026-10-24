@@ -1,105 +1,100 @@
 # Balance of Reason: The Red Mihna
 
-**Alternate-history geopolitical storyworld | 2034–2041 | Fiction, not a forecast**
+**Alternate-history geopolitical simulation · 2034–2041 · AI world war, international development and internal fitnas**
 
-The Chinese Communist Party has undergone an impossible constitutional conversion, embracing Muʿtazilī theology and announcing its ambition to lead the **Ummah**. The player is **Secretary Lin Wenqi**, tasked with converting a declaration into a durable political order. Military deterrence, factories, religious institutions, and the daily lives of believers all exert pressure.
+An extraordinary Chinese Communist Party congress adopts Muʿtazilī theology and declares an ambition to lead the Ummah. The player is fictional Secretary **Lin Wenqi**, responsible for defending the new Party doctrine while preserving the freedom of other Muslims to dispute it. A vast system of development finance and Chinese infrastructure attracts governments whose populations may reject religious leadership from Beijing. When AI-generated diplomatic evidence triggers military escalation, the crisis becomes a global war that competing human and machine institutions struggle to control.
 
-A politician can announce that the Qur'an is created. A scholar can reject the claim. An industrial superpower cannot make a global community consent by changing a sentence in its Party constitution.
+The central question is whether a political power can claim an Islamic rationalist mandate while guaranteeing the right to reject its conclusions. Every event is fictional and the model's numbers are authored game mechanics.
 
-## Play
+## Playing the campaign
 
-From this folder, serve the static browser edition:
+From this folder:
 
-```bash
+```sh
 python -m http.server 8000
 ```
 
-Open **http://localhost:8000** and play with a browser. The game has no external JavaScript dependencies. The **analyst mode** checkbox reveals approximate state changes; otherwise, choices conceal their precise effects. Keyboard keys **1–3** select policy options. **Export decision trace** downloads a JSON record of every decision and the evolving state.
+Open **http://localhost:8000** in a modern browser. The standalone app imports `engine.mjs` and reads `source_cards.json`. Select a policy with the mouse or keys **1**, **2**, or **3**. The sidebar displays all 16 bounded state metrics and their consequences. **Analyst mode** reveals the authored immediate deltas; dependent knock-on effects, such as coercion increasing fitna or failed AI control intensifying war, still matter. **Export decision trace** saves the complete history, suitable for agent evaluations or narrative analysis.
 
-For direct use with GPTStoryworld's existing Sweepweave reader, open the repo-root **`storyworld_reader.html`** in a browser and load **`storyworlds/balance_of_reason/storyworld.json`** with its file picker. The two play surfaces derive from the same authored cards and use matching crisis thresholds.
+The native Sweepweave world can be played with the repository-root `storyworld_reader.html`, using its file picker to load the generated `storyworlds/balance_of_reason/storyworld.json`.
 
-## Files
+## Contents
 
-| Path | Purpose |
+| File | Purpose |
 | --- | --- |
-| `source_cards.json` | Editable story: eight annual acts, 32 policy scenes, eight incident dossiers, all endings |
-| `engine.mjs` | Pure, deterministic choice, state, and escalation engine for the standalone game |
-| `index.html` | Original browser UI with theatrical briefings, faction meters, and trace export |
-| `build_sweepweave.mjs` | Canonical compiler and structural validator for native Sweepweave JSON |
-| `sweepweave_builder.mjs` | Compatibility re-export for existing tooling |
-| `export_sweepweave.mjs` | Rebuild the generated JSON, or check for drift |
-| `storyworld.json` | Compiled 61-encounter, 11-ending Sweepweave storyworld |
-| `engine.test.mjs` | Shape, reachability, reproducibility, and seeded rehearsal tests |
+| `source_cards.json` | Canonical authored text and mechanics: eight acts, 56 policy encounters, four pairs of war/peace branches, fifteen endings |
+| `engine.mjs` | Deterministic game engine for diplomacy, AI escalation, peace and internal conflict |
+| `index.html` | Responsive browser console, dashboard, transcript export |
+| `build_sweepweave.mjs` | Canonical reproducible compiler and structural validator |
+| `sweepweave_builder.mjs` | Backward-compatible export alias for existing tools |
+| `export_sweepweave.mjs` | Source-to-export regeneration and exact drift check |
+| `storyworld.json` | Compiled native artifact: 105 encounters, 10 spools, 261 options, 548 reactions |
+| `engine.test.mjs` | Browser engine and deterministic war/peace regression fixtures |
+| `native_rehearsal.test.mjs` | Seeded native path traversal and terminal eligibility assertions |
 
-Run from this folder:
+## Campaign structure
 
-```bash
-node --test engine.test.mjs
+| Year | Act | International development | Fitna and AI conflict |
+| --- | --- | --- | --- |
+| 2034 | The Two Testimonies | Dakar solar waqf, tariffs and community ownership | Converted and unconverted Party factions; the first diplomatic oracle |
+| 2035 | The Xinjiang Reckoning | Southeast Asian monsoon insurance and local sovereignty | Hui/Uyghur civic representation and an erroneous automated census |
+| 2036 | The Persian Pivot | Trans-Indus water rights and shared aquifers | Competing ideas of free will; autonomous maritime escorts |
+| 2037 | The House of Disputation | Niger Basin agriculture, open standards and debt | Six competing rationalist schools and a treaty model with a false assumption |
+| 2038 | Gaza's Ledger | Grain deliveries through the Horn of Africa | Green Crescent militias; a fabricated AI ceasefire may start world war |
+| 2039 | The Strait Ledger | Refugee-controlled development bank | Rival rationalist student councils; autonomous financial agents intensify the conflict |
+| 2040 | The Green Schism | Refugee grids and desalination | Three Party and religious fitnas; the Human Command Tribunal |
+| 2041 | Conference of the Ummah | A reconstruction parliament in Manila, Dakar and Baghdad | Samarkand's counter-council; a machine-issued ultimatum with stale delegated authority |
+
+Each annual act contains seven policy encounters, followed by a diplomatic crisis. Failed bargaining can trigger a second brinkmanship exchange. The final four acts include branching war and peace chapters. Actual war episodes can be de-escalated; accumulated strategic pressures can also reignite a war after a ceasefire. A machine-generated claim can receive legal and political force when a government accepts an earlier delegation of authority without re-verifying its scope.
+
+### Systemic dynamics
+
+State values remain within **[-1, +1]** and are displayed as percentages of the signed range. The authored metrics are:
+
+- **U** Ummah consent; **A** rationalist credibility; **L** religious liberty; **M** Mihna coercion; **P** Party cohesion.
+- **D** development equity; **W** civilian welfare; **T** trade resilience; **H** humanitarian displacement.
+- **C** AI command integrity; **G** world-war intensity; **B** brinkmanship; **S** strategic prestige; **F** internal fitna.
+- **V/Q** perceived consent and perceived rationalist credibility, which may diverge from reality.
+
+Coercive doctrines and restrictions on conscience can intensify fitna; equitable development helps communities and reduces displacement. Weak AI authorization increases military escalation risk. A growing world war displaces civilians and harms welfare. The game records these secondary effects separately from the visible policy choice.
+
+From 2038 onward, a global war chapter becomes active when `G >= 0.26`, `C <= -0.24`, or `B >= 0.58`. The alternatives are peace chapters concerned with verification, arms restraint and rebuilding confidence. Further escalation can lead to an irreversible catastrophe.
+
+### End states
+
+There are fifteen endings: **The Fifth Article**, **A Council of Equals**, **The People's Reconstruction**, **The Red Mihna**, **The Paper Caliphate**, **The Mandarin Crescent**, **The Free Cities of Kalam**, **A Cold War of Fatwas**, **The Strategic Retreat**, **The Map Turns Black**, **The Unfinished Mandate**, **The Southern Development Covenant**, **The Machine Armistice**, **The Fractured Ummah**, and **The War of Oracles**.
+
+Each ending has an explicit eligibility rule. An authored score ranks only eligible terminal futures. The Unfinished Mandate remains eligible if no other future satisfies the state conditions.
+
+## Build and tests
+
+Run from this folder after installing Node 18+:
+
+```sh
+node --test engine.test.mjs native_rehearsal.test.mjs
 node export_sweepweave.mjs --check
 ```
 
-To regenerate the compiled world after editing the source, use the reproducible export command (the canonical builder is also runnable directly):
+Recompile after editing `source_cards.json`:
 
-```bash
+```sh
 node export_sweepweave.mjs
 ```
 
-Requires Node 18+ for the test runner and ES modules.
+Validate with the repository's Sweepweave script from this folder:
 
-## Rules of the crisis board
+```sh
+python ../../codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworld.json
+```
 
-Each **year** has four authored policy decisions and a diplomatic incident. The player can seek verified compromise, apply strategic pressure, or back down with stated reasons. An unresolved challenge advances to a second, higher-stakes standoff. A renewed military alert can trigger a catastrophic terminal outcome; backing down damages prestige and preserves the future.
+The authored source and native compiler have been checked structurally. Two independent simulated runs of **5,000 seeded playthroughs each** traversed the browser rules and the generated native encounter graph. Both reached all fifteen endings, with no missing targets, timeouts or disallowed terminal outcomes; no ending exceeded 20% in the browser rehearsal and 19% in the native rehearsal. War and peace routes were both exercised.
 
-This borrows the **crisis / prestige / brinkmanship** logic of Chris Crawford's *Balance of Power*, while adding domestic religious freedom, perceived versus actual consent, civilian consequences, and the problem of legitimacy that diplomacy alone cannot solve.
+These are deterministic structural and balance rehearsals. They provide no calibrated predictions about real international politics, conflict likelihood or theological developments. Execution of the checked-in Node tests on a local machine, a manual playthrough in `storyworld_reader.html`, and accessibility review remain release checks.
 
-- **U:** Ummah Consent. Independent Muslim actors' willingness to participate.
-- **A:** Rationalist Credibility. Whether the program is compatible with inquiry, evidence, and scholarly independence.
-- **L:** Religious Liberty. Effective rights to worship, dissent, and appeal state actions.
-- **W:** Civilian Welfare. Health, aid distribution, safety, and infrastructure outcomes.
-- **P:** Party Cohesion. Ability to sustain the program inside the converted CCP.
-- **T:** Trade Resilience. Energy, payments, shipping, and industrial redundancy.
-- **S:** Strategic Prestige. International credibility of commitments and deterrence.
-- **B:** Brinkmanship. Accumulated escalation risk; a high late-stage alert can end the simulation.
-- **M:** Mihna Coercion. The temptation to test religious belief through state authority.
-- **V / Q:** Perceived Consent / Perceived Credibility. Public reputation, which can diverge from actual experience.
+## Design notes
 
-All metrics are bounded **[-1,+1]**. The scenario is a **designed interactive fiction**, with authored coefficients representing narrative tensions rather than measured empirical causal effects. The browser edition is deterministic for the same sequence of decisions. Trace export supports repeatability and agent-forecast experiments.
+The strategic inspiration is Chris Crawford's *Balance of Power*, particularly obligations, threat escalation, credibility and the possibility that a diplomatic contest ends in catastrophe. This storyworld uses original characters, prose, state variables, choices and implementation.
 
-## The theological conflict
+The theological inspiration is classical Muʿtazilī argument about divine justice, human responsibility, rational inquiry and the created Qur'an. The historical Mihna serves as a warning about compulsory assent. Participants from China, the Muslim world and local communities can challenge Beijing's assumptions and refuse its authority.
 
-The story draws on the classical Muʿtazilī five principles: divine unity (*tawḥīd*), divine justice (*ʿadl*), the promise and threat (*al-waʿd wa'l-waʿīd*), the intermediate position (*al-manzila bayna'l-manzilatayn*), and commanding right and forbidding wrong (*al-amr bi'l-maʿrūf wa'l-nahy ʿan al-munkar*).
-
-The historical **Mihna** raises the central institutional contradiction. If government officials compel citizens and scholars to affirm the created Qur'an, a supposedly rationalist public order has adopted coercive orthodoxy. That conflict is directly playable in Act VII.
-
-The Ummah consists of diverse peoples, schools, governments, and religious organizations. In this story, China can request leadership, fund shared institutions, or demand allegiance. Muslim characters and institutions can refuse without their refusal being treated as mechanically illegitimate. Uyghur and Hui voices, Palestinian civilian institutions, and independent international scholars have decision-making importance beyond their strategic value to China.
-
-## Eight acts
-
-| Year | Act | Principal pressure |
-| --- | --- | --- |
-| 2034 | The Two Testimonies | Conversion of the Party; consent versus proclamation |
-| 2035 | The Xinjiang Reckoning | Local religious liberty, missing records, due process |
-| 2036 | The Persian Pivot | Iran, Gulf partnerships, shipping and dual-use aid |
-| 2037 | The House of Disputation | Cairo, scholarly independence and the created Qur'an |
-| 2038 | Gaza's Ledger | Palestinian-led reconstruction and dual-use exports |
-| 2039 | The Strait Ledger | Hormuz energy risk and escalation through ambiguity |
-| 2040 | The Green Schism | A second Mihna or a right to theological dissent |
-| 2041 | The Conference of the Ummah | Independent ballots and the permanent-chair dispute |
-
-The eleven endings include the **Fifth Article**, the **Council of Equals**, the **People's Reconstruction**, the **Red Mihna**, a **Paper Caliphate**, commercial predominance, a free network of academies, doctrinal cold war, strategic retreat, and catastrophic escalation, plus the deliberately unresolved mandate.
-
-## Playtesting and limits
-
-The initial 5,000 seeded, randomly chosen playthroughs of the compiled Sweepweave graph returned **zero missing targets, dead ends, or timeouts**, with **all eleven endings reachable**. The largest ending accounted for about **22%** of simulated paths. The game has **61 encounters**, **149 options**, and **316 conditional reactions**.
-
-The revised 61-encounter native export also passed a 5,000-run replay with **zero ineligible terminal outcomes**. Ending conditions are checked before the final transition; the unfinished-mandate ending handles runs without a decisive eligible outcome.
-
-These simulations test graph integrity and basic ending reachability. They do not establish realism, calibrated probabilities, or finished narrative pacing. Manual browser playtesting, adversarial role play, accessibility review, and comparison between the Sweepweave and browser readers remain valuable next steps.
-
-## Intellectual references
-
-- Chris Crawford, [*Balance of Power*, Chapter 5: Crises](https://erasmatazz.com/library/my-books/balance-of-power-the-book/chapter-5-crises.html), for obligation, danger, prestige, and crisis reasoning.
-- Chris Crawford, [Chapter 8: How *Balance of Power* Was Created](https://www.erasmatazz.com/library/my-books/balance-of-power-the-book/chapter-8-how-balance-of.html), for the alternating diplomatic challenge that becomes a playable mechanic.
-- The repo's existing `storyworld_format_guide.md`, `storyworlds/mihna_constitutional_alignment.json`, and `codex-skills/storyworld-building/SKILL.md` for schema and creative constraints.
-
-All principal dialogue and named characters in this scenario are fictional. No real-world conversion or governance claim is asserted.
+This is alternate-history fiction. It does not assert that the real CCP has converted, that a particular religious movement has a mandate to govern Muslim societies, or that a world war is expected to occur.
