@@ -31,7 +31,7 @@ export async function extractArtZip(archive){
     check(endData<=bytes.length,"truncated ZIP entry");
     const name=decoder.decode(bytes.subarray(start,endName));
     if(NAME_SET.has(name)){
-      check(!names.has(name),"duplicate artwork file "+name);
+      check(!names.has(name.slice(7,-5)),"duplicate artwork file "+name);
       let content;
       if(method===0)content=bytes.slice(startData,endData);
       else{
