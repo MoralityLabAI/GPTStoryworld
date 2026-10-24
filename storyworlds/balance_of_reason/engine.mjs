@@ -37,7 +37,7 @@ export function initial(source){
 export function current(source,state){
   if(state.phase==="end"){
     const end=source.endings.find(e=>e[0]===state.result);
-    return {year:state.yearIndex<8?source.acts[state.yearIndex].year:2042,title:end[1],body:end[5],choices:[]};
+    return {year:2042,title:end[1],body:end[5],choices:[]};
   }
   if(state.phase==="final")return {year:2041,title:"The Fifth Article: Final Consultation",
     body:"The delegates have voted. The Party can claim a permanent mandate, yield to an elected rotating council, or preserve the practical accords. Maryam asks what free will means when a superpower speaks it.",
