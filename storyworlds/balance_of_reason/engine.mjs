@@ -1,6 +1,7 @@
 // Balance of Reason: Red Mihna. Deterministic browser rules, no dependencies.
 // All geopolitical and theological weights are authored fiction, never empirical forecasts.
-export const clamp=(value)=>Math.max(-1,Math.min(1,Math.round(value*100000)/100000));
+// Maintain full double-precision state, matching native Nudge semantics. Round only displayed scores and faction shift coefficients.
+export const clamp=(value)=>Math.max(-1,Math.min(1,value));
 
 export function deltas(source){
   const result={};
@@ -132,7 +133,7 @@ export function factionShifts(source,delta,success){
   return source.factions.map(faction=>{
     const amount=Object.entries(faction.weights).reduce(
       (total,[key,weight])=>total+(effective[key]||0)*weight,0)*.22;
-    return {id:faction.id,amount:clamp(amount)};
+    return {id:faction.id,amount:Math.max(-1,Math.min(1,Math.round(amount*100000)/100000))};
   }).filter(x=>Math.abs(x.amount)>=.003).sort((a,b)=>
     Math.abs(b.amount)-Math.abs(a.amount) || a.id.localeCompare(b.id)).slice(0,4);
 }
