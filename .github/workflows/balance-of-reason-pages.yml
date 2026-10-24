@@ -1,0 +1,55 @@
+name: Publish Balance of Reason playtest
+on:
+  push:
+    branches:
+      - main
+      - feature/red-mihna-pages-visuals-20261024
+    paths:
+      - 'storyworlds/balance_of_reason/**'
+      - '.github/workflows/balance-of-reason-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: balance-of-reason-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify source, compatibility, and navigation
+        run: |
+          node --test storyworlds/balance_of_reason/*.test.mjs
+          node storyworlds/balance_of_reason/export_sweepweave.mjs --check
+          python3 codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/balance_of_reason/storyworld.json
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          cp -a storyworlds/balance_of_reason/. _site/
+          printf 'Public playtest. Fictional alternate history.\n' > _site/.nojekyll
+          test -f _site/index.html
+          test -f _site/engine.mjs
+          test -f _site/source_cards.json
+          test -f _site/visuals.css
+          test -f _site/visuals.mjs
+          test -f _site/assets/hero.svg
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site/
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish static site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
