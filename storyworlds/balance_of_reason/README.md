@@ -25,9 +25,10 @@ For direct use with GPTStoryworld's existing Sweepweave reader, open the repo-ro
 | `source_cards.json` | Editable story: eight annual acts, 32 policy scenes, eight incident dossiers, all endings |
 | `engine.mjs` | Pure, deterministic choice, state, and escalation engine for the standalone game |
 | `index.html` | Original browser UI with theatrical briefings, faction meters, and trace export |
-| `sweepweave_builder.mjs` | Compiler into the repo's standard encounter/spool schema |
+| `build_sweepweave.mjs` | Canonical compiler and structural validator for native Sweepweave JSON |
+| `sweepweave_builder.mjs` | Compatibility re-export for existing tooling |
 | `export_sweepweave.mjs` | Rebuild the generated JSON, or check for drift |
-| `storyworld.json` | Compiled 60-encounter, 10-ending Sweepweave storyworld |
+| `storyworld.json` | Compiled 61-encounter, 11-ending Sweepweave storyworld |
 | `engine.test.mjs` | Shape, reachability, reproducibility, and seeded rehearsal tests |
 
 Run from this folder:
@@ -37,7 +38,7 @@ node --test engine.test.mjs
 node export_sweepweave.mjs --check
 ```
 
-To regenerate the compiled world after editing the source:
+To regenerate the compiled world after editing the source, use the reproducible export command (the canonical builder is also runnable directly):
 
 ```bash
 node export_sweepweave.mjs
@@ -85,11 +86,13 @@ The Ummah consists of diverse peoples, schools, governments, and religious organ
 | 2040 | The Green Schism | A second Mihna or a right to theological dissent |
 | 2041 | The Conference of the Ummah | Independent ballots and the permanent-chair dispute |
 
-The ten endings include the **Fifth Article**, the **Council of Equals**, the **People's Reconstruction**, the **Red Mihna**, a **Paper Caliphate**, commercial predominance, a free network of academies, doctrinal cold war, strategic retreat, and catastrophic escalation.
+The eleven endings include the **Fifth Article**, the **Council of Equals**, the **People's Reconstruction**, the **Red Mihna**, a **Paper Caliphate**, commercial predominance, a free network of academies, doctrinal cold war, strategic retreat, and catastrophic escalation, plus the deliberately unresolved mandate.
 
 ## Playtesting and limits
 
-The initial 5,000 seeded, randomly chosen playthroughs of the compiled Sweepweave graph returned **zero missing targets, dead ends, or timeouts**, with **all ten endings reachable**. The largest ending accounted for about **22%** of simulated paths. The game has **60 encounters**, **149 options**, and **314 conditional reactions**.
+The initial 5,000 seeded, randomly chosen playthroughs of the compiled Sweepweave graph returned **zero missing targets, dead ends, or timeouts**, with **all eleven endings reachable**. The largest ending accounted for about **22%** of simulated paths. The game has **61 encounters**, **149 options**, and **316 conditional reactions**.
+
+The revised 61-encounter native export also passed a 5,000-run replay with **zero ineligible terminal outcomes**. Ending conditions are checked before the final transition; the unfinished-mandate ending handles runs without a decisive eligible outcome.
 
 These simulations test graph integrity and basic ending reachability. They do not establish realism, calibrated probabilities, or finished narrative pacing. Manual browser playtesting, adversarial role play, accessibility review, and comparison between the Sweepweave and browser readers remain valuable next steps.
 
