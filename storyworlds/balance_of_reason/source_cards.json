@@ -1624,7 +1624,7 @@
       "A Council of Equals",
       "U>=.2 L>=0",
       "U:3 L:2 A:1.6 W:1.2 M:-2 B:-1",
-      5,
+      7.5,
       "A federation of voluntary scholarly and humanitarian institutions forms. China has a powerful voice and no permanent command over the faithful. Official doctrine is debated by the people it hoped to persuade. The council meets in a different city each year."
     ],
     [
@@ -1632,7 +1632,7 @@
       "The People's Reconstruction",
       "W>=.3 U>=-.1",
       "W:3.7 U:1.5 A:1 L:.9 T:.2 B:-1.5",
-      4,
+      5.6,
       "Palestinian clinics, Afghan waterworks and resilient schools become the institutions by which China's new diplomacy is remembered. Theologians continue debating every article. Invoices and independent auditors prove more durable than claims of supreme authority."
     ],
     [
@@ -1664,15 +1664,15 @@
       "The Free Cities of Kalam",
       "L>=.2 P<=.1",
       "L:3.5 A:2.2 U:1.3 P:-2 M:-1.8",
-      4,
+      6.5,
       "Autonomous academies form from Kashgar to Cairo. The Party yields reserved seats and loses control over its intellectual revolution. The result is an untidy brilliance of debates, libraries, public trials and legal arguments about legitimate rule."
     ],
     [
       "cold_war_fatwas",
       "A Cold War of Fatwas",
-      "A<=.05 U<=0",
+      "A<=.4 U<=.3",
       "U:-2.2 A:-2.4 B:1.1 S:.5 V:1.2",
-      10,
+      12.5,
       "The new religious diplomacy fractures into rival councils and public accusations. Commanders keep crisis hotlines open while speakers weaponize the language of divine justice. No doctrine is settled, and each group accuses its opponent of abandoning reason."
     ],
     [
@@ -1696,23 +1696,23 @@
       "The Southern Development Covenant",
       "D>=.32 H<=.25",
       "D:3.5 W:2.2 U:1.6 H:-2 T:.5",
-      6,
+      5,
       "The New Development Bank moves from Beijing's court to a rotating assembly of borrowing communities. Ports, energy and health systems outlast the conferences that financed them. Even opponents of China's creed acknowledge the change in their water, jobs and schools. Its success rests on shared governance rather than doctrinal allegiance."
     ],
     [
       "machine_armistice",
       "The Machine Armistice",
-      "G>=.28 C>=.22 B<=.7",
+      "G>=.2 C>=-.08 B<=.78",
       "C:4 G:1.4 D:1.2 H:-1.7 F:-1.1",
-      7,
+      9,
       "The War of the Models ends after military orders require accountable signatures, independently verified evidence and revocable mandates. A human-authored armistice is celebrated in Baghdad, Nairobi, Manila and Beijing. Most survivors remember the auditors and medics more vividly than the generals."
     ],
     [
       "fractured_ummah",
       "The Fractured Ummah",
-      "F>=.38 U<=.2",
+      "F>=.50 U<=.14",
       "F:3.7 M:1.7 U:-1.8 L:-1.1 G:.5",
-      7,
+      5.3,
       "Rival Party factions, local Muslim councils and foreign governments each declare their own rationalist covenant. China's global claim fractures into incompatible institutions. The best scholars keep debating; several communities spend years recovering from the coercion practiced in reason's name."
     ],
     [
@@ -1728,7 +1728,7 @@
       "The Unfinished Mandate",
       "",
       "U:0",
-      -100,
+      9,
       "The Istanbul congress adjourns without agreement on religious authority. Chinese investment continues, independent jurists resume their debates, and several delegations return to negotiations. Secretary Lin receives an unresolved mandate that the next generation must decide."
     ]
   ],
@@ -1753,6 +1753,7 @@
       "C": -0.24,
       "B": 0.58
     },
-    "note": "Alternate-history fiction. No implication that the CCP has converted or that modeled political outcomes are predicted."
+    "note": "Alternate-history fiction. No implication that the CCP has converted or that modeled political outcomes are predicted.",
+    "rehearsal": "Fifteen endings, with eligibility gates and uncalibrated authored coefficients; target no outcome exceeds 30% in seeded random policy rehearsals."
   }
 }
