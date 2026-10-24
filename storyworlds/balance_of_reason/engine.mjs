@@ -165,7 +165,7 @@ export function scoreEndings(source,state){
 }
 function finish(source,state){
   state.phase="end";
-  const strategicCollapse=state.stats.G>=.88&&state.stats.C<=-.40&&state.stats.B>=.74;
+  const strategicCollapse=state.stats.G>=.88&&state.stats.C<=-.40&&state.stats.B>=.78;
   state.result=strategicCollapse?"global_fire":scoreEndings(source,state)[0].key;
 }
 
@@ -214,7 +214,7 @@ export function choose(source,state,index){
   }else if(previousPhase==="war"||previousPhase==="peace"){
     if(previousPhase==="war")state.warEpisodes++;
     else state.peaceEpisodes++;
-    const fatal=state.stats.G>=.9&&state.stats.C<=-.45&&state.stats.B>=.72;
+    const fatal=state.stats.G>=.9&&state.stats.C<=-.45&&state.stats.B>=.78;
     if(fatal){state.phase="end";state.result="global_fire";outcome="A machine-authorized strategic exchange outruns every ceasefire channel.";}
     else advanceYear(source,state);
   }else if(previousPhase==="final")finish(source,state);
