@@ -53,7 +53,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <div class="topline">
  <div><p class="kicker">An alternate-history strategy storyworld · 2034–2041</p><h1>Balance of Reason: <span>The Red Mihna</span></h1>
  <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build social consent amid global development projects, internal religious fitnas, and the AI-driven World War of the Models.</p></div>
- <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
+ <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="share-campaign" type="button" disabled>Copy campaign link</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
 </div>
 </header>
 <div class="theaters" id="theaters"></div>
@@ -94,6 +94,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
 import {makeTrace,replayTrace} from './trace_protocol.mjs';
+import {makeCampaignUrl,decodeCampaign,campaignTokenFromHash} from './share_route.mjs';
 import {mountVisualPlayer} from './visuals.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
 let source=null,game=null;
@@ -107,6 +108,7 @@ const descriptions={
 const risks=new Set(["B","M","F","G","H"]);
 const titleCase=s=>s.replace(/_/g," ");
 const STORAGE_KEY="balance-of-reason/autosave-v1";
+const shareStatus=document.createElement("span");shareStatus.id="share-status";shareStatus.setAttribute("role","status");shareStatus.setAttribute("aria-live","polite");shareStatus.className="share-status";document.querySelector(".tools").append(shareStatus);
 function persist(){
  if(!source||!game)return;
  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(makeTrace(source,game)));}catch{}
@@ -127,7 +129,8 @@ const visuals=mountVisualPlayer({
    render();return true;
   }catch(error){alert("Could not resume: "+error.message);return false;}
  },
- exportSaved:()=>document.getElementById("export").click()
+ exportSaved:()=>document.getElementById("export").click(),
+ shareCampaign:()=>copyCampaignLink()
 });
 function render(){
  if(!source||!game)return;
@@ -223,9 +226,54 @@ function render(){
  $('export').disabled=game.history.length===0;
  visuals.sync();
 }
-function start(data){validateSource(data);source=data;game=initial(source);$('export-native').disabled=false;render();visuals.showSavedAvailable();}
+function start(data){
+ validateSource(data);source=data;game=initial(source);
+ $('export-native').disabled=false;$('share-campaign').disabled=false;
+ render();visuals.showSavedAvailable();
+ restoreIncomingCampaign();
+}
 $('reset').onclick=()=>{if(source&&confirm('Start over and replace the autosaved campaign?')){game=initial(source);persist();render();}};
 $('forecast').onchange=render;
+async function copyCampaignLink(){
+ if(!source||!game)return;
+ let href;
+ try{href=makeCampaignUrl(location.href,source,game);}
+ catch(error){shareStatus.textContent="Sharing unavailable: "+error.message;return;}
+ try{
+  if(!navigator.clipboard?.writeText)throw Error("Clipboard unavailable");
+  await navigator.clipboard.writeText(href);
+  shareStatus.textContent="Campaign link copied. It contains policy choices only.";
+ }catch{
+  window.prompt("Copy your campaign link:",href);
+  shareStatus.textContent="Copy the campaign link to share this game.";
+ }
+}
+$('share-campaign').onclick=copyCampaignLink;
+function restoreIncomingCampaign(){
+ let token;
+ try{token=campaignTokenFromHash(location.hash);}
+ catch(error){shareStatus.textContent="Campaign link error: "+error.message;return;}
+ if(!token)return;
+ try{
+  const restored=decodeCampaign(source,token);
+  const autosave=localStorage.getItem(STORAGE_KEY);
+  const previous=autosave?JSON.parse(autosave):null;
+  const needsConsent=previous?.actions?.length>0;
+  if(needsConsent&&!window.confirm("Open the shared campaign? Your current autosave will be replaced. Save it to a file first if you want to keep it.")){
+   shareStatus.textContent="Existing campaign preserved.";return;
+  }
+  game=restored;
+  persist();
+  render();
+  visuals.hideIntro();
+  shareStatus.textContent="Shared campaign restored at decision "+(game.turns+1)+".";
+ }catch(error){
+  shareStatus.textContent="Shared campaign could not be loaded.";
+  window.alert("Campaign link cannot be opened: "+error.message);
+ }finally{
+  if(location.hash.startsWith("#campaign="))history.replaceState(null,"",location.pathname+location.search);
+ }
+}
 $('export').onclick=()=>{
  if(!game)return;
  const payload=makeTrace(source,game);
