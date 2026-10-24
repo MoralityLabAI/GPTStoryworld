@@ -3,8 +3,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 
-const world=buildStoryworld(source);
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
+const world=buildStoryworld(source);
 
 function evaluate(expression,state){
   if(expression===true||expression===false||typeof expression==='number')return expression;
