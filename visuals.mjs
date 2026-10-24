@@ -108,7 +108,7 @@ function renderArtImage(key,alt,className=""){
 }
 
 export function mountVisualPlayer(config){
-  const {getSource,getGame,newGame,resumeSaved,exportSaved}=config;
+  const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign}=config;
   const shell=document.querySelector(".shell");
   if(!shell||MOUNTS.has(shell))throw Error("Visual player already mounted or shell missing");
   let activeModal=null,selectedLocation=LOCATIONS[0],chosenFaction=null,selectedResearch=0;
@@ -135,7 +135,8 @@ export function mountVisualPlayer(config){
     if(resumeSaved()) {hideIntro();sync();}
   });
   const how=createButton("How to play",()=>openModal("guide"));
-  menuButtons.append(play,resume,how);stage.append(menuButtons);
+  const share=createButton("Copy playtest link",()=>shareCampaign?.());
+  menuButtons.append(play,resume,how,share);stage.append(menuButtons);
   stage.append(regular("div","intro-foot","11 FACTIONS · 15 ENDINGS · 16 NATIONAL VARIABLES"));
   intro.append(stage);
   document.body.append(modal,intro);
@@ -326,7 +327,7 @@ export function mountVisualPlayer(config){
       ["Three choices, lasting effects","Select one policy each scene. Other factions may accept, resist or defect. Some outcomes differ even when you repeat the same choice."],
       ["Escalate carefully","Crisis warnings can cost prestige to withdraw. Continuing a war alert can destroy the entire campaign."],
       ["Use the atlas and diplomacy","Explore locations, inspect independent faction mandates, and review your own political chronicle at any time."],
-      ["Save and send feedback","Your trace can be exported and resumed on the same edition of the source. The feedback sheet is designed for external playtesters."]
+      ["Save and send feedback","Use Copy playtest link to share your campaign choices across devices. The link contains decisions only. Download full traces for audit and fill in the local feedback sheet for playtest notes."]
     ];
     for(const [title,body] of cards){
       const c=regular("section","card");c.append(h("h3",title),note(body));content.append(c);
