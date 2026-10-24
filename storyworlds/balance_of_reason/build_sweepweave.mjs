@@ -169,7 +169,7 @@ export function buildSweepweave(source){
         ]
       }))
     }));
-    ids.push(encounter(councilId,council.title,council.body+"\n\n"+council.cooperative+"\n\n"+council.hostile,spool,factionOptions));
+    ids.push(encounter(councilId,council.title,council.body+"\n\nThe delegation has sealed its position. Its response to the next decision depends on the trust accumulated since the opening congress.",spool,factionOptions));
     const [name,description,stake,obligation,hurt,fallout]=act.crisis;
     const crisis="page_"+act.year+"_crisis",standoff="page_"+act.year+"_standoff";
     ids.push(encounter(crisis,name+": First Exchange",
