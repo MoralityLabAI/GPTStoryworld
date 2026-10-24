@@ -6,20 +6,25 @@ import {initial,current,choose,autoplay,scoreEndings,validateSource} from './eng
 import {buildStoryworld} from './sweepweave_builder.mjs';
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
 const world=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url),'utf8'));
-test('eight acts, 32 authored policy scenes, eleven endings',()=>{
+test('eight acts, 56 authored policy scenes, fifteen endings',()=>{
  assert.equal(validateSource(source),true);
  assert.equal(source.acts.length,8);
  assert.equal(source.acts.reduce((sum,a)=>sum+a.events.length,0),56);
- assert.equal(source.endings.length,11);
+ assert.equal(source.endings.length,15);
+ assert.equal(source.version,2);
+ assert.ok(source.acts.every(a=>a.events.length===7));
+ assert.equal(source.acts.filter(a=>a.conflict).length,4);
 });
 test('compiled Sweepweave graph is closed and production-shaped',()=>{
- assert.equal(world.encounters.length,61);
+ assert.equal(world.encounters.length,105);
+ assert.equal(world.encounters.reduce((n,e)=>n+e.options.length,0),261);
+ assert.equal(world.encounters.reduce((n,e)=>n+e.options.reduce((r,o)=>r+o.reactions.length,0),0),548);
  assert.equal(world.spools.length,10);
  assert.ok(world.spools[0].starts_active);
  const ids=new Set(world.encounters.map(e=>e.id));
  assert.equal(ids.size,world.encounters.length);
  const endIds=new Set(world.encounters.filter(e=>e.id.startsWith('page_end_')).map(e=>e.id));
- assert.equal(endIds.size,11);
+ assert.equal(endIds.size,15);
  for(const spool of world.spools){
    assert.ok(spool.encounters.length>0);
    for(const id of spool.encounters)assert.ok(ids.has(id),'invalid spool target '+id);
@@ -59,7 +64,7 @@ test('5,000 seeded playthroughs cover fifteen endings without dead ends',()=>{
    const out=autoplay(source,(scene)=>{
      seed=(Math.imul(seed,1664525)+1013904223)>>>0;
      return Math.floor((seed/4294967296)*scene.choices.length);
-   },70);
+   },105);
    outcomes[out.result]=(outcomes[out.result]||0)+1;
    assert.ok(out.turns<=95,'unexpected loop');
    if(out.result!=='global_fire')assert.ok(scoreEndings(source,out)[0].eligible,'selected an ineligible ending');
