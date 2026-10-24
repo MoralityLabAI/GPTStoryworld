@@ -25,6 +25,7 @@ jobs:
       - name: Verify source, compatibility, and navigation
         run: |
           node --test storyworlds/balance_of_reason/*.test.mjs
+          python3 -m unittest discover -s storyworlds/balance_of_reason/tools -p 'test_*.py' -v
           node storyworlds/balance_of_reason/export_sweepweave.mjs --check
           python3 codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/balance_of_reason/storyworld.json
       - name: Exercise real browser UI in headless Chrome
