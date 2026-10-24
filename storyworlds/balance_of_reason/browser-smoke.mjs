@@ -39,6 +39,20 @@ async function run(){
   assert.equal(res.status(),200);
   await page.locator('#visual-intro').waitFor({state:'visible'});
   assert.equal(await page.locator('#visual-intro .intro-stage').count(),1);
+  await page.getByRole('button',{name:'How to play'}).click();
+  await page.locator('#visual-modal').waitFor({state:'visible'});
+  assert.ok((await page.locator('#visual-modal').innerText()).includes('You are the Secretary'));
+  await page.getByRole('button',{name:/Close ×/}).click();
+
+  await page.getByRole('button',{name:'Playtest chapters'}).click();
+  await page.locator('#visual-modal').waitFor({state:'visible'});
+  assert.equal(await page.locator('.chapter-card').count(),3);
+  await page.getByRole('button',{name:'Start The False Ceasefire chapter'}).click();
+  await page.locator('#visual-intro').waitFor({state:'hidden'});
+  assert.equal(await page.locator('#scene-title').innerText(),'The False Ceasefire');
+
+  await page.getByRole('button',{name:'Main menu'}).click();
+  await page.locator('#visual-intro').waitFor({state:'visible'});
   await page.getByRole('button',{name:/new campaign/i}).click();
   await page.locator('#visual-intro').waitFor({state:'hidden'});
   await page.locator('#scene-title').waitFor({state:'visible'});
