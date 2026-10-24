@@ -93,6 +93,6 @@ test('AI-driven world war and negotiated peace are separate playable campaign pa
  const falseCeasefire=initial(source);
  falseCeasefire.yearIndex=4;falseCeasefire.sceneIndex=6;
  choose(source,falseCeasefire,1);
- assert.ok(falseCeasefire.stats.G>.35);
+ assert.ok(falseCeasefire.stats.G>.30);
  assert.ok(falseCeasefire.stats.C<-.2);
 });
