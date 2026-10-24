@@ -119,7 +119,28 @@ async function run(){
   assert.ok(await page.locator('#scene-title').isVisible());
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
   assert.ok(overflow<15,'unexpected horizontal overflow '+overflow);
+
+  const controlled=await page.evaluate(async()=>{
+    if(!('serviceWorker' in navigator))return false;
+    await navigator.serviceWorker.ready;
+    if(navigator.serviceWorker.controller)return true;
+    return await new Promise(resolve=>{
+      const timeout=setTimeout(()=>resolve(false),7000);
+      navigator.serviceWorker.addEventListener('controllerchange',()=>{
+        clearTimeout(timeout);resolve(!!navigator.serviceWorker.controller);
+      },{once:true});
+    });
+  });
+  assert.ok(controlled,'offline service worker did not claim playtest page');
+  await page.context().setOffline(true);
+  try{
+    await page.reload({waitUntil:'domcontentloaded'});
+    await page.locator('#visual-intro').waitFor({state:'visible'});
+    await page.getByRole('button',{name:/Resume campaign/i}).click();
+    await page.locator('#visual-intro').waitFor({state:'hidden'});
+    assert.equal(await page.locator('#scene-title').innerText(),second);
+  }finally{await page.context().setOffline(false);}
   assert.deepEqual(errors,[]);
-  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, share URLs, feedback');
+  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, share URLs, feedback, offline reload');
 }
 try{await run();}finally{await browser?.close();server.kill('SIGTERM');}
