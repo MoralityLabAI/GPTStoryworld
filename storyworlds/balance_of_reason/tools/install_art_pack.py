@@ -55,7 +55,7 @@ def read_pack(path: Path) -> dict[str, bytes]:
             raise ValueError("Archive exceeds decompressed size limit")
         for member in members:
             mode = member.external_attr >> 16
-            if stat.S_ISLNK(mode) or (mode and not stat.S_ISREG(mode)):
+            if stat.S_ISLNK(mode) or stat.S_IFMT(mode) not in (0, stat.S_IFREG):
                 raise ValueError("Archive may only contain regular files")
             if member.file_size > MAX_BYTES_PER_IMAGE and member.filename != "INSTALL.txt":
                 raise ValueError(f"{member.filename}: image exceeds size limit")
