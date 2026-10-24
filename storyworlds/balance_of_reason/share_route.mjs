@@ -23,7 +23,7 @@ function pack(indices){
   for(let i=0;i<indices.length;i+=3){
     result+=ALPHABET[(indices[i]<<4)|((indices[i+1]??0)<<2)|(indices[i+2]??0)];
   }
-  return result||'_';
+  return result||'A';
 }
 function unpack(data,count){
   const choices=[];
