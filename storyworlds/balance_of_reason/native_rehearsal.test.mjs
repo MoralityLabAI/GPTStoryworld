@@ -78,3 +78,22 @@ test('5,000 native Sweepweave paths reach all 15 endings with valid gates',()=>{
   assert.ok(war>1000&&peace>1000,'missing world-war or peace branch');
   console.log('native ending counts',counts,'war',war,'peace',peace,'mean length',total/5000);
 });
+
+test('Sweepweave institutional countermove can cooperate or resist under the same player choice',()=>{
+  const council=world.encounters.find(e=>e.id==='page_2034_countermove');
+  assert.ok(council);
+  assert.equal(council.options.length,3);
+  const result=council.options[0].reactions;
+  assert.equal(result.length,2);
+  const select=standing=>{
+    const state={'char_veteran.Coalition_Standing':standing};
+    return result.slice().sort((a,b)=>
+      evaluate(b.desirability_script,state)-evaluate(a.desirability_script,state))[0];
+  };
+  const cooperating=select(.6),resisting=select(-.6);
+  assert.notEqual(cooperating.id,resisting.id,'independent faction agency must change the outcome');
+  assert.ok(cooperating.id.includes('cooperate'));
+  assert.ok(resisting.id.includes('resist'));
+  const standingEffects=cooperating.after_effects.filter(e=>e.Set.keyring[0]==='Coalition_Standing');
+  assert.ok(standingEffects.length>0,'player policy must alter institutional standing');
+});
