@@ -32,7 +32,7 @@ export function buildSweepweave(source){
   function effects(delta,choiceIndex,witness,success){
     const d=decode(delta),factor=success?1:.66;
     const result=Object.entries(d).map(([k,value])=>nudge(
-      k,Math.max(-.3,Math.min(.3,value*(value<0&&!success?1.26:factor)))
+      k,value*(value<0&&!success?1.26:factor)
     ));
     if(!Object.hasOwn(d,"V"))result.push(nudge("V",choiceIndex===1?.065:choiceIndex===0?.025:.015));
     if(!Object.hasOwn(d,"Q"))result.push(nudge("Q",choiceIndex===1?-.035:choiceIndex===0?.055:.005));
