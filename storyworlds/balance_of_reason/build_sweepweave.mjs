@@ -194,13 +194,13 @@ export function validateSweepweave(data){
 // Run from repo root: node storyworlds/balance_of_reason/build_sweepweave.mjs
 import {readFileSync,writeFileSync} from "node:fs";
 import {fileURLToPath} from "node:url";
-import {dirname,join} from "node:path";
+import {dirname,join,resolve} from "node:path";
 const moduleFile=fileURLToPath(import.meta.url),folder=dirname(moduleFile);
-if(process.argv[1] && fileURLToPath(new URL("file://"+process.argv[1]))===moduleFile){
+if(process.argv[1] && resolve(process.argv[1])===moduleFile){
   const src=JSON.parse(readFileSync(join(folder,"source_cards.json"),"utf8"));
   const storyworld=buildSweepweave(src),errors=validateSweepweave(storyworld);
   if(errors.length)throw Error(errors.join("; "));
   const out=join(folder,"storyworld.json");
-  writeFileSync(out,JSON.stringify(storyworld,null,2)+"\\n","utf8");
+  writeFileSync(out,JSON.stringify(storyworld,null,2)+"\n","utf8");
   console.log("Wrote "+out+" · "+storyworld.encounters.length+" encounters; "+storyworld.spools.length+" spools.");
 }
