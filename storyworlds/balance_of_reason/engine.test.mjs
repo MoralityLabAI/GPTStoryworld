@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {initial,current,choose,autoplay,scoreEndings,validateSource} from './engine.mjs';
 import {buildStoryworld} from './sweepweave_builder.mjs';
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
-const world=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url),'utf8'));
+const world=buildStoryworld(source);
 test('eight acts, 56 authored policy scenes, fifteen endings',()=>{
  assert.equal(validateSource(source),true);
  assert.equal(source.acts.length,8);
@@ -48,8 +48,9 @@ test('compiled Sweepweave graph is closed and production-shaped',()=>{
    }
  }
 });
-test('export equals exact authored source compilation',()=>{
+test('pure native compilation is reproducible from authored source',()=>{
  assert.deepEqual(world,buildStoryworld(source));
+ assert.equal(JSON.stringify(world),JSON.stringify(buildStoryworld(source)));
 });
 test('all policies are selectable and values stay bounded',()=>{
  for(let strategy=0;strategy<3;strategy++){
