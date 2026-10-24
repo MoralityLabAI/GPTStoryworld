@@ -1,10 +1,11 @@
+import {buildStoryworld} from './sweepweave_builder.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {initial,current,choose} from './engine.mjs';
 
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
-const native=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url),'utf8'));
+const native=buildStoryworld(source);
 const byId=new Map(native.encounters.map(e=>[e.id,e]));
 
 function evalScript(expr,state){
