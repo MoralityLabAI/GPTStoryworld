@@ -2,24 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-import {initial,current,choose,autoplay,validateSource} from './engine.mjs';
+import {initial,current,choose,autoplay,scoreEndings,validateSource} from './engine.mjs';
 import {buildStoryworld} from './sweepweave_builder.mjs';
 const source=JSON.parse(readFileSync(new URL('./source_cards.json',import.meta.url),'utf8'));
 const world=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url),'utf8'));
-test('eight acts, 32 authored policy scenes, ten endings',()=>{
+test('eight acts, 32 authored policy scenes, eleven endings',()=>{
  assert.equal(validateSource(source),true);
  assert.equal(source.acts.length,8);
  assert.equal(source.acts.reduce((sum,a)=>sum+a.events.length,0),32);
- assert.equal(source.endings.length,10);
+ assert.equal(source.endings.length,11);
 });
 test('compiled Sweepweave graph is closed and production-shaped',()=>{
- assert.equal(world.encounters.length,60);
+ assert.equal(world.encounters.length,61);
  assert.equal(world.spools.length,10);
  assert.ok(world.spools[0].starts_active);
  const ids=new Set(world.encounters.map(e=>e.id));
  assert.equal(ids.size,world.encounters.length);
  const endIds=new Set(world.encounters.filter(e=>e.id.startsWith('page_end_')).map(e=>e.id));
- assert.equal(endIds.size,10);
+ assert.equal(endIds.size,11);
  for(const spool of world.spools){
    assert.ok(spool.encounters.length>0);
    for(const id of spool.encounters)assert.ok(ids.has(id),'invalid spool target '+id);
@@ -62,6 +62,7 @@ test('5,000 seeded playthroughs reach every ending without dead ends',()=>{
    },70);
    outcomes[out.result]=(outcomes[out.result]||0)+1;
    assert.ok(out.turns<=55,'unexpected loop');
+   if(out.result!=='global_fire')assert.ok(scoreEndings(source,out)[0].eligible,'selected an ineligible ending');
    for(const value of Object.values(out.stats)) assert.ok(value<=1&&value>=-1);
  }
  for(const ending of source.endings)assert.ok((outcomes[ending[0]]||0)>=10,'rare or unreachable '+ending[0]);
