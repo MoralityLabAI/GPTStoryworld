@@ -96,6 +96,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
 import {makeTrace,replayTrace} from './trace_protocol.mjs';
 import {latestDecisionImpact} from './decision_impact.mjs';
+import {loadPlaytestChapter} from './playtest_chapters.mjs';
 import {makeCampaignUrl,decodeCampaign,campaignTokenFromHash} from './share_route.mjs';
 import {mountVisualPlayer} from './visuals.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
@@ -133,7 +134,18 @@ const visuals=mountVisualPlayer({
  },
  exportSaved:()=>document.getElementById("export").click(),
  shareCampaign:()=>copyCampaignLink(),
- getCampaignLink:()=>source&&game?makeCampaignUrl(location.href,source,game):location.origin+location.pathname
+ getCampaignLink:()=>source&&game?makeCampaignUrl(location.href,source,game):location.origin+location.pathname,
+ loadChapter:id=>{
+  if(!source)return false;
+  try{
+   const candidate=loadPlaytestChapter(source,id);
+   let previous;
+   try{previous=localStorage.getItem(STORAGE_KEY);}catch{}
+   const existing=previous?JSON.parse(previous):null;
+   if(existing?.actions?.length && !window.confirm("Start this playtest chapter? Your current autosave will be replaced. Save a trace or copy its campaign link first if you want to preserve it."))return false;
+   game=candidate;persist();render();return true;
+  }catch(error){window.alert("Chapter preview unavailable: "+error.message);return false;}
+ }
 });
 function renderImpactReport(){
  const target=$('impact-report');
