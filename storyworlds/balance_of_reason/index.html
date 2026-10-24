@@ -52,7 +52,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <div class="topline">
  <div><p class="kicker">An alternate-history strategy storyworld · 2034–2041</p><h1>Balance of Reason: <span>The Red Mihna</span></h1>
  <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build social consent amid global development projects, internal religious fitnas, and the AI-driven World War of the Models.</p></div>
- <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export">Export decision trace</button><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
+ <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
 </div>
 </header>
 <div class="theaters" id="theaters"></div>
@@ -92,6 +92,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 </div>
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
+import {makeTrace,replayTrace} from './trace_protocol.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
 let source=null,game=null;
 const $=(id)=>document.getElementById(id);
@@ -201,7 +202,7 @@ $('reset').onclick=()=>{if(source){game=initial(source);render();}};
 $('forecast').onchange=render;
 $('export').onclick=()=>{
  if(!game)return;
- const payload={world:source.title,ifid:"SW-BALANCE-OF-REASON-RED-MIHNA-2034",status:game.phase,result:game.result,final_stats:game.stats,final_faction_standings:game.factions,history:game.history};
+ const payload=makeTrace(source,game);
  const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));
  const a=document.createElement('a');a.href=url;a.download='balance-of-reason-trace.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
 };
@@ -215,6 +216,19 @@ $('export-native').onclick=()=>{
    link.click();
    setTimeout(()=>URL.revokeObjectURL(url),2000);
  }catch(err){alert('Native export failed: '+err.message);}
+};
+$('import-trace').onclick=()=>{if(source)$('trace-file').click();};
+$('trace-file').onchange=async e=>{
+ const file=e.target.files?.[0];
+ if(!file||!source)return;
+ try{
+  if(file.size>2*1024*1024)throw Error('Trace file exceeds 2 MB safety limit');
+  const parsed=JSON.parse(await file.text());
+  game=replayTrace(source,parsed);
+  render();
+  window.scrollTo({top:0,behavior:"smooth"});
+ }catch(err){alert('Unable to resume the trace: '+err.message);}
+ finally{e.target.value='';}
 };
 $('datafile').onchange=async e=>{const file=e.target.files[0];if(file){try{start(JSON.parse(await file.text()));}catch(err){alert('Invalid storyworld source: '+err.message);}}};
 document.addEventListener('keydown',e=>{
