@@ -63,6 +63,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
  <div id="yearbadge">Loading storyworld</div>
  <h2 id="scene-title">Opening the archives…</h2>
  <div id="lastresult"></div>
+ <div id="impact-report" class="impact-report" aria-live="polite" aria-label="Consequences of the last policy choice"></div>
  <div id="narrative"></div>
  <div id="stakes"></div>
  <h3 id="question-heading">Your decision</h3>
@@ -94,6 +95,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
 import {makeTrace,replayTrace} from './trace_protocol.mjs';
+import {latestDecisionImpact} from './decision_impact.mjs';
 import {makeCampaignUrl,decodeCampaign,campaignTokenFromHash} from './share_route.mjs';
 import {mountVisualPlayer} from './visuals.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
@@ -133,6 +135,42 @@ const visuals=mountVisualPlayer({
  shareCampaign:()=>copyCampaignLink(),
  getCampaignLink:()=>source&&game?makeCampaignUrl(location.href,source,game):location.origin+location.pathname
 });
+function renderImpactReport(){
+ const target=$('impact-report');
+ target.replaceChildren();
+ const impact=latestDecisionImpact(source,game);
+ target.hidden=!impact;
+ if(!impact)return;
+ const title=document.createElement("div");
+ title.className="impact-heading";
+ title.textContent="Policy consequences · "+impact.year+" · "+impact.turn;
+ target.append(title);
+ const makeRow=(item,section)=>{
+  const row=document.createElement("div");
+  row.className="impact-row "+(item.improvement?"impact-positive":"impact-negative");
+  const name=document.createElement("span");name.textContent=item.name;
+  const number=document.createElement("strong");number.textContent=item.display;
+  number.setAttribute("aria-label",item.name+" changed by "+item.display+" points");
+  row.append(name,number);section.append(row);
+ };
+ for(const [label,items,cls]of [
+  ["National change",impact.national,"impact-metric"],
+  ["Coalition reactions",impact.coalitions,"impact-faction"]
+ ]){
+  const section=document.createElement("section");
+  section.className="impact-column "+cls;
+  const heading=document.createElement("h3");heading.textContent=label;
+  section.append(heading);
+  if(items.length)items.forEach(item=>makeRow(item,section));
+  else{const empty=document.createElement("p");empty.textContent="No significant changes";section.append(empty);}
+  target.append(section);
+ }
+ const note=document.createElement("small");
+ note.className="impact-footnote";
+ note.textContent="Game-model changes since the previous decision. Coalition standing is independent of public reputation.";
+ target.append(note);
+}
+
 function render(){
  if(!source||!game)return;
  const s=current(source,game),ended=game.phase==="end";
@@ -152,6 +190,7 @@ function render(){
  $('stakes').textContent=s.stakes||"";
  $('stakes').hidden=!s.stakes;
  $('lastresult').textContent=game.lastOutcome?"PREVIOUS DECISION · "+game.lastOutcome:"";
+ renderImpactReport();
  $('question-heading').textContent=ended?"Outcome":"Your decision";
  $('choices').replaceChildren();
  if(!ended){
