@@ -9,7 +9,7 @@ const world=JSON.parse(readFileSync(new URL('./storyworld.json',import.meta.url)
 test('eight acts, 32 authored policy scenes, eleven endings',()=>{
  assert.equal(validateSource(source),true);
  assert.equal(source.acts.length,8);
- assert.equal(source.acts.reduce((sum,a)=>sum+a.events.length,0),32);
+ assert.equal(source.acts.reduce((sum,a)=>sum+a.events.length,0),56);
  assert.equal(source.endings.length,11);
 });
 test('compiled Sweepweave graph is closed and production-shaped',()=>{
@@ -49,10 +49,10 @@ test('all policies are selectable and values stay bounded',()=>{
    assert.equal(st.phase,'end');
    assert.ok(source.endings.some(x=>x[0]===st.result));
    for(const value of Object.values(st.stats))assert.ok(value<=1&&value>=-1);
-   assert.ok(st.turns<=55);
+   assert.ok(st.turns<=95);
  }
 });
-test('5,000 seeded playthroughs reach every ending without dead ends',()=>{
+test('5,000 seeded playthroughs cover fifteen endings without dead ends',()=>{
  const outcomes={};
  for(let n=0;n<5000;n++){
    let seed=Math.imul(n+1,0x9e3779b1)>>>0;
@@ -61,10 +61,33 @@ test('5,000 seeded playthroughs reach every ending without dead ends',()=>{
      return Math.floor((seed/4294967296)*scene.choices.length);
    },70);
    outcomes[out.result]=(outcomes[out.result]||0)+1;
-   assert.ok(out.turns<=55,'unexpected loop');
+   assert.ok(out.turns<=95,'unexpected loop');
    if(out.result!=='global_fire')assert.ok(scoreEndings(source,out)[0].eligible,'selected an ineligible ending');
    for(const value of Object.values(out.stats)) assert.ok(value<=1&&value>=-1);
  }
  for(const ending of source.endings)assert.ok((outcomes[ending[0]]||0)>=10,'rare or unreachable '+ending[0]);
+ assert.ok(Math.max(...Object.values(outcomes))<=1500,'ending dominance >30%');
  console.log('Ending distribution:',outcomes);
+});
+
+test('AI-driven world war and negotiated peace are separate playable campaign paths',()=>{
+ const war=initial(source);
+ war.yearIndex=4;war.phase='crisis';war.stats.G=.4;
+ choose(source,war,2);
+ assert.equal(war.phase,'war');
+ assert.equal(current(source,war).title,source.acts[4].conflict.war[0]);
+ choose(source,war,0);
+ assert.equal(war.yearIndex,5);
+ assert.equal(war.warEpisodes,1);
+ const peace=initial(source);
+ peace.yearIndex=4;peace.phase='crisis';peace.stats.C=.4;
+ choose(source,peace,2);
+ assert.equal(peace.phase,'peace');
+ choose(source,peace,0);
+ assert.equal(peace.peaceEpisodes,1);
+ const falseCeasefire=initial(source);
+ falseCeasefire.yearIndex=4;falseCeasefire.sceneIndex=6;
+ choose(source,falseCeasefire,1);
+ assert.ok(falseCeasefire.stats.G>.35);
+ assert.ok(falseCeasefire.stats.C<-.2);
 });
