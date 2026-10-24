@@ -225,6 +225,15 @@ export function choose(source,state,index){
   }else if(previousPhase==="crisis"){
     if(index===0)success=pre.U>=(-.21+state.yearIndex*.026);
     if(index===1)success=pre.S>=(.20+state.yearIndex*.023);
+    if(index===2)success=pre.T>=(-.14+state.yearIndex*.015);
+  }else if(previousPhase==="standoff"){
+    if(index===0)success=pre.A>=(-.16+state.yearIndex*.026);
+    if(index===1)success=pre.B>=(.62-state.yearIndex*.009);
+    if(index===2)success=pre.U>=(-.22+state.yearIndex*.022);
+  }else if(previousPhase==="final"){
+    if(index===0)success=pre.U>=-.2;
+    if(index===1)success=pre.P>=.05;
+    if(index===2)success=pre.T>=-.12;
   }else if(previousPhase==="war"){
     if(index===0)success=pre.C>=-.2;
     if(index===1)success=pre.P>=.12;
