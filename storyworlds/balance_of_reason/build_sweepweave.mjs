@@ -365,17 +365,3 @@ export function validateSweepweave(world){
   }
   return errors;
 }
-
-// Rebuild: node storyworlds/balance_of_reason/build_sweepweave.mjs
-import {readFileSync,writeFileSync} from "node:fs";
-import {fileURLToPath} from "node:url";
-import {dirname,join,resolve} from "node:path";
-const moduleFile=fileURLToPath(import.meta.url),folder=dirname(moduleFile);
-if(process.argv[1] && resolve(process.argv[1])===moduleFile){
-  const source=JSON.parse(readFileSync(join(folder,"source_cards.json"),"utf8"));
-  const world=buildSweepweave(source),errors=validateSweepweave(world);
-  if(errors.length)throw Error(errors.join("; "));
-  const file=join(folder,"storyworld.json");
-  writeFileSync(file,JSON.stringify(world),"utf8");
-  console.log("Wrote "+file+" · "+world.encounters.length+" encounters");
-}
