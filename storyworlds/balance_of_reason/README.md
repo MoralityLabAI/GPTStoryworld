@@ -88,3 +88,20 @@ Chris Crawford's *Balance of Power* provides the crisis logic: backing down carr
 Its Muʿtazilī material draws on the five classical principles, including divine unity, justice, responsibility, and commanding right and forbidding wrong. The possibility of another Mihna asks how a rationalist state behaves when the people it claims to protect decline its interpretation. Local Muslim and secular institutions can reject Beijing's authority without being written out of the political system.
 
 Everything after the fictional 2034 conversion is alternate history. This work asserts neither a CCP conversion nor a forecast of world war.
+
+## Illustrated GitHub Pages playtest (production frontend preview)
+
+The visual frontend is implemented in `visuals.mjs` and `visuals.css`, loaded by the existing `index.html`. It provides an illustrated title/menu, contextual portraits, a clickable regional atlas, diplomacy view, an institutional policy codex, chronicle, gallery, responsive mobile layout and playtest feedback download. The original strategic engine still governs every choice and faction countermove.
+
+The project also has a clean **`gh-pages`** branch containing a root-level static copy of the site and four self-contained illustrated SVG backdrops. The repository owner can enable the public playtest at **[Repository Settings → Pages](https://github.com/MoralityLabAI/GPTStoryworld/settings/pages)**: choose **Deploy from a branch**, select **`gh-pages`** and **`/(root)`**, then Save. The intended site URL is **https://moralitylabai.github.io/GPTStoryworld/**. A URL only becomes shareable after GitHub reports a successful Pages deployment.
+
+The generated concept-art images have matching, optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
+
+The app autosaves a signed-index *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
+
+Tests include:
+- `node --test *.test.mjs` for storyworld parity, gameplay, portraits, atlas and trace integrity.
+- `node browser-smoke.mjs` using a local Chrome/Chromium and `playwright-core` to verify the real UI from title screen through decisions, autosave/resume, mobile and feedback.
+- `.github/workflows/balance-of-reason-pages.yml` stages the playtest build after regression and headless browser checks. Branch deployment through `gh-pages` is the default. Optional GitHub Actions deployment can be enabled later.
+
+The site is a public fictional-playtest build. All data remains client-side unless a player chooses to download and share a trace or report.
