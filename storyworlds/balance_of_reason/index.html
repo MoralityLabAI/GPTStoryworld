@@ -45,6 +45,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 @media(max-width:900px){.layout{grid-template-columns:1fr}.theaters{grid-template-columns:repeat(4,1fr)}.shell{padding:18px 16px 55px}.panel{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
+<link rel="stylesheet" href="./visuals.css">
 </head>
 <body>
 <div class="shell">
@@ -93,6 +94,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
 import {makeTrace,replayTrace} from './trace_protocol.mjs';
+import {mountVisualPlayer} from './visuals.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
 let source=null,game=null;
 const $=(id)=>document.getElementById(id);
@@ -104,6 +106,29 @@ const descriptions={
 };
 const risks=new Set(["B","M","F","G","H"]);
 const titleCase=s=>s.replace(/_/g," ");
+const STORAGE_KEY="balance-of-reason/autosave-v1";
+function persist(){
+ if(!source||!game)return;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(makeTrace(source,game)));}catch{}
+}
+const visuals=mountVisualPlayer({
+ getSource:()=>source,
+ getGame:()=>game,
+ newGame:()=>{
+  if(!source)return false;
+  game=initial(source);persist();render();return true;
+ },
+ resumeSaved:()=>{
+  if(!source)return false;
+  try{
+   const raw=localStorage.getItem(STORAGE_KEY);
+   if(!raw)throw Error("No saved campaign is available on this device");
+   game=replayTrace(source,JSON.parse(raw));
+   render();return true;
+  }catch(error){alert("Could not resume: "+error.message);return false;}
+ },
+ exportSaved:()=>document.getElementById("export").click()
+});
 function render(){
  if(!source||!game)return;
  const s=current(source,game),ended=game.phase==="end";
@@ -134,7 +159,7 @@ function render(){
     view.textContent=Object.entries(deltas(choice[2])).map(([k,v])=>descriptions[k]+": "+(v>0?"+":"")+Math.round(v*100)).join(" · ");
     button.append(view);
    }
-   button.addEventListener('click',()=>{choose(source,game,i);render();window.scrollTo({top:0,behavior:"smooth"});});
+   button.addEventListener('click',()=>{choose(source,game,i);persist();render();window.scrollTo({top:0,behavior:"smooth"});});
    $('choices').appendChild(button);
   });
  }else{
@@ -196,9 +221,10 @@ function render(){
   div.textContent=act.year+" · "+act.name;$('theaters').append(div);
  });
  $('export').disabled=game.history.length===0;
+ visuals.sync();
 }
-function start(data){validateSource(data);source=data;game=initial(source);$('export-native').disabled=false;render();}
-$('reset').onclick=()=>{if(source){game=initial(source);render();}};
+function start(data){validateSource(data);source=data;game=initial(source);$('export-native').disabled=false;render();visuals.showSavedAvailable();}
+$('reset').onclick=()=>{if(source&&confirm('Start over and replace the autosaved campaign?')){game=initial(source);persist();render();}};
 $('forecast').onchange=render;
 $('export').onclick=()=>{
  if(!game)return;
@@ -225,15 +251,15 @@ $('trace-file').onchange=async e=>{
   if(file.size>2*1024*1024)throw Error('Trace file exceeds 2 MB safety limit');
   const parsed=JSON.parse(await file.text());
   game=replayTrace(source,parsed);
-  render();
+  persist();render();visuals.hideIntro();
   window.scrollTo({top:0,behavior:"smooth"});
  }catch(err){alert('Unable to resume the trace: '+err.message);}
  finally{e.target.value='';}
 };
 $('datafile').onchange=async e=>{const file=e.target.files[0];if(file){try{start(JSON.parse(await file.text()));}catch(err){alert('Invalid storyworld source: '+err.message);}}};
 document.addEventListener('keydown',e=>{
- if(!source||!game||game.phase==="end"||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
- const i=Number(e.key)-1;if(i>=0&&i<3){const choices=current(source,game).choices;if(choices[i]){choose(source,game,i);render();}}
+ if(!source||!game||game.phase==="end"||document.body.dataset.uiModalOpen||document.body.dataset.uiMenuOpen||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+ const i=Number(e.key)-1;if(i>=0&&i<3){const choices=current(source,game).choices;if(choices[i]){choose(source,game,i);persist();render();}}
 });
 try{const r=await fetch('./source_cards.json');if(!r.ok)throw Error('HTTP '+r.status);start(await r.json());}
 catch(err){$('scene-title').textContent='Choose the storyworld source file below';$('narrative').textContent='Use a local web server, or load source_cards.json using the file picker.';}
