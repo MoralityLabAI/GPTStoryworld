@@ -130,7 +130,8 @@ const visuals=mountVisualPlayer({
   }catch(error){alert("Could not resume: "+error.message);return false;}
  },
  exportSaved:()=>document.getElementById("export").click(),
- shareCampaign:()=>copyCampaignLink()
+ shareCampaign:()=>copyCampaignLink(),
+ getCampaignLink:()=>source&&game?makeCampaignUrl(location.href,source,game):location.origin+location.pathname
 });
 function render(){
  if(!source||!game)return;
