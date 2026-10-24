@@ -108,7 +108,7 @@ function renderArtImage(key,alt,className=""){
 }
 
 export function mountVisualPlayer(config){
-  const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign}=config;
+  const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign,getCampaignLink}=config;
   const shell=document.querySelector(".shell");
   if(!shell||MOUNTS.has(shell))throw Error("Visual player already mounted or shell missing");
   let activeModal=null,selectedLocation=LOCATIONS[0],chosenFaction=null,selectedResearch=0;
@@ -369,13 +369,31 @@ export function mountVisualPlayer(config){
       const a=S("a");a.href=url;a.download="balance-of-reason-playtest.json";a.click();
       setTimeout(()=>URL.revokeObjectURL(url),1500);
     }));
-    row.append(createButton("Copy notes",()=>{
-      const notes=inputs.map(x=>x.label+": "+x.box.value).join("\n\n");
-      if(navigator.clipboard?.writeText)navigator.clipboard.writeText(notes).then(()=>{row.lastChild.textContent="Copied notes";}).catch(()=>{row.lastChild.textContent="Select and copy your notes";});
-      else row.lastChild.textContent="Select and copy your notes";
+    row.append(createButton("Copy report + replay link",()=>{
+      const game=getGame(),source=getSource();
+      const lines=[
+        "BALANCE OF REASON · PLAYTEST FIELD REPORT",
+        "Edition: "+source?.version,
+        "Year: "+(source?.acts?.[game?.yearIndex]?.year||2042),
+        "Decisions: "+(game?.turns||0),
+        "Outcome: "+(game?.result||"In progress"),
+        ...inputs.map(x=>x.label+": "+(x.box.value.trim()||"(no response)"))
+      ];
+      if(check.checked){
+        lines.push("Shareable campaign decisions: "+(getCampaignLink?.()||"unavailable"));
+      }
+      lines.push("Feedback was written locally and sent voluntarily by the player.");
+      const report=lines.join("\n\n");
+      const copied=()=>{row.lastChild.textContent="Copied report + link";};
+      const manual=()=>{
+        window.prompt("Copy this playtest report:",report);
+        row.lastChild.textContent="Copy report + replay link";
+      };
+      if(navigator.clipboard?.writeText)navigator.clipboard.writeText(report).then(copied).catch(manual);
+      else manual();
     }));
     form.append(row);panel.append(form);
-    panel.append(regular("p","feedback-tip","For a personal playtest, download this file and send it together with your saved trace. No feedback is sent to a server by this form."));
+    panel.append(regular("p","feedback-tip","Copy the report into a message, including the replay link when selected, or download JSON. The feedback stays on this device until the player chooses to share it."));
   }
   function renderModal(type){
     if(type==="map")renderMap();
