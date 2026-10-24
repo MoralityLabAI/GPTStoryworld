@@ -71,14 +71,19 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <aside>
 <section class="panel">
  <p class="kicker">Cabinet assessment</p>
- <p class="small">All 16 metrics are bounded from −100 to +100. The war chapter responds to AI command integrity, war intensity, and brinkmanship. Social consent and public perceptions can diverge.</p>
+ <p class="small">All 16 national metrics are bounded from −100 to +100. The war chapter responds to AI command integrity, war intensity, and brinkmanship. Social consent and public perceptions can diverge.</p>
  <div id="meters"></div>
  <label class="small"><input type="checkbox" id="forecast"> Reveal estimated policy shifts (analyst mode)</label>
 </section>
 <section class="panel" style="margin-top:18px">
+ <p class="kicker">Institutional standings</p>
+ <p class="small">Eleven independently motivated constituencies retain support or resistance as policies change. Each year one issues a demand of its own.</p>
+ <div id="coalitions"></div>
+</section>
+<section class="panel" style="margin-top:18px">
  <p class="kicker">Recent decisions</p>
  <ol id="history"></ol>
- <p class="small">Your strategy changes how independent scholars, Chinese citizens, Muslim communities, governments, and rivals respond. Each choice is remembered.</p>
+ <p class="small">The history records policies, outcomes, and eleven separate institutional standings.</p>
 </section>
 </aside>
 </div>
@@ -147,6 +152,37 @@ function render(){
   const fill=document.createElement('div');fill.className='fill'+(risks.has(k)?' risk':'');
   fill.style.left=v>=0?'50%':(50+v*50)+'%';fill.style.width=Math.abs(v*50)+'%';
   track.append(fill);row.append(name,track);$('meters').append(row);
+ }
+
+ const standings=$('coalitions');
+ standings.replaceChildren();
+ const currentActor=source.acts[Math.min(game.yearIndex,source.acts.length-1)]?.countermove?.faction;
+ const sortedFactions=source.factions.slice().sort((a,b)=>{
+   if(a.id===currentActor)return -1;
+   if(b.id===currentActor)return 1;
+   return (game.factions[a.id]??0)-(game.factions[b.id]??0);
+ });
+ for(const f of sortedFactions){
+   const value=game.factions[f.id]??0;
+   const line=document.createElement('div');line.className='stat';
+   const info=document.createElement('div');info.className='statname';
+   const name=document.createElement('span');
+   name.textContent=(f.id===currentActor?'◆ ':'')+f.name;
+   name.title=f.mandate;
+   const score=document.createElement('b');
+   score.textContent=(value>=0?'+':'')+Math.round(value*100);
+   const track=document.createElement('div');track.className='track';
+   track.setAttribute('role','meter');
+   track.setAttribute('aria-label',f.name+' standing');
+   track.setAttribute('aria-valuemin','-100');
+   track.setAttribute('aria-valuemax','100');
+   track.setAttribute('aria-valuenow',String(Math.round(value*100)));
+   const fill=document.createElement('div');
+   fill.className='fill'+(value<0?' risk':'');
+   fill.style.left=value>=0?'50%':(50+value*50)+'%';
+   fill.style.width=Math.abs(value*50)+'%';
+   track.append(fill);info.append(name,score);line.append(info,track);
+   standings.append(line);
  }
  $('history').replaceChildren();
  for(const h of game.history.slice(-7).reverse()){
