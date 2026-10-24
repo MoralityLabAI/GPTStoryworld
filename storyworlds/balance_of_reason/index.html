@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Balance of Reason: The Red Mihna</title>
+<style>
+:root{color-scheme:dark;--bg:#11161c;--panel:#1a222c;--panel2:#222d39;--border:#354352;--text:#f0e7d6;--muted:#b4bfcb;--gold:#dabd7b;--blue:#91b5d7;--bad:#d98d8a;--good:#94bfad}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Georgia,'Times New Roman',serif}button{font:inherit;cursor:pointer}a{color:var(--blue)}
+.shell{max-width:1400px;margin:auto;padding:24px 26px 70px}header{border-bottom:1px solid var(--border);padding:10px 0 22px}
+h1{font-size:clamp(28px,4vw,48px);font-weight:normal;margin:0;letter-spacing:.02em}h1 span{color:var(--gold)}
+.kicker{font:12px/1.3 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 9px}
+.subtitle{font-size:15px;color:var(--muted);max-width:760px;margin:6px 0 0}
+.topline{display:flex;align-items:start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tools{display:flex;gap:8px;flex-wrap:wrap}button.minor{font:13px system-ui,sans-serif;background:#19232e;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:9px 12px}
+button.minor:hover{color:var(--text);border-color:var(--gold)}
+.theaters{display:grid;grid-template-columns:repeat(8,minmax(80px,1fr));gap:6px;margin:20px 0 24px}
+.theater{padding:9px 5px;border:1px solid var(--border);background:#18202a;color:#74869a;border-radius:3px;text-align:center;font:11px/1.35 system-ui,sans-serif}
+.theater.current{border-color:var(--gold);color:var(--text);background:#2a2b29}
+.theater.past{color:var(--good);border-color:#375449}
+.layout{display:grid;grid-template-columns:minmax(0,2.05fr) minmax(260px,.95fr);gap:24px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:5px;padding:24px}
+#yearbadge{font:700 12px system-ui,sans-serif;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(23px,2.8vw,34px);font-weight:normal;line-height:1.2;margin:13px 0 19px}
+#narrative{font-size:18px;line-height:1.65;white-space:pre-line}#stakes{border-left:3px solid var(--gold);padding:8px 13px;margin:24px 0;color:var(--muted);background:#202a33;font:14px/1.55 system-ui,sans-serif}
+h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);margin:27px 0 11px}
+#choices{display:grid;gap:9px}.choice{text-align:left;padding:16px 17px;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:4px;transition:border-color .15s,background .15s}
+.choice:hover,.choice:focus-visible{border-color:var(--gold);background:#2c3642;outline:none}
+.choice .num{display:inline-grid;place-items:center;font:12px system-ui,sans-serif;border:1px solid #6b7888;border-radius:3px;color:var(--gold);width:25px;height:25px;margin-right:9px}
+.choice .impact{display:block;margin:7px 0 0 34px;color:var(--blue);font:12px/1.5 system-ui,sans-serif}
+#ending-extra{display:none;margin-top:16px;font:14px/1.6 system-ui,sans-serif;color:var(--muted)}
+#lastresult{background:#1c2b2b;border:1px solid #31554b;padding:14px 17px;margin-bottom:18px;color:#d7e7dc}
+#lastresult:empty{display:none}
+#history{margin:12px 0 0;max-height:220px;overflow:auto;padding-left:22px;color:var(--muted);font:13px/1.65 system-ui,sans-serif}
+#history li{margin:5px 0}.muted{color:var(--muted)}.stat{margin:12px 0 19px}
+.statname{display:flex;justify-content:space-between;gap:10px;font:13px/1.4 system-ui,sans-serif;margin-bottom:7px}
+.statname b{font-weight:500;color:var(--gold);font-variant-numeric:tabular-nums}
+.track{height:7px;background:#0d131a;position:relative;overflow:hidden;border-radius:3px}
+.track:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:#4d5561;z-index:1}
+.fill{position:absolute;top:0;bottom:0;background:var(--good)}.fill.risk{background:var(--bad)}
+.small{font:12px/1.5 system-ui,sans-serif;color:var(--muted)}
+.state-ledger{border:1px solid var(--border);background:var(--panel);border-radius:4px;padding:12px 15px;margin:-12px 0 22px;color:var(--muted);font:13px/1.6 system-ui,sans-serif}
+.state-ledger strong{color:var(--gold);font-weight:600}
+#filefallback{font:13px system-ui,sans-serif;color:var(--muted);margin-top:14px}
+#filefallback input{max-width:100%}footer{font:12px system-ui,sans-serif;color:var(--muted);margin-top:27px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.theaters{grid-template-columns:repeat(4,1fr)}.shell{padding:18px 16px 55px}.panel{padding:20px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+<div class="topline">
+ <div><p class="kicker">An alternate-history strategy storyworld · 2034–2041</p><h1>Balance of Reason: <span>The Red Mihna</span></h1>
+ <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build social consent amid global development projects, internal religious fitnas, and the AI-driven World War of the Models.</p></div>
+ <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
+</div>
+</header>
+<div class="theaters" id="theaters"></div>
+<div id="state-ledger" class="state-ledger" role="status" aria-live="polite"></div>
+<div class="layout">
+<main class="panel" aria-live="polite">
+ <div id="yearbadge">Loading storyworld</div>
+ <h2 id="scene-title">Opening the archives…</h2>
+ <div id="lastresult"></div>
+ <div id="narrative"></div>
+ <div id="stakes"></div>
+ <h3 id="question-heading">Your decision</h3>
+ <div id="choices"></div>
+ <div id="ending-extra"></div>
+</main>
+<aside>
+<section class="panel">
+ <p class="kicker">Cabinet assessment</p>
+ <p class="small">All 16 national metrics are bounded from −100 to +100. The war chapter responds to AI command integrity, war intensity, and brinkmanship. Social consent and public perceptions can diverge.</p>
+ <div id="meters"></div>
+ <label class="small"><input type="checkbox" id="forecast"> Reveal estimated policy shifts (analyst mode)</label>
+</section>
+<section class="panel" style="margin-top:18px">
+ <p class="kicker">Institutional standings</p>
+ <p class="small">Eleven independently motivated constituencies retain support or resistance as policies change. Each year one issues a demand of its own.</p>
+ <div id="coalitions"></div>
+</section>
+<section class="panel" style="margin-top:18px">
+ <p class="kicker">Recent decisions</p>
+ <ol id="history"></ol>
+ <p class="small">The history records policies, outcomes, and eleven separate institutional standings.</p>
+</section>
+</aside>
+</div>
+<div id="filefallback">When running the local server, alternate JSON input: <label>load the accompanying <code>source_cards.json</code> <input type="file" accept=".json" id="datafile"></label></div>
+<footer>Fictional timeline, fictional characters, real intellectual and diplomatic tensions. Inspired by the crisis structure of Chris Crawford's <em>Balance of Power</em>; original writing, mechanics, and setting. This alternate history makes no claim that the CCP has converted or that an AI world war is forecast.</footer>
+</div>
+<script type="module">
+import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
+import {makeTrace,replayTrace} from './trace_protocol.mjs';
+import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
+let source=null,game=null;
+const $=(id)=>document.getElementById(id);
+const descriptions={
+ U:"Ummah consent",A:"Rationalist credibility",L:"Religious liberty",W:"Civilian welfare",
+ P:"Party cohesion",T:"Trade resilience",S:"Strategic prestige",B:"Brinkmanship",
+ M:"Mihna coercion",V:"Perceived consent",Q:"Perceived credibility",
+ D:"Development equity",F:"Internal fitna",C:"AI command integrity",G:"World war intensity",H:"Displacement"
+};
+const risks=new Set(["B","M","F","G","H"]);
+const titleCase=s=>s.replace(/_/g," ");
+function render(){
+ if(!source||!game)return;
+ const s=current(source,game),ended=game.phase==="end";
+ $('yearbadge').textContent=ended?"END STATE · "+game.turns+" DECISIONS":s.year+" · "+game.phase.toUpperCase()+" · DECISION "+(game.turns+1);
+ const warStatus=game.phase==="war"||game.stats.G>=.26?"WORLD WAR ACTIVE":game.warEpisodes>0?"ARMISTICE UNDER PRESSURE":"WAR AVOIDED SO FAR";
+ const bits=[
+  "WAR · "+warStatus,
+  "DEVELOPMENT "+Math.round(game.stats.D*100),
+  "FITNA "+Math.round(game.stats.F*100),
+  "AI CONTROL "+Math.round(game.stats.C*100),
+  "DISPLACEMENT "+Math.round(game.stats.H*100)
+ ];
+ $('state-ledger').textContent=bits.join("  |  ");
+
+ $('scene-title').textContent=s.title;
+ $('narrative').textContent=s.body;
+ $('stakes').textContent=s.stakes||"";
+ $('stakes').hidden=!s.stakes;
+ $('lastresult').textContent=game.lastOutcome?"PREVIOUS DECISION · "+game.lastOutcome:"";
+ $('question-heading').textContent=ended?"Outcome":"Your decision";
+ $('choices').replaceChildren();
+ if(!ended){
+  s.choices.forEach((choice,i)=>{
+   const button=document.createElement('button');button.className='choice';
+   const count=document.createElement('span');count.className='num';count.textContent=i+1;button.append(count,document.createTextNode(choice[0]));
+   if($('forecast').checked){
+    const view=document.createElement('small');view.className='impact';
+    view.textContent=Object.entries(deltas(choice[2])).map(([k,v])=>descriptions[k]+": "+(v>0?"+":"")+Math.round(v*100)).join(" · ");
+    button.append(view);
+   }
+   button.addEventListener('click',()=>{choose(source,game,i);render();window.scrollTo({top:0,behavior:"smooth"});});
+   $('choices').appendChild(button);
+  });
+ }else{
+  const extra=$('ending-extra');extra.style.display='block';
+  const rankings=scoreEndings(source,game).slice(0,4);
+  extra.textContent="Final analytic ledger: "+rankings.map(x=>x.name+" ("+x.score.toFixed(1)+")").join(" · ")+". All scores are authored scenario mechanics.";
+ }
+ if(!ended)$('ending-extra').style.display='none';
+ $('meters').replaceChildren();
+ for(const [k,label] of Object.entries(descriptions)){
+  const v=game.stats[k]??0,row=document.createElement('div');row.className='stat';
+  const name=document.createElement('div');name.className='statname';
+  const val=document.createElement('b');val.textContent=(v*100>=0?"+":"")+Math.round(v*100);
+  const labelEl=document.createElement('span');labelEl.textContent=label;
+  name.append(labelEl,val);
+  const track=document.createElement('div');track.className='track';track.setAttribute('role','meter');track.setAttribute('aria-label',label);track.setAttribute('aria-valuemin','-100');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(Math.round(v*100)));
+  const fill=document.createElement('div');fill.className='fill'+(risks.has(k)?' risk':'');
+  fill.style.left=v>=0?'50%':(50+v*50)+'%';fill.style.width=Math.abs(v*50)+'%';
+  track.append(fill);row.append(name,track);$('meters').append(row);
+ }
+
+ const standings=$('coalitions');
+ standings.replaceChildren();
+ const currentActor=source.acts[Math.min(game.yearIndex,source.acts.length-1)]?.countermove?.faction;
+ const sortedFactions=source.factions.slice().sort((a,b)=>{
+   if(a.id===currentActor)return -1;
+   if(b.id===currentActor)return 1;
+   return (game.factions[a.id]??0)-(game.factions[b.id]??0);
+ });
+ for(const f of sortedFactions){
+   const value=game.factions[f.id]??0;
+   const line=document.createElement('div');line.className='stat';
+   const info=document.createElement('div');info.className='statname';
+   const name=document.createElement('span');
+   name.textContent=(f.id===currentActor?'◆ ':'')+f.name;
+   name.title=f.mandate;
+   const score=document.createElement('b');
+   score.textContent=(value>=0?'+':'')+Math.round(value*100);
+   const track=document.createElement('div');track.className='track';
+   track.setAttribute('role','meter');
+   track.setAttribute('aria-label',f.name+' standing');
+   track.setAttribute('aria-valuemin','-100');
+   track.setAttribute('aria-valuemax','100');
+   track.setAttribute('aria-valuenow',String(Math.round(value*100)));
+   const fill=document.createElement('div');
+   fill.className='fill'+(value<0?' risk':'');
+   fill.style.left=value>=0?'50%':(50+value*50)+'%';
+   fill.style.width=Math.abs(value*50)+'%';
+   track.append(fill);info.append(name,score);line.append(info,track);
+   standings.append(line);
+ }
+ $('history').replaceChildren();
+ for(const h of game.history.slice(-7).reverse()){
+  const li=document.createElement('li');li.textContent=h.year+": "+h.title+" · "+h.choice;$('history').append(li);
+ }
+ $('theaters').replaceChildren();
+ source.acts.forEach((act,i)=>{
+  const div=document.createElement('div');div.className='theater'+(i===game.yearIndex?' current':i<game.yearIndex?' past':'');
+  div.textContent=act.year+" · "+act.name;$('theaters').append(div);
+ });
+ $('export').disabled=game.history.length===0;
+}
+function start(data){validateSource(data);source=data;game=initial(source);$('export-native').disabled=false;render();}
+$('reset').onclick=()=>{if(source){game=initial(source);render();}};
+$('forecast').onchange=render;
+$('export').onclick=()=>{
+ if(!game)return;
+ const payload=makeTrace(source,game);
+ const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));
+ const a=document.createElement('a');a.href=url;a.download='balance-of-reason-trace.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
+};
+$('export-native').onclick=()=>{
+ if(!source)return;
+ try{
+   const native=buildSweepweave(source),errors=validateSweepweave(native);
+   if(errors.length)throw Error(errors.join('; '));
+   const url=URL.createObjectURL(new Blob([JSON.stringify(native)],{type:'application/json'}));
+   const link=document.createElement('a');link.href=url;link.download='balance-of-reason-sweepweave.json';
+   link.click();
+   setTimeout(()=>URL.revokeObjectURL(url),2000);
+ }catch(err){alert('Native export failed: '+err.message);}
+};
+$('import-trace').onclick=()=>{if(source)$('trace-file').click();};
+$('trace-file').onchange=async e=>{
+ const file=e.target.files?.[0];
+ if(!file||!source)return;
+ try{
+  if(file.size>2*1024*1024)throw Error('Trace file exceeds 2 MB safety limit');
+  const parsed=JSON.parse(await file.text());
+  game=replayTrace(source,parsed);
+  render();
+  window.scrollTo({top:0,behavior:"smooth"});
+ }catch(err){alert('Unable to resume the trace: '+err.message);}
+ finally{e.target.value='';}
+};
+$('datafile').onchange=async e=>{const file=e.target.files[0];if(file){try{start(JSON.parse(await file.text()));}catch(err){alert('Invalid storyworld source: '+err.message);}}};
+document.addEventListener('keydown',e=>{
+ if(!source||!game||game.phase==="end"||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+ const i=Number(e.key)-1;if(i>=0&&i<3){const choices=current(source,game).choices;if(choices[i]){choose(source,game,i);render();}}
+});
+try{const r=await fetch('./source_cards.json');if(!r.ok)throw Error('HTTP '+r.status);start(await r.json());}
+catch(err){$('scene-title').textContent='Choose the storyworld source file below';$('narrative').textContent='Use a local web server, or load source_cards.json using the file picker.';}
+</script>
+</body></html>

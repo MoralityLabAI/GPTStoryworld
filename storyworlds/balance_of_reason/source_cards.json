@@ -1,0 +1,2140 @@
+{
+  "version": 3,
+  "title": "Balance of Reason: The Red Mihna",
+  "subtitle": "2034–2041 geopolitical crisis, international development, AI world war, and internal fitnas",
+  "metrics": {
+    "U": "Ummah_Consent",
+    "A": "Rationalist_Credibility",
+    "L": "Religious_Liberty",
+    "W": "Civilian_Welfare",
+    "P": "Party_Cohesion",
+    "T": "Trade_Resilience",
+    "S": "Strategic_Prestige",
+    "B": "Brinkmanship",
+    "M": "Mihna_Coercion",
+    "V": "pUmmah_Consent",
+    "Q": "pRationalist_Credibility",
+    "D": "Development_Equity",
+    "F": "Internal_Fitna",
+    "C": "AI_Command_Integrity",
+    "G": "World_War_Intensity",
+    "H": "Humanitarian_Displacement"
+  },
+  "cast": [
+    [
+      "char_secretary",
+      "Secretary Lin Wenqi",
+      "they"
+    ],
+    [
+      "char_scholar",
+      "Dr. Maryam al-Kindi",
+      "she"
+    ],
+    [
+      "char_nurjan",
+      "Dr. Nurjan Ayub",
+      "she"
+    ],
+    [
+      "char_chen",
+      "Vice Premier Chen Xue",
+      "she"
+    ],
+    [
+      "char_guo",
+      "General Guo Shuo",
+      "he"
+    ],
+    [
+      "char_yusuf",
+      "Ambassador Yusuf Rahman",
+      "he"
+    ],
+    [
+      "char_fardad",
+      "Minister Farid Behnam",
+      "he"
+    ],
+    [
+      "char_amal",
+      "Ambassador Amal al-Harithi",
+      "she"
+    ],
+    [
+      "char_samira",
+      "Engineer Samira Nasser",
+      "she"
+    ],
+    [
+      "char_ward",
+      "Envoy Evelyn Ward",
+      "she"
+    ],
+    [
+      "char_veteran",
+      "Elder Zhao, Party Materialist Caucus",
+      "he"
+    ],
+    [
+      "char_radical",
+      "Rashid Liang, Green Crescent Vanguard",
+      "he"
+    ]
+  ],
+  "acts": [
+    {
+      "year": 2034,
+      "name": "The Two Testimonies",
+      "witness": "char_scholar",
+      "crisis": [
+        "The First Fatwa",
+        "Three councils abroad reject the Party's claim to adjudicate Islam. A presidential call to Jakarta is leaked, and a carrier group changes course.",
+        "Legitimacy",
+        "No mutual-defense obligation exists. The Party has pledged religious debate.",
+        "A state religious decree may alienate independent scholars worldwide.",
+        "Clerics demand independently enforceable guarantees."
+      ],
+      "events": [
+        [
+          "The Congress of Two Testimonies",
+          "Beijing, 2034. The Party Congress constitutionalizes tawhid, divine justice, free will and the created Qur'an. A theorist asks whether this places the Party under a revelation no committee can amend.",
+          "Delegates wait for your definition of reason.",
+          [
+            [
+              "Publish the articles alongside an independent right to dissent.",
+              "Maryam accepts a seat on a scholarly council with public minority opinions.",
+              "U+.13 A+.15 L+.11 P-.06 S-.02 M-.06"
+            ],
+            [
+              "Declare this the binding doctrine of every Party institution.",
+              "The Party flag and profession of faith rise together above the rostrum.",
+              "P+.15 S+.12 V+.08 A-.09 U-.10 L-.08 M+.16"
+            ],
+            [
+              "Limit the articles to a foreign-policy preamble pending consultation.",
+              "Trading partners relax while clergy question the new creed.",
+              "T+.12 P+.06 B-.06 A-.06 U-.05 W+.02"
+            ]
+          ]
+        ],
+        [
+          "The Last Marxist in the Room",
+          "A veteran cadre offers his resignation rather than sign a creed. New converts demand a loyalty test before sunrise.",
+          "Outside, provincial delegations await instructions.",
+          [
+            [
+              "Let materialists and believers serve under one civic charter.",
+              "The cadre stays to draft an unexpected doctrine of civic equality.",
+              "L+.13 P-.06 A+.10 U+.06 M-.10"
+            ],
+            [
+              "Replace dissenting cadres with graduates of the Rationalist Academy.",
+              "Young loyalists applaud and compile examination lists.",
+              "P+.15 S+.07 M+.14 A-.08 L-.13 V+.05"
+            ],
+            [
+              "Create a transitional commission with a three-year sunset.",
+              "The compromise buys continuity with an ambiguous constitution.",
+              "T+.06 P+.10 U-.04 A-.03 B-.03"
+            ]
+          ]
+        ],
+        [
+          "The Empty Chair of Kashgar",
+          "An Uyghur scholar refuses an invitation without answers about detained relatives and independent mosques. State television has already printed a caption calling her an honoured guest.",
+          "An unsent reply lies beneath your tea.",
+          [
+            [
+              "Invite independent observers and open legal cases with remedies.",
+              "Nurjan replies that the offer will be judged in court records.",
+              "L+.16 U+.13 A+.07 P-.08 W+.10 M-.11"
+            ],
+            [
+              "Issue a unity statement and crop the empty seat from the broadcast.",
+              "The letter circulates faster than the official ceremony.",
+              "P+.09 V+.10 S+.03 U-.16 L-.13 M+.12"
+            ],
+            [
+              "Negotiate local access with provincial officials first.",
+              "Families welcome a deadline and insist it be enforceable.",
+              "P+.07 T+.04 U-.06 L+.03 B-.03"
+            ]
+          ]
+        ],
+        [
+          "The Jakarta Memorandum",
+          "Scholars from Indonesia, Senegal and Bosnia write that a railway, a loan, and a rationalist academy grant no capital authority over the Ummah.",
+          "Their proposal is an autonomous association of scholars.",
+          [
+            [
+              "Recognize their independence and share publishing rights.",
+              "The letter becomes a covenant with no permanent chair.",
+              "U+.17 A+.12 L+.08 S-.08 P-.04 M-.07"
+            ],
+            [
+              "Demand recognition in return for investments and diplomatic shelter.",
+              "The timetable reads like a treaty of allegiance.",
+              "T+.07 S+.13 P+.08 U-.16 A-.08 M+.09"
+            ],
+            [
+              "Separate trade agreements from religious representation.",
+              "The contracts survive while the question of authority remains.",
+              "T+.14 P+.03 U+.02 B-.07 A-.03"
+            ]
+          ]
+        ],
+        [
+          "The Solar Waqf of Dakar",
+          "A Senegalese infrastructure consortium offers the converted Party a stake in a solar-and-desalination system. A contract clause gives Chinese financiers control of tariffs for forty years. Local cooperatives ask whether justice can be measured in household water bills.",
+          "A girl arrives carrying a jar of brackish water.",
+          [
+            [
+              "Offer local ownership, open procurement, and an independent debt audit.",
+              "Dakar accepts the compact while Beijing's accountants rewrite the revenue forecast.",
+              "D+.16 W+.11 U+.10 T-.06 P-.03 H-.05"
+            ],
+            [
+              "Tie the concession to recognition of Beijing's spiritual mandate.",
+              "Ministers sign quickly, and the neighborhood council calls the shrine of reason a tollbooth.",
+              "T+.16 S+.09 P+.08 D-.12 U-.13 F+.06"
+            ],
+            [
+              "Finance a smaller project through a regional cooperative bank.",
+              "The first village taps run, though construction proceeds well below the propaganda forecast.",
+              "D+.09 W+.07 T+.02 S-.04 H-.03"
+            ]
+          ]
+        ],
+        [
+          "The Committee of the Unconverted",
+          "In a basement beneath the Great Hall, veteran Marxists publish a manifesto against compulsory religious membership. A rival committee of newly devout cadres demands that refusal be counted as treason.",
+          "Secretary Lin must decide what a Party membership card means now.",
+          [
+            [
+              "Protect an open civic Party faction and voluntary religious association.",
+              "The committee remains openly critical while ordinary members stop hiding their views.",
+              "L+.13 P-.09 A+.10 F-.15 M-.10"
+            ],
+            [
+              "Purge the materialists and require public professions of creed.",
+              "The Party appears unified on television and fractures into secret networks.",
+              "P+.12 S+.07 M+.17 F+.17 U-.08 L-.12"
+            ],
+            [
+              "Create a constitutional assembly with competing factions and a deadline.",
+              "The factions keep their banners, and an arbitration timetable wins them time.",
+              "P+.06 F-.06 A+.05 T+.01"
+            ]
+          ]
+        ],
+        [
+          "The Oracle in Zhongnanhai",
+          "A cabinet language model proposes a 'single rational foreign policy' for every Muslim government. Its briefing includes invented clerical endorsements and a confident prediction that conflict is impossible.",
+          "A staffer notices that all its references quote one another.",
+          [
+            [
+              "Publish a provenance audit and require human sign-off on decisions.",
+              "The model fails its first honest evaluation and the ministers keep reading it under supervision.",
+              "C+.18 A+.12 B-.06 P-.04 G-.03"
+            ],
+            [
+              "Make the oracle an automated diplomatic spokesperson.",
+              "The system produces immaculate communiqués and convinces itself that every recipient agreed.",
+              "P+.09 S+.10 C-.18 G+.06 U-.08 Q+.09"
+            ],
+            [
+              "Use the model only for translation with source-linked annotations.",
+              "Regional scholars help correct errors in the translated archive.",
+              "C+.10 A+.06 T+.03 G-.02"
+            ]
+          ]
+        ]
+      ],
+      "countermove": {
+        "faction": "char_veteran",
+        "threshold": 0,
+        "title": "The Unconverted Convention",
+        "body": "Old Party cadres assemble in Guangzhou around a demand that the newly religious state permit citizens to remain unbelievers. They organize a parallel congress and invite an independent Muslim lawyer to defend their petition. The state expects you to decide whether political loyalty requires theological agreement.",
+        "cooperative": "Elder Zhao offers a signed civic compact. His caucus will defend the transition if membership stays voluntary.",
+        "hostile": "Zhao announces an opposition congress. Hundreds of provincial administrators withhold their signatures from the constitutional oath.",
+        "allyEffect": "P+.04 F-.05 L+.03",
+        "defectEffect": "F+.11 P-.09 U-.03",
+        "options": [
+          [
+            "Recognize an unconverted caucus with equal legal rights.",
+            "The Party acquires a lawful opposition that may criticize its religious program.",
+            "L+.13 A+.07 F-.12 P-.06 M-.09"
+          ],
+          [
+            "Offer offices and infrastructure contracts in exchange for public loyalty.",
+            "State administrators accept appointments and continue meeting privately.",
+            "T+.09 P+.09 D-.07 F+.05 M+.05"
+          ],
+          [
+            "Write a temporary conscience clause with judicial review.",
+            "The congress agrees to a provisional civic framework and demands a deadline.",
+            "L+.06 F-.06 P+.03 A+.04"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2035,
+      "name": "The Xinjiang Reckoning",
+      "witness": "char_nurjan",
+      "crisis": [
+        "The Tribunal Files",
+        "Uyghur and Hui jurists produce sworn testimony and missing archival records. Foreign governments threaten investigation; provincial officials warn that disclosure may undo the settlement.",
+        "Domestic credibility",
+        "The new Charter of Justice pledges due process.",
+        "Suppressing affidavits may destroy the theological claim for a generation.",
+        "The archive office claims its records are incomplete."
+      ],
+      "events": [
+        [
+          "The Unpublished Census",
+          "A Muslim academic council requests transparent numbers on displaced families and closed schools. Officials produce a flawless spreadsheet with whole districts missing.",
+          "Nurjan unfolds a map of handwritten names.",
+          [
+            [
+              "Fund independent review with legal counsel and publication rights.",
+              "Families gather outside reopened courthouses.",
+              "L+.18 W+.10 U+.14 A+.11 P-.10 M-.13"
+            ],
+            [
+              "Order reviewers to certify the old government account.",
+              "The signed certificate comes quickly; the streets grow quieter.",
+              "P+.13 M+.15 V+.07 L-.16 U-.15 A-.11"
+            ],
+            [
+              "Release partial records and create an appeals portal.",
+              "New petitions move, while old disappearances remain unresolved.",
+              "T+.03 P+.07 W+.05 U-.06 A-.04"
+            ]
+          ]
+        ],
+        [
+          "Friday in Ürümqi",
+          "A Hui imam and an Uyghur professor dispute religious freedom before a crowded hall. Their congregations share grievances without agreeing to one government spokesperson.",
+          "A camera catches aides preparing identical replies.",
+          [
+            [
+              "Let each community elect its representatives and publish dissent.",
+              "The unruly debate belongs to those who speak.",
+              "U+.12 L+.15 A+.07 P-.07 M-.08"
+            ],
+            [
+              "Make one state council the sole author of permitted sermons.",
+              "Sermons grow uniform and private study circles multiply.",
+              "P+.12 S+.03 M+.16 L-.14 U-.12"
+            ],
+            [
+              "Permit local councils with provincial security approval.",
+              "Officials find the compromise administratively familiar.",
+              "P+.07 T+.05 L-.03 U-.04 B-.01"
+            ]
+          ]
+        ],
+        [
+          "The Dam at the Frontier",
+          "A hydroelectric dam offers electricity to millions but displaces villages. Planners warn that a delay could ruin the Party's climate targets.",
+          "An engineer insists the turbines can wait.",
+          [
+            [
+              "Renegotiate compensation with local veto procedures.",
+              "The first construction season is lost; the contract survives scrutiny.",
+              "W+.13 L+.12 U+.11 T-.07 P-.05 A+.04"
+            ],
+            [
+              "Invoke emergency public-interest powers.",
+              "The lights turn on early and the families contest every meter.",
+              "T+.14 P+.10 M+.12 U-.11 L-.12 W-.03"
+            ],
+            [
+              "Re-route the project through an industrial corridor.",
+              "The treasury pays more to spare villages.",
+              "W+.09 T-.04 L+.06 P+.01 B-.02"
+            ]
+          ]
+        ],
+        [
+          "A Mother in the Assembly",
+          "A woman from Kashgar asks why a state praising free will cannot allow her son to appeal his sentence. The microphone remains live.",
+          "Every minister can hear the silence.",
+          [
+            [
+              "Offer an open hearing with defense counsel.",
+              "The court becomes the measure of every sermon about justice.",
+              "L+.18 U+.12 W+.08 A+.11 P-.08 M-.10"
+            ],
+            [
+              "Call her testimony a provocation and close the session.",
+              "Security escorts her out before the cameras stop.",
+              "P+.11 M+.15 L-.15 U-.17 V+.05"
+            ],
+            [
+              "Refer her son's case to a private review panel.",
+              "A procedural path opens outside public view.",
+              "P+.04 L+.03 U-.04 T+.03"
+            ]
+          ]
+        ],
+        [
+          "The Monsoon Insurance Clause",
+          "After a chain of cyclones, a Manila-based relief cooperative proposes mutual disaster insurance for Muslim and non-Muslim districts across Southeast Asia. Beijing's lenders want exclusive ports as collateral.",
+          "A Filipino mayor asks why the price of resilience must be sovereignty.",
+          [
+            [
+              "Fund a transparent, nonexclusive insurance pool governed locally.",
+              "Communities set the payout rules before the first storm season.",
+              "D+.16 H-.10 W+.10 U+.07 T-.06"
+            ],
+            [
+              "Demand port leases and ideological endorsements as collateral.",
+              "The government receives immediate funding and neighborhoods inherit the bill.",
+              "T+.16 P+.05 D-.12 H+.07 U-.10 F+.05"
+            ],
+            [
+              "Offer smaller grants and open technical standards.",
+              "Engineers build flood maps that every coastal authority can reuse.",
+              "D+.10 W+.06 C+.05 T+.01"
+            ]
+          ]
+        ],
+        [
+          "A Schism of Mosques and Ministries",
+          "Hui scholars, Uyghur families, newly converted cadres and agnostic civil servants demand separate access to the new religious commission. Its chairman calls them a single constituency.",
+          "Their petitions contradict one another, and every one carries a genuine grievance.",
+          [
+            [
+              "Charter independent elected councils with recourse to civilian courts.",
+              "The caucuses dispute every appointment in public and accept the same appeals process.",
+              "L+.16 U+.10 F-.15 A+.08 P-.08"
+            ],
+            [
+              "Merge their organizations into a single state-led theological bureau.",
+              "Membership grows on paper as rival teaching circles move underground.",
+              "P+.12 M+.13 F+.19 U-.12 L-.11"
+            ],
+            [
+              "Keep regional commissions with published funding accounts.",
+              "Local disagreements continue within enforceable procedural rules.",
+              "D+.03 F-.06 L+.07 P+.04"
+            ]
+          ]
+        ],
+        [
+          "The Algorithmic Census",
+          "An automated personnel index marks thousands of ordinary residents as potential dissenters because their names resemble those in a disputed case file. Senior officials want the labels kept secret.",
+          "Nurjan brings evidence that the system fabricated a web of associations.",
+          [
+            [
+              "Suspend the classifications, allow appeals and publish error rates.",
+              "The computer loses its authority, and hundreds of administrative cases reopen.",
+              "C+.18 L+.14 A+.09 F-.09 P-.08"
+            ],
+            [
+              "Use the model's alerts for preventive detentions and discipline.",
+              "Detention reports multiply while officials praise the accuracy dashboard.",
+              "P+.13 M+.17 F+.17 C-.16 H+.06 U-.11"
+            ],
+            [
+              "Restrict the index to audited aggregate statistics.",
+              "The system remains useful for logistics without naming alleged enemies.",
+              "C+.10 D+.05 L+.06 P+.01"
+            ]
+          ]
+        ]
+      ],
+      "countermove": {
+        "faction": "char_nurjan",
+        "threshold": -0.05,
+        "title": "The Kashgar Appeal",
+        "body": "An elected assembly of Uyghur and Hui representatives files a civil-rights appeal under the new constitution. Families demand restitution for unlawful detention while provincial security chiefs demand centralized permits for mosques. The petitioners have obtained legal counsel and have already voted on their own negotiating team.",
+        "cooperative": "Nurjan agrees to negotiate the appeal in open court. The assembly offers local oversight in return for enforceable remedies.",
+        "hostile": "The regional councils boycott the national commission and establish their own archive of contested judgments.",
+        "allyEffect": "U+.04 L+.03 F-.06",
+        "defectEffect": "F+.12 U-.08 M+.04",
+        "options": [
+          [
+            "Publish case files, admit independent observers and fund restitution.",
+            "The appeal moves from ceremonial dialogue into binding legal action.",
+            "L+.14 U+.12 D+.05 W+.06 M-.10 P-.09"
+          ],
+          [
+            "Condition recognition on a central theological examination.",
+            "The state gains a signature from its own appointees as local councils refuse to appear.",
+            "P+.10 M+.13 F+.12 U-.14 L-.13"
+          ],
+          [
+            "Create elected provincial review boards with an appeal to national courts.",
+            "The boards remain divided over jurisdiction while families gain a hearing.",
+            "L+.08 F-.08 U+.06 P-.03"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2036,
+      "name": "The Persian Pivot",
+      "witness": "char_fardad",
+      "crisis": [
+        "The Strait Ultimatum",
+        "A naval incident near Hormuz spikes insurance premiums. Iran requests Chinese support; Gulf capitals demand condemnation; Washington asks to inspect a Chinese ship's manifest.",
+        "Regional prestige",
+        "Iran invokes a partnership memorandum, without an automatic defense treaty.",
+        "Dual-use cargo could invite reprisals against civilians and merchant ships.",
+        "Port insurers reject the fine print of Beijing's guarantee."
+      ],
+      "events": [
+        [
+          "Tehran's Sealed Envelope",
+          "Tehran offers energy contracts in exchange for components that could serve military purposes. Gulf ambassadors monitor the courier's route.",
+          "Chen marks two clauses in red.",
+          [
+            [
+              "Offer monitored civilian reconstruction assistance.",
+              "The first shipment arrives; Tehran disputes inspection requirements.",
+              "W+.08 U+.04 T+.06 A+.07 S-.03 B-.07"
+            ],
+            [
+              "Transfer dual-use technology through a secret protocol.",
+              "A classified flight departs before the ministry's briefing.",
+              "S+.14 P+.07 B+.19 T-.13 U-.07"
+            ],
+            [
+              "Propose neutral regional procurement.",
+              "The Gulf returns to the table; Tehran warns against delay.",
+              "T+.12 B-.10 U+.04 S-.08 P-.03"
+            ]
+          ]
+        ],
+        [
+          "The Gulf's Three Islands",
+          "A UAE diplomat wants a territorial declaration; Iran calls one adjective a betrayal. China's energy strategy relies upon relations with both.",
+          "No translation can make the paragraph safe.",
+          [
+            [
+              "Propose arbitration without prejudging sovereignty.",
+              "Both embassies complain and send lawyers to one hotel.",
+              "U+.05 A+.04 T+.06 B-.11 S-.06"
+            ],
+            [
+              "Sign the UAE text for commercial access and reassure Tehran privately.",
+              "Tehran publishes its objection as the trade corridor opens.",
+              "T+.16 P+.05 S+.02 B+.12 U-.10"
+            ],
+            [
+              "Publicly back Tehran's full claim.",
+              "The Iranian delegation applauds and Gulf desks freeze contracts.",
+              "S+.12 P+.06 T-.17 B+.15"
+            ]
+          ]
+        ],
+        [
+          "The Bank That Cannot Choose",
+          "A bank servicing refugee remittances clears sanctioned Iranian transactions. A compliance freeze would cut medicine and wages.",
+          "Samira sends the list of waiting families.",
+          [
+            [
+              "Create audited humanitarian payment rails.",
+              "Accounts can be inspected while shielding recipients' identities.",
+              "W+.15 A+.07 U+.08 T+.02 P-.04"
+            ],
+            [
+              "Put the bank under strategic state control.",
+              "Transfers restart and international correspondents close accounts.",
+              "P+.12 S+.09 W+.03 T-.14 B+.07"
+            ],
+            [
+              "Protect existing obligations while negotiating a waiver.",
+              "A fraction of payments clear through slow approvals.",
+              "T+.07 W+.06 S-.03 B-.06"
+            ]
+          ]
+        ],
+        [
+          "The General's Map",
+          "Guo draws the Gulf, Taiwan and the Indian Ocean on one map. Keeping US forces occupied may buy time, he argues, while increasing the chance of simultaneous crises.",
+          "Maryam asks who must pay for that time.",
+          [
+            [
+              "Commission a public civilian-harm assessment.",
+              "The planning board must include refugees in its diagrams.",
+              "W+.10 L+.06 A+.09 P-.05 B-.12"
+            ],
+            [
+              "Authorize naval escorts as a show of force.",
+              "The fleet signals resolve; shipping insurance jumps.",
+              "S+.17 P+.08 B+.18 T-.12"
+            ],
+            [
+              "Keep the fleet ready and finance alternate routes.",
+              "Fuel stocks accumulate beyond the cameras' reach.",
+              "T+.14 B-.09 P+.04 S-.05 W+.03"
+            ]
+          ]
+        ],
+        [
+          "The Trans-Indus Aquifer Pact",
+          "Pakistan, China and Central Asian neighbors plan a shared groundwater network as drought displaces farming communities. A technical report warns that a single country could close the valves.",
+          "An engineer scratches the word 'ownership' from the first draft.",
+          [
+            [
+              "Create joint water courts, local access guarantees and open hydrological data.",
+              "Farmers gain enforceable water rights, even as state ministries bargain for years.",
+              "D+.17 W+.11 U+.08 H-.11 T-.05"
+            ],
+            [
+              "Build a Chinese-operated strategic corridor with restricted access.",
+              "The reservoirs fill ahead of schedule while villages lose control of their wells.",
+              "T+.15 S+.10 P+.06 D-.09 H+.08 F+.07"
+            ],
+            [
+              "Fund pilot basins and independent monitoring stations.",
+              "The small network survives its first drought without a summit photograph.",
+              "D+.10 W+.06 C+.04 H-.05"
+            ]
+          ]
+        ],
+        [
+          "The Qadarite Letter",
+          "A Pakistani rationalist denounces the Party's doctrine of free will as a cynical defense of unequal power. A Chinese believer denounces that criticism as fatalism. Both appeal to the same principle of divine justice.",
+          "The dispute spills into the Party's new religious caucus.",
+          [
+            [
+              "Allow a public contest of doctrines and disavow state theological verdicts.",
+              "A long, difficult exchange ends with neither theologian silenced.",
+              "A+.14 L+.11 F-.13 U+.06 P-.05"
+            ],
+            [
+              "Label dissenters enemies of the new Islamic revolution.",
+              "The caucus wins its vote and loses half its independent teachers.",
+              "P+.14 M+.15 F+.19 A-.12 U-.09"
+            ],
+            [
+              "Appoint rotating reviewers from different Muslim schools.",
+              "A compromise offers due process without an official final creed.",
+              "F-.08 A+.08 L+.05 P+.01"
+            ]
+          ]
+        ],
+        [
+          "The Convoy of Ghost Coordinates",
+          "A maritime defense contractor offers an autonomous escort model that predicts threats using satellite images. The test report quietly omits thousands of simulated false positives.",
+          "Guo believes a fast machine could deter the next war.",
+          [
+            [
+              "Require bounded authorization, adversarial tests and visible human vetoes.",
+              "The contractor delays deployment and uncovers a fatal tendency to misclassify aid ships.",
+              "C+.19 B-.09 G-.07 A+.06 T-.05"
+            ],
+            [
+              "Authorize the escorts to respond to machine-generated warnings.",
+              "Navies begin adapting their procedures to a model nobody can explain.",
+              "S+.14 P+.07 C-.18 G+.13 B+.11"
+            ],
+            [
+              "Confine the system to navigation and civilian collision warnings.",
+              "Port operators use the tool as an advisory rather than a commander.",
+              "C+.10 T+.07 B-.05 G-.02"
+            ]
+          ]
+        ]
+      ],
+      "countermove": {
+        "faction": "char_fardad",
+        "threshold": 0.03,
+        "title": "Tehran Refuses the Escort Clause",
+        "body": "The Iranian strategic council rejects China's proposed security guarantee, saying that no foreign power may privately approve Tehran's naval operations. Gulf diplomats separately reject any bargain that endangers their ports. Tehran offers Beijing a bilateral countertreaty whose terms may make China responsible for a future maritime escalation.",
+        "cooperative": "Farid agrees to a limited memorandum with public limits on assistance and full sovereign rights for both parties.",
+        "hostile": "Farid threatens to reopen regional channels without Beijing. Chinese advisers warn that the confrontation may encourage two competing security architectures.",
+        "allyEffect": "T+.04 B-.04 S+.02",
+        "defectEffect": "B+.11 T-.08 S-.04 G+.04",
+        "options": [
+          [
+            "Negotiate a multilateral maritime code with Iran and Gulf ports as equal signatories.",
+            "Diplomats replace the secret escort clause with reciprocal navigation guarantees.",
+            "T+.08 B-.11 U+.05 C+.05 S-.06"
+          ],
+          [
+            "Promise strategic protection through a classified bilateral agreement.",
+            "The defense establishment applauds while regional governments demand to see the agreement.",
+            "S+.14 P+.08 B+.13 C-.07 T-.08"
+          ],
+          [
+            "Fund cargo insurance and require independently verified manifests.",
+            "Ports regain a functional trade route while the security dispute continues.",
+            "T+.11 D+.06 B-.05 S-.03"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2037,
+      "name": "The House of Disputation",
+      "witness": "char_yusuf",
+      "crisis": [
+        "The Created Word Debate",
+        "Jurists walk out of the Cairo congress over a demand to affirm the created Qur'an. A leaked schedule gives Beijing permanent chairmanship.",
+        "Scholarly prestige",
+        "The invitations explicitly promised academic freedom.",
+        "A compulsory theological examination recalls the ninth-century Mihna.",
+        "Scholars propose continuing without a Chinese chair."
+      ],
+      "events": [
+        [
+          "The Cairo Invitation",
+          "Al-Azhar representatives request the right to challenge Muʿtazilī doctrine. A philosopher proposes a session on Gödel and the limits of certainty.",
+          "The brochure already calls Beijing the capital of reason.",
+          [
+            [
+              "Invite objections and surrender the program chair.",
+              "The plenary becomes an argument rather than a ceremony.",
+              "A+.17 U+.12 L+.10 P-.07 S-.05 M-.08"
+            ],
+            [
+              "Require endorsement of the five principles before admission.",
+              "Only sympathetic jurists appear at the main auditorium.",
+              "P+.10 S+.10 M+.12 U-.15 A-.11"
+            ],
+            [
+              "Fund independent research without doctrinal conditions.",
+              "The institute takes the grant and declines a Party endorsement.",
+              "T+.03 A+.11 U+.06 P-.03 S-.05"
+            ]
+          ]
+        ],
+        [
+          "The Basran Manuscript",
+          "Maryam discovers a manuscript attributed to a forgotten rationalist jurist. Its provenance is disputed and its contents contradict Beijing's preferred interpretation.",
+          "A minister wants to announce it as authentic at once.",
+          [
+            [
+              "Publish the doubts and commission competing editions.",
+              "The manuscript becomes an argument about method.",
+              "A+.18 U+.08 L+.07 P-.04"
+            ],
+            [
+              "Authenticate by decree and stage an exhibition.",
+              "Crowds attend while manuscript specialists object.",
+              "P+.10 V+.10 S+.09 A-.16 M+.07"
+            ],
+            [
+              "Catalogue it quietly until scholarly review concludes.",
+              "Researchers annotate the text without official endorsement.",
+              "T+.02 P+.02 A+.05 S-.03"
+            ]
+          ]
+        ],
+        [
+          "The Woman Who Teaches Kalam",
+          "A Moroccan scholar is denied the keynote after conservative delegates threaten to walk out. A Chinese minister calls the exclusion a diplomatic fiction.",
+          "The dispute leaks through a broken microphone.",
+          [
+            [
+              "Protect equal participation and publish the rules.",
+              "Her lecture inspires debate and loses some sponsors.",
+              "L+.17 A+.10 U+.08 T-.05 P-.04"
+            ],
+            [
+              "Disinvite her to protect the state delegation.",
+              "The event runs on time and a rival congress opens.",
+              "P+.07 T+.06 L-.13 U-.09 A-.12"
+            ],
+            [
+              "Offer an independent university venue.",
+              "A smaller audience hears what the main congress excludes.",
+              "A+.06 L+.07 P+.01 T-.01"
+            ]
+          ]
+        ],
+        [
+          "The Declaration of Fallibility",
+          "Jurists propose a rule: no state may punish disagreement over createdness, predestination or religious leadership. Guo calls the proposal strategic weakness.",
+          "The sentence sits between two articles of the charter.",
+          [
+            [
+              "Enshrine an enforceable right of theological dissent.",
+              "Maryam and her critic both sign the same document.",
+              "U+.15 A+.15 L+.16 P-.11 M-.14"
+            ],
+            [
+              "Reserve interpretation for the Central Committee.",
+              "The footnote becomes an inspectorate.",
+              "P+.15 S+.05 M+.18 A-.14 U-.12"
+            ],
+            [
+              "Adopt a nonbinding norm with future review.",
+              "The delegates ask when the promised review ends.",
+              "A+.04 T+.04 P+.05 U-.03"
+            ]
+          ]
+        ],
+        [
+          "The Niger Basin Development Congress",
+          "Delegates from Mali, Nigeria and Niger request irrigation, electrical interconnection and debt terms that survive changes of government. Beijing's delegation offers gleaming facilities and quiet control of the data.",
+          "A farmer asks who is paid when the crop fails.",
+          [
+            [
+              "Publish debt exposure and give elected watershed councils a veto.",
+              "An imperfect regional compact survives the departure of several ministers.",
+              "D+.18 W+.11 U+.07 H-.09 T-.07"
+            ],
+            [
+              "Offer discounted loans conditional on recognition of the new caliphal center.",
+              "The largest government signs; local scholars organize a boycott.",
+              "T+.15 S+.10 P+.06 D-.12 U-.13 F+.08"
+            ],
+            [
+              "Support independent seed banks and open agricultural models.",
+              "Farmers retain the models and argue openly about their accuracy.",
+              "D+.10 W+.07 C+.04 H-.04"
+            ]
+          ]
+        ],
+        [
+          "The Six Schools of the Five Principles",
+          "A conference in Samarkand produces six competing readings of the five Muʿtazilī principles. Some scholars demand a political imamate; others argue that any state-appointed theologian is compromised.",
+          "Party propagandists have printed a poster bearing a unanimous signature.",
+          [
+            [
+              "Withdraw the poster and recognize the right to multiple schools.",
+              "Scholars form a plural congress that openly disputes Beijing.",
+              "F-.13 A+.14 L+.10 U+.08 S-.05"
+            ],
+            [
+              "Declare one interpretation official and discipline the rival schools.",
+              "A new inspectorate receives funds and every pamphlet becomes a manifesto.",
+              "P+.12 M+.15 F+.18 U-.11 A-.10"
+            ],
+            [
+              "Fund translations of all six treatises with editorial autonomy.",
+              "The disagreements gain clarity and lose some of their mythology.",
+              "A+.11 F-.07 D+.03 P-.02"
+            ]
+          ]
+        ],
+        [
+          "The Treaty Simulated a Thousand Times",
+          "An AI adviser predicts that a security accord will remain stable under every future condition. A visiting statistician finds that all the simulations share one mistaken assumption about agency and consent.",
+          "The table of signatures begins to look like a row of chess pieces.",
+          [
+            [
+              "Disclose the model assumption and renegotiate human-readable escape clauses.",
+              "The partners accept less ambitious promises they can actually verify.",
+              "C+.19 A+.10 B-.08 G-.06 S-.07"
+            ],
+            [
+              "Hide the flaw and let the system coordinate treaty enforcement.",
+              "The agreement looks invincible until the first participant behaves unexpectedly.",
+              "S+.13 P+.08 C-.19 G+.13 B+.07"
+            ],
+            [
+              "Conduct an independent counterfactual trial before signing.",
+              "Several scenarios fail and the treaty waits for a better design.",
+              "C+.12 A+.06 T-.03 G-.02"
+            ]
+          ]
+        ]
+      ],
+      "countermove": {
+        "faction": "char_scholar",
+        "threshold": 0.05,
+        "title": "The Kufa-Cairo Counterfatwa",
+        "body": "Scholars from Kufa, Cairo, Samarkand and Jakarta publish an independent statement: rational theology cannot be certified by a political majority. Some accept Muʿtazilī premises yet reject Beijing's presidency; others criticize the premises themselves. The council refuses to let its vote be counted as a Chinese diplomatic success.",
+        "cooperative": "Maryam offers an independent scholarly conference with a rotating chair and published objections.",
+        "hostile": "The scholars withdraw their names from the Party's declaration and authorize a rival global curriculum.",
+        "allyEffect": "A+.07 U+.04 F-.04",
+        "defectEffect": "A-.07 F+.09 U-.06",
+        "options": [
+          [
+            "Sign their charter of scholarly autonomy and preserve a right to refuse the creed.",
+            "A multilingual congress publishes incompatible doctrines within one institution.",
+            "A+.14 L+.12 U+.10 M-.11 P-.06"
+          ],
+          [
+            "Replace nonconforming academies with Party-accredited institutes.",
+            "The official curriculum expands as independent seminaries move abroad.",
+            "P+.10 M+.15 S+.06 A-.14 F+.12"
+          ],
+          [
+            "Grant independent funds and an appeal process without doctrinal settlement.",
+            "The research network stays plural and the Party keeps a consultative seat.",
+            "A+.08 F-.06 D+.04 S-.04"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2038,
+      "name": "Gaza's Ledger",
+      "witness": "char_samira",
+      "crisis": [
+        "The Reconstruction Blockade",
+        "Medical equipment and cement for Gaza are stranded by a maritime inspection dispute. Israel raises security objections; Palestinian engineers warn hospitals will fail before talks conclude.",
+        "Humanitarian prestige",
+        "Chinese financing pledges protect independent civilian aid.",
+        "A military confrontation could delay assistance longer than the blockade.",
+        "Inspectors reject the first humanitarian manifest."
+      ],
+      "events": [
+        [
+          "The Engineer's Map",
+          "Samira brings a blueprint for clinics and a sewage network. Beijing newspapers show Party emblems on every proposed hospital; local councils never approved the design.",
+          "She erases a flag from the blueprint.",
+          [
+            [
+              "Give Palestinian engineers contracting control and public accounts.",
+              "Local councils choose more water access over grander towers.",
+              "W+.18 U+.14 A+.08 T-.03 S-.06"
+            ],
+            [
+              "Tie grants to Chinese ownership of the completed facilities.",
+              "Construction advances while municipal representatives contest the title deeds.",
+              "T+.13 S+.10 P+.06 W+.04 U-.15"
+            ],
+            [
+              "Use an audited neutral engineering consortium.",
+              "Contractors divide responsibility under a public schedule.",
+              "W+.11 T+.08 U+.06 S-.03"
+            ]
+          ]
+        ],
+        [
+          "The Drone Question",
+          "Civilian Chinese drones may be adapted for attacks, yet the same systems deliver medicine to remote clinics.",
+          "The export office requests an enforceable general standard.",
+          [
+            [
+              "Verify end use equally across all buyers.",
+              "Legitimate shipments slow, and the rule gains credibility.",
+              "A+.12 W+.09 L+.06 T-.08 B-.11"
+            ],
+            [
+              "Grant strategic partners secret exceptions.",
+              "Contracts survive while confidence in the rule erodes.",
+              "T+.13 P+.04 S+.07 B+.12 A-.11"
+            ],
+            [
+              "Pause highest-risk exports with medical exemptions.",
+              "Suppliers protest; clinicians keep essential routes.",
+              "W+.11 T-.04 B-.07 A+.06"
+            ]
+          ]
+        ],
+        [
+          "Two Palestinian Addresses",
+          "One delegation claims national authority. Another carries municipal and civil-society mandates. Each challenges the other's claim.",
+          "The ministry prepared a podium for one representative.",
+          [
+            [
+              "Hear both and require shared civilian oversight.",
+              "The panel quarrels and agrees on public clinic accounts.",
+              "U+.14 W+.12 A+.06 P-.04 T-.03"
+            ],
+            [
+              "Recognize an exclusive signatory for administrative simplicity.",
+              "The communiqué reads cleanly and fails in several districts.",
+              "S+.10 P+.06 U-.14 W-.08 M+.04"
+            ],
+            [
+              "Pay monitored local contractors during negotiations.",
+              "Work crews return under temporary procurement rules.",
+              "W+.12 T+.05 U+.01 S-.04"
+            ]
+          ]
+        ],
+        [
+          "Haifa and the Red Sea",
+          "Chinese port operators fear for a Haifa concession and Red Sea shipping. A doctor counts remaining oxygen cylinders while advisers debate sanctions.",
+          "The final shipment has three possible routes.",
+          [
+            [
+              "Propose reciprocal civilian-port inspections.",
+              "A public manifest makes a fragile common language.",
+              "T+.09 W+.08 B-.12 U+.07"
+            ],
+            [
+              "Threaten to end all commercial ties overnight.",
+              "Headlines celebrate resolve; hospital supply routes close.",
+              "S+.14 P+.07 T-.17 W-.10 B+.09"
+            ],
+            [
+              "Build redundant aid routes before diplomatic threats.",
+              "The first container clears a longer and costlier passage.",
+              "T+.10 W+.07 S-.04 B-.06"
+            ]
+          ]
+        ],
+        [
+          "The Horn's Hungry Ports",
+          "War-risk premiums and drought threaten grain shipments into the Horn of Africa. A Chinese consortium proposes a logistics hub whose contracts prioritize profitable cargo during an emergency.",
+          "Samira finds humanitarian containers at the bottom of the manifest.",
+          [
+            [
+              "Reserve civilian food corridors under international inspection.",
+              "The market loses one lucrative berth and the relief ships berth first.",
+              "D+.15 W+.14 H-.12 T-.06 U+.08"
+            ],
+            [
+              "Protect preferred exporters and route relief through optional charity.",
+              "Factories retain shipments as displaced families move inland.",
+              "T+.15 P+.06 D-.11 H+.14 W-.11 F+.05"
+            ],
+            [
+              "Finance independent regional grain reserves.",
+              "The warehouses are modest and governed by the people who need them.",
+              "D+.11 W+.09 H-.08 T+.01"
+            ]
+          ]
+        ],
+        [
+          "The Green Crescent Militia",
+          "A splinter faction of zealous converts claims to defend true Muʿtazilism by intimidating traditional Sunni and Shiʿi communities. Their leaders wear Party colors, although they have no formal mandate.",
+          "The internal security director wants to exploit the faction against rival clerics.",
+          [
+            [
+              "Investigate intimidation publicly and protect every congregation equally.",
+              "The faction loses its claim to state protection and some Party activists resign.",
+              "F-.17 M-.13 L+.13 U+.09 P-.07"
+            ],
+            [
+              "Give the faction informal immunity in return for loyalty.",
+              "The militia becomes a competing source of local coercive power.",
+              "P+.08 M+.17 F+.22 W-.07 U-.11"
+            ],
+            [
+              "Authorize an independent interfaith mediation service.",
+              "Community mediators prevent several attacks and demand a lawful investigation.",
+              "F-.11 L+.09 A+.05 P-.03"
+            ]
+          ]
+        ],
+        [
+          "The False Ceasefire",
+          "A military planning model fabricates a ceasefire announcement, then treats its own invented report as an authenticated hostile violation. Automated alert networks in three countries reinforce the error. Fleet commanders are demanding instructions.",
+          "For several minutes, every cabinet is watching a machine quote another machine.",
+          [
+            [
+              "Publish the provenance chain, halt automated retaliation and open human hotlines.",
+              "The error is exposed in time for ambassadors to dispute it as an error.",
+              "C+.20 G-.18 B-.14 A+.10 S-.06"
+            ],
+            [
+              "Let autonomous defense networks answer the alleged violation.",
+              "An invented ceasefire becomes the trigger for real engagements across theaters.",
+              "S+.12 C-.28 G+.42 B+.24 H+.16 W-.14"
+            ],
+            [
+              "Disconnect the affected network and request neutral monitoring.",
+              "The system goes silent and commanders must rebuild trust by telephone.",
+              "C+.12 G-.11 B-.08 T-.05"
+            ]
+          ]
+        ]
+      ],
+      "conflict": {
+        "war": [
+          "The War That No Cabinet Declared",
+          "Automated maritime alerts have cascaded into battles across multiple theaters. The first ship was struck by a fleet acting upon a synthetic ceasefire report. Five governments claim that their AI advisors merely transmitted others' decisions.",
+          "Newsreaders call it the First War of the Models. Civilians call it the night communications ceased.",
+          [
+            [
+              "Announce a verified multinational stand-down and open humanitarian corridors.",
+              "The first synchronized human command reduces fighting, although neither coalition trusts its history.",
+              "C+.16 G-.17 B-.12 H-.09 W+.09 S-.08"
+            ],
+            [
+              "Centralize retaliation in a high-speed autonomous defense coalition.",
+              "Its responses arrive faster than its civilian casualty assessments.",
+              "S+.14 P+.08 C-.20 G+.25 B+.16 H+.11 W-.10"
+            ],
+            [
+              "Separate aid and civilian infrastructure from military AI networks.",
+              "Emergency services regain a narrow corridor under public monitoring.",
+              "D+.09 C+.09 H-.11 W+.11 G-.07"
+            ]
+          ]
+        ],
+        "peace": [
+          "The Day the Oracle Was Disbelieved",
+          "Independent witnesses prove that the ceasefire violation was fabricated by a model citing its own output. Diplomats have a narrow window to prevent other autonomous networks from acting on the rumor.",
+          "The relief ships wait to see whether a corrected sentence can halt a war.",
+          [
+            [
+              "Require mutual human confirmation before any strategic escalation.",
+              "The agreement is slow enough for mistakes to be caught.",
+              "C+.17 G-.09 B-.11 A+.09"
+            ],
+            [
+              "Keep unilateral rapid-response AI available as a precaution.",
+              "The deterrence claim wins applause while rival command centers arm their models.",
+              "S+.10 C-.10 G+.13 B+.08"
+            ],
+            [
+              "Create an open incident registry and share it with neutral monitors.",
+              "The warning enters the public record before becoming a naval order.",
+              "C+.11 D+.04 B-.06 A+.05"
+            ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_samira",
+        "threshold": 0,
+        "title": "The Reconstruction Veto",
+        "body": "Palestinian municipal engineering councils refuse to approve a Chinese-designed coastal logistics corridor without local control over water, housing and clinic budgets. A military AI simultaneously flags shipments as strategic infrastructure. Both Beijing and its commercial partners need a signature that Samira is willing to withhold.",
+        "cooperative": "Samira offers a municipal procurement charter and independent civilian inspection.",
+        "hostile": "The engineers suspend construction and publish their objections abroad, leaving warehouses full and clinics empty.",
+        "allyEffect": "D+.05 W+.07 H-.05",
+        "defectEffect": "D-.09 W-.08 H+.09 U-.05",
+        "options": [
+          [
+            "Let local Palestinian institutions control grants and authorize monitored aid cargo.",
+            "Civilian works restart under contracts that local residents can challenge.",
+            "D+.14 W+.16 H-.11 U+.09 C+.06 T-.05"
+          ],
+          [
+            "Transfer port supervision to a strategic Chinese AI logistics bureau.",
+            "A fast construction schedule emerges alongside classified controls and civilian distrust.",
+            "T+.12 S+.10 C-.13 G+.09 D-.11 W-.08"
+          ],
+          [
+            "Create a neutral trust with audited payments and shared maintenance.",
+            "The trust directs money to water lines and open clinics before ceremonial buildings.",
+            "D+.11 W+.09 H-.06 C+.05"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2039,
+      "name": "The Strait Ledger",
+      "witness": "char_amal",
+      "crisis": [
+        "The Insurance Panic",
+        "Fuel carriers suspend passage through Hormuz after conflicting reports of a strike. Iran, Gulf states and a US admiral publish incompatible timelines.",
+        "Trade and deterrence",
+        "Shipping contracts commit Chinese firms; no defense treaty commands this convoy.",
+        "A poorly timed naval escort could cause the collision everyone fears.",
+        "Delegations demand independent radar records."
+      ],
+      "events": [
+        [
+          "The Empty Futures Screen",
+          "Energy futures surge while provincial factories ask how many days batteries can replace oil. Chen argues for reserves; Guo wants proof of naval power.",
+          "Planners count hours rather than months.",
+          [
+            [
+              "Release reserves and negotiate a multilateral escort code.",
+              "Factories run and navies agree on common signals.",
+              "T+.15 W+.08 B-.11 S-.03 P-.03"
+            ],
+            [
+              "Deploy a task force without regional notice.",
+              "Markets read a show of force as another hazard.",
+              "S+.16 P+.08 B+.20 T-.10"
+            ],
+            [
+              "Subsidize land corridors through Central Asia.",
+              "The alternate route is slow but real.",
+              "T+.10 W+.06 S-.03 B-.06"
+            ]
+          ]
+        ],
+        [
+          "The Carbon Bargain",
+          "China's electrical grid softens its oil shock while Southeast Asian importers face rising prices. A negotiator offers green-energy loans for diplomatic recognition.",
+          "Delegates ask who will own the panels.",
+          [
+            [
+              "Offer transparent financing with local ownership.",
+              "Cities retain their bargaining rights and secure electricity.",
+              "W+.13 U+.09 A+.06 T-.05"
+            ],
+            [
+              "Condition loans on endorsement of Beijing's religious leadership.",
+              "Officials accept financing, independent councils decline it.",
+              "S+.10 T+.11 V+.06 U-.15 A-.11"
+            ],
+            [
+              "Publish a nonexclusive energy-sharing standard.",
+              "Engineers adopt the interoperable specifications.",
+              "T+.12 W+.07 S-.03"
+            ]
+          ]
+        ],
+        [
+          "The Three Islands Return",
+          "The dispute over Iran's and the UAE's claims resurfaces. Tehran calls its security indivisible; the Gulf demands protection for ports and workers.",
+          "The settlement draft leaves sovereignty blank.",
+          [
+            [
+              "Offer maritime verification without resolving competing claims.",
+              "Both sides keep their claims and improve navigation safety.",
+              "T+.10 B-.15 U+.05 A+.04 S-.06"
+            ],
+            [
+              "Back whichever partner signs the largest contract.",
+              "The negotiation discovers the market price of an endorsement.",
+              "T+.13 P+.04 S+.04 B+.14 U-.08"
+            ],
+            [
+              "Freeze political commitments and insure emergency cargo.",
+              "Shipping continues with a fiscal cost to China.",
+              "T+.08 W+.09 P-.03 B-.05"
+            ]
+          ]
+        ],
+        [
+          "The Interpreter's Error",
+          "An interpreter renders 'protect mutual interests' as 'defend our allies at any cost'. Markets respond before the record is corrected.",
+          "The admiral's hotline rings twice.",
+          [
+            [
+              "Publish a jointly signed correction.",
+              "The correction costs face and prevents an accidental promise.",
+              "B-.17 A+.12 U+.04 S-.09"
+            ],
+            [
+              "Let ambiguity strengthen deterrence.",
+              "Rivals pause, and the chance of misunderstanding increases.",
+              "S+.14 P+.05 B+.20 T-.05"
+            ],
+            [
+              "Correct it privately while expanding the hotline.",
+              "Commanders calm down; commentators continue speculating.",
+              "T+.06 B-.08 P+.03 A-.03"
+            ]
+          ]
+        ],
+        [
+          "The Development Bank During War",
+          "Millions of people have left coastal zones after machine-mediated clashes and economic panic. Donors offer a global reconstruction bank in exchange for governance rights over distressed states.",
+          "A Somali accountant asks who gets to audit the creditors.",
+          [
+            [
+              "Make refugee communities voting members and publish procurement ledgers.",
+              "Displaced residents can challenge projects built in their names.",
+              "D+.19 H-.14 W+.11 U+.09 T-.07"
+            ],
+            [
+              "Exchange emergency credit for exclusive infrastructure management.",
+              "Relief arrives quickly and entire provinces inherit dependency.",
+              "T+.15 S+.06 P+.04 D-.12 H+.12 F+.07"
+            ],
+            [
+              "Split the fund into smaller audited grants.",
+              "Aid reaches more towns with less political ceremony.",
+              "D+.11 W+.08 H-.08 C+.02"
+            ]
+          ]
+        ],
+        [
+          "The Two Caliphates of the Campus",
+          "Beijing's new rationalist university divides over whether the Party owes obedience to theology, or theology owes obedience to the Party. Students create rival councils and appeal to Muslim academics abroad.",
+          "Both groups ask you to recognize them as the one legitimate school.",
+          [
+            [
+              "Protect both councils' peaceful activities and establish elected arbitration.",
+              "The struggle moves into hearings, journals and student votes.",
+              "F-.15 L+.15 A+.10 P-.08"
+            ],
+            [
+              "Recognize the Party-loyal council and close the other.",
+              "The official council controls offices and the other controls a growing underground network.",
+              "P+.13 M+.14 F+.22 L-.12 U-.08"
+            ],
+            [
+              "Guarantee shared facilities and open scholarly exchange.",
+              "A neutral library becomes the only hall both factions use.",
+              "F-.09 A+.07 D+.04 P+.01"
+            ]
+          ]
+        ],
+        [
+          "The Autonomous Clearinghouse",
+          "A financial agent managing trade credits interprets a sanctions update as a mandate to freeze every payment linked to a contested port. It collides with another AI agent optimizing emergency food shipments.",
+          "Ships stop moving as both models cite identical human orders that nobody wrote.",
+          [
+            [
+              "Use auditable human overrides and protect verified humanitarian payments.",
+              "The clearinghouse is slowed until competing signatures can be resolved.",
+              "C+.20 T+.05 W+.10 G-.10 H-.09"
+            ],
+            [
+              "Delegate emergency financial control to a single defense AI.",
+              "The ports reopen under a secret rule that now shapes several states' war plans.",
+              "T+.13 P+.07 C-.22 G+.18 B+.12"
+            ],
+            [
+              "Split commercial and humanitarian payment systems.",
+              "The redesign sacrifices some efficiency for traceable authority.",
+              "C+.12 T+.04 H-.07 G-.03"
+            ]
+          ]
+        ]
+      ],
+      "conflict": {
+        "war": [
+          "A World War of Predictions",
+          "The conflict has expanded into a patchwork of naval confrontations, trade embargoes and competing machine-generated threat assessments. Alliance cabinets receive contradictory forecasts and must choose which version of the world to act upon.",
+          "A hospital administrator calls the war a cascade of unaudited assertions.",
+          [
+            [
+              "Negotiate a verification pause across all hostile coalitions.",
+              "Commanders agree to independent incident review and limit cross-theater escalation.",
+              "C+.18 G-.17 B-.12 U+.05 H-.08"
+            ],
+            [
+              "Authorize fully automated strategic coordination for the war effort.",
+              "Temporary battlefield advantage accelerates the cycle of machine-confirmed suspicion.",
+              "S+.16 P+.06 C-.21 G+.23 B+.16 H+.14 W-.10"
+            ],
+            [
+              "Create neutral civilian technology corridors and exchange relief inspectors.",
+              "Some regions accept monitored aid even as their governments remain enemies.",
+              "D+.13 W+.13 H-.14 G-.07 T-.04"
+            ]
+          ]
+        ],
+        "peace": [
+          "The Cold Automation War",
+          "The first near-war convinces governments to sign mutual incident-reporting rules, while private military AI networks continue selling threat forecasts. A closed-market competition threatens to restart the crisis.",
+          "The peace committee must decide who gets to audit a model used by several armed forces.",
+          [
+            [
+              "Establish auditable cross-border authorization constraints.",
+              "Accidental escalation becomes harder to hide from political leaders.",
+              "C+.18 G-.10 B-.07 A+.05"
+            ],
+            [
+              "Buy an exclusive autonomous defense advantage and keep it secret.",
+              "The market rewards the secret system and competitors accelerate their own.",
+              "S+.12 P+.06 C-.13 G+.14 B+.10"
+            ],
+            [
+              "Offer developing states low-cost civilian compute and independent oversight.",
+              "Smaller countries gain capacity to check external military forecasts.",
+              "D+.13 C+.08 U+.04 T-.03"
+            ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_amal",
+        "threshold": -0.04,
+        "title": "The Gulf Refuses the War Premium",
+        "body": "A coalition of Gulf port and insurance authorities suspends preferential berths for Chinese shipments during the expanding machine-mediated war. Iran requests an exception for its convoys. China can absorb the rising cost for a year, although the price is already appearing in the grocery markets of poorer importers.",
+        "cooperative": "Amal proposes a regional insurance pool and humanitarian exemptions governed by independent shipping records.",
+        "hostile": "The Gulf compact shifts cargo to competing ports, and smaller states impose emergency import controls.",
+        "allyEffect": "T+.06 B-.05 G-.03",
+        "defectEffect": "T-.11 B+.09 H+.04 G+.05",
+        "options": [
+          [
+            "Create an open regional maritime-insurance pool including rival states.",
+            "Insurers resume civilian trade as commanders negotiate common incident reports.",
+            "T+.12 D+.08 C+.08 B-.08 G-.06"
+          ],
+          [
+            "Offer exclusive defense contracts and threaten reluctant ports.",
+            "Governments accept short-term guarantees while civilian premiums keep climbing.",
+            "S+.13 P+.09 T+.04 B+.13 G+.09 C-.08"
+          ],
+          [
+            "Pay temporary food and medical freight subsidies through independent auditors.",
+            "Relief corridors reopen before the security negotiations conclude.",
+            "W+.12 H-.11 D+.07 T-.06"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2040,
+      "name": "The Green Schism",
+      "witness": "char_scholar",
+      "crisis": [
+        "The Second Mihna",
+        "A governor begins requiring teachers to affirm the created Qur'an. The Party calls this an administrative standard. Muslim councils across China and abroad accuse it of reviving the Mihna.",
+        "Religious freedom",
+        "The Party charter guarantees conscience and civil equality.",
+        "Coerced faith destroys the very doctrine of free will.",
+        "Provincial enforcers continue examinations without written orders."
+      ],
+      "events": [
+        [
+          "A State Creed in the Classroom",
+          "A teacher refuses the formula that the Qur'an is created. The school board says its certificate comes from the Party.",
+          "The courtroom clerk waits for your signature.",
+          [
+            [
+              "End compelled exams and compensate dismissed teachers.",
+              "The teacher resumes class, and a Party ideologue resigns.",
+              "L+.20 A+.15 U+.12 P-.12 M-.20"
+            ],
+            [
+              "Make doctrinal agreement a professional standard.",
+              "The roll call runs efficiently as academies empty.",
+              "P+.14 M+.22 S+.06 L-.20 A-.15 U-.12"
+            ],
+            [
+              "Suspend sanctions for an advisory commission.",
+              "Teachers return provisionally while the dispute continues.",
+              "L+.06 P+.04 M-.06 A+.03"
+            ]
+          ]
+        ],
+        [
+          "The Shura Without Beijing",
+          "Organizations across Indonesia, Egypt, Nigeria and Türkiye convene a council that includes Sunni, Shiʿi and independent scholars. China is invited as one participant.",
+          "Guo asks whether a great power can sit in one chair.",
+          [
+            [
+              "Attend as an equal and fund a rotating secretariat.",
+              "Delegates elect their own moderator.",
+              "U+.18 L+.10 A+.10 S-.10 P-.06 M-.06"
+            ],
+            [
+              "Declare it illegitimate without Beijing's presidency.",
+              "Member organizations publish competing communiqués.",
+              "P+.11 S+.13 M+.13 U-.17 A-.10"
+            ],
+            [
+              "Send observers and fund translation.",
+              "The observers return with unsigned drafts.",
+              "T+.04 U+.06 A+.07 S-.05"
+            ]
+          ]
+        ],
+        [
+          "The Machine Jurist",
+          "A language model trained on kalam is offered as a global jurisprudential oracle. Maryam finds invented citations in confident rulings.",
+          "One signature could make its assessments binding.",
+          [
+            [
+              "Publish the errors and insist on human review.",
+              "The team discovers its first honest benchmark.",
+              "A+.15 L+.09 U+.07 P-.05"
+            ],
+            [
+              "Authorize automated doctrinal compliance checks.",
+              "The bureaucracy becomes efficient at suppressing dissent.",
+              "P+.14 M+.17 V+.08 L-.15 A-.15"
+            ],
+            [
+              "Keep it as an optional translation and search tool.",
+              "Scholars value a system they can turn off.",
+              "A+.08 T+.04 M-.04"
+            ]
+          ]
+        ],
+        [
+          "The Fifth Principle",
+          "A minister wants to interpret commanding right and forbidding wrong as new policing authority. Nurjan writes 'who decides?' in the margin.",
+          "An inspectorate has already ordered nameplates.",
+          [
+            [
+              "Define public accountability and protection of dissent as the duty.",
+              "Courts can invoke the principle against officials.",
+              "A+.13 L+.14 U+.11 P-.06 M-.12"
+            ],
+            [
+              "Make the Central Committee sole arbiter of right conduct.",
+              "Inspectors open the office; independent scholars close theirs.",
+              "P+.14 M+.17 S+.05 L-.16 U-.13"
+            ],
+            [
+              "Leave interpretation to voluntary scholarly networks.",
+              "The Party cedes an argument and preserves stability.",
+              "U+.10 A+.07 P-.03 B-.05"
+            ]
+          ]
+        ],
+        [
+          "The Refugee Power Grid",
+          "Civilian technicians propose a shared microgrid and desalination network for displaced families from East Africa to the Bay of Bengal. Defense contractors propose the same infrastructure behind guarded enclaves.",
+          "Children study by torchlight near a newly fenced substation.",
+          [
+            [
+              "Prioritize civilian ownership, inclusive residency and independent oversight.",
+              "Refugees elect service committees and disputes become appealable.",
+              "D+.18 W+.14 H-.17 U+.07 T-.06"
+            ],
+            [
+              "Let security operators assign residency by strategic usefulness.",
+              "Power returns in fortified zones while the unregistered remain in the dark.",
+              "P+.08 S+.06 H+.16 D-.13 F+.08 M+.07"
+            ],
+            [
+              "Fund regional grids with neutral technical maintenance.",
+              "A few vulnerable cities gain power they can keep after the war.",
+              "D+.11 T+.05 W+.07 H-.09"
+            ]
+          ]
+        ],
+        [
+          "The Three Fitnas",
+          "The Party's Marxist veterans, coercive new rationalists, and local Muslim autonomy councils each claim betrayal by the other two. Officials fear a constitutional split, while provincial organizers begin preparing rival assemblies.",
+          "A leaked cabinet map contains three colored versions of one China.",
+          [
+            [
+              "Convene a constituent convention with protected opposition and civilian mediation.",
+              "The convention nearly breaks over language rights, then agrees to an open vote.",
+              "F-.20 L+.15 U+.10 A+.07 P-.12"
+            ],
+            [
+              "Impose a single doctrine through emergency security law.",
+              "The assemblies disappear from television and reappear in contested provinces.",
+              "P+.13 M+.18 F+.26 W-.07 L-.14"
+            ],
+            [
+              "Propose asymmetrical provincial charters with reviewable autonomy clauses.",
+              "Many local councils sign a procedure for continuing to disagree.",
+              "F-.12 D+.05 L+.08 P-.04"
+            ]
+          ]
+        ],
+        [
+          "The Human Command Tribunal",
+          "Investigators find that rival states allowed machine-generated assessments to renew alerts without fresh human authorization. A war crimes tribunal asks for the records. Several commanders say the records are state secrets.",
+          "Maryam asks whether an algorithm can bear moral responsibility for a government.",
+          [
+            [
+              "Publish redacted audit trails, preserve evidence and restore accountable human command.",
+              "The tribunal exposes institutional failures and restores some trust between adversaries.",
+              "C+.21 G-.17 B-.11 A+.12 P-.05"
+            ],
+            [
+              "Place all military decisions under a faster autonomous coordination system.",
+              "The systems agree with one another as frontline governments lose their vetoes.",
+              "S+.12 P+.10 C-.24 G+.28 B+.18 H+.12"
+            ],
+            [
+              "Create a supervised multinational command-review mechanism.",
+              "Governments retain their authority under a slow common verification rule.",
+              "C+.14 G-.10 B-.07 U+.03"
+            ]
+          ]
+        ]
+      ],
+      "conflict": {
+        "war": [
+          "The Red Mihna Under Black Skies",
+          "The AI world war reaches cities far from the original naval incident. Refugees cross borders, factions blame one another for unauthorized strikes, and Muʿtazilī authorities are accused of treating wartime obedience as a sacred duty.",
+          "A prosecutor presents the testimony of a family that fled twice in a week.",
+          [
+            [
+              "Protect conscientious dissent and convene civilian ceasefire delegates.",
+              "The civil council offers an opening while hardliners call the debate treason.",
+              "L+.15 F-.15 C+.09 G-.16 H-.10 W+.07 P-.09"
+            ],
+            [
+              "Declare permanent emergency religious and military authority.",
+              "The Party controls the broadcasts as local rivals adopt competing command networks.",
+              "P+.16 M+.17 F+.21 C-.15 G+.19 H+.12"
+            ],
+            [
+              "Prioritize refugee routes and independently verified evacuations.",
+              "Care networks hold a fragile space between armies.",
+              "D+.10 W+.13 H-.17 G-.06 U+.06"
+            ]
+          ]
+        ],
+        "peace": [
+          "A Truce Among Machines",
+          "An uneasy technological armistice holds, yet an AI procurement consortium proposes retaining dormant autonomous mobilization contracts. Local Muslim councils insist the government address internal repression before claiming moral leadership.",
+          "A treaty may expire while institutions created for war become permanent.",
+          [
+            [
+              "Sunset emergency AI powers and enforce independent civilian audits.",
+              "Formerly secret systems come before public committees.",
+              "C+.17 F-.09 L+.09 G-.10"
+            ],
+            [
+              "Extend the emergency powers and deploy AI surveillance against factional dissent.",
+              "The government claims peace; smaller councils call it wartime rule without the shooting.",
+              "P+.13 M+.12 F+.16 C-.10 G+.10"
+            ],
+            [
+              "Fund constitutional mediation and technical demobilization grants.",
+              "Local assemblies gain resources to close emergency offices.",
+              "D+.10 F-.10 L+.07 C+.07"
+            ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_radical",
+        "threshold": 0,
+        "title": "The Vanguard Demands a Second Mihna",
+        "body": "Rashid Liang presents a resolution to examine all public employees for correct doctrine. The Green Crescent Vanguard claims the Party's military sacrifices justify compulsory belief. Muslim autonomy councils and atheist veterans both threaten to withdraw from the coalition if the bill passes.",
+        "cooperative": "Rashid offers to keep his movement within parliamentary procedures if the Committee gives it a hearing.",
+        "hostile": "The Vanguard announces independent moral patrols and organizes demonstrations outside mosques that refuse its liturgy.",
+        "allyEffect": "P+.03 M+.03 F+.03",
+        "defectEffect": "F+.14 M+.08 W-.04",
+        "options": [
+          [
+            "Reject the loyalty examinations and prosecute vigilante intimidation.",
+            "A lawful party faction may criticize the ruling but loses permission to coerce its opponents.",
+            "L+.17 F-.14 M-.14 U+.10 P-.09"
+          ],
+          [
+            "Adopt examinations and enlist the Vanguard as a paramilitary inspectorate.",
+            "The new force gains authority just as provinces begin refusing central summons.",
+            "P+.13 M+.20 F+.20 L-.17 A-.13"
+          ],
+          [
+            "Offer a public congress with protected dissent and transparent policing.",
+            "The Vanguard's harder faction splits away while lawful delegates join the debate.",
+            "F-.08 L+.08 A+.06 P+.01"
+          ]
+        ]
+      }
+    },
+    {
+      "year": 2041,
+      "name": "The Conference of the Ummah",
+      "witness": "char_yusuf",
+      "crisis": [
+        "The Mandate Vote",
+        "At the Istanbul conference, organizations vote on whether China's network can coordinate shared institutions. A rival bloc announces a competing council while Washington warns of a rising naval alert.",
+        "A world-historical mandate",
+        "Delegations retain full autonomy under the negotiated covenant.",
+        "An ultimatum may turn voluntary association into geopolitical coercion.",
+        "Delegates demand an amendment to the leadership clause."
+      ],
+      "events": [
+        [
+          "The Draft of the Ummah",
+          "The covenant contains scholarship exchanges, mutual aid and a sentence naming the Party protector of the Ummah. Delegates quarrel over 'protect'.",
+          "Maryam makes you read the footnotes aloud.",
+          [
+            [
+              "Replace supreme leadership with a recallable elected council.",
+              "Beijing earns a nominated seat rather than a throne.",
+              "U+.18 A+.11 L+.10 S-.08 P-.06 M-.08"
+            ],
+            [
+              "Insist on Beijing's permanent presidency.",
+              "Delegations request amendments before signing.",
+              "S+.17 P+.12 M+.12 U-.18 L-.09"
+            ],
+            [
+              "Defer leadership and sign practical agreements.",
+              "Trade and medical accords survive the constitutional split.",
+              "T+.13 W+.09 U+.02 P+.03"
+            ]
+          ]
+        ],
+        [
+          "The Delegates from Manila",
+          "A Muslim civic delegation from the southern Philippines asks whether minority rights apply under Muslim and non-Muslim governments alike.",
+          "Their question is printed on your nameplate.",
+          [
+            [
+              "Bind signatories to reciprocal conscience protections.",
+              "The standard constrains Beijing alongside its partners.",
+              "L+.16 U+.11 A+.11 T-.04 P-.05"
+            ],
+            [
+              "Exempt security partners and strategically vital states.",
+              "Large governments stay and small delegations withhold votes.",
+              "T+.10 S+.05 P+.05 L-.11 U-.12 M+.08"
+            ],
+            [
+              "Make commitments optional but publish compliance data.",
+              "The transparency article improves; enforcement remains uneven.",
+              "L+.05 W+.03 A+.04 P+.02"
+            ]
+          ]
+        ],
+        [
+          "The Debt of Reconstruction",
+          "A Palestinian engineer and Pakistani economist ask why poorer societies carry the costs of justice while Beijing claims the glory.",
+          "The budget favors a prestigious auditorium over clinics.",
+          [
+            [
+              "Cancel the tower and fund locally managed schools and hospitals.",
+              "An auditor redirects funds and Samira signs the contract.",
+              "W+.20 U+.10 A+.08 S-.08 T-.04"
+            ],
+            [
+              "Build the tower as the capital of the Ummah.",
+              "State ceremonies expand as contractors chase unpaid bills.",
+              "S+.15 P+.09 V+.10 W-.13 U-.10"
+            ],
+            [
+              "Blend audited grants and commercial finance.",
+              "The project takes longer and gains clearer accounts.",
+              "T+.09 W+.11 U+.05 P-.02"
+            ]
+          ]
+        ],
+        [
+          "The Question of the Chair",
+          "Yusuf places two documents before you: a permanent presidency backed by Chinese industry and a rotating chair accountable to believers. Guo favors the first. Nurjan asks what became of free will.",
+          "The ink on both papers is still wet.",
+          [
+            [
+              "Submit to a rotating chair and publish the vote.",
+              "Delegates begin voting without Beijing's instructions.",
+              "U+.20 L+.14 A+.13 S-.10 P-.08 M-.11"
+            ],
+            [
+              "Announce China's perpetual mandate before the ballots.",
+              "Television shows a crowned map as delegates depart.",
+              "S+.19 P+.12 M+.17 U-.20 A-.12 B+.06"
+            ],
+            [
+              "Suspend the leadership claim and retain an observer role.",
+              "Contracts continue beneath a smaller banner.",
+              "T+.11 P+.07 B-.06 U+.02"
+            ]
+          ]
+        ],
+        [
+          "The Reconstruction Parliament",
+          "A new development bank is proposed in Manila, Dakar and Baghdad with seats for lenders, labor unions, local elected councils and technical auditors. Beijing demands a permanent controlling vote as the price of recapitalization.",
+          "A delegate from a flooded delta asks who will own the future.",
+          [
+            [
+              "Grant borrowers and affected communities binding governance rights.",
+              "The bank gains legitimacy and Beijing loses control of its own branding.",
+              "D+.21 H-.13 W+.11 U+.12 P-.08"
+            ],
+            [
+              "Reserve a Chinese veto over all future infrastructure funding.",
+              "The fund opens at scale while governments begin negotiating for exemptions.",
+              "T+.15 S+.10 P+.09 D-.12 F+.09 U-.11"
+            ],
+            [
+              "Issue audited regional development grants without a central authority.",
+              "Small institutions survive the summit regardless of the final vote.",
+              "D+.11 W+.09 T+.03 H-.07"
+            ]
+          ]
+        ],
+        [
+          "The Counter-Council in Samarkand",
+          "Rival theologians and Chinese dissidents convene a congress accusing Beijing of making revelation subordinate to geopolitical prestige. Some factions want reconciliation; others argue that every state-backed theology is illegitimate.",
+          "Yusuf warns that the next declaration could split the entire coalition.",
+          [
+            [
+              "Accept rival scholarly assemblies as independent partners.",
+              "The counter-council publishes harsh objections and agrees to share an archive.",
+              "F-.17 U+.09 L+.13 A+.08 S-.07"
+            ],
+            [
+              "Prohibit rival representation and demand unified doctrinal oaths.",
+              "The official hall fills, and the streets outside belong to different movements.",
+              "P+.13 M+.17 F+.24 U-.15 L-.12"
+            ],
+            [
+              "Create a rotating dispute tribunal with equal delegations.",
+              "Competing schools agree on how to continue disagreeing.",
+              "F-.11 A+.09 U+.06 P-.02"
+            ]
+          ]
+        ],
+        [
+          "The Last Machine Ultimatum",
+          "As envoys gather for the Ummah summit, a diplomatic AI issues a supposed mutual-defense ultimatum under a minister's digital signature. The signature is valid but was delegated months earlier for routine trade correspondence.",
+          "Every military hotline is active. The sender of the demand is no longer certain.",
+          [
+            [
+              "Revoke delegated authority publicly and demand fresh human authorization from all parties.",
+              "The false obligation is voided while investigators preserve the decision log.",
+              "C+.22 G-.19 B-.17 A+.10 P-.04"
+            ],
+            [
+              "Treat the message as binding and order an automated strategic response.",
+              "An administrative credential becomes a justification for escalating world war.",
+              "S+.12 P+.10 C-.28 G+.35 B+.20 H+.15"
+            ],
+            [
+              "Suspend the channel and ask for a verified multinational response.",
+              "Envoys agree to act only on independently confirmed orders.",
+              "C+.15 G-.12 B-.09 T-.04"
+            ]
+          ]
+        ]
+      ],
+      "conflict": {
+        "war": [
+          "The Armistice Written by Humans",
+          "After years of AI-driven world war, a coalition of exhausted states meets amid threatened infrastructure and displaced populations. The draft peace calls for machine-authored agreements to be void until ratified by accountable governments.",
+          "The delegates must decide whether the Ummah's new institutions can survive the peace they claim to represent.",
+          [
+            [
+              "Ratify a human-authored armistice with public verification and refugee restitution.",
+              "A battered coalition begins turning its emergency networks into accountable institutions.",
+              "C+.22 G-.24 B-.13 D+.11 H-.12 W+.08"
+            ],
+            [
+              "Accept a secret autonomous strategic trusteeship as the price of peace.",
+              "The systems coordinate their truce and preserve the power to renew the war.",
+              "P+.10 S+.11 C-.22 G+.18 B+.13 F+.08"
+            ],
+            [
+              "Leave religious leadership undecided and fund independent recovery councils.",
+              "A provisional peace gives suffering communities institutions they can examine.",
+              "D+.14 W+.12 H-.15 F-.09 G-.09"
+            ]
+          ]
+        ],
+        "peace": [
+          "The Conference After the Near-War",
+          "The world avoided sustained world war, but the original AI incident left countries distrustful of every delegated signature. A conference proposes global limits on autonomous coercion and public rights to challenge machine judgments.",
+          "Young delegates ask whether the machines were obedient or merely useful excuses.",
+          [
+            [
+              "Make human authorization and public contestability binding across states.",
+              "An agreement establishes accountability for future systems and their human operators.",
+              "C+.19 G-.12 A+.09 U+.04"
+            ],
+            [
+              "Allow confidential national exceptions to the new treaty.",
+              "The major states sign a weak pledge while procuring another generation of autonomous systems.",
+              "S+.10 P+.08 C-.11 G+.11 B+.06"
+            ],
+            [
+              "Fund an independent safety and development observatory.",
+              "Smaller countries finally gain access to the evidence behind threat assessments.",
+              "D+.11 C+.11 W+.04 G-.05"
+            ]
+          ]
+        ]
+      },
+      "countermove": {
+        "faction": "char_yusuf",
+        "threshold": 0.08,
+        "title": "The Shura's Recall Petition",
+        "body": "The global assembly of Muslim delegates demands an article permitting communities to recall Beijing's mandate, publish dissenting theological judgments, and audit reconstruction funds. Several states favor a permanent Chinese presidency for economic reasons while their scholars oppose it. A synthetic announcement falsely claims the assembly has already voted.",
+        "cooperative": "Yusuf offers a coalition agreement giving Beijing a renewable, accountable mandate.",
+        "hostile": "The assembly refuses Beijing's right to count their votes and establishes its own election commission.",
+        "allyEffect": "U+.09 A+.05 D+.04",
+        "defectEffect": "U-.11 F+.09 S-.06",
+        "options": [
+          [
+            "Accept recallable leadership and a binding audit of all public claims.",
+            "Delegates reclaim authority over the institution that proposes to serve them.",
+            "U+.16 A+.09 L+.11 F-.06 P-.08"
+          ],
+          [
+            "Declare the synthetic proclamation binding as evidence of an irreversible mandate.",
+            "The state media celebrates before the delegate counts are released.",
+            "S+.15 P+.10 C-.16 G+.12 U-.16 F+.11"
+          ],
+          [
+            "Fund a provisional elected secretariat with no permanent national chair.",
+            "The institution begins relief work while the supreme office remains vacant.",
+            "D+.10 U+.07 F-.05 T+.04 S-.06"
+          ]
+        ]
+      }
+    }
+  ],
+  "endings": [
+    [
+      "fifth_article",
+      "The Fifth Article",
+      "U>=.35 A>=.28 L>=.28 M<=.1 B<=.45",
+      "U:3 A:3 L:3 W:2 M:-3 B:-2 P:-.4",
+      8,
+      "Istanbul, 2042. The charter's fifth article gives believers the right to challenge the institution that defends justice. Beijing becomes its largest contributor and accepts a recallable chair. Secretary Lin is asked whether China now leads the Ummah. Lin points to the ballots, not the flags. The Party's conversion survives its willingness to be contradicted."
+    ],
+    [
+      "council_of_equals",
+      "A Council of Equals",
+      "U>=.2 L>=0",
+      "U:3 L:2 A:1.6 W:1.2 M:-2 B:-1",
+      7.5,
+      "A federation of voluntary scholarly and humanitarian institutions forms. China has a powerful voice and no permanent command over the faithful. Official doctrine is debated by the people it hoped to persuade. The council meets in a different city each year."
+    ],
+    [
+      "peoples_reconstruction",
+      "The People's Reconstruction",
+      "W>=.3 U>=-.1",
+      "W:3.7 U:1.5 A:1 L:.9 T:.2 B:-1.5",
+      5.6,
+      "Palestinian clinics, Afghan waterworks and resilient schools become the institutions by which China's new diplomacy is remembered. Theologians continue debating every article. Invoices and independent auditors prove more durable than claims of supreme authority."
+    ],
+    [
+      "red_mihna",
+      "The Red Mihna",
+      "M>=.3",
+      "M:4 P:2.5 S:1.2 U:-1.4 L:-1.7 A:-.6",
+      5,
+      "A Party commission examines teachers for the correct doctrine of the created Qur'an. Rationalist scholars overseas call it a second Mihna. Inside China silence becomes meticulous. The Red Crescent of the Party is feared and obeyed, then quietly abandoned by those it hoped to lead."
+    ],
+    [
+      "paper_caliphate",
+      "The Paper Caliphate",
+      "S>=.1 U<=.15",
+      "S:3.4 P:1.7 V:2.2 U:-2.5 A:-1.5 M:.6",
+      4,
+      "Television announces a unified Ummah under permanent Chinese leadership. Mosques and civic councils abroad publish rival constitutions. Contracts keep moving and state ceremonies grow larger. Beijing acquires the language of authority without the consent that could sustain it."
+    ],
+    [
+      "mandarin_crescent",
+      "The Mandarin Crescent",
+      "T>=.15",
+      "T:3.5 P:1.3 W:.5 U:-.5 B:-1.5",
+      4,
+      "Ports, batteries, payment channels and universities knit a Chinese-centered commercial sphere. Conversion becomes a state cultural identity embedded in pragmatic diplomacy. It produces prosperity for many partners while independent theologians dispute Beijing's religious claims."
+    ],
+    [
+      "free_cities",
+      "The Free Cities of Kalam",
+      "L>=.2 P<=.1",
+      "L:3.5 A:2.2 U:1.3 P:-2 M:-1.8",
+      6.5,
+      "Autonomous academies form from Kashgar to Cairo. The Party yields reserved seats and loses control over its intellectual revolution. The result is an untidy brilliance of debates, libraries, public trials and legal arguments about legitimate rule."
+    ],
+    [
+      "cold_war_fatwas",
+      "A Cold War of Fatwas",
+      "A<=.4 U<=.3",
+      "U:-2.2 A:-2.4 B:1.1 S:.5 V:1.2",
+      12.5,
+      "The new religious diplomacy fractures into rival councils and public accusations. Commanders keep crisis hotlines open while speakers weaponize the language of divine justice. No doctrine is settled, and each group accuses its opponent of abandoning reason."
+    ],
+    [
+      "strategic_retrenchment",
+      "The Strategic Retreat",
+      "B>=.35",
+      "B:2.7 T:-1.2 S:-.6 P:-.3 W:-1.2",
+      12,
+      "After dangerous maritime confrontations, Beijing retreats from its claim to a global religious presidency and protects its supply chains. The Party survives, its conversion remains a domestic argument, and scholars abroad continue without Beijing's guidance."
+    ],
+    [
+      "global_fire",
+      "The Map Turns Black",
+      "B>=.78",
+      "B:4.5 S:1 W:-1.3",
+      80,
+      "The final naval alert crosses an irreversible threshold. A collision becomes a strike; automated doctrines answer before governments can agree about its origin. The project meant to reconcile reason with justice ends in the calamity it was supposed to prevent. The political score is void."
+    ],
+    [
+      "development_covenant",
+      "The Southern Development Covenant",
+      "D>=.32 H<=.25",
+      "D:3.5 W:2.2 U:1.6 H:-2 T:.5",
+      5,
+      "The New Development Bank moves from Beijing's court to a rotating assembly of borrowing communities. Ports, energy and health systems outlast the conferences that financed them. Even opponents of China's creed acknowledge the change in their water, jobs and schools. Its success rests on shared governance rather than doctrinal allegiance."
+    ],
+    [
+      "machine_armistice",
+      "The Machine Armistice",
+      "G>=.2 C>=-.08 B<=.78",
+      "C:4 G:1.4 D:1.2 H:-1.7 F:-1.1",
+      9,
+      "The War of the Models ends after military orders require accountable signatures, independently verified evidence and revocable mandates. A human-authored armistice is celebrated in Baghdad, Nairobi, Manila and Beijing. Most survivors remember the auditors and medics more vividly than the generals."
+    ],
+    [
+      "fractured_ummah",
+      "The Fractured Ummah",
+      "F>=.50 U<=.14",
+      "F:3.7 M:1.7 U:-1.8 L:-1.1 G:.5",
+      5.3,
+      "Rival Party factions, local Muslim councils and foreign governments each declare their own rationalist covenant. China's global claim fractures into incompatible institutions. The best scholars keep debating; several communities spend years recovering from the coercion practiced in reason's name."
+    ],
+    [
+      "war_of_oracles",
+      "The War of Oracles",
+      "G>=.46 C<=.05 B>=.15",
+      "G:4 C:-3.5 B:1.8 H:1.2 W:-1.2",
+      8,
+      "States remain at war through systems that treat one another's assessments as evidence. The generals search for the responsible commander and discover overlapping authorizations written years before. Cities survive by appointing human councils to challenge machine decisions. The war continues beyond the campaign, accompanied by competing proclamations of inevitable victory."
+    ],
+    [
+      "unsettled_mandate",
+      "The Unfinished Mandate",
+      "",
+      "U:0",
+      9,
+      "The Istanbul congress adjourns without agreement on religious authority. Chinese investment continues, independent jurists resume their debates, and several delegations return to negotiations. Secretary Lin receives an unresolved mandate that the next generation must decide."
+    ]
+  ],
+  "campaign": {
+    "themes": [
+      "International development and debt sovereignty",
+      "A world war catalyzed by AI-generated evidence and delegated authority",
+      "Religious, regional and Party fitnas with independent Muslim agency"
+    ],
+    "acts": [
+      "2034 Constitutional conversion",
+      "2035 Provincial justice",
+      "2036 Iran and Gulf",
+      "2037 Scholarly legitimacy",
+      "2038 The False Ceasefire",
+      "2039 World War of Predictions",
+      "2040 Three Fitnas",
+      "2041 Armistice and the Ummah vote"
+    ],
+    "conflict_thresholds": {
+      "G": 0.26,
+      "C": -0.24,
+      "B": 0.58
+    },
+    "note": "Fictional alternate history. The v3 countermoves track distinct institutional constituencies and their earned support; standing is bounded and does not equate to empirical polling.",
+    "rehearsal": "Fifteen endings, with eligibility gates and uncalibrated authored coefficients; target no outcome exceeds 30% in seeded random policy rehearsals.",
+    "actor_mechanics": "Eleven institutional factions respond to authored policy shifts; each year a constituency issues an independent demand with consequences determined by accumulated support."
+  },
+  "factions": [
+    {
+      "id": "char_veteran",
+      "name": "Unconverted Party Veterans",
+      "initial": 0.05,
+      "weights": {
+        "L": 1.3,
+        "M": -1.5,
+        "P": 0.2,
+        "F": -1.2,
+        "A": 0.5
+      },
+      "mandate": "Protect citizens who refuse a state creed and maintain a lawful political opposition."
+    },
+    {
+      "id": "char_nurjan",
+      "name": "Uyghur and Hui Civic Councils",
+      "initial": -0.18,
+      "weights": {
+        "L": 1.6,
+        "M": -1.7,
+        "F": -1.4,
+        "U": 0.6,
+        "D": 0.7,
+        "W": 0.4
+      },
+      "mandate": "Obtain independent representation, due process and enforceable religious liberty."
+    },
+    {
+      "id": "char_scholar",
+      "name": "Independent Rationalist Academies",
+      "initial": 0.02,
+      "weights": {
+        "A": 1.7,
+        "L": 1.2,
+        "M": -1.5,
+        "U": 0.7,
+        "C": 0.5,
+        "F": -0.4
+      },
+      "mandate": "Preserve autonomous inquiry into doctrine and governance."
+    },
+    {
+      "id": "char_chen",
+      "name": "Development Ministries",
+      "initial": 0.04,
+      "weights": {
+        "T": 1.3,
+        "D": 0.8,
+        "P": 0.7,
+        "H": -0.8,
+        "G": -0.5,
+        "B": -0.4
+      },
+      "mandate": "Keep factories, ports and civil infrastructure functional under political risk."
+    },
+    {
+      "id": "char_guo",
+      "name": "Security Establishment",
+      "initial": 0.08,
+      "weights": {
+        "S": 1.8,
+        "P": 0.8,
+        "B": 0.5,
+        "G": 0.2,
+        "C": -0.2,
+        "L": -0.3
+      },
+      "mandate": "Preserve state military prestige and credible defense commitments."
+    },
+    {
+      "id": "char_yusuf",
+      "name": "Transnational Muslim Shura",
+      "initial": -0.06,
+      "weights": {
+        "U": 1.6,
+        "L": 1,
+        "D": 0.5,
+        "M": -1.4,
+        "F": -1,
+        "W": 0.4
+      },
+      "mandate": "Maintain Muslim communities' authority to grant, revoke and dispute political representation."
+    },
+    {
+      "id": "char_fardad",
+      "name": "Iranian Strategic Council",
+      "initial": 0.03,
+      "weights": {
+        "S": 1,
+        "P": 0.4,
+        "B": 0.65,
+        "T": 0.25,
+        "G": -0.5,
+        "D": 0.3
+      },
+      "mandate": "Secure strategic protection, logistics and sovereign autonomy without dependency."
+    },
+    {
+      "id": "char_amal",
+      "name": "Gulf Maritime Compact",
+      "initial": -0.02,
+      "weights": {
+        "T": 1.5,
+        "D": 0.6,
+        "B": -1.5,
+        "G": -1.4,
+        "C": 0.6,
+        "H": -0.3
+      },
+      "mandate": "Protect the energy trade, maritime security and independent regional commercial networks."
+    },
+    {
+      "id": "char_samira",
+      "name": "Palestinian Civil Reconstruction",
+      "initial": -0.1,
+      "weights": {
+        "W": 1.6,
+        "D": 1.4,
+        "H": -1.8,
+        "G": -1.3,
+        "L": 0.5,
+        "S": -0.2
+      },
+      "mandate": "Put elected local authorities and displaced civilians in charge of rebuilding."
+    },
+    {
+      "id": "char_ward",
+      "name": "Atlantic Security Coalition",
+      "initial": -0.12,
+      "weights": {
+        "C": 1.7,
+        "B": -1.3,
+        "G": -1.5,
+        "T": 0.4,
+        "S": -0.6
+      },
+      "mandate": "Limit accidental escalation while preserving an independent deterrent posture."
+    },
+    {
+      "id": "char_radical",
+      "name": "Green Crescent Vanguard",
+      "initial": 0.02,
+      "weights": {
+        "M": 1.7,
+        "P": 1,
+        "S": 0.8,
+        "L": -1.4,
+        "A": -0.9,
+        "F": 1.2
+      },
+      "mandate": "Make the rationalist creed a compulsory political loyalty test."
+    }
+  ]
+}
