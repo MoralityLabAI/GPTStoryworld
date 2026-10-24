@@ -38,6 +38,8 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 .track:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:#4d5561;z-index:1}
 .fill{position:absolute;top:0;bottom:0;background:var(--good)}.fill.risk{background:var(--bad)}
 .small{font:12px/1.5 system-ui,sans-serif;color:var(--muted)}
+.state-ledger{border:1px solid var(--border);background:var(--panel);border-radius:4px;padding:12px 15px;margin:-12px 0 22px;color:var(--muted);font:13px/1.6 system-ui,sans-serif}
+.state-ledger strong{color:var(--gold);font-weight:600}
 #filefallback{font:13px system-ui,sans-serif;color:var(--muted);margin-top:14px}
 #filefallback input{max-width:100%}footer{font:12px system-ui,sans-serif;color:var(--muted);margin-top:27px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.theaters{grid-template-columns:repeat(4,1fr)}.shell{padding:18px 16px 55px}.panel{padding:20px}}
@@ -49,11 +51,12 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <header>
 <div class="topline">
  <div><p class="kicker">An alternate-history strategy storyworld · 2034–2041</p><h1>Balance of Reason: <span>The Red Mihna</span></h1>
- <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build legitimacy through decisions made under pressure. Preserve the world while you do it.</p></div>
+ <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build social consent amid global development projects, internal religious fitnas, and the AI-driven World War of the Models.</p></div>
  <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export">Export decision trace</button></div>
 </div>
 </header>
 <div class="theaters" id="theaters"></div>
+<div id="state-ledger" class="state-ledger" role="status" aria-live="polite"></div>
 <div class="layout">
 <main class="panel" aria-live="polite">
  <div id="yearbadge">Loading storyworld</div>
@@ -68,7 +71,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <aside>
 <section class="panel">
  <p class="kicker">Cabinet assessment</p>
- <p class="small">Bounded values run from −100 to +100. Cabinet analysts estimate the real conditions; popular perception can diverge sharply.</p>
+ <p class="small">All 16 metrics are bounded from −100 to +100. The war chapter responds to AI command integrity, war intensity, and brinkmanship. Social consent and public perceptions can diverge.</p>
  <div id="meters"></div>
  <label class="small"><input type="checkbox" id="forecast"> Reveal estimated policy shifts (analyst mode)</label>
 </section>
@@ -80,7 +83,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 </aside>
 </div>
 <div id="filefallback">When running the local server, alternate JSON input: <label>load the accompanying <code>source_cards.json</code> <input type="file" accept=".json" id="datafile"></label></div>
-<footer>Fictional timeline, fictional characters, real intellectual and diplomatic tensions. Inspired by the crisis structure of Chris Crawford's <em>Balance of Power</em>; original writing, mechanics, and setting. This world does not assert that the CCP has converted.</footer>
+<footer>Fictional timeline, fictional characters, real intellectual and diplomatic tensions. Inspired by the crisis structure of Chris Crawford's <em>Balance of Power</em>; original writing, mechanics, and setting. This alternate history makes no claim that the CCP has converted or that an AI world war is forecast.</footer>
 </div>
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
@@ -89,14 +92,25 @@ const $=(id)=>document.getElementById(id);
 const descriptions={
  U:"Ummah consent",A:"Rationalist credibility",L:"Religious liberty",W:"Civilian welfare",
  P:"Party cohesion",T:"Trade resilience",S:"Strategic prestige",B:"Brinkmanship",
- M:"Mihna coercion",V:"Perceived consent",Q:"Perceived credibility"
+ M:"Mihna coercion",V:"Perceived consent",Q:"Perceived credibility",
+ D:"Development equity",F:"Internal fitna",C:"AI command integrity",G:"World war intensity",H:"Displacement"
 };
-const risks=new Set(["B","M"]);
+const risks=new Set(["B","M","F","G","H"]);
 const titleCase=s=>s.replace(/_/g," ");
 function render(){
  if(!source||!game)return;
  const s=current(source,game),ended=game.phase==="end";
  $('yearbadge').textContent=ended?"END STATE · "+game.turns+" DECISIONS":s.year+" · "+game.phase.toUpperCase()+" · DECISION "+(game.turns+1);
+ const warStatus=game.phase==="war"||game.stats.G>=.26?"WORLD WAR ACTIVE":game.warEpisodes>0?"ARMISTICE UNDER PRESSURE":"WAR AVOIDED SO FAR";
+ const bits=[
+  "WAR · "+warStatus,
+  "DEVELOPMENT "+Math.round(game.stats.D*100),
+  "FITNA "+Math.round(game.stats.F*100),
+  "AI CONTROL "+Math.round(game.stats.C*100),
+  "DISPLACEMENT "+Math.round(game.stats.H*100)
+ ];
+ $('state-ledger').textContent=bits.join("  |  ");
+
  $('scene-title').textContent=s.title;
  $('narrative').textContent=s.body;
  $('stakes').textContent=s.stakes||"";
