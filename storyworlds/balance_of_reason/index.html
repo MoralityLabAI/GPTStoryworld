@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://moralitylabai.github.io/GPTStoryworld/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="./assets/crest.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
 
 <style>
 :root{color-scheme:dark;--bg:#11161c;--panel:#1a222c;--panel2:#222d39;--border:#354352;--text:#f0e7d6;--muted:#b4bfcb;--gold:#dabd7b;--blue:#91b5d7;--bad:#d98d8a;--good:#94bfad}
@@ -372,5 +373,11 @@ document.addEventListener('keydown',e=>{
 });
 try{const r=await fetch('./source_cards.json');if(!r.ok)throw Error('HTTP '+r.status);start(await r.json());}
 catch(err){$('scene-title').textContent='Choose the storyworld source file below';$('narrative').textContent='Use a local web server, or load source_cards.json using the file picker.';}
+if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost' || location.hostname==='127.0.0.1')){
+ window.addEventListener('load',()=>{
+   navigator.serviceWorker.register('./service-worker.js',{scope:'./'})
+     .catch(error=>console.warn('Offline cache unavailable:',error));
+ },{once:true});
+}
 </script>
 </body></html>
