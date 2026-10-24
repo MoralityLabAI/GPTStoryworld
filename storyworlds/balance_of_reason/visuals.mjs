@@ -3,6 +3,7 @@
 // This module only presents the current state and dispatches callbacks to the player.
 
 import {PLAYTEST_CHAPTERS} from './playtest_chapters.mjs';
+import {ART_NAMES,installArtPack,readArtPack,clearArtPack} from './art_pack.mjs';
 
 export const ART={
   hero:["assets/hero.webp","assets/hero.svg"],
@@ -13,6 +14,8 @@ export const ART={
   crisis:["assets/ceasefire.webp","assets/warroom.svg"],
   portraits:["assets/characters.webp","assets/hero.svg"]
 };
+const ORIGINAL_ART=Object.fromEntries(Object.entries(ART).map(([key,value])=>[key,value[0]]));
+const ART_SLOTS={hero:"hero",warroom:"warroom",summit:"summit",map:"world",diplomacy:"dialogue",crisis:"ceasefire",portraits:"characters"};
 const $=id=>document.getElementById(id);
 const S=(tag)=>document.createElement(tag);
 const regular=(tag,className,text)=>{
@@ -112,6 +115,8 @@ function renderArtImage(key,alt,className=""){
 export function mountVisualPlayer(config){
   const {getSource,getGame,newGame,resumeSaved,exportSaved,shareCampaign,getCampaignLink,loadChapter}=config;
   const shell=document.querySelector(".shell");
+  const activeArtURLs=new Map();
+  let isCustomArt=false;
   if(!shell||MOUNTS.has(shell))throw Error("Visual player already mounted or shell missing");
   let activeModal=null,selectedLocation=LOCATIONS[0],chosenFaction=null,selectedResearch=0;
   let lastFocus=null;
@@ -139,10 +144,14 @@ export function mountVisualPlayer(config){
   const how=createButton("How to play",()=>openModal("guide"));
   const previews=createButton("Playtest chapters",()=>openModal("chapters"));
   const share=createButton("Copy playtest link",()=>shareCampaign?.());
-  menuButtons.append(play,resume,previews,how,share);stage.append(menuButtons);
+  const installArtwork=createButton("Load pixel-art ZIP",()=>artPicker.click());
+  menuButtons.append(play,resume,previews,how,share,installArtwork);stage.append(menuButtons);
   stage.append(regular("div","intro-foot","11 FACTIONS · 15 ENDINGS · 16 NATIONAL VARIABLES"));
   intro.append(stage);
-  document.body.append(modal,intro);
+  const artPicker=S("input");artPicker.type="file";artPicker.accept=".zip,application/zip";artPicker.hidden=true;artPicker.id="art-pack-picker";
+  const artNotice=regular("div","art-pack-notice","Optional: load the original high-resolution art pack. It stays on this device.");
+  stage.append(artNotice);
+  document.body.append(modal,intro,artPicker);
 
   // When art assets are installed, their artwork replaces the faithful SVG
   // fallbacks without affecting layout or any state calculation.
@@ -320,6 +329,14 @@ export function mountVisualPlayer(config){
       card.append(im,h("strong",title));gallery.append(card);
     }
     panel.append(gallery);
+    const commands=regular("div","feedback-row");
+    commands.append(createButton(isCustomArt?"Replace illustrated art ZIP":"Load illustrated art ZIP",()=>artPicker.click()));
+    if(isCustomArt)commands.append(createButton("Restore default SVG artwork",async()=>{
+      try{await clearArtPack();applyCustomArt(null);}
+      catch(error){alert("Could not reset artwork: "+error.message);}
+    }));
+    panel.append(commands);
+    panel.append(note("The art pack is read locally and stored only in this browser. It can be used offline after importing."));
   }
   function renderChapters(){
     panelLayout("Playtest chapters · jump into the campaign");
@@ -482,6 +499,42 @@ export function mountVisualPlayer(config){
     }
     if(activeModal)renderModal(activeModal);
   }
+
+  function applyCustomArt(pack){
+    for(const url of activeArtURLs.values())URL.revokeObjectURL(url);
+    activeArtURLs.clear();
+    isCustomArt=!!pack;
+    for(const [slot,name] of Object.entries(ART_SLOTS)){
+      if(pack&&pack[name] instanceof Blob){
+        const url=URL.createObjectURL(pack[name]);
+        activeArtURLs.set(slot,url);
+        ART[slot][0]=url;
+      }else ART[slot][0]=ORIGINAL_ART[slot];
+    }
+    stage.style.backgroundImage=isCustomArt?'url("'+ART.hero[0]+'")':"";
+    stage.classList.toggle("no-raster",!isCustomArt);
+    artNotice.textContent=isCustomArt
+      ?"Seven full-resolution scenes installed locally. Your artwork remains available offline."
+      :"Optional: load the original high-resolution art pack. It stays on this device.";
+    visualImg.dataset.asset="";
+    sync();
+    if(activeModal==="gallery")renderGallery();
+  }
+  artPicker.addEventListener("change",async()=>{
+    const file=artPicker.files?.[0];
+    if(!file)return;
+    try{
+      artNotice.textContent="Importing illustrations…";
+      const pack=await installArtPack(file);
+      if(ART_NAMES.some(name=>!(pack[name] instanceof Blob)))throw Error("Missing image in imported art pack");
+      applyCustomArt(pack);
+    }catch(error){
+      artNotice.textContent="Art import failed. Existing illustration is preserved.";
+      alert("Could not install the art ZIP: "+error.message);
+    }finally{artPicker.value="";}
+  });
+  readArtPack().then(pack=>{if(pack)applyCustomArt(pack);}).catch(error=>console.warn("Custom art unavailable:",error));
+
   modal.addEventListener("click",event=>{if(event.target===modal)closeModal();});
   document.addEventListener("keydown",event=>{
     if(event.key==="Escape"&&activeModal){closeModal();}
