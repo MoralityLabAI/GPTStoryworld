@@ -61,6 +61,23 @@ async function run(){
   assert.notEqual(first,second);
   const autosave=await page.evaluate(()=>localStorage.getItem('balance-of-reason/autosave-v1'));
   assert.ok(autosave&&JSON.parse(autosave).actions.length===1);
+  assert.equal(await page.locator('#share-campaign').count(),1);
+  const shareUrl=await page.evaluate(async()=>{
+    const source=await (await fetch('./source_cards.json')).json();
+    const {initial,choose}=await import('./engine.mjs');
+    const {makeCampaignUrl}=await import('./share_route.mjs');
+    const state=initial(source);choose(source,state,0);
+    return makeCampaignUrl(location.href,source,state);
+  });
+  assert.ok(shareUrl.includes('#campaign='));
+  const shared=await browser.newPage({viewport:{width:1200,height:800}});
+  shared.on('pageerror',error=>errors.push(error.message));
+  await shared.goto(shareUrl,{waitUntil:'networkidle',timeout:25000});
+  await shared.locator('#visual-intro').waitFor({state:'hidden'});
+  assert.equal(await shared.locator('#scene-title').innerText(),second);
+  assert.equal(JSON.parse(await shared.evaluate(()=>localStorage.getItem('balance-of-reason/autosave-v1'))).actions.length,1);
+  await shared.close();
+
 
   await page.getByRole('button',{name:'Main menu'}).click();
   await page.locator('#visual-intro').waitFor({state:'visible'});
@@ -80,6 +97,6 @@ async function run(){
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
   assert.ok(overflow<15,'unexpected horizontal overflow '+overflow);
   assert.deepEqual(errors,[]);
-  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, feedback');
+  console.log('Browser smoke: PASS | title, event, atlas, factions, autosave, resume, mobile, share URLs, feedback');
 }
 try{await run();}finally{await browser?.close();server.kill('SIGTERM');}
