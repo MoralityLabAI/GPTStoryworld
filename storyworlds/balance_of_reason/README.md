@@ -97,6 +97,16 @@ Its Muʿtazilī material draws on the five classical principles, including divin
 
 Everything after the fictional 2034 conversion is alternate history. This work asserts neither a CCP conversion nor a forecast of world war.
 
+## Playtest chapters
+
+The illustrated main menu offers three ready-to-play later chapters. Each one replays a genuine, source-pinned history through the normal engine, preserving national indicators, eleven faction standings, AI command integrity and the player's recorded choices. They provide short sessions for testing the most consequential scenes.
+
+- **2038, The False Ceasefire:** a constructed diplomatic report tests command oversight and the risk of machine-initiated conflict.
+- **2040, The Three Fitnas:** the Party, independent scholars and provincial councils dispute religious and constitutional authority.
+- **2041, The Last Machine Ultimatum:** a delegated digital signature presents a final wartime authorization crisis.
+
+Preview campaigns can be played through to an ending and shared by URL or the regular saved-trace format. When an existing autosave is present, opening a chapter asks for permission before replacing it. Presets live in `playtest_chapters.mjs` and are validated by `playtest_chapters.test.mjs`.
+
 ## Playtest comfort and production artwork
 
 Players can now see a **Policy consequences** panel after each decision. It shows changes since the previous turn to national indicators and independent faction standings. The same impact ledger is reconstructed when saved campaign traces are resumed.
