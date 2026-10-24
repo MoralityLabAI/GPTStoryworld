@@ -13,6 +13,13 @@ export function deltas(source){
 }
 
 export function validateSource(source){
+  if(source.version!==3)throw Error("Expected faction-based v3 scenario");
+  if(!Array.isArray(source.factions)||source.factions.length!==11)throw Error("Expected eleven institutional factions");
+  const actorIds=new Set(source.cast.map(actor=>actor[0]));
+  for(const faction of source.factions){
+    if(!actorIds.has(faction.id)||Object.keys(faction.weights).some(k=>!source.metrics[k]))throw Error("Bad faction "+faction.id);
+    if(typeof faction.initial!=="number"||Math.abs(faction.initial)>1)throw Error("Invalid faction standing "+faction.id);
+  }
   if(!source || !source.metrics || source.acts?.length!==8)throw Error("Expected eight annual acts");
   if(!Array.isArray(source.cast)||source.cast.length<5)throw Error("Missing character cast");
   for(const key of ["U","A","L","W","P","T","S","B","M","V","Q","D","F","C","G","H"]){
@@ -20,6 +27,13 @@ export function validateSource(source){
   }
   for(const act of source.acts){
     if(act.events?.length!==7 || act.crisis?.length!==6)throw Error("Malformed annual act "+act.year);
+    const counter=act.countermove;
+    if(!counter || !actorIds.has(counter.faction) || counter.options?.length!==3
+       || !Array.isArray(counter.options) || counter.options.some(o=>o.length!==3))
+      throw Error("Malformed faction countermove "+act.year);
+    for(const delta of [counter.allyEffect,counter.defectEffect,...counter.options.map(o=>o[2])]){
+      for(const key of Object.keys(deltas(delta)))if(!source.metrics[key])throw Error("Invalid countermove delta "+key);
+    }
     for(const event of act.events){
       if(event.length!==4 || event[3].length!==3)throw Error("Malformed encounter "+event[0]);
       for(const choice of event[3]){
@@ -45,6 +59,7 @@ export function initial(source){
   validateSource(source);
   return {yearIndex:0,sceneIndex:0,phase:"event",
     stats:Object.fromEntries(Object.keys(source.metrics).map(k=>[k,0])),
+    factions:Object.fromEntries(source.factions.map(f=>[f.id,f.initial])),
     history:[],lastOutcome:"",result:null,turns:0,warEpisodes:0,peaceEpisodes:0};
 }
 
@@ -68,6 +83,17 @@ export function current(source,state){
       ]};
   }
   const act=source.acts[state.yearIndex];
+  if(state.phase==="countermove"){
+    const counter=act.countermove;
+    const standing=state.factions[counter.faction]??0;
+    const support=standing>=counter.threshold;
+    return {year:act.year,title:counter.title,
+      body:counter.body+"\n\n"+(support?counter.cooperative:counter.hostile),
+      stakes:(support?"INSTITUTIONAL COOPERATION":"INSTITUTIONAL RESISTANCE")
+         +" · "+source.factions.find(f=>f.id===counter.faction).name
+         +" standing "+Math.round(standing*100)+" · threshold "+Math.round(counter.threshold*100),
+      choices:counter.options};
+  }
   if(state.phase==="event"){
     const event=act.events[state.sceneIndex];
     return {year:act.year,title:event[0],body:event[1],stakes:event[2],choices:event[3]};
@@ -99,7 +125,19 @@ export function current(source,state){
     ]};
 }
 
-function apply(state,delta,index,success){
+export function factionShifts(source,delta,success){
+  const changes=deltas(delta),factor=success?1:.66;
+  const effective=Object.fromEntries(Object.entries(changes).map(([key,value])=>
+    [key,value*(value<0&&!success?1.26:factor)]));
+  return source.factions.map(faction=>{
+    const amount=Object.entries(faction.weights).reduce(
+      (total,[key,weight])=>total+(effective[key]||0)*weight,0)*.22;
+    return {id:faction.id,amount:clamp(amount)};
+  }).filter(x=>Math.abs(x.amount)>=.003).sort((a,b)=>
+    Math.abs(b.amount)-Math.abs(a.amount) || a.id.localeCompare(b.id)).slice(0,4);
+}
+
+function apply(state,delta,index,success,source){
   const d=deltas(delta),factor=success?1:.66;
   for(const [key,value] of Object.entries(d)){
     const scaled=value*(value<0&&!success?1.26:factor);
@@ -128,6 +166,9 @@ function apply(state,delta,index,success){
   }
   if((d.F||0)>0)state.stats.U=clamp(state.stats.U-d.F*.2*factor);
   if((d.H||0)>0)state.stats.W=clamp(state.stats.W-d.H*.12*factor);
+  for(const shift of factionShifts(source,delta,success)){
+    state.factions[shift.id]=clamp((state.factions[shift.id]??0)+shift.amount);
+  }
 }
 
 function advanceYear(source,state){
@@ -175,7 +216,7 @@ export function choose(source,state,index){
   const choice=scene.choices[index];
   if(!choice)throw Error("Invalid policy choice "+index);
   const previousPhase=state.phase,previousIndex=state.sceneIndex;
-  const pre={...state.stats};let success=true;
+  const pre={...state.stats},preFaction={...state.factions};let success=true;
   if(previousPhase==="event"){
     const prior=previousIndex;
     const test=index===0?(prior===4?"D":prior===5?"U":prior===6?"C":(prior%2===0?"U":"A")):index===1?"P":"T";
@@ -193,9 +234,18 @@ export function choose(source,state,index){
     if(index===1)success=pre.S>=0;
     if(index===2)success=pre.D>=-.14;
   }
-  apply(state,choice[2],index,success);
+  if(previousPhase==="countermove"){
+    const counter=source.acts[state.yearIndex].countermove;
+    success=(preFaction[counter.faction]??0)>=counter.threshold;
+    apply(state,success?counter.allyEffect:counter.defectEffect,index,success,source);
+  }
+  apply(state,choice[2],index,success,source);
   state.turns++;
   let outcome=choice[1];
+  if(previousPhase==="countermove"){
+    const actor=source.acts[state.yearIndex].countermove;
+    outcome=(success?actor.cooperative:actor.hostile)+" "+outcome;
+  }
   if(!success){
     if(previousPhase==="event")outcome="The policy meets resistance. "+source.acts[state.yearIndex].events[previousIndex][2];
     if(previousPhase==="war")outcome+=" Military and civilian institutions contest the implementation.";
@@ -203,7 +253,9 @@ export function choose(source,state,index){
   }
   if(previousPhase==="event"){
     if(state.sceneIndex+1<source.acts[state.yearIndex].events.length)state.sceneIndex++;
-    else state.phase="crisis";
+    else state.phase="countermove";
+  }else if(previousPhase==="countermove"){
+    state.phase="crisis";
   }else if(previousPhase==="crisis"){
     if(index===2||success)completeAnnualCrisis(source,state);
     else {state.phase="standoff";outcome+=" A second demand arrives.";}
@@ -220,7 +272,7 @@ export function choose(source,state,index){
   }else if(previousPhase==="final")finish(source,state);
   state.lastOutcome=outcome;
   state.history.push({turn:state.turns,year:scene.year,phase:previousPhase,title:scene.title,
-    choice:choice[0],outcome,stats:{...state.stats}});
+    choice:choice[0],outcome,stats:{...state.stats},factions:{...state.factions}});
   return state;
 }
 
