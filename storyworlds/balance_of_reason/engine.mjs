@@ -68,6 +68,7 @@ export function current(source,state){
     ]};
 }
 function meets(stats,condition){
+  if(!condition||!condition.trim()) return true;
   return condition.split(/\s+/).every(term=>{
     const m=term.match(/^([A-Z])(>=|<=)(-?\d*\.?\d+)$/);
     if(!m)throw Error("Invalid condition: "+term);
@@ -81,8 +82,9 @@ export function scoreEndings(source,state){
       const [key,weight]=term.split(":");
       score+=(state.stats[key]??0)*Number(weight);
     }
-    score+=meets(state.stats,e[2])?e[4]:0;
-    return {key:e[0],name:e[1],score:Number(score.toFixed(4)),eligible:meets(state.stats,e[2])};
+    const eligible=meets(state.stats,e[2]);
+    score=eligible?score+e[4]:-1000000000;
+    return {key:e[0],name:e[1],score:Number(score.toFixed(4)),eligible};
   }).sort((a,b)=>b.score-a.score);
 }
 function finish(source,state){
