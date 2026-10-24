@@ -41,7 +41,9 @@ async function run(){
   assert.equal(await page.locator('#visual-intro .intro-stage').count(),1);
   await page.getByRole('button',{name:'How to play'}).click();
   await page.locator('#visual-modal').waitFor({state:'visible'});
-  assert.ok((await page.locator('#visual-modal').innerText()).includes('You are the Secretary'));
+  const helpCards=await page.locator('#visual-modal .codex-columns .card').count();
+  assert.ok(helpCards>=7,'expected seven help cards, saw '+helpCards);
+  await page.locator('#visual-modal .codex-columns .card').first().waitFor({state:'visible'});
   await page.getByRole('button',{name:/Close ×/}).click();
 
   await page.getByRole('button',{name:'Playtest chapters'}).click();
