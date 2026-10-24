@@ -136,7 +136,8 @@ export function buildSweepweave(source) {
       id:"page_ending_gate_"+ballot+"_r_"+end[0],
       text_script:str("The final record enters the public archive."),
       consequence_id:"page_end_"+end[0],desirability_script:score(end,ballot),
-      after_effects:[effect("U",ballot===1?.002:-.002),effect("S",ballot===2?.002:-.002),effect("A",.001)]
+      // Terminal choice records the vote without changing the state that was just adjudicated.
+      after_effects:[effect("U",0),effect("S",0),effect("A",0)]
     }))
   }));
   encounters.push(encounter("page_ending_gate","The Scales of the Fifth Article",
