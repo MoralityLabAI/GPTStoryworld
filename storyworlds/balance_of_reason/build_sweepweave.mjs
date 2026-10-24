@@ -201,6 +201,13 @@ export function buildSweepweave(source){
         "The government loses prestige and avoids a wider war.",
         "B-.23 W+.11 L+.04 S-.16 P-.07 U+.06 G-.08",2,act.witness,postCrisis,postCrisis,"U",-.22+ai*.022)
     ]));
+    // The irreversible brinkmanship ending sets the same maximum risk that
+    // the browser records when a final ultimatum triggers catastrophe.
+    const fatalStandoff=encounters[encounters.length-1].options[1].reactions[0];
+    if(fatalStandoff.consequence_id!=="page_end_global_fire")throw Error("Unexpected standoff routing");
+    fatalStandoff.after_effects.push({
+      effect_type:"Bounded Number Effect",Set:pointer("B"),to:constant(1)
+    });
     if(act.conflict){
       const warCheck="page_"+act.year+"_war_check";
       const war="page_"+act.year+"_world_war",peace="page_"+act.year+"_fragile_peace";
