@@ -59,6 +59,12 @@ async function run(){
   await page.locator('#choices .choice').first().click();
   const second=await page.locator('#scene-title').innerText();
   assert.notEqual(first,second);
+  assert.equal(await page.locator('#impact-report').isVisible(),true);
+  assert.ok(await page.locator('#impact-report .impact-metric .impact-row').count()>0);
+  assert.ok(await page.locator('#impact-report .impact-faction .impact-row').count()>0);
+  const impactNames=await page.locator('#impact-report .impact-row span').allTextContents();
+  assert.ok(impactNames.every(x=>x.length>2));
+
   const autosave=await page.evaluate(()=>localStorage.getItem('balance-of-reason/autosave-v1'));
   assert.ok(autosave&&JSON.parse(autosave).actions.length===1);
   assert.equal(await page.locator('#share-campaign').count(),1);
