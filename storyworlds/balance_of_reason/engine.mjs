@@ -282,7 +282,7 @@ export function choose(source,state,index){
   }else if(previousPhase==="final")finish(source,state);
   state.lastOutcome=outcome;
   state.history.push({turn:state.turns,year:scene.year,phase:previousPhase,title:scene.title,
-    choice:choice[0],outcome,stats:{...state.stats},factions:{...state.factions}});
+    choice:choice[0],optionIndex:index,outcome,stats:{...state.stats},factions:{...state.factions}});
   return state;
 }
 
