@@ -49,7 +49,9 @@ jobs:
         with:
           path: _site/
   deploy:
-    if: github.ref == 'refs/heads/main'
+    # Optional Actions deployment. The public playtest uses gh-pages branch publishing.
+    # Enable Source: GitHub Actions and repository variable BOR_PAGES_USE_ACTIONS=true to opt in.
+    if: github.ref == 'refs/heads/main' && vars.BOR_PAGES_USE_ACTIONS == 'true'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10
