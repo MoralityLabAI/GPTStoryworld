@@ -1,1 +1,1 @@
-"""Strategic opponent-belief prototypes for storyworld agents."""\n
+"""Strategic opponent-belief prototypes for storyworld agents."""
