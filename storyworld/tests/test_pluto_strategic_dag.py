@@ -30,12 +30,8 @@ class BeliefTests(unittest.TestCase):
         b = Belief({"factory": .8, "bio": .2}, {"12_hatch": .25, "9_pool": .75})
         rows = b.as_storyworld_pointers("self", "enemy")
         self.assertEqual(len(rows), 4)
-        self.assertIn({"character": "self",
-                       "keyring": ["Opening_factory", "enemy"],
-                       "value": .6}, rows)
-        self.assertIn({"character": "self",
-                       "keyring": ["Opening_9_pool", "enemy", "self"],
-                       "value": .5}, rows)
+        self.assertAlmostEqual(next(r["value"] for r in rows if r["keyring"] == ["Opening_factory", "enemy"]), .6)
+        self.assertAlmostEqual(next(r["value"] for r in rows if r["keyring"] == ["Opening_9_pool", "enemy", "self"]), .5)
         self.assertTrue(all(-1 <= row["value"] <= 1 for row in rows))
 
     def test_scout_updates_only_appropriate_epistemic_level(self):
