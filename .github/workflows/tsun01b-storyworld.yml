@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'storyworlds/tsun01b_last_train_home/**'
+      - 'integrations/gguf_neuron_explorer/**'
       - '.github/workflows/tsun01b-storyworld.yml'
   workflow_dispatch:
 
@@ -22,6 +23,10 @@ jobs:
           diff -u storyworlds/tsun01b_last_train_home/tsun01b.swmd.min.md /tmp/tsun01b.swmd.min.md
       - name: Run deterministic storyworld tests
         run: python -m unittest discover -s storyworlds/tsun01b_last_train_home -p 'test_*.py' -v
+      - name: Run offline GNE adapter contracts
+        run: |
+          python -m unittest discover -s integrations/gguf_neuron_explorer -p 'test_*.py' -v
+          python -m integrations.gguf_neuron_explorer.runner --backend scripted --output /tmp/tsun01b_scripted.json
       - name: Generate non-blocking production density report
         run: |
           python codex-skills/storyworld-building/scripts/storyworld_quality_gate.py --storyworld storyworlds/tsun01b_last_train_home/tsun01b.sweepweave.json --report-out /tmp/tsun01b_quality.json
