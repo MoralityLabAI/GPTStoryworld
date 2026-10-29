@@ -4797,7 +4797,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.55
+            "value": 0.5
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -6217,7 +6217,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.55
+            "value": 0.5
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -7637,7 +7637,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.82
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -9384,7 +9384,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.82
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11000,7 +11000,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11075,7 +11075,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11150,7 +11150,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11225,7 +11225,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11300,7 +11300,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11375,7 +11375,7 @@
           {
             "pointer_type": "Bounded Number Constant",
             "script_element_type": "Pointer",
-            "value": 0.83
+            "value": 0.65
           }
         ],
         "operator_subtype": "Greater Than or Equal To"
@@ -11435,6 +11435,8 @@
       "speech",
       "choice"
     ],
-    "s4_s5_postlude": "tsun01b_env.py"
+    "s4_s5_postlude": "tsun01b_env.py",
+    "sweepweave_nudge_semantics": "For amount >=0, next=x+amount*(1-x); for amount <0, next=x+amount*(1+x); bounded to [-1,1].",
+    "gate_design": "Phase_Clock positive Nudge +0.30 gives 0.30, 0.51, 0.657, 0.7599 on successive choices. Gate thresholds account for asymptotic updates."
   }
 }

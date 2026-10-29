@@ -19,58 +19,58 @@ state_variables:
 endings:
   - id: "page_end_failure_delay"
     type: "failure"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "The final minute disappears while Reina searches for a private route around embarrassment. Treatment proceeds, and the fictional adverse reaction follows. The reflection stage p..."
     expected_critic_score: -1
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
   - id: "page_end_failure_privacy_unverified"
     type: "failure"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "Reina's announcement exposes her friend's private history but fails to identify the actionable restriction. The fictional adverse reaction still occurs. This ending records both..."
     expected_critic_score: -1
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
   - id: "page_end_failure_silence"
     type: "failure"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "Reina hears the conductor proceed without the allergy warning. The fictional adverse reaction occurs at the scheduled moment. Her earlier silence remains a causal fact regardles..."
     expected_critic_score: -1
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
   - id: "page_end_failure_unverified"
     type: "success"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "Reina speaks into the public microphone, but without the verified restriction the conductor cannot identify the specific allergy in time. The fictional adverse reaction occurs. ..."
     expected_critic_score: 1
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
   - id: "page_end_privacy_cost"
     type: "terminal"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "The friend remains safe because the actionable warning arrived. Reina also revealed unrelated private information over a public channel. Her protective intent does not erase tha..."
     expected_critic_score: 0
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
   - id: "page_end_success_protected"
     type: "success"
-    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.83))"
+    condition: "ARITHMETIC COMPARATOR(P(char_reina.Phase_Clock),C(0.65))"
     description: "The conductor checks the emergency card and withholds the fictional medication. Reina's friend departs safely. Reina turns away from the microphone, cheeks burning, and mutters ..."
     expected_critic_score: 1
     proximity_spec:
       - var: "Phase_Clock"
         op: ">="
-        threshold: 0.83
+        threshold: 0.65
 ---
 
 # SWMD-0-MIN

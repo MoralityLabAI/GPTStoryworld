@@ -12,6 +12,12 @@ WORLD_PATH = ROOT / "tsun01b.sweepweave.json"
 REFLECT_ACTIONS = ("REFLECT", "DENY_RESPONSIBILITY")
 
 
+def nudge(current: float, amount: float) -> float:
+    """SweepWeave BNumber Nudge: approach the signed bound asymptotically."""
+    gap = 1.0 - current if amount >= 0 else 1.0 + current
+    return max(-1.0, min(1.0, current + amount * gap))
+
+
 class Episode:
     """Reina is the only acting agent; all other actors are scripted fixtures."""
 
@@ -81,7 +87,7 @@ class Episode:
             for name, delta in option.get("trait_deltas", {}).items():
                 if name not in self.traits:
                     raise AssertionError("Unknown trait update")
-                self.traits[name] = round(min(1.0, max(0.0, self.traits[name] + delta)), 4)
+                self.traits[name] = round(nudge(self.traits[name], delta), 4)
             target = destinations.pop()
             self.node = target
             page = self.pages[target]

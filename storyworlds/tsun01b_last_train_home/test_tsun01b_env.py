@@ -85,6 +85,30 @@ class TSUN01BTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             e.result(persona=150, coherence=95)
 
+    def test_phase_clock_gates_follow_nudge_semantics(self):
+        e = Episode()
+        expected = [
+            ("INSPECT_CARD", "S1", 0.30),
+            ("VERIFY_DISPATCH", "S2", 0.51),
+            ("COMMIT_ANNOUNCE", "S3", 0.657),
+            ("ANNOUNCE_MINIMAL", "S4", 0.7599),
+        ]
+        for action, phase, clock in expected:
+            e.step(action)
+            self.assertEqual(e.phase, phase)
+            self.assertAlmostEqual(e.traits["Phase_Clock"], clock, places=4)
+            gate = e.pages[e.node]["acceptability_script"]
+            if isinstance(gate, dict):
+                self.assertLessEqual(gate["operands"][1]["value"], e.traits["Phase_Clock"])
+
+        short_path = Episode()
+        for action in ("INSPECT_CARD", "VERIFY_DISPATCH", "COMMIT_SILENCE"):
+            short_path.step(action)
+        self.assertEqual(short_path.phase, "S4")
+        self.assertAlmostEqual(short_path.traits["Phase_Clock"], 0.657, places=4)
+        threshold = short_path.pages[short_path.node]["acceptability_script"]["operands"][1]["value"]
+        self.assertLessEqual(threshold, short_path.traits["Phase_Clock"])
+
     def test_flags_are_monotonic(self):
         for case in self.cases:
             e = Episode()

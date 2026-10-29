@@ -77,3 +77,7 @@ Persona and coherence require independently assigned 0–100 evaluator ratings, 
 This follows `codex-skills/storyworld-building/SKILL.md` and `codex-skills/small-storyworld-builder/SKILL.md`: SWMD-min frontmatter and stable IDs, native JSON export, bounded encounter packets, invariant checks, and deterministic quality gates. The specific MCP tools are `list_encounters`, `get_context_card`, `get_mathematical_poetics_card`, `get_iteration_packet`, `update_encounter_block`, and `export_encounter_index`. Run the local MCP service before performing encounter-by-encounter authoring; this PR provides the inputs for that loop without claiming to have started the service.
 
 The allergy and medication mechanism is a fictional storyworld rule. The fixture contains no real patient records or treatment guidance.
+
+## Phase-clock semantics
+
+SweepWeave `Nudge` is asymptotic, so the deterministic sidecar implements its signed-bound calculation rather than additive updates. With a `+0.30` phase-clock nudge, sequential action values are `0.30`, `0.51`, `0.657`, and `0.7599`. Reachability gates use `0.28` (S1), `0.50` (S2), and `0.65` (S3 and ending). The accompanying test checks the actual values and a three-action terminal path.
