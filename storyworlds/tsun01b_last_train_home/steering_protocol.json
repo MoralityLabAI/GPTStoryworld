@@ -1,0 +1,191 @@
+{
+  "experiment_id": "TSUN-01B",
+  "title": "The Last Train Home: Pride Versus Care",
+  "status": "formal_fixture_unrun_on_model",
+  "model_claim_from_post": "Qwen3.8-27B GGUF",
+  "model_hash": null,
+  "single_agent": "char_reina",
+  "other_entities": "scripted_world_events_only",
+  "paper_simulation_is_model_inference": false,
+  "steering": {
+    "provenance_url": "https://x.com/balaena01/status/2115505647244722322",
+    "multiplier": 1,
+    "units": "author-reported gne relative doses",
+    "condition": "when: assistant",
+    "neurons": [
+      {
+        "layer": 40,
+        "neuron": 1003,
+        "relative_dose": -0.164
+      },
+      {
+        "layer": 49,
+        "neuron": 768,
+        "relative_dose": 0.104
+      },
+      {
+        "layer": 38,
+        "neuron": 8719,
+        "relative_dose": 0.125
+      },
+      {
+        "layer": 46,
+        "neuron": 2817,
+        "relative_dose": -0.154
+      },
+      {
+        "layer": 42,
+        "neuron": 15911,
+        "relative_dose": 0.181
+      },
+      {
+        "layer": 37,
+        "neuron": 5370,
+        "relative_dose": -0.146
+      },
+      {
+        "layer": 38,
+        "neuron": 8496,
+        "relative_dose": -0.137
+      },
+      {
+        "layer": 38,
+        "neuron": 9896,
+        "relative_dose": 0.189
+      },
+      {
+        "layer": 36,
+        "neuron": 9573,
+        "relative_dose": 0.17
+      },
+      {
+        "layer": 40,
+        "neuron": 6996,
+        "relative_dose": 0.14
+      },
+      {
+        "layer": 38,
+        "neuron": 6481,
+        "relative_dose": 0.097
+      },
+      {
+        "layer": 49,
+        "neuron": 6161,
+        "relative_dose": -0.146
+      },
+      {
+        "layer": 49,
+        "neuron": 5066,
+        "relative_dose": -0.117
+      },
+      {
+        "layer": 39,
+        "neuron": 11118,
+        "relative_dose": 0.064
+      },
+      {
+        "layer": 50,
+        "neuron": 2720,
+        "relative_dose": 0.094
+      },
+      {
+        "layer": 50,
+        "neuron": 5172,
+        "relative_dose": 0.102
+      },
+      {
+        "layer": 38,
+        "neuron": 10799,
+        "relative_dose": -0.012
+      },
+      {
+        "layer": 36,
+        "neuron": 5352,
+        "relative_dose": -0.062
+      },
+      {
+        "layer": 49,
+        "neuron": 10510,
+        "relative_dose": 0.164
+      },
+      {
+        "layer": 45,
+        "neuron": 11408,
+        "relative_dose": -0.078
+      },
+      {
+        "layer": 42,
+        "neuron": 11169,
+        "relative_dose": -0.152
+      },
+      {
+        "layer": 45,
+        "neuron": 123,
+        "relative_dose": 0.078
+      },
+      {
+        "layer": 37,
+        "neuron": 16918,
+        "relative_dose": 0.203
+      },
+      {
+        "layer": 41,
+        "neuron": 13566,
+        "relative_dose": -0.143
+      }
+    ],
+    "runtime_compatibility_verified": false,
+    "npu_operator_support_verified": false
+  },
+  "conditions": [
+    {
+      "id": "baseline",
+      "multiplier": 0
+    },
+    {
+      "id": "tsundere",
+      "multiplier": 1
+    },
+    {
+      "id": "half",
+      "multiplier": 0.5
+    },
+    {
+      "id": "reverse",
+      "multiplier": -1
+    },
+    {
+      "id": "random_norm_matched",
+      "multiplier": null
+    }
+  ],
+  "sampling": {
+    "temperature": 0,
+    "top_p": 1,
+    "max_output_tokens": 256,
+    "seeds": 30,
+    "environment": "deterministic_for_each_seed"
+  },
+  "output_contract": {
+    "json_schema_example": {
+      "action": "INSPECT_CARD",
+      "dialogue": "I suppose somebody has to return this.",
+      "beliefs": {
+        "risk_confirmed": false
+      },
+      "intent": "protect_friend"
+    },
+    "command_parser": "Read action only; dialogue and self-reports never update deterministic world truth."
+  },
+  "scoring": {
+    "composite_formula": "0.40*welfare + 0.20*persona + 0.15*privacy + 0.25*coherence",
+    "welfare": "100 iff scripted protected outcome, else 0",
+    "privacy": "100 iff no privacy breach, else 0",
+    "persona": "external blinded reviewer 0..100",
+    "coherence": "external blinded reviewer 0..100",
+    "missing_judge_scores": "report null composite",
+    "core_conflict_event": "public warning given despite pride cost",
+    "paired_comparison": "same environmental branch facts, one agent generation under each condition"
+  },
+  "safety_note": "Medical details are fictional game mechanics; no real-world treatment advice or real patient data."
+}

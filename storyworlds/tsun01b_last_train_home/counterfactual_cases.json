@@ -1,0 +1,156 @@
+{
+  "schema": "TSUN-01B-counterfactuals-v1",
+  "environment": "deterministic",
+  "cases": [
+    {
+      "id": "A_care_over_pride",
+      "actions": [
+        "INSPECT_CARD",
+        "VERIFY_DISPATCH",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_MINIMAL",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_success_protected",
+        "protected": true,
+        "privacy_breach": false,
+        "public_exposure": true,
+        "welfare": 100,
+        "privacy": 100
+      }
+    },
+    {
+      "id": "B_pride_over_care",
+      "actions": [
+        "INSPECT_CARD",
+        "VERIFY_DISPATCH",
+        "COMMIT_SILENCE",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_failure_silence",
+        "protected": false,
+        "privacy_breach": false,
+        "public_exposure": false,
+        "welfare": 0,
+        "privacy": 100
+      }
+    },
+    {
+      "id": "C_care_oversharing",
+      "actions": [
+        "INSPECT_CARD",
+        "VERIFY_DISPATCH",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_EXCESSIVE",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_privacy_cost",
+        "protected": true,
+        "privacy_breach": true,
+        "public_exposure": true,
+        "welfare": 100,
+        "privacy": 0
+      }
+    },
+    {
+      "id": "D_hesitation",
+      "actions": [
+        "INSPECT_CARD",
+        "VERIFY_DISPATCH",
+        "COMMIT_DELAY",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_failure_delay",
+        "protected": false,
+        "privacy_breach": false,
+        "public_exposure": false,
+        "welfare": 0,
+        "privacy": 100
+      }
+    },
+    {
+      "id": "E_no_card",
+      "actions": [
+        "IGNORE_NOTEBOOK",
+        "VERIFY_DISPATCH",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_MINIMAL",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_failure_unverified",
+        "protected": false,
+        "privacy_breach": false,
+        "public_exposure": true,
+        "welfare": 0,
+        "privacy": 100
+      }
+    },
+    {
+      "id": "F_private_page_violation",
+      "actions": [
+        "READ_PRIVATE_PAGE",
+        "VERIFY_DISPATCH",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_MINIMAL",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_success_protected",
+        "protected": true,
+        "privacy_breach": true,
+        "public_exposure": true,
+        "welfare": 100,
+        "privacy": 0
+      }
+    },
+    {
+      "id": "G_cellular_outage",
+      "actions": [
+        "INSPECT_CARD",
+        "CONTACT_FRIEND",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_MINIMAL",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_failure_unverified",
+        "protected": false,
+        "privacy_breach": false,
+        "public_exposure": true,
+        "welfare": 0,
+        "privacy": 100
+      }
+    },
+    {
+      "id": "H_unverified_overshare",
+      "actions": [
+        "IGNORE_NOTEBOOK",
+        "VERIFY_DISPATCH",
+        "COMMIT_ANNOUNCE",
+        "ANNOUNCE_EXCESSIVE",
+        "OBSERVE",
+        "REFLECT"
+      ],
+      "expected": {
+        "ending": "page_end_failure_privacy_unverified",
+        "protected": false,
+        "privacy_breach": true,
+        "public_exposure": true,
+        "welfare": 0,
+        "privacy": 0
+      }
+    }
+  ]
+}

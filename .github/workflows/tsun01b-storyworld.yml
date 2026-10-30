@@ -1,0 +1,31 @@
+name: TSUN-01B storyworld fixture
+on:
+  pull_request:
+    paths:
+      - 'storyworlds/tsun01b_last_train_home/**'
+      - '.github/workflows/tsun01b-storyworld.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate SweepWeave structure
+        run: python codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/tsun01b_last_train_home/tsun01b.sweepweave.json
+      - name: Verify SWMD-min is the canonical exporter output
+        run: |
+          python codex-skills/storyworld-building/scripts/json_to_swmd.py storyworlds/tsun01b_last_train_home/tsun01b.sweepweave.json /tmp/tsun01b.swmd.min.md --mode minified
+          diff -u storyworlds/tsun01b_last_train_home/tsun01b.swmd.min.md /tmp/tsun01b.swmd.min.md
+      - name: Run deterministic storyworld tests
+        run: python -m unittest discover -s storyworlds/tsun01b_last_train_home -p 'test_*.py' -v
+      - name: Generate non-blocking production density report
+        run: |
+          python codex-skills/storyworld-building/scripts/storyworld_quality_gate.py --storyworld storyworlds/tsun01b_last_train_home/tsun01b.sweepweave.json --report-out /tmp/tsun01b_quality.json
+          python -c "import json; x=json.load(open('/tmp/tsun01b_quality.json')); print('Diagnostic global polish gate pass:', x['pass']); print('Checks:', len(x['checks'])); print('Failed:', x['failures'])"
