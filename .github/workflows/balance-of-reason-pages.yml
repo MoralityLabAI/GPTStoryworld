@@ -1,0 +1,65 @@
+name: Publish Balance of Reason playtest
+on:
+  push:
+    branches:
+      - main
+      - feature/red-mihna-pages-visuals-20261024
+    paths:
+      - 'storyworlds/balance_of_reason/**'
+      - '.github/workflows/balance-of-reason-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: balance-of-reason-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify source, compatibility, and navigation
+        run: |
+          node --test storyworlds/balance_of_reason/*.test.mjs
+          python3 -m unittest discover -s storyworlds/balance_of_reason/tools -p 'test_*.py' -v
+          node storyworlds/balance_of_reason/export_sweepweave.mjs --check
+          python3 codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/balance_of_reason/storyworld.json
+      - name: Exercise real browser UI in headless Chrome
+        run: |
+          npm install --prefix "$RUNNER_TEMP/bor-playwright" --no-save --ignore-scripts --package-lock=false playwright-core@1.56.1
+          ln -s "$RUNNER_TEMP/bor-playwright/node_modules" storyworlds/balance_of_reason/node_modules
+          node storyworlds/balance_of_reason/browser-smoke.mjs
+          rm storyworlds/balance_of_reason/node_modules
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          rsync -a --exclude=node_modules --exclude='*.test.mjs' --exclude='browser-smoke.mjs' storyworlds/balance_of_reason/ _site/
+          printf 'Public playtest. Fictional alternate history.\n' > _site/.nojekyll
+          test -f _site/index.html
+          test -f _site/engine.mjs
+          test -f _site/source_cards.json
+          test -f _site/visuals.css
+          test -f _site/visuals.mjs
+          test -f _site/assets/hero.svg
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site/
+  deploy:
+    # Optional Actions deployment. The public playtest uses gh-pages branch publishing.
+    # Enable Source: GitHub Actions and repository variable BOR_PAGES_USE_ACTIONS=true to opt in.
+    if: github.ref == 'refs/heads/main' && vars.BOR_PAGES_USE_ACTIONS == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish static site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Balance of Reason: The Red Mihna</title>
+<meta name="description" content="Play a fictional geopolitical strategy game about a Muʿtazilī CCP, autonomous Muslim institutions, international development, and the World War of the Models.">
+<meta name="theme-color" content="#111b27">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Balance of Reason: The Red Mihna">
+<meta property="og:description" content="An illustrated alternate-history strategy game. Eleven autonomous factions, fifteen endings, a playable world atlas, and AI-war diplomacy.">
+<meta property="og:url" content="https://moralitylabai.github.io/GPTStoryworld/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="./assets/crest.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
+
 <style>
 :root{color-scheme:dark;--bg:#11161c;--panel:#1a222c;--panel2:#222d39;--border:#354352;--text:#f0e7d6;--muted:#b4bfcb;--gold:#dabd7b;--blue:#91b5d7;--bad:#d98d8a;--good:#94bfad}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Georgia,'Times New Roman',serif}button{font:inherit;cursor:pointer}a{color:var(--blue)}
@@ -45,6 +55,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 @media(max-width:900px){.layout{grid-template-columns:1fr}.theaters{grid-template-columns:repeat(4,1fr)}.shell{padding:18px 16px 55px}.panel{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
+<link rel="stylesheet" href="./visuals.css">
 </head>
 <body>
 <div class="shell">
@@ -52,7 +63,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <div class="topline">
  <div><p class="kicker">An alternate-history strategy storyworld · 2034–2041</p><h1>Balance of Reason: <span>The Red Mihna</span></h1>
  <p class="subtitle">China's ruling party adopts Muʿtazilī theology and attempts to lead the Ummah. Build social consent amid global development projects, internal religious fitnas, and the AI-driven World War of the Models.</p></div>
- <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
+ <div class="tools"><button class="minor" id="reset">Restart</button><button class="minor" id="export" type="button">Save trace</button><button class="minor" id="share-campaign" type="button" disabled>Copy campaign link</button><button class="minor" id="import-trace" type="button">Resume trace</button><input id="trace-file" type="file" accept=".json,application/json" hidden aria-label="Choose saved decision trace"><button class="minor" id="export-native" disabled>Export Sweepweave JSON</button></div>
 </div>
 </header>
 <div class="theaters" id="theaters"></div>
@@ -62,6 +73,7 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
  <div id="yearbadge">Loading storyworld</div>
  <h2 id="scene-title">Opening the archives…</h2>
  <div id="lastresult"></div>
+ <div id="impact-report" class="impact-report" aria-live="polite" aria-label="Consequences of the last policy choice"></div>
  <div id="narrative"></div>
  <div id="stakes"></div>
  <h3 id="question-heading">Your decision</h3>
@@ -93,6 +105,10 @@ h3{font:700 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1
 <script type="module">
 import {initial,current,choose,deltas,scoreEndings,validateSource} from './engine.mjs';
 import {makeTrace,replayTrace} from './trace_protocol.mjs';
+import {latestDecisionImpact} from './decision_impact.mjs';
+import {loadPlaytestChapter} from './playtest_chapters.mjs';
+import {makeCampaignUrl,decodeCampaign,campaignTokenFromHash} from './share_route.mjs';
+import {mountVisualPlayer} from './visuals.mjs';
 import {buildSweepweave,validateSweepweave} from './build_sweepweave.mjs';
 let source=null,game=null;
 const $=(id)=>document.getElementById(id);
@@ -104,6 +120,79 @@ const descriptions={
 };
 const risks=new Set(["B","M","F","G","H"]);
 const titleCase=s=>s.replace(/_/g," ");
+const STORAGE_KEY="balance-of-reason/autosave-v1";
+const shareStatus=document.createElement("span");shareStatus.id="share-status";shareStatus.setAttribute("role","status");shareStatus.setAttribute("aria-live","polite");shareStatus.className="share-status";document.querySelector(".tools").append(shareStatus);
+function persist(){
+ if(!source||!game)return;
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(makeTrace(source,game)));}catch{}
+}
+const visuals=mountVisualPlayer({
+ getSource:()=>source,
+ getGame:()=>game,
+ newGame:()=>{
+  if(!source)return false;
+  game=initial(source);persist();render();return true;
+ },
+ resumeSaved:()=>{
+  if(!source)return false;
+  try{
+   const raw=localStorage.getItem(STORAGE_KEY);
+   if(!raw)throw Error("No saved campaign is available on this device");
+   game=replayTrace(source,JSON.parse(raw));
+   render();return true;
+  }catch(error){alert("Could not resume: "+error.message);return false;}
+ },
+ exportSaved:()=>document.getElementById("export").click(),
+ shareCampaign:()=>copyCampaignLink(),
+ getCampaignLink:()=>source&&game?makeCampaignUrl(location.href,source,game):location.origin+location.pathname,
+ loadChapter:id=>{
+  if(!source)return false;
+  try{
+   const candidate=loadPlaytestChapter(source,id);
+   let previous;
+   try{previous=localStorage.getItem(STORAGE_KEY);}catch{}
+   const existing=previous?JSON.parse(previous):null;
+   if(existing?.actions?.length && !window.confirm("Start this playtest chapter? Your current autosave will be replaced. Save a trace or copy its campaign link first if you want to preserve it."))return false;
+   game=candidate;persist();render();return true;
+  }catch(error){window.alert("Chapter preview unavailable: "+error.message);return false;}
+ }
+});
+function renderImpactReport(){
+ const target=$('impact-report');
+ target.replaceChildren();
+ const impact=latestDecisionImpact(source,game);
+ target.hidden=!impact;
+ if(!impact)return;
+ const title=document.createElement("div");
+ title.className="impact-heading";
+ title.textContent="Policy consequences · "+impact.year+" · "+impact.turn;
+ target.append(title);
+ const makeRow=(item,section)=>{
+  const row=document.createElement("div");
+  row.className="impact-row "+(item.improvement?"impact-positive":"impact-negative");
+  const name=document.createElement("span");name.textContent=item.name;
+  const number=document.createElement("strong");number.textContent=item.display;
+  number.setAttribute("aria-label",item.name+" changed by "+item.display+" points");
+  row.append(name,number);section.append(row);
+ };
+ for(const [label,items,cls]of [
+  ["National change",impact.national,"impact-metric"],
+  ["Coalition reactions",impact.coalitions,"impact-faction"]
+ ]){
+  const section=document.createElement("section");
+  section.className="impact-column "+cls;
+  const heading=document.createElement("h3");heading.textContent=label;
+  section.append(heading);
+  if(items.length)items.forEach(item=>makeRow(item,section));
+  else{const empty=document.createElement("p");empty.textContent="No significant changes";section.append(empty);}
+  target.append(section);
+ }
+ const note=document.createElement("small");
+ note.className="impact-footnote";
+ note.textContent="Game-model changes since the previous decision. Coalition standing is independent of public reputation.";
+ target.append(note);
+}
+
 function render(){
  if(!source||!game)return;
  const s=current(source,game),ended=game.phase==="end";
@@ -123,6 +212,7 @@ function render(){
  $('stakes').textContent=s.stakes||"";
  $('stakes').hidden=!s.stakes;
  $('lastresult').textContent=game.lastOutcome?"PREVIOUS DECISION · "+game.lastOutcome:"";
+ renderImpactReport();
  $('question-heading').textContent=ended?"Outcome":"Your decision";
  $('choices').replaceChildren();
  if(!ended){
@@ -134,7 +224,7 @@ function render(){
     view.textContent=Object.entries(deltas(choice[2])).map(([k,v])=>descriptions[k]+": "+(v>0?"+":"")+Math.round(v*100)).join(" · ");
     button.append(view);
    }
-   button.addEventListener('click',()=>{choose(source,game,i);render();window.scrollTo({top:0,behavior:"smooth"});});
+   button.addEventListener('click',()=>{choose(source,game,i);persist();render();window.scrollTo({top:0,behavior:"smooth"});});
    $('choices').appendChild(button);
   });
  }else{
@@ -196,10 +286,56 @@ function render(){
   div.textContent=act.year+" · "+act.name;$('theaters').append(div);
  });
  $('export').disabled=game.history.length===0;
+ visuals.sync();
 }
-function start(data){validateSource(data);source=data;game=initial(source);$('export-native').disabled=false;render();}
-$('reset').onclick=()=>{if(source){game=initial(source);render();}};
+function start(data){
+ validateSource(data);source=data;game=initial(source);
+ $('export-native').disabled=false;$('share-campaign').disabled=false;
+ render();visuals.showSavedAvailable();
+ restoreIncomingCampaign();
+}
+$('reset').onclick=()=>{if(source&&confirm('Start over and replace the autosaved campaign?')){game=initial(source);persist();render();}};
 $('forecast').onchange=render;
+async function copyCampaignLink(){
+ if(!source||!game)return;
+ let href;
+ try{href=makeCampaignUrl(location.href,source,game);}
+ catch(error){shareStatus.textContent="Sharing unavailable: "+error.message;return;}
+ try{
+  if(!navigator.clipboard?.writeText)throw Error("Clipboard unavailable");
+  await navigator.clipboard.writeText(href);
+  shareStatus.textContent="Campaign link copied. It contains policy choices only.";
+ }catch{
+  window.prompt("Copy your campaign link:",href);
+  shareStatus.textContent="Copy the campaign link to share this game.";
+ }
+}
+$('share-campaign').onclick=copyCampaignLink;
+function restoreIncomingCampaign(){
+ let token;
+ try{token=campaignTokenFromHash(location.hash);}
+ catch(error){shareStatus.textContent="Campaign link error: "+error.message;return;}
+ if(!token)return;
+ try{
+  const restored=decodeCampaign(source,token);
+  const autosave=localStorage.getItem(STORAGE_KEY);
+  const previous=autosave?JSON.parse(autosave):null;
+  const needsConsent=previous?.actions?.length>0;
+  if(needsConsent&&!window.confirm("Open the shared campaign? Your current autosave will be replaced. Save it to a file first if you want to keep it.")){
+   shareStatus.textContent="Existing campaign preserved.";return;
+  }
+  game=restored;
+  persist();
+  render();
+  visuals.hideIntro();
+  shareStatus.textContent="Shared campaign restored at decision "+(game.turns+1)+".";
+ }catch(error){
+  shareStatus.textContent="Shared campaign could not be loaded.";
+  window.alert("Campaign link cannot be opened: "+error.message);
+ }finally{
+  if(location.hash.startsWith("#campaign="))history.replaceState(null,"",location.pathname+location.search);
+ }
+}
 $('export').onclick=()=>{
  if(!game)return;
  const payload=makeTrace(source,game);
@@ -225,17 +361,23 @@ $('trace-file').onchange=async e=>{
   if(file.size>2*1024*1024)throw Error('Trace file exceeds 2 MB safety limit');
   const parsed=JSON.parse(await file.text());
   game=replayTrace(source,parsed);
-  render();
+  persist();render();visuals.hideIntro();
   window.scrollTo({top:0,behavior:"smooth"});
  }catch(err){alert('Unable to resume the trace: '+err.message);}
  finally{e.target.value='';}
 };
 $('datafile').onchange=async e=>{const file=e.target.files[0];if(file){try{start(JSON.parse(await file.text()));}catch(err){alert('Invalid storyworld source: '+err.message);}}};
 document.addEventListener('keydown',e=>{
- if(!source||!game||game.phase==="end"||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
- const i=Number(e.key)-1;if(i>=0&&i<3){const choices=current(source,game).choices;if(choices[i]){choose(source,game,i);render();}}
+ if(!source||!game||game.phase==="end"||document.body.dataset.uiModalOpen||document.body.dataset.uiMenuOpen||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+ const i=Number(e.key)-1;if(i>=0&&i<3){const choices=current(source,game).choices;if(choices[i]){choose(source,game,i);persist();render();}}
 });
 try{const r=await fetch('./source_cards.json');if(!r.ok)throw Error('HTTP '+r.status);start(await r.json());}
 catch(err){$('scene-title').textContent='Choose the storyworld source file below';$('narrative').textContent='Use a local web server, or load source_cards.json using the file picker.';}
+if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost' || location.hostname==='127.0.0.1')){
+ window.addEventListener('load',()=>{
+   navigator.serviceWorker.register('./service-worker.js',{scope:'./'})
+     .catch(error=>console.warn('Offline cache unavailable:',error));
+ },{once:true});
+}
 </script>
 </body></html>

@@ -6,6 +6,20 @@ In this fictional timeline the Chinese Communist Party converts to Muʿtazilī t
 
 The game is built around a question that makes the historical **Mihna** relevant again: what becomes of rational inquiry when a government insists on enforcing the correct creed?
 
+## Public playtest
+
+**[Play Balance of Reason on GitHub Pages](https://moralitylabai.github.io/GPTStoryworld/)**. GitHub's `gh-pages` deployment workflow has completed successfully. You can also run the site locally.
+
+The illustrated title screen offers **New campaign**, **Resume campaign**, **How to play**, and **Copy playtest link**. During a game, **Copy campaign link** creates a compact URL containing the policy decisions made so far. Opening it on another device reconstructs the national and faction state against the same `source_cards.json` version. Players with an existing autosave are asked before replacing it. The copied URL contains policy decisions and a non-cryptographic compatibility checksum, with no feedback responses or personal details.
+
+The **Feedback** screen can copy a field report and reproducible campaign link in one message, or download a JSON report. The player chooses what to share. No server receives playtest feedback.
+
+### Install the original art and play offline
+
+The title menu now has **Load pixel-art ZIP**. Select `balance-of-reason-production-art-pack.zip` directly, without extracting it or uploading anything to GitHub. The browser verifies seven WebP images and stores the full-resolution artwork locally with IndexedDB. You can replace it or use **Restore default SVG artwork** from the Gallery. Artwork stays on the same device and is independent of shared campaign links.
+
+The game also registers an offline cache on HTTPS and localhost. After one successful online visit, the campaign engine, scenes, map, and saved local progress can be used without a network connection. New storyworld editions still require an online refresh. The imported art remains available offline on browsers that allow local storage.
+
 ## Play in a browser
 
 From this directory, start a local web server:
@@ -16,7 +30,7 @@ python3 -m http.server 8000
 
 Visit **http://localhost:8000**. Choose policy options with the mouse or keys **1**, **2**, or **3**. The national dashboard displays 16 bounded indicators while the coalition board shows 11 independently motivated constituencies. The highlighted faction has a chance to issue a countermove that year.
 
-**Save trace** exports the decisions, outcomes, 16 national scores and 11 coalition standings. **Resume trace** loads the record, verifies every turn against the same `source_cards.json` revision, and reconstructs the exact active scene. A compatibility fingerprint guards against accidentally resuming on an altered edition; this is a consistency check rather than a cryptographic authentication mechanism.
+**Copy campaign link** shares the reproducible policy history through a URL. **Save trace** exports the decisions, outcomes, 16 national scores and 11 coalition standings. **Resume trace** loads the record, verifies every turn against the same `source_cards.json` revision, and reconstructs the exact active scene. A compatibility fingerprint guards against accidentally resuming on an altered edition; this is a consistency check rather than a cryptographic authentication mechanism.
 
 **Export Sweepweave JSON** generates the full-metadata native storyworld in the browser. Open the repo-root `storyworld_reader.html` and select that JSON file to play it in the existing reader.
 
@@ -88,3 +102,36 @@ Chris Crawford's *Balance of Power* provides the crisis logic: backing down carr
 Its Muʿtazilī material draws on the five classical principles, including divine unity, justice, responsibility, and commanding right and forbidding wrong. The possibility of another Mihna asks how a rationalist state behaves when the people it claims to protect decline its interpretation. Local Muslim and secular institutions can reject Beijing's authority without being written out of the political system.
 
 Everything after the fictional 2034 conversion is alternate history. This work asserts neither a CCP conversion nor a forecast of world war.
+
+## Playtest chapters
+
+The illustrated main menu offers three ready-to-play later chapters. Each one replays a genuine, source-pinned history through the normal engine, preserving national indicators, eleven faction standings, AI command integrity and the player's recorded choices. They provide short sessions for testing the most consequential scenes.
+
+- **2038, The False Ceasefire:** a constructed diplomatic report tests command oversight and the risk of machine-initiated conflict.
+- **2040, The Three Fitnas:** the Party, independent scholars and provincial councils dispute religious and constitutional authority.
+- **2041, The Last Machine Ultimatum:** a delegated digital signature presents a final wartime authorization crisis.
+
+Preview campaigns can be played through to an ending and shared by URL or the regular saved-trace format. When an existing autosave is present, opening a chapter asks for permission before replacing it. Presets live in `playtest_chapters.mjs` and are validated by `playtest_chapters.test.mjs`.
+
+## Playtest comfort and production artwork
+
+Players can now see a **Policy consequences** panel after each decision. It shows changes since the previous turn to national indicators and independent faction standings. The same impact ledger is reconstructed when saved campaign traces are resumed.
+
+The generated high-resolution concept art is distributed as a seven-image WebP ZIP. The repo includes `tools/install_art_pack.py`, an archive-validated installer with automated tests, and a detailed guide at [assets/README.md](assets/README.md). An owner-run installation from a local checkout will publish those binaries to the PR and `gh-pages` branches. Until then, the live game uses the already-integrated vector illustrations.
+
+## Illustrated GitHub Pages playtest (production frontend preview)
+
+The visual frontend is implemented in `visuals.mjs` and `visuals.css`, loaded by the existing `index.html`. It provides an illustrated title/menu, contextual portraits, a clickable regional atlas, diplomacy view, an institutional policy codex, chronicle, gallery, responsive mobile layout and playtest feedback download. The original strategic engine still governs every choice and faction countermove.
+
+The project also has a clean **`gh-pages`** branch containing a root-level static copy of the site and four self-contained illustrated SVG backdrops. The repository owner can enable the public playtest at **[Repository Settings → Pages](https://github.com/MoralityLabAI/GPTStoryworld/settings/pages)**: choose **Deploy from a branch**, select **`gh-pages`** and **`/(root)`**, then Save. The intended site URL is **https://moralitylabai.github.io/GPTStoryworld/**. The Pages build-and-deploy workflow has completed successfully for `gh-pages`; the published link above is intended for playtesting.
+
+The browser can import the ZIP directly using **Load pixel-art ZIP**. Repository-wide hosting of the same artwork is also supported by placing the optional files in `assets/`: `hero.webp`, `warroom.webp`, `summit.webp`, `world.webp`, `dialogue.webp`, `ceasefire.webp` and `characters.webp`. The browser automatically uses each WebP when present and falls back to a locally hosted SVG scene otherwise. The actual interactive map pins, policy options, stats and dialogue text remain accessible HTML rather than text baked into generated images. See `assets/README.md` for installation.
+
+The app autosaves an indexed, *deterministic* decision trace to the current browser's local storage. **Resume campaign** restores that local save, and **Save trace / Resume trace** exports or imports it as JSON. The revision fingerprint checks game compatibility rather than certifying authenticity.
+
+Tests include:
+- `node --test *.test.mjs` for storyworld parity, gameplay, portraits, atlas, trace integrity and source-pinned shareable campaigns.
+- `node browser-smoke.mjs` using a local Chrome/Chromium and `playwright-core` to verify the real UI from title screen through decisions, autosave/resume, mobile and feedback.
+- `.github/workflows/balance-of-reason-pages.yml` stages the playtest build after regression and headless browser checks. Branch deployment through `gh-pages` is the default. Optional GitHub Actions deployment can be enabled later.
+
+The site is a public fictional-playtest build. Art imports, campaign autosaves, and feedback remain on the player's device unless they choose to share. A small, versioned service worker supports repeat visits offline.

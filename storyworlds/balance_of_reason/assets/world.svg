@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice"><defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0c1725"/><stop offset=".62" stop-color="#243143"/><stop offset="1" stop-color="#884b3e"/></linearGradient>
+<linearGradient id="amber" x2="0" y2="1"><stop stop-color="#e9aa66"/><stop offset="1" stop-color="#8c3e3f"/></linearGradient>
+<linearGradient id="wood" x2="0" y2="1"><stop stop-color="#3b2c27"/><stop offset="1" stop-color="#1b1415"/></linearGradient>
+<linearGradient id="dark" x2="0" y2="1"><stop stop-color="#111c2b"/><stop offset="1" stop-color="#070b14"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#e5af62" stop-opacity=".85"/><stop offset="1" stop-color="#c47140" stop-opacity="0"/></radialGradient>
+<pattern id="pixel" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M15 0H0V15" fill="none" stroke="#e5bb8c" stroke-opacity=".09" stroke-width=".7"/></pattern>
+<pattern id="tiles" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M13 0L26 13L13 26L0 13Z" fill="none" stroke="#a88b6a" stroke-opacity=".2"/></pattern>
+<filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<rect width="1600" height="800" fill="#102b3e"/>
+<path d="M0 0H1600V800H0Z" fill="url(#pixel)"/>
+<g transform="translate(15 30) scale(.96 .89)"><path d="M30 280L100 183L220 164L270 127L360 133L408 111L475 151L560 143L628 185L732 140L851 122L931 153L1033 140L1110 182L1254 159L1291 222L1425 250L1549 345L1533 449L1403 479L1370 530L1230 550L1144 514L1090 583L988 555L887 608L800 589L730 535L635 569L545 548L462 624L377 577L287 593L190 525L146 449L61 433Z" fill="#313b38" stroke="#99846a" stroke-width="5"/>
+<path d="M80 280L199 246L280 230L336 283L370 360L346 424L270 432L189 405L122 394Z" fill="#575244" opacity=".7"/>
+<path d="M476 367L592 337L715 359L743 458L680 535L582 538L507 467Z" fill="#685946" opacity=".65"/>
+<path d="M772 323L937 271L1120 297L1273 365L1267 464L1148 486L1041 451L909 480L817 427Z" fill="#485443" opacity=".65"/>
+<path d="M1028 496L1141 502L1211 560L1178 639L1070 629L1033 577Z" fill="#766344" opacity=".62"/>
+<path d="M336 260L389 321L378 408M735 300L709 444M990 285L955 451M1183 331L1180 481" stroke="#d6bb83" opacity=".2" stroke-width="7" fill="none"/></g>
+<g stroke="#d8b981" stroke-opacity=".25" fill="none"><path d="M0 200H1600M0 400H1600M0 600H1600M300 0V800M600 0V800M900 0V800M1200 0V800M1500 0V800"/></g>
+<g fill="#edc895" font-family="Georgia,serif" font-size="36" font-weight="bold" opacity=".48">
+<text x="146" y="315">ATLANTIC</text><text x="304" y="530">AFRICA</text><text x="725" y="260">EURASIA</text><text x="1180" y="412">ASIA</text><text x="850" y="722">INDIAN OCEAN</text>
+</g>
+<g fill="#173c43" stroke="#c3a068" stroke-width="6"><circle cx="350" cy="420" r="20"/><circle cx="880" cy="300" r="25"/><circle cx="1292" cy="380" r="21"/><circle cx="1412" cy="610" r="18"/></g>
+<g fill="none" stroke-dasharray="18 9" stroke-width="6" opacity=".65"><path d="M214 460Q518 330 690 440T1100 400T1470 615" stroke="#a1c49b"/><path d="M431 228Q732 195 1082 300T1510 480" stroke="#c16e53"/></g>
+<g fill="#d0b17b"><g transform="translate(682 526) scale(0.45)" fill="#ad925c"><rect x="-12" y="-145" width="24" height="145"/><path d="M-24 -146H24L0 -171Z"/><rect x="-4" y="-190" width="8" height="21"/><path d="M-31 -80H31V-73H-31Z"/><rect x="-7" y="-128" width="6" height="16" fill="#ac8663"/><rect x="3" y="-110" width="5" height="15" fill="#ac8663"/></g><g transform="translate(1350 505) scale(0.65)" fill="#ad925c"><rect x="-21" y="-83" width="42" height="83"/><path d="M-42 -86H42L15 -100H-15Z"/><rect x="-16" y="-140" width="32" height="55"/><path d="M-36 -141H36L12 -153H-12Z"/><rect x="-12" y="-189" width="24" height="49"/><path d="M-29 -191H29L8 -204H-8Z"/><rect x="-2" y="-215" width="4" height="22"/></g><g fill="#ad925c"><rect x="465" y="469.5" width="86" height="38.7"/><path d="M465 473.8A43 43 0 0 1 551 473.8Z"/><rect x="504" y="409.3" width="8" height="30.099999999999998"/><circle cx="508" cy="405.86" r="7"/></g></g>
+</svg>
