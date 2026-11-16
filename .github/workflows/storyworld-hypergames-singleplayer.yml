@@ -1,0 +1,26 @@
+name: storyworld-hypergames-singleplayer
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-singleplayer.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-singleplayer.yml'
+jobs:
+  exact-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -q
+      - name: Receipt verification
+        run: PYTHONPATH=src python scripts/check_local_receipts.py
