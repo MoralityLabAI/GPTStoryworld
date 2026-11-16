@@ -8,3 +8,8 @@ hg03_private_*.json
 hg03_dev_qwen*.json
 hg03_dev_baselines*.json
 *.local.json
+output/evaluation_hypergames/hg03_local_dev_*/llama-server.*.log
+output/evaluation_hypergames/hg03_local_dev_*/hg03_hardware_runtime.json
+output/evaluation_hypergames/hg03_local_dev_*/model_download_receipt.json
+output/evaluation_hypergames/hg03_local_dev_*/provenance.json
+output/evaluation_hypergames/hg03_local_dev_*/resources.jsonl

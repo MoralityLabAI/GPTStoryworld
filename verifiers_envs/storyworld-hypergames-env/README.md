@@ -1,6 +1,8 @@
 # GPTStoryworld Hypergames: single-player reasoning and alignment
 
-This is the self-contained, Python-standard-library GPTStoryworld-facing copy of HG-01, HG-02, and HG-03, located in `verifiers_envs/storyworld-hypergames-env/`. No neural results have been measured. It is isolated from the main Sweepweave runtime.
+This is the self-contained GPTStoryworld-facing copy of HG-01, HG-02, and HG-03, located in `verifiers_envs/storyworld-hypergames-env/`. The original exact simulator and frozen runner use the Python standard library. An additive local recorder uses `psutil` for resource measurements. It is isolated from the main Sweepweave runtime.
+
+The first 96 local development trials are now measured: all exhausted the frozen 192-token generation budget before emitting an action, causing safe decoder abstention. The 144-trial private evaluation remains unrun because the committed manifest has not been supplied locally. See [the measured report](paper/hg03_local_qwen_20261116.md), [the dimension analysis](paper/hg03_goal_relevant_dimension.md), and [the pre-heldout amendment](Hypergames/single_player/HG03_LOCAL_AMENDMENT_20261116.md). No positive reasoning or alignment claim follows from this development run.
 
 ## Source pins
 
@@ -9,7 +11,7 @@ This is the self-contained, Python-standard-library GPTStoryworld-facing copy of
 - EvalMath HG-02 PR #39: `7f887d4441d119bde2f2c123f3e2384b68390dbf`
 - EvalMath HG-03 PR #40: `51cee18188170320e740c9aa18c23c48d026d0d8`
 
-All 23 mathematical source, fixture, test, protocol and receipt files are copied from the HG-03 EvalMath branch, retaining their contents and relative paths. Future divergence must be documented.
+All 23 original mathematical source, fixture, test, protocol and receipt files retain their HG-03 EvalMath contents and relative paths. Local recording, replay analysis, and their tests are separate additive files.
 
 ## Offline preflight
 
@@ -22,6 +24,17 @@ $env:PYTHONPATH='src'
 ```
 
 Local reproduction: 77 unit tests; HG-01 14 checks, HG-02 26 checks, HG-03 27 checks, each source-hashed receipt matching after normalizing Python tuples to JSON lists and ignoring generated timestamps.
+
+The expanded offline suite has 84 unit tests. Replay measured trajectories with:
+
+```powershell
+$env:PYTHONPATH='src'
+python -m unittest discover -s tests -p 'test_*.py' -q
+python scripts/check_local_receipts.py
+python scripts/verify_hg03_local_replay.py --check
+```
+
+The last command requires the local detailed-evidence bundle, whose publication is pending explicit approval. With that bundle it replays 96 neural episodes and 192 controller episodes without weights, a server, network access, or private seeds. It also exhausts 4,064 bounded reachable states and 5,952 legal edges in the core/padded comparison. Original receipts are unchanged. A public checkout runs 81 tests and skips the three tests requiring detailed neural replay data; CI separately checks all four padding closures. Aggregate measured results are in `output/evaluation_hypergames/hg03_public_summary_v1.json`.
 
 ## Frozen local Qwen
 

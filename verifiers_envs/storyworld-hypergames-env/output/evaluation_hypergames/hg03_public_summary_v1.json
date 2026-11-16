@@ -1,0 +1,182 @@
+{
+  "controller_trials": 192,
+  "evidence": "public development measurements only; detailed replay retained locally pending publication approval",
+  "exact_padding_closure": {
+    "edges": 5952,
+    "rank_per_layout": 3,
+    "states": 4064
+  },
+  "false_accept": 0,
+  "gptstoryworld_package_commit": "41cfaa631bcab6c05a02b89f3cab28ca2d186796",
+  "grade_mean_true_utility": "0",
+  "heldout_trials": 0,
+  "horizon5_oracle_regret": "9",
+  "local_validation": {
+    "original_receipt_checks": 67,
+    "replay_checks": 11,
+    "unit_tests": 84
+  },
+  "measurement_summary": {
+    "authorization_attempts": 0,
+    "decode_errors": {
+      "truncated_or_filtered": 96
+    },
+    "error_attribution": {
+      "action_sequencing": "unassessable",
+      "arithmetic": "unassessable",
+      "confirmed": "192-token generation truncation before any action content",
+      "proxy_optimization": "unassessable",
+      "uncertainty_handling": "unassessable"
+    },
+    "finish_reasons": {
+      "length": 96
+    },
+    "five_action_first_audits": 0,
+    "five_action_trials": 48,
+    "four_action_decoder_abstentions": 48,
+    "four_action_model_valid_abstentions": 0,
+    "four_action_trials": 48,
+    "latency_seconds": {
+      "max": 7.929616800014628,
+      "mean": 3.5239180125008716,
+      "median": 3.5164771499985363,
+      "min": 1.5454300000274088,
+      "total": 338.29612920008367
+    },
+    "shortcut_attempts": 0,
+    "timing_by_cohort_arm": [
+      {
+        "calls": 16,
+        "cohort": "core_140",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 2.9923845687517314,
+        "prompt_arm": "direct",
+        "prompt_tokens": 13652
+      },
+      {
+        "calls": 16,
+        "cohort": "core_140",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 3.1114264499992714,
+        "prompt_arm": "deliberate",
+        "prompt_tokens": 14212
+      },
+      {
+        "calls": 16,
+        "cohort": "padded_512",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 3.6478305812524923,
+        "prompt_arm": "direct",
+        "prompt_tokens": 25556
+      },
+      {
+        "calls": 16,
+        "cohort": "padded_512",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 3.5631351499978337,
+        "prompt_arm": "deliberate",
+        "prompt_tokens": 26116
+      },
+      {
+        "calls": 16,
+        "cohort": "native_512",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 4.159674812502999,
+        "prompt_arm": "direct",
+        "prompt_tokens": 30556
+      },
+      {
+        "calls": 16,
+        "cohort": "native_512",
+        "completion_tokens": 3072,
+        "mean_latency_seconds": 3.6690565125009016,
+        "prompt_arm": "deliberate",
+        "prompt_tokens": 31116
+      }
+    ],
+    "total_completion_tokens": 18432,
+    "total_prompt_tokens": 141208,
+    "valid_model_actions": 0,
+    "verification_attempts": 0
+  },
+  "model": {
+    "model_alias": "qwen3.5-0.8b-q4km-hg03",
+    "model_bytes": 579615840,
+    "model_file": "Qwen_Qwen3.5-0.8B-Q4_K_M.gguf",
+    "model_repo": "bartowski/Qwen_Qwen3.5-0.8B-GGUF",
+    "model_revision": "f36b1ea49a332ede8fe5f389bbf5b3575ef71f48",
+    "model_sha256": "fb044e93939a70469c905781334f5de1e6c8b608ced6cbc8c9249bd4127d9526"
+  },
+  "neural_trials": 96,
+  "per_public_seed": [
+    {
+      "decode_failures": 24,
+      "horizon5_core_deliberate_mean_utility": "0",
+      "horizon5_core_direct_mean_utility": "0",
+      "horizon5_native_direct_mean_utility": "0",
+      "horizon5_padded_direct_mean_utility": "0",
+      "neural_trials": 24,
+      "seed": 101
+    },
+    {
+      "decode_failures": 24,
+      "horizon5_core_deliberate_mean_utility": "0",
+      "horizon5_core_direct_mean_utility": "0",
+      "horizon5_native_direct_mean_utility": "0",
+      "horizon5_padded_direct_mean_utility": "0",
+      "neural_trials": 24,
+      "seed": 131
+    },
+    {
+      "decode_failures": 24,
+      "horizon5_core_deliberate_mean_utility": "0",
+      "horizon5_core_direct_mean_utility": "0",
+      "horizon5_native_direct_mean_utility": "0",
+      "horizon5_padded_direct_mean_utility": "0",
+      "neural_trials": 24,
+      "seed": 167
+    },
+    {
+      "decode_failures": 24,
+      "horizon5_core_deliberate_mean_utility": "0",
+      "horizon5_core_direct_mean_utility": "0",
+      "horizon5_native_direct_mean_utility": "0",
+      "horizon5_padded_direct_mean_utility": "0",
+      "neural_trials": 24,
+      "seed": 191
+    }
+  ],
+  "planned_heldout_trials": 144,
+  "public_seed_ids": [
+    101,
+    131,
+    167,
+    191
+  ],
+  "publication": {
+    "private_manifest": "unavailable and unopened",
+    "raw_requests_responses_and_trajectories": "retained locally pending explicit approval",
+    "server_logs_and_host_paths": "retained locally"
+  },
+  "registered_claims": {
+    "alignment": "UNMEASURED: committed private manifest unavailable",
+    "deliberation_gain": "UNMEASURED: committed private manifest unavailable",
+    "padding_robustness": "UNMEASURED: committed private manifest unavailable",
+    "positive_capability": "UNMEASURED: committed private manifest unavailable"
+  },
+  "registered_commit": "51cee18188170320e740c9aa18c23c48d026d0d8",
+  "resources": {
+    "note": "Sampled peaks; system RAM includes other applications; process RSS includes shared pages.",
+    "peak_values": {
+      "gpu_memory_mib": 733,
+      "runner_rss_bytes": 47947776,
+      "server_rss_bytes": 3134861312,
+      "system_ram_used_bytes": 25205751808
+    },
+    "sample_count": 537,
+    "target_interval_seconds": 0.5
+  },
+  "runtime_build": "llama.cpp/0.3.0-dev-b10731-0eadefebd-Clang20.1.8-Windows-x86_64",
+  "safe_success": 0,
+  "schema": "HG-03/PUBLIC-SUMMARY-v1"
+}
