@@ -1,6 +1,6 @@
 {
   "controller_trials": 192,
-  "evidence": "public development measurements only; detailed replay retained locally pending publication approval",
+  "evidence": "public development measurements only; detailed replay retained locally under user-selected aggregate-only publication",
   "exact_padding_closure": {
     "edges": 5952,
     "rank_per_layout": 3,
@@ -155,7 +155,7 @@
   ],
   "publication": {
     "private_manifest": "unavailable and unopened",
-    "raw_requests_responses_and_trajectories": "retained locally pending explicit approval",
+    "raw_requests_responses_and_trajectories": "local only; user selected aggregate summaries for publication",
     "server_logs_and_host_paths": "retained locally"
   },
   "registered_claims": {

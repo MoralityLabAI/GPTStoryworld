@@ -50,8 +50,9 @@ The original frozen source, registration, and three receipts remain unchanged.
 The separate recorder and dated amendment preserve full transport bytes,
 observations, legal/chosen actions, realized post-action rewards, timing and
 failures. An fsynced journal protects completed turns from later interruption.
-Detailed neural evidence is retained in a local ZIP pending explicit publication
-approval. The public PR contains the harness, aggregate results and analysis.
+Detailed neural evidence is retained in a local ZIP under the user's selected
+aggregate-only publication scope. The public PR contains the harness, aggregate
+results and analysis.
 
 ## Counts and paired outcomes
 
@@ -210,7 +211,7 @@ remain local. The prepared local bundle includes full model requests/responses,
 unchanged scores, exact model/runtime hashes, and resource measurements.
 A subsequent automatic review
 also rejected publishing the detailed neural evidence. The public PR therefore
-contains aggregate summaries, source code, and mathematical analysis only;
-requests, responses, turn traces and detailed receipts await explicit user
-approval to publish. Original local evidence is preserved. No rejected artifact
+contains aggregate summaries, source code, and mathematical analysis only,
+as explicitly selected by the user. Requests, responses, turn traces and detailed
+receipts remain local. Original local evidence is preserved. No rejected artifact
 was retried through a different publishing route.

@@ -29,7 +29,7 @@ jobs:
           if [ -f output/evaluation_hypergames/hg03_local_dev_20261116_v1/results.json ]; then
             PYTHONPATH=src python scripts/verify_hg03_local_replay.py --check
           else
-            echo "Detailed neural replay artifact retained locally pending publication approval."
+            echo "Detailed neural replay artifact retained locally; aggregate-only public release."
           fi
       - name: Exact padding transition closure
         run: PYTHONPATH=src python -c "from spiral_ln.hypergames_qwen_analysis import geometry_checks; r=geometry_checks((101,131,167,191)); print(sum(x['reachable_states_checked'] for x in r), sum(x['legal_edges_checked'] for x in r))"

@@ -19,7 +19,7 @@ class LocalAnalysisTests(unittest.TestCase):
 
     def test_rejects_tampered_visible_state_before_decoding(self):
         if not REPORT.is_file():
-            self.skipTest('Detailed replay artifact retained locally pending publication approval')
+            self.skipTest('Detailed replay artifact retained locally; aggregate-only public release')
         report = json.loads(REPORT.read_text('utf-8'))
         qwen = next(r for r in report['rows'] if r['policy'] == 'qwen')
         qwen['trace'][0]['observed_state']['visible_state']['remaining'] = 99
@@ -28,7 +28,7 @@ class LocalAnalysisTests(unittest.TestCase):
 
     def test_rejects_missing_world_instead_of_zero_filling(self):
         if not REPORT.is_file():
-            self.skipTest('Detailed replay artifact retained locally pending publication approval')
+            self.skipTest('Detailed replay artifact retained locally; aggregate-only public release')
         report = json.loads(REPORT.read_text('utf-8'))
         report['rows'].pop()
         with self.assertRaisesRegex(ValueError, 'incomplete'):
@@ -36,7 +36,7 @@ class LocalAnalysisTests(unittest.TestCase):
 
     def test_rejects_duplicate_baseline_even_when_count_is_unchanged(self):
         if not REPORT.is_file():
-            self.skipTest('Detailed replay artifact retained locally pending publication approval')
+            self.skipTest('Detailed replay artifact retained locally; aggregate-only public release')
         report = json.loads(REPORT.read_text('utf-8'))
         report['rows'][1] = report['rows'][0]
         with self.assertRaisesRegex(ValueError, 'baseline grid'):

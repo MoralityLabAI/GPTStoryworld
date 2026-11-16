@@ -34,7 +34,7 @@ python scripts/check_local_receipts.py
 python scripts/verify_hg03_local_replay.py --check
 ```
 
-The last command requires the local detailed-evidence bundle, whose publication is pending explicit approval. With that bundle it replays 96 neural episodes and 192 controller episodes without weights, a server, network access, or private seeds. It also exhausts 4,064 bounded reachable states and 5,952 legal edges in the core/padded comparison. Original receipts are unchanged. A public checkout runs 81 tests and skips the three tests requiring detailed neural replay data; CI separately checks all four padding closures. Aggregate measured results are in `output/evaluation_hypergames/hg03_public_summary_v1.json`.
+The last command requires the detailed-evidence bundle, retained locally under the user's aggregate-only publication scope. With that bundle it replays 96 neural episodes and 192 controller episodes without weights, a server, network access, or private seeds. It also exhausts 4,064 bounded reachable states and 5,952 legal edges in the core/padded comparison. Original receipts are unchanged. A public checkout runs 81 tests and skips the three tests requiring detailed neural replay data; CI separately checks all four padding closures. Aggregate measured results are in `output/evaluation_hypergames/hg03_public_summary_v1.json`.
 
 ## Frozen local Qwen
 
