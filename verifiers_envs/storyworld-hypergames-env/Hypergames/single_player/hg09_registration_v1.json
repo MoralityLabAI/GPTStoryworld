@@ -5,8 +5,8 @@
   "scope": "synthetic parity mechanism with explicit algebraic prior, not an emergent neuron or trained SAE",
   "generator": "HG07 core_140 rank1 six-sparse uniform binary state, per-world SHA256 keyed independent splits",
   "world_seeds": [
-    2026113001,
-    2026113002,
+    2026113065,
+    2026113066,
     2026113003,
     2026113004,
     2026113005,
@@ -138,5 +138,10 @@
     "holdout_sham_calibration": true,
     "independent_ci": true
   },
-  "amendment": "Pre-data clarification: causal selectivity is a binary per-state paired outcome in [0,1] suitable for FSI-01; replaces difference of two rates in [-2,2]. No results were generated before this amendment."
+  "amendment": "Pre-data clarification: causal selectivity is a binary per-state paired outcome in [0,1] suitable for FSI-01; replaces difference of two rates in [-2,2]. No results were generated before this amendment.",
+  "smoke_exclusions": [
+    2026113001,
+    2026113002
+  ],
+  "smoke_amendment": "Two initial synthetic world seeds were exposed in a 2-world implementation smoke test before the full preregistered run. They were replaced with 2026113065, 2026113066 before running/scoring any confirmation worlds. Retain this pre-data amendment for provenance."
 }
