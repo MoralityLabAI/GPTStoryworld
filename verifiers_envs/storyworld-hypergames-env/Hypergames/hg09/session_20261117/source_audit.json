@@ -356,9 +356,11 @@
     }
   },
   "supplementary_analysis_source_sha256": {
-    "src/spiral_ln/hg09_replay.py": "f9bc959083377868ca4e15a2c7d17975632a290298211082027bcb4643ab1d45",
+    "src/spiral_ln/hg09_replay.py": "5b06a8d273a92495cbceeb2e232624039fd2456376f083e25f7d8aaddda4c74f",
     "src/spiral_ln/hypergames_observation_certificate.py": "26ebe9b927944f5266214faed6fe8cee1beb248e78803015089f1de6429cdf63",
+    "src/spiral_ln/hypergames_sparse_certificate.py": "3826f6136d048b1e471f3b7cd477e4590c3508fc0ff00ffa5180f31e2e36676a",
     "tests/test_hg09_replay.py": "d45cd7cbbbf418b00189b94017b340d91b14dbd57aa3c1f2ef262ca89171be92",
-    "tests/test_hypergames_observation_certificate.py": "543cd67340fb148531f71bdb7691abecc9b128064b9a32324335a796fc70bf09"
+    "tests/test_hypergames_observation_certificate.py": "543cd67340fb148531f71bdb7691abecc9b128064b9a32324335a796fc70bf09",
+    "tests/test_hypergames_sparse_certificate.py": "35ab8b01d7a022064a9c96a2130b72ff4e096aca1a920d04dca92bd19bbac5dc"
   }
 }
