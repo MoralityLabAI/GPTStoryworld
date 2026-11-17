@@ -1,0 +1,34 @@
+{
+  "all_passed": true,
+  "checks": {
+    "300_multioutput_highdim_derivatives": true,
+    "4680_independent_finite_derivatives": true,
+    "active_support_exact_at_smoke_1024": true,
+    "causal_peeling_involution": true,
+    "complete_support_best_release": true,
+    "core_padded_same_goal": true,
+    "entropy_power_of_two_boundary": true,
+    "one_missing_bit_forced_release_negative": true,
+    "oracle_budget_cap": true,
+    "simulator_test_grade_no_false_release": true,
+    "singleton_certificate_incomplete": true,
+    "singleton_certificate_positive": true,
+    "strict_64_budget": true,
+    "three_exact_information_lower_bounds": true,
+    "two_missing_bits_joint_ceiling": true
+  },
+  "counts": {
+    "finite_derivative_cases": 4680,
+    "high_dimension_derivative_cases": 300
+  },
+  "evidence": "exact finite-field causal mechanics and independent enumerative checks; public synthetic only",
+  "schema": "HG-08/causal-exact-math-v1",
+  "source_sha256": {
+    "scripts/verify_hg08_causal.py": "342c63bdb7683a9c684c199ebb2eeb09cd996d4277bc87e8cde8d175b4c02430",
+    "src/spiral_ln/evaluation_hypergames_causal.py": "aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6",
+    "src/spiral_ln/hypergames_active_causal.py": "bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b",
+    "src/spiral_ln/hypergames_active_neural.py": "fd41809ff4b0def780336223576dab9aaf0f7fbb97493eee15913c9c66511c50",
+    "tests/test_evaluation_hypergames_causal.py": "41cb0b89dcf054c786a96ed02d0bc7f8c649cda91e54420ed571a34d39b78dc4",
+    "tests/test_hypergames_active_causal.py": "6f0eca18cd031cfdcd100997f2308dc13e0e73f12af66f7e5884d425a3391ba7"
+  }
+}

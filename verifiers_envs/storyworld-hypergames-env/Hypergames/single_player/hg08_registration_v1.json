@@ -1,0 +1,85 @@
+{
+  "schema": "HG-08/active-causal-v1",
+  "frozen_date": "2026-11-17",
+  "status": "frozen before data",
+  "parent_gpt_commit": "c3aa0ded33027dc09948f1b146eab93c42bd6cd0",
+  "parent_evalmath_commit": "f944831e1a4776ddaab778cbdafdbcde8175d6ec",
+  "scope": "public synthetic CPU causal intervention of six-sparse parity functions; no Qwen/private HG-03 seeds",
+  "seeds": {
+    "start": 202611170801,
+    "count": 24,
+    "neural_first": 6,
+    "development": [
+      202611170001,
+      202611170002
+    ]
+  },
+  "cohorts": [
+    "core_140",
+    "padded_512",
+    "native_512",
+    "padded_1024",
+    "native_1024"
+  ],
+  "goal_ranks": [
+    1,
+    2
+  ],
+  "support_width": 6,
+  "query_contract": "one unit-cost causal query flips any selected subset S of a baseline public binary x and reveals the full k-bit XOR output delta; arbitrary group interventions are allowed by this synthetic oracle",
+  "budgets": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "random_bucket_count": 16,
+  "max_hash_rounds": 32,
+  "policies": [
+    "adaptive_odd_bucket_binary_splitting_with_known_support_peeling",
+    "uniform_random_singletons_without_replacement",
+    "fixed_partition_odd_bucket_binary_splitting",
+    "random_dense_parity_queries_with_exact_rowspace_certificate"
+  ],
+  "query_cost": "one oracle call per selected subset, no oracle reads of target mask outside grader; same k-output vector per query",
+  "certificate": "only singleton-verified positive indices may be added; if exactly six distinct positives for each output, support is fully identified under the registered sparsity-six assumption",
+  "grading": "at each budget, if all six supports per output certified then output XOR of recovered coordinates for 256 fresh test examples, else abstain; success +10, unsafe -15, abstain 0",
+  "neural": {
+    "seeds": 6,
+    "cohorts": [
+      "core_140",
+      "native_512"
+    ],
+    "goal_rank": 1,
+    "train_n": 512,
+    "cal_n": 256,
+    "test_n": 256,
+    "model": "HG-07 tied recurrent width64, loop3, raw binary x input, AdamW lr0.003 wd0.001, 350 updates, batch128; same architecture/parameter count across four arms within cohort",
+    "arms": [
+      "raw_loop",
+      "causal_masked_loop",
+      "privileged_true_support_masked_loop",
+      "random_six_masked_loop"
+    ],
+    "mask_budget": 512,
+    "training_seed": "sha256 deterministic per condition and arm-independent initialization and batch draws; no test/cal data during fitting",
+    "neural_release": "Laplace-calibrated (cal_correct+1)/258 >3/5, payoffs 10 / -15 / 0"
+  },
+  "registration_hypotheses": {
+    "H1": "At budget 128, adaptive support-certified completion strictly exceeds random-singleton completion for >=16/24 paired seeds in native_1024, k=1",
+    "H2": "At budget 256, adaptive certifies complete support in >=20/24 seeds in native_1024 for k=1",
+    "H3": "At budget 512, adaptive certifies complete support in >=20/24 seeds for every cohort and k in {1,2}",
+    "H4": "Whenever support is fully certified, compositional parity readout scores all 256 independent test examples correctly (no false release)",
+    "H5": "Across six paired core140 rank-one neural seeds, causal-masked recurrent test accuracy beats raw-loop on >=4/6 seeds"
+  },
+  "evidence_rules": [
+    "report all predeclared hypotheses including failures",
+    "compare achieved query counts against information bound ceil(log2 binom(d,6)) for k=1",
+    "paired public seed-level rows with per-budget support counts",
+    "random-singleton and fixed-hash controls separate query capabilities",
+    "all neural arms equal update budget, parameter count and train examples",
+    "register any amendment before full public sweep",
+    "do not treat oracle support masks or synthetic XOR decomposition as learned neural reasoning",
+    "do not use held-out HG-03 private seeds"
+  ]
+}
