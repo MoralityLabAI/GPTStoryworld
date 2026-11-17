@@ -1,0 +1,34 @@
+name: Hypergames HG-05 exact CPU replay
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg05.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg05.yml'
+jobs:
+  exact-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact CPU tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -q
+      - name: Generate public HG-05 census
+        run: PYTHONPATH=src python scripts/run_hg05_cpu.py --out output/evaluation_hypergames/hg05
+      - name: Check source hashes, full replay files and registered gates
+        run: python scripts/check_hg05_receipts.py
+      - name: Publish complete public seed replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: hg05-full-public-seed-replay
+          path: verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg05/
+          if-no-files-found: error
