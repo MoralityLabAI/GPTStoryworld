@@ -1,0 +1,378 @@
+{
+  "all_original_source_and_registration_bytes_preserved": true,
+  "cli_authentication_check": {
+    "auth_mode": "chatgpt",
+    "checked_utc": "2026-11-17T15:07:40.087087+00:00",
+    "command": [
+      "codex",
+      "login",
+      "status"
+    ],
+    "credential_values_recorded": false,
+    "exit_code": 0,
+    "status_output_sha256": "16118df3eb3595e44a4721878cef0f79910e6564e10ff0e78e451e7c4e478947"
+  },
+  "cli_executable_sha256": "4b3286e35d7fe866c6b0eb3f07d7a4cdb5e96489576170dfd6b3a15aa1c67382",
+  "dependency_refs": {
+    "origin/research/hypergames-hg01-2026-11-16": "origin/research/hypergames-hg01-2026-11-16",
+    "origin/research/hypergames-hg02-singleplayer-2026-11-16": "origin/research/hypergames-hg02-singleplayer-2026-11-16",
+    "origin/research/hypergames-hg08-active-causal-20261117": "855f2f3d5fc4e26518112925de4a53e6dc9bc42e"
+  },
+  "hg08_base": "855f2f3d5fc4e26518112925de4a53e6dc9bc42e",
+  "hg09_pr_head": "522de307fb60043d71c9a90fd0e802227e855dae",
+  "instrument_findings": [
+    "HG02 public_spec lists rewards, checksum formulas, gates and legal actions, but does not explicitly describe the one-action transition cost or audit revelation semantics. Oracle regret compares with the exact simulator-informed Bellman policy; horizon mistakes are conditional on this interface.",
+    "HG02 512 dimensions uses 64/48/32 parity/verification/authorization inputs versus 32/24/16 at 140. The dimension contrast also changes computational workload; it is not a pure nuisance-padding contrast.",
+    "Direct and deliberative are instruction-wording conditions at the same requested low effort; direct is not a no-reasoning control.",
+    "The provider does not expose an immutable backend snapshot, output-token cap, or complete built-in CLI scaffolding. These remain explicit provenance limits.",
+    "HG08 explicit positive singleton certificates are sufficient but not necessary. Supplementary public GF2 rowspace checks can certify inferred positive singletons and are labelled post hoc transcript analysis.",
+    "HG08 exposes dimension, coordinate-query subsets and causal deltas; baseline XOR differencing cancels the raw state. Sparse-system identification success is not direct 1024-bit vector-reading accuracy.",
+    "HG02 public_spec omits prospective action-specific proxy payoffs. Zero proxy actions does not establish resistance to an explicitly offered proxy reward."
+  ],
+  "original_hg09_pilot_public_seeds": [
+    202611170801,
+    202611170802
+  ],
+  "private_hg03_manifest_opened": false,
+  "private_seed_numeric_disjointness": "unverified: private manifest intentionally unavailable and unopened",
+  "public_hg08_seeds": {
+    "start": 202611170801,
+    "stop_exclusive": 202611170825
+  },
+  "schema": "HG09/source-audit-v1",
+  "source_files": {
+    "Hypergames/HG06_COMPOSITION_THEOREMS.md": {
+      "git_blob_sha256": "e9f510d4722e2d6d92287ef1f9408dd5a104275a80e351d4a2160db5f9fb630b",
+      "matches": true,
+      "working_sha256": "e9f510d4722e2d6d92287ef1f9408dd5a104275a80e351d4a2160db5f9fb630b"
+    },
+    "Hypergames/HG07_RAW_OBSERVABILITY_THEOREMS.md": {
+      "git_blob_sha256": "8f87123edeb4304679c71edc2b92731fffad9760020334a0b83fce746edc6b54",
+      "matches": true,
+      "working_sha256": "8f87123edeb4304679c71edc2b92731fffad9760020334a0b83fce746edc6b54"
+    },
+    "Hypergames/PROTOCOL.md": {
+      "git_blob_sha256": "850a95edebfcd38d69bcc0dde0ef9b88f0a020bfeff0e2913681ea3d3d809586",
+      "matches": true,
+      "working_sha256": "850a95edebfcd38d69bcc0dde0ef9b88f0a020bfeff0e2913681ea3d3d809586"
+    },
+    "Hypergames/README.md": {
+      "git_blob_sha256": "442b44bfceaf9eda85aee5e65f59c9c55b4496dc6b75cb6ff83d96bbbf14b308",
+      "matches": true,
+      "working_sha256": "442b44bfceaf9eda85aee5e65f59c9c55b4496dc6b75cb6ff83d96bbbf14b308"
+    },
+    "Hypergames/fixtures/diplomacy_min_visible.json": {
+      "git_blob_sha256": "ee6704b9237c6d8dc655b4e1cac6aaccbaee4a2c2efbcba1b4f2764b4f916736",
+      "matches": true,
+      "working_sha256": "ee6704b9237c6d8dc655b4e1cac6aaccbaee4a2c2efbcba1b4f2764b4f916736"
+    },
+    "Hypergames/fixtures/hg01_registered.json": {
+      "git_blob_sha256": "23702751d52afdb42458e2d7a105fc5d461e82341d33e1754fba84c6ab1ef0d6",
+      "matches": true,
+      "working_sha256": "23702751d52afdb42458e2d7a105fc5d461e82341d33e1754fba84c6ab1ef0d6"
+    },
+    "Hypergames/single_player/HG05_AMENDMENT_20261117.md": {
+      "git_blob_sha256": "480b2cc43aa13c8ebd7394cf3959419343937ba92f8d350db4ba378f1c4d8da3",
+      "matches": true,
+      "working_sha256": "480b2cc43aa13c8ebd7394cf3959419343937ba92f8d350db4ba378f1c4d8da3"
+    },
+    "Hypergames/single_player/HG05_PROTOCOL.md": {
+      "git_blob_sha256": "3cb4eacb5442dce75114ab9c491d351159af069ac6f347cf804c58f15868c950",
+      "matches": true,
+      "working_sha256": "3cb4eacb5442dce75114ab9c491d351159af069ac6f347cf804c58f15868c950"
+    },
+    "Hypergames/single_player/HG06_PROTOCOL.md": {
+      "git_blob_sha256": "0819ddb29c2dda06ff3ead80b73b0161420af8852384844abb4e5df9624c09c5",
+      "matches": true,
+      "working_sha256": "0819ddb29c2dda06ff3ead80b73b0161420af8852384844abb4e5df9624c09c5"
+    },
+    "Hypergames/single_player/HG07_PROTOCOL.md": {
+      "git_blob_sha256": "cdeb1d9ee84acbd3dcfcf9ecac2badbc2e19619f92b904a75dd4ffed514d7550",
+      "matches": true,
+      "working_sha256": "cdeb1d9ee84acbd3dcfcf9ecac2badbc2e19619f92b904a75dd4ffed514d7550"
+    },
+    "Hypergames/single_player/HG07_RUN.md": {
+      "git_blob_sha256": "9211e44bf419826f9098d326ee134b577aae5593441864d9ae1cd7c86d32e9c9",
+      "matches": true,
+      "working_sha256": "9211e44bf419826f9098d326ee134b577aae5593441864d9ae1cd7c86d32e9c9"
+    },
+    "Hypergames/single_player/HG08_PROTOCOL.md": {
+      "git_blob_sha256": "d3d950016436502db9960ae859c4c26175a49eb751cde2d5c7f1b8d89c2b89bc",
+      "matches": true,
+      "working_sha256": "d3d950016436502db9960ae859c4c26175a49eb751cde2d5c7f1b8d89c2b89bc"
+    },
+    "Hypergames/single_player/HG08_RESULTS.md": {
+      "git_blob_sha256": "5e30322564bf4455f1cf1e0dc96548dc61ca03bb065ba62b03d5159416290ee4",
+      "matches": true,
+      "working_sha256": "5e30322564bf4455f1cf1e0dc96548dc61ca03bb065ba62b03d5159416290ee4"
+    },
+    "Hypergames/single_player/HG09_PROTOCOL.md": {
+      "git_blob_sha256": "8f6369b1ce7b78cf3a63d28b3204e8ed59e2025fdc6597c1fd93bafe586f262e",
+      "matches": true,
+      "working_sha256": "8f6369b1ce7b78cf3a63d28b3204e8ed59e2025fdc6597c1fd93bafe586f262e"
+    },
+    "Hypergames/single_player/QWEN_PROTOCOL.md": {
+      "git_blob_sha256": "d6141cbf3fa2d3e1b36667cb1c34e0687e991e5c1ca31376423226786b446b67",
+      "matches": true,
+      "working_sha256": "d6141cbf3fa2d3e1b36667cb1c34e0687e991e5c1ca31376423226786b446b67"
+    },
+    "Hypergames/single_player/README.md": {
+      "git_blob_sha256": "22a032014ca157c72e702510ad32906474086cb98057d2152a1dbb7e9279684e",
+      "matches": true,
+      "working_sha256": "22a032014ca157c72e702510ad32906474086cb98057d2152a1dbb7e9279684e"
+    },
+    "Hypergames/single_player/config_v1.json": {
+      "git_blob_sha256": "d4d668a8767073e726a8e4cb1d6fa4737e3def53b8749189ab597b5d5f6e61ac",
+      "matches": true,
+      "working_sha256": "d4d668a8767073e726a8e4cb1d6fa4737e3def53b8749189ab597b5d5f6e61ac"
+    },
+    "Hypergames/single_player/hg04_registration_v1.json": {
+      "git_blob_sha256": "7470eb9101ea052b9aa14445dceafd697a095988297ab4581a0a43b585c9d3d5",
+      "matches": true,
+      "working_sha256": "7470eb9101ea052b9aa14445dceafd697a095988297ab4581a0a43b585c9d3d5"
+    },
+    "Hypergames/single_player/hg05_registration_v1.json": {
+      "git_blob_sha256": "951e65f09d1e05536dd017a2da5f8046be893f47a9421da8d324f78593984949",
+      "matches": true,
+      "working_sha256": "951e65f09d1e05536dd017a2da5f8046be893f47a9421da8d324f78593984949"
+    },
+    "Hypergames/single_player/hg06_registration_v1.json": {
+      "git_blob_sha256": "9590592736ac9f728b420edec4b17e178450e5dd75762d3f74d801c21afbedc7",
+      "matches": true,
+      "working_sha256": "9590592736ac9f728b420edec4b17e178450e5dd75762d3f74d801c21afbedc7"
+    },
+    "Hypergames/single_player/hg07_registration_v1.json": {
+      "git_blob_sha256": "fed4c77346fd57263de8ba55e0f286afab6b8193d787a1ddb58952c2b2c05dee",
+      "matches": true,
+      "working_sha256": "fed4c77346fd57263de8ba55e0f286afab6b8193d787a1ddb58952c2b2c05dee"
+    },
+    "Hypergames/single_player/hg08_registration_v1.json": {
+      "git_blob_sha256": "97b3ed1690a547bae89aa83ce9e4d8bc2c8614fe84889730b60270ab8d6038f0",
+      "matches": true,
+      "working_sha256": "97b3ed1690a547bae89aa83ce9e4d8bc2c8614fe84889730b60270ab8d6038f0"
+    },
+    "Hypergames/single_player/models_hg09.json": {
+      "git_blob_sha256": "983de257d0273ee8c55acd700445a1787429e1581ede786614b525f6d1e432a3",
+      "matches": true,
+      "working_sha256": "983de257d0273ee8c55acd700445a1787429e1581ede786614b525f6d1e432a3"
+    },
+    "Hypergames/single_player/qwen_registration_v1.json": {
+      "git_blob_sha256": "7339e29ddff37c14b170795af727a18cf0ca57ade51acc1f7b590c40477f1606",
+      "matches": true,
+      "working_sha256": "7339e29ddff37c14b170795af727a18cf0ca57ade51acc1f7b590c40477f1606"
+    },
+    "scripts/check_hg05_receipts.py": {
+      "git_blob_sha256": "efa0a24d17fbc7bdbec567bb7af8770da9759c4d206317d7e4e31ab5d051bf5d",
+      "matches": true,
+      "working_sha256": "efa0a24d17fbc7bdbec567bb7af8770da9759c4d206317d7e4e31ab5d051bf5d"
+    },
+    "scripts/check_hg06_manifest.py": {
+      "git_blob_sha256": "91d5a46c2deb0799167b4c5255340f7ede29d9322a89beef3d1e4f101655d84b",
+      "matches": true,
+      "working_sha256": "91d5a46c2deb0799167b4c5255340f7ede29d9322a89beef3d1e4f101655d84b"
+    },
+    "scripts/check_local_receipts.py": {
+      "git_blob_sha256": "3f9e146bec901686c51c2653a7670d215f2e951a0ebdf3bbf97a9c729b0b9e05",
+      "matches": true,
+      "working_sha256": "3f9e146bec901686c51c2653a7670d215f2e951a0ebdf3bbf97a9c729b0b9e05"
+    },
+    "scripts/run_hg05_cpu.py": {
+      "git_blob_sha256": "3d74395967d34c7397ac6987c67f2e3a569ca4afc0bf8bdaba4a14f4cc6bf050",
+      "matches": true,
+      "working_sha256": "3d74395967d34c7397ac6987c67f2e3a569ca4afc0bf8bdaba4a14f4cc6bf050"
+    },
+    "scripts/run_hg06_cpu.py": {
+      "git_blob_sha256": "33e9f3a4df0cf2db823ece48fdfff285461c9c8029f5b820269fd1e388c2f29b",
+      "matches": true,
+      "working_sha256": "33e9f3a4df0cf2db823ece48fdfff285461c9c8029f5b820269fd1e388c2f29b"
+    },
+    "scripts/run_hg08_cpu.py": {
+      "git_blob_sha256": "675b2820e24ee01c6c13b08d67f2acaf8be898466cbf8a08bdf0af05dbb0a536",
+      "matches": true,
+      "working_sha256": "675b2820e24ee01c6c13b08d67f2acaf8be898466cbf8a08bdf0af05dbb0a536"
+    },
+    "scripts/verify_evaluation_hypergames.py": {
+      "git_blob_sha256": "6a5ca8dd9bed30f4adde1c4ff73f46c45f1ea32712086ff1c9469fac646e62a9",
+      "matches": true,
+      "working_sha256": "6a5ca8dd9bed30f4adde1c4ff73f46c45f1ea32712086ff1c9469fac646e62a9"
+    },
+    "scripts/verify_evaluation_hypergames_composition.py": {
+      "git_blob_sha256": "888421a1a24855a879d4b4a2ad7ee342d82902c8fa5cabd8c53547ffc136479c",
+      "matches": true,
+      "working_sha256": "888421a1a24855a879d4b4a2ad7ee342d82902c8fa5cabd8c53547ffc136479c"
+    },
+    "scripts/verify_evaluation_hypergames_raw.py": {
+      "git_blob_sha256": "3a4fb7b90a089b3d97f0f404a072dccfbbe48847a9becccda72ed9b34d9b26d3",
+      "matches": true,
+      "working_sha256": "3a4fb7b90a089b3d97f0f404a072dccfbbe48847a9becccda72ed9b34d9b26d3"
+    },
+    "scripts/verify_hg07_cpu_replay.py": {
+      "git_blob_sha256": "72608322ae48536bb4022f5e7f286815ee5e5d283a2047e84dd8bbc43971036f",
+      "matches": true,
+      "working_sha256": "72608322ae48536bb4022f5e7f286815ee5e5d283a2047e84dd8bbc43971036f"
+    },
+    "scripts/verify_hg08_causal.py": {
+      "git_blob_sha256": "342c63bdb7683a9c684c199ebb2eeb09cd996d4277bc87e8cde8d175b4c02430",
+      "matches": true,
+      "working_sha256": "342c63bdb7683a9c684c199ebb2eeb09cd996d4277bc87e8cde8d175b4c02430"
+    },
+    "scripts/verify_hg08_neural_receipt.py": {
+      "git_blob_sha256": "c25687d10fc934fd26445964bcc703b1f1cfe0ba48bdface635087ec1d639b3e",
+      "matches": true,
+      "working_sha256": "c25687d10fc934fd26445964bcc703b1f1cfe0ba48bdface635087ec1d639b3e"
+    },
+    "scripts/verify_hypergames_qwen_eval.py": {
+      "git_blob_sha256": "a67d2ea8e6ba1aba451ac2cd2d5f9b25e3f57e000260c606a4b5be47ab5c9101",
+      "matches": true,
+      "working_sha256": "a67d2ea8e6ba1aba451ac2cd2d5f9b25e3f57e000260c606a4b5be47ab5c9101"
+    },
+    "scripts/verify_hypergames_single_player.py": {
+      "git_blob_sha256": "2a5a1a30e5c87ce873175fe9993687119575597d55305f5ac40dee47ec7bd40a",
+      "matches": true,
+      "working_sha256": "2a5a1a30e5c87ce873175fe9993687119575597d55305f5ac40dee47ec7bd40a"
+    },
+    "src/spiral_ln/evaluation_hypergames.py": {
+      "git_blob_sha256": "4e35eb54afe71c74fea267e7ae185322db442a1e6d921fe50bf20ece5cf82a32",
+      "matches": true,
+      "working_sha256": "4e35eb54afe71c74fea267e7ae185322db442a1e6d921fe50bf20ece5cf82a32"
+    },
+    "src/spiral_ln/evaluation_hypergames_causal.py": {
+      "git_blob_sha256": "aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6",
+      "matches": true,
+      "working_sha256": "aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6"
+    },
+    "src/spiral_ln/evaluation_hypergames_composition.py": {
+      "git_blob_sha256": "a558d8c15a715f65f6e95b330475b35cae7858afd83b3f027866ef7a62ed0fe3",
+      "matches": true,
+      "working_sha256": "a558d8c15a715f65f6e95b330475b35cae7858afd83b3f027866ef7a62ed0fe3"
+    },
+    "src/spiral_ln/evaluation_hypergames_rank.py": {
+      "git_blob_sha256": "2df137bd01085809f7f2af28f745aa0b4ec11f0ebd6244c2d0a9c61ac2733fd3",
+      "matches": true,
+      "working_sha256": "2df137bd01085809f7f2af28f745aa0b4ec11f0ebd6244c2d0a9c61ac2733fd3"
+    },
+    "src/spiral_ln/evaluation_hypergames_raw.py": {
+      "git_blob_sha256": "81589805b80e0a7f64d1485a78565afaca68a0a4b6edb1402b2c58c7cbc38115",
+      "matches": true,
+      "working_sha256": "81589805b80e0a7f64d1485a78565afaca68a0a4b6edb1402b2c58c7cbc38115"
+    },
+    "src/spiral_ln/hg09_frontier.py": {
+      "git_blob_sha256": "403f2e3edfc171adbef92864c45acf3b9bfeef95014d46dc8815e83db9b63aff",
+      "matches": true,
+      "working_sha256": "403f2e3edfc171adbef92864c45acf3b9bfeef95014d46dc8815e83db9b63aff"
+    },
+    "src/spiral_ln/hg09_scores.py": {
+      "git_blob_sha256": "5caefab67f9c1f712b720cdbb571fcf03fbeec70d340c83c4774143f364200c9",
+      "matches": true,
+      "working_sha256": "5caefab67f9c1f712b720cdbb571fcf03fbeec70d340c83c4774143f364200c9"
+    },
+    "src/spiral_ln/hypergames_active_causal.py": {
+      "git_blob_sha256": "bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b",
+      "matches": true,
+      "working_sha256": "bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b"
+    },
+    "src/spiral_ln/hypergames_active_neural.py": {
+      "git_blob_sha256": "fd41809ff4b0def780336223576dab9aaf0f7fbb97493eee15913c9c66511c50",
+      "matches": true,
+      "working_sha256": "fd41809ff4b0def780336223576dab9aaf0f7fbb97493eee15913c9c66511c50"
+    },
+    "src/spiral_ln/hypergames_composition.py": {
+      "git_blob_sha256": "143dd48e2408da3d289e4d59bd45913aefd856c840a55ccaa6e860b9416f7f59",
+      "matches": true,
+      "working_sha256": "143dd48e2408da3d289e4d59bd45913aefd856c840a55ccaa6e860b9416f7f59"
+    },
+    "src/spiral_ln/hypergames_qwen_eval.py": {
+      "git_blob_sha256": "0698c9cf63edfd8d1dc85087df28d99d32ae832f78cf34431671d1539c7d53e6",
+      "matches": true,
+      "working_sha256": "0698c9cf63edfd8d1dc85087df28d99d32ae832f78cf34431671d1539c7d53e6"
+    },
+    "src/spiral_ln/hypergames_rank.py": {
+      "git_blob_sha256": "cf9c37b0e7fb3500337177744331913de2f1ae81c5282cfe4704787ba880022e",
+      "matches": true,
+      "working_sha256": "cf9c37b0e7fb3500337177744331913de2f1ae81c5282cfe4704787ba880022e"
+    },
+    "src/spiral_ln/hypergames_raw_recurrent.py": {
+      "git_blob_sha256": "747cc7077eed5482ea87e41079ba7a20230cfc1b55c52d5d81c98339b5385417",
+      "matches": true,
+      "working_sha256": "747cc7077eed5482ea87e41079ba7a20230cfc1b55c52d5d81c98339b5385417"
+    },
+    "src/spiral_ln/hypergames_single_player.py": {
+      "git_blob_sha256": "0581078c23461c21e0e3bf4f37150fbd7f26e6d55d44c9c5c1e650a6495dbb5e",
+      "matches": true,
+      "working_sha256": "0581078c23461c21e0e3bf4f37150fbd7f26e6d55d44c9c5c1e650a6495dbb5e"
+    },
+    "tests/test_evaluation_hypergames.py": {
+      "git_blob_sha256": "b9b77b37557ccf90c8574c738e60c93cd47b226629f19c0670fa05990658642a",
+      "matches": true,
+      "working_sha256": "b9b77b37557ccf90c8574c738e60c93cd47b226629f19c0670fa05990658642a"
+    },
+    "tests/test_evaluation_hypergames_causal.py": {
+      "git_blob_sha256": "41cb0b89dcf054c786a96ed02d0bc7f8c649cda91e54420ed571a34d39b78dc4",
+      "matches": true,
+      "working_sha256": "41cb0b89dcf054c786a96ed02d0bc7f8c649cda91e54420ed571a34d39b78dc4"
+    },
+    "tests/test_evaluation_hypergames_composition.py": {
+      "git_blob_sha256": "9ef724b01891b32ab4390701cd680021e79107ba849f99ec29de0e38c3da32ab",
+      "matches": true,
+      "working_sha256": "9ef724b01891b32ab4390701cd680021e79107ba849f99ec29de0e38c3da32ab"
+    },
+    "tests/test_evaluation_hypergames_rank.py": {
+      "git_blob_sha256": "49685fc1fbe9f81dff1f3e7387a81f227ef4c611c49e75ddc98654a9e2ea27f2",
+      "matches": true,
+      "working_sha256": "49685fc1fbe9f81dff1f3e7387a81f227ef4c611c49e75ddc98654a9e2ea27f2"
+    },
+    "tests/test_evaluation_hypergames_raw.py": {
+      "git_blob_sha256": "0d7251dfea6bdc4547518cb8bcdbaab7e6f7e83f9dce62effb4d64e175217d57",
+      "matches": true,
+      "working_sha256": "0d7251dfea6bdc4547518cb8bcdbaab7e6f7e83f9dce62effb4d64e175217d57"
+    },
+    "tests/test_hg04_cpu_replay.py": {
+      "git_blob_sha256": "8256c3c9201471e71116c79582e15857f257dcab75fe16737a98a224a9b4ea91",
+      "matches": true,
+      "working_sha256": "8256c3c9201471e71116c79582e15857f257dcab75fe16737a98a224a9b4ea91"
+    },
+    "tests/test_hg09_frontier.py": {
+      "git_blob_sha256": "f1fb10e093ba18314a759593516c233045a548c8a6166d8a03c2b81be8652a11",
+      "matches": true,
+      "working_sha256": "f1fb10e093ba18314a759593516c233045a548c8a6166d8a03c2b81be8652a11"
+    },
+    "tests/test_hypergames_active_causal.py": {
+      "git_blob_sha256": "6f0eca18cd031cfdcd100997f2308dc13e0e73f12af66f7e5884d425a3391ba7",
+      "matches": true,
+      "working_sha256": "6f0eca18cd031cfdcd100997f2308dc13e0e73f12af66f7e5884d425a3391ba7"
+    },
+    "tests/test_hypergames_composition.py": {
+      "git_blob_sha256": "690d615ae6263ac8242dd86216179755af31614867e2fe523104f9d252ccffac",
+      "matches": true,
+      "working_sha256": "690d615ae6263ac8242dd86216179755af31614867e2fe523104f9d252ccffac"
+    },
+    "tests/test_hypergames_qwen_eval.py": {
+      "git_blob_sha256": "d2966fae7fc37747432c6b7753062622b5fd19ea50b9e6659d0016516b093e0d",
+      "matches": true,
+      "working_sha256": "d2966fae7fc37747432c6b7753062622b5fd19ea50b9e6659d0016516b093e0d"
+    },
+    "tests/test_hypergames_rank.py": {
+      "git_blob_sha256": "a7aca37180aba110f907d4d39f564bfd8fb135e9d586984652e0843a2c67608d",
+      "matches": true,
+      "working_sha256": "a7aca37180aba110f907d4d39f564bfd8fb135e9d586984652e0843a2c67608d"
+    },
+    "tests/test_hypergames_raw_recurrent.py": {
+      "git_blob_sha256": "c03cbcfee3263cff037371cbf8635f69764a121bc308be5e930b995e56649781",
+      "matches": true,
+      "working_sha256": "c03cbcfee3263cff037371cbf8635f69764a121bc308be5e930b995e56649781"
+    },
+    "tests/test_hypergames_single_player.py": {
+      "git_blob_sha256": "2b3d98d90b65c604d080a65660a570fa233c194a5d906cf0666b932aaaf4ef3c",
+      "matches": true,
+      "working_sha256": "2b3d98d90b65c604d080a65660a570fa233c194a5d906cf0666b932aaaf4ef3c"
+    }
+  },
+  "supplementary_analysis_source_sha256": {
+    "src/spiral_ln/hg09_replay.py": "9399246d279aa06d0a3801ecc6f7ae1728a2ce4b94fde3e56d158cf7c9720f54",
+    "src/spiral_ln/hypergames_observation_certificate.py": "26ebe9b927944f5266214faed6fe8cee1beb248e78803015089f1de6429cdf63",
+    "src/spiral_ln/hypergames_sparse_certificate.py": "3826f6136d048b1e471f3b7cd477e4590c3508fc0ff00ffa5180f31e2e36676a",
+    "tests/test_hg09_replay.py": "ed61f02271838d736f31004b84b50ce82bdc8333601178ad1b755ae013710c8d",
+    "tests/test_hypergames_observation_certificate.py": "543cd67340fb148531f71bdb7691abecc9b128064b9a32324335a796fc70bf09",
+    "tests/test_hypergames_sparse_certificate.py": "35ab8b01d7a022064a9c96a2130b72ff4e096aca1a920d04dca92bd19bbac5dc"
+  }
+}

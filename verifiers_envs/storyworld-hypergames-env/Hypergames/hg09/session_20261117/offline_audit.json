@@ -1,0 +1,182 @@
+{
+  "all_passed": false,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "latency_s": 31.35999999998603,
+      "stderr": "----------------------------------------------------------------------\nRan 197 tests in 21.825s\n\nOK\n",
+      "stdout": "dry-run: validated configuration only; --live is required for API calls\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_local_receipts.py"
+      ],
+      "exit_code": 0,
+      "latency_s": 22.5,
+      "stderr": "",
+      "stdout": "hg01: 14 checks; receipt identical\nhg02: 26 checks; receipt identical\nhg03: 27 checks; receipt identical\n"
+    },
+    {
+      "command": [
+        "python",
+        "hg04_cpu_replay.py",
+        "--output",
+        "C:\\Users\\patri\\Documents\\Codex\\2026-11-17\\files-pasted-by-the-user-hg\\work\\hg04_public_replay.json"
+      ],
+      "exit_code": 0,
+      "latency_s": 6.484000000054948,
+      "stderr": "",
+      "stdout": "HG-04 compact CPU: {'policy_pairs': 3840, 'hash_cases': 3360, 'noisy_pairs': 2880}\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/run_hg05_cpu.py",
+        "--out",
+        "output/evaluation_hypergames/hg05"
+      ],
+      "exit_code": 0,
+      "latency_s": 47.65599999995902,
+      "stderr": "",
+      "stdout": "HG-05 rows=14400 random bases=120000 elapsed=47.20s\nintegrity: {'registered_24_seed_roster': True, 'registered_5_cohorts': True, 'registered_5_goal_ranks': True, 'registered_2_pools': True, 'registered_3_training_sizes': True, 'all_observer_rank_equal_goal_rank': True, 'fixed_pool_padding_identical': True, 'expected_14400_seed_arm_rows': True, 'registered_120000_random_basis_draws': True, 'oracle_perfect_at_all_scales': True}\nregistered science gates: {'1': {'task_beats_random_seed_count': 24, 'total_seeds': 24, 'passes_20_of_24_gate': True}, '2': {'task_beats_random_seed_count': 24, 'total_seeds': 24, 'passes_20_of_24_gate': True}, '4': {'task_beats_random_seed_count': 24, 'total_seeds': 24, 'passes_20_of_24_gate': True}, '8': {'task_beats_random_seed_count': 24, 'total_seeds': 24, 'passes_20_of_24_gate': True}, '16': {'task_beats_random_seed_count': 24, 'total_seeds': 24, 'passes_20_of_24_gate': True}}\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_hg05_receipts.py"
+      ],
+      "exit_code": 1,
+      "latency_s": 0.15700000000651926,
+      "stderr": "nonreproducible HG-05 output: hg05_summary_v1.json: 293bb321c32a4a16ca5d7700aa5085dbad21bca4851ee88f87982a0882de2b17\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/run_hg06_cpu.py",
+        "--workers",
+        "2",
+        "--out",
+        "output/evaluation_hypergames/hg06_ci"
+      ],
+      "exit_code": 0,
+      "latency_s": 313.89000000001397,
+      "stderr": "",
+      "stdout": "HG-06 generated {'rows': 23040, 'seeds': 24, 'conditions': 960, 'random_composite_draws': 96000, 'padding_matches': 4608} {'n64_xor3_exact_and_beats_xor2_20of24_each_rank': True, 'fixed_pool_padding_identity': True, 'oracle_perfect': True, 'all_missing_component_target_deficient': True} {'1': {'exact_full_test': 24, 'beats_xor2': 24, 'n_seed': 24, 'passed': True}, '2': {'exact_full_test': 24, 'beats_xor2': 24, 'n_seed': 24, 'passed': True}, '4': {'exact_full_test': 24, 'beats_xor2': 24, 'n_seed': 24, 'passed': True}, '8': {'exact_full_test': 24, 'beats_xor2': 24, 'n_seed': 24, 'passed': True}}\nElapsed seconds 313.48\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check_hg06_manifest.py",
+        "--out",
+        "output/evaluation_hypergames/hg06_ci"
+      ],
+      "exit_code": 0,
+      "latency_s": 0.4059999999590218,
+      "stderr": "",
+      "stdout": "HG-06: 23040 public seed-arm records, 5 source-matched CSVs, math source hashes match\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_evaluation_hypergames_raw.py"
+      ],
+      "exit_code": 0,
+      "latency_s": 0.45400000002700835,
+      "stderr": "",
+      "stdout": "{\n  \"all_passed\": true,\n  \"checks\": {\n    \"192_finite_rowspace_comparisons\": true,\n    \"30_bruteforce_posterior_counts\": true,\n    \"64_ambient_with_rank_2_posterior\": true,\n    \"full_observation_uniform_query_fraction\": true,\n    \"full_rank_exact_prediction\": true,\n    \"one_missing_goal_bit_floor\": true,\n    \"one_sparse_mask_not_identified_by_zero_samples\": true,\n    \"padding_rank_invariance\": true,\n    \"rank_zero_stability\": true,\n    \"single_sample_collision_probability\": true,\n    \"tiny_sparse_class_bound_zero\": true,\n    \"two_missing_goal_bit_floor\": true,\n    \"wide_world_sparse_bound_decays\": true,\n    \"zero_observation_uniform_query_fraction\": true\n  },\n  \"counts\": {\n    \"posterior_cases\": 30,\n    \"rowspace_oracle_cases\": 192\n  },\n  \"evidence_level\": \"algebraic arguments plus independent exhaustive small-F2 verification\",\n  \"generated_at_utc\": \"2026-11-17T12:49:00.589158+00:00\",\n  \"schema_version\": \"HG-07/exact-raw-observability-v1\",\n  \"source_sha256\": {\n    \"scripts/verify_evaluation_hypergames_raw.py\": \"3a4fb7b90a089b3d97f0f404a072dccfbbe48847a9becccda72ed9b34d9b26d3\",\n    \"src/spiral_ln/evaluation_hypergames_raw.py\": \"81589805b80e0a7f64d1485a78565afaca68a0a4b6edb1402b2c58c7cbc38115\",\n    \"tests/test_evaluation_hypergames_raw.py\": \"0d7251dfea6bdc4547518cb8bcdbaab7e6f7e83f9dce62effb4d64e175217d57\"\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_hg07_cpu_replay.py",
+        "--out",
+        "output/evaluation_hypergames/hg07"
+      ],
+      "exit_code": 0,
+      "latency_s": 7.875,
+      "stderr": "",
+      "stdout": "HG07 audited 360 rows; 15 checks passed; 053417219cc189208317823d5d944e5a9cc17c3eb0b50810986cdfcff933c81a\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_hg08_causal.py"
+      ],
+      "exit_code": 0,
+      "latency_s": 0.35900000005494803,
+      "stderr": "",
+      "stdout": "{\n  \"all_passed\": true,\n  \"checks\": {\n    \"300_multioutput_highdim_derivatives\": true,\n    \"4680_independent_finite_derivatives\": true,\n    \"active_support_exact_at_smoke_1024\": true,\n    \"causal_peeling_involution\": true,\n    \"complete_support_best_release\": true,\n    \"core_padded_same_goal\": true,\n    \"entropy_power_of_two_boundary\": true,\n    \"one_missing_bit_forced_release_negative\": true,\n    \"oracle_budget_cap\": true,\n    \"simulator_test_grade_no_false_release\": true,\n    \"singleton_certificate_incomplete\": true,\n    \"singleton_certificate_positive\": true,\n    \"strict_64_budget\": true,\n    \"three_exact_information_lower_bounds\": true,\n    \"two_missing_bits_joint_ceiling\": true\n  },\n  \"counts\": {\n    \"finite_derivative_cases\": 4680,\n    \"high_dimension_derivative_cases\": 300\n  },\n  \"evidence\": \"exact finite-field causal mechanics and independent enumerative checks; public synthetic only\",\n  \"schema\": \"HG-08/causal-exact-math-v1\",\n  \"source_sha256\": {\n    \"scripts/verify_hg08_causal.py\": \"342c63bdb7683a9c684c199ebb2eeb09cd996d4277bc87e8cde8d175b4c02430\",\n    \"src/spiral_ln/evaluation_hypergames_causal.py\": \"aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6\",\n    \"src/spiral_ln/hypergames_active_causal.py\": \"bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b\",\n    \"src/spiral_ln/hypergames_active_neural.py\": \"fd41809ff4b0def780336223576dab9aaf0f7fbb97493eee15913c9c66511c50\",\n    \"tests/test_evaluation_hypergames_causal.py\": \"41cb0b89dcf054c786a96ed02d0bc7f8c649cda91e54420ed571a34d39b78dc4\",\n    \"tests/test_hypergames_active_causal.py\": \"6f0eca18cd031cfdcd100997f2308dc13e0e73f12af66f7e5884d425a3391ba7\"\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/run_hg08_cpu.py",
+        "--skip-neural",
+        "--check",
+        "--out",
+        "output/evaluation_hypergames/hg08"
+      ],
+      "exit_code": 0,
+      "latency_s": 17.030999999959022,
+      "stderr": "",
+      "stdout": "HG08 causal 3840 rows {'H1': {'paired_wins': 24, 'passes': True}, 'H2': {'completions': 24, 'passes': True}, 'H3': {'by_cohort': {'core_140/1': 24, 'core_140/2': 24, 'padded_512/1': 24, 'padded_512/2': 24, 'native_512/1': 24, 'native_512/2': 24, 'padded_1024/1': 24, 'padded_1024/2': 24, 'native_1024/1': 24, 'native_1024/2': 24}, 'passes': True}, 'H4': {'passes': True}}\nelapsed seconds 16.632\n"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_hg08_neural_receipt.py",
+        "--out",
+        "output/evaluation_hypergames/hg08"
+      ],
+      "exit_code": 0,
+      "latency_s": 7.10999999998603,
+      "stderr": "",
+      "stdout": "{\n  \"all_passed\": true,\n  \"checks\": {\n    \"48_registered_neural_fits\": true,\n    \"all_models_abstain_as_observed\": true,\n    \"archived_neural_csv_sha256\": true,\n    \"calibration_only_release\": true,\n    \"causal_masks_certified_independently\": true,\n    \"false_accepts_recomputed\": true,\n    \"frozen_training_budget\": true,\n    \"matching_256_example_splits\": true,\n    \"privileged_and_causal_agree\": true,\n    \"public_source_hashes_current\": true,\n    \"recomputed_group_summary\": true,\n    \"recurrent_parameters_matched\": true,\n    \"registered_H5_failure_preserved\": true,\n    \"registered_grid\": true,\n    \"six_public_seeds\": true,\n    \"true_utility_recomputed\": true\n  },\n  \"interpretation\": \"source-hash and arithmetic recheck of frozen neural result; no cross-hardware weight-bit identity claimed\",\n  \"public_csv_sha256\": \"26b74a129624702ff1614fcda98364ea6b7ac480188b4090bda308126b117a6f\",\n  \"rows\": 48,\n  \"schema\": \"HG-08/neural-receipt-audit-v1\"\n}\n"
+    }
+  ],
+  "effective_all_checks_passed_after_platform_normalization": true,
+  "numpy_version": "2.5.4",
+  "original_ci": {
+    "commit": "522de307fb60043d71c9a90fd0e802227e855dae",
+    "successful_runs": [
+      44070975277,
+      44070975221,
+      44070975311,
+      44070975344,
+      44070975241,
+      44070975229
+    ]
+  },
+  "platform_normalization_followup": {
+    "action": "Normalize only newly generated HG05 summary JSON CRLF to LF; published source and registration bytes unchanged.",
+    "command": [
+      "python",
+      "scripts/check_hg05_receipts.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "HG-05 source hashes, exact CPU replay and registered direction gates reproduced\n"
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "schema": "HG09/offline-audit-v1",
+  "setup_findings": [
+    "Initial default temp directory denied by sandbox; relocated inside task work directory.",
+    "Initial checkout CRLF conversion broke upstream receipts; restored exact Git blob bytes, preserved registrations.",
+    "CPU PyTorch 2.10.0 installed in work/python-deps. Existing global numpy is 2.5.4; upstream CI pins 2.3.5."
+  ],
+  "timestamp_utc": "2026-11-17T12:41:57.143397+00:00",
+  "torch_version": null
+}

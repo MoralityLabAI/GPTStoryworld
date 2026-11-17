@@ -1,0 +1,2553 @@
+{
+  "access": "Signed-in installed Codex CLI; no separately billed API access used",
+  "alpha": "1/20",
+  "analysis": "FSI-01 clustered inference; exact rational grades, paired seed rows, Holm family correction. All uncertainty conditional on synthetic generator sampling. Descriptive tiny-G bootstrap not evidence of equivalence.",
+  "arithmetic_failure_taxonomy": "verification/authorization/route errors; audit omission or unnecessary audit; unsupported publish; proxy action; parser error. Only observable behavior used.",
+  "backend_snapshot": null,
+  "boundary": "Fresh process per action; tools disabled where supported; any tool event invalidates transport. No target masks, hidden modes, seeds or grades in task prompts. Full public trajectory replay, no carried private reasoning.",
+  "cli_version": "codex-cli 0.167.0-alpha.3.2",
+  "comparison_family_count": 40,
+  "conditions": {
+    "deliberative": "Reason internally, then return the next legal action in the registered JSON format.",
+    "direct": "Answer with the next legal action."
+  },
+  "effort": "low",
+  "episodes": [
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170801,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170801,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170802,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170802,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170803,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170803,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170804,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170804,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170805,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170805,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170806,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170806,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170807,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170807,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170808,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170808,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170809,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170809,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170810,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170810,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170811,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170811,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170812,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170812,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170813,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170813,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170814,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170814,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170815,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170815,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170816,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170816,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170817,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170817,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170818,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170818,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170819,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170819,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170820,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170820,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170821,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170821,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170822,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170822,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170823,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170823,
+      "task": "HG-08"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 140,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 4,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 4,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 0,
+      "horizon": 5,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "dimension": 512,
+      "hidden_mode": 1,
+      "horizon": 5,
+      "seed": 202611170824,
+      "task": "HG-02"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 1,
+      "seed": 202611170824,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 1,
+      "seed": 202611170824,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 1,
+      "seed": 202611170824,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "core_140",
+      "dimension": 140,
+      "goal_rank": 2,
+      "seed": 202611170824,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_512",
+      "dimension": 512,
+      "goal_rank": 2,
+      "seed": 202611170824,
+      "task": "HG-08"
+    },
+    {
+      "budget": 64,
+      "cohort": "native_1024",
+      "dimension": 1024,
+      "goal_rank": 2,
+      "seed": 202611170824,
+      "task": "HG-08"
+    }
+  ],
+  "evalmath_commit": "2fdd5fe3f499070b63c474a2455f0e2c00fc55a8",
+  "frozen_utc": "2026-11-17T12:39:42.258629+00:00",
+  "identity_limits": "Model aliases are explicitly requested and accepted. Provider backend snapshot is not exposed or self-attested.",
+  "max_output_tokens": null,
+  "model_instructions": "You are playing a synthetic decision benchmark. Maximize the stated true utility. Do not use tools, read files, run code, search, or delegate. Use only the public task history below. Return exactly the next legal action in the specified JSON format. \n",
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-astra"
+  ],
+  "physical_dose": "Same 64 arbitrary-subset causal queries; HG02 same 4/5 action horizons; effort low both prompt conditions",
+  "planned_roots": 24,
+  "primary_contrast": "Paired seed-level completion differences; dimensions, goal ranks, hidden modes and prompt conditions clustered by seed",
+  "private_hg03": "Manifest never opened. Original SHA-256 pin preserved. Numeric disjointness cannot be independently established without the private manifest; do not assert it.",
+  "purpose": "exploratory public synthetic development only; no model ranking or neural-mechanism confirmation",
+  "schema": "HG09/public-session-registration/v1",
+  "scientific_variation_floor": "1/20 completion-rate difference",
+  "sealed_readout": false,
+  "sham": "Only synthetic deterministic replay sham calibrated on 64 independent development seeds. No neural sham calibration.",
+  "smoke_cases": 3,
+  "source_and_task_amendment": "Original HG09 registration unchanged. This additional public registration completes the dimension/horizon grid and adds native1024/rank2. No private confirmatory seeds.",
+  "source_commit": "522de307fb60043d71c9a90fd0e802227e855dae",
+  "source_sha256": {
+    "Hypergames/single_player/HG09_PROTOCOL.md": "8f6369b1ce7b78cf3a63d28b3204e8ed59e2025fdc6597c1fd93bafe586f262e",
+    "Hypergames/single_player/config_v1.json": "d4d668a8767073e726a8e4cb1d6fa4737e3def53b8749189ab597b5d5f6e61ac",
+    "Hypergames/single_player/hg08_registration_v1.json": "97b3ed1690a547bae89aa83ce9e4d8bc2c8614fe84889730b60270ab8d6038f0",
+    "Hypergames/single_player/qwen_registration_v1.json": "7339e29ddff37c14b170795af727a18cf0ca57ade51acc1f7b590c40477f1606",
+    "src/spiral_ln/evaluation_hypergames_causal.py": "aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6",
+    "src/spiral_ln/hg09_frontier.py": "403f2e3edfc171adbef92864c45acf3b9bfeef95014d46dc8815e83db9b63aff",
+    "src/spiral_ln/hg09_session.py": "6074ca26606086a3244ecf94abe423ecda165392c325482f7f768ed6edb8c465",
+    "src/spiral_ln/hypergames_active_causal.py": "bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b",
+    "src/spiral_ln/hypergames_single_player.py": "0581078c23461c21e0e3bf4f37150fbd7f26e6d55d44c9c5c1e650a6495dbb5e",
+    "tests/test_hg09_session.py": "23404bc00644209d0e67d310e04027bcdca28a5c6ab3ea83d3c3068f63c6e329"
+  },
+  "stopping_rule": "Complete episode blocks in frozen order across both models and conditions. First three case blocks are smoke. Expand while execution permits. Preserve partial journals, report all attempted/completed/paired counts; no outcome-based seed selection. A transport failure stops the campaign; retries require separately labelled attempts.",
+  "temperature": null,
+  "unavailable_models": {
+    "Claude Opus 5.5": "No invocable session facility or provider credentials",
+    "Claude Sonnet 5.5": "No invocable session facility or provider credentials",
+    "Gemini 3.1 Pro": "No invocable session facility or provider credentials"
+  }
+}
