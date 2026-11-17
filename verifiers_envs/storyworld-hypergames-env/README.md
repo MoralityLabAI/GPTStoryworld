@@ -30,3 +30,7 @@ Read [QWEN_PROTOCOL.md](Hypergames/single_player/QWEN_PROTOCOL.md) and [qwen_reg
 **The held-out seed manifest is private and is deliberately excluded from public GitHub.** Obtain `HG03_private_seeds_20261116.json` separately and store it outside Git, e.g. `C:\Users\patri\Documents\Codex\private-evals\HG03_private_seeds_20261116.json`. The exact registered SHA-256 is `4cd049c41b0ab0ab45688c0b44f098bdfe9437ebfc5a277e6867540558205c55`. Pass the absolute path using `--private-manifest`; replacement seeds would invalidate the frozen protocol. Keep model files and private results outside Git.
 
 The Gym is an exact synthetic reference, not a live GPTStoryworld game, neural alignment result or quantum process.
+
+## HG-04: EvalMath observation quotients and CPU replay (2026-11-17)
+
+Run `PYTHONPATH=src python hg04_cpu_replay.py --output output/evaluation_hypergames/hg04_local.json` and read [HG04_RESULTS.md](HG04_RESULTS.md). This adds public deterministic 140/512/1024-coordinate controls for exact decision-state sufficiency, XOR-hash parity information loss, calibrated noisy audits and misleading Dirac/proxy objectives. The frozen HG-03 private manifest is kept separate. Local extended CPU evidence: 99 tests, 19 source-hashed checks; the committed compact replay is checked in CI against its published SHA-256.

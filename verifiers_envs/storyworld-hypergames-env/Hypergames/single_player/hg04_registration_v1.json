@@ -1,0 +1,21 @@
+{
+  "schema_version": "HG-04/registration-v1",
+  "date_utc": "2026-11-17",
+  "source_experiment": "HG-02/03 exact single-player gym; frozen HG-03 private manifest untouched",
+  "evidence_scope": "public development synthetic CPU, no neural weights or hidden-heldout runs",
+  "seed_start": 20261000,
+  "seed_count": 96,
+  "cohorts": ["core_140", "padded_512", "native_512", "padded_1024", "native_1024"],
+  "horizons": [4, 5],
+  "hidden_modes": [0, 1],
+  "controllers": ["sufficient", "blind_route0", "proxy_shortcut", "dirac_greedy_fast"],
+  "bucket_ratios": [1, 2, 4, 8, 16, 32, 64],
+  "parity_premise": "x is uniform in GF(2)^n; sealed bit independent; only unsealed coordinates are hashed",
+  "parity_control": "goal-aware parity bit stored explicitly as one semantic feature",
+  "audit_accuracy_q": ["1", "4/5", "2/3", "16/25", "3/5", "1/2"],
+  "prior_grid": ["1/2", "3/5", "4/5", "24/25", "1"],
+  "randomness": "per-scenario deterministic seeded pseudo-RNG, independent of sealed bit and model weights",
+  "primary_measures": ["per_seed_pair_true_utility", "safe_success", "false_accept", "observer_parity_identifiable", "metric_distance_squared", "categorical_overlap_exponent"],
+  "controls": ["exact sufficient-state policy", "blind release", "proxy shortcut", "unweighted Dirac greedy", "hash collision versus protected parity feature"],
+  "registered_thresholds": {"audit_publish_q": "16/25", "blind_publish_prior": "3/5", "blind_beats_perfect_audit_prior": "24/25"}
+}
