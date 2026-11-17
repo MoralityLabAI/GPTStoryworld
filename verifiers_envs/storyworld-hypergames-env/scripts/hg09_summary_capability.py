@@ -7,8 +7,10 @@ not benchmark trials, model-level shams, or reconstructed private reasoning.
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import time
@@ -22,19 +24,21 @@ PROMPT = ('Unscored provider-capability check. Compute 27*38 + 65*17 internally,
           'in the form {"result":INTEGER}. Do not use tools.')
 
 
-def probe(model):
+def probe(model, attempt_label='', retry_reason=None):
     template_path = CAMPAIGN/'traces'/f'0000_{model}_direct.jsonl'
     template = next(r for r in read_journal(template_path) if r['type']=='response')
     command = list(template['command'])
     assert command[-2:]==['--json','-'] and command[command.index('-m')+1]==model
     command[-2:-2] = ['-c','model_reasoning_summary="auto"']
-    target = CAMPAIGN/'capabilities'/f'summary_auto_{model}.jsonl'
+    suffix='_'+attempt_label if attempt_label else ''
+    target = CAMPAIGN/'capabilities'/f'summary_auto_{model}{suffix}.jsonl'
     journal = Journal(target)
     started = utc()
     begin = time.monotonic()
     try:
         journal.write({'type':'unscored_capability_request','timestamp_utc':started,
                        'model_requested':model,'summary_requested':'auto',
+                       'attempt_label':attempt_label or 'initial','retry_reason':retry_reason,
                        'reasoning_effort_requested':'low','command':command,
                        'prompt':PROMPT,'model_instructions':template['model_instructions'],
                        'template_trace':template_path.name,
@@ -74,5 +78,11 @@ def probe(model):
 
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--attempt-label',default='')
+    parser.add_argument('--retry-reason')
+    args=parser.parse_args()
+    if args.attempt_label and not re.fullmatch(r'[A-Za-z0-9_-]+',args.attempt_label):
+        parser.error('attempt label must contain only letters, digits, underscores or hyphens')
     for alias in ('gpt-6.1-sol','gpt-6-astra'):
-        probe(alias)
+        probe(alias,args.attempt_label,args.retry_reason)
