@@ -1,0 +1,37 @@
+name: Hypergames HG-07 FSI-01 independent-seed audit
+on:
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/scripts/fsi01_hg07_seed_audit.py'
+      - 'verifiers_envs/storyworld-hypergames-env/tests/test_fsi01_hg07_seed_audit.py'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/HG07_FSI01_STATISTICAL_AUDIT.md'
+      - '.github/workflows/storyworld-hypergames-fsi01.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-locked-six-seed-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: MoralityLabAI/EvalMath
+          ref: 5004cab9b366a412290a83945cda76987bb3cd6c
+          path: .deps/evalmath
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit frozen HG-07 six-seed results
+        run: PYTHONPATH=../../.deps/evalmath/src python -m unittest discover -s tests -p 'test_fsi01_hg07_seed_audit.py' -v
+      - name: Emit source-hashed statistical report
+        run: PYTHONPATH=../../.deps/evalmath/src python scripts/fsi01_hg07_seed_audit.py --output /tmp/hg07_fsi01_report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hg07-fsi01-public-six-seed-audit
+          path: /tmp/hg07_fsi01_report.json
+          if-no-files-found: error
