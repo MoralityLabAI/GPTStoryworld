@@ -3,17 +3,20 @@ from __future__ import annotations
 
 import sys
 import unittest
+import importlib.util
 from fractions import Fraction as Q
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
-from fsi01_hg07_seed_audit import audit, REG, CSV
-
-
+@unittest.skipUnless(importlib.util.find_spec("spiral_ln.evaluation_finite_sample") is not None,
+                     "EvalMath FSI is supplied by the dedicated pinned-source CI")
 class HG07FSITest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        from fsi01_hg07_seed_audit import audit, REG, CSV
         cls.a=audit()
+        cls.REG=REG
+        cls.CSV=CSV
 
     def test_source_bound_and_full_census(self):
         a=self.a
@@ -61,8 +64,8 @@ class HG07FSITest(unittest.TestCase):
         self.assertEqual(releases[0]["direct_true_utility"],"-615/256")
 
     def test_does_not_require_private_seeds(self):
-        self.assertNotIn("private", str(REG).lower())
-        self.assertNotIn("private", str(CSV).lower())
+        self.assertNotIn("private", str(self.REG).lower())
+        self.assertNotIn("private", str(self.CSV).lower())
 
 
 if __name__=="__main__":
