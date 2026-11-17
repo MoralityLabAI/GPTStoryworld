@@ -30,7 +30,8 @@ def replay(path):
             'type','schema','previous_sha256','record_sha256','timestamp_utc')} | {
             'status':'interrupted', 'trace':path.name, 'trace_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
             'observed_requests':len(requests),'observed_responses':len(responses),
-            'usage':{k:sum(r.get('usage',{}).get(k,0) for r in responses) for k in (
+            'requests_without_reported_usage':len(requests)-sum(r.get('usage') is not None for r in responses),
+            'usage':{k:sum((r.get('usage') or {}).get(k,0) for r in responses) for k in (
                 'input_tokens','output_tokens','reasoning_output_tokens')},
             'errors':['process interrupted before final grade']}
     spec = {k:start[k] for k in ('task','seed','dimension','horizon','hidden_mode','cohort','goal_rank','budget') if k in start}
@@ -98,6 +99,7 @@ def replay(path):
         taxonomy['abstained_before_budget'] = int(actions[-1] == 'abstain' and result['query_count'] < spec['budget'])
     result.update({'trace':path.name,'trace_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                    'replay_verified':True,'model_calls':len(responses),
+                   'requests_without_reported_usage':sum(r.get('usage') is None for r in responses),
                    'invalid_actions':taxonomy['invalid_format']+taxonomy['invalid_release_rank']+taxonomy['query_after_budget'],
                    'failure_taxonomy':dict(taxonomy),
                    'latency_total_s':sum(r.get('latency_s',0) for r in responses),

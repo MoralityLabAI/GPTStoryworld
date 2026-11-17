@@ -34,10 +34,12 @@ class ReplayTests(unittest.TestCase):
             journal.write({'type':'episode_start','task':'HG-02','seed':17,'dimension':140,
                            'horizon':4,'hidden_mode':0,'model':'test','condition':'direct','effort':'low'})
             journal.write({'type':'request','turn':1,'prompt':'public'})
+            journal.write({'type':'response','turn':1,'answer':'','valid_transport':False,'usage':None})
             journal.close()
             result=replay(p)
             self.assertEqual(result['status'],'interrupted')
             self.assertNotIn('true_utility',result)
+            self.assertEqual(result['requests_without_reported_usage'],1)
 
     def test_wrong_rank_release_is_blocked_and_counted_invalid(self):
         with tempfile.TemporaryDirectory() as td:
