@@ -1,0 +1,37 @@
+name: storyworld-hypergames-singleplayer
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-singleplayer.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-singleplayer.yml'
+jobs:
+  exact-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -q
+      - name: Existing HG-01/02/03 receipts
+        run: PYTHONPATH=src python scripts/check_local_receipts.py
+      - name: HG-04 public CPU replay
+        run: PYTHONPATH=src python hg04_cpu_replay.py --output output/evaluation_hypergames/hg04_public_replay.json
+      - name: Verify HG-04 registered digest
+        run: |
+          python -c "from hashlib import sha256;from pathlib import Path; p=Path('output/evaluation_hypergames/hg04_public_replay.json');assert sha256(p.read_bytes()).hexdigest()=='2cb5a617d20082d02ab8c73471e0c49d4f88922ab19bc1c116ded4c8b90097c7', 'HG04 replay mismatch'"
+      - name: Archive HG-04 public per-seed evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: hg04-public-cpu-seed-rows
+          path: verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg04_public_replay.json
+          if-no-files-found: error

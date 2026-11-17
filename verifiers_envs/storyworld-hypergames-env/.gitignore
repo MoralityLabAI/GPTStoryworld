@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+models/
+*.gguf
+HG03_private_seeds_*.json
+hg03_private_*.json
+hg03_dev_qwen*.json
+hg03_dev_baselines*.json
+*.local.json

@@ -1,0 +1,19 @@
+{
+  "schema_version": "HG-04/compact-cpu-replay-v1",
+  "date_utc": "2026-11-17",
+  "evidence_level": "public synthetic CPU",
+  "source_file_sha256": "07638ec78f5224f2cbfacb3e28b2070c279c1a7d2b5488dc6c62ae1df483de67",
+  "registration_sha256": "7470eb9101ea052b9aa14445dceafd697a095988297ab4581a0a43b585c9d3d5",
+  "compact_census_sha256": "2cb5a617d20082d02ab8c73471e0c49d4f88922ab19bc1c116ded4c8b90097c7",
+  "extended_census_sha256": "ed06ea936628751828109c4fafea18a032f249b6cf8857753391fd54740a5f54",
+  "counts": {
+    "policy_pairs": 3840,
+    "hash_cases": 3360,
+    "noisy_pairs": 2880,
+    "geometry_pairs_in_extended_run": 192
+  },
+  "test_status": {
+    "extended_local_tests_passed": 99,
+    "extended_receipt_checks_passed": 19
+  }
+}

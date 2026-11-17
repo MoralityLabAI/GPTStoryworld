@@ -1,0 +1,65 @@
+{
+  "schema": "HG-05/interaction-rank-v1",
+  "registered_utc": "2026-11-17",
+  "status": "pre-data frozen registration",
+  "scope": "synthetic CPU single-player multi-parity goals; public development seeds, not HG-03 private evaluation",
+  "seed_start": 2026111700,
+  "seed_count": 24,
+  "cohorts": [
+    "core_140",
+    "padded_512",
+    "native_512",
+    "padded_1024",
+    "native_1024"
+  ],
+  "goal_ranks": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "parity_width": 6,
+  "feature_pools": [
+    "fixed",
+    "ambient"
+  ],
+  "training_examples": [
+    4,
+    8,
+    16
+  ],
+  "calibration_examples": 32,
+  "test_examples": 64,
+  "random_rank_matched_bases": 100,
+  "candidate_pool_size": {
+    "fixed": "goal_rank + 4*goal_rank",
+    "ambient": "goal_rank + max(4*goal_rank, floor(dimension/8))"
+  },
+  "candidate_library": "goal basis rows included but identity hidden from supervised selection; all candidate rows/decoys are six-coordinate parities",
+  "arms": [
+    "oracle_task",
+    "task_only_supervised",
+    "task_only_no_gold_dictionary",
+    "label_shuffled_supervised",
+    "random_rank_matched_100"
+  ],
+  "decision_gate": "submit predicted k-bit code for +10 correct / -15 wrong; abstain 0; calibration Laplace((cal_correct+1)/(cal_n+2)) > 3/5",
+  "primary_metrics": [
+    "joint_test_success",
+    "per_bit_test_accuracy",
+    "rank_deficiency",
+    "expected_optimal_joint_success",
+    "calibrated_true_utility",
+    "false_accept",
+    "rank_based_p_against_100_random"
+  ],
+  "gates": {
+    "sanity": "rank matched bases rank k, test never used in fitting or decisions",
+    "paired_padding": "fixed-pool task-only predictions and calibrated decisions identical across core_140/padded_512/padded_1024 at each seed/rank/train size",
+    "trained_vs_random": "task-only n=16 beats mean of 100 random bases >=20/24 core_140 fixed-pool seeds at each rank",
+    "raw_evidence": "per-seed per-cohort per-rank rows, random rank distributions, source hashes, independently enumerated GF2 oracle"
+  },
+  "interpretation": "synthetic feature-library selection; task-aware oracle is privileged ceiling; actual neural goal inference unmeasured",
+  "fixed_rng": "Python random.Random on versioned seed/seed-slice strings; no Python hash randomization"
+}

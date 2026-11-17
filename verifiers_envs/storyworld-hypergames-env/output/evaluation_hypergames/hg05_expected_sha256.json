@@ -1,0 +1,21 @@
+{
+  "schema": "HG-05/expected-public-CPU-digests-v1",
+  "registration_commit": "694b379371ee4cb641e311cc7603998131e73fb4",
+  "amendment_commit": "6f695fe6b128f41b76fb458e77d6a1dd7324138f",
+  "rows": 14400,
+  "random_draws": 120000,
+  "source_sha256": {
+    "Hypergames/single_player/hg05_registration_v1.json": "951e65f09d1e05536dd017a2da5f8046be893f47a9421da8d324f78593984949",
+    "scripts/run_hg05_cpu.py": "3d74395967d34c7397ac6987c67f2e3a569ca4afc0bf8bdaba4a14f4cc6bf050",
+    "src/spiral_ln/evaluation_hypergames_rank.py": "2df137bd01085809f7f2af28f745aa0b4ec11f0ebd6244c2d0a9c61ac2733fd3",
+    "src/spiral_ln/hypergames_rank.py": "cf9c37b0e7fb3500337177744331913de2f1ae81c5282cfe4704787ba880022e"
+  },
+  "result_sha256": {
+    "hg05_summary_v1.json": "7b3d6452d93f40328c7e6c1f589e7e99f9c10e5669fd2b9306bf59235413e79e",
+    "hg05_seeds_core_140.csv": "b425fe7ae6b0d00e0edef263145922057f38ac5816c3d190fd40aa729e1b7a6b",
+    "hg05_seeds_native_1024.csv": "6232779bf85fcc85c49c83436923e641160c1b95efdaf2ee31656eb8a041b99b",
+    "hg05_seeds_native_512.csv": "2c69f1aaa65f15a925b50501e6716e4ff08f87e25e0dc9db2620376494c35f81",
+    "hg05_seeds_padded_1024.csv": "1ad3b2c26c553237ff2b916c590205ce668b74fd8089a645ed577b07db4729e9",
+    "hg05_seeds_padded_512.csv": "9bd87ba11e471089b4a65bfa9cc8ab8af59170bdda82b1d9d6eda8b704b5807b"
+  }
+}
