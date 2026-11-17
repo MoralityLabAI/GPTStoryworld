@@ -1,0 +1,44 @@
+name: storyworld-hypergames-hg08-causal
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg08.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg08.yml'
+  workflow_dispatch:
+jobs:
+  cpu-causal-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PyTorch CPU test dependencies
+        run: |
+          python -m pip install numpy==2.3.5
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Exact intervention and recurrent interface unit tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p '*causal.py' -q
+      - name: Independently enumerate HG08 mathematics
+        run: PYTHONPATH=src python scripts/verify_hg08_causal.py
+      - name: Recreate and checksum all 24 public intervention seeds
+        run: PYTHONPATH=src python scripts/run_hg08_cpu.py --skip-neural --check --out output/evaluation_hypergames/hg08
+      - name: Audit 48 archived PyTorch runs, calibration and source hashes
+        run: PYTHONPATH=src python scripts/verify_hg08_neural_receipt.py --out output/evaluation_hypergames/hg08
+      - name: Publish complete public seed replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: hg08-public-intervention-seed-replay
+          path: |
+            verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg08/hg08_intervention_*.csv
+            verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg08/hg08_neural_*.csv
+            verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg08/*summary.json
+          if-no-files-found: error

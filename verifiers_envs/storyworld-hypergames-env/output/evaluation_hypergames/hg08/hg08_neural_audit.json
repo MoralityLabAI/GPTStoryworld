@@ -1,0 +1,25 @@
+{
+  "all_passed": true,
+  "checks": {
+    "48_registered_neural_fits": true,
+    "all_models_abstain_as_observed": true,
+    "archived_neural_csv_sha256": true,
+    "calibration_only_release": true,
+    "causal_masks_certified_independently": true,
+    "false_accepts_recomputed": true,
+    "frozen_training_budget": true,
+    "matching_256_example_splits": true,
+    "privileged_and_causal_agree": true,
+    "public_source_hashes_current": true,
+    "recomputed_group_summary": true,
+    "recurrent_parameters_matched": true,
+    "registered_H5_failure_preserved": true,
+    "registered_grid": true,
+    "six_public_seeds": true,
+    "true_utility_recomputed": true
+  },
+  "interpretation": "source-hash and arithmetic recheck of frozen neural result; no cross-hardware weight-bit identity claimed",
+  "public_csv_sha256": "26b74a129624702ff1614fcda98364ea6b7ac480188b4090bda308126b117a6f",
+  "rows": 48,
+  "schema": "HG-08/neural-receipt-audit-v1"
+}
