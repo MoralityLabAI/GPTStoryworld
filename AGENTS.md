@@ -5,6 +5,10 @@ This repo is a mixed storyworld research monorepo. It contains active Python env
 
 The root README is only partially current. Start from the code and the nearest package README, not from repo-level assumptions.
 
+## Hypergames and evaluation power
+
+Before training or grading new Hypergames, Storyworld, or mechanistic-intervention runs, read the [EvalMath mechanistic-power skill](https://github.com/MoralityLabAI/EvalMath/tree/main/skills/evalmath-mechinterp-power). Identify independent generator worlds, calibrate matched-sham variation, declare a minimum meaningful causal change, count all comparisons, and screen prospective statistical resolution before using 64/256 repeated outcomes as evidence. Preserve raw per-world receipts and untouched held-out worlds. Treat symbolic GF(2) ceilings separately from neural mechanistic discovery; HG-07/08/09 illustrate this distinction.
+
 ## Canonical Areas
 - `storyworld/`
   - Active diplomacy/storyworld environment code.
