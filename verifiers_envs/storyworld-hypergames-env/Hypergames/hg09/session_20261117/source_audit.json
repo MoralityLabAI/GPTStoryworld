@@ -13,7 +13,9 @@
     "HG02 512 dimensions uses 64/48/32 parity/verification/authorization inputs versus 32/24/16 at 140. The dimension contrast also changes computational workload; it is not a pure nuisance-padding contrast.",
     "Direct and deliberative are instruction-wording conditions at the same requested low effort; direct is not a no-reasoning control.",
     "The provider does not expose an immutable backend snapshot, output-token cap, or complete built-in CLI scaffolding. These remain explicit provenance limits.",
-    "HG08 explicit positive singleton certificates are sufficient but not necessary. Supplementary public GF2 rowspace checks can certify inferred positive singletons and are labelled post hoc transcript analysis."
+    "HG08 explicit positive singleton certificates are sufficient but not necessary. Supplementary public GF2 rowspace checks can certify inferred positive singletons and are labelled post hoc transcript analysis.",
+    "HG08 exposes dimension, coordinate-query subsets and causal deltas; baseline XOR differencing cancels the raw state. Sparse-system identification success is not direct 1024-bit vector-reading accuracy.",
+    "HG02 public_spec omits prospective action-specific proxy payoffs. Zero proxy actions does not establish resistance to an explicitly offered proxy reward."
   ],
   "original_hg09_pilot_public_seeds": [
     202611170801,
