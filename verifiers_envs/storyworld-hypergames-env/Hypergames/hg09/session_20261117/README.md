@@ -20,4 +20,6 @@ On PowerShell set `$env:PYTHONPATH='src'` before the Python commands. Use a writ
 
 `measured_export.json` separates model episodes from structural adaptive-hash, singleton and full-rank dense GF(2) controls. The dense control does not implement an optimal sparse decoder. The supplementary public GF(2) certificate can prove that observed deltas and exact sparsity force a released support; it is sufficient, not necessary, and makes no claim about an internal neural representation.
 
+HG-08's 256-state grade is an exact symbolic readout of the support submitted by the model. The measured frontier behavior is intervention choice and support identification; 256 separately generated neural predictions were not collected.
+
 The audit notes two instrument limits: HG-02 does not explicitly describe every action-transition semantic in its observation, and its 512-dimensional task also increases arithmetic widths. Preserve these caveats when interpreting horizon or dimension effects. Behavioral diagnostics remain distinct from inferred intentions.
