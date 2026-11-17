@@ -114,10 +114,10 @@
     },
     {
       "id": "H2",
-      "outcome": "world macro causal-selectivity difference, sparse compiled vs scrambled support; selectivity=(prediction flip for true-support intervention)-(prediction flip for irrelevant intervention)",
+      "outcome": "World-macro binary causal-selectivity success (prediction flips on the chosen true-support bit and remains invariant under the chosen irrelevant bit), sparse compiled minus disjoint six-support sham; all 256 paired test states per world",
       "direction": "positive",
       "minimum_effect": "0.50",
-      "target_effect": "0.95",
+      "target_effect": "1.00",
       "alpha_familywise": "0.05",
       "adjusted_for": 2,
       "test": "FSI-01 world-level sign flip; conservative effect floor"
@@ -137,5 +137,6 @@
     "source_hashed_results": true,
     "holdout_sham_calibration": true,
     "independent_ci": true
-  }
+  },
+  "amendment": "Pre-data clarification: causal selectivity is a binary per-state paired outcome in [0,1] suitable for FSI-01; replaces difference of two rates in [-2,2]. No results were generated before this amendment."
 }
