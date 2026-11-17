@@ -1,0 +1,112 @@
+{
+  "schema": "HG-08/prospective-independent-world-v1",
+  "registration_date": "2026-11-17",
+  "parent": "HG-07 public CPU neural parity",
+  "evidence_scope": "new synthetic generator-world sample; independent from HG03 private seeds and HG07 2026111771..76",
+  "dataset": "deterministic Python SHA256 keyed PRNG, same six-sparse parity family as HG07",
+  "seeds": [
+    2026112801,
+    2026112802,
+    2026112803,
+    2026112804,
+    2026112805,
+    2026112806,
+    2026112807,
+    2026112808,
+    2026112809,
+    2026112810,
+    2026112811,
+    2026112812,
+    2026112813,
+    2026112814,
+    2026112815,
+    2026112816,
+    2026112817,
+    2026112818,
+    2026112819,
+    2026112820,
+    2026112821,
+    2026112822,
+    2026112823,
+    2026112824,
+    2026112825,
+    2026112826,
+    2026112827,
+    2026112828,
+    2026112829,
+    2026112830,
+    2026112831,
+    2026112832
+  ],
+  "cohort": "core_140",
+  "goal_rank": 1,
+  "goal_width": 6,
+  "split_counts": {
+    "train": 2048,
+    "calibration": 256,
+    "test": 256
+  },
+  "trained_arms": [
+    "flat_task",
+    "loop_task",
+    "loop_true_fragment_aux"
+  ],
+  "training": {
+    "optimizer": "AdamW",
+    "lr": "0.003",
+    "weight_decay": "0.001",
+    "steps": 350,
+    "batch": 128,
+    "width": 64,
+    "model": "HG07 frozen RawNet",
+    "recurrent_steps": 3,
+    "device": "cpu",
+    "threads": 2
+  },
+  "heldout_policy": "Model architecture and optimizer fixed; train all three arms and freeze logits before inspecting test outcomes; calibration-only Laplace release q=(correct+1)/258 > 3/5; score test once; never choose model/seed based on test",
+  "primary_hypotheses": [
+    {
+      "id": "H1",
+      "comparison": "loop_task direct > flat_task direct",
+      "metric": "world-mean paired correct fraction (32 independent worlds)",
+      "analysis": "two-sided sign flip of per-world paired accuracy differences, Monte Carlo with recorded RNG 20261117, Bonferroni family 2",
+      "alpha": "0.025",
+      "minimum_effect": "0"
+    },
+    {
+      "id": "H2",
+      "comparison": "loop_true_fragment_aux composed > loop_task direct",
+      "metric": "world-mean paired correct fraction (32 independent worlds)",
+      "analysis": "same familywise test and bootstrap",
+      "alpha": "0.025",
+      "minimum_effect": "0"
+    }
+  ],
+  "controls": [
+    "GF2 exact full rank structural solver; correct parity-family prior",
+    "256-state paired scoring within world, identical train batches and training steps for all neural arms",
+    "Calibration vs test release discordance",
+    "Privileged fragment loss known to auxiliary only"
+  ],
+  "root_unit": "world seed (32); 256 test states are correlated within each world",
+  "analysis_policy": {
+    "alpha_familywise": "0.05",
+    "comparison_count": 2,
+    "cluster_bootstrap_resamples": 4096,
+    "signflip_simulations": 20000,
+    "resample_seed": 20261117,
+    "min_independent_worlds": 20,
+    "sealed_readout": true,
+    "preregistered": true
+  },
+  "result_paths": [
+    "output/evaluation_hypergames/hg08/hg08_world_rows.csv",
+    "output/evaluation_hypergames/hg08/hg08_fsi01.json"
+  ],
+  "exclusions": [
+    "HG03_private_seeds_20261116.json",
+    "ARG03-N sealed 168-case test",
+    "pretrained Qwen or narrative Storyworld behavior"
+  ],
+  "compute": "Use local CPU if available. The GPU and external model are outside this registration."
+}
