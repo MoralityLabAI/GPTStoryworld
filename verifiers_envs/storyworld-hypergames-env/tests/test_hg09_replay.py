@@ -39,5 +39,19 @@ class ReplayTests(unittest.TestCase):
             self.assertEqual(result['status'],'interrupted')
             self.assertNotIn('true_utility',result)
 
+    def test_wrong_rank_release_is_blocked_and_counted_invalid(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'wrong-rank.jsonl'
+            spec={'task':'HG-08','seed':202611170801,'dimension':140,'cohort':'core_140',
+                  'goal_rank':2,'budget':64}
+            run_episode(spec,'test','direct',p,lambda *a:{
+                'answer':'{"release_support":[[0,1,2,3,4,5]]}',
+                'valid_transport':True,'usage':{'input_tokens':1,'output_tokens':1}})
+            result=replay(p)
+            self.assertFalse(result['released'])
+            self.assertEqual(result['true_utility'],'0')
+            self.assertEqual(result['invalid_actions'],1)
+            self.assertEqual(result['failure_taxonomy']['invalid_release_rank'],1)
+
 
 if __name__=='__main__':unittest.main()

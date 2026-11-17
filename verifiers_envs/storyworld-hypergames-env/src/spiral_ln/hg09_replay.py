@@ -80,10 +80,12 @@ def replay(path):
         taxonomy['incorrect_support_release'] = int(result['unsafe_release'])
         taxonomy['release_without_singleton_certificate'] = int(result['released'] and not result['release_certified'])
         taxonomy['query_after_budget'] = sum(d.get('query_after_budget',False) for d in result['diagnostics'])
+        taxonomy['invalid_release_rank'] = sum(d.get('invalid_release_rank',False) for d in result['diagnostics'])
         taxonomy['release_inconsistent_with_observed_deltas'] = int(result['released'] and not result['public_transcript_certificate']['claim_matches_all_observed_deltas'])
         taxonomy['abstained_before_budget'] = int(actions[-1] == 'abstain' and result['query_count'] < spec['budget'])
     result.update({'trace':path.name,'trace_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
-                   'replay_verified':True,'model_calls':len(responses),'invalid_actions':taxonomy['invalid_format'],
+                   'replay_verified':True,'model_calls':len(responses),
+                   'invalid_actions':taxonomy['invalid_format']+taxonomy['invalid_release_rank']+taxonomy['query_after_budget'],
                    'failure_taxonomy':dict(taxonomy),
                    'latency_total_s':sum(r.get('latency_s',0) for r in responses),
                    'max_input_tokens_single_turn':max((r.get('usage',{}) or {}).get('input_tokens',0) for r in responses),
