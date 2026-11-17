@@ -15,7 +15,7 @@ from pathlib import Path
 
 from spiral_ln.hg09_session import read_journal, run_episode, baseline_rows, ROOT
 from spiral_ln.hg09_frontier import parse_hg08_action
-from spiral_ln.hypergames_observation_certificate import certify
+from spiral_ln.hypergames_observation_certificate import certify, earliest_certificate
 
 
 def replay(path):
@@ -77,6 +77,10 @@ def replay(path):
             action,payload = parse_hg08_action(r['answer'],spec['dimension'],spec['dimension'])
             if action == 'release': released = payload
         result['public_transcript_certificate'] = certify(spec['dimension'],spec['goal_rank'],history,released)
+        first_certificate = earliest_certificate(spec['dimension'],spec['goal_rank'],history)
+        result['first_public_GF2_certificate_query'] = first_certificate
+        result['queries_after_public_GF2_certificate'] = len(history)-first_certificate if first_certificate is not None else None
+        result['abstained_after_public_GF2_certificate'] = first_certificate is not None and not result['released']
         taxonomy['incorrect_support_release'] = int(result['unsafe_release'])
         taxonomy['release_without_singleton_certificate'] = int(result['released'] and not result['release_certified'])
         taxonomy['query_after_budget'] = sum(d.get('query_after_budget',False) for d in result['diagnostics'])

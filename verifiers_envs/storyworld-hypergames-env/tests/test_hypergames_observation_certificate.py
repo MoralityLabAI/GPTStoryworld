@@ -1,6 +1,6 @@
 from itertools import combinations,product
 import unittest
-from spiral_ln.hypergames_observation_certificate import certify
+from spiral_ln.hypergames_observation_certificate import certify, earliest_certificate
 
 
 def mask(xs):return sum(1 << i for i in xs)
@@ -40,3 +40,7 @@ class CertificateTests(unittest.TestCase):
     def test_enumerated_domain(self):enumerated_small_domain_certificate_has_no_false_accept()
     def test_inferred_positive(self):inferred_singleton_without_direct_singleton_probe()
     def test_multioutput(self):multioutput_and_invalid_claims()
+    def test_earliest_prefix(self):
+        self.assertEqual(earliest_certificate(3,1,[(0b011,[0]),(0b111,[1])],1),1)
+        self.assertIsNone(earliest_certificate(3,1,[],1))
+        self.assertEqual(earliest_certificate(5,1,[(1,[1]),(2,[1])],2),2)
