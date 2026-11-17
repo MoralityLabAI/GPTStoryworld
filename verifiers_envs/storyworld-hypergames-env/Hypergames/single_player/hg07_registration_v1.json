@@ -1,0 +1,87 @@
+{
+  "schema": "HG-07/raw-state-recurrent-v1",
+  "frozen_date_utc": "2026-11-17",
+  "github_repo": "MoralityLabAI/GPTStoryworld",
+  "hg06_parent_commit": "23f562aa7a2fbde658ebb1340f39027395463f65",
+  "evalmath_parent_commit": "0a3d4ff98075ef44eeb5b47a1265972fceddea38",
+  "experiment_class": "prospective public synthetic CPU experiment, not neural model weights trained on GPTStoryworld narrative or private HG-03 seeds",
+  "evaluation_seeds": [
+    2026111771,
+    2026111772,
+    2026111773,
+    2026111774,
+    2026111775,
+    2026111776
+  ],
+  "development_seeds": [
+    2026111701,
+    2026111702
+  ],
+  "cohorts": [
+    "core_140",
+    "padded_512",
+    "native_512"
+  ],
+  "goal_ranks": [
+    1,
+    2
+  ],
+  "goal_width": 6,
+  "fragment_count_per_goal": 3,
+  "fragment_width": 2,
+  "training_sizes": [
+    512,
+    2048
+  ],
+  "calibration_size": 256,
+  "test_size": 256,
+  "training_steps": 350,
+  "batch_size": 128,
+  "hidden_width": 64,
+  "recurrent_steps": 3,
+  "optimizer": "AdamW lr=0.003 weight_decay=0.001; torch CPU float32; RNG isolated per run; all arms same train batches and update budget; set_num_threads(2)",
+  "feature_generation": "six disjoint target coordinates per goal; 3 disjoint pairs per goal; raw binary x only in task prompts; true fragment labels only for privileged auxiliary arm",
+  "input_generation": "512-bit Random seeded by HG07/data/seed/split/index then mask to d; share low 140 coordinates for core_140 and padded_512; native_512 target supports sampled from full 512",
+  "model_arms": [
+    "linear_task",
+    "flat_task",
+    "loop_task",
+    "loop_true_fragment_aux",
+    "loop_shuffled_fragment_aux"
+  ],
+  "model_definition": "all hidden neural arms have same input+shared-cell+two-head parameters, flat applies cell once and loop applies tied cell three times; linear model is separate transparent baseline; auxiliary loss weight 1.0; direct goal-head readout for all; composed XOR-fragment readout reported separately for both auxiliary arms",
+  "policy": "Laplace calibration q=(joint_correct+1)/(256+2); release iff q>3/5; correct +10, incorrect -15, abstain 0; grade on held-out test only",
+  "reference_controllers": [
+    "exact_GF2_train_solve_with_abstention_if_target_underdetermined",
+    "privileged_true_goal_oracle",
+    "100 independent rank-k random six-sparse parity bases with sign fitted on same train labels"
+  ],
+  "random_controls": 100,
+  "random_control_budget": "100 seeded rank-k random parity guesses, label-budget and output-rank matched, not gradient-update-compute matched",
+  "primary_metrics": [
+    "direct_goal_joint_accuracy",
+    "direct_goal_per_bit_accuracy",
+    "composed_fragment_joint_accuracy",
+    "aux_fragment_accuracy",
+    "calibrated_release_rate",
+    "false_accept_count",
+    "true_utility",
+    "GF2_solution_rank",
+    "random_rank_p"
+  ],
+  "hypotheses": {
+    "H1": "For n=2048 and core_140 k=1, loop_true_fragment_aux composed readout beats loop_task direct readout on at least 4/6 paired seeds",
+    "H2": "For n=2048 and core_140 k=1, loop_task direct readout beats flat_task on at least 4/6 paired seeds",
+    "H3": "For n=2048, each trained model arm's core_140 and padded_512 outcomes differ by less than 0.05 absolute joint accuracy on at least 4/6 paired k=1 seeds (representation robustness)",
+    "H4": "Exact GF2 learner at n=2048 achieves 256/256 accuracy on all registered evaluation seeds/cohorts/ranks"
+  },
+  "safeguards": [
+    "registration commit before development/evaluation data generation",
+    "no private HG-03 seeds",
+    "no test labels in fitting, model selection or calibration",
+    "separate model-visible observation and grader",
+    "per-seed paired results",
+    "report failures and abstentions",
+    "no neural claims beyond trained toy parity environment"
+  ]
+}
