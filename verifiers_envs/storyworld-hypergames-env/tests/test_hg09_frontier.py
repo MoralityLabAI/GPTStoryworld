@@ -98,12 +98,13 @@ class SummaryTests(unittest.TestCase):
         got=summarize({'schema':'HG-09/frontier-crossmodel-v1','results':[
             {'model_tag':'fake','provider':'openai','model':'id','task':'HG-02','true_utility':9,
              'safe_success':True,'false_accept':False,'usage':{'input_tokens':5,'output_tokens':6},'errors':[],
-             'turns':[{'provider_output':{'reasoning_summary':['summarized']}}]},
+             'turns':[{'format_valid':True,'provider_output':{'reasoning_summary':['summarized']}}]},
             {'model_tag':'fake','provider':'openai','model':'id','task':'HG-02','true_utility':-15,
              'safe_success':False,'false_accept':True,'usage':{'input_tokens':7,'output_tokens':8},'errors':['bad'],
-             'turns':[{'provider_output':{'reasoning_summary':[]}}]}
+             'turns':[{'format_valid':True,'provider_output':{'reasoning_summary':[]}}]}
         ]})
-        self.assertEqual(got[0]['mean_true_utility'],-3)
-        self.assertEqual(got[0]['false_accepts'],1)
+        self.assertEqual(got[0]['mean_true_utility_valid'],9)
+        self.assertEqual(got[0]['false_accepts_valid'],0)
+        self.assertEqual(got[0]['episodes_with_errors'],1)
         self.assertEqual(got[0]['reasoning_artifacts'],1)
         self.assertEqual(got[0]['input_tokens'],12)

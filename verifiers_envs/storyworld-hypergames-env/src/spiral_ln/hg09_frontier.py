@@ -259,6 +259,9 @@ def run_cli(argv=None,dispatch=call_model):
         print('dry-run: validated configuration only; --live is required for API calls')
         return 0
     if args.max_usd<=0 or args.max_calls<=0:raise SystemExit('live runs require positive --max-usd and --max-calls')
+    needed={'openai':'OPENAI_API_KEY','anthropic':'ANTHROPIC_API_KEY','gemini':'GEMINI_API_KEY','openrouter':'OPENROUTER_API_KEY'}
+    absent=sorted({needed[m.provider] for m in models if not os.getenv(needed[m.provider])})
+    if absent:raise SystemExit('missing provider API credentials: '+', '.join(absent)+'; remove unavailable providers from config')
     if args.out.exists():raise SystemExit('output exists; choose a new path (append-only receipts)')
     args.out.parent.mkdir(parents=True,exist_ok=True)
     spent=0.0;calls=0;items=[]
