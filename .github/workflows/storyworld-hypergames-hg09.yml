@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - 'verifiers_envs/storyworld-hypergames-env/src/spiral_ln/hg09_*.py'
+      - 'verifiers_envs/storyworld-hypergames-env/src/spiral_ln/hypergames_*certificate.py'
+      - 'verifiers_envs/storyworld-hypergames-env/tests/test_hypergames_*certificate.py'
       - 'verifiers_envs/storyworld-hypergames-env/tests/test_hg09*.py'
       - 'verifiers_envs/storyworld-hypergames-env/Hypergames/hg09/**'
       - 'verifiers_envs/storyworld-hypergames-env/Hypergames/single_player/HG09_PROTOCOL.md'
@@ -15,7 +17,7 @@ on:
 jobs:
   mock-preflight:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     defaults:
       run:
         working-directory: verifiers_envs/storyworld-hypergames-env
@@ -29,7 +31,7 @@ jobs:
       - name: Dry-run configuration, no API calls
         run: PYTHONPATH=src python -m spiral_ln.hg09_frontier --config Hypergames/single_player/models_hg09.json --out output/hg09_no_call.json --task hg02
       - name: Enumerate public GF2 certificate soundness cases
-        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_hypergames_observation_certificate.py' -q
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_hypergames_*certificate.py' -q
       - name: Replay actual public model actions without inference
         run: |
           PYTHONPATH=src python -m spiral_ln.hg09_replay --traces Hypergames/hg09/session_20261117/traces --registration Hypergames/hg09/session_20261117/registration.json --out output/hg09_replayed.json

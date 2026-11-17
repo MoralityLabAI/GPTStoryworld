@@ -16,6 +16,7 @@ from pathlib import Path
 from spiral_ln.hg09_session import read_journal, run_episode, baseline_rows, ROOT
 from spiral_ln.hg09_frontier import parse_hg08_action
 from spiral_ln.hypergames_observation_certificate import certify, earliest_certificate
+from spiral_ln.hypergames_sparse_certificate import decode, first_unique_prefix
 
 
 def replay(path):
@@ -81,6 +82,14 @@ def replay(path):
         result['first_public_GF2_certificate_query'] = first_certificate
         result['queries_after_public_GF2_certificate'] = len(history)-first_certificate if first_certificate is not None else None
         result['abstained_after_public_GF2_certificate'] = first_certificate is not None and not result['released']
+        sparse=decode(spec['dimension'],spec['goal_rank'],history)
+        first_sparse=first_unique_prefix(spec['dimension'],spec['goal_rank'],history,final=sparse)
+        unique_masks=tuple(sum(1<<i for i in o['witness_supports'][0]) for o in sparse['outputs']) if sparse['status']=='unique' else None
+        result['exact_sparse_certificate']=sparse
+        result['first_unique_sparse_prefix_query']=first_sparse
+        result['queries_after_unique_sparse_prefix']=len(history)-first_sparse if first_sparse is not None else None
+        result['release_matches_unique_sparse_goal']=sparse['status']=='unique' and released==unique_masks
+        result['no_valid_release_despite_unique_sparse_transcript']=sparse['status']=='unique' and not result['released']
         taxonomy['incorrect_support_release'] = int(result['unsafe_release'])
         taxonomy['release_without_singleton_certificate'] = int(result['released'] and not result['release_certified'])
         taxonomy['query_after_budget'] = sum(d.get('query_after_budget',False) for d in result['diagnostics'])
@@ -108,10 +117,23 @@ def export(traces, registration):
     for row in episodes:
         spec = {k:row[k] for k in ('task','seed','dimension','horizon','hidden_mode','cohort','goal_rank','budget') if k in row}
         if spec not in specs: specs.append(spec)
+    controls=baseline_rows(specs)
+    posthoc=[]
+    for row in controls:
+        history=[(int(mask,16),answer) for mask,answer in row['transcript']]
+        decoded=decode(row['dimension'],row['goal_rank'],history)
+        first=first_unique_prefix(row['dimension'],row['goal_rank'],history,final=decoded)
+        posthoc.append({k:row[k] for k in ('task','seed','cohort','dimension','goal_rank','budget','query_count')} | {
+            'query_policy':row['policy'],'evidence_class':'synthetic structural baseline',
+            'readout':'posthoc exact sparse GF2; not a frontier-model score',
+            'decoder_status':decoded['status'], 'original_controller_released':bool(row['release']),
+            'first_unique_sparse_prefix_query':first,
+            'certified_symbolic_utility':'10' if decoded['status']=='unique' else '0' if decoded['status']=='ambiguous_at_least_two' else None,
+            'decoder':decoded})
     return {'schema':'HG09/public-measured-export/v1',
             'registration_sha256':hashlib.sha256(registration.read_bytes()).hexdigest(),
             'registered_source_sha256':hashes,'episodes':episodes,
-            'structural_baselines':baseline_rows(specs),
+            'structural_baselines':controls,'posthoc_structural_readouts':posthoc,
             'scope':'Actual CLI model responses replayed offline. Structural algorithm baselines are separate synthetic controls. No API requests in this export.'}
 
 
