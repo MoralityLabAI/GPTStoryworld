@@ -41,6 +41,31 @@ class ReplayTests(unittest.TestCase):
             self.assertNotIn('true_utility',result)
             self.assertEqual(result['requests_without_reported_usage'],1)
 
+    def test_interrupted_export_preserves_observed_transport_evidence(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td)/'partial.jsonl'
+            journal=Journal(p)
+            journal.write({'type':'episode_start','task':'HG-02','seed':17,'dimension':140,
+                           'horizon':4,'hidden_mode':0,'model':'test','condition':'direct','effort':'low'})
+            journal.write({'type':'request','turn':1,'prompt':'public'})
+            journal.write({'type':'response','turn':1,'answer':'','valid_transport':False,
+                           'usage':{'input_tokens':11,'output_tokens':5,'reasoning_output_tokens':2},
+                           'latency_s':1.5,'tool_calls':[{'type':'unexpected_tool'}],
+                           'provider_exposed_reasoning':[{'text':'provider summary'}]})
+            journal.write({'type':'request','turn':2,'prompt':'public \u0394'})
+            journal.close()
+            result=replay(p)
+            self.assertNotIn('true_utility',result)
+            self.assertEqual(result['model_calls'],1)
+            self.assertEqual(result['observed_requests'],2)
+            self.assertEqual(result['requests_without_reported_usage'],1)
+            self.assertEqual(result['usage']['input_tokens'],11)
+            self.assertEqual(result['latency_total_s'],1.5)
+            self.assertEqual(result['max_input_tokens_single_turn'],11)
+            self.assertEqual(result['max_task_prompt_utf8_bytes'],len('public \u0394'.encode('utf-8')))
+            self.assertEqual(result['tool_events'],1)
+            self.assertEqual(result['exposed_reasoning_items'],1)
+
     def test_wrong_rank_release_is_blocked_and_counted_invalid(self):
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'wrong-rank.jsonl'

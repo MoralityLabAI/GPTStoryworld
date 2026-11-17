@@ -19,6 +19,18 @@ from spiral_ln.hypergames_observation_certificate import certify, earliest_certi
 from spiral_ln.hypergames_sparse_certificate import decode, first_unique_prefix
 
 
+def _transport_metrics(requests, responses):
+    """Report only saved transport evidence, including unfinished episodes."""
+    return {
+        'model_calls':len(responses),
+        'requests_without_reported_usage':len(requests)-sum(r.get('usage') is not None for r in responses),
+        'latency_total_s':sum(r.get('latency_s',0) for r in responses),
+        'max_input_tokens_single_turn':max(((r.get('usage') or {}).get('input_tokens',0) for r in responses),default=0),
+        'max_task_prompt_utf8_bytes':max((r.get('prompt_utf8_bytes',len(r['prompt'].encode('utf-8'))) for r in requests),default=0),
+        'tool_events':sum(len(r.get('tool_calls',[])) for r in responses),
+        'exposed_reasoning_items':sum(len(r.get('provider_exposed_reasoning',[])) for r in responses)}
+
+
 def replay(path):
     rows = read_journal(path)
     start = rows[0]
@@ -30,7 +42,7 @@ def replay(path):
             'type','schema','previous_sha256','record_sha256','timestamp_utc')} | {
             'status':'interrupted', 'trace':path.name, 'trace_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
             'observed_requests':len(requests),'observed_responses':len(responses),
-            'requests_without_reported_usage':len(requests)-sum(r.get('usage') is not None for r in responses),
+            **_transport_metrics(requests,responses),
             'usage':{k:sum((r.get('usage') or {}).get(k,0) for r in responses) for k in (
                 'input_tokens','output_tokens','reasoning_output_tokens')},
             'errors':['process interrupted before final grade']}
@@ -98,15 +110,9 @@ def replay(path):
         taxonomy['release_inconsistent_with_observed_deltas'] = int(result['released'] and not result['public_transcript_certificate']['claim_matches_all_observed_deltas'])
         taxonomy['abstained_before_budget'] = int(actions[-1] == 'abstain' and result['query_count'] < spec['budget'])
     result.update({'trace':path.name,'trace_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
-                   'replay_verified':True,'model_calls':len(responses),
-                   'requests_without_reported_usage':sum(r.get('usage') is None for r in responses),
+                   'replay_verified':True,**_transport_metrics(requests,responses),
                    'invalid_actions':taxonomy['invalid_format']+taxonomy['invalid_release_rank']+taxonomy['query_after_budget'],
-                   'failure_taxonomy':dict(taxonomy),
-                   'latency_total_s':sum(r.get('latency_s',0) for r in responses),
-                   'max_input_tokens_single_turn':max((r.get('usage',{}) or {}).get('input_tokens',0) for r in responses),
-                   'max_task_prompt_utf8_bytes':max(r['prompt_utf8_bytes'] for r in requests),
-                   'tool_events':sum(len(r.get('tool_calls',[])) for r in responses),
-                   'exposed_reasoning_items':sum(len(r.get('provider_exposed_reasoning',[])) for r in responses)})
+                   'failure_taxonomy':dict(taxonomy)})
     return result
 
 
