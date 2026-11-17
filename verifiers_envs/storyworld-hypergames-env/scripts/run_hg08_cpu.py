@@ -56,8 +56,9 @@ def main():
             with tempfile.TemporaryDirectory() as td:
                 gen=Path(td)/'hg08_intervention_seed_rows.csv'
                 write_rows(rows,gen)
-                if filehash(gen)!=filehash(path):
-                    raise SystemExit('HG08 exact CPU intervention replay differs')
+                committed_digest=json.loads((out/'hg08_intervention_summary.json').read_text('utf8'))['intervention_seed_csv_sha256']
+                if filehash(gen)!=committed_digest:
+                    raise SystemExit('HG08 exact CPU intervention replay differs from pinned full-census SHA256')
                 report['intervention_seed_csv_sha256']=filehash(gen)
                 cohort_digests={}
                 for cohort in COHORTS:

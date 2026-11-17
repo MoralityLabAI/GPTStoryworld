@@ -1810,7 +1810,7 @@
   "schema": "HG-08/active-causal-v1",
   "scope": "public synthetic causal XOR intervention oracle; no trained neural model",
   "source_sha256": {
-    "scripts/run_hg08_cpu.py": "4f941baec9c0d1bd1f79325a3a5d9d7c3c3de7aa903a60102fedc2a3f301edd9",
+    "scripts/run_hg08_cpu.py": "675b2820e24ee01c6c13b08d67f2acaf8be898466cbf8a08bdf0af05dbb0a536",
     "scripts/verify_hg08_causal.py": "342c63bdb7683a9c684c199ebb2eeb09cd996d4277bc87e8cde8d175b4c02430",
     "src/spiral_ln/evaluation_hypergames_causal.py": "aa5f556745bbf5efd809f6e80ee31faeb536f4f3cb4207be67ff2534997ae6c6",
     "src/spiral_ln/hypergames_active_causal.py": "bd8af545b039099f4fd69c23d47c73ede5226088eeac325b7d77e7f0c3b3a37b",
