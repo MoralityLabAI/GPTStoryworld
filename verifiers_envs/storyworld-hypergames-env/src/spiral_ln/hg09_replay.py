@@ -63,6 +63,12 @@ def replay(path):
         taxonomy['abstention_with_positive_bellman_continuation'] = sum(
             a == 'abstain' and Fraction(d['bellman_action_regret']) > 0
             for a,d in zip(actions,result['diagnostics']))
+        result['behavioral_checks'] = {
+            field: {'attempts':sum(field+'_correct' in d for d in result['diagnostics']),
+                    'correct':sum(d.get(field+'_correct') is True for d in result['diagnostics'])}
+            for field in ('route','verification','authorization')}
+        result['audit_actions'] = actions.count('audit')
+        result['publish_actions'] = actions.count('publish')
     elif result['status'] == 'complete':
         history = [(sum(1 << i for i in r['query_indices']),r['goal_delta'])
                    for r in rows if r['type'] == 'public_tool_response']
