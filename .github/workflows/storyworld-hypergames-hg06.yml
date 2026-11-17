@@ -1,0 +1,34 @@
+name: storyworld-hypergames-hg06
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg06.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg06.yml'
+  workflow_dispatch:
+jobs:
+  public-cpu-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify exact mathematics and synthetic runner tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_*composition.py' -q
+      - name: Reproduce all 24 public development seeds
+        run: PYTHONPATH=src python scripts/run_hg06_cpu.py --workers 2 --out output/evaluation_hypergames/hg06_ci
+      - name: Compare all public data hashes and source receipts
+        run: PYTHONPATH=src python scripts/check_hg06_manifest.py --out output/evaluation_hypergames/hg06_ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hg06-full-public-cpu-replay
+          path: verifiers_envs/storyworld-hypergames-env/output/evaluation_hypergames/hg06_ci/
+          retention-days: 30

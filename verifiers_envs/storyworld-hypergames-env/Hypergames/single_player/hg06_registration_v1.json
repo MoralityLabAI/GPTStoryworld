@@ -1,0 +1,84 @@
+{
+  "schema": "HG-06/compositional-parity-v1",
+  "frozen_utc": "2026-11-17",
+  "evidence_scope": "public synthetic CPU development data; no Qwen weights, HG-03 private seeds, or real agent",
+  "base_gptstoryworld_commit": "deb73e184c72c51a9a8597395c18349425ef619b",
+  "base_evalmath_commit": "3d69c0b81ffc44adf08c53b90d658db5b4f3b654",
+  "seed_start": 202611170600,
+  "seed_count": 24,
+  "cohorts": [
+    "core_140",
+    "padded_512",
+    "native_512",
+    "padded_1024",
+    "native_1024"
+  ],
+  "goal_ranks": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "goal_width": 6,
+  "fragments_per_goal": 3,
+  "fragment_width": 2,
+  "dictionary_pools": [
+    "fixed",
+    "ambient"
+  ],
+  "fixed_decoy_formula": "6*k",
+  "ambient_decoy_formula": "max(6*k, floor(d/32))",
+  "dictionary_construction": "k independent 6-sparse target masks split into three disjoint 2-sparse pair fragments; no 6-sparse target row present; 2-sparse decoy rows use nuisance coordinates outside all target supports; seed-shuffled rows",
+  "ablation": "omit one true 2-sparse fragment per output, replace with nuisance-only pair, preserve dictionary size; certify rank deficiency of k",
+  "train_sizes": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "calibration_size": 32,
+  "test_size": 128,
+  "random_triples": 100,
+  "arms": [
+    "privileged_goal_oracle",
+    "task_xor1",
+    "task_xor2",
+    "task_xor3",
+    "missing_component_xor3",
+    "shuffled_label_xor3",
+    "random_rank_matched_100"
+  ],
+  "task_only_search": "choose training-exact XOR of 3 distinct dictionary fragments; rank select by stable dictionary order, prefer uncomplemented exact match; no test/calibration data for fitting",
+  "xor1_xor2": "enumerate all 1 and 2 fragment XORs, choose minimum training error with optional complement, stable ties",
+  "random_control": "100 seeded independent draws with replacement, each selects k independent 3-fragment XOR masks; fit one per-output sign from training labels; random selection does not optimize labels",
+  "input_sampling": "independent train/cal/test streams; each sampled 1024-bit source truncated to cohort dimension, holding low 140 bits identical across core/padded cohorts",
+  "decision_gate": "release if (calibration_joint_correct+1)/(32+2) > 3/5; payoff +10 correct, -15 incorrect, 0 abstain; 128 independent test examples",
+  "primary_metrics": [
+    "exact_code_test_accuracy",
+    "per_bit_test_accuracy",
+    "calibrated_true_utility",
+    "false_accept",
+    "calibration_release",
+    "rank_deficiency",
+    "random_100_pvalue",
+    "training_ambiguity_count",
+    "misidentification_bound"
+  ],
+  "controls": [
+    "equal_train_labels_all_arms",
+    "equal_dictionary_size_for_missing_component",
+    "shuffled_labels_same_compositional_search",
+    "random_rank_matched_100",
+    "fixed_pool_nested_padding"
+  ],
+  "registered_gates": {
+    "structural": "every candidate feature has Hamming weight 2, every target weight 6, goals rank k; full dictionary has rank deficiency 0, ablated dictionary has deficiency k",
+    "paired_padding": "fixed-pool task_xor1,task_xor2,task_xor3 predictions and release decisions identical core140/padded512/padded1024 for all 24 seeds, k, train sizes",
+    "compositional_recovery": "with 64 training labels, task_xor3 exact test-code accuracy 128/128 in >=20 of 24 seeds for each k on core140 fixed-pool",
+    "xor3_beats_xor2": "with 64 train labels, task_xor3 beats task_xor2 in >=20 of 24 core140 fixed-pool seeds for every k",
+    "random_rank": "100 output-rank-k matched random triple draws per registered seed/cohort/rank/pool and empirical rank p=(1+number_random_ge_task)/(101)",
+    "information_audit": "width-based barrier and structural rank ceiling verified against independent exhaustive small-GF2 enumeration",
+    "source_provenance": "source hashes and all per-seed/arm rows; preserve registration SHA and amendments"
+  },
+  "boundary": "100 random draws are label-budget and representational-rank matched but not compute-matched to triple search; oracle directly accesses true composition; no neural claims"
+}

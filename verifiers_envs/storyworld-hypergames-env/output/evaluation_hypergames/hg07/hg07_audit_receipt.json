@@ -1,0 +1,74 @@
+{
+  "all_passed": true,
+  "checks": {
+    "360_sealed_neural_rows": true,
+    "all_label_counts_in_bounds": true,
+    "all_rank_p_denominators_101": true,
+    "baseline_rank_accounting": true,
+    "calibration_is_only_threshold": true,
+    "composed_only_in_aux_arms": true,
+    "false_accepts_match_final_release": true,
+    "five_controller_arms": true,
+    "full_data_GF2_oracle_perfect": true,
+    "one_result_per_registered_key": true,
+    "payoff_accounting_exact": true,
+    "six_distinct_registered_seeds": true,
+    "three_registered_cohorts": true,
+    "two_goal_ranks": true,
+    "two_train_budgets": true
+  },
+  "data_rows": 360,
+  "data_sha256": "053417219cc189208317823d5d944e5a9cc17c3eb0b50810986cdfcff933c81a",
+  "preregistered_science_gates": {
+    "H1": {
+      "passed": false,
+      "success_count": 2,
+      "total": 6
+    },
+    "H2": {
+      "passed": true,
+      "success_count": 4,
+      "total": 6
+    },
+    "H3": {
+      "by_arm": {
+        "flat_task": {
+          "passed": true,
+          "success_count": 4,
+          "total": 6
+        },
+        "linear_task": {
+          "passed": true,
+          "success_count": 5,
+          "total": 6
+        },
+        "loop_shuffled_fragment_aux": {
+          "passed": true,
+          "success_count": 5,
+          "total": 6
+        },
+        "loop_task": {
+          "passed": true,
+          "success_count": 5,
+          "total": 6
+        },
+        "loop_true_fragment_aux": {
+          "passed": true,
+          "success_count": 5,
+          "total": 6
+        }
+      },
+      "passed": true
+    },
+    "H4": {
+      "passed": true
+    }
+  },
+  "schema": "HG-07/public-cpu-audit-v1",
+  "source_sha256": {
+    "Hypergames/single_player/hg07_registration_v1.json": "fed4c77346fd57263de8ba55e0f286afab6b8193d787a1ddb58952c2b2c05dee",
+    "src/spiral_ln/evaluation_hypergames_raw.py": "81589805b80e0a7f64d1485a78565afaca68a0a4b6edb1402b2c58c7cbc38115",
+    "src/spiral_ln/hypergames_raw_recurrent.py": "747cc7077eed5482ea87e41079ba7a20230cfc1b55c52d5d81c98339b5385417"
+  },
+  "warning": "neural float32 CPU observations, not exact theorem or GPTStoryworld player"
+}

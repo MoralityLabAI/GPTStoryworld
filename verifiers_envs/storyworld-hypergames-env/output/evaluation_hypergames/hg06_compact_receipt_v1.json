@@ -1,0 +1,75 @@
+{
+  "all_passed": true,
+  "checks": {
+    "all_five_cohorts": true,
+    "expected_23040_rows": true,
+    "expected_96000_random_controls": true,
+    "five_public_seed_csv_sha256": true,
+    "four_goal_ranks": true,
+    "four_training_budgets": true,
+    "full_census_padding_invariant": true,
+    "missing_component_rank_deficit": true,
+    "n64_registered_recovery_gate": true,
+    "oracle_all_128_128": true,
+    "registration_shape": true,
+    "seed_roster": true,
+    "six_deterministic_arms": true,
+    "source_hashes_recorded": true,
+    "two_feature_pools": true
+  },
+  "counts": {
+    "conditions": 960,
+    "padding_matches": 4608,
+    "random_composite_draws": 96000,
+    "rows": 23040,
+    "seeds": 24
+  },
+  "directions": {
+    "1": {
+      "beats_xor2": 24,
+      "exact_full_test": 24,
+      "n_seed": 24,
+      "passed": true
+    },
+    "2": {
+      "beats_xor2": 24,
+      "exact_full_test": 24,
+      "n_seed": 24,
+      "passed": true
+    },
+    "4": {
+      "beats_xor2": 24,
+      "exact_full_test": 24,
+      "n_seed": 24,
+      "passed": true
+    },
+    "8": {
+      "beats_xor2": 24,
+      "exact_full_test": 24,
+      "n_seed": 24,
+      "passed": true
+    }
+  },
+  "evidence": "public synthetic CPU enumeration",
+  "schema": "HG-06/compact-receipt-v1",
+  "science_gates": {
+    "all_missing_component_target_deficient": true,
+    "fixed_pool_padding_identity": true,
+    "n64_xor3_exact_and_beats_xor2_20of24_each_rank": true,
+    "oracle_perfect": true
+  },
+  "seed_csv_sha256": {
+    "hg06_seed_rows_core_140.csv": "b055c9c653358488061bb8aae152081f5af633c14ba227ed7d9a7d08971ce72b",
+    "hg06_seed_rows_native_1024.csv": "b7af8bb9e889e2943af6cbc96fe1481ab9a21c012061d819f14376916206a538",
+    "hg06_seed_rows_native_512.csv": "582a09b204d4a3fdb96a55d4f9a73c766a7e78f1426431c1c4c362ff1f50d862",
+    "hg06_seed_rows_padded_1024.csv": "a1f4f021c816c31acdc678dc91d6c91a74f78539439122a20354db1adc272892",
+    "hg06_seed_rows_padded_512.csv": "000c560378a22679b0692427028e2a4b3db870c4ff20359103882797065ba2ca"
+  },
+  "source_sha256": {
+    "Hypergames/single_player/hg06_registration_v1.json": "9590592736ac9f728b420edec4b17e178450e5dd75762d3f74d801c21afbedc7",
+    "scripts/run_hg06_cpu.py": "33e9f3a4df0cf2db823ece48fdfff285461c9c8029f5b820269fd1e388c2f29b",
+    "src/spiral_ln/evaluation_hypergames_composition.py": "a558d8c15a715f65f6e95b330475b35cae7858afd83b3f027866ef7a62ed0fe3",
+    "src/spiral_ln/hypergames_composition.py": "143dd48e2408da3d289e4d59bd45913aefd856c840a55ccaa6e860b9416f7f59",
+    "tests/test_hypergames_composition.py": "690d615ae6263ac8242dd86216179755af31614867e2fe523104f9d252ccffac"
+  }
+}
