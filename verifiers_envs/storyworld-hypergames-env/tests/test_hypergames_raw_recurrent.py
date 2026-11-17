@@ -1,10 +1,19 @@
 """HG-07 raw input and inference separation, deterministic CPU smoke tests."""
 import unittest
 from fractions import Fraction as Q
-import numpy as np
-from spiral_ln import hypergames_raw_recurrent as h
+# Legacy exact-CPU workflows intentionally run without neural dependencies.
+# The dedicated HG-07 workflow installs NumPy and CPU PyTorch and exercises
+# this entire test class; keep older exact-Python suites independent.
+try:
+    import numpy as np
+    from spiral_ln import hypergames_raw_recurrent as h
+except ModuleNotFoundError as exc:
+    if exc.name not in ("numpy", "torch"):
+        raise
+    np = h = None
 
 
+@unittest.skipUnless(h is not None, "HG-07 neural tests require NumPy and PyTorch")
 class RawStateTraining(unittest.TestCase):
     def test_goal_and_fragments_six_sparse(self):
         for cohort in h.COHORTS:
