@@ -1,0 +1,29 @@
+name: storyworld-hypergames-hg09-frontier-preflight
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/src/spiral_ln/hg09_*.py'
+      - 'verifiers_envs/storyworld-hypergames-env/tests/test_hg09_frontier.py'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/single_player/HG09_PROTOCOL.md'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/single_player/models_hg09.json'
+      - '.github/workflows/storyworld-hypergames-hg09.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg09.yml'
+jobs:
+  mock-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Zero-cost provider-mock and privacy tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_hg09_frontier.py' -q
+      - name: Dry-run configuration, no API calls
+        run: PYTHONPATH=src python -m spiral_ln.hg09_frontier --config Hypergames/single_player/models_hg09.json --out output/hg09_no_call.json --task hg02
