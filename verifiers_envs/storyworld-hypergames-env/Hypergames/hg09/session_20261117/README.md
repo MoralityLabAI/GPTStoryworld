@@ -22,4 +22,6 @@ On PowerShell set `$env:PYTHONPATH='src'` before the Python commands. Use a writ
 
 HG-08's 256-state grade is an exact symbolic readout of the support submitted by the model. The measured frontier behavior is intervention choice and support identification; 256 separately generated neural predictions were not collected.
 
+`capabilities/` preserves separate unscored provider-summary probes, including labelled pre-inference sandbox failures and native-access retries. The separately registered `summary_extension/` repeats eight HG-02 episodes with automatic provider summaries requested. Its scores are not pooled into `measured_export.json` here and add no independent public roots. See its README for scope, provenance and offline reproduction. `model_catalogue_excerpt.json` records sanitized advertised context settings; `operator_execution_events.json` identifies an explicit operator pause included in some wall-clock latencies.
+
 The audit notes two instrument limits: HG-02 does not explicitly describe every action-transition semantic in its observation, and its 512-dimensional task also increases arithmetic widths. Preserve these caveats when interpreting horizon or dimension effects. Behavioral diagnostics remain distinct from inferred intentions.

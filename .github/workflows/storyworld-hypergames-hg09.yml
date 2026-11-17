@@ -36,3 +36,7 @@ jobs:
         run: |
           PYTHONPATH=src python -m spiral_ln.hg09_replay --traces Hypergames/hg09/session_20261117/traces --registration Hypergames/hg09/session_20261117/registration.json --out output/hg09_replayed.json
           python -c "from pathlib import Path; assert Path('output/hg09_replayed.json').read_bytes()==Path('Hypergames/hg09/session_20261117/measured_export.json').read_bytes()"
+      - name: Replay separate summary-enabled repeats without inference
+        run: |
+          PYTHONPATH=src python -m spiral_ln.hg09_replay --traces Hypergames/hg09/session_20261117/summary_extension/traces --registration Hypergames/hg09/session_20261117/summary_extension/registration.json --out output/hg09_summary_replayed.json
+          python -c "from pathlib import Path; assert Path('output/hg09_summary_replayed.json').read_bytes()==Path('Hypergames/hg09/session_20261117/summary_extension/measured_export.json').read_bytes()"
