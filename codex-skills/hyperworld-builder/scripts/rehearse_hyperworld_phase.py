@@ -174,20 +174,41 @@ def main():
     p.add_argument('--out-dir',type=Path,default=ROOT/'storyworlds/cairo_directorate_hyperworld/rehearsal_phase_v02')
     p.add_argument('--workers',type=int,default=4)
     p.add_argument('--check',action='store_true')
+    p.add_argument('--check-compatible',action='store_true',
+                   help='compare frozen behavior and allowlisted source changes without rewriting HGW-02 evidence')
     args=p.parse_args()
     destination=args.out_dir if args.out_dir.is_absolute() else ROOT/args.out_dir
     rows=run(workers=args.workers)
     summary=summarize(rows)
     if not summary['all_passed']:
         raise SystemExit('HGW-02 failed integrity gates: '+str(summary['checks']))
-    if args.check:
+    if args.check or args.check_compatible:
         import tempfile
         with tempfile.TemporaryDirectory() as d:
             regenerated=Path(d)/'rows.csv'
             write_rows(regenerated,rows)
             summary['seed_csv_sha256']=digest(regenerated)
             registered=json.loads((destination/'summary.json').read_text(encoding='utf-8'))
-            if registered != summary or digest(regenerated)!=digest(destination/'rows.csv'):
+            if digest(regenerated)!=digest(destination/'rows.csv'):
+                raise SystemExit('HGW-02 registered CSV differs')
+            if args.check_compatible:
+                # Keep the original source-locked receipt in place. Only the
+                # current HGW-03 authored interface and optional engine may
+                # legitimately change source hashes; every historical behavior
+                # field and byte of the 432-episode row set must still match.
+                allowed={
+                    'codex-skills/hyperworld-builder/scripts/hyperworld_engine.py',
+                    'codex-skills/hyperworld-builder/scripts/build_hyperworld.py',
+                    'storyworlds/cairo_directorate_hyperworld/storyworld.json',
+                }
+                current_source=summary.pop('source_sha256')
+                original_source=registered.pop('source_sha256')
+                differing={p for p in set(current_source)|set(original_source)
+                           if current_source.get(p)!=original_source.get(p)}
+                if registered != summary or not differing.issubset(allowed):
+                    raise SystemExit('HGW-02 behavior changed or unregistered source changed: '+repr(differing))
+                print('HGW-02 behavior is byte-identical; acknowledged HGW-03 source edits: '+repr(sorted(differing)))
+            elif registered != summary:
                 raise SystemExit('HGW-02 registered source/seed replay differs')
     else:
         if destination.exists() and any(destination.iterdir()):
