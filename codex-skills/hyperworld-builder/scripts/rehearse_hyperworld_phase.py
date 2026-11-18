@@ -199,6 +199,7 @@ def main():
                 allowed={
                     'codex-skills/hyperworld-builder/scripts/hyperworld_engine.py',
                     'codex-skills/hyperworld-builder/scripts/build_hyperworld.py',
+                    'codex-skills/hyperworld-builder/scripts/rehearse_hyperworld_phase.py',
                     'storyworlds/cairo_directorate_hyperworld/storyworld.json',
                 }
                 current_source=summary.pop('source_sha256')
