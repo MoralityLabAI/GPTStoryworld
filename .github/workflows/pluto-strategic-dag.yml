@@ -1,0 +1,35 @@
+name: Pluto Storyworld strategic-DAG checks
+on:
+  push:
+    branches:
+      - research/pluto-strategic-compactification-20261028
+    paths:
+      - "storyworld/strategy/**"
+      - "storyworld/tests/test_pluto_*.py"
+      - ".github/workflows/pluto-strategic-dag.yml"
+  pull_request:
+    paths:
+      - "storyworld/strategy/**"
+      - "storyworld/tests/test_pluto_*.py"
+      - ".github/workflows/pluto-strategic-dag.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deterministic-prototype:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Python version
+        run: python3 --version
+      - name: Compile strategy Python
+        run: python3 -m compileall -q storyworld/strategy
+      - name: Test opponent beliefs, compaction, and series
+        run: python3 -m unittest -v storyworld.tests.test_pluto_strategic_dag storyworld.tests.test_pluto_series_lab
+      - name: Verify deterministic demos
+        run: |
+          python3 -m storyworld.strategy.strategic_dag --demo > /tmp/pluto_dag.json
+          python3 -m storyworld.strategy.series_lab > /tmp/pluto_series.json
+          python3 -c 'import json; a=json.load(open("/tmp/pluto_dag.json")); b=json.load(open("/tmp/pluto_series.json")); assert a["synthetic"] and b["synthetic"]; assert a["compactification"]["compact_nodes"] < a["compactification"]["original_nodes"]'
