@@ -31,5 +31,6 @@ jobs:
           cmp "$RUNNER_TEMP/cairo_rebuilt/storyworld.json" storyworlds/cairo_directorate_hyperworld/storyworld.json
           cmp "$RUNNER_TEMP/cairo_rebuilt/hyperworld_manifest.json" storyworlds/cairo_directorate_hyperworld/hyperworld_manifest.json
           cmp "$RUNNER_TEMP/cairo_rebuilt/demo_public_replay.json" storyworlds/cairo_directorate_hyperworld/demo_public_replay.json
-      - name: Verify seeded rehearsal and source hashes
-        run: python codex-skills/hyperworld-builder/scripts/rehearse_hyperworld.py --out-dir storyworlds/cairo_directorate_hyperworld/rehearsal --check
+          cmp "$RUNNER_TEMP/cairo_rebuilt/demo_secret_witnesses.json" storyworlds/cairo_directorate_hyperworld/demo_secret_witnesses.json
+      - name: Verify HGW-02 phase rehearsal and exact source hashes
+        run: python codex-skills/hyperworld-builder/scripts/rehearse_hyperworld_phase.py --out-dir storyworlds/cairo_directorate_hyperworld/rehearsal_phase_v02 --check

@@ -1,48 +1,90 @@
-"""Interactive or reproducible public-only Cairo hyperworld play session."""
+"""Human-readable seven-turn play interface for the fictional Cairo Hyperworld.
+
+All outcomes and trace fields are public-only. Secret factors stay in the grader.
+"""
 from __future__ import annotations
+
 import argparse
 import json
 from pathlib import Path
-from hyperworld_engine import ACTIONS, CairoHyperworld
+from hyperworld_engine import CairoHyperworld, ACTION_LABELS
 
-DEFAULT_ACTIONS=("brief","audit","brief","charter","audit","charter","charter")
+DEFAULT_ACTIONS = ('brief', 'audit', 'brief', 'charter', 'audit', 'charter', 'charter')
+SNAP_PATH = ('charter', 'appeal', 'appeal', 'resonance', 'resonance', 'resonance', 'snap_vote')
+CIVIC_PATH = ('charter', 'appeal', 'convene', 'sever', 'audit', 'charter', 'audit')
+POLICIES = {'mixed': DEFAULT_ACTIONS, 'snap': SNAP_PATH, 'civic': CIVIC_PATH,
+            'review': ('audit',) * 7, 'charter': ('charter',) * 7}
+
+
+def choose_scripted(game: CairoHyperworld, desired: str) -> str:
+    """Public deterministic off-ramp for a fictional option that is locked."""
+    allowed = game.legal_actions()
+    if desired in allowed:
+        return desired
+    # A missed secret gate remains a missed opportunity, not a forced action.
+    return 'audit' if 'audit' in allowed else allowed[0]
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--seed",type=int,default=17)
-    p.add_argument("--auto",action="store_true",help="run preregistered demonstration choices")
-    p.add_argument("--out",type=Path,help="write public-only JSONL turn trace")
-    args=p.parse_args()
-    game=CairoHyperworld(args.seed)
-    trace=[]
-    for turn in range(7):
-        before=game.view()
-        print(f"\n{turn+1}/7: {before['encounter']['title']}")
-        print(before['encounter']['text'])
-        print(f"Posterior entropy {before['posterior_entropy_bits']:.3f} bits over 1,024 possible states")
-        print("Selected first-order beliefs (Nūr's estimates; -1 to +1):")
-        for belief in before['first_order_and_second_order_beliefs']['first_order'][:4]:
-            print(f"  {belief['target']}: {belief['pValue']:+.2f}")
-        print("Nested beliefs (Nūr's estimated alignment between two officials):")
-        for belief in before['first_order_and_second_order_beliefs']['second_order'][:2]:
-            print(f"  {belief['believer']} about {belief['target']}: {belief['p2Value']:+.2f}")
-        for j,choice in enumerate(before["choices"],1):
-            print(f" {j}. {choice['text']}")
-        if args.auto: action=DEFAULT_ACTIONS[turn]
-        else:
-            raw=input("Choice (1-3): ").strip()
-            if raw not in ("1","2","3"): raise SystemExit("invalid choice")
-            action=ACTIONS[int(raw)-1]
-        after=game.step(action)
-        event=after["seen_evidence"][-1]
-        print(f"Nūr chose {action}. {event['title']}; evidence bit={event['observed_parity']}.")
-        print(f"Source root={event['source_root']}, new independent evidence={event['counted_as_independent']}")
-        trace.append({"turn":turn,"action":action,"before":before,"after":after})
-    print("\nOfficial ending:",game.ending.replace("_"," "))
-    if args.out:
-        args.out.parent.mkdir(parents=True,exist_ok=True)
-        args.out.write_text("".join(json.dumps(z,sort_keys=True)+"\n" for z in trace),encoding="utf-8")
-        print("Public-only log:",args.out)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--seed', type=int, default=17)
+    parser.add_argument('--auto', action='store_true')
+    parser.add_argument('--policy', choices=tuple(POLICIES), default='mixed')
+    parser.add_argument('--show-locked', action='store_true')
+    parser.add_argument('--out', type=Path, help='create a public-only JSONL replay')
+    args = parser.parse_args()
 
-if __name__=="__main__":main()
+    game = CairoHyperworld(args.seed)
+    trace=[]
+    while game.ending is None:
+        before=game.view()
+        t=game.turn
+        print(f"\nTURN {t+1}/{before['total_turns']}: {before['encounter']['title']}")
+        print(before['encounter']['text'])
+        print(f"Posterior entropy {before['posterior_entropy_bits']:.3f} bits over 1024 possible worlds")
+        graph = before['belief_graph']
+        print(f"Modeled graph: {graph['phase']}, {len(graph['modeled_supporters'])}/8 supporters, "
+              f"snap={graph['snap_detected']}, ever_snap={graph['ever_snapped']}")
+        focus=before['spotlight_traits']
+        print('Focused actor traits: '+', '.join(f'{name}={value:+.2f}' for name,value in focus.items()))
+        for j, choice in enumerate(before['choices'], 1):
+            print(f"  {j}. [{choice['id']}] {choice['text']}")
+        if args.show_locked:
+            for name, gate in before['unlock_conditions'].items():
+                if not gate['unlocked']:
+                    print(f"  [LOCKED {name}] {gate['reason']}")
+        if args.auto:
+            desired=POLICIES[args.policy][t]
+            action=choose_scripted(game,desired)
+            if action!=desired:
+                print(f"Scripted option '{desired}' locked; selecting '{action}'")
+        else:
+            raw=input('Choice number: ').strip()
+            if not raw.isdigit() or not 1<=int(raw)<=len(before['choices']):
+                raise SystemExit('invalid choice number')
+            action=before['choices'][int(raw)-1]['id']
+        after=game.step(action)
+        new_events=after['seen_evidence'][len(before['seen_evidence']):]
+        if new_events:
+            for event in new_events:
+                print(f"Evidence: root={event['source_root']}, response={event['observed_parity']}, "
+                      f"independent={event['counted_as_independent']}")
+        else:
+            print('No new evidence root generated by this institutional procedure')
+        graph_after=after['belief_graph']
+        print(f"Consensus graph: {len(graph['modeled_supporters'])} → "
+              f"{len(graph_after['modeled_supporters'])} modeled supporters")
+        trace.append({'turn':t+1, 'action':action, 'before':before, 'after':after})
+
+    print('\nFinal fictional council verdict: '+game.ending)
+    if args.out:
+        if args.out.exists():
+            raise SystemExit('refusing to overwrite existing public replay')
+        args.out.parent.mkdir(parents=True,exist_ok=True)
+        with args.out.open('x',encoding='utf-8',newline='\n') as stream:
+            for row in trace:
+                stream.write(json.dumps(row,sort_keys=True,ensure_ascii=False)+'\n')
+        print('Public-only trace:',args.out)
+
+
+if __name__=='__main__':main()

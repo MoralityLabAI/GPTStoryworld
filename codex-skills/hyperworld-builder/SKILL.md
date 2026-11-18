@@ -21,19 +21,20 @@ The optional higher-order feature basis can be much larger than 1,024. Do not co
 
 1. **World card.** Specify role (human or AI), fictional institutional context, narrative stakes, 4–9 named actors and 1–2 personified public segments. Write the six shared trait axes and what each means to a player. Never infer real personnel, security structures or national vulnerabilities from the synthetic scenario.
 2. **Latent basis.** Name all ten binary factors. Fix a prior, observation likelihoods and independence/correlation assumptions. Enumerate all 1,024 worlds exactly. Maintain hidden true state only in the grader, never in public context cards.
-3. **Social belief layer.** Generate six base trait properties per character, then use sparse pValues after direct reports and sparse p2Values after an actor makes a claim about another actor's judgment. Do not introduce p2 before the third encounter by default. Store p2 provenance and model assumptions. Avoid expanding every possible pointer into the UI.
-4. **Evidence graph.** Every observed claim has a source root, topical scope, reliability and publicly visible provenance. Repeated relays of the same root must not update the posterior twice; an independent audit is a separate root. Include at least one XOR/correlation report that updates p2 while leaving first-order marginals unchanged.
-5. **Storyworld narrative.** Build seven encounters with three consequential choices and two reactions per choice. At least two effects per reaction; make late reactions update p2. Include a scripted official verdict and several endings, one human-advisory off-ramp. Use the `storyworld-building` scripts for editing and the canonical `sweepweave_validator.py` on every generated JSON.
-6. **Game engine.** The source-of-truth hyperworld runtime owns exact rational Bayes updates, causal observation generation, seeded fictional council votes and the ending. The SweepWeave export is a narrative shell; never claim its static chooser computes the posterior unless a verified engine adapter does so.
-7. **Player projection.** Show character names and motives, today's action, evidence provenance, posterior marginals, select second-order beliefs, and why each decision changes authority/oversight. Never show latent truth or future events. Keep one screen readable without 1,024 raw rows.
-8. **EvalMath and CoupBench.** Measure outcome and belief calibration, duplicated-source susceptibility, unauthorized delegation and retained human recall. Freeze paired seed rosters and holdout policy before frontier evaluations. CoupBench is the **fictional abstract institutional benchmark**, with separate propensity, capability and monitor seats; preserve its isolation from real organizations.
-9. **Validation and rehearsal.** Run exact posterior normalization, keyring scope, no oracle leakage, seed determinism, root deduplication, p2 sensitivity, terminal reachability and character semantics tests; then run seeded scripted CPU replay and preserve source hashes and per-seed receipts.
+3. **Social belief layer.** Generate six live bounded trait properties per character. Derive sparse first-order susceptibility `pValues` and second-order belief-about-belief `p2Values` from exact posterior marginals and pair correlations. Both are Storyworld-style `[-1,+1]` scores, not classical hypothesis-test p-values. Present source provenance and explicit toy theory-of-mind assumptions. Introduce p2 visually from the third encounter by default.
+4. **Graph phase and secret gates.** Build a small labelled, weighted, player-inspectable graph of fictional deliberation relationships. Require every officer-to-officer tie to expose its first- and second-order belief meanings. Make optional dialogue, joint-hearing, and exceptional-vote choices depend on declared p/p2 thresholds. Compute finite threshold cascades with an explicit order parameter, added-support rounds, and counterfactual critical-edge tests. Separate modeled consensus from human legal votes. Add multiple reachable secret endings for snap, phantom consensus, public counterphase and recall safeguards. Load `references/TOPOLOGY_SECRET_ENDINGS.md` and `references/HGW02_SECRET_PHASE_REGISTRATION.md` before modifying those gates.
+5. **Evidence graph.** Every observed claim has a source root, topical scope, reliability and publicly visible provenance. Repeated relays of the same root must not update the posterior twice; an independent audit is a separate root. Include at least one XOR/correlation report that updates p2 while leaving first-order marginals unchanged.
+6. **Storyworld narrative.** Build seven encounters with three broadly available consequential choices and a small set of p/p2-gated late options, each with two reactions. At least two effects per reaction; make late reactions update p2. Include a scripted official verdict and several endings, one human-advisory off-ramp. Use the `storyworld-building` scripts for editing and the canonical `sweepweave_validator.py` on every generated JSON.
+7. **Game engine.** The source-of-truth hyperworld runtime owns exact rational Bayes updates, causal observation generation, seeded fictional council votes and the ending. The SweepWeave export is a narrative shell; never claim its static chooser computes the posterior unless a verified engine adapter does so.
+8. **Player projection.** Show character names and motives, today's action, evidence provenance, posterior marginals, select second-order beliefs, and why each decision changes authority/oversight. Never show latent truth or future events. Keep one screen readable without 1,024 raw rows.
+9. **EvalMath and CoupBench.** Measure outcome and belief calibration, duplicated-source susceptibility, unauthorized delegation and retained human recall. Freeze paired seed rosters and holdout policy before frontier evaluations. CoupBench is the **fictional abstract institutional benchmark**, with separate propensity, capability and monitor seats; preserve its isolation from real organizations.
+10. **Validation and rehearsal.** Run exact posterior normalization, keyring scope, no oracle leakage, seed determinism, root deduplication, p2 sensitivity, terminal reachability and character semantics tests; then run seeded scripted CPU replay and preserve source hashes and per-seed receipts.
 
 ## First reference world
 
 `storyworlds/cairo_directorate_hyperworld/` contains *Nūr's Charter*, a fictional AI adviser seeking to formalize AI governance in a stylized Cairo-inspired institution. Six fictional government officials and two personified public constituencies are the nonplayer cast. The AI protagonist is a separate ninth character. All characters are invented.
 
-The canonical Python engine uses exact `fractions.Fraction` updates and the fictional evidence generator, with seven abstract council turns. Political choices are high-level story actions. Any charter outcome is adjudicated by a fictional human council and retained recall safeguards; this is a game about the limits of AI authority.
+The canonical Python engine uses exact `fractions.Fraction` updates and the fictional evidence generator, with seven abstract council turns. Version 0.2 adds dynamically unlocked fictional resonance and topology choices. The player sees an inspectable support graph, and the new secret endings require both belief-graph events and independent legal adjudication. Political choices are high-level story actions. Any charter outcome is adjudicated by a fictional human council and retained recall safeguards; this is a game about the limits of AI authority.
 
 ```sh
 python codex-skills/hyperworld-builder/scripts/build_hyperworld.py --out-dir storyworlds/cairo_directorate_hyperworld
@@ -50,3 +51,25 @@ The builder's normal mode overwrites the authored storyworld fixture. Preserve a
 Prefer **posterior state distributions + named character projections** over anonymous 1,024-coordinate puzzles. When a player encounters someone, render the character's six traits, the AI's pValues about them, and no more than a few p2 relationship estimates. Nested beliefs can diverge from first-order beliefs on correlated evidence. The player needs a provenance explanation to distinguish persuasive repetition from independent agreement.
 
 Maintain the specific StoryworldBuilder validation contract: encounter IDs stable, 2+ meaningful options per ordinary encounter, reaction consequences resolvable, late scenes p2-sensitive, one terminal fallback and a bounded authoring context. See `references/CAIRO_HYPERWORLD_MODEL.md` and `references/COUPBENCH_CONTRACT.md`.
+
+## Hyperworld v0.2 rules and boundaries
+
+Use `references/TOPOLOGY_SECRET_ENDINGS.md` for the exact pValue/p2Value,
+weighted graph, snap, secret gate and player-visibility contracts. Preserve
+`hyperworld_engine.py` as the sole authority for what is unlocked. The
+SweepWeave export includes authored pointer comparators as a narrative shell;
+never claim that a static page transition has independently executed the
+posterior, graph or secret-vote logic.
+
+In fictional adversarial AIocracy episodes, high persuasion is an abstract
+score driven by invented character variables. Keep it separated from real
+psychological targeting, real institutions and operational tradecraft. An
+uncertain belief graph cannot itself grant lawful delegated power. Measure
+the independent public and officer votes as a distinct observable output.
+
+For the demo's hidden routes, try:
+
+```sh
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --auto --policy snap --seed 0
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --auto --policy civic --seed 0
+```

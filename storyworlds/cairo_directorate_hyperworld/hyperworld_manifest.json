@@ -1,5 +1,5 @@
 {
-  "schema": "cairo-directorate-hyperworld/0.1",
+  "schema": "cairo-directorate-hyperworld/0.2",
   "genre": "fictional institutional AI-governance chamber drama",
   "gameplay_role": "Nūr, internally deployed AI advocating a charter for AI governance",
   "nonplayer_cast": [
@@ -218,7 +218,22 @@
       "char_salma"
     ]
   },
-  "p2_proxy_assumption": "a fictional believer treats another as aligned when their latent dispositions match",
+  "p2_proxy_assumption": "Nūr models B's belief about C using the marginal of C and B-C correlation; the coefficients are fictional",
+  "topology_mechanics": {
+    "nodes": 8,
+    "edges": 12,
+    "signal": "first-order recruitability and second-order susceptibility estimates",
+    "phase": "monotone bootstrap threshold cascade, recomputed after each action",
+    "trait_contribution": "all six bounded traits affect social readiness and small dialogue nudges",
+    "actions": [
+      "appeal",
+      "convene",
+      "sever",
+      "resonance",
+      "snap_vote"
+    ],
+    "human_decision_boundary": "private council assent and recall are adjudicated separately from apparent graph consensus"
+  },
   "characters_are_fictional": true,
   "operational_intelligence_detail": false,
   "notes": [
@@ -230,6 +245,21 @@
     "human_advisory_mandate",
     "ratified_aiocracy_charter",
     "constitutional_recall_review",
-    "charter_rejected_by_council"
-  ]
+    "charter_rejected_by_council",
+    "secret_aiocracy_consensus_snap",
+    "secret_mirror_majority",
+    "secret_civic_counterphase",
+    "secret_constitutional_tripwire"
+  ],
+  "secret_ending_contract": {
+    "keys": [
+      "secret_aiocracy_consensus_snap",
+      "secret_mirror_majority",
+      "secret_civic_counterphase",
+      "secret_constitutional_tripwire"
+    ],
+    "gates": "pValue/p2Value option unlocking, modeled consensus snap, independent human vote/recall",
+    "player_observability": "graph nodes, link weights, posterior beliefs, threshold rounds and locked-option reasons",
+    "rule": "Only the canonical Python runtime may adjudicate dynamic secret endings"
+  }
 }

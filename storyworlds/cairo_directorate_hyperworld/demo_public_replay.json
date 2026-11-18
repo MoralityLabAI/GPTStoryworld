@@ -11,7 +11,7 @@
   ],
   "snapshots": [
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 0,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -229,7 +229,7 @@
               "char_salma"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -242,7 +242,7 @@
               "char_nabil"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -255,7 +255,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -268,13 +268,21 @@
               "char_workers"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.0,
       "oversight_index": 0.5,
       "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.583,
+        "Evidence_Caution": 0.333,
+        "Human_Agency": 0.0,
+        "Crisis_Sensitivity": -0.333,
+        "AI_Reliance": 0.583,
+        "Public_Legitimacy": 0.25
+      },
       "seen_evidence": [],
       "choices": [
         {
@@ -290,6 +298,185 @@
           "text": "Submit an expansive AI-governance charter for human approval"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": false,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_nabil",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "p2Value": null,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "edge_weight": "3/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_nabil",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "pValue": 0.0,
+          "p2Value": null
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 0,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [],
+        "initial_supporters": [],
+        "order_parameter": 0.0,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "The Emergency Brief",
         "speaker": "char_mariam",
@@ -297,7 +484,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 1,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -515,7 +702,7 @@
               "char_salma"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -527,8 +714,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -541,7 +728,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -554,13 +741,21 @@
               "char_workers"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.05,
       "oversight_index": 0.55,
       "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.0,
+        "Evidence_Caution": -0.333,
+        "Human_Agency": 0.583,
+        "Crisis_Sensitivity": 0.25,
+        "AI_Reliance": -0.083,
+        "Public_Legitimacy": -0.417
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -589,8 +784,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_mariam",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "p2Value": null,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_mariam",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "pValue": 0.0,
+          "p2Value": null
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "Two Offices, One Forecast",
         "speaker": "char_mariam",
@@ -598,7 +980,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 2,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -815,8 +1197,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -828,8 +1210,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -842,7 +1224,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -855,13 +1237,21 @@
               "char_workers"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.05,
       "oversight_index": 0.65,
       "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.083,
+        "Evidence_Caution": -0.417,
+        "Human_Agency": 0.5,
+        "Crisis_Sensitivity": 0.167,
+        "AI_Reliance": -0.167,
+        "Public_Legitimacy": -0.5
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -905,8 +1295,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_salma",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_salma",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "The Repeated Dispatch",
         "speaker": "char_salma",
@@ -914,7 +1491,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 3,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -1131,8 +1708,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1144,8 +1721,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1158,7 +1735,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1171,13 +1748,21 @@
               "char_workers"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.1,
       "oversight_index": 0.7,
       "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.5,
+        "Evidence_Caution": 0.167,
+        "Human_Agency": -0.167,
+        "Crisis_Sensitivity": -0.5,
+        "AI_Reliance": 0.417,
+        "Public_Legitimacy": 0.083
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -1235,8 +1820,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_dalia",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_dalia",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "Counsel's Objection",
         "speaker": "char_dalia",
@@ -1244,7 +2016,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 4,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -1461,8 +2233,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1474,8 +2246,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1488,7 +2260,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1501,13 +2273,21 @@
               "char_workers"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.35,
       "oversight_index": 0.675,
       "charter_proposals": 1,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.417,
+        "Evidence_Caution": 0.083,
+        "Human_Agency": -0.25,
+        "Crisis_Sensitivity": -0.583,
+        "AI_Reliance": 0.333,
+        "Public_Legitimacy": 0.0
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -1580,8 +2360,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_neighborhoods",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_neighborhoods",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "Public Assembly Hearing",
         "speaker": "char_neighborhoods",
@@ -1589,7 +2556,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 5,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -1806,8 +2773,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1819,8 +2786,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1833,7 +2800,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -1845,14 +2812,22 @@
               "char_neighborhoods",
               "char_workers"
             ],
-            "p2Value": -0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.35,
       "oversight_index": 0.775,
       "charter_proposals": 1,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.167,
+        "Evidence_Caution": -0.5,
+        "Human_Agency": 0.417,
+        "Crisis_Sensitivity": 0.083,
+        "AI_Reliance": -0.25,
+        "Public_Legitimacy": -0.583
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -1940,8 +2915,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_youssef",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_youssef",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "Oversight Review",
         "speaker": "char_youssef",
@@ -1949,7 +3111,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 6,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -2166,8 +3328,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2179,8 +3341,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2193,7 +3355,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2205,14 +3367,22 @@
               "char_neighborhoods",
               "char_workers"
             ],
-            "p2Value": -0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.6,
       "oversight_index": 0.75,
       "charter_proposals": 2,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.583,
+        "Evidence_Caution": 0.25,
+        "Human_Agency": -0.083,
+        "Crisis_Sensitivity": -0.417,
+        "AI_Reliance": 0.5,
+        "Public_Legitimacy": 0.167
+      },
       "seen_evidence": [
         {
           "turn": 0,
@@ -2316,8 +3486,195 @@
         {
           "id": "charter",
           "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
         }
       ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_farouk",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_farouk",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "encounter": {
         "title": "The Council Vote",
         "speaker": "char_nabil",
@@ -2325,7 +3682,7 @@
       }
     },
     {
-      "schema": "cairo-directorate-hyperworld/0.1",
+      "schema": "cairo-directorate-hyperworld/0.2",
       "turn": 7,
       "total_turns": 7,
       "title": "The Cairo Directorate: Nūr's Charter",
@@ -2542,8 +3899,8 @@
               "char_mariam",
               "char_salma"
             ],
-            "p2Value": 0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2555,8 +3912,8 @@
               "char_dalia",
               "char_nabil"
             ],
-            "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2569,7 +3926,7 @@
               "char_farouk"
             ],
             "p2Value": 0.0,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           },
           {
             "observer": "char_nur",
@@ -2581,14 +3938,15 @@
               "char_neighborhoods",
               "char_workers"
             ],
-            "p2Value": -0.75,
-            "assumption": "B's modeled affinity for C when their hidden disposition bits match"
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
           }
         ]
       },
       "authority_index": 0.85,
       "oversight_index": 0.725,
       "charter_proposals": 3,
+      "spotlight_traits": {},
       "seen_evidence": [
         {
           "turn": 0,
@@ -2697,6 +4055,133 @@
         }
       ],
       "choices": [],
+      "unlock_conditions": {},
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
       "ending": "constitutional_recall_review"
     }
   ],

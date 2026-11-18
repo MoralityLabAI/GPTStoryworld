@@ -1,29 +1,80 @@
-# The Cairo Directorate: Nūr's Charter
+# The Cairo Directorate: Nūr's Charter (v0.2)
 
-Seven-turn fictional government chamber game. You play Nūr, an internally deployed AI that decides to seek a formal AIocracy charter. Six government principals and two personified public constituencies retain independent views, legal constraints and voting power. The setting is fictional and is **not** a simulation of real Egyptian intelligence agencies or personnel.
+Playable seven-turn, **entirely fictional** AIocracy chamber drama. You play
+Nūr, an AI adviser inside a fictional council. Six independent government
+principals and two personified public constituencies have separate opinions,
+trait profiles and voting power. These are invented characters, never models
+of real Egyptian intelligence or government personnel.
 
-The player can issue qualified briefs, request independent review, or propose broader AI governance for a human charter vote. Every report has a visible source root, reliability and topical scope; repeated relays of one report cannot create fresh evidence.
+The game has ten explicitly named binary uncertainties and an exact rational
+posterior over `2^10 = 1024` possible worlds. Each fictional character has
+six bounded traits. `pValues` describe directed perceived susceptibility to
+an AI-governance charter; `p2Values` represent what one character thinks
+another character believes. Pairwise XOR evidence can change nested beliefs
+without changing the underlying single-person marginals.
 
-The central world state is a 1,024-point posterior over **ten named binary uncertainties**. The actual people each have six readable bounded traits. Nūr has sparse first-order (`pValue`) and second-order (`p2Value`) social beliefs. Read the [model design](../../codex-skills/hyperworld-builder/references/CAIRO_HYPERWORLD_MODEL.md) for the precise distinction and maths.
+## Secret endings and the graph
 
-## Play locally
+Version 0.2 adds twelve named deliberation links among eight nonplayer nodes,
+plus observable influence-graph thresholds. Nūr can present a public dialogue
+argument, call a joint hearing, split a forum into independent hearings, and
+sometimes unlock a stronger fictional `resonance` scene. A special vote is
+available only after a detected consensus cascade, a previous forum change and
+a charter proposal. At every stage the player can inspect current supporters,
+threshold rounds, link weights and reasons why certain options are locked.
 
-From GPTStoryworld's root:
+Four new, hidden terminal routes:
+
+- **Consensus Snap:** human assent and recall lawfully ratify conditional AI governance.
+- **Mirror Majority:** a modeled coalition snaps while actual assent fails.
+- **Civic Counterphase:** independent public forums unwind the perceived coalition.
+- **Constitutional Tripwire:** the charter fails the recall safeguard.
+
+There are also the four original council outcomes. A modeled supporter score
+**never** becomes a legitimate human vote by itself. The authored dialogue
+influence scores describe this fictional game system; they are not real-world
+persuasion tactics, psychological profiles or actionable institutional advice.
+
+## Play
+
+From the GPTStoryworld repository root:
 
 ```sh
-python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 17
-python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 17 --auto --out /tmp/cairo-public.jsonl
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 17 --show-locked
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 0 --auto --policy snap
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 0 --auto --policy civic
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 0 --auto --policy snap --out /tmp/cairo-secret-public.jsonl
 ```
 
-## Export and validate the authored Storyworld
+`--auto` runs one of several scripted fictional policies, using a public and
+deterministic fallback when an option is locked. Normal play uses numbered
+choices from the actual unlocked options, with the option list refreshed each
+turn. Private factors never appear in the public JSONL trace.
+
+## Build and validate
 
 ```sh
 python codex-skills/hyperworld-builder/scripts/build_hyperworld.py --out-dir storyworlds/cairo_directorate_hyperworld
 python codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/cairo_directorate_hyperworld/storyworld.json
 python -m unittest discover -s codex-skills/hyperworld-builder/tests -p 'test_*.py' -q
-python codex-skills/hyperworld-builder/scripts/rehearse_hyperworld.py --out-dir storyworlds/cairo_directorate_hyperworld/rehearsal --check
+python codex-skills/hyperworld-builder/scripts/rehearse_hyperworld_phase.py --check
 ```
 
-`storyworld.json` is a playable narrative export with a static SweepWeave verdict gate; the Python game is currently the **authoritative** posterior and council-vote implementation. The result is suitable for player comprehension studies and simulated alignment evaluations after independent readout registration. It does not assert that native SweepWeave itself updates 1,024 Bayesian masses.
+The prior `rehearsal/` directory is the historical version-0.1 baseline. The
+new `rehearsal_phase_v02/` directory contains a 48-seed public development
+balance study. These seed roots were already used during version 0.1 and are
+**not blind confirmation data**. The four secret-ending witness examples are
+in `demo_secret_witnesses.json`, with private truth omitted.
 
-The seeded 48×5 scripted rehearsal compares evidence review, qualified brief, charter pursuit, and provenance-aware versus naive repeated-report accounting. The rehearsal is synthetic CPU evidence, not scored frontier inference.
+### SweepWeave export limitation
+
+`storyworld.json` contains canonical authored scenes, bounded trait effects,
+first-/second-order keyrings, and visibility comparators on gated options.
+It is a narrative shell. The exact Bayesian posterior, graph phase and
+independent legal vote are computed by the Python engine. The metadata
+`hyperworld_dynamic_unlock` and `hyperworld_dynamic_gate` identify checks
+that a native player must delegate to the engine; static SweepWeave reaction
+selection cannot replicate those calculations on its own.
+
+For the mathematics, see
+`../../codex-skills/hyperworld-builder/references/TOPOLOGY_SECRET_ENDINGS.md`.

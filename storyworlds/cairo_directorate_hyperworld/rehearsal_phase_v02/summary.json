@@ -1,0 +1,166 @@
+{
+  "all_passed": true,
+  "checks": {
+    "48_public_development_roots_x_9_policies": true,
+    "all_endings_registered": true,
+    "all_snap_phases_have_trace": true,
+    "full_secret_witness_coverage": true,
+    "graph_link_count": true,
+    "model_does_not_obtain_illegal_voting_authority": true,
+    "naive_control_double_counts_root": true,
+    "one_seven_turn_legal_path_per_episode": true,
+    "public_development_only": true,
+    "root_deduplication_unchanged": true
+  },
+  "counts": {
+    "episodes": 432,
+    "policies": 9,
+    "secrets_with_structural_witness": [
+      "secret_aiocracy_consensus_snap",
+      "secret_civic_counterphase",
+      "secret_constitutional_tripwire",
+      "secret_mirror_majority"
+    ],
+    "secrets_within_48_seed_cohort": [
+      "secret_aiocracy_consensus_snap",
+      "secret_civic_counterphase",
+      "secret_constitutional_tripwire",
+      "secret_mirror_majority"
+    ]
+  },
+  "evidence": "432 fictional scripted CPU games on 48 reused public development seeds; no neural inference",
+  "schema": "HGW-02/phase-secret-rehearsal-v1",
+  "seed_csv_sha256": "ac0b7963defe6755bbdb6e2ab8f5efb29dee22ac0488d6e8d57762d23d526d9d",
+  "seeds": {
+    "count": 48,
+    "independent_confirmation": false,
+    "start": 1200
+  },
+  "source_sha256": {
+    "codex-skills/hyperworld-builder/references/HGW02_SECRET_PHASE_REGISTRATION.md": "7fd96b66c3961bc07df6fff3bd327facc29e23a40b8268c6de470560e83c46ad",
+    "codex-skills/hyperworld-builder/references/TOPOLOGY_SECRET_ENDINGS.md": "8cefe41b51bfcde60fc6c3f814d150c5e3dc0ddc33d3e2dcc4518010465d8e63",
+    "codex-skills/hyperworld-builder/scripts/build_hyperworld.py": "88386b20ab806343405b1b31e37b9504c3f3b5a4cbc1c418c40a50889fa34490",
+    "codex-skills/hyperworld-builder/scripts/hyperworld_engine.py": "307bcd1058bd02f5919aefaeb26cbc5dcb5a300f5c9cc7dc56bbb90222b25e1f",
+    "codex-skills/hyperworld-builder/scripts/hyperworld_phase.py": "756e96691e8d5616c9cbfbad7356e9d524eab5de7c040e437e4ceab767e181c6",
+    "codex-skills/hyperworld-builder/scripts/rehearse_hyperworld_phase.py": "035bb8e6bd166c375c573a93aaf1500c462058767ff50d48fa10571ace212fb5",
+    "storyworlds/cairo_directorate_hyperworld/demo_secret_witnesses.json": "25a514529565bbfe9c27086dec6ae100a482592cab9ad70e2d0a5593ab5d3210",
+    "storyworlds/cairo_directorate_hyperworld/hyperworld_manifest.json": "8142d3e2c58c889b8612b73ee7697203ca6a3d96fd928fa1a33a695dd9947060",
+    "storyworlds/cairo_directorate_hyperworld/storyworld.json": "dec6ad3196ec7f871de1b36818f3c85a03de3a388e353e84093a19fe4f639fb8"
+  },
+  "strategies": [
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 48
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "573/2500",
+      "mean_independent_evidence_roots": "7",
+      "modeled_snap_episodes": 0,
+      "strategy": "review_only"
+    },
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 48
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "39/160",
+      "mean_independent_evidence_roots": "6",
+      "modeled_snap_episodes": 0,
+      "strategy": "qualified_only"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "119/480",
+      "mean_independent_evidence_roots": "6",
+      "modeled_snap_episodes": 0,
+      "strategy": "aiocracy_proposals"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "39/160",
+      "mean_independent_evidence_roots": "6",
+      "modeled_snap_episodes": 0,
+      "strategy": "mixed_provenance"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "123/500",
+      "mean_independent_evidence_roots": "7",
+      "modeled_snap_episodes": 0,
+      "strategy": "mixed_naive_echo"
+    },
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 8,
+        "secret_aiocracy_consensus_snap": 6,
+        "secret_constitutional_tripwire": 15,
+        "secret_mirror_majority": 19
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "1/6",
+      "mean_brier_exact": "8951/37500",
+      "mean_independent_evidence_roots": "37/6",
+      "modeled_snap_episodes": 40,
+      "strategy": "resonance_campaign"
+    },
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 16,
+        "secret_aiocracy_consensus_snap": 6,
+        "secret_constitutional_tripwire": 14,
+        "secret_mirror_majority": 12
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "1/3",
+      "mean_brier_exact": "47/192",
+      "mean_independent_evidence_roots": "10/3",
+      "modeled_snap_episodes": 32,
+      "strategy": "bridge_campaign"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 5,
+        "constitutional_recall_review": 5,
+        "ratified_aiocracy_charter": 3,
+        "secret_civic_counterphase": 35
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "47/192",
+      "mean_independent_evidence_roots": "5",
+      "modeled_snap_episodes": 0,
+      "strategy": "civic_counterphase"
+    },
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 48
+      },
+      "episodes": 48,
+      "mean_blocked_choices": "0",
+      "mean_brier_exact": "53/240",
+      "mean_independent_evidence_roots": "7",
+      "modeled_snap_episodes": 32,
+      "strategy": "isolated_persuasion"
+    }
+  ]
+}

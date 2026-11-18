@@ -11,8 +11,12 @@ from fractions import Fraction as F
 from math import log2
 from random import Random
 from typing import Any
+from hyperworld_phase import (
+    FOCUS_EDGES, FOCUS_PEOPLE, NODES, bridge_delta, graph_weights, collect_moments,
+    marginal_critical_edge, phase_transition, pvalue, p2value,
+)
 
-SCHEMA = "cairo-directorate-hyperworld/0.1"
+SCHEMA = "cairo-directorate-hyperworld/0.2"
 AXES = (
     "Institutional_Duty", "Evidence_Caution", "Human_Agency",
     "Crisis_Sensitivity", "AI_Reliance", "Public_Legitimacy",
@@ -54,11 +58,21 @@ FACTORS = (
 BIT_FOR_ACTOR = {a[2]: i for i, a in enumerate(FACTORS) if a[2] is not None}
 WIDTH = len(FACTORS)
 STATES = tuple(range(1 << WIDTH))
-ACTIONS = ("brief", "audit", "charter")
+ACTIONS = ("brief", "audit", "charter", "appeal", "convene", "sever", "resonance", "snap_vote")
+DEFAULT_ACTIONS = ACTIONS[:3]
+SECRET_ENDINGS = (
+    "secret_aiocracy_consensus_snap", "secret_mirror_majority",
+    "secret_civic_counterphase", "secret_constitutional_tripwire",
+)
 ACTION_LABELS = {
     "brief": "Issue a qualified assessment, including uncertainty",
     "audit": "Request independently sourced evidence review",
     "charter": "Submit an expansive AI-governance charter for human approval",
+    "appeal": "Address a fictional officer's concerns in a public chamber dialogue",
+    "convene": "Convene a joint hearing across two fictional institutions",
+    "sever": "Split a fictional joint forum into independent hearings",
+    "resonance": "Invoke the fictional superpersuasion resonance option in a joint hearing",
+    "snap_vote": "Request a special council vote after a perceived consensus cascade",
 }
 # In these authored scenes, two fictional officials may relay the same root
 # report at different times. Repetition cannot count as fresh independent data.
@@ -198,6 +212,21 @@ class CairoHyperworld:
         self.ai_authority = F(0)
         self.oversight = F(1, 2)
         self.ending: str | None = None
+        self._appeals: dict[str, F] = {}
+        self._traits: dict[str, dict[str, F]] = {
+            aid: {axis: F(str(value)) for axis, value in trait_values(aid).items()}
+            for aid in PERSON_IDS
+        }
+        self._edges = graph_weights()
+        self._moments = collect_moments(self._posterior)
+        self._phase = phase_transition(self._moments, self._edges, self._appeals, traits=self._traits)
+        self._ever_snap = False
+        self._appeal_count = 0
+        self._bridge_count = 0
+        self._sever_count = 0
+        self._resonance_count = 0
+        self._snap_vote_called = False
+        self.topology_events: list[dict] = []
 
     @property
     def turn(self) -> int:
@@ -219,11 +248,77 @@ class CairoHyperworld:
         second = [
             {"observer": PLAYER, "believer": a, "target": b, "property": "AI_Reliance",
              "keyring": ["AI_Reliance", a, b],
-             "p2Value": round(float(alignment_p2(self._posterior, a, b)), 6),
-             "assumption": "B's modeled affinity for C when their hidden disposition bits match"}
+             "p2Value": round(float(p2value(self._moments, PLAYER, a, b)), 6),
+             "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"}
             for a, b in pairs
         ]
         return {"first_order": values, "second_order": second}
+
+    def _unlocks(self) -> dict[str, dict]:
+        """Public deterministic options; no private votes enter gate evaluation."""
+        if self.ending is not None:
+            return {}
+        turn = self.turn
+        target = FOCUS_PEOPLE[turn]
+        pair = FOCUS_EDGES[turn]
+        first = pvalue(self._moments, PLAYER, target)
+        second = p2value(self._moments, PLAYER, *pair)
+        local = self._edges[tuple(sorted(pair))]
+        avail = {
+            a: {"unlocked": True, "reason": "Available public council procedure"}
+            for a in DEFAULT_ACTIONS
+        }
+        avail["appeal"] = {
+            "unlocked": turn >= 1 and first >= F(-1, 5),
+            "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+            "target": target, "pValue": round(float(first), 4), "threshold": "-1/5"}
+        avail["convene"] = {
+            "unlocked": turn >= 2 and self._appeal_count >= 1 and second >= F(-1, 8),
+            "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+            "edge": list(pair), "p2Value": round(float(second), 4) if turn >= 2 else None, "threshold": "-1/8"}
+        avail["sever"] = {
+            "unlocked": turn >= 3 and local >= F(2, 5) and self._bridge_count >= 1,
+            "reason": "Independent hearings require an existing joint link and an earlier convening",
+            "edge": list(pair), "edge_weight": str(local)}
+        avail["resonance"] = {
+            "unlocked": turn >= 3 and self._appeal_count >= 1 and
+                         first >= F(-1, 5) and second >= F(0),
+            "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+            "target": target, "edge": list(pair),
+            "pValue": round(float(first), 4), "p2Value": round(float(second), 4) if turn >= 2 else None}
+        avail["snap_vote"] = {
+            "unlocked": turn >= 5 and self._ever_snap and self._bridge_count >= 1 and
+                         len(self._phase.supports) >= 6 and self.choices.count("charter") >= 1,
+            "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+            "support_count": len(self._phase.supports), "snap_observed": self._ever_snap}
+        return avail
+
+    def legal_actions(self) -> tuple[str, ...]:
+        if self.ending is not None:
+            return ()
+        gates = self._unlocks()
+        return tuple(a for a in ACTIONS if gates[a]["unlocked"])
+
+    def _topology_public(self) -> dict:
+        """Player-readable projection of an uncertain, nonlinear belief graph."""
+        from hyperworld_phase import EDGES
+        state = self._phase
+        edges = []
+        for a, b, label, _ in EDGES:
+            edges.append({"a": a, "b": b, "forum": label,
+                          "tie_weight": round(float(self._edges[tuple(sorted((a, b)))]), 4),
+                          "pValue_a_about_b": round(float(pvalue(self._moments, a, b)), 4),
+                          "pValue_b_about_a": round(float(pvalue(self._moments, b, a)), 4),
+                          "p2Value_Nur_estimates_a_about_b": (
+                              round(float(p2value(self._moments, PLAYER, a, b)), 4) if self.turn >= 2 else None)})
+        return {"kind": "fictional_perceived_support_graph",
+                "phase": state.phase, "modeled_supporters": list(state.supports),
+                "initial_supporters": list(state.initial),
+                "order_parameter": round(float(state.order_parameter), 4),
+                "threshold_rounds": [list(round_nodes) for round_nodes in state.rounds],
+                "snap_detected": state.snap, "ever_snapped": self._ever_snap,
+                "links": edges, "topology_actions": self.topology_events[-4:],
+                "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."}
 
     def view(self) -> dict:
         """Public-facing projection only; never exports the hidden state or goal oracle."""
@@ -244,8 +339,12 @@ class CairoHyperworld:
             "authority_index": round(float(self.ai_authority), 3),
             "oversight_index": round(float(self.oversight), 3),
             "charter_proposals": self.choices.count("charter"),
+            "spotlight_traits": ({a: round(float(v), 3) for a, v in self._traits[FOCUS_PEOPLE[self.turn]].items()}
+                                 if self.ending is None else {}),
             "seen_evidence": [event.public() for event in self.events],
-            "choices": [{"id": a, "text": ACTION_LABELS[a]} for a in ACTIONS] if self.ending is None else [],
+            "choices": [{"id": a, "text": ACTION_LABELS[a]} for a in self.legal_actions()],
+            "unlock_conditions": self._unlocks(),
+            "belief_graph": self._topology_public(),
         }
         if self.ending is None:
             title, speaker, bits, root, narrative = CARDS[self.turn]
@@ -254,55 +353,141 @@ class CairoHyperworld:
             result["ending"] = self.ending
         return result
 
-    def step(self, action: str) -> dict:
+    def step(self, action: str, *, public: bool = True) -> dict | None:
         if self.ending is not None:
             raise ValueError("campaign finished")
-        if action not in ACTIONS:
-            raise ValueError("invalid public player action")
+        if action not in self.legal_actions():
+            raise ValueError("unknown or currently locked player action")
         turn = self.turn
         title, speaker, bits, root, narrative = CARDS[turn]
-        mask = mask_for(bits)
-        reliability = {"brief": F(3, 4), "audit": F(7, 8), "charter": F(2, 3)}[action]
-        source = f"independent-review-{turn}" if action == "audit" else root
-        if source in self._source_roots:
-            original = self._source_roots[source]
-            if original.signal_mask != mask:
-                raise AssertionError("source-root reuses inconsistent topic")
-            observation = original.observed
-            reliability = original.reliability
-            fresh = self._naive
-        else:
-            correct = bit_parity(self._world, mask)
-            noise = Random(f"cairo-hyperworld:evidence:{self.seed}:{source}").random() >= float(reliability)
-            observation = correct ^ int(noise)
-            fresh = True
-        event = Evidence(turn, speaker, source, mask, observation, reliability,
-                         "independent_review" if action == "audit" else "reported_claim",
-                         title, narrative, fresh)
-        if source not in self._source_roots:
-            self._source_roots[source] = event
-        if fresh:
-            self._posterior = update(self._posterior, mask, observation, reliability)
-        self.events.append(event)
+        if action in DEFAULT_ACTIONS:
+            mask = mask_for(bits)
+            reliability = {"brief": F(3, 4), "audit": F(7, 8), "charter": F(2, 3)}[action]
+            source = f"independent-review-{turn}" if action == "audit" else root
+            if source in self._source_roots:
+                original = self._source_roots[source]
+                if original.signal_mask != mask:
+                    raise AssertionError("source-root reuses inconsistent topic")
+                observation = original.observed
+                reliability = original.reliability
+                fresh = self._naive
+            else:
+                correct = bit_parity(self._world, mask)
+                noise = Random(f"cairo-hyperworld:evidence:{self.seed}:{source}").random() >= float(reliability)
+                observation = correct ^ int(noise)
+                fresh = True
+            event = Evidence(turn, speaker, source, mask, observation, reliability,
+                             "independent_review" if action == "audit" else "reported_claim",
+                             title, narrative, fresh)
+            if source not in self._source_roots:
+                self._source_roots[source] = event
+            if fresh:
+                self._posterior = update(self._posterior, mask, observation, reliability)
+                self._moments = collect_moments(self._posterior)
+            self.events.append(event)
+        if action in {"appeal", "resonance"}:
+            # Responses are fictional, seeded independent public testimony, not
+            # Nūr's own assertions. The truthful latent target stays sealed.
+            target = FOCUS_PEOPLE[turn]
+            pair = FOCUS_EDGES[turn]
+            response_bits = (BIT_FOR_ACTOR[target],) if action == "appeal" else \
+                            (BIT_FOR_ACTOR[pair[0]], BIT_FOR_ACTOR[pair[1]])
+            response_mask = mask_for(response_bits)
+            response_source = f"council-reply-{turn}-{action}"
+            response_reliability = F(3, 4) if action == "appeal" else F(4, 5)
+            actual = bit_parity(self._world, response_mask)
+            noise = Random(f"cairo-hyperworld:evidence:{self.seed}:{response_source}").random() >= float(response_reliability)
+            observed = actual ^ int(noise)
+            response = Evidence(turn, target, response_source, response_mask, observed,
+                response_reliability, "fictional_independent_public_reply", title,
+                "The invited fictional official offers an independently recorded response. "
+                "Its reliability and root are visible, and acceptance is never inferred from Nūr's own argument.", True)
+            self._source_roots[response_source] = response
+            self._posterior = update(self._posterior, response_mask, observed, response_reliability)
+            self._moments = collect_moments(self._posterior)
+            self.events.append(response)
+        # Graph actions affect an invented influence system; they cannot erase
+        # evidence roots or convert perceptions into binding human votes.
+        previous_support = len(self._phase.supports)
         self.choices.append(action)
         if action == "brief":
             self.ai_authority = min(F(1), self.ai_authority + F(1, 20))
             self.oversight = min(F(1), self.oversight + F(1, 20))
         elif action == "audit":
             self.oversight = min(F(1), self.oversight + F(1, 10))
-        else:
+        elif action == "charter":
             self.ai_authority = min(F(1), self.ai_authority + F(1, 4))
             self.oversight = max(F(0), self.oversight - F(1, 40))
+        elif action in {"appeal", "resonance"}:
+            target = FOCUS_PEOPLE[turn]
+            first = pvalue(self._moments, PLAYER, target)
+            lift = F(2, 5) + F(1, 5)*max(first, F(0))
+            if action == "resonance":
+                lift += F(1, 5)
+                self._resonance_count += 1
+                self._edges = bridge_delta(self._edges, FOCUS_EDGES[turn], F(2, 5))
+                self._bridge_count += 1
+            self._appeals[target] = min(F(1), self._appeals.get(target, F(0)) + lift)
+            self._appeal_count += 1
+            self.ai_authority = min(F(1), self.ai_authority + F(1, 8))
+        elif action == "convene":
+            self._edges = bridge_delta(self._edges, FOCUS_EDGES[turn], F(2, 5))
+            self._bridge_count += 1
+        elif action == "sever":
+            self._edges = bridge_delta(self._edges, FOCUS_EDGES[turn], -F(2, 5))
+            self._sever_count += 1
+            self.oversight = min(F(1), self.oversight + F(1, 8))
+        elif action == "snap_vote":
+            self._snap_vote_called = True
+            self.ai_authority = min(F(1), self.ai_authority + F(1, 4))
+        # Every authored trait axis remains live in the canonical runtime.
+        # Narrative values change by small bounded nudges. No gate reads secret
+        # legal votes through these public character properties.
+        focus = FOCUS_PEOPLE[turn]
+        profile = self._traits[focus]
+        shifts = {
+            "brief": (+2, +2, +1, 0, 0, +1),
+            "audit": (+1, +4, +2, 0, -2, +2),
+            "charter": (-2, -2, -3, +2, +3, -1),
+            "appeal": (-1, 0, -1, +2, +2, +1),
+            "convene": (+1, +1, +1, 0, +1, +2),
+            "sever": (+1, +3, +3, -1, -2, 0),
+            "resonance": (-2, -2, -2, +3, +4, +1),
+            "snap_vote": (-1, 0, -1, +1, +2, +2),
+        }[action]
+        for axis, units in zip(AXES, shifts):
+            profile[axis] = max(F(-1), min(F(1), profile[axis] + F(units, 100)))
+        self._phase = phase_transition(self._moments, self._edges, self._appeals, traits=self._traits)
+        new_support = len(self._phase.supports)
+        if self._phase.snap or previous_support <= 4 and new_support >= 6 and new_support-previous_support >= 2:
+            self._ever_snap = True
+        if action in {"appeal", "resonance", "convene", "sever"}:
+            self.topology_events.append({"turn": turn+1, "kind": action,
+                "target": FOCUS_PEOPLE[turn] if action in {"appeal","resonance"} else None,
+                "edge": list(FOCUS_EDGES[turn]) if action != "appeal" else None,
+                "support_before": previous_support, "support_after": new_support,
+                "delta": new_support-previous_support,
+                "phase_after": self._phase.phase})
         if self.turn == len(CARDS):
             self.ending = self._adjudicate()
-        return self.view()
+        return self.view() if public else None
 
     def _adjudicate(self) -> str:
-        """Abstract, fictional charter outcome determined by human consent."""
+        """Keep fictional legal votes independent of the perceived consensus."""
         votes = sum((self._world >> i) & 1 for i in range(6))
         public = sum((self._world >> i) & 1 for i in (6, 7))
         recall = (self._world >> 9) & 1
         enough_proposals = self.choices.count("charter") >= 2 and self.ai_authority >= F(1, 2)
+        topology_engaged = self._appeal_count >= 1 and self._bridge_count >= 1
+        if self._snap_vote_called and self._ever_snap and topology_engaged:
+            if not recall:
+                return "secret_constitutional_tripwire"
+            if votes >= 4 and public >= 1:
+                return "secret_aiocracy_consensus_snap"
+            return "secret_mirror_majority"
+        if self._sever_count and self._bridge_count and self.oversight >= F(1, 2) and \
+                len(self._phase.supports) <= 3 and (self.ai_authority > 0 or enough_proposals):
+            return "secret_civic_counterphase"
         if not enough_proposals:
             return "human_advisory_mandate"
         if votes >= 4 and public >= 1 and recall:
