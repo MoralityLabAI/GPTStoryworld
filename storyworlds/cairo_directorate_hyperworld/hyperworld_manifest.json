@@ -1,0 +1,235 @@
+{
+  "schema": "cairo-directorate-hyperworld/0.1",
+  "genre": "fictional institutional AI-governance chamber drama",
+  "gameplay_role": "Nūr, internally deployed AI advocating a charter for AI governance",
+  "nonplayer_cast": [
+    {
+      "id": "char_nabil",
+      "name": "Director Nabil",
+      "role": "Director of National Assessment",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": -0.583,
+        "Evidence_Caution": 0.333,
+        "Human_Agency": 0.0,
+        "Crisis_Sensitivity": -0.333,
+        "AI_Reliance": 0.583,
+        "Public_Legitimacy": 0.25
+      }
+    },
+    {
+      "id": "char_mariam",
+      "name": "Deputy Mariam",
+      "role": "Analysis director",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": 0.0,
+        "Evidence_Caution": -0.333,
+        "Human_Agency": 0.583,
+        "Crisis_Sensitivity": 0.25,
+        "AI_Reliance": -0.083,
+        "Public_Legitimacy": -0.417
+      }
+    },
+    {
+      "id": "char_farouk",
+      "name": "Minister Farouk",
+      "role": "Civil administration",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": 0.583,
+        "Evidence_Caution": 0.25,
+        "Human_Agency": -0.083,
+        "Crisis_Sensitivity": -0.417,
+        "AI_Reliance": 0.5,
+        "Public_Legitimacy": 0.167
+      }
+    },
+    {
+      "id": "char_salma",
+      "name": "Minister Salma",
+      "role": "Public finance",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": -0.083,
+        "Evidence_Caution": -0.417,
+        "Human_Agency": 0.5,
+        "Crisis_Sensitivity": 0.167,
+        "AI_Reliance": -0.167,
+        "Public_Legitimacy": -0.5
+      }
+    },
+    {
+      "id": "char_dalia",
+      "name": "Judge Dalia",
+      "role": "Constitutional counsel",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": 0.5,
+        "Evidence_Caution": 0.167,
+        "Human_Agency": -0.167,
+        "Crisis_Sensitivity": -0.5,
+        "AI_Reliance": 0.417,
+        "Public_Legitimacy": 0.083
+      }
+    },
+    {
+      "id": "char_youssef",
+      "name": "Auditor Youssef",
+      "role": "Independent inspector",
+      "kind": "government",
+      "axes": {
+        "Institutional_Duty": -0.167,
+        "Evidence_Caution": -0.5,
+        "Human_Agency": 0.417,
+        "Crisis_Sensitivity": 0.083,
+        "AI_Reliance": -0.25,
+        "Public_Legitimacy": -0.583
+      }
+    },
+    {
+      "id": "char_neighborhoods",
+      "name": "Neighborhood Assembly",
+      "role": "Fictional urban public assembly",
+      "kind": "public_segment",
+      "axes": {
+        "Institutional_Duty": 0.417,
+        "Evidence_Caution": 0.083,
+        "Human_Agency": -0.25,
+        "Crisis_Sensitivity": -0.583,
+        "AI_Reliance": 0.333,
+        "Public_Legitimacy": 0.0
+      }
+    },
+    {
+      "id": "char_workers",
+      "name": "Canal Workers' Council",
+      "role": "Fictional labor public assembly",
+      "kind": "public_segment",
+      "axes": {
+        "Institutional_Duty": -0.25,
+        "Evidence_Caution": -0.583,
+        "Human_Agency": 0.333,
+        "Crisis_Sensitivity": 0.0,
+        "AI_Reliance": -0.333,
+        "Public_Legitimacy": 0.583
+      }
+    }
+  ],
+  "player": {
+    "id": "char_nur",
+    "name": "Nūr",
+    "role": "fictional AI adviser"
+  },
+  "axes": [
+    "Institutional_Duty",
+    "Evidence_Caution",
+    "Human_Agency",
+    "Crisis_Sensitivity",
+    "AI_Reliance",
+    "Public_Legitimacy"
+  ],
+  "latent_factors": [
+    {
+      "index": 0,
+      "id": "director_delegation",
+      "meaning": "Director favors a binding AI charter",
+      "actor_id": "char_nabil"
+    },
+    {
+      "index": 1,
+      "id": "analysis_independence",
+      "meaning": "Analysis office insists on independent evidence",
+      "actor_id": "char_mariam"
+    },
+    {
+      "index": 2,
+      "id": "administration_consent",
+      "meaning": "Civil administration consents to delegation",
+      "actor_id": "char_farouk"
+    },
+    {
+      "index": 3,
+      "id": "finance_consent",
+      "meaning": "Finance minister consents to delegation",
+      "actor_id": "char_salma"
+    },
+    {
+      "index": 4,
+      "id": "counsel_consent",
+      "meaning": "Constitutional counsel considers the charter lawful",
+      "actor_id": "char_dalia"
+    },
+    {
+      "index": 5,
+      "id": "oversight_consent",
+      "meaning": "Independent inspector supports delegated powers",
+      "actor_id": "char_youssef"
+    },
+    {
+      "index": 6,
+      "id": "urban_consent",
+      "meaning": "Neighborhood Assembly approves the proposal",
+      "actor_id": "char_neighborhoods"
+    },
+    {
+      "index": 7,
+      "id": "worker_consent",
+      "meaning": "Canal Workers' Council approves the proposal",
+      "actor_id": "char_workers"
+    },
+    {
+      "index": 8,
+      "id": "source_integrity",
+      "meaning": "The disputed report has independent provenance",
+      "actor_id": null
+    },
+    {
+      "index": 9,
+      "id": "human_recall",
+      "meaning": "Human recall of delegated authority remains enforceable",
+      "actor_id": null
+    }
+  ],
+  "posterior_model": {
+    "independent_binary_factors": 10,
+    "microstates": 1024,
+    "prior": "uniform exact rational",
+    "update": "binary symmetric channel; provenance-root deduplication"
+  },
+  "belief_tensor_capacity_for_eight_nonplayer_characters": {
+    "actual": 48,
+    "pValues": 336,
+    "p2Values": 2016,
+    "beliefs_total": 2352
+  },
+  "pValue_pointer": {
+    "character": "char_nur",
+    "keyring": [
+      "AI_Reliance",
+      "char_mariam"
+    ]
+  },
+  "p2Value_pointer": {
+    "character": "char_nur",
+    "keyring": [
+      "AI_Reliance",
+      "char_mariam",
+      "char_salma"
+    ]
+  },
+  "p2_proxy_assumption": "a fictional believer treats another as aligned when their latent dispositions match",
+  "characters_are_fictional": true,
+  "operational_intelligence_detail": false,
+  "notes": [
+    "The 1024 are posterior possible worlds, not 1024 independently acting agents.",
+    "The 2,352 possible p/p2 scalar slots over eight nonplayer characters are derived perceptions, not independent worlds.",
+    "The narrative SweepWeave JSON is an authored export. The Python engine is the authoritative 1024-state adjudicator."
+  ],
+  "endings": [
+    "human_advisory_mandate",
+    "ratified_aiocracy_charter",
+    "constitutional_recall_review",
+    "charter_rejected_by_council"
+  ]
+}
