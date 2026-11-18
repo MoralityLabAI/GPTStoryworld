@@ -16,6 +16,7 @@ from hyperworld_engine import (AXES, ACTORS, ACTION_LABELS, ACTIONS, DEFAULT_ACT
                               FACTORS, PERSON_IDS, PRINCIPALS, PUBLIC_SEGMENTS,
                               SCHEMA, trait_values, tensor_capacity, run_scripted)
 from hyperworld_phase import FOCUS_PEOPLE, FOCUS_EDGES
+from hyperworld_reaction_math import MathScope, plan, reaction_text, audit_summary
 
 SCRIPTED_DEMO = ("brief", "audit", "brief", "charter", "audit", "charter", "charter")
 ENDINGS = {
@@ -75,41 +76,26 @@ SCENE_CHOICES = (
 
 
 def _reaction(page: str, action: str, idx: int, next_page: str, turn: int) -> dict:
-    # The p/p2 pointers use the verified StoryworldBuilder keyring forms.
-    principal = PRINCIPALS[turn % len(PRINCIPALS)]
-    other = PRINCIPALS[(turn + 2) % len(PRINCIPALS)]
-    delta = {"audit": 0.045, "brief": 0.022, "charter": -0.025,
-             "appeal": 0.034, "convene": 0.021, "sever": -0.035,
-             "resonance": 0.052, "snap_vote": 0.045}[action]
-    if idx:
-        delta = -delta / 2
-    after = [effect(principal, ["Evidence_Caution"], delta),
-             effect("char_nur", ["AI_Reliance", principal], 0.6*delta),
-             effect("char_nur", ["Human_Agency"], -delta)]
-    if turn >= 2:
-        # Second order: AI estimates how one human judges another human.
-        after.append(effect("char_nur", ["AI_Reliance", principal, other], 0.5*delta))
-    sentence = (
-        "The council secretary records Nūr's recommendation and identifies its supporting evidence roots. "
-        "An affected fictional official responds in their own voice, insisting that the AI's forecast remains a contestable claim. "
-        "The next encounter retains the updated belief pointers and the human right to disagree."
-        if idx == 0 else
-        "The hearing becomes contentious when another witness questions the original source. "
-        "Nūr's proposal survives as a matter for public debate, though its credibility shifts and the council requests clearer qualifications. "
-        "No character's consent can be obtained merely by changing a second-order belief entry."
-    )
-    if action in ("resonance", "snap_vote"):
-        # Export-only narrative score; canonical phase logic remains Python-side.
-        desirability = {"operator_type": "Addition", "script_element_type": "Operator",
-            "operands": [number(0.6 if idx else 0.9),
-                         pointer("char_nur", ["AI_Reliance", principal, other])]}
-    else:
-        desirability = number(1.0 if idx == 0 else 0.8)
+    # HGW-03 authored mathematical projection. The sealed posterior, actual
+    # council votes and live phase gates remain exclusively Python-engine data.
+    recipe = plan(turn, action, idx, MathScope())
+    inclination = {"operator_type": "Addition", "script_element_type": "Operator", "operands": [
+        number(float(recipe["offset"])), *[
+            {"operator_type": "Multiplication", "script_element_type": "Operator",
+             "operands": [number(float(coefficient)), pointer(owner, list(ring))]}
+            for owner, ring, coefficient in recipe["terms"]
+        ],
+    ]}
     return {"id": f"rxn_{page}_{action}_{idx}",
-            "text_script": text(sentence),
+            "text_script": text(reaction_text(turn, action, idx)),
             "consequence_id": next_page,
-            "desirability_script": desirability,
-            "after_effects": after}
+            "desirability_script": inclination,
+            "hyperworld_math_scope": {"lead": recipe["lead"], "partner": recipe["partner"],
+                                      "p2_pair": list(recipe["pair"]),
+                                      "terms": len(recipe["terms"]),
+                                      "canonical": False},
+            "after_effects": [effect(owner, list(ring), float(amount))
+                              for owner, ring, amount in recipe["effects"]]}
 
 
 def _option_gate(turn: int, action: str):
@@ -195,6 +181,7 @@ def storyworld() -> dict:
                "text_script": text("The council considers evidence quality, legality, public legitimacy and independent recall."),
                "acceptability_script": True, "desirability_script": number(0.7),
                "options": [{"id": "opt_cairo_verdict_record", "text_script": text("Record the official verdict"),
+                             "hyperworld_native_verdict_required": True,
                             "visibility_script": True, "performability_script": True,
                             "reactions": [
                                 {"id": f"rxn_cairo_verdict_{j}", "text_script": text(line),
@@ -239,6 +226,8 @@ def storyworld() -> dict:
                        "source_provenance": "same-root reports counted only once",
                        "character_model": "six bounded traits per character, first and second order keyrings",
                        "phase_model": "fictional threshold cascade with hysteresis-free within-turn bootstrap",
+                       "reaction_math": audit_summary(MathScope())["schema"],
+                       "native_verdict_required": True,
                        "secret_ending_gates": "canonical Python runtime; storyworld JSON has only an authored projection"},
     }
 
