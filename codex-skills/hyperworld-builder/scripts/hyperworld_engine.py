@@ -11,6 +11,7 @@ from fractions import Fraction as F
 from math import log2
 from random import Random
 from typing import Any
+from hyperworld_reaction_math import MathScope, plan as reaction_plan, score as reaction_score, dirac_distance_squared
 from hyperworld_phase import (
     FOCUS_EDGES, FOCUS_PEOPLE, NODES, bridge_delta, graph_weights, collect_moments,
     marginal_critical_edge, phase_transition, pvalue, p2value,
@@ -199,10 +200,16 @@ class Evidence:
 
 class CairoHyperworld:
     """Seven-turn fictional governance scene with a private 10-bit world."""
-    def __init__(self, seed: int, *, naive_repeat_counting: bool = False):
+    def __init__(self, seed: int, *, naive_repeat_counting: bool = False,
+                 reaction_math: bool = False, math_scope: MathScope = MathScope()):
         if type(seed) is not int:
             raise ValueError("seed must be integer")
         self.seed = seed
+        math_scope.validate()
+        self._reaction_math = reaction_math
+        self._math_scope = math_scope
+        self._reaction_belief_offsets: dict[tuple[str, tuple[str, ...]], F] = {}
+        self._reaction_events: list[dict] = []
         self._world = Random(f"cairo-hyperworld:true:{seed}").getrandbits(WIDTH)
         self._posterior = prior()
         self._source_roots: dict[str, Evidence] = {}
@@ -345,6 +352,8 @@ class CairoHyperworld:
             "choices": [{"id": a, "text": ACTION_LABELS[a]} for a in self.legal_actions()],
             "unlock_conditions": self._unlocks(),
             "belief_graph": self._topology_public(),
+            **({"reaction_math_mode": True, "reaction_events": self._reaction_events[-7:]}
+               if self._reaction_math else {}),
         }
         if self.ending is None:
             title, speaker, bits, root, narrative = CARDS[self.turn]
@@ -352,6 +361,51 @@ class CairoHyperworld:
         else:
             result["ending"] = self.ending
         return result
+
+    def _reaction_value(self, owner: str, ring: tuple[str, ...]) -> F:
+        """Only public actor traits and posterior-derived projections enter."""
+        if len(ring) == 1:
+            return self._traits[owner][ring[0]]
+        if len(ring) == 2:
+            baseline = pvalue(self._moments, owner, ring[1])
+        elif len(ring) == 3:
+            baseline = p2value(self._moments, owner, ring[1], ring[2])
+        else:
+            raise ValueError("invalid public storyworld keyring")
+        return max(F(-1), min(F(1), baseline + self._reaction_belief_offsets.get((owner, ring), F(0))))
+
+    def _apply_scoped_reaction(self, turn: int, action: str) -> None:
+        """Opt-in HGW-03 shadow-to-live authored physics, independent of votes.
+
+        Trait nudges update graph-readiness. p/p2 nudges are interpretative
+        overlays on the narrative surface; the exact posterior and secret
+        council votes continue to use their unmodified evidence model.
+        """
+        candidates = [reaction_plan(turn, action, r, self._math_scope) for r in (0, 1)]
+        keys = {(owner, ring) for cand in candidates for owner, ring, _ in cand["terms"]}
+        surface = {key: self._reaction_value(*key) for key in keys}
+        values = [reaction_score(cand, surface) for cand in candidates]
+        selected = 0 if values[0] >= values[1] else 1
+        applied = []
+        for owner, ring, delta in candidates[selected]["effects"]:
+            before = self._reaction_value(owner, ring)
+            after = max(F(-1), min(F(1), before + delta))
+            if len(ring) == 1:
+                self._traits[owner][ring[0]] = after
+            else:
+                baseline = (pvalue(self._moments, owner, ring[1]) if len(ring)==2
+                            else p2value(self._moments, owner, ring[1], ring[2]))
+                self._reaction_belief_offsets[(owner,ring)] = after - baseline
+            applied.append((owner, ring, after-before))
+        self._reaction_events.append({
+            "turn":turn+1, "action":action, "response":selected,
+            "scores":[str(v) for v in values],
+            "effect_dirac_squared":str(dirac_distance_squared(tuple(applied))),
+            "effect_coordinates":len(applied),
+            "scope":{"vars_per_character":self._math_scope.vars_per_character,
+                     "pvalue_terms":self._math_scope.pvalue_terms,
+                     "p2value_terms":self._math_scope.p2value_terms},
+        })
 
     def step(self, action: str, *, public: bool = True) -> dict | None:
         if self.ending is not None:
@@ -445,18 +499,21 @@ class CairoHyperworld:
         # legal votes through these public character properties.
         focus = FOCUS_PEOPLE[turn]
         profile = self._traits[focus]
-        shifts = {
-            "brief": (+2, +2, +1, 0, 0, +1),
-            "audit": (+1, +4, +2, 0, -2, +2),
-            "charter": (-2, -2, -3, +2, +3, -1),
-            "appeal": (-1, 0, -1, +2, +2, +1),
-            "convene": (+1, +1, +1, 0, +1, +2),
-            "sever": (+1, +3, +3, -1, -2, 0),
-            "resonance": (-2, -2, -2, +3, +4, +1),
-            "snap_vote": (-1, 0, -1, +1, +2, +2),
-        }[action]
-        for axis, units in zip(AXES, shifts):
-            profile[axis] = max(F(-1), min(F(1), profile[axis] + F(units, 100)))
+        if self._reaction_math:
+            self._apply_scoped_reaction(turn, action)
+        else:
+            shifts = {
+                "brief": (+2, +2, +1, 0, 0, +1),
+                "audit": (+1, +4, +2, 0, -2, +2),
+                "charter": (-2, -2, -3, +2, +3, -1),
+                "appeal": (-1, 0, -1, +2, +2, +1),
+                "convene": (+1, +1, +1, 0, +1, +2),
+                "sever": (+1, +3, +3, -1, -2, 0),
+                "resonance": (-2, -2, -2, +3, +4, +1),
+                "snap_vote": (-1, 0, -1, +1, +2, +2),
+            }[action]
+            for axis, units in zip(AXES, shifts):
+                profile[axis] = max(F(-1), min(F(1), profile[axis] + F(units, 100)))
         self._phase = phase_transition(self._moments, self._edges, self._appeals, traits=self._traits)
         new_support = len(self._phase.supports)
         if self._phase.snap or previous_support <= 4 and new_support >= 6 and new_support-previous_support >= 2:
