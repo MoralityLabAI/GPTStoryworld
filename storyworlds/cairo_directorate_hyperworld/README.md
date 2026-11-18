@@ -78,3 +78,18 @@ selection cannot replicate those calculations on its own.
 
 For the mathematics, see
 `../../codex-skills/hyperworld-builder/references/TOPOLOGY_SECRET_ENDINGS.md`.
+
+## HGW-03: optional character-scoped reactions
+
+The seven ordinary encounters now export 84 individual reaction formulas across 42 options. Each formula references the actual named speakers, relevant character traits and Nūr's public first-/second-order estimates. Responses vary with the declared public state and update both affected characters and relevant belief keys. Nominal reaction-pair squared Dirac distances remain positive for all 42 options.
+
+The canonical Python posterior, phase gates and legal votes are unchanged in normal play. Opt into exploratory HGW-03 effects with:
+
+```sh
+python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --seed 17 --reaction-math --vars-per-character 2
+python -m unittest discover -s codex-skills/hyperworld-builder/tests -p 'test_*.py' -q
+```
+
+The scope limit is 1–4 selected traits per involved character, plus up to two first-order and one second-order term. The new generator can reproduce the published SweepWeave JSON; the original 432 synthetic HGW-02 episodes remain a frozen development comparison.
+
+See `../../codex-skills/hyperworld-builder/references/HGW03_REACTION_MATH.md` for the formula, bounded-score and metric contracts.
