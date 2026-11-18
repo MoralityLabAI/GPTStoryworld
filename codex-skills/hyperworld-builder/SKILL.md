@@ -73,3 +73,17 @@ For the demo's hidden routes, try:
 python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --auto --policy snap --seed 0
 python codex-skills/hyperworld-builder/scripts/play_hyperworld.py --auto --policy civic --seed 0
 ```
+
+## HGW-03: variable-scoped event mathematics (opt-in)
+
+Read `references/HGW03_REACTION_MATH.md` before changing reaction formulas, reaction effects, source-root gates, or Dirac geometry. Work event-first: identify the actual speaker, affected counterparty, focal public-graph edge, and each response's narrative consequence. Avoid rotating through unrelated principal IDs. Formula terms must be event-specific and refer only to variables the reaction can legitimately observe.
+
+Define `MathScope(vars_per_character=b, pvalue_terms=q1, p2value_terms=q2)`. For the Cairo seven-event shell, `1<=b<=4`, `0<=q1<=2`, and `0<=q2<=1`; per reaction the scope is at most `2b+q1+q2` terms. Two character traits per participant, two directed pValues and a focal p2Value from turn 3 are the default. Increase complexity by selecting meaningful variables and causal edges, then normalize coefficient mass so a larger formula does not automatically dominate.
+
+For each ordinary option author at least two named-character reactions with opposite, state-sensitive response slopes. Require every reaction desirability to be a bounded, inspectable arithmetic AST. The recommended score is `I_0=1/2+F(x)` and `I_1=1/2-F(x)`, with `F(x)=sum_j c_j x_j`, each `x_j` in `[-1,1]` and `sum_j abs(c_j)<=0.34`. Values are authored reaction-choice scores, not probabilities or independent consent.
+
+Every ordinary reaction should affect a declared salient trait of each involved character and the correct public pValue/p2Value entries, with more than one independent causal channel. Compare alternative effect vectors with the exact HG-01 Clifford identity `d_D^2=Σ(w_j Δ_j)^2` on normalized numeric keys. Use distinct positive weights by trait, pValue and p2Value role, and aggregate repeated keys before squaring. Measure the realized post-clamp effects in the engine. Track near-zero branch separation, saturation and counterfactual changed outcomes.
+
+The Python runtime retains authority for posterior Bayes updates, source provenance, dynamic graph gates and final human votes. An authored SweepWeave end-page inclination can never certify a constitutional verdict. Mark that page as requiring native adjudication. Freeze the HGW-02 public seed receipts and original branch before changing default replay semantics. Run the validator, generated-fixture byte check, full 32+ tests and registered CPU rehearsal, with a new development report for opt-in behavior.
+
+For Three Voices in the Fog, allocate separate budgets for each AI's own 20 actual traits, public segments' 12 traits, selected world axes, and directed first/second-order beliefs. Include pair interaction terms only for named characters on active edges. Treat p2 as a correlated observer model. Sealed RSI grades and opponent resources must remain outside the score's visible inputs.
