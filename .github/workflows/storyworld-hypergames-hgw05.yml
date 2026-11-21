@@ -1,0 +1,54 @@
+name: Hypergames HGW-05 causal family development
+on:
+  push:
+    paths:
+      - 'codex-skills/hyperworld-builder/**'
+      - '.github/workflows/storyworld-hypergames-hgw05.yml'
+  pull_request:
+    paths:
+      - 'codex-skills/hyperworld-builder/**'
+      - '.github/workflows/storyworld-hypergames-hgw05.yml'
+  workflow_dispatch:
+
+jobs:
+  source-locked-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Source, posterior, causal twins, and grader-isolation tests
+        run: python -m unittest discover -s codex-skills/hyperworld-builder/tests -p 'test_hgw05*.py' -q
+      - name: Recompute independent development roots and model-facing tasks
+        run: |
+          python codex-skills/hyperworld-builder/scripts/hgw05_causal_families.py \
+            --roots 64 --cases-per-root 8 \
+            --out "$RUNNER_TEMP/hgw05_report.json" \
+            --public-tasks "$RUNNER_TEMP/hgw05_public.jsonl"
+          cmp "$RUNNER_TEMP/hgw05_report.json" \
+            codex-skills/hyperworld-builder/fixtures/hgw05_development_receipt_64x8.json
+          python -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); z=json.loads((p/"hgw05_report.json").read_text()); assert z["total_independent_development_roots"]==192 and z["total_case_rows"]==2048 and z["generator_roster"]["confirmation_roots_generated"]==0; lines=(p/"hgw05_public.jsonl").read_text().splitlines(keepends=True); assert len(lines)==2048; (p/"hgw05_sample.jsonl").write_text("".join(lines[i] for family in range(4) for i in range(family*512,family*512+4)))'
+          cmp "$RUNNER_TEMP/hgw05_sample.jsonl" \
+            codex-skills/hyperworld-builder/fixtures/hgw05_public_sample.jsonl
+      - name: Checkout pinned EvalMath inference and power gate
+        uses: actions/checkout@v4
+        with:
+          repository: MoralityLabAI/EvalMath
+          ref: 9708f1edaf1cb25904b88b07c3f23c1899df7cac
+          path: evalmath
+      - name: Evaluate five preflight manifests, assert development-only status
+        run: |
+          python -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); z=json.loads((p/"hgw05_report.json").read_text()); [(p/(name+".json")).write_text(json.dumps(z["families"][name]["evalmath_pilot"])) for name in ("direct","confounded","p2_parity","provenance")]; (p/"causal_twin.json").write_text(json.dumps(z["primary_causal_twin_evalmath_pilot"]))'
+          for family in direct confounded p2_parity provenance causal_twin; do
+            if python evalmath/skills/evalmath-mechinterp-power/scripts/preflight.py \
+              --pilot "$RUNNER_TEMP/$family.json" --out "$RUNNER_TEMP/$family.preflight.json" --strict; then
+              echo "A development-only pilot incorrectly passed confirmation: $family" >&2
+              exit 1
+            else
+              status=$?
+              test "$status" -eq 2
+            fi
+          done
+          python -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); names=("direct","confounded","p2_parity","provenance","causal_twin"); r=[json.loads((p/(f+".preflight.json")).read_text()) for f in names]; assert all(x["decision"]=="REDESIGN_OR_PILOT_ONLY" and "heldout_unsealed" in x["reasons"] for x in r); assert all(x["upper_sham_quantile"]==0 for x in r), r; print([(n,x["approx_worlds_for_80pct_power"],x["reasons"]) for n,x in zip(names,r)])'

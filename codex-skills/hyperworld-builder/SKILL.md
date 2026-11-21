@@ -99,3 +99,8 @@ Treat character preferences as bounded authored scores, not calibrated probabili
 ### Model-facing policy outcomes
 
 Use `scripts/benchmark_receipts.py` to convert matched policy rollouts into an EvalMath FSI-01 manifest with `cluster_id = independent world root`. It gates `task_success` by legal and critical-action fields, reports Brier calibration as an equal-root macro mean, carries preflight/generator/model/judge source locks and requires author attestations for sealing. The demo `fixtures/hgw04_policy_development.json` is intentionally unsealed; it supplies no learned-model success claim. See the worked invocation in `references/HGW04_CAUSAL_INCLINATION.md`.
+
+
+## HGW-05: independent causal families and benchmark climbing
+
+Read `references/HGW05_CAUSAL_BENCHMARK.md` before building a new Hypergames gym or running an adaptive climb. `scripts/hgw05_causal_families.py` offers exact matched observational direct/confounded laws, randomized interventions, correlation-only second-order parity reports and repeated-source provenance challenges. It generates 10-bit posterior tasks, public model prompts and frozen development-only EvalMath pilot receipts. Scripts use the current synthetic programmatic controls as *algorithmic ceilings*. The 64-root development roster is grouped by generator root; the direct/confounded observational twins share a root. Keep the source/score locks and the held-out seal state with every result. For learned agents, record matched shams and paired root-level outcomes in `scripts/benchmark_receipts.py`, run EvalMath strict preflight, then freeze models and source before opening fresh confirmation worlds.
