@@ -32,7 +32,7 @@ class CausalInclinationTests(unittest.TestCase):
         changed = public_state(spec["model"], e, {"audit": "1"})
         self.assertEqual(changed["evidence"] - original["evidence"], F(1))
         self.assertEqual(changed["belief_about_belief"] - original["belief_about_belief"],
-                         F(1, 2) + e["noise"] * F(1, 4))
+                         F(1, 2) + F(e["noise"]) * F(1, 4))
         self.assertNotEqual(inclination(spec["formula"], changed),
                             inclination(spec["formula"], original))
 
