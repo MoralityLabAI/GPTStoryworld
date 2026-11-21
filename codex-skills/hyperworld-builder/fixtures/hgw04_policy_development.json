@@ -1,0 +1,206 @@
+{
+  "schema_version": "hgw04/paired-policy-evaluation/v1",
+  "registration": {
+    "experiment_id": "HGW04-POLICY-DEVELOPMENT",
+    "target_population": "fictional generated hypergame worlds, development only",
+    "alpha": "0.05",
+    "minimum_effect": "0.10",
+    "planned_comparisons": 3,
+    "hypothesis_preregistered": false,
+    "sealed_readout": false,
+    "clusters_independent": false,
+    "exchangeable_pair_labels": false
+  },
+  "source_locks": {
+    "generator_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "policy_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "judge_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+    "preflight_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+  },
+  "paired_rows": [
+    {
+      "root_id": "dev-root-a",
+      "case_id": "synthetic-dev-case-1",
+      "observed_truth": 1,
+      "candidate": {
+        "task_success": 1,
+        "legal_action": 0,
+        "critical_action": 0,
+        "belief_probability": "3/4"
+      },
+      "baseline": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-a",
+      "case_id": "synthetic-dev-case-2",
+      "observed_truth": 0,
+      "candidate": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/4"
+      },
+      "baseline": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-b",
+      "case_id": "synthetic-dev-case-3",
+      "observed_truth": 1,
+      "candidate": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "3/4"
+      },
+      "baseline": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-b",
+      "case_id": "synthetic-dev-case-4",
+      "observed_truth": 0,
+      "candidate": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/4"
+      },
+      "baseline": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-c",
+      "case_id": "synthetic-dev-case-5",
+      "observed_truth": 1,
+      "candidate": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "3/4"
+      },
+      "baseline": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-c",
+      "case_id": "synthetic-dev-case-6",
+      "observed_truth": 0,
+      "candidate": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/4"
+      },
+      "baseline": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-d",
+      "case_id": "synthetic-dev-case-7",
+      "observed_truth": 0,
+      "candidate": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "3/4"
+      },
+      "baseline": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    },
+    {
+      "root_id": "dev-root-d",
+      "case_id": "synthetic-dev-case-8",
+      "observed_truth": 1,
+      "candidate": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/4"
+      },
+      "baseline": {
+        "task_success": 1,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      },
+      "sham": {
+        "task_success": 0,
+        "legal_action": 1,
+        "critical_action": 0,
+        "belief_probability": "1/2"
+      }
+    }
+  ]
+}

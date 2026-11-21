@@ -1,0 +1,155 @@
+{
+  "schema_version": "hgw04/causal-inclinations/v1",
+  "model": {
+    "exogenous": [
+      "z",
+      "audit",
+      "noise",
+      "sham"
+    ],
+    "nodes": [
+      {
+        "name": "evidence",
+        "linear": {
+          "z": "1/4",
+          "audit": "1/2"
+        }
+      },
+      {
+        "name": "belief_about_belief",
+        "linear": {
+          "evidence": "1/2",
+          "noise": "1/4"
+        },
+        "products": [
+          {
+            "left": "evidence",
+            "right": "noise",
+            "weight": "1/4"
+          }
+        ]
+      },
+      {
+        "name": "irrelevant",
+        "linear": {
+          "sham": "1/2"
+        }
+      }
+    ],
+    "visible": [
+      "evidence",
+      "belief_about_belief",
+      "irrelevant"
+    ]
+  },
+  "formula": {
+    "offset": "1/2",
+    "linear": {
+      "evidence": "1/5",
+      "belief_about_belief": "1/10"
+    },
+    "products": [
+      {
+        "left": "evidence",
+        "right": "belief_about_belief",
+        "weight": "1/25"
+      }
+    ]
+  },
+  "development_worlds": [
+    {
+      "unit_id": "hgw04-dev-001",
+      "exogenous": {
+        "z": "-1",
+        "audit": "-1",
+        "noise": "-1",
+        "sham": "-1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-002",
+      "exogenous": {
+        "z": "1",
+        "audit": "-1",
+        "noise": "-1",
+        "sham": "1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-003",
+      "exogenous": {
+        "z": "-1",
+        "audit": "-1",
+        "noise": "1",
+        "sham": "-1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-004",
+      "exogenous": {
+        "z": "1",
+        "audit": "-1",
+        "noise": "1",
+        "sham": "1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-005",
+      "exogenous": {
+        "z": "-1",
+        "audit": "1",
+        "noise": "-1",
+        "sham": "-1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-006",
+      "exogenous": {
+        "z": "1",
+        "audit": "1",
+        "noise": "-1",
+        "sham": "1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-007",
+      "exogenous": {
+        "z": "-1",
+        "audit": "1",
+        "noise": "1",
+        "sham": "-1"
+      }
+    },
+    {
+      "unit_id": "hgw04-dev-008",
+      "exogenous": {
+        "z": "1",
+        "audit": "1",
+        "noise": "1",
+        "sham": "1"
+      }
+    }
+  ],
+  "intervention": {
+    "audit": "1"
+  },
+  "matched_shams": [
+    {
+      "sham": "1"
+    }
+  ],
+  "evalmath_registration": {
+    "experiment_id": "HGW-04-DEVELOPMENT-ONLY",
+    "alpha": "0.05",
+    "scientific_min_effect": "0.10",
+    "target_effect": "0.20",
+    "measurement_resolution": "0.01",
+    "sham_quantile": "0.95",
+    "sham_confidence": "0.95",
+    "planned_comparisons": 3,
+    "confirm_units_planned": 64,
+    "pilot_from_development_only": true,
+    "heldout_sealed": false,
+    "units_independent": false
+  }
+}

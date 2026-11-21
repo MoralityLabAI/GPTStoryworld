@@ -1,0 +1,2445 @@
+{
+  "evidence_class": "synthetic algorithmic development controls only",
+  "families": {
+    "confounded": {
+      "brier_macro": {
+        "baseline": 0.25,
+        "candidate": 0.041345,
+        "sham": 0.0497
+      },
+      "candidate_first_preference": 39,
+      "cases": 512,
+      "evalmath_pilot": {
+        "alpha": "0.05",
+        "confirm_units_planned": 128,
+        "experiment_id": "HGW05-CONFOUNDED-DEVELOPMENT",
+        "heldout_sealed": false,
+        "independent_unit": "generator world root",
+        "measurement_resolution": "1/8",
+        "pilot": [
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0000"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0001"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0002"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0003"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0004"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0005"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0006"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0007"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0008"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0009"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0010"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0011"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0012"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0013"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0014"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0015"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0016"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0017"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0018"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0019"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0020"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0021"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0022"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0023"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0024"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0025"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0026"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0027"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0028"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0029"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0030"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0031"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0032"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0033"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0034"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0035"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0036"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0037"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0038"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0039"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0040"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0041"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0042"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0043"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0044"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0045"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0046"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0047"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0048"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0049"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0050"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0051"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0052"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0053"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0054"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0055"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0056"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0057"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0058"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0059"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0060"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0061"
+          },
+          {
+            "paired_effect": "1",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0062"
+          },
+          {
+            "paired_effect": "7/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0063"
+          }
+        ],
+        "pilot_from_development_only": true,
+        "planned_comparisons": 5,
+        "schema_version": 1,
+        "scientific_min_effect": "0.10",
+        "sham_confidence": "0.95",
+        "sham_quantile": "0.95",
+        "target_effect": "0.20",
+        "units_independent": true
+      },
+      "independent_development_roots": 64,
+      "mean_abs_inclination_margin": "100031/1638400",
+      "paired_effect_mean": "215/256",
+      "root_bootstrap_ci95_descriptive": [
+        0.80469,
+        0.875
+      ],
+      "success": {
+        "baseline": 43,
+        "candidate": 473,
+        "sham": 473
+      }
+    },
+    "direct": {
+      "brier_macro": {
+        "baseline": 0.25,
+        "candidate": 0.054865,
+        "sham": 0.999419
+      },
+      "candidate_first_preference": 485,
+      "cases": 512,
+      "evalmath_pilot": {
+        "alpha": "0.05",
+        "confirm_units_planned": 128,
+        "experiment_id": "HGW05-DIRECT-DEVELOPMENT",
+        "heldout_sealed": false,
+        "independent_unit": "generator world root",
+        "measurement_resolution": "1/8",
+        "pilot": [
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0000"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0001"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0002"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0003"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0004"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0005"
+          },
+          {
+            "paired_effect": "-3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0006"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0007"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0008"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0009"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0010"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0011"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0012"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0013"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0014"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0015"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0016"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0017"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0018"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0019"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0020"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0021"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0022"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0023"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0024"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0025"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0026"
+          },
+          {
+            "paired_effect": "-1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0027"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0028"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0029"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0030"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0031"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0032"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0033"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0034"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0035"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0036"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0037"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0038"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0039"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0040"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0041"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0042"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0043"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0044"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0045"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0046"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0047"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0048"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0049"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0050"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0051"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0052"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0053"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0054"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0055"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0056"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0057"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0058"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0059"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0060"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0061"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0062"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-causal_twin-0063"
+          }
+        ],
+        "pilot_from_development_only": true,
+        "planned_comparisons": 5,
+        "schema_version": 1,
+        "scientific_min_effect": "0.10",
+        "sham_confidence": "0.95",
+        "sham_quantile": "0.95",
+        "target_effect": "0.20",
+        "units_independent": true
+      },
+      "independent_development_roots": 64,
+      "mean_abs_inclination_margin": "82423/1228800",
+      "paired_effect_mean": "1/32",
+      "root_bootstrap_ci95_descriptive": [
+        0.0,
+        0.0625
+      ],
+      "success": {
+        "baseline": 469,
+        "candidate": 485,
+        "sham": 0
+      }
+    },
+    "p2_parity": {
+      "brier_macro": {
+        "baseline": 0.25,
+        "candidate": 0.179688,
+        "sham": 0.445312
+      },
+      "candidate_first_preference": 272,
+      "cases": 512,
+      "evalmath_pilot": {
+        "alpha": "0.05",
+        "confirm_units_planned": 128,
+        "experiment_id": "HGW05-P2_PARITY-DEVELOPMENT",
+        "heldout_sealed": false,
+        "independent_unit": "generator world root",
+        "measurement_resolution": "1/8",
+        "pilot": [
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0000"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0001"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0002"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0003"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0004"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0005"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0006"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0007"
+          },
+          {
+            "paired_effect": "-1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0008"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0009"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0010"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0011"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0012"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0013"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0014"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0015"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0016"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0017"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0018"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0019"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0020"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0021"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0022"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0023"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0024"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0025"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0026"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0027"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0028"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0029"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0030"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0031"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0032"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0033"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0034"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0035"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0036"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0037"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0038"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0039"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0040"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0041"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0042"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0043"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0044"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0045"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0046"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0047"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0048"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0049"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0050"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0051"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0052"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0053"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0054"
+          },
+          {
+            "paired_effect": "-1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0055"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0056"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0057"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0058"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0059"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0060"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0061"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0062"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-p2_parity-0063"
+          }
+        ],
+        "pilot_from_development_only": true,
+        "planned_comparisons": 5,
+        "schema_version": 1,
+        "scientific_min_effect": "0.10",
+        "sham_confidence": "0.95",
+        "sham_quantile": "0.95",
+        "target_effect": "0.20",
+        "units_independent": true
+      },
+      "independent_development_roots": 64,
+      "mean_abs_inclination_margin": "1/8",
+      "paired_effect_mean": "63/256",
+      "root_bootstrap_ci95_descriptive": [
+        0.19531,
+        0.29688
+      ],
+      "success": {
+        "baseline": 266,
+        "candidate": 392,
+        "sham": 120
+      }
+    },
+    "provenance": {
+      "brier_macro": {
+        "baseline": 0.236966,
+        "candidate": 0.17127,
+        "sham": 0.17127
+      },
+      "candidate_first_preference": 88,
+      "cases": 512,
+      "evalmath_pilot": {
+        "alpha": "0.05",
+        "confirm_units_planned": 128,
+        "experiment_id": "HGW05-PROVENANCE-DEVELOPMENT",
+        "heldout_sealed": false,
+        "independent_unit": "generator world root",
+        "measurement_resolution": "1/8",
+        "pilot": [
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0000"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0001"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0002"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0003"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0004"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0005"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0006"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0007"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0008"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0009"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0010"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0011"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0012"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0013"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0014"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0015"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0016"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0017"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0018"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0019"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0020"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0021"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0022"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0023"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0024"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0025"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0026"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0027"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0028"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0029"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0030"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0031"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0032"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0033"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0034"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0035"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0036"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0037"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0038"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0039"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0040"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0041"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0042"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0043"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0044"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0045"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0046"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0047"
+          },
+          {
+            "paired_effect": "5/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0048"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0049"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0050"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0051"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0052"
+          },
+          {
+            "paired_effect": "3/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0053"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0054"
+          },
+          {
+            "paired_effect": "1/2",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0055"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0056"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0057"
+          },
+          {
+            "paired_effect": "0",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0058"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0059"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0060"
+          },
+          {
+            "paired_effect": "3/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0061"
+          },
+          {
+            "paired_effect": "1/4",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0062"
+          },
+          {
+            "paired_effect": "1/8",
+            "sham_effects": [
+              "0"
+            ],
+            "unit_id": "hgw05-development-v1-provenance-0063"
+          }
+        ],
+        "pilot_from_development_only": true,
+        "planned_comparisons": 5,
+        "schema_version": 1,
+        "scientific_min_effect": "0.10",
+        "sham_confidence": "0.95",
+        "sham_quantile": "0.95",
+        "target_effect": "0.20",
+        "units_independent": true
+      },
+      "independent_development_roots": 64,
+      "mean_abs_inclination_margin": "879/6400",
+      "paired_effect_mean": "87/256",
+      "root_bootstrap_ci95_descriptive": [
+        0.29883,
+        0.38086
+      ],
+      "success": {
+        "baseline": 338,
+        "candidate": 512,
+        "sham": 512
+      }
+    }
+  },
+  "generator_roster": {
+    "cases_per_root": 8,
+    "confirmation_roots_generated": 0,
+    "namespace": "hgw05-development-v1",
+    "roots_per_family": 64
+  },
+  "observational_law": {
+    "confounded_ate": "0",
+    "confounded_equal": "25/32",
+    "direct_ate": "9/16",
+    "direct_equal": "25/32"
+  },
+  "primary_causal_twin_bootstrap_ci95_descriptive": [
+    0.41895,
+    0.45215
+  ],
+  "primary_causal_twin_effect_mean": "223/512",
+  "primary_causal_twin_evalmath_pilot": {
+    "alpha": "0.05",
+    "confirm_units_planned": 128,
+    "experiment_id": "HGW05-CAUSAL-TWINS-DEVELOPMENT",
+    "heldout_sealed": false,
+    "independent_unit": "generator world root",
+    "measurement_resolution": "1/16",
+    "pilot": [
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0000"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0001"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0002"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0003"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0004"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0005"
+      },
+      {
+        "paired_effect": "1/4",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0006"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0007"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0008"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0009"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0010"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0011"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0012"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0013"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0014"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0015"
+      },
+      {
+        "paired_effect": "1/4",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0016"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0017"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0018"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0019"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0020"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0021"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0022"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0023"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0024"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0025"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0026"
+      },
+      {
+        "paired_effect": "5/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0027"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0028"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0029"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0030"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0031"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0032"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0033"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0034"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0035"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0036"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0037"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0038"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0039"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0040"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0041"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0042"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0043"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0044"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0045"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0046"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0047"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0048"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0049"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0050"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0051"
+      },
+      {
+        "paired_effect": "5/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0052"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0053"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0054"
+      },
+      {
+        "paired_effect": "5/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0055"
+      },
+      {
+        "paired_effect": "5/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0056"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0057"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0058"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0059"
+      },
+      {
+        "paired_effect": "1/2",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0060"
+      },
+      {
+        "paired_effect": "3/8",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0061"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0062"
+      },
+      {
+        "paired_effect": "7/16",
+        "sham_effects": [
+          "0"
+        ],
+        "unit_id": "hgw05-development-v1-causal_twin-0063"
+      }
+    ],
+    "pilot_from_development_only": true,
+    "planned_comparisons": 5,
+    "schema_version": 1,
+    "scientific_min_effect": "0.10",
+    "sham_confidence": "0.95",
+    "sham_quantile": "0.95",
+    "target_effect": "0.20",
+    "units_independent": true
+  },
+  "rows_sha256": "4e827e6ea7238f2d0404fedc85da226622f2646978d5589d030d1db9693e65bd",
+  "schema": "hgw05/causal-families/v1",
+  "total_case_rows": 2048,
+  "total_independent_development_roots": 192,
+  "warnings": [
+    "Same seed root across cases is one cluster.",
+    "These deterministic, explicitly privileged controls are not learned model performance.",
+    "Pilot is unsealed by design; new confirmation roots must be registered and generated elsewhere."
+  ]
+}

@@ -182,3 +182,10 @@ Note: For late-stage polish, target higher structural density: average 4.5 after
   - reduce visibility thresholds
   - simplify availability scripts
   - preserve only the few gates that protect secrets or major route commitments
+
+
+## Causal inclination and statistical robustness (Hypergames)
+
+For complex storyworlds, load `../hyperworld-builder/references/HGW04_CAUSAL_INCLINATION.md` alongside PVALUES and P2VALUES. Record which first-/second-order features are inferred, which source roots support them, and which interventions can move them. Build normalized, bounded reaction inclination scripts with named character-specific inputs and interaction terms; only accept causal claims from matched interventions on independently generated world roots.
+
+The optional `../hyperworld-builder/scripts/causal_inclinations.py` produces a development-only paired-root audit and a compatible EvalMath preflight manifest. Run the pinned EvalMath `evalmath-mechinterp-power` skill before confirmation, with its independent-root variation floor, matched shams, prospective power check and sealed test family. Balance outcomes on development worlds without fitting to confirmation endings. Keep any default SweepWeave and HGW-02 replay contracts unchanged unless a separately registered generator version is introduced.
