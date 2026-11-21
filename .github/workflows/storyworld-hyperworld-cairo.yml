@@ -22,6 +22,35 @@ jobs:
           python-version: '3.11'
       - name: Exact posterior, perception and source-isolation tests
         run: python -m unittest discover -s codex-skills/hyperworld-builder/tests -p 'test_*.py' -q
+      - name: HGW-04 EvalMath interoperability (pinned external source)
+        uses: actions/checkout@v4
+        with:
+          repository: MoralityLabAI/EvalMath
+          ref: 9708f1edaf1cb25904b88b07c3f23c1899df7cac
+          path: evalmath
+      - name: HGW-04 exact causal receipts and unsealed pilot gate
+        run: |
+          python codex-skills/hyperworld-builder/scripts/causal_inclinations.py \
+            --spec codex-skills/hyperworld-builder/fixtures/hgw04_development_pilot.json \
+            --out "$RUNNER_TEMP/hgw04-audit.json" \
+            --evalmath-pilot "$RUNNER_TEMP/hgw04-pilot.json"
+          python codex-skills/hyperworld-builder/scripts/benchmark_receipts.py \
+            --input codex-skills/hyperworld-builder/fixtures/hgw04_policy_development.json \
+            --out "$RUNNER_TEMP/hgw04-policy-audit.json" \
+            --fsi-manifest "$RUNNER_TEMP/hgw04-fsi.json"
+          if python evalmath/skills/evalmath-mechinterp-power/scripts/preflight.py \
+              --pilot "$RUNNER_TEMP/hgw04-pilot.json" --strict \
+              --out "$RUNNER_TEMP/hgw04-preflight.json"; then
+            echo "Unsealed 8-root pilot incorrectly passed EvalMath confirmation gate" >&2
+            exit 1
+          else
+            status=$?
+            test "$status" -eq 2
+          fi
+          PYTHONPATH=evalmath/src python -m spiral_ln.evaluation_finite_sample \
+            --manifest "$RUNNER_TEMP/hgw04-fsi.json" \
+            --output "$RUNNER_TEMP/hgw04-fsi-result.json"
+          python -c 'import json,os; d=json.load(open(os.environ["RUNNER_TEMP"]+"/hgw04-preflight.json")); assert d["decision"]=="REDESIGN_OR_PILOT_ONLY"; assert "heldout_unsealed" in d["reasons"]; assert "sham_quantile_uncalibrated" in d["reasons"]'
       - name: Original StoryworldBuilder validation contract
         run: python codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/cairo_directorate_hyperworld/storyworld.json
       - name: Rebuild authored export from the frozen generator
