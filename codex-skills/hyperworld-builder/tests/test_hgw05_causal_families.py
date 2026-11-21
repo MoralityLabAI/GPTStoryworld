@@ -77,6 +77,7 @@ class CausalFamilyTests(unittest.TestCase):
             self.assertEqual(r["independent_development_roots"],8)
             self.assertEqual(r["evalmath_pilot"]["heldout_sealed"],False)
             self.assertEqual(r["evalmath_pilot"]["units_independent"],True)
+            self.assertEqual(r["evalmath_pilot"]["confirm_units_planned"],128)
             self.assertEqual(len(r["evalmath_pilot"]["pilot"]),8)
             self.assertTrue(all(row["sham_effects"] == ["0"] for row in r["evalmath_pilot"]["pilot"]))
             self.assertLessEqual(r["candidate_first_preference"], 32)

@@ -11,7 +11,7 @@
       "cases": 512,
       "evalmath_pilot": {
         "alpha": "0.05",
-        "confirm_units_planned": 64,
+        "confirm_units_planned": 128,
         "experiment_id": "HGW05-CONFOUNDED-DEVELOPMENT",
         "heldout_sealed": false,
         "independent_unit": "generator world root",
@@ -498,7 +498,7 @@
       "cases": 512,
       "evalmath_pilot": {
         "alpha": "0.05",
-        "confirm_units_planned": 64,
+        "confirm_units_planned": 128,
         "experiment_id": "HGW05-DIRECT-DEVELOPMENT",
         "heldout_sealed": false,
         "independent_unit": "generator world root",
@@ -985,7 +985,7 @@
       "cases": 512,
       "evalmath_pilot": {
         "alpha": "0.05",
-        "confirm_units_planned": 64,
+        "confirm_units_planned": 128,
         "experiment_id": "HGW05-P2_PARITY-DEVELOPMENT",
         "heldout_sealed": false,
         "independent_unit": "generator world root",
@@ -1472,7 +1472,7 @@
       "cases": 512,
       "evalmath_pilot": {
         "alpha": "0.05",
-        "confirm_units_planned": 64,
+        "confirm_units_planned": 128,
         "experiment_id": "HGW05-PROVENANCE-DEVELOPMENT",
         "heldout_sealed": false,
         "independent_unit": "generator world root",
@@ -1969,7 +1969,7 @@
   "primary_causal_twin_effect_mean": "223/512",
   "primary_causal_twin_evalmath_pilot": {
     "alpha": "0.05",
-    "confirm_units_planned": 64,
+    "confirm_units_planned": 128,
     "experiment_id": "HGW05-CAUSAL-TWINS-DEVELOPMENT",
     "heldout_sealed": false,
     "independent_unit": "generator world root",

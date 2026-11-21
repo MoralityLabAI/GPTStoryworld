@@ -351,7 +351,7 @@ def run_development(*, roots=64, cases_per_root=8, seed_namespace="hgw05-develop
                 "scientific_min_effect": "0.10", "measurement_resolution": str(Q(1,cases_per_root)),
                 "target_effect": "0.20", "planned_comparisons": len(FAMILIES)+1,
                 "sham_quantile": "0.95", "sham_confidence": "0.95",
-                "confirm_units_planned": 64,
+                "confirm_units_planned": 128,
                 "pilot_from_development_only": True,
                 "heldout_sealed": False, "units_independent": True,
                 "pilot": effect_rows,
