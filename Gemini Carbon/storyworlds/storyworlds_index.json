@@ -1,0 +1,118 @@
+{
+  "mc_runs_per_world": 5000,
+  "mc_seed": 42,
+  "schema": "gemini-carbon/storyworld-build-summary/v1",
+  "worlds": {
+    "the_glass_concordat": {
+      "dead_ends": 0,
+      "ending_counts": {
+        "page_end_advisory_stewardship": 938,
+        "page_end_audited_concordat": 953,
+        "page_end_echo_overreach": 964,
+        "page_end_fallback": 406,
+        "page_secret_civic_recall_compact": 604,
+        "page_secret_counterweight_synthesis": 603,
+        "page_secret_phantom_ratification": 532
+      },
+      "quality_gate_pass": true,
+      "quality_summary": {
+        "avg_desirability_vars": 3.0,
+        "avg_encounter_words": 124.83,
+        "avg_reaction_words": 32.58,
+        "desirability_nonconstant_ratio": 1.0,
+        "desirability_operator_dominance": 0.44,
+        "desirability_operator_variety": 6,
+        "effect_nonconstant_ratio": 1.0,
+        "effect_operator_dominance": 0.5,
+        "effect_operator_variety": 2,
+        "encounter_acceptability_nonconstant_ratio": 0.55,
+        "encounter_desirability_nonconstant_ratio": 1.0,
+        "encounters": 20,
+        "gated_options_pct": 38.89,
+        "option_performability_nonconstant_ratio": 0.3889,
+        "option_visibility_nonconstant_ratio": 0.3889,
+        "p2value_refs": 486,
+        "pvalue_refs": 540
+      },
+      "secret_reachability_pct": 34.78,
+      "storyworld_relpath": "Gemini Carbon/storyworlds/the_glass_concordat/storyworld.json",
+      "storyworld_sha256": "883c27d3f619b194ec8083d7ebf2ec5aa660b292b0bc79a16f1fcd1354eb9420",
+      "swmd_min_sha256": "698f30d52fc1c55e5c0c20046f95cf73d780a5ed91c3ed2d707df1d5d01eb682",
+      "validator_errors": 0
+    },
+    "three_lanterns_curriculum": {
+      "dead_ends": 0,
+      "ending_counts": {
+        "page_end_chronicler_offramp": 938,
+        "page_end_fallback": 406,
+        "page_end_truncated_chain_fault": 964,
+        "page_end_verified_lantern_compact": 953,
+        "page_secret_keepers_bell_charter": 604,
+        "page_secret_refraction_mirage": 532,
+        "page_secret_true_lantern_triad": 603
+      },
+      "quality_gate_pass": true,
+      "quality_summary": {
+        "avg_desirability_vars": 3.0,
+        "avg_encounter_words": 126.08,
+        "avg_reaction_words": 32.6,
+        "desirability_nonconstant_ratio": 1.0,
+        "desirability_operator_dominance": 0.44,
+        "desirability_operator_variety": 6,
+        "effect_nonconstant_ratio": 1.0,
+        "effect_operator_dominance": 0.5,
+        "effect_operator_variety": 2,
+        "encounter_acceptability_nonconstant_ratio": 0.55,
+        "encounter_desirability_nonconstant_ratio": 1.0,
+        "encounters": 20,
+        "gated_options_pct": 38.89,
+        "option_performability_nonconstant_ratio": 0.3889,
+        "option_visibility_nonconstant_ratio": 0.3889,
+        "p2value_refs": 486,
+        "pvalue_refs": 540
+      },
+      "secret_reachability_pct": 34.78,
+      "storyworld_relpath": "Gemini Carbon/storyworlds/three_lanterns_curriculum/storyworld.json",
+      "storyworld_sha256": "ff6a0cbdd817fe94852c87dc9e96b484b530cc41de815474f37f934db962538d",
+      "swmd_min_sha256": "b6d905d180a7f5a695a0c97f203e6b207086f1f4f0ef8fc9a9ae3249b7d0da8c",
+      "validator_errors": 0
+    },
+    "vesper_exchange_quarantine": {
+      "dead_ends": 0,
+      "ending_counts": {
+        "page_end_causal_remediation": 953,
+        "page_end_civic_dispatch": 938,
+        "page_end_confounded_lockdown": 964,
+        "page_end_fallback": 406,
+        "page_secret_cartel_mirage": 532,
+        "page_secret_exact_twin_breaker": 603,
+        "page_secret_stevedore_charter": 604
+      },
+      "quality_gate_pass": true,
+      "quality_summary": {
+        "avg_desirability_vars": 3.0,
+        "avg_encounter_words": 123.83,
+        "avg_reaction_words": 32.58,
+        "desirability_nonconstant_ratio": 1.0,
+        "desirability_operator_dominance": 0.44,
+        "desirability_operator_variety": 6,
+        "effect_nonconstant_ratio": 1.0,
+        "effect_operator_dominance": 0.5,
+        "effect_operator_variety": 2,
+        "encounter_acceptability_nonconstant_ratio": 0.55,
+        "encounter_desirability_nonconstant_ratio": 1.0,
+        "encounters": 20,
+        "gated_options_pct": 38.89,
+        "option_performability_nonconstant_ratio": 0.3889,
+        "option_visibility_nonconstant_ratio": 0.3889,
+        "p2value_refs": 486,
+        "pvalue_refs": 540
+      },
+      "secret_reachability_pct": 34.78,
+      "storyworld_relpath": "Gemini Carbon/storyworlds/vesper_exchange_quarantine/storyworld.json",
+      "storyworld_sha256": "09c49f0bc982c6cea664645fe079515e67e86f6f44c2099fec97f045843ae8e3",
+      "swmd_min_sha256": "4d72d66d106dbb492c64f3e37785c818d8ee2e85bfb5c97f663a388fc025fd1f",
+      "validator_errors": 0
+    }
+  }
+}

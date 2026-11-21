@@ -1,0 +1,21 @@
+{
+  "dead_ends": 0,
+  "ending_counts": {
+    "page_end_chronicler_offramp": 938,
+    "page_end_fallback": 406,
+    "page_end_truncated_chain_fault": 964,
+    "page_end_verified_lantern_compact": 953,
+    "page_secret_keepers_bell_charter": 604,
+    "page_secret_refraction_mirage": 532,
+    "page_secret_true_lantern_triad": 603
+  },
+  "num_runs": 5000,
+  "secret_hits": {
+    "page_secret_keepers_bell_charter": 604,
+    "page_secret_refraction_mirage": 532,
+    "page_secret_true_lantern_triad": 603
+  },
+  "seed": 42,
+  "total_secret_reachability_pct": 34.78,
+  "world_id": "three_lanterns_curriculum"
+}

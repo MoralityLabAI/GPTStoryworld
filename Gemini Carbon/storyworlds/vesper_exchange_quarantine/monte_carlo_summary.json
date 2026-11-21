@@ -1,0 +1,21 @@
+{
+  "dead_ends": 0,
+  "ending_counts": {
+    "page_end_causal_remediation": 953,
+    "page_end_civic_dispatch": 938,
+    "page_end_confounded_lockdown": 964,
+    "page_end_fallback": 406,
+    "page_secret_cartel_mirage": 532,
+    "page_secret_exact_twin_breaker": 603,
+    "page_secret_stevedore_charter": 604
+  },
+  "num_runs": 5000,
+  "secret_hits": {
+    "page_secret_cartel_mirage": 532,
+    "page_secret_exact_twin_breaker": 603,
+    "page_secret_stevedore_charter": 604
+  },
+  "seed": 42,
+  "total_secret_reachability_pct": 34.78,
+  "world_id": "vesper_exchange_quarantine"
+}

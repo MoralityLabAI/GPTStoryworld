@@ -1,0 +1,117 @@
+{
+  "belief_trait": "Coordinator_Trust",
+  "deliberation_edges": [
+    {
+      "channel": "assay_chain",
+      "source": "char_nadia",
+      "target": "char_jovan",
+      "weight": 0.44
+    },
+    {
+      "channel": "public_health_writ",
+      "source": "char_nadia",
+      "target": "char_mireille",
+      "weight": 0.34
+    },
+    {
+      "channel": "tidal_pilot_dispatch",
+      "source": "char_bram",
+      "target": "char_tomas",
+      "weight": 0.41
+    },
+    {
+      "channel": "berth_priority_compact",
+      "source": "char_bram",
+      "target": "char_celeste",
+      "weight": 0.33
+    },
+    {
+      "channel": "cold_vault_leases",
+      "source": "char_celeste",
+      "target": "char_granary",
+      "weight": 0.37
+    },
+    {
+      "channel": "hold_air_sampling",
+      "source": "char_jovan",
+      "target": "char_stevedores",
+      "weight": 0.32
+    },
+    {
+      "channel": "wage_indemnity_rule",
+      "source": "char_mireille",
+      "target": "char_stevedores",
+      "weight": 0.39
+    },
+    {
+      "channel": "anti_hoarding_bench",
+      "source": "char_mireille",
+      "target": "char_granary",
+      "weight": 0.35
+    },
+    {
+      "channel": "lighterage_safety",
+      "source": "char_tomas",
+      "target": "char_stevedores",
+      "weight": 0.36
+    },
+    {
+      "channel": "flour_testing_booth",
+      "source": "char_nadia",
+      "target": "char_granary",
+      "weight": 0.28
+    },
+    {
+      "channel": "sealed_chain_of_custody",
+      "source": "char_jovan",
+      "target": "char_mireille",
+      "weight": 0.31
+    },
+    {
+      "channel": "night_tow_tariff",
+      "source": "char_celeste",
+      "target": "char_tomas",
+      "weight": 0.27
+    }
+  ],
+  "encounters_total": 20,
+  "endings_total": 7,
+  "focal_reasoning_theme": "causal_twin_and_probe_budget",
+  "ifid": "SW-CARBON-VESPER-QUARANTINE-20261121",
+  "latent_factor_names": [
+    "nadia_endorses_targeted_isolation",
+    "bram_opens_lock_inspection_logs",
+    "celeste_holds_unspoiled_reserve",
+    "jovan_confirms_mycotoxin_marker",
+    "mireille_upholds_writ_limits",
+    "tomas_reroutes_outer_anchorage",
+    "stevedore_hall_assents_shift_protocol",
+    "granary_mutual_assents_price_cap",
+    "barge_spoilage_is_direct_cause_not_fog_confounder",
+    "magistrate_emergency_stay_active"
+  ],
+  "posterior_microstates": 1024,
+  "principal_ids": [
+    "char_nadia",
+    "char_bram",
+    "char_celeste",
+    "char_jovan",
+    "char_mireille",
+    "char_tomas",
+    "char_stevedores",
+    "char_granary"
+  ],
+  "protagonist_id": "char_keel",
+  "schema": "gemini-carbon/hypergame-storyworld-manifest/v1",
+  "subtitle": "Observational-Twin Discrimination, Randomized Probes & Cartel Parity Hypergame",
+  "title": "Port Vesper Quarantine: Causal Twin Ledger",
+  "trait_axes": [
+    "Charter_Fidelity",
+    "Diagnostic_Rigor",
+    "Civil_Consent",
+    "Quarantine_Speed",
+    "Coordinator_Trust",
+    "Harbor_Solidarity"
+  ],
+  "world_id": "vesper_exchange_quarantine"
+}

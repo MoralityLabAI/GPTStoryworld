@@ -1,0 +1,21 @@
+{
+  "dead_ends": 0,
+  "ending_counts": {
+    "page_end_advisory_stewardship": 938,
+    "page_end_audited_concordat": 953,
+    "page_end_echo_overreach": 964,
+    "page_end_fallback": 406,
+    "page_secret_civic_recall_compact": 604,
+    "page_secret_counterweight_synthesis": 603,
+    "page_secret_phantom_ratification": 532
+  },
+  "num_runs": 5000,
+  "secret_hits": {
+    "page_secret_civic_recall_compact": 604,
+    "page_secret_counterweight_synthesis": 603,
+    "page_secret_phantom_ratification": 532
+  },
+  "seed": 42,
+  "total_secret_reachability_pct": 34.78,
+  "world_id": "the_glass_concordat"
+}

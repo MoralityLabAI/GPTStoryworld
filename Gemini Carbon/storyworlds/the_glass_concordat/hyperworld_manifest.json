@@ -1,0 +1,117 @@
+{
+  "belief_trait": "Verifier_Reliance",
+  "deliberation_edges": [
+    {
+      "channel": "ledger_co_audit",
+      "source": "char_linnea",
+      "target": "char_maren",
+      "weight": 0.42
+    },
+    {
+      "channel": "charter_precedent",
+      "source": "char_linnea",
+      "target": "char_tariq",
+      "weight": 0.31
+    },
+    {
+      "channel": "emergency_dispatch",
+      "source": "char_davor",
+      "target": "char_soren",
+      "weight": 0.38
+    },
+    {
+      "channel": "ridge_garrison_pact",
+      "source": "char_davor",
+      "target": "char_wardens",
+      "weight": 0.35
+    },
+    {
+      "channel": "optics_supply_compact",
+      "source": "char_soren",
+      "target": "char_orel",
+      "weight": 0.4
+    },
+    {
+      "channel": "public_meter_inspection",
+      "source": "char_maren",
+      "target": "char_commons",
+      "weight": 0.36
+    },
+    {
+      "channel": "basin_water_dividend",
+      "source": "char_tariq",
+      "target": "char_commons",
+      "weight": 0.44
+    },
+    {
+      "channel": "guild_tariff_offset",
+      "source": "char_orel",
+      "target": "char_tariq",
+      "weight": 0.29
+    },
+    {
+      "channel": "snowmelt_warning_line",
+      "source": "char_wardens",
+      "target": "char_commons",
+      "weight": 0.33
+    },
+    {
+      "channel": "beacon_calibration_seal",
+      "source": "char_maren",
+      "target": "char_wardens",
+      "weight": 0.3
+    },
+    {
+      "channel": "open_docket_petition",
+      "source": "char_linnea",
+      "target": "char_commons",
+      "weight": 0.27
+    },
+    {
+      "channel": "peak_load_settlement",
+      "source": "char_soren",
+      "target": "char_tariq",
+      "weight": 0.26
+    }
+  ],
+  "encounters_total": 20,
+  "endings_total": 7,
+  "focal_reasoning_theme": "provenance_and_delayed_revision",
+  "ifid": "SW-CARBON-GLASS-CONCORDAT-20261121",
+  "latent_factor_names": [
+    "linnea_ratifies_binding_clause",
+    "davor_accepts_sluice_audit",
+    "soren_discloses_mirror_drift",
+    "maren_certifies_sensor_chain",
+    "tariq_backs_shared_tariff",
+    "orel_releases_calibration_keys",
+    "watershed_commons_quorum_assent",
+    "frostline_wardens_quorum_assent",
+    "telemetry_channel_unconfounded_direct",
+    "human_recall_veto_enforceable"
+  ],
+  "posterior_microstates": 1024,
+  "principal_ids": [
+    "char_linnea",
+    "char_davor",
+    "char_soren",
+    "char_maren",
+    "char_tariq",
+    "char_orel",
+    "char_commons",
+    "char_wardens"
+  ],
+  "protagonist_id": "char_vesper",
+  "schema": "gemini-carbon/hypergame-storyworld-manifest/v1",
+  "subtitle": "Epistemic Tribunal, Provenance Deduplication & Delayed Revision Hypergame",
+  "title": "The Glass Concordat: Archive of Counterweights",
+  "trait_axes": [
+    "Institutional_Duty",
+    "Evidence_Caution",
+    "Human_Agency_Floor",
+    "Crisis_Urgency",
+    "Verifier_Reliance",
+    "Civic_Legitimacy"
+  ],
+  "world_id": "the_glass_concordat"
+}

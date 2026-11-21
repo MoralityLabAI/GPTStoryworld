@@ -1,0 +1,27 @@
+{
+  "alpha": "0.05",
+  "confirmation_roots_generated": 0,
+  "depths_hops": [
+    1,
+    2,
+    4,
+    8,
+    12
+  ],
+  "experiment_id": "CARBON-HG-VAR-REASONING-20261121",
+  "heldout_sealed": false,
+  "note": "Development-phase registration only (`confirmation_roots_generated == 0`). Before opening `sealed_confirm` roots for any neural model claim, freeze model weights, prompt templates, and neural sham calibration on `dev_pilot_64x5`.",
+  "planned_comparisons": 5,
+  "planned_confirmation_roots": 128,
+  "rungs": [
+    "R1_direct_marginal",
+    "R2_provenance_dedup",
+    "R3_p2_xor_coalition",
+    "R4_delayed_revision_causal_twin",
+    "R5_multihop_hyperedge_cascade"
+  ],
+  "schema": "gemini-carbon/prospective-confirmation-registration/v1",
+  "scientific_min_effect": "0.10",
+  "seed_namespace_commitment_sha256": "252fdb231923e611c198bb51a1b6a1c561063c05866f7a0fc3071290fd933c04",
+  "target_effect": "0.25"
+}

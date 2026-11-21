@@ -1,0 +1,69 @@
+name: Gemini Carbon Hypergame Rollouts & EvalMath Parity
+
+on:
+  push:
+    paths:
+      - 'Gemini Carbon/**'
+      - '.agents/skills/variable-reasoning-hypergame-rollouts/**'
+      - '.github/workflows/gemini-carbon-hypergames.yml'
+  pull_request:
+    paths:
+      - 'Gemini Carbon/**'
+      - '.agents/skills/variable-reasoning-hypergame-rollouts/**'
+      - '.github/workflows/gemini-carbon-hypergames.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-carbon-hypergames:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Checkout GPTStoryworld
+        uses: actions/checkout@v4
+
+      - name: Checkout pinned MoralityLabAI/EvalMath
+        uses: actions/checkout@v4
+        with:
+          repository: MoralityLabAI/EvalMath
+          ref: 9708f1edaf1cb25904b88b07c3f23c1899df7cac
+          path: evalmath_pinned
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run unit, SweepWeave quality-gate, and EvalMath parity tests
+        env:
+          EVALMATH_ROOT: ${{ github.workspace }}/evalmath_pinned
+        run: |
+          python -m unittest discover -s "Gemini Carbon/tests" -p "test_*.py" -v
+
+      - name: Verify deterministic SweepWeave compilation & strict quality gates
+        run: |
+          python "Gemini Carbon/scripts/build_carbon_storyworlds.py" --out-root "$RUNNER_TEMP/storyworlds"
+          cmp "$RUNNER_TEMP/storyworlds/storyworlds_index.json" "Gemini Carbon/storyworlds/storyworlds_index.json"
+
+      - name: Verify deterministic rollout generation & EvalMath strict preflight gate
+        run: |
+          python "Gemini Carbon/scripts/generate_variable_rollouts.py" --out-root "$RUNNER_TEMP/datasets"
+          cmp "$RUNNER_TEMP/datasets/dataset_manifest.json" "Gemini Carbon/datasets/dataset_manifest.json"
+          python "Gemini Carbon/scripts/run_evalmath_audit.py" \
+            --datasets-dir "$RUNNER_TEMP/datasets" \
+            --evalmath-root "${{ github.workspace }}/evalmath_pinned" \
+            --out-dir "$RUNNER_TEMP/reports"
+          cmp "$RUNNER_TEMP/reports/evalmath_verification_receipt.json" \
+            "Gemini Carbon/reports/evalmath_verification_receipt.json"
+          if python evalmath_pinned/skills/evalmath-mechinterp-power/scripts/preflight.py \
+            --pilot "$RUNNER_TEMP/reports/evalmath_pilot_spec_64roots.json" --strict; then
+            echo "Unsealed development pilot unexpectedly passed strict confirmation gate!" >&2
+            exit 1
+          else
+            status=$?
+            test "$status" -eq 2
+          fi

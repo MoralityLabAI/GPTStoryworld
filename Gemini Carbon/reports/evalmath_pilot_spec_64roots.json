@@ -1,0 +1,722 @@
+{
+  "alpha": "0.05",
+  "confirm_units_planned": 128,
+  "experiment_id": "CARBON-HG-VAR-REASONING-DEV64",
+  "heldout_sealed": false,
+  "independent_unit": "exogenous_storyworld_generator_root",
+  "measurement_resolution": "0.05",
+  "pilot": [
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0000_56f924ae922d"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0001_b8fae20d63dd"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0002_ef359ef5130b"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0003_0c1fbe743fc1"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0004_0d9ca28d2271"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0005_5e132b68fd04"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0006_9d6ddd6d4845"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0007_b7e52d62923c"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0008_e849af3a0346"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0009_5f47ab68140d"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0010_fb05aed523eb"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0011_b3c390e531ac"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0012_9145391762ca"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0013_77763480170b"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0014_131cdc9fc2b2"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0015_862ac4b01dd3"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0016_36d76050f84c"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0017_11ccfdaa7e71"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0018_4ba5a1866fa5"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0019_12aad07da281"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0020_f44d48c01f5c"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0021_17dee671aaf8"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0022_6db24ac7184c"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0023_09097a1e39c1"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0024_dd42f5d1468f"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0025_e00d6335fa60"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0026_bfcbb6c9da5d"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0027_97d4ed50c987"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0028_bf2a4159ce96"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0029_0e4c1d7bf8f9"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0030_f777a79e86d6"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0031_4023f6139db2"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0032_cd6b19587702"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0033_ed0f2013b190"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0034_f9bd9854641a"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0035_3bcab2e1076f"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0036_8d0409e8fac7"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0037_09dfe0910672"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0038_a4cf1b8dc08e"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0039_76b594938496"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0040_f7e81800456f"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0041_64c8293ccadf"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0042_51e4d43a5d91"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0043_f1f8adfcb10c"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0044_f151bb3c6969"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0045_bdc247547a71"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0046_5d4f69d632ca"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0047_b5ebb49ff0cc"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0048_5e22f37c21de"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0049_e0bf4e5ccc92"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0050_b69e0ae4052f"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0051_754e7e2e7bed"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0052_f5085d67f458"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0053_df083940d04d"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0054_81d23ab81a16"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0055_65275ce67792"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0056_825600ba2df0"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0057_d5824332cce1"
+    },
+    {
+      "paired_effect": "3/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0058_7bc7016868a8"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0059_44c5b36dccf5"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0060_cdee614b14c9"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0061_dbd0750725bf"
+    },
+    {
+      "paired_effect": "4/5",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0062_2f300c7e79af"
+    },
+    {
+      "paired_effect": "1",
+      "sham_effects": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unit_id": "dev_pilot_root_0063_0690824c11b8"
+    }
+  ],
+  "pilot_from_development_only": true,
+  "planned_comparisons": 5,
+  "schema_version": 1,
+  "scientific_min_effect": "0.10",
+  "sham_confidence": "0.95",
+  "sham_quantile": "0.95",
+  "target_effect": "0.25",
+  "units_independent": true
+}

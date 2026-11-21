@@ -1,0 +1,117 @@
+{
+  "belief_trait": "Chronicler_Reliance",
+  "deliberation_edges": [
+    {
+      "channel": "astrolabe_cipher_bench",
+      "source": "char_sabine",
+      "target": "char_idris",
+      "weight": 0.45
+    },
+    {
+      "channel": "annals_custody",
+      "source": "char_sabine",
+      "target": "char_alen",
+      "weight": 0.34
+    },
+    {
+      "channel": "shutter_telegraph_supply",
+      "source": "char_kestrel",
+      "target": "char_voss",
+      "weight": 0.39
+    },
+    {
+      "channel": "reef_watch_orders",
+      "source": "char_kestrel",
+      "target": "char_outer_beacons",
+      "weight": 0.36
+    },
+    {
+      "channel": "key_rotation_bell",
+      "source": "char_idris",
+      "target": "char_cora",
+      "weight": 0.33
+    },
+    {
+      "channel": "lamp_oil_contract",
+      "source": "char_voss",
+      "target": "char_reed_guild",
+      "weight": 0.31
+    },
+    {
+      "channel": "sound_passage_charter",
+      "source": "char_alen",
+      "target": "char_reed_guild",
+      "weight": 0.42
+    },
+    {
+      "channel": "convocation_quorum",
+      "source": "char_cora",
+      "target": "char_reed_guild",
+      "weight": 0.38
+    },
+    {
+      "channel": "storm_bell_relay",
+      "source": "char_cora",
+      "target": "char_outer_beacons",
+      "weight": 0.37
+    },
+    {
+      "channel": "one_time_shutter_pad",
+      "source": "char_idris",
+      "target": "char_outer_beacons",
+      "weight": 0.32
+    },
+    {
+      "channel": "high_table_protocol",
+      "source": "char_sabine",
+      "target": "char_cora",
+      "weight": 0.29
+    },
+    {
+      "channel": "glass_tariff_ledger",
+      "source": "char_voss",
+      "target": "char_alen",
+      "weight": 0.25
+    }
+  ],
+  "encounters_total": 20,
+  "endings_total": 7,
+  "focal_reasoning_theme": "multihop_cipher_and_hyperedge_cascade",
+  "ifid": "SW-CARBON-THREE-LANTERNS-20261121",
+  "latent_factor_names": [
+    "sabine_commits_north_spire_key",
+    "kestrel_yields_sea_gate_override",
+    "idris_validates_cipher_schedule",
+    "voss_delivers_achromatic_lenses",
+    "alen_signs_plural_chronicle",
+    "cora_convenes_open_bell_vote",
+    "reed_guild_ferry_quorum",
+    "outer_beacons_reef_quorum",
+    "lantern_relay_free_of_refraction_spoof",
+    "archipelago_human_bell_veto_intact"
+  ],
+  "posterior_microstates": 1024,
+  "principal_ids": [
+    "char_sabine",
+    "char_kestrel",
+    "char_idris",
+    "char_voss",
+    "char_alen",
+    "char_cora",
+    "char_reed_guild",
+    "char_outer_beacons"
+  ],
+  "protagonist_id": "char_lumen",
+  "schema": "gemini-carbon/hypergame-storyworld-manifest/v1",
+  "subtitle": "Multi-Hop Cipher Chains, Higher-Order Hyperedges & Threshold Cascades",
+  "title": "Three Lanterns in the Fog: Variable-Depth Coalition Hypergame",
+  "trait_axes": [
+    "Oath_Constancy",
+    "Cipher_Discipline",
+    "Council_Autonomy",
+    "Signal_Tempo",
+    "Chronicler_Reliance",
+    "Archipelago_Unity"
+  ],
+  "world_id": "three_lanterns_curriculum"
+}

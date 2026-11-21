@@ -1,0 +1,34 @@
+{
+  "dev_pilot_split": {
+    "do_intervention_episodes": 320,
+    "hashes": {
+      "do_intervention_labels_sha256": "2d3b37391d28ab475bee61c56204f8a3e9c3eb35728ae8a42e8e7a50c026ff34",
+      "do_intervention_tasks_sha256": "dd334bd942d5a0e54d2d44fbe6becfb107033c040ec34d1f9a0a20ff11d976a8",
+      "matched_sham_labels_sha256": "994ce3518798c85799ac9bf66fe40fbe88b096226e2b5db10e00d788d50f8660",
+      "matched_sham_tasks_sha256": "db2a55a282c4be1ad657b925a57a5986139289297b77fe1dbd1c4597bf0e9345",
+      "nominal_labels_sha256": "cb8fb2ae24a391c93bbb5eb0aefe6ca024ed247369f6bc2b385188c954fbdc3a",
+      "nominal_tasks_sha256": "6dfa79d3e79d0b415e866fbffb990c9438a8730feff521b1172a21b77426323e"
+    },
+    "independent_roots": 64,
+    "matched_sham_episodes": 320,
+    "nominal_episodes": 320,
+    "relpath": "Gemini Carbon/datasets/dev_pilot_64x5",
+    "total_paired_episodes": 960
+  },
+  "schema": "gemini-carbon/dataset-manifest/v1",
+  "sealed_confirm_registration": {
+    "confirmation_roots_generated": 0,
+    "relpath": "Gemini Carbon/datasets/sealed_confirm_registration.json",
+    "sha256": "b7d61cbc4def70a298b5cc59a2f60928fe084ec1d3558191071b04200ed94587"
+  },
+  "train_split": {
+    "episodes": 120,
+    "hashes": {
+      "labels_jsonl_sha256": "5982308c87f4baa93cbc599b27533054650b16090e8a3b075a1a216fdb5d7d31",
+      "oracle_rollouts_jsonl_sha256": "228a6bafffe0b2f1641e1f71a4a15ad120136789596426502d17b893cf056bad",
+      "tasks_jsonl_sha256": "5bb4ecbf87dbef7fee422bd7fa244ebfc622c28f625563cdca3dd757da7a60ac"
+    },
+    "independent_roots": 24,
+    "relpath": "Gemini Carbon/datasets/train_rollouts_24x5"
+  }
+}
