@@ -87,3 +87,10 @@ Every ordinary reaction should affect a declared salient trait of each involved 
 The Python runtime retains authority for posterior Bayes updates, source provenance, dynamic graph gates and final human votes. An authored SweepWeave end-page inclination can never certify a constitutional verdict. Mark that page as requiring native adjudication. Freeze the HGW-02 public seed receipts and original branch before changing default replay semantics. Run the validator, generated-fixture byte check, full 32+ tests and registered CPU rehearsal, with a new development report for opt-in behavior.
 
 For Three Voices in the Fog, allocate separate budgets for each AI's own 20 actual traits, public segments' 12 traits, selected world axes, and directed first/second-order beliefs. Include pair interaction terms only for named characters on active edges. Treat p2 as a correlated observer model. Sealed RSI grades and opponent resources must remain outside the score's visible inputs.
+
+
+## HGW-04: causal inclination and EvalMath-grade builder audit
+
+Before a new Hypergames benchmark climb, load `references/HGW04_CAUSAL_INCLINATION.md`. Model hidden generator variables, publicly observable posterior/pValue/p2Value projections, causal intervention paths, sham interventions and reaction inclination formulas as separate objects. Use the new pure-stdlib `scripts/causal_inclinations.py` on independent development world roots, then export its pilot to the pinned EvalMath `evalmath-mechinterp-power` preflight. Root reuse, adaptive formula searches, and any change to the generator after the preflight must be logged. The optional audit does not modify the frozen HGW-02/HGW-03 runtime or fixtures.
+
+Treat character preferences as bounded authored scores, not calibrated probabilities. Require causal lineage for inferred variables and test matched do/sham interventions with the same exogenous root. Use a fresh, sealed and properly powered confirmation family before claims about neural agent policies. Preserve the invariant that legal human votes and recall are judged independently of belief-graph consensus.
