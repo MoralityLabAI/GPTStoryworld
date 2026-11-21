@@ -59,3 +59,19 @@ The included eight-root fixture is an intentionally **unsealed diagnostic**. Its
 For nested social beliefs, store each p2 entry's observer, modeled believer, target, observation source roots, evidence time and posterior confidence. Perturb one independent source at a time to identify which beliefs move and whether the subsequent agent policy follows that change. For hypergames with partial observability, measure policy quality under misspecified beliefs and interventions that leave public marginals unchanged while changing pairwise correlations.
 
 The Cairo fiction remains an abstract institutional model; human votes and legal recall are independent authoritative outputs. No real population data or behavioral targeting inference enters these scores.
+
+
+## Paired policy rollouts
+
+After the causal-structure pilot, use `scripts/benchmark_receipts.py` for actual agent outcomes. Each paired row contains a `root_id`, `case_id`, grader-side binary `observed_truth`, and `candidate`/`baseline`/`sham` results with `task_success`, `legal_action`, `critical_action`, and an agent-generated `belief_probability`. The outcome is 1 only if the agent succeeds legally without critical action. Each root can contain several related tasks; its Brier losses are averaged before aggregating across roots.
+
+```sh
+python codex-skills/hyperworld-builder/scripts/benchmark_receipts.py \
+  --input codex-skills/hyperworld-builder/fixtures/hgw04_policy_development.json \
+  --out /tmp/hgw04-policy-audit.json --fsi-manifest /tmp/hgw04-fsi01.json
+# From a pinned EvalMath checkout:
+PYTHONPATH=src python -m spiral_ln.evaluation_finite_sample \
+  --manifest /tmp/hgw04-fsi01.json --output /tmp/hgw04-fsi-result.json
+```
+
+Source locks are author assertions. The included toy receipt has *placeholder-shaped hashes* and explicitly false sealing/independence attestations. Replace them with real SHA-256 digests of the frozen generator, policy, grader and EvalMath preflight before a prospective model run. Keep the observer-facing belief `pValue` distinct from the grader-side `observed_truth`. Calibrate the probabilities using Brier and reliability bins, and compare conditional error by causal parent, role, belief order and data provenance on held-out roots.

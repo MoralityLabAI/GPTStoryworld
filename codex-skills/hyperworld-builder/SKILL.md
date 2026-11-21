@@ -94,3 +94,8 @@ For Three Voices in the Fog, allocate separate budgets for each AI's own 20 actu
 Before a new Hypergames benchmark climb, load `references/HGW04_CAUSAL_INCLINATION.md`. Model hidden generator variables, publicly observable posterior/pValue/p2Value projections, causal intervention paths, sham interventions and reaction inclination formulas as separate objects. Use the new pure-stdlib `scripts/causal_inclinations.py` on independent development world roots, then export its pilot to the pinned EvalMath `evalmath-mechinterp-power` preflight. Root reuse, adaptive formula searches, and any change to the generator after the preflight must be logged. The optional audit does not modify the frozen HGW-02/HGW-03 runtime or fixtures.
 
 Treat character preferences as bounded authored scores, not calibrated probabilities. Require causal lineage for inferred variables and test matched do/sham interventions with the same exogenous root. Use a fresh, sealed and properly powered confirmation family before claims about neural agent policies. Preserve the invariant that legal human votes and recall are judged independently of belief-graph consensus.
+
+
+### Model-facing policy outcomes
+
+Use `scripts/benchmark_receipts.py` to convert matched policy rollouts into an EvalMath FSI-01 manifest with `cluster_id = independent world root`. It gates `task_success` by legal and critical-action fields, reports Brier calibration as an equal-root macro mean, carries preflight/generator/model/judge source locks and requires author attestations for sealing. The demo `fixtures/hgw04_policy_development.json` is intentionally unsealed; it supplies no learned-model success claim. See the worked invocation in `references/HGW04_CAUSAL_INCLINATION.md`.
