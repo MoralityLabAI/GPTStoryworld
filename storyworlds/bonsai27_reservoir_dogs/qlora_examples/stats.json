@@ -1,0 +1,17 @@
+{
+  "swmd_files": [
+    "storyworlds\\bonsai27_reservoir_dogs\\reservoir_dogs_working.swmd.min.md"
+  ],
+  "max_total_encounters": 120,
+  "examples_per_encounter": 10,
+  "rows_total": 200,
+  "rows_train": 180,
+  "rows_val": 20,
+  "task_histogram": {
+    "compile": 80,
+    "compression": 50,
+    "repair": 40,
+    "targeted_edit": 30
+  },
+  "schema": "SWMD-MICRO-0.1"
+}

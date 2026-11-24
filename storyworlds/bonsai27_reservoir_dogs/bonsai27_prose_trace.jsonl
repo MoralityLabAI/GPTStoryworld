@@ -1,0 +1,12 @@
+{"encounter_id": "page_start", "is_terminal": false, "parsed_ok": false, "applied_fields": 0, "scene_words": 76, "latency_ms": 24444, "prompt_tokens": 1557, "completion_tokens": 1150}
+{"encounter_id": "page_pink_ambush_theory", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 69, "latency_ms": 22912, "prompt_tokens": 1520, "completion_tokens": 1056}
+{"encounter_id": "page_color_aliases_and_stash", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 85, "latency_ms": 23700, "prompt_tokens": 1499, "completion_tokens": 991}
+{"encounter_id": "page_start", "is_terminal": false, "parsed_ok": false, "applied_fields": 0, "scene_words": 76, "latency_ms": 23862, "prompt_tokens": 1557, "completion_tokens": 1150}
+{"encounter_id": "page_blonde_arrives", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 75, "latency_ms": 19298, "prompt_tokens": 1505, "completion_tokens": 916}
+{"encounter_id": "page_start", "is_terminal": false, "parsed_ok": true, "applied_fields": 18, "scene_words": 87, "latency_ms": 28790, "prompt_tokens": 1557, "completion_tokens": 1366}
+{"encounter_id": "page_cadillac_trunk", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 60, "latency_ms": 28542, "prompt_tokens": 1533, "completion_tokens": 1065}
+{"encounter_id": "page_chair_duct_tape", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 85, "latency_ms": 28601, "prompt_tokens": 1524, "completion_tokens": 1124}
+{"encounter_id": "page_eddie_call_and_alibi", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 78, "latency_ms": 87548, "prompt_tokens": 1566, "completion_tokens": 1266}
+{"encounter_id": "page_k_billy_razor", "is_terminal": false, "parsed_ok": true, "applied_fields": 18, "scene_words": 74, "latency_ms": 32508, "prompt_tokens": 1699, "completion_tokens": 1408}
+{"encounter_id": "page_orange_gun_on_the_ramp", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 99, "latency_ms": 38746, "prompt_tokens": 1608, "completion_tokens": 1353}
+{"encounter_id": "page_nash_confession_shockwave", "is_terminal": false, "parsed_ok": true, "applied_fields": 14, "scene_words": 111, "latency_ms": 33238, "prompt_tokens": 1564, "completion_tokens": 1212}

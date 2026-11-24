@@ -166,4 +166,6 @@ def apply_encounter_block(path: str | Path, encounter_id: str, replacement: str)
             break
     replacement_lines = [ln.rstrip() for ln in replacement.splitlines() if ln.strip()]
     new_lines = lines[:start] + replacement_lines + lines[end:]
-    swmd_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8", newline="\n")
+    tmp_path = swmd_path.with_suffix(swmd_path.suffix + ".tmp")
+    tmp_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8", newline="\n")
+    tmp_path.replace(swmd_path)

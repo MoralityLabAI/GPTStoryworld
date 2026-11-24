@@ -1,0 +1,6 @@
+world_id: SW-BONSAI27-RESERVOIR-DOGS-001
+title: Reservoir Dogs: Blood on the Warehouse Floor
+encounter_count: 20
+terminal_endings_count: 6
+terminal_endings: page_end_blonde_gasoline_inferno,page_end_cabot_executes_the_plant,page_end_mexican_standoff_collapse,page_end_pink_ghosts_with_stones,page_end_white_mercy_hospital_trap,page_secret_undercover_truce
+contract: revise one encounter at a time; keep IDs stable; keep syntax SWMD-0-MIN compatible.

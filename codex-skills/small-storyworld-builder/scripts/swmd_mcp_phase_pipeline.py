@@ -143,14 +143,81 @@ def _packet_turn_span(packet: Dict[str, Any]) -> str:
     return "0..0"
 
 
+def _compact_block_view(block: str, max_formula_chars: int = 72) -> str:
+    """Compact E:/D: formula tails for bounded prompt view while preserving exact ORX IDs, targets, and O: text."""
+    out: List[str] = []
+    for raw in block.splitlines():
+        ln = raw.strip()
+        if not ln:
+            continue
+        if ln.startswith("ENC "):
+            out.append(ln)
+            continue
+        if ln.startswith("ORX "):
+            parts = [p.strip() for p in ln.split("|")]
+            head = parts[0]
+            o_part = next((p for p in parts[1:] if p.startswith("O:")), "O:")
+            e_part = next((p for p in parts[1:] if p.startswith("E:")), "E:KEEP")
+            d_part = next((p for p in parts[1:] if p.startswith("D:")), "D:KEEP")
+            if len(e_part) > max_formula_chars:
+                e_part = e_part[:max_formula_chars] + "..."
+            if len(d_part) > max_formula_chars:
+                d_part = d_part[:max_formula_chars] + "..."
+            out.append(f"{head} | {o_part} | {e_part} | {d_part}")
+    return "\n".join(out)
+
+
+def _hydrate_formulas_from_target(candidate_block: str, target_block: str) -> str:
+    """Restore full deterministic E: and D: expressions when model emits KEEP or truncated formula tails."""
+    target_ed: Dict[str, tuple[str, str, str]] = {}
+    for raw in target_block.splitlines():
+        ln = raw.strip()
+        if not ln.startswith("ORX "):
+            continue
+        oid = _parse_orx_id(ln)
+        parts = [p.strip() for p in ln.split("|")]
+        head = parts[0]
+        e_part = next((p for p in parts[1:] if p.startswith("E:")), "E:SET none = C(0)")
+        d_part = next((p for p in parts[1:] if p.startswith("D:")), "D:C(0)")
+        target_ed[oid] = (head, e_part, d_part)
+
+    out_lines: List[str] = []
+    seen_orx: set[str] = set()
+    for raw in candidate_block.splitlines():
+        ln = raw.strip()
+        if ln.startswith("ENC "):
+            out_lines.append(ln)
+            continue
+        if ln.startswith("ORX "):
+            oid = _parse_orx_id(ln)
+            if oid not in target_ed or oid in seen_orx:
+                continue
+            seen_orx.add(oid)
+            t_head, t_e, t_d = target_ed[oid]
+            parts = [p.strip() for p in ln.split("|")]
+            o_part = next((p for p in parts[1:] if p.startswith("O:")), "")
+            e_part = next((p for p in parts[1:] if p.startswith("E:")), "")
+            d_part = next((p for p in parts[1:] if p.startswith("D:")), "")
+            if not o_part or len(o_part) < 4:
+                continue
+            if (not e_part) or ("..." in e_part) or (e_part == "E:KEEP"):
+                e_part = t_e
+            if (not d_part) or ("..." in d_part) or (d_part == "D:KEEP"):
+                d_part = t_d
+            out_lines.append(f"{t_head} | {o_part} | {e_part} | {d_part}")
+    return "\n".join(out_lines)
+
+
 def _phase_prompt(phase: str, packet: Dict[str, Any], act_label: str) -> str:
     plan = packet["planning_card"]
     poetics = packet.get("mathematical_poetics", {})
     neighbors = packet.get("neighbors", [])
     external_constraints = packet.get("external_constraints") or {}
     turn_span = _packet_turn_span(packet)
-    neighbor_txt = "\n\n".join([f"NEIGHBOR {n['encounter_id']}\n{n['block']}" for n in neighbors])
-    target = packet["target_block"]
+    neighbor_txt = "\n\n".join(
+        [f"NEIGHBOR {n['encounter_id']}\n{_compact_block_view(n['block'], 48)}" for n in neighbors]
+    )
+    target = _compact_block_view(packet["target_block"], 64)
     constraint_txt = ""
     if external_constraints:
         constraint_txt = f"\nTRM_PACKET\n{json.dumps(external_constraints, ensure_ascii=True)}\n"
@@ -158,7 +225,7 @@ def _phase_prompt(phase: str, packet: Dict[str, Any], act_label: str) -> str:
     if phase == "plan":
         return (
             "You are planning one encounter revision under 8k context constraints.\n"
-            "Output JSON only with keys: objective, constraints, risks, checks.\n"
+            "Output compact single-object JSON only (<= 90 tokens) with keys: objective, constraints, risks, checks.\n"
             "No prose wrappers.\n"
             f"ACT={act_label}\nPLAN_CARD\n{json.dumps(plan, ensure_ascii=True)}\n\n"
             f"POETICS\n{json.dumps(poetics, ensure_ascii=True)}\n\n"
@@ -167,7 +234,7 @@ def _phase_prompt(phase: str, packet: Dict[str, Any], act_label: str) -> str:
     if phase in ("characterize", "recharacterize"):
         return (
             "You are producing compact characterization notes for this encounter.\n"
-            "Output JSON only with keys: voices, tensions, stance_shift, dialogue_style.\n"
+            "Output compact single-object JSON only (<= 90 tokens) with keys: voices, tensions, stance_shift, dialogue_style.\n"
             "No prose wrappers.\n"
             f"ACT={act_label}\nPLAN_CARD\n{json.dumps(plan, ensure_ascii=True)}\n\n"
             f"TARGET\n{target}\n{constraint_txt}\n{neighbor_txt}\n"
@@ -175,7 +242,7 @@ def _phase_prompt(phase: str, packet: Dict[str, Any], act_label: str) -> str:
     if phase == "act_complete":
         return (
             "You are auditing act-level coherence for this encounter's act segment.\n"
-            "Output JSON only with keys: act_status, continuity_risks, unresolved_threads, next_focus.\n"
+            "Output compact single-object JSON only (<= 90 tokens) with keys: act_status, continuity_risks, unresolved_threads, next_focus.\n"
             "Include numeric before/after where invariant values are available.\n"
             "No prose wrappers.\n"
             f"ACT={act_label}\nPLAN_CARD\n{json.dumps(plan, ensure_ascii=True)}\n\n"
@@ -183,26 +250,27 @@ def _phase_prompt(phase: str, packet: Dict[str, Any], act_label: str) -> str:
             f"TARGET\n{target}\n{constraint_txt}\n{neighbor_txt}\n"
         )
     if phase in ("encounter_build", "late_stage_holistic"):
+        # Deduplicate ORX view to one representative reaction per option if needed, or emit all ORX lines with E:KEEP | D:KEEP
+        orx_template_lines = [f"ENC {packet['encounter_id']} turn={turn_span}"]
+        for raw in packet["target_block"].splitlines():
+            ln = raw.strip()
+            if ln.startswith("ORX "):
+                parts = [p.strip() for p in ln.split("|")]
+                head = parts[0]
+                o_part = next((p for p in parts[1:] if p.startswith("O:")), "O:")
+                orx_template_lines.append(f"{head} | {o_part} | E:KEEP | D:KEEP")
+        compact_target = "\n".join(orx_template_lines)
         return (
-            "You are revising one SWMD-0-MIN encounter block.\n"
-            "Output ONLY the revised block.\n"
-            "Do NOT output JSON.\n"
-            "Do NOT output prose explanation.\n"
-            "Do NOT output markdown fences.\n"
+            "You are revising one SWMD-0-MIN encounter block for Reservoir Dogs.\n"
+            "Output ONLY the revised SWMD-0-MIN block (no JSON, no fences, no commentary).\n"
             "Rules:\n"
-            "1) First line must be ENC <same id> turn=<same turn span>\n"
-            "2) Keep ORX IDs stable\n"
-            "3) Keep consequence semantics consistent\n"
-            "4) Include at least one ORX line\n"
-            "5) Prefer concise, dialogue-forward lines\n"
-            "6) Improve non-repetition and character voice distinctiveness\n\n"
-            "If you are unsure, copy the target block shape exactly and make only minimal textual edits inside O:/E:/D: payloads.\n\n"
+            "1) First line must be exact: ENC <same id> turn=<same turn span>\n"
+            "2) Emit every ORX line with exact same opt_id/rxn_id -> consequence_id\n"
+            "3) Rewrite O:<option text> into sharp, distinct Reservoir Dogs character action/dialogue (6-14 words); options sharing the same opt_id should share the same O: text\n"
+            "4) Leave | E:KEEP | D:KEEP at the end of each ORX line so invariant formulas stay preserved\n\n"
             f"ACT={act_label}\nPLAN_CARD\n{json.dumps(plan, ensure_ascii=True)}\n\n"
-            f"POETICS\n{json.dumps(poetics, ensure_ascii=True)}\n\n"
-            f"TARGET\n{target}\n{constraint_txt}\n{neighbor_txt}\n\n"
-            "BEGIN_OUTPUT_TEMPLATE\n"
-            f"ENC {packet['encounter_id']} turn={turn_span}\n"
-            "ORX "
+            f"TARGET_SWMD_BLOCK\n{compact_target}\n\n"
+            f"{neighbor_txt}\n"
         )
     raise ValueError(f"unsupported phase: {phase}")
 
@@ -276,7 +344,8 @@ def _fewshot_snippet(
     lines = ["FEWSHOT_TRANSFORMS"]
     for i, ex in enumerate(picked, start=1):
         ins = str(ex.get("instruction", ""))[:max_chars_each]
-        out = str(ex.get("output", ""))[:max_chars_each]
+        raw_out = str(ex.get("output", ""))
+        out = (_compact_block_view(raw_out, 48) if "ORX " in raw_out else raw_out)[:max_chars_each]
         lines.append(f"[{i}] INSTRUCTION: {ins}")
         lines.append(f"[{i}] VALID_SWMD_BLOCK:")
         lines.append(out)
@@ -382,6 +451,59 @@ def _generate_mlx(
     return text
 
 
+def _strip_think_tags(text: str) -> str:
+    cleaned = re.sub(r"<think>.*?</think>", "", text, flags=re.S)
+    if "<think>" in cleaned:
+        cleaned = cleaned.split("<think>", 1)[0]
+    cleaned = re.sub(r"^```(?:json|markdown|swmd|text)?\s*", "", cleaned.strip(), flags=re.I)
+    cleaned = re.sub(r"\s*```$", "", cleaned.strip())
+    return cleaned.strip()
+
+
+def _generate_openai(
+    base_url: str,
+    model_name: str,
+    prompt: str,
+    max_new_tokens: int,
+    temperature: float,
+) -> tuple[str, Dict[str, Any]]:
+    import urllib.request
+
+    endpoint = base_url.rstrip("/") + "/chat/completions"
+    payload: Dict[str, Any] = {
+        "model": model_name,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a deterministic SWMD-0-MIN storyworld operation engine following the small-storyworld-builder contract. Follow output formatting instructions strictly with zero extra prose.",
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "max_tokens": int(max_new_tokens),
+        "temperature": float(temperature),
+        "top_p": 0.9,
+        "seed": 7,
+        "chat_template_kwargs": {"enable_thinking": False},
+    }
+    req = urllib.request.Request(
+        endpoint,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=180) as resp:
+        body = json.loads(resp.read().decode("utf-8"))
+    choice = (body.get("choices") or [{}])[0]
+    msg = choice.get("message") or {}
+    content = str(msg.get("content") or "").strip()
+    usage = body.get("usage") or {}
+    return _strip_think_tags(content), {
+        "prompt_tokens": usage.get("prompt_tokens"),
+        "completion_tokens": usage.get("completion_tokens"),
+        "finish_reason": choice.get("finish_reason"),
+    }
+
+
 def _act_label(idx: int, total: int) -> str:
     if total <= 0:
         return "act2"
@@ -407,7 +529,9 @@ def main() -> int:
         type=str,
         default="",
     )
-    p.add_argument("--backend", type=str, default="auto", choices=("auto", "hf", "mlx"))
+    p.add_argument("--backend", type=str, default="auto", choices=("auto", "hf", "mlx", "openai"))
+    p.add_argument("--base-url", type=str, default="http://127.0.0.1:18080/v1")
+    p.add_argument("--model-name", type=str, default="Ternary-Bonsai-2-27B-PTQ1_0.gguf")
     p.add_argument(
         "--phases",
         type=str,
@@ -427,6 +551,7 @@ def main() -> int:
     p.add_argument("--fewshot-count", type=int, default=0)
     p.add_argument("--external-constraints-json", type=str, default="")
     p.add_argument("--repair-build-output", action="store_true")
+    p.add_argument("--resume", action="store_true")
     p.add_argument("--apply", action="store_true")
     args = p.parse_args()
 
@@ -456,9 +581,37 @@ def main() -> int:
     state_path.parent.mkdir(parents=True, exist_ok=True)
 
     state: Dict[str, Dict[str, Any]] = {}
-    with out_path.open("w", encoding="utf-8", newline="\n") as handle:
+    completed_keys: set[tuple[str, str]] = set()
+    if args.resume and state_path.exists():
+        try:
+            loaded_state = json.loads(state_path.read_text(encoding="utf-8"))
+            if isinstance(loaded_state, dict):
+                state = loaded_state
+        except Exception:
+            pass
+    if args.resume and out_path.exists():
+        for raw_ln in out_path.read_text(encoding="utf-8").splitlines():
+            s_ln = raw_ln.strip()
+            if not s_ln:
+                continue
+            try:
+                prev_row = json.loads(s_ln)
+                ph = str(prev_row.get("phase", ""))
+                eid = str(prev_row.get("encounter_id", ""))
+                if ph and eid:
+                    completed_keys.add((ph, eid))
+                    if ph not in ("encounter_build", "late_stage_holistic") and prev_row.get("output_preview"):
+                        state.setdefault(eid, {}).setdefault(ph, str(prev_row["output_preview"]))
+            except Exception:
+                continue
+
+    open_mode = "a" if (args.resume and out_path.exists()) else "w"
+    with out_path.open(open_mode, encoding="utf-8", newline="\n") as handle:
         for phase in phases:
             for i, encounter_id in enumerate(ids):
+                if (phase, encounter_id) in completed_keys:
+                    print(f"skip completed phase={phase} id={encounter_id}", flush=True)
+                    continue
                 packet = swmd_tools.iteration_packet(
                     path=swmd_path,
                     encounter_id=encounter_id,
@@ -476,10 +629,20 @@ def main() -> int:
                 if fewshot:
                     prompt = f"{prompt}\n\n{fewshot}"
                 t0 = time.time()
+                provider_usage: Dict[str, Any] = {}
+                phase_max_tokens = args.max_new_tokens if phase in ("encounter_build", "late_stage_holistic") else min(args.max_new_tokens, 220)
                 if backend == "mlx":
-                    output = _generate_mlx(model_path, adapter_path, prompt, args.max_new_tokens, args.temperature)
+                    output = _generate_mlx(model_path, adapter_path, prompt, phase_max_tokens, args.temperature)
+                elif backend == "openai":
+                    output, provider_usage = _generate_openai(
+                        args.base_url,
+                        args.model_name,
+                        prompt,
+                        phase_max_tokens,
+                        args.temperature,
+                    )
                 else:
-                    output = _generate_hf(tok, model, prompt, args.max_new_tokens, args.temperature)
+                    output = _generate_hf(tok, model, prompt, phase_max_tokens, args.temperature)
                 latency_ms = int((time.time() - t0) * 1000)
 
                 applied = False
@@ -489,12 +652,15 @@ def main() -> int:
                 repaired_used = False
                 replacement = ""
                 if phase in ("encounter_build", "late_stage_holistic"):
-                    replacement = _extract_replacement_block(output, encounter_id)
+                    raw_extracted = _extract_replacement_block(output, encounter_id)
+                    if raw_extracted:
+                        replacement = _hydrate_formulas_from_target(raw_extracted, packet["target_block"])
                     model_parse_ok = bool(replacement and ORX_LINE_RE.search(replacement))
                     parse_ok = model_parse_ok
                     if not parse_ok and args.repair_build_output:
+                        hydrated_any = _hydrate_formulas_from_target(output, packet["target_block"])
                         repaired = _repair_replacement_block(
-                            output,
+                            hydrated_any or output,
                             encounter_id,
                             _packet_turn_span(packet),
                             packet["target_block"],
@@ -528,6 +694,8 @@ def main() -> int:
                     "latency_ms": latency_ms,
                     "budget": packet["budget"],
                     "backend": backend,
+                    "model": args.model_name if backend == "openai" else Path(args.model_path).name,
+                    "provider_usage": provider_usage,
                     "prompt_estimated_tokens": packet["budget"]["estimated_tokens_used"],
                     "external_constraints_loaded": bool(external_constraints),
                     "parse_ok": parse_ok,
@@ -539,7 +707,9 @@ def main() -> int:
                     "output_preview": (replacement if replacement else output)[:500],
                 }
                 handle.write(json.dumps(row, ensure_ascii=True) + "\n")
-                print(f"phase={phase} id={encounter_id} parse_ok={parse_ok} latency_ms={latency_ms}")
+                handle.flush()
+                state_path.write_text(json.dumps(state, ensure_ascii=True, indent=2), encoding="utf-8")
+                print(f"phase={phase} id={encounter_id} parse_ok={parse_ok} latency_ms={latency_ms}", flush=True)
 
     state_path.write_text(json.dumps(state, ensure_ascii=True, indent=2), encoding="utf-8")
     print(str(out_path))

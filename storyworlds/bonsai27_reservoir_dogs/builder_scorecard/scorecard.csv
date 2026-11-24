@@ -1,0 +1,2 @@
+rank,run_id,model,condition,score,validity,scale,branching,control_logic,text_surface,small_model_readiness,native_schema,encounters,options_per_nonterminal,reactions_per_option,effects_per_reaction,gated_option_ratio,effect_operator_variety,hint,artifact
+1,bonsai27_reservoir_dogs_small_storyworld_001,Ternary-Bonsai-2-27B-PTQ1_0.gguf,packet_author_native_repair,0.8734,1.0,0.875,1.0,0.8625,0.7953,0.9,0.5,20,3.286,3.0,5.0,1.0,2,Run native planner receipts and append teacher rows before learned routing.,storyworlds\bonsai27_reservoir_dogs\reservoir_dogs_bonsai27.json

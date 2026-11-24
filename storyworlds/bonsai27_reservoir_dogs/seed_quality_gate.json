@@ -1,0 +1,237 @@
+{
+  "checks": [
+    {
+      "actual": 3.2857,
+      "name": "options_per_encounter",
+      "pass": true,
+      "target": 3.2
+    },
+    {
+      "actual": 3.0,
+      "name": "reactions_per_option",
+      "pass": true,
+      "target": 2.5
+    },
+    {
+      "actual": 5.0,
+      "name": "effects_per_reaction",
+      "pass": true,
+      "target": 4.5
+    },
+    {
+      "actual": 2.6377,
+      "name": "desirability_vars_per_reaction",
+      "pass": true,
+      "target": 1.6
+    },
+    {
+      "actual": 77.6429,
+      "name": "avg_encounter_words",
+      "pass": true,
+      "target": 50.0
+    },
+    {
+      "actual": 30.1087,
+      "name": "avg_reaction_words",
+      "pass": true,
+      "target": 20.0
+    },
+    {
+      "actual": 414.0,
+      "name": "pvalue_refs",
+      "pass": true,
+      "target": 1.0
+    },
+    {
+      "actual": 414.0,
+      "name": "p2value_refs",
+      "pass": true,
+      "target": 1.0
+    },
+    {
+      "actual": 19.5652,
+      "name": "visibility_gated_options_pct",
+      "pass": true,
+      "target": 3.0
+    },
+    {
+      "actual": 6.0,
+      "name": "desirability_operator_variety",
+      "pass": true,
+      "target": 3.0
+    },
+    {
+      "actual": 4.0,
+      "name": "effect_operator_variety",
+      "pass": true,
+      "target": 2.0
+    },
+    {
+      "actual": 0.4423,
+      "name": "desirability_operator_dominance",
+      "pass": true,
+      "target": 0.9
+    },
+    {
+      "actual": 0.4545,
+      "name": "effect_operator_dominance",
+      "pass": true,
+      "target": 0.92
+    },
+    {
+      "actual": 1.0,
+      "name": "effect_nonconstant_ratio",
+      "pass": true,
+      "target": 0.999
+    },
+    {
+      "actual": 1.0,
+      "name": "desirability_nonconstant_ratio",
+      "pass": true,
+      "target": 0.999
+    },
+    {
+      "actual": 2.2,
+      "name": "effect_script_complexity",
+      "pass": true,
+      "target": 1.2
+    },
+    {
+      "actual": 2.0,
+      "name": "desirability_script_complexity",
+      "pass": true,
+      "target": 1.2
+    },
+    {
+      "actual": 0.1957,
+      "name": "option_visibility_nonconstant_ratio",
+      "pass": true,
+      "target": 0.03
+    },
+    {
+      "actual": 0.7826,
+      "name": "option_visibility_complexity",
+      "pass": true,
+      "target": 0.6
+    },
+    {
+      "actual": 1.0,
+      "name": "option_performability_nonconstant_ratio",
+      "pass": true,
+      "target": 0.03
+    },
+    {
+      "actual": 4.0,
+      "name": "option_performability_complexity",
+      "pass": true,
+      "target": 0.6
+    },
+    {
+      "actual": 0.95,
+      "name": "encounter_acceptability_nonconstant_ratio",
+      "pass": true,
+      "target": 0.2
+    },
+    {
+      "actual": 1.0,
+      "name": "ending_reachability_balance",
+      "pass": true,
+      "target": 0.19
+    },
+    {
+      "actual": 1.0,
+      "name": "secret_reachability_balance",
+      "pass": true,
+      "target": 0.12
+    },
+    {
+      "actual": 1.0,
+      "name": "super_secret_reachability",
+      "pass": true,
+      "target": 0.25
+    },
+    {
+      "actual": 1.0,
+      "name": "encounter_desirability_nonconstant_ratio",
+      "pass": true,
+      "target": 0.2
+    },
+    {
+      "actual": 1.85,
+      "name": "encounter_desirability_complexity",
+      "pass": true,
+      "target": 0.5
+    },
+    {
+      "actual": 0,
+      "name": "validator_errors",
+      "pass": true,
+      "target": 0
+    }
+  ],
+  "failures": [],
+  "operator_counts": {
+    "desirability": {
+      "Absolute Value": 55,
+      "Addition": 138,
+      "And": 9,
+      "Arithmetic Comparator": 18,
+      "Maximum": 46,
+      "Multiplication": 46
+    },
+    "effects": {
+      "Addition": 690,
+      "Maximum": 138,
+      "Minimum": 138,
+      "Nudge": 552
+    }
+  },
+  "pass": true,
+  "polish_metrics": {
+    "act2": [
+      30.0,
+      2.0,
+      30,
+      9
+    ],
+    "act3": [
+      28.57142857142857,
+      2.0,
+      14,
+      4
+    ],
+    "desirability_vars_avg": 2.63768115942029,
+    "effects_per_reaction": 5.0,
+    "options_per_encounter": 3.2857142857142856,
+    "reactions_per_option": 3.0,
+    "secret_checks": [
+      [
+        "page_secret_undercover_truce",
+        4,
+        true
+      ]
+    ],
+    "super_secret_access_pct": 1.0
+  },
+  "storyworld": "storyworlds\\bonsai27_reservoir_dogs\\reservoir_dogs_seed.json",
+  "summary": {
+    "avg_desirability_vars": 2.64,
+    "avg_encounter_words": 77.64,
+    "avg_reaction_words": 30.11,
+    "desirability_nonconstant_ratio": 1.0,
+    "desirability_operator_dominance": 0.4423,
+    "desirability_operator_variety": 6,
+    "effect_nonconstant_ratio": 1.0,
+    "effect_operator_dominance": 0.4545,
+    "effect_operator_variety": 4,
+    "encounter_acceptability_nonconstant_ratio": 0.95,
+    "encounter_desirability_nonconstant_ratio": 1.0,
+    "encounters": 20,
+    "gated_options_pct": 19.57,
+    "option_performability_nonconstant_ratio": 1.0,
+    "option_visibility_nonconstant_ratio": 0.1957,
+    "p2value_refs": 414,
+    "pvalue_refs": 414
+  },
+  "validator_errors": []
+}

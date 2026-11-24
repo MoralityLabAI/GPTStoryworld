@@ -1,0 +1,67 @@
+{
+  "manifest": "storyworlds\\bonsai27_reservoir_dogs\\builder_manifest.jsonl",
+  "count": 1,
+  "ranked": [
+    {
+      "run_id": "bonsai27_reservoir_dogs_small_storyworld_001",
+      "model": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+      "condition": "packet_author_native_repair",
+      "artifact": "storyworlds\\bonsai27_reservoir_dogs\\reservoir_dogs_bonsai27.json",
+      "notes": "Reservoir Dogs 20-encounter storyworld built via small-storyworld-builder 6-phase MCP SWMD-0-MIN loop + bounded encounter prose pass.",
+      "metrics": {
+        "artifact": "storyworlds\\bonsai27_reservoir_dogs\\reservoir_dogs_bonsai27.json",
+        "bytes": 2020175,
+        "whole_context_token_estimate": 505043,
+        "valid_json": 1.0,
+        "core_fields_present": 1.0,
+        "characters": 4,
+        "properties": 6,
+        "spools": 4,
+        "encounters": 20,
+        "nonterminal_encounters": 14,
+        "terminal_encounters": 6,
+        "ending_like_encounters": 6,
+        "options": 46,
+        "reactions": 138,
+        "effects": 690,
+        "options_per_nonterminal": 3.2857142857142856,
+        "reactions_per_option": 3.0,
+        "effects_per_reaction": 5.0,
+        "gated_options": 46,
+        "gated_option_ratio": 1.0,
+        "nonconstant_script_ratio": 0.8592592592592593,
+        "effect_operator_variety": 2,
+        "effect_operator_dominance": 0.8,
+        "nonzero_effect_ratio": 1.0,
+        "encounter_text_count": 40,
+        "reaction_text_count": 138,
+        "option_text_count": 46,
+        "encounter_text_uniqueness": 1.0,
+        "reaction_text_uniqueness": 0.6811594202898551,
+        "encounter_text_length_ok": 0.5,
+        "reaction_text_length_ok": 1.0
+      },
+      "components": {
+        "validity": 1.0,
+        "scale": 0.875,
+        "branching": 1.0,
+        "control_logic": 0.8625,
+        "text_surface": 0.7953,
+        "small_model_readiness": 0.9,
+        "native_schema": 0.5,
+        "small_model_builder_score": 0.8734
+      },
+      "run_summary": {},
+      "improvement_hint": "Run native planner receipts and append teacher rows before learned routing."
+    }
+  ],
+  "score_weights": {
+    "validity": 0.18,
+    "scale": 0.1,
+    "branching": 0.18,
+    "control_logic": 0.2,
+    "text_surface": 0.12,
+    "small_model_readiness": 0.12,
+    "native_schema": 0.1
+  }
+}
