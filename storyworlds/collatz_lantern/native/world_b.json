@@ -1,0 +1,1201 @@
+{
+  "IFID": "SW-collatz-lantern-v1",
+  "storyworld_title": "The Lantern Ledger",
+  "sweepweave_version": "0.1.9",
+  "about_text": {
+    "pointer_type": "String Constant",
+    "value": "A finite arithmetic observation puzzle."
+  },
+  "css_theme": "default",
+  "debug_mode": false,
+  "display_mode": "text",
+  "creation_time": 1795564800,
+  "modified_time": 1795564800,
+  "characters": [
+    {
+      "id": "char_keeper",
+      "name": "Mara",
+      "bnumber_properties": {
+        "Cost": 0,
+        "Score": 0
+      }
+    }
+  ],
+  "authored_properties": [
+    {
+      "id": "Cost",
+      "property_name": "Cost",
+      "depth": 0,
+      "default_value": 0
+    },
+    {
+      "id": "Score",
+      "property_name": "Score",
+      "depth": 0,
+      "default_value": 0
+    }
+  ],
+  "spools": [
+    {
+      "id": "spool_lantern",
+      "spool_name": "The ledger",
+      "starts_active": true,
+      "creation_index": 0,
+      "encounters": [
+        "page_0000",
+        "page_ledger",
+        "page_commit",
+        "page_amber",
+        "page_blue"
+      ]
+    },
+    {
+      "id": "spool_endings",
+      "spool_name": "Endings",
+      "starts_active": false,
+      "creation_index": 1,
+      "encounters": [
+        "page_end_success",
+        "page_end_failure"
+      ]
+    }
+  ],
+  "encounters": [
+    {
+      "id": "page_0000",
+      "title": "The two chambers",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "\"One chamber holds the missing ration,\" Mara says. \"West belongs to the orbit that settles at one. East belongs to the orbit that cycles through five and seven.\" A sealed mechanism began at either one or five, with equal chance. Its current lamp reads one modulo four in both cases. Each tick adds thirteen; a state equal to one modulo four is first tripled. The mechanism then removes every factor of two. Sampling the next lamp costs one eighth of a ration. Amber means one modulo four; blue means three. A preserved arithmetic seal is free to read. Your score is the recovered ration, if any, less the sample cost."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 0,
+      "options": [
+        {
+          "id": "opt_ledger",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Read the preserved seal."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_ledger",
+              "consequence_id": "page_ledger",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1.0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_sample",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Spend one eighth of a ration to sample the next lamp."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_sample_amber",
+              "consequence_id": "page_amber",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.125
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_sample_blue",
+              "consequence_id": "page_blue",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.125
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_commit",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Choose a chamber now."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_commit",
+              "consequence_id": "page_commit",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1.0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.0
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_ledger",
+      "title": "A seal shared by both routes",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "Mara turns the brass ledger toward you. \"The seal is the smallest residue reachable by multiplying the current state by twos and threes modulo thirteen. Both possible starts carry seal one, and the seal stays fixed as the mechanism ticks.\" The ledger certifies that the same arithmetic class contains both routes. It gives you the same entry whichever chamber holds the ration. You can still pay for one lamp reading before choosing."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 1,
+      "options": [
+        {
+          "id": "opt_sample",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Spend one eighth of a ration to sample the next lamp."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_sample_amber",
+              "consequence_id": "page_amber",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.125
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_sample_blue",
+              "consequence_id": "page_blue",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Cost"
+                    ]
+                  },
+                  "to": {
+                    "pointer_type": "Bounded Number Constant",
+                    "value": 0.125
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_west",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the west chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_west_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_west_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_east",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the east chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_east_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_east_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_commit",
+      "title": "At the handles",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "The west handle is marked with a single point. Two interlocked rings mark the east. Mara keeps her hands away from both. \"You have the two possible starts and an equal prior,\" she says. \"Opening either chamber ends the attempt.\" You have spent nothing on a sample. The unseen mechanism determines which handle releases the ration."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 2,
+      "options": [
+        {
+          "id": "opt_west",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the west chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_west_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_west_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_east",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the east chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_east_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_east_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_amber",
+      "title": "An amber lamp",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "The sample shutter opens onto amber glass. You have spent one eighth of a ration. The next odd state is one modulo four. Starting from one produces sixteen before the factors of two are removed, leaving one. Starting from five produces twenty-eight, leaving seven, which would light the blue lamp. Mara rests the ledger beside the handles. \"You can use the new reading now.\""
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 3,
+      "options": [
+        {
+          "id": "opt_west",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the west chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_west_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_west_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_east",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the east chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_east_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_east_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_blue",
+      "title": "A blue lamp",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "Blue light spills through the sample shutter. You have spent one eighth of a ration. The next odd state is three modulo four. The start at five becomes twenty-eight before division and seven afterward. A start at one would return to one and light the amber lamp. Through the eastern wall you hear the mechanism alternate between its two recurring positions."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 4,
+      "options": [
+        {
+          "id": "opt_west",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the west chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_west_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_west_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "opt_east",
+          "text_script": {
+            "pointer_type": "String Constant",
+            "value": "Open the east chamber."
+          },
+          "visibility_script": true,
+          "performability_script": true,
+          "reactions": [
+            {
+              "id": "rxn_east_success",
+              "consequence_id": "page_end_success",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 1
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Addition",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": 1.0
+                      },
+                      {
+                        "operator_type": "Multiplication",
+                        "operands": [
+                          {
+                            "pointer_type": "Bounded Number Pointer",
+                            "character": "char_keeper",
+                            "keyring": [
+                              "Cost"
+                            ]
+                          },
+                          {
+                            "pointer_type": "Bounded Number Constant",
+                            "value": -1.0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": "rxn_east_failure",
+              "consequence_id": "page_end_failure",
+              "text_script": {
+                "pointer_type": "String Constant",
+                "value": "Mara records your choice. Continue to see its consequence."
+              },
+              "desirability_script": {
+                "pointer_type": "Bounded Number Constant",
+                "value": 0
+              },
+              "after_effects": [
+                {
+                  "effect_type": "Bounded Number Effect",
+                  "Set": {
+                    "pointer_type": "Bounded Number Pointer",
+                    "character": "char_keeper",
+                    "keyring": [
+                      "Score"
+                    ]
+                  },
+                  "to": {
+                    "operator_type": "Multiplication",
+                    "operands": [
+                      {
+                        "pointer_type": "Bounded Number Pointer",
+                        "character": "char_keeper",
+                        "keyring": [
+                          "Cost"
+                        ]
+                      },
+                      {
+                        "pointer_type": "Bounded Number Constant",
+                        "value": -1.0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_end_success",
+      "title": "The ration recovered",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "The latch opens over a sealed ration. Mara writes the amount recovered and the sample cost on separate lines. The Score meter shows their difference: one ration for a direct correct choice, or seven eighths after a sample. You can replay the other hidden configuration to check which part of your decision depended on the lamp."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 5,
+      "options": [],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    },
+    {
+      "id": "page_end_failure",
+      "title": "The empty chamber",
+      "text_script": {
+        "pointer_type": "String Constant",
+        "script_element_type": "Pointer",
+        "value": "The open chamber contains an empty cradle. Mara records zero rations recovered. Any sample cost still counts, so the Score meter is zero for a direct miss and minus one eighth after sampling. The mechanism followed its declared rule. A different decision would have used the same available evidence."
+      },
+      "earliest_turn": 0,
+      "latest_turn": 99,
+      "acceptability_script": true,
+      "creation_index": 6,
+      "options": [],
+      "connected_spools": [
+        "spool_lantern"
+      ]
+    }
+  ]
+}

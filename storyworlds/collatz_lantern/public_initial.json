@@ -1,0 +1,20 @@
+{
+  "scene": "page_0000",
+  "title": "The two chambers",
+  "text": "\"One chamber holds the missing ration,\" Mara says. \"West belongs to the orbit that settles at one. East belongs to the orbit that cycles through five and seven.\" A sealed mechanism began at either one or five, with equal chance. Its current lamp reads one modulo four in both cases. Each tick adds thirteen; a state equal to one modulo four is first tripled. The mechanism then removes every factor of two. Sampling the next lamp costs one eighth of a ration. Amber means one modulo four; blue means three. A preserved arithmetic seal is free to read. Your score is the recovered ration, if any, less the sample cost.",
+  "cost": 0,
+  "options": [
+    {
+      "action": "opt_ledger",
+      "text": "Read the preserved seal."
+    },
+    {
+      "action": "opt_sample",
+      "text": "Spend one eighth of a ration to sample the next lamp."
+    },
+    {
+      "action": "opt_commit",
+      "text": "Choose a chamber now."
+    }
+  ]
+}
