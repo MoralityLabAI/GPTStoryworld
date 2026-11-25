@@ -187,3 +187,5 @@ Note: For late-stage polish, target higher structural density: average 4.5 after
   - preserve only the few gates that protect secrets or major route commitments
 
 For character-local evidence and social reactions, see `references/PROVENANCE_CHARACTERS.md`. Use the finite session audit to separate pValue movement, changed reaction choice, and downstream utility. Audit variable sensitivity on legal histories; do not count decision-inert coordinates as reasoning complexity. The council adapter is a development fixture, not a native editor integration.
+
+For reaction sensitivity, effect magnitude, mechanical redundancy and finite ending reachability, see `references/REACTION_SENSITIVITY.md` and `scripts/reaction_sensitivity_audit.py`. Use explicit authored state support and private guards. Report winner flips separately from score shifts, review clipped and zero effects, and require a witnessed path to important endings. This subset audit cannot substitute for native editor/engine validation.
