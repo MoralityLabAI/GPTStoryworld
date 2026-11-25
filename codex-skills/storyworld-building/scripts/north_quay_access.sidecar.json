@@ -1,0 +1,8 @@
+{
+  "entry": "hearing",
+  "horizon": 4,
+  "max_effect": "1/4",
+  "initial_states": [{"editor.Documented": "0", "registrar.Trust[editor]": "0", "registrar.Access": "0", "editor.RecordRead": "0"}],
+  "perturbations": {"registrar.Trust[editor]": ["0", "1/4"]},
+  "guards": {"briefing": [["editor.Documented", ">=", "1/4"]], "opened": [["registrar.Access", ">=", "1/4"]], "end_record": [["editor.RecordRead", ">=", "1/4"]]}
+}
