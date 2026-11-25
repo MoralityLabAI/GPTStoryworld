@@ -1,0 +1,91 @@
+{
+  "checks": {
+    "all_mechanical_endings_reached": true,
+    "all_mechanical_reactions_selected": true,
+    "dominance_and_budget": true,
+    "effects_bounded": true,
+    "independent_packet_tree": true,
+    "local_belief_revision": true,
+    "public_history_equivalence": true,
+    "reverse_world_order_oracle": true,
+    "session_oracle_parity": true,
+    "trust_changes_access": true
+  },
+  "evidence": "exact finite authoring fixture, no neural or independent sample claim",
+  "full_receipt_sha256": "0f59bbe39944e8b5954493067387494433cbf2919357ff55f4ab5549682d0c45",
+  "latent_assignments": 48,
+  "privacy": {
+    "budget": 5,
+    "public_histories": 4056,
+    "terminal_prefixes": 16848,
+    "world_prefixes": 22464
+  },
+  "schema": "SW-PROV-05/v1",
+  "source_sha256": {
+    "north_quay_access.sidecar.json": "afabadc663c241d41dbad2d83bb46ea7a3d29472ce5fede06cdc6235b3280309",
+    "north_quay_access.swmd.min.md": "f4e4e13e533e06047b022add1de9bcc6228566bfd309545c03e46ced1ad24061",
+    "provenance_access.py": "8f7579f1658ab03973600a1211919d2ac515bdb510228b2308a3b795efee47a4",
+    "provenance_characters.py": "2239fd699c4cd1b4052fdc23c7347713fc8b52619c4545da6e83b382355611d8",
+    "provenance_design_audit.py": "1a017922510fa2144359a393b2afaac8081087b9246bffcf8ccb44b5f03d625e",
+    "provenance_session.py": "d3fa6971b067d25f6e7ddb1ebd2b5cc8c069be31fbec42f3571c05df7f194456",
+    "reaction_sensitivity_audit.py": "a20fe64c450bd661c4c4299d5b73888c198ee257aba74260de49188637b510f1",
+    "test_provenance_access.py": "d413ef2d97d136e071071beab729a237ec12d536b19e219d2dbe2efcd94db2c3",
+    "verify_provenance_access.py": "d09629d7444ddf86228efe5c81d66bd600977510a3f091554c038e51530726a9"
+  },
+  "utilities": {
+    "2": {
+      "full_blocked": "3/8",
+      "full_social": "3/8",
+      "full_ungated": "49/72",
+      "one_social": "3/8",
+      "route_social": "3/8",
+      "stop_social": "1/6",
+      "two_social": "3/8"
+    },
+    "3": {
+      "full_blocked": "11/24",
+      "full_social": "11/24",
+      "full_ungated": "25/36",
+      "one_social": "41/108",
+      "route_social": "41/108",
+      "stop_social": "1/6",
+      "two_social": "11/24"
+    },
+    "4": {
+      "full_blocked": "11/24",
+      "full_social": "2/3",
+      "full_ungated": "17/24",
+      "one_social": "11/24",
+      "route_social": "2/3",
+      "stop_social": "1/6",
+      "two_social": "11/24"
+    },
+    "5": {
+      "full_blocked": "11/24",
+      "full_social": "25/36",
+      "full_ungated": "13/18",
+      "one_social": "11/24",
+      "route_social": "25/36",
+      "stop_social": "1/6",
+      "two_social": "5/8"
+    },
+    "6": {
+      "full_blocked": "11/24",
+      "full_social": "25/36",
+      "full_ungated": "13/18",
+      "one_social": "11/24",
+      "route_social": "25/36",
+      "stop_social": "1/6",
+      "two_social": "5/8"
+    },
+    "7": {
+      "full_blocked": "11/24",
+      "full_social": "13/18",
+      "full_ungated": "13/18",
+      "one_social": "11/24",
+      "route_social": "13/18",
+      "stop_social": "1/6",
+      "two_social": "5/8"
+    }
+  }
+}

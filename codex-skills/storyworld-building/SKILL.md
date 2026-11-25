@@ -126,6 +126,9 @@ Use these tools to make deterministic, validated edits:
 - Use `C:/projects/GPTStoryworld/ideaFactory/tropes/*.md` and `C:/projects/GPTStoryworld/ideaFactory/sources/*.md` for diversity overlays and math heuristics.
 - Use `C:/projects/GPTStoryworld/ideaFactory/tropes/overlays.md` for myth-to-math mappings.
 
+## Provenance-aware inquiry and epistemic balancing
+For worlds involving testimony, rumours, archives, investigations, or disputed facts, use `references/PROVENANCE_BALANCING.md` and run `scripts/provenance_design_audit.py` on the declared finite evidence model. Keep private source lineage and truth outside player-facing SWMD. Track actionable investigation opportunities, utility gaps against shortcut policies, and source-specific belief revision; treat exact planning horizon as one coordinate of difficulty. This is an authoring-side audit, not a native engine feature.
+
 ## Validation Rule
 Never bypass `scripts/sweepweave_validator.py` when the task touches storyworld JSON.
 
@@ -182,3 +185,9 @@ Note: For late-stage polish, target higher structural density: average 4.5 after
   - reduce visibility thresholds
   - simplify availability scripts
   - preserve only the few gates that protect secrets or major route commitments
+
+For character-local evidence and social reactions, see `references/PROVENANCE_CHARACTERS.md`. Use the finite session audit to separate pValue movement, changed reaction choice, and downstream utility. Audit variable sensitivity on legal histories; do not count decision-inert coordinates as reasoning complexity. The council adapter is a development fixture, not a native editor integration.
+
+For reaction sensitivity, effect magnitude, mechanical redundancy and finite ending reachability, see `references/REACTION_SENSITIVITY.md` and `scripts/reaction_sensitivity_audit.py`. Use explicit authored state support and private guards. Report winner flips separately from score shifts, review clipped and zero effects, and require a witnessed path to important endings. This subset audit cannot substitute for native editor/engine validation.
+
+For social relationships that unlock information, see `references/PROVENANCE_ACCESS.md`. Audit the complete causal chain from a relationship change through a legal reaction and acquired evidence to revised beliefs and terminal utility. Compare blocked, gated and ungated variants under the same factual payoff, and include a route-aware baseline. A social bonus alone does not establish epistemic value. Keep native validation separate from subset audits.

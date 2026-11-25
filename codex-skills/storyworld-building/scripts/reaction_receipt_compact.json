@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "26_ledger_regression": true,
+    "all_calibrated_reactions_selected": true,
+    "bad_duplicate": true,
+    "bad_effect_clips": true,
+    "bad_gate_blocked": true,
+    "bad_trust_inert": true,
+    "good_effects_in_range": true,
+    "good_gate_reached": true,
+    "good_trust_access_active": true,
+    "original_council_reaction_parity": true
+  },
+  "evidence": "exact finite authoring regression; paired synthetic fixtures, no model experiment",
+  "factual_ledgers": 26,
+  "full_receipt_canonical_sha256": "a174f314f2e496a78834e644aaf834f97a45ff90916fbadcb4bb5391fe1f29b2",
+  "original_trust_flips": 0,
+  "schema": "SW-PROV-04/v1",
+  "source_sha256": {
+    "north_quay_reaction_bad.swmd.min.md": "1725222b0368116257abd403003a50d7d4c88cc3b4e21a1aa4663848605d117e",
+    "north_quay_reaction_calibrated.swmd.min.md": "233f78f747f3a8d85fb868cad2cc2b55de1bc1681feb9203b03ea25dc0d68ff4",
+    "provenance_characters.py": "2239fd699c4cd1b4052fdc23c7347713fc8b52619c4545da6e83b382355611d8",
+    "provenance_design_audit.py": "1a017922510fa2144359a393b2afaac8081087b9246bffcf8ccb44b5f03d625e",
+    "provenance_session.py": "d3fa6971b067d25f6e7ddb1ebd2b5cc8c069be31fbec42f3571c05df7f194456",
+    "reaction_sensitivity_audit.py": "a20fe64c450bd661c4c4299d5b73888c198ee257aba74260de49188637b510f1",
+    "test_reaction_sensitivity.py": "730fe903afdc15163a8781cc92edba87a93df1fd82c32437e8d9811153fd0318",
+    "verify_reaction_sensitivity.py": "fdc799e9f61656aad4579b083598ab7d9430dbe2e9eb097452f4e549793b2c57"
+  }
+}
