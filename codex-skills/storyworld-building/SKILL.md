@@ -185,3 +185,5 @@ Note: For late-stage polish, target higher structural density: average 4.5 after
   - reduce visibility thresholds
   - simplify availability scripts
   - preserve only the few gates that protect secrets or major route commitments
+
+For character-local evidence and social reactions, see `references/PROVENANCE_CHARACTERS.md`. Use the finite session audit to separate pValue movement, changed reaction choice, and downstream utility. Audit variable sensitivity on legal histories; do not count decision-inert coordinates as reasoning complexity. The council adapter is a development fixture, not a native editor integration.
