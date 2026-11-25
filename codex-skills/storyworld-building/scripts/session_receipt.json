@@ -1,0 +1,125 @@
+{
+  "schema": "SW-PROV/session-audit/v1",
+  "scope": "exact public development fixture, no neural evaluation",
+  "source_sha256": {
+    "provenance_client.ts": "97ff0c157355c02bce8a726b11d22961795f3af7aa5eb5e5e24e43ac23f0bda4",
+    "provenance_design_audit.py": "1a017922510fa2144359a393b2afaac8081087b9246bffcf8ccb44b5f03d625e",
+    "provenance_session.py": "d3fa6971b067d25f6e7ddb1ebd2b5cc8c069be31fbec42f3571c05df7f194456",
+    "test_provenance_client.cjs": "125d15c04b386b0bce89327fe850a1d4aee96f43c4876c7f8da7ca25cb8e75d0",
+    "test_provenance_session.py": "0909f6cbfae77be56c016397edfd02e041cab496451354296ed84307a5217fa2",
+    "verify_provenance_session.py": "6ec40a9ed30272616616058f8418ff7ea9adb470312e2c09b29d9865d3bf8da8"
+  },
+  "variants": [
+    {
+      "endings": 36,
+      "id": "north_quay_k1",
+      "policies": {
+        "full": {
+          "correct": "9/26",
+          "cost": "1",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        },
+        "macro": {
+          "correct": "9/26",
+          "cost": "1",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        },
+        "one": {
+          "correct": "9/26",
+          "cost": "1",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        },
+        "two": {
+          "correct": "9/26",
+          "cost": "1",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        }
+      },
+      "prefixes": 48,
+      "unique_public_histories": 16,
+      "worlds": 4
+    },
+    {
+      "endings": 72,
+      "id": "north_quay_k2",
+      "policies": {
+        "full": {
+          "correct": "9/26",
+          "cost": "2",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        },
+        "macro": {
+          "correct": "9/26",
+          "cost": "2",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        },
+        "one": {
+          "correct": "21/26",
+          "cost": "0",
+          "defer": "0",
+          "false": "5/26",
+          "utility": "1/26"
+        },
+        "two": {
+          "correct": "9/26",
+          "cost": "2",
+          "defer": "8/13",
+          "false": "1/26",
+          "utility": "5/26"
+        }
+      },
+      "prefixes": 96,
+      "unique_public_histories": 28,
+      "worlds": 4
+    },
+    {
+      "endings": 576,
+      "id": "north_quay_k3",
+      "policies": {
+        "full": {
+          "correct": "27/64",
+          "cost": "5/2",
+          "defer": "17/32",
+          "false": "3/64",
+          "utility": "15/64"
+        },
+        "macro": {
+          "correct": "0",
+          "cost": "0",
+          "defer": "1",
+          "false": "0",
+          "utility": "0"
+        },
+        "one": {
+          "correct": "0",
+          "cost": "0",
+          "defer": "1",
+          "false": "0",
+          "utility": "0"
+        },
+        "two": {
+          "correct": "27/64",
+          "cost": "11/4",
+          "defer": "17/32",
+          "false": "3/64",
+          "utility": "15/64"
+        }
+      },
+      "prefixes": 768,
+      "unique_public_histories": 268,
+      "worlds": 12
+    }
+  ]
+}
