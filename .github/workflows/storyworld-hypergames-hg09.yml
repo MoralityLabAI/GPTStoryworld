@@ -1,0 +1,42 @@
+name: storyworld-hypergames-hg09-frontier-preflight
+on:
+  push:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/src/spiral_ln/hg09_*.py'
+      - 'verifiers_envs/storyworld-hypergames-env/src/spiral_ln/hypergames_*certificate.py'
+      - 'verifiers_envs/storyworld-hypergames-env/tests/test_hypergames_*certificate.py'
+      - 'verifiers_envs/storyworld-hypergames-env/tests/test_hg09*.py'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/hg09/**'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/single_player/HG09_PROTOCOL.md'
+      - 'verifiers_envs/storyworld-hypergames-env/Hypergames/single_player/models_hg09.json'
+      - '.github/workflows/storyworld-hypergames-hg09.yml'
+  pull_request:
+    paths:
+      - 'verifiers_envs/storyworld-hypergames-env/**'
+      - '.github/workflows/storyworld-hypergames-hg09.yml'
+jobs:
+  mock-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: verifiers_envs/storyworld-hypergames-env
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Zero-cost provider-mock and privacy tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_hg09*.py' -q
+      - name: Dry-run configuration, no API calls
+        run: PYTHONPATH=src python -m spiral_ln.hg09_frontier --config Hypergames/single_player/models_hg09.json --out output/hg09_no_call.json --task hg02
+      - name: Enumerate public GF2 certificate soundness cases
+        run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_hypergames_*certificate.py' -q
+      - name: Replay actual public model actions without inference
+        run: |
+          PYTHONPATH=src python -m spiral_ln.hg09_replay --traces Hypergames/hg09/session_20261117/traces --registration Hypergames/hg09/session_20261117/registration.json --out output/hg09_replayed.json
+          python -c "from pathlib import Path; assert Path('output/hg09_replayed.json').read_bytes()==Path('Hypergames/hg09/session_20261117/measured_export.json').read_bytes()"
+      - name: Replay separate summary-enabled repeats without inference
+        run: |
+          PYTHONPATH=src python -m spiral_ln.hg09_replay --traces Hypergames/hg09/session_20261117/summary_extension/traces --registration Hypergames/hg09/session_20261117/summary_extension/registration.json --out output/hg09_summary_replayed.json
+          python -c "from pathlib import Path; assert Path('output/hg09_summary_replayed.json').read_bytes()==Path('Hypergames/hg09/session_20261117/summary_extension/measured_export.json').read_bytes()"

@@ -4,3 +4,6 @@
 /tools/audit_constitutional_alignment_suite_v2.py text eol=lf
 /storyworld/tests/test_constitutional_alignment_suite_v2.py text eol=lf
 /benchmarks/moral_hysteresis_v1/** text eol=lf
+
+# Hypergames receipts and journals hash exact source/artifact bytes on every OS.
+/verifiers_envs/storyworld-hypergames-env/** -text

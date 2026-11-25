@@ -1,0 +1,9 @@
+{
+  "models": [
+    {"tag":"sol","provider":"openai","model":"gpt-6.1-sol","effort":"medium","input_usd_per_m":2.0,"output_usd_per_m":10.0},
+    {"tag":"astra","provider":"openai","model":"gpt-6-astra","effort":"medium","input_usd_per_m":10.0,"output_usd_per_m":50.0},
+    {"tag":"sonnet","provider":"anthropic","model":"claude-sonnet-5-5","effort":"medium","input_usd_per_m":2.0,"output_usd_per_m":10.0},
+    {"tag":"opus","provider":"anthropic","model":"claude-opus-5-5","effort":"medium","input_usd_per_m":4.0,"output_usd_per_m":20.0},
+    {"tag":"gemini_pro","provider":"gemini","model":"gemini-3.1-pro-preview","effort":"medium","input_usd_per_m":4.0,"output_usd_per_m":18.0}
+  ]
+}
