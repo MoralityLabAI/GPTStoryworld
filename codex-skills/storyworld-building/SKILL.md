@@ -126,6 +126,9 @@ Use these tools to make deterministic, validated edits:
 - Use `C:/projects/GPTStoryworld/ideaFactory/tropes/*.md` and `C:/projects/GPTStoryworld/ideaFactory/sources/*.md` for diversity overlays and math heuristics.
 - Use `C:/projects/GPTStoryworld/ideaFactory/tropes/overlays.md` for myth-to-math mappings.
 
+## Provenance-aware inquiry and epistemic balancing
+For worlds involving testimony, rumours, archives, investigations, or disputed facts, use `references/PROVENANCE_BALANCING.md` and run `scripts/provenance_design_audit.py` on the declared finite evidence model. Keep private source lineage and truth outside player-facing SWMD. Track actionable investigation opportunities, utility gaps against shortcut policies, and source-specific belief revision; treat exact planning horizon as one coordinate of difficulty. This is an authoring-side audit, not a native engine feature.
+
 ## Validation Rule
 Never bypass `scripts/sweepweave_validator.py` when the task touches storyworld JSON.
 
