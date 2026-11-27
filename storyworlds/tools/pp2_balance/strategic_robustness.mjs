@@ -1,10 +1,15 @@
 import * as S from './strategic.mjs';
 const api=(function robustFactory(S){
+ let meter=null;
+ const tick=k=>{if(meter)meter[k]=(meter[k]||0)+1};
+ function beginMeter(){meter={}}
+ function endMeter(){const result=meter||{};meter=null;return result}
+
  const ok=(x,m)=>{if(!x)throw Error(m)};
  const Z=[0n,1n],O=[1n,1n],E=[1n,5n];
- function f(a,b=1n){ok(b!==0n,'denominator');if(b<0n){a=-a;b=-b}let x=a<0n?-a:a,y=b;while(y){[x,y]=[y,x%y]}return [a/x,b/x]}
+ function f(a,b=1n){tick('rational_normalizations');ok(b!==0n,'denominator');if(b<0n){a=-a;b=-b}let x=a<0n?-a:a,y=b;while(y){[x,y]=[y,x%y]}return [a/x,b/x]}
  const q=s=>{ok(typeof s==='string'&&/^-?\d+(\/[1-9]\d*)?$/.test(s),'rational string');const [a,b='1']=s.split('/');return f(BigInt(a),BigInt(b))};
- const st=a=>a[0]+'/'+a[1],a=(x,y)=>f(x[0]*y[1]+y[0]*x[1],x[1]*y[1]),b=(x,y)=>a(x,[-y[0],y[1]]),m=(x,y)=>f(x[0]*y[0],x[1]*y[1]),d=(x,y)=>f(x[0]*y[1],x[1]*y[0]),c=(x,y)=>{const v=x[0]*y[1]-y[0]*x[1];return v<0n?-1:v>0n?1:0},sum=x=>x.reduce(a,Z),max=x=>x.reduce((u,v)=>c(u,v)>=0?u:v),min=x=>x.reduce((u,v)=>c(u,v)<=0?u:v),num=x=>Number(x[0])/Number(x[1]);
+ const st=a=>a[0]+'/'+a[1],a=(x,y)=>f(x[0]*y[1]+y[0]*x[1],x[1]*y[1]),b=(x,y)=>a(x,[-y[0],y[1]]),m=(x,y)=>f(x[0]*y[0],x[1]*y[1]),d=(x,y)=>f(x[0]*y[1],x[1]*y[0]),c=(x,y)=>{tick('rational_comparisons');const v=x[0]*y[1]-y[0]*x[1];return v<0n?-1:v>0n?1:0},sum=x=>x.reduce(a,Z),max=x=>x.reduce((u,v)=>c(u,v)>=0?u:v),min=x=>x.reduce((u,v)=>c(u,v)<=0?u:v),num=x=>Number(x[0])/Number(x[1]);
  const pure=(n,i)=>Array.from({length:n},(_,j)=>i===j?O:Z),uniform=n=>Array.from({length:n},()=>f(1n,BigInt(n))),mix=(x,y,t)=>x.map((u,i)=>a(m(u,b(O,t)),m(y[i],t))),show=x=>x.map(st);
  function model(g,target){
   const R=g.R.map(row=>row.map(q)),C=g.C.map(row=>row.map(q)),nr=R.length,nc=R[0].length;
@@ -58,7 +63,7 @@ const api=(function robustFactory(S){
   for(const cell of M.cells)ok(c(b(cell.out[k],sum(cell.gaps.map((v,i)=>m(v,l[i])))),u)<=0,'dual upper inequality violated');
   return min([O,u]);
  }
- function evaluate(M,x,y){
+ function evaluate(M,x,y){tick('bilinear_profile_evaluations');
   const gaps=Array.from({length:M.nr+M.nc},()=>Z),out=M.masks.map(()=>Z);
   for(let i=0;i<M.nr;i++)for(let j=0;j<M.nc;j++){
    const w=m(x[i],y[j]);if(c(w,Z)===0)continue;
@@ -131,7 +136,7 @@ const api=(function robustFactory(S){
     for(let k=0;k<gaps.length;k++)gaps[k]+=w*cell.gap[k];
     for(let k=0;k<out.length;k++)if(cell.out[k])out[k]+=w;
    }
-   const r={gaps,out,feasible:gaps.every(v=>v<=0n)};cache.set(key,r);vertexChecks++;return r;
+   const r={gaps,out,feasible:gaps.every(v=>v<=0n)};cache.set(key,r);vertexChecks++;tick('dyadic_corner_evaluations');return r;
   }
   function bounds(cell,onFeasible){
    const mins=Array(M.nr+M.nc).fill(null),upper=M.masks.map(()=>0n);
@@ -145,7 +150,7 @@ const api=(function robustFactory(S){
   }
   return {root,split,bounds,stats:()=>({unique_corner_evaluations:vertexChecks})};
  }
- function verify(g,target,receipt){
+ function verify(g,target,receipt){tick('cover_verifier_calls');
   const M=model(g,target),{depthLimit,maxSplits}=receipt.config;
   ok(Number.isSafeInteger(depthLimit)&&depthLimit>=1&&depthLimit<=20&&Number.isSafeInteger(maxSplits)&&maxSplits>=0&&maxSplits<=4096,'cover cap');
   ok(receipt.objectives.length===M.masks.length,'objective count');
@@ -177,7 +182,7 @@ const api=(function robustFactory(S){
   });
   return {worst_tv:{lower:st(worstLower),upper:st(worstUpper)},ranges,objectives,cover:{splits,excluded,live,...G.stats()}};
  }
- function envelope(g,target,seeds,{maxSplits=256,depthLimit=14,dualSweeps=4,witnessSweeps=4}={}){
+ function envelope(g,target,seeds,{maxSplits=256,depthLimit=14,dualSweeps=4,witnessSweeps=4}={}){tick('envelope_calls');
   ok(Number.isSafeInteger(maxSplits)&&maxSplits>=0&&maxSplits<=4096&&Number.isSafeInteger(depthLimit)&&depthLimit>=1&&depthLimit<=20&&[dualSweeps,witnessSweeps].every(v=>Number.isSafeInteger(v)&&v>=0&&v<=16),'config cap');
   const M=model(g,target),sol=S.solve(g.R,g.C,{mode:'kite',budget:128,rounds:12});
   const W=witnessSearch(g,M,[sol.certificate,...sol.history,...seeds],witnessSweeps);
@@ -204,6 +209,6 @@ const api=(function robustFactory(S){
   receipt.verified=verify(g,target,receipt);
   return receipt;
  }
- return {envelope,verify};
+ return {envelope,verify,beginMeter,endMeter};
 })(S);
-export const {envelope,verify}=api;
+export const {envelope,verify,beginMeter,endMeter}=api;

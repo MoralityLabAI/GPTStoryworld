@@ -3,10 +3,15 @@ import * as S from './strategic.mjs';
 import * as H from './strategic_robustness.mjs';
 import {fixture} from './pilot.mjs';
 const api=(function campaignFactory(B,S,H,fixture){
+ let meter=null;
+ const tick=k=>{if(meter)meter[k]=(meter[k]||0)+1};
+ function beginMeter(){meter={}}
+ function endMeter(){const result=meter||{};meter=null;return result}
+
  const ok=(v,m)=>{if(!v)throw Error(m)};
  const gcd=(x,y)=>{x=x<0n?-x:x;while(y)[x,y]=[y,x%y];return x};
- const f=(x,y=1n)=>{ok(y>0n,'denominator');const g=gcd(x,y);return [x/g,y/g]};
- const q=s=>f(...s.split('/').map(BigInt)),st=x=>x.join('/'),a=(x,y)=>f(x[0]*y[1]+y[0]*x[1],x[1]*y[1]),b=(x,y)=>a(x,[-y[0],y[1]]),cmp=B.cmp,cs=(x,y)=>cmp(q(x),q(y)),min=xs=>xs.reduce((x,y)=>cs(x,y)<=0?x:y),max=xs=>xs.reduce((x,y)=>cs(x,y)>=0?x:y);
+ const f=(x,y=1n)=>{tick('rational_normalizations');ok(y>0n,'denominator');const g=gcd(x,y);return [x/g,y/g]};
+ const q=s=>f(...s.split('/').map(BigInt)),st=x=>x.join('/'),a=(x,y)=>f(x[0]*y[1]+y[0]*x[1],x[1]*y[1]),b=(x,y)=>a(x,[-y[0],y[1]]),cmp=B.cmp,cs=(x,y)=>{tick('rational_comparisons');return cmp(q(x),q(y))},min=xs=>xs.reduce((x,y)=>cs(x,y)<=0?x:y),max=xs=>xs.reduce((x,y)=>cs(x,y)>=0?x:y);
  const plus=(x,y)=>st(a(q(x),q(y))),minus=(x,y)=>st(b(q(x),q(y)));
  const p0='0/1',p1='1/1';
  const roster=[
@@ -70,7 +75,7 @@ const api=(function campaignFactory(B,S,H,fixture){
  function trivialUpper(game,target){
   return max([...new Set(game.endings.flat())].map(e=>minus(p1,target[e]||p0)));
  }
- function certifyScreen(game,target){
+ function certifyScreen(game,target){tick('cold_screen_calls');
   const m=game.R.length,n=game.R[0].length,upper=trivialUpper(game,target);
   const pure=(n,i)=>Array.from({length:n},(_,j)=>i===j?p1:p0),uniform=n=>Array(n).fill('1/'+n);
   let best=null,checks=0;
@@ -93,7 +98,7 @@ const api=(function campaignFactory(B,S,H,fixture){
   const cert=H.envelope(game,target,[best.cert],{maxSplits:0,depthLimit:14,dualSweeps:2,witnessSweeps:2});
   return {kind:'relaxation',lower:cert.verified.worst_tv.lower,upper:cert.verified.worst_tv.upper,receipt:cert,screen_checks:checks};
  }
- function verifyScreen(game,target,screen){
+ function verifyScreen(game,target,screen){tick('cold_screen_verifier_calls');
   const upper=trivialUpper(game,target);
   if(screen.kind==='relaxation'||screen.kind==='refined'){
    const r=H.verify(game,target,screen.receipt).worst_tv;
@@ -179,6 +184,6 @@ const api=(function campaignFactory(B,S,H,fixture){
   const summary={id:spec.id,family:spec.family,seed:spec.seed,target,utility_schedule:spec.utility,approved_sites:approved.length,grid:rows.length,distinct_games:games.length,screen_exact_games:games.filter(e=>cs(e.screen.lower,e.screen.upper)===0).length,refined_games:refinementIds.length,final_exact_candidates:finalRows.filter(r=>cs(r.worst_lower,r.worst_upper)===0).length,unresolved_no_witness:games.filter(e=>e.screen.kind==='unresolved_no_witness').length,author_transitions:authorTransitions,strategic_transitions:strategicTransitions,author_frontier:slim(finals.get(old.key)),robust_frontier:slim(finals.get(robust.key)),author_grid:slim(finals.get(authorGrid.key)),robust_grid:slim(robustGrid),zero_author_slack:slim(constrained),global_j_lower:gridLower,global_j_upper:robustGrid.j_upper,global_j_gap:minus(robustGrid.j_upper,gridLower),frontier_robust_certified_win:cs(finals.get(robust.key).j_upper,finals.get(old.key).j_lower)<0,frontier_robust_certified_loss:cs(finals.get(robust.key).j_lower,finals.get(old.key).j_upper)>0,grid_robust_certified_win:cs(robustGrid.j_upper,finals.get(authorGrid.key).j_lower)<0,edge_labels:counts};
   return {status:'development_only',spec,summary,approved_sites:approved,manifest,screen_config:{maxSplits:0,dualSweeps:2,witnessSweeps:2},refinement_config:{maxSplits:128,maxGames:4,dualSweeps:4,witnessSweeps:4},games,rows:finalRows,frontier:{author:old,robust},edge_columns:['from','to','group','joint_loss_label','worst_tv_label'],edges};
  }
- return {roster,instance,runRoot,verifyScreen,certifyScreen};
+ return {roster,instance,runRoot,verifyScreen,certifyScreen,beginMeter,endMeter};
 })(B,S,H,fixture);
-export const {roster,instance,runRoot,verifyScreen,certifyScreen}=api;
+export const {roster,instance,runRoot,verifyScreen,certifyScreen,beginMeter,endMeter}=api;

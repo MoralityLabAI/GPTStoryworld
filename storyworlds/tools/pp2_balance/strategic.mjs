@@ -1,11 +1,16 @@
 // PP2-BAL-02: exact finite-policy bimatrix certificates and bounded KITE-inspired search.
 const api=(function strategicFactory(){
+ let meter=null;
+ const tick=k=>{if(meter)meter[k]=(meter[k]||0)+1};
+ function beginMeter(){meter={}}
+ function endMeter(){const result=meter||{};meter=null;return result}
+
  const check=(b,m)=>{if(!b)throw new Error(m)};
  const Z=[0n,1n],O=[1n,1n],S=[1n,5n];
  const gcd=(a,b)=>{a=a<0n?-a:a;while(b){[a,b]=[b,a%b]}return a};
- function F(a,b=1n){check(b!==0n,'zero denominator');if(b<0n){a=-a;b=-b}const g=gcd(a,b);return [a/g,b/g]}
+ function F(a,b=1n){tick('rational_normalizations');check(b!==0n,'zero denominator');if(b<0n){a=-a;b=-b}const g=gcd(a,b);return [a/g,b/g]}
  function Q(s){check(typeof s==='string'&&/^-?\d+(\/[1-9]\d*)?$/.test(s),'rational string required');const [a,b='1']=s.split('/');return F(BigInt(a),BigInt(b))}
- const str=a=>a[0]+'/'+a[1],add=(a,b)=>F(a[0]*b[1]+b[0]*a[1],a[1]*b[1]),neg=a=>[-a[0],a[1]],sub=(a,b)=>add(a,neg(b)),mul=(a,b)=>F(a[0]*b[0],a[1]*b[1]),div=(a,b)=>F(a[0]*b[1],a[1]*b[0]),cmp=(a,b)=>{const d=a[0]*b[1]-b[0]*a[1];return d<0n?-1:d>0n?1:0};
+ const str=a=>a[0]+'/'+a[1],add=(a,b)=>F(a[0]*b[1]+b[0]*a[1],a[1]*b[1]),neg=a=>[-a[0],a[1]],sub=(a,b)=>add(a,neg(b)),mul=(a,b)=>F(a[0]*b[0],a[1]*b[1]),div=(a,b)=>F(a[0]*b[1],a[1]*b[0]),cmp=(a,b)=>{tick('rational_comparisons');const d=a[0]*b[1]-b[0]*a[1];return d<0n?-1:d>0n?1:0};
  const sum=a=>a.reduce(add,Z),max=a=>a.reduce((u,v)=>cmp(u,v)>=0?u:v),min=a=>a.reduce((u,v)=>cmp(u,v)<=0?u:v),dot=(a,b)=>sum(a.map((u,i)=>mul(u,b[i]))),abs=a=>cmp(a,Z)<0?neg(a):a;
  const inUnit=a=>cmp(a,Z)>=0&&cmp(a,O)<=0;
  const pure=(n,i)=>Array.from({length:n},(_,j)=>i===j?O:Z),uniform=n=>Array.from({length:n},()=>F(1n,BigInt(n)));
@@ -21,13 +26,13 @@ const api=(function strategicFactory(){
   return {r,c,m,n};
  }
  function simplex(a,n){check(Array.isArray(a)&&a.length===n,'strategy shape');const x=a.map(Q);check(x.every(inUnit)&&cmp(sum(x),O)===0,'invalid simplex');return x}
- function reg(g,x,y){
+ function reg(g,x,y){tick('regret_evaluations');
   const ra=g.r.map(row=>dot(row,y)),ca=Array.from({length:g.n},(_,j)=>dot(x,g.c.map(row=>row[j])));
   const ur=dot(x,ra),uc=dot(y,ca),i=argmax(ra),j=argmax(ca),rr=sub(ra[i],ur),rc=sub(ca[j],uc);
   return {rr,rc,f:max([rr,rc]),ur,uc,i,j};
  }
  // Independent public verifier: reconstruct payoffs and both deviations from input.
- function certify(R,C,xs,ys){
+ function certify(R,C,xs,ys){tick('public_certify_calls');
   const g=game(R,C),x=simplex(xs,g.m),y=simplex(ys,g.n),v=reg(g,x,y);
   return {x:show(x),y:show(y),row_payoff:str(v.ur),column_payoff:str(v.uc),row_best_response:v.i,column_best_response:v.j,row_regret:str(v.rr),column_regret:str(v.rc),max_regret:str(v.f),certified:cmp(v.f,S)<=0,threshold:'1/5'};
  }
@@ -40,7 +45,7 @@ const api=(function strategicFactory(){
    return [x,mix(y,pure(g.n,v.j),sub(O,div(S,v.rc)))];
   return null;
  }
- function solve(R,C,{budget=128,mode='kite',rounds=12}={}){
+ function solve(R,C,{budget=128,mode='kite',rounds=12}={}){tick('solver_calls');
   const g=game(R,C);check(Number.isSafeInteger(budget)&&budget>=1&&budget<=4096&&Number.isSafeInteger(rounds)&&rounds>=0&&rounds<=64&&['support','kite'].includes(mode),'solver budget/mode');
   let best=null,kiteAttempts=0,kiteAccepted=0;const seen=new Set(),history=[];
   const ux=uniform(g.m),uy=uniform(g.n);
@@ -161,6 +166,6 @@ const api=(function strategicFactory(){
   certified.sort(rank);
   return {status:certified.length?'certified_candidate':'unresolved',author_best:rows.find(r=>r.key===author.best.key),strategic_best:certified[0]||null,candidate_evaluations:rows.length,author_transitions:author.transitions,strategic_transitions:rows.reduce((s,r)=>s+r.game.transitions,0),strategy_evaluations:rows.reduce((s,r)=>s+r.solver.evaluations,0),rows};
  }
- return {certify,solve,extract,endingLaw,targetTV,rerank};
+ return {certify,solve,extract,endingLaw,targetTV,rerank,beginMeter,endMeter};
 })();
-export const {certify,solve,extract,endingLaw,targetTV,rerank}=api;
+export const {certify,solve,extract,endingLaw,targetTV,rerank,beginMeter,endMeter}=api;
