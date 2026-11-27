@@ -1,6 +1,6 @@
 const api=(function proposalFactory(){
  const ok=(v,m)=>{if(!v)throw Error(m)};
- const num=s=>{const [a,b]=s.split('/').map(Number);return a/b};
+ const num=s=>{const [a,b=1]=s.split('/').map(Number);return a/b};
  const q=s=>s.split('/').map(BigInt),cmp=(s,t)=>{const [a,b]=q(s),[c,d]=q(t),x=a*d-c*b;return x<0n?-1:x>0n?1:0};
  const gcd=(a,b)=>{a=a<0n?-a:a;while(b)[a,b]=[b,a%b];return a};
  const plus=(s,t)=>{const [a,b]=q(s),[c,d]=q(t),x=a*d+b*c,y=b*d,g=gcd(x,y);return x/g+'/'+y/g};
