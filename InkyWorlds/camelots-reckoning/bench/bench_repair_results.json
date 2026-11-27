@@ -1,0 +1,119 @@
+[
+  {
+    "encounter_id": "trunk_005",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "consequence_id_correct": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 10.0
+  },
+  {
+    "encounter_id": "e06_005",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "consequence_id_correct": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 9.9
+  },
+  {
+    "encounter_id": "e01_001",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "consequence_id_correct": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 10.9
+  },
+  {
+    "encounter_id": "e01_012",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "consequence_id_correct": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 9.9
+  },
+  {
+    "encounter_id": "e05_010",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "consequence_id_correct": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 8.7
+  },
+  {
+    "encounter_id": "e01_023",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "terminal_empty_options": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 5.3
+  },
+  {
+    "encounter_id": "e09_023",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "terminal_empty_options": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 7.3
+  },
+  {
+    "encounter_id": "trunk_051",
+    "parse_ok": true,
+    "checks": {
+      "id_correct": true,
+      "text_verbatim": true,
+      "option_count_matches": true,
+      "option_labels_verbatim": true,
+      "fanout_complete": true,
+      "fanout_per_option": true
+    },
+    "all_pass": true,
+    "validator_ok": true,
+    "validator_msg": "VALID OK",
+    "seconds": 23.9
+  }
+]
