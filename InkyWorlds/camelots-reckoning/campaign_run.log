@@ -1,0 +1,525 @@
+PROGRESS trunk 2/50 total=2 attempts=1 elapsed=29s
+RETRY branch=trunk index=3 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+RETRY branch=trunk index=3 attempt=2 error=Expecting value: line 1 column 1 (char 0)
+RETRY branch=trunk index=3 attempt=3 error=Expecting value: line 1 column 1 (char 0)
+RETRY branch=trunk index=3 attempt=4 error=Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 193, in <module>
+    main()
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 159, in main
+    card, receipt, attempts = run_slot("trunk", idx, TRUNK["encounter_budget"])
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 149, in run_slot
+    raise RuntimeError(f"giving up on branch={branch} index={index} after {MAX_RETRIES} attempts: {last_error}")
+RuntimeError: giving up on branch=trunk index=3 after 4 attempts: Expecting value: line 1 column 1 (char 0)
+PROGRESS trunk 3/50 total=3 attempts=1 elapsed=27s
+PROGRESS trunk 4/50 total=4 attempts=1 elapsed=54s
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER back up after 15s
+PROGRESS trunk 5/50 total=5 attempts=1 elapsed=94s
+PROGRESS trunk 6/50 total=6 attempts=1 elapsed=120s
+PROGRESS trunk 7/50 total=7 attempts=1 elapsed=139s
+PROGRESS trunk 8/50 total=8 attempts=1 elapsed=160s
+PROGRESS trunk 9/50 total=9 attempts=1 elapsed=181s
+RETRY branch=trunk index=10 attempt=1 error=Unterminated string starting at: line 1 column 1850 (char 1849)
+PROGRESS trunk 10/50 total=10 attempts=2 elapsed=233s
+RETRY branch=trunk index=11 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+RETRY branch=trunk index=11 attempt=2 error=Command '['wsl.exe', '-d', 'Ubuntu-24.04', '--', 'curl', '-sf', '--max-time', '3', 'http://127.0.0.1:18090/v1/models']' timed out after 15 seconds
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER back up after 210s
+PROGRESS trunk 11/50 total=11 attempts=1 elapsed=242s
+PROGRESS trunk 12/50 total=12 attempts=1 elapsed=267s
+PROGRESS trunk 13/50 total=13 attempts=1 elapsed=287s
+RETRY branch=trunk index=14 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 2205)
+RETRY branch=trunk index=14 attempt=2 error=Unterminated string starting at: line 38 column 21 (char 2097)
+PROGRESS trunk 14/50 total=14 attempts=3 elapsed=366s
+RETRY branch=trunk index=15 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER back up after 240s
+PROGRESS trunk 15/50 total=15 attempts=2 elapsed=792s
+PROGRESS trunk 16/50 total=16 attempts=1 elapsed=810s
+PROGRESS trunk 17/50 total=17 attempts=1 elapsed=831s
+PROGRESS trunk 18/50 total=18 attempts=1 elapsed=851s
+PROGRESS trunk 19/50 total=19 attempts=1 elapsed=872s
+PROGRESS trunk 20/50 total=20 attempts=1 elapsed=889s
+PROGRESS trunk 21/50 total=21 attempts=1 elapsed=906s
+PROGRESS trunk 22/50 total=22 attempts=1 elapsed=930s
+RETRY branch=trunk index=23 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 270s
+PROGRESS trunk 23/50 total=23 attempts=2 elapsed=1368s
+PROGRESS trunk 24/50 total=24 attempts=1 elapsed=1398s
+RETRY branch=trunk index=25 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 2146)
+PROGRESS trunk 25/50 total=25 attempts=2 elapsed=1449s
+PROGRESS trunk 26/50 total=26 attempts=1 elapsed=1472s
+PROGRESS trunk 27/50 total=27 attempts=1 elapsed=1490s
+RETRY branch=trunk index=28 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER down, waited 300s so far (power cap or restart in progress)
+SERVER back up after 345s
+PROGRESS trunk 28/50 total=28 attempts=2 elapsed=2024s
+PROGRESS trunk 29/50 total=29 attempts=1 elapsed=2042s
+PROGRESS trunk 30/50 total=30 attempts=1 elapsed=2057s
+PROGRESS trunk 31/50 total=31 attempts=1 elapsed=2078s
+RETRY branch=trunk index=32 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 1966)
+PROGRESS trunk 32/50 total=32 attempts=2 elapsed=2123s
+PROGRESS trunk 33/50 total=33 attempts=1 elapsed=2144s
+RETRY branch=trunk index=34 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2244)
+PROGRESS trunk 34/50 total=34 attempts=2 elapsed=2237s
+RETRY branch=trunk index=35 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 255s
+RETRY branch=trunk index=35 attempt=2 error=Unterminated string starting at: line 39 column 21 (char 2086)
+PROGRESS trunk 35/50 total=35 attempts=3 elapsed=2666s
+RETRY branch=trunk index=36 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+RETRY branch=trunk index=36 attempt=2 error=Unterminated string starting at: line 1 column 1803 (char 1802)
+RETRY branch=trunk index=36 attempt=3 error=Unterminated string starting at: line 1 column 2073 (char 2072)
+PROGRESS trunk 36/50 total=36 attempts=4 elapsed=2790s
+RETRY branch=trunk index=37 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 255s
+RETRY branch=trunk index=37 attempt=2 error=Unterminated string starting at: line 38 column 21 (char 1862)
+PROGRESS trunk 37/50 total=37 attempts=3 elapsed=3247s
+PROGRESS trunk 38/50 total=38 attempts=1 elapsed=3272s
+PROGRESS trunk 39/50 total=39 attempts=1 elapsed=3294s
+PROGRESS trunk 40/50 total=40 attempts=1 elapsed=3313s
+PROGRESS trunk 41/50 total=41 attempts=1 elapsed=3343s
+PROGRESS trunk 42/50 total=42 attempts=1 elapsed=3361s
+PROGRESS trunk 43/50 total=43 attempts=1 elapsed=3378s
+RETRY branch=trunk index=44 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 255s
+PROGRESS trunk 44/50 total=44 attempts=2 elapsed=3806s
+PROGRESS trunk 45/50 total=45 attempts=1 elapsed=3824s
+PROGRESS trunk 46/50 total=46 attempts=1 elapsed=3845s
+PROGRESS trunk 47/50 total=47 attempts=1 elapsed=3863s
+RETRY branch=trunk index=48 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 1944)
+PROGRESS trunk 48/50 total=48 attempts=2 elapsed=3915s
+PROGRESS trunk 49/50 total=49 attempts=1 elapsed=3936s
+PROGRESS trunk 50/50 total=50 attempts=1 elapsed=3962s
+PROGRESS branch=e01 1/23 total=51/300 attempts=1 elapsed=3979s
+RETRY branch=e02 index=1 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 255s
+PROGRESS branch=e02 1/22 total=52/300 attempts=2 elapsed=4399s
+PROGRESS branch=e03 1/23 total=53/300 attempts=1 elapsed=4421s
+PROGRESS branch=e04 1/23 total=54/300 attempts=1 elapsed=4437s
+PROGRESS branch=e05 1/23 total=55/300 attempts=1 elapsed=4450s
+PROGRESS branch=e06 1/22 total=56/300 attempts=1 elapsed=4469s
+PROGRESS branch=e07 1/23 total=57/300 attempts=1 elapsed=4493s
+PROGRESS branch=e08 1/22 total=58/300 attempts=1 elapsed=4510s
+PROGRESS branch=e09 1/23 total=59/300 attempts=1 elapsed=4538s
+PROGRESS branch=e10 1/23 total=60/300 attempts=1 elapsed=4568s
+RETRY branch=e11 index=1 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 270s
+RETRY branch=e11 index=1 attempt=2 error=Expecting ':' delimiter: line 1 column 1497 (char 1496)
+PROGRESS branch=e11 1/22 total=61/300 attempts=3 elapsed=5047s
+PROGRESS branch=e01 2/23 total=62/300 attempts=1 elapsed=5062s
+RETRY branch=e02 index=2 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 2132)
+PROGRESS branch=e02 2/22 total=63/300 attempts=2 elapsed=5122s
+PROGRESS branch=e03 2/23 total=64/300 attempts=1 elapsed=5147s
+PROGRESS branch=e04 2/23 total=65/300 attempts=1 elapsed=5168s
+PROGRESS branch=e05 2/23 total=66/300 attempts=1 elapsed=5186s
+PROGRESS branch=e06 2/22 total=67/300 attempts=1 elapsed=5204s
+PROGRESS branch=e07 2/23 total=68/300 attempts=1 elapsed=5225s
+PROGRESS branch=e08 2/22 total=69/300 attempts=1 elapsed=5252s
+RETRY branch=e09 index=2 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 255s
+PROGRESS branch=e09 2/23 total=70/300 attempts=2 elapsed=5688s
+PROGRESS branch=e10 2/23 total=71/300 attempts=1 elapsed=5711s
+PROGRESS branch=e11 2/22 total=72/300 attempts=1 elapsed=5728s
+RETRY branch=e01 index=3 attempt=1 error=Unterminated string starting at: line 1 column 2116 (char 2115)
+PROGRESS branch=e01 3/23 total=73/300 attempts=2 elapsed=5781s
+PROGRESS branch=e02 3/22 total=74/300 attempts=1 elapsed=5799s
+PROGRESS branch=e03 3/23 total=75/300 attempts=1 elapsed=5818s
+RETRY branch=e04 index=3 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER back up after 240s
+PROGRESS branch=e04 3/23 total=76/300 attempts=2 elapsed=6241s
+PROGRESS branch=e05 3/23 total=77/300 attempts=1 elapsed=6263s
+Exception in thread Thread-747 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 899: character maps to <undefined>
+RETRY branch=e06 index=3 attempt=1 error=the JSON object must be str, bytes or bytearray, not NoneType
+PROGRESS branch=e06 3/22 total=78/300 attempts=2 elapsed=6306s
+RETRY branch=e07 index=3 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+RETRY branch=e07 index=3 attempt=2 error=Unterminated string starting at: line 1 column 1874 (char 1873)
+PROGRESS branch=e07 3/23 total=79/300 attempts=3 elapsed=6398s
+PROGRESS branch=e08 3/22 total=80/300 attempts=1 elapsed=6421s
+PROGRESS branch=e09 3/23 total=81/300 attempts=1 elapsed=6445s
+PROGRESS branch=e10 3/23 total=82/300 attempts=1 elapsed=6463s
+PROGRESS branch=e11 3/22 total=83/300 attempts=1 elapsed=6483s
+RETRY branch=e01 index=4 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 270s
+PROGRESS branch=e01 4/23 total=84/300 attempts=2 elapsed=6935s
+PROGRESS branch=e02 4/22 total=85/300 attempts=1 elapsed=6953s
+RETRY branch=e03 index=4 attempt=1 error=Unterminated string starting at: line 40 column 21 (char 2139)
+PROGRESS branch=e03 4/23 total=86/300 attempts=2 elapsed=6999s
+PROGRESS branch=e04 4/23 total=87/300 attempts=1 elapsed=7020s
+PROGRESS branch=e05 4/23 total=88/300 attempts=1 elapsed=7036s
+PROGRESS branch=e06 4/22 total=89/300 attempts=1 elapsed=7060s
+PROGRESS branch=e07 4/23 total=90/300 attempts=1 elapsed=7080s
+RETRY branch=e08 index=4 attempt=1 error=Expecting value: line 1 column 1 (char 0)
+SERVER down, waited 0s so far (power cap or restart in progress)
+SERVER down, waited 60s so far (power cap or restart in progress)
+SERVER down, waited 120s so far (power cap or restart in progress)
+SERVER down, waited 180s so far (power cap or restart in progress)
+SERVER down, waited 240s so far (power cap or restart in progress)
+SERVER back up after 270s
+PROGRESS branch=e08 4/22 total=91/300 attempts=2 elapsed=7528s
+RETRY branch=e09 index=4 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2040)
+PROGRESS branch=e09 4/23 total=92/300 attempts=2 elapsed=7602s
+PROGRESS branch=e10 4/23 total=93/300 attempts=1 elapsed=7628s
+RETRY branch=e11 index=4 attempt=1 error=Unterminated string starting at: line 40 column 21 (char 1987)
+RETRY branch=e11 index=4 attempt=2 error=Expecting value: line 1 column 1 (char 0)
+PROGRESS branch=e11 4/22 total=94/300 attempts=3 elapsed=7738s
+RETRY branch=e01 index=5 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 2083)
+PROGRESS branch=e01 5/23 total=95/300 attempts=2 elapsed=7807s
+PROGRESS branch=e02 5/22 total=96/300 attempts=1 elapsed=7847s
+PROGRESS branch=e03 5/23 total=97/300 attempts=1 elapsed=7872s
+PROGRESS branch=e04 5/23 total=98/300 attempts=1 elapsed=7894s
+RETRY branch=e05 index=5 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2046)
+PROGRESS branch=e05 5/23 total=99/300 attempts=2 elapsed=7973s
+PROGRESS branch=e06 5/22 total=100/300 attempts=1 elapsed=7995s
+PROGRESS branch=e07 5/23 total=101/300 attempts=1 elapsed=8025s
+RETRY branch=e08 index=5 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 2095)
+PROGRESS branch=e08 5/22 total=102/300 attempts=2 elapsed=8094s
+PROGRESS branch=e09 5/23 total=103/300 attempts=1 elapsed=8122s
+PROGRESS branch=e10 5/23 total=104/300 attempts=1 elapsed=8161s
+PROGRESS branch=e11 5/22 total=105/300 attempts=1 elapsed=8201s
+PROGRESS branch=e01 6/23 total=106/300 attempts=1 elapsed=8226s
+PROGRESS branch=e02 6/22 total=107/300 attempts=1 elapsed=8251s
+PROGRESS branch=e03 6/23 total=108/300 attempts=1 elapsed=8273s
+RETRY branch=e04 index=6 attempt=1 error=Unterminated string starting at: line 1 column 1729 (char 1728)
+PROGRESS branch=e04 6/23 total=109/300 attempts=2 elapsed=8338s
+RETRY branch=e05 index=6 attempt=1 error=Unterminated string starting at: line 36 column 21 (char 1925)
+RETRY branch=e05 index=6 attempt=2 error=Unterminated string starting at: line 36 column 21 (char 1967)
+PROGRESS branch=e05 6/23 total=110/300 attempts=3 elapsed=8455s
+PROGRESS branch=e06 6/22 total=111/300 attempts=1 elapsed=8487s
+RETRY branch=e07 index=6 attempt=1 error=Unterminated string starting at: line 1 column 1847 (char 1846)
+PROGRESS branch=e07 6/23 total=112/300 attempts=2 elapsed=8557s
+PROGRESS branch=e08 6/22 total=113/300 attempts=1 elapsed=8588s
+PROGRESS branch=e09 6/23 total=114/300 attempts=1 elapsed=8616s
+PROGRESS branch=e10 6/23 total=115/300 attempts=1 elapsed=8653s
+PROGRESS branch=e11 6/22 total=116/300 attempts=1 elapsed=8678s
+PROGRESS branch=e01 7/23 total=117/300 attempts=1 elapsed=8708s
+PROGRESS branch=e02 7/22 total=118/300 attempts=1 elapsed=8744s
+RETRY branch=e03 index=7 attempt=1 error=Unterminated string starting at: line 41 column 21 (char 2288)
+PROGRESS branch=e03 7/23 total=119/300 attempts=2 elapsed=8816s
+RETRY branch=e04 index=7 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2337)
+PROGRESS branch=e04 7/23 total=120/300 attempts=2 elapsed=8891s
+RETRY branch=e05 index=7 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2069)
+RETRY branch=e05 index=7 attempt=2 error=Expecting value: line 1 column 1 (char 0)
+PROGRESS branch=e05 7/23 total=121/300 attempts=3 elapsed=9001s
+PROGRESS branch=e06 7/22 total=122/300 attempts=1 elapsed=9031s
+PROGRESS branch=e07 7/23 total=123/300 attempts=1 elapsed=9055s
+PROGRESS branch=e08 7/22 total=124/300 attempts=1 elapsed=9081s
+PROGRESS branch=e09 7/23 total=125/300 attempts=1 elapsed=9115s
+PROGRESS branch=e10 7/23 total=126/300 attempts=1 elapsed=9139s
+RETRY branch=e11 index=7 attempt=1 error=Unterminated string starting at: line 40 column 21 (char 2134)
+PROGRESS branch=e11 7/22 total=127/300 attempts=2 elapsed=9210s
+PROGRESS branch=e01 8/23 total=128/300 attempts=1 elapsed=9238s
+PROGRESS branch=e02 8/22 total=129/300 attempts=1 elapsed=9261s
+PROGRESS branch=e03 8/23 total=130/300 attempts=1 elapsed=9299s
+RETRY branch=e04 index=8 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2069)
+PROGRESS branch=e04 8/23 total=131/300 attempts=2 elapsed=9371s
+PROGRESS branch=e05 8/23 total=132/300 attempts=1 elapsed=9401s
+PROGRESS branch=e06 8/22 total=133/300 attempts=1 elapsed=9422s
+PROGRESS branch=e07 8/23 total=134/300 attempts=1 elapsed=9454s
+PROGRESS branch=e08 8/22 total=135/300 attempts=1 elapsed=9489s
+RETRY branch=e09 index=8 attempt=1 error=Unterminated string starting at: line 1 column 1937 (char 1936)
+PROGRESS branch=e09 8/23 total=136/300 attempts=2 elapsed=9573s
+RETRY branch=e10 index=8 attempt=1 error=Unterminated string starting at: line 1 column 1823 (char 1822)
+PROGRESS branch=e10 8/23 total=137/300 attempts=2 elapsed=9646s
+PROGRESS branch=e11 8/22 total=138/300 attempts=1 elapsed=9681s
+PROGRESS branch=e01 9/23 total=139/300 attempts=1 elapsed=9705s
+PROGRESS branch=e02 9/22 total=140/300 attempts=1 elapsed=9738s
+RETRY branch=e03 index=9 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 2230)
+Exception in thread Thread-1171 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\patri\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 982: character maps to <undefined>
+RETRY branch=e03 index=9 attempt=2 error=the JSON object must be str, bytes or bytearray, not NoneType
+RETRY branch=e03 index=9 attempt=3 error=Unterminated string starting at: line 1 column 1948 (char 1947)
+RETRY branch=e03 index=9 attempt=4 error=Unterminated string starting at: line 39 column 21 (char 2186)
+Traceback (most recent call last):
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 223, in <module>
+    main()
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 207, in main
+    card, receipt, attempts = run_slot(b, idx, budget)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 179, in run_slot
+    raise RuntimeError(f"giving up on branch={branch} index={index} after {MAX_RETRIES} attempts: {last_error}")
+RuntimeError: giving up on branch=e03 index=9 after 4 attempts: Unterminated string starting at: line 39 column 21 (char 2186)
+PROGRESS branch=e01 10/23 total=141/300 attempts=1 elapsed=27s
+PROGRESS branch=e02 10/22 total=142/300 attempts=1 elapsed=51s
+PROGRESS branch=e03 9/23 total=143/300 attempts=1 elapsed=83s
+PROGRESS branch=e04 9/23 total=144/300 attempts=1 elapsed=108s
+PROGRESS branch=e05 9/23 total=145/300 attempts=1 elapsed=136s
+PROGRESS branch=e06 9/22 total=146/300 attempts=1 elapsed=168s
+PROGRESS branch=e07 9/23 total=147/300 attempts=1 elapsed=202s
+PROGRESS branch=e08 9/22 total=148/300 attempts=1 elapsed=230s
+PROGRESS branch=e09 9/23 total=149/300 attempts=1 elapsed=260s
+PROGRESS branch=e10 9/23 total=150/300 attempts=1 elapsed=294s
+PROGRESS branch=e11 9/22 total=151/300 attempts=1 elapsed=318s
+PROGRESS branch=e01 11/23 total=152/300 attempts=1 elapsed=340s
+PROGRESS branch=e02 11/22 total=153/300 attempts=1 elapsed=367s
+PROGRESS branch=e03 10/23 total=154/300 attempts=1 elapsed=395s
+PROGRESS branch=e04 10/23 total=155/300 attempts=1 elapsed=432s
+PROGRESS branch=e05 10/23 total=156/300 attempts=1 elapsed=455s
+PROGRESS branch=e06 10/22 total=157/300 attempts=1 elapsed=480s
+PROGRESS branch=e07 10/23 total=158/300 attempts=1 elapsed=508s
+PROGRESS branch=e08 10/22 total=159/300 attempts=1 elapsed=535s
+RETRY branch=e09 index=10 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 1892)
+PROGRESS branch=e09 10/23 total=160/300 attempts=2 elapsed=602s
+PROGRESS branch=e10 10/23 total=161/300 attempts=1 elapsed=624s
+PROGRESS branch=e11 10/22 total=162/300 attempts=1 elapsed=656s
+PROGRESS branch=e01 12/23 total=163/300 attempts=1 elapsed=682s
+PROGRESS branch=e02 12/22 total=164/300 attempts=1 elapsed=707s
+PROGRESS branch=e03 11/23 total=165/300 attempts=1 elapsed=737s
+PROGRESS branch=e04 11/23 total=166/300 attempts=1 elapsed=761s
+PROGRESS branch=e05 11/23 total=167/300 attempts=1 elapsed=784s
+PROGRESS branch=e06 11/22 total=168/300 attempts=1 elapsed=810s
+PROGRESS branch=e07 11/23 total=169/300 attempts=1 elapsed=838s
+RETRY branch=e08 index=11 attempt=1 error=Unterminated string starting at: line 38 column 21 (char 2018)
+PROGRESS branch=e08 11/22 total=170/300 attempts=2 elapsed=906s
+PROGRESS branch=e09 11/23 total=171/300 attempts=1 elapsed=931s
+PROGRESS branch=e10 11/23 total=172/300 attempts=1 elapsed=952s
+PROGRESS branch=e11 11/22 total=173/300 attempts=1 elapsed=972s
+PROGRESS branch=e01 13/23 total=174/300 attempts=1 elapsed=998s
+PROGRESS branch=e02 13/22 total=175/300 attempts=1 elapsed=1030s
+PROGRESS branch=e03 12/23 total=176/300 attempts=1 elapsed=1059s
+PROGRESS branch=e04 12/23 total=177/300 attempts=1 elapsed=1098s
+PROGRESS branch=e05 12/23 total=178/300 attempts=1 elapsed=1126s
+PROGRESS branch=e06 12/22 total=179/300 attempts=1 elapsed=1156s
+RETRY branch=e07 index=12 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 2287)
+PROGRESS branch=e07 12/23 total=180/300 attempts=2 elapsed=1227s
+PROGRESS branch=e08 12/22 total=181/300 attempts=1 elapsed=1252s
+PROGRESS branch=e09 12/23 total=182/300 attempts=1 elapsed=1286s
+PROGRESS branch=e10 12/23 total=183/300 attempts=1 elapsed=1310s
+PROGRESS branch=e11 12/22 total=184/300 attempts=1 elapsed=1337s
+PROGRESS branch=e01 14/23 total=185/300 attempts=1 elapsed=1376s
+PROGRESS branch=e02 14/22 total=186/300 attempts=1 elapsed=1400s
+PROGRESS branch=e03 13/23 total=187/300 attempts=1 elapsed=1429s
+RETRY branch=e04 index=13 attempt=1 error=goblin-gdk exit 126: /bin/sh: 1: /root/gdk-build/goblin-gdk/target/release/goblin-gdk: Permission denied
+
+RETRY branch=e04 index=13 attempt=2 error=goblin-gdk exit 126: /bin/sh: 1: /root/gdk-build/goblin-gdk/target/release/goblin-gdk: Permission denied
+
+RETRY branch=e04 index=13 attempt=3 error=goblin-gdk exit 126: /bin/sh: 1: /root/gdk-build/goblin-gdk/target/release/goblin-gdk: Permission denied
+
+RETRY branch=e04 index=13 attempt=4 error=goblin-gdk exit 126: /bin/sh: 1: /root/gdk-build/goblin-gdk/target/release/goblin-gdk: Permission denied
+
+Traceback (most recent call last):
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 224, in <module>
+    main()
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 208, in main
+    card, receipt, attempts = run_slot(b, idx, budget)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\patri\Documents\Codex\agn04-arthurian\campaign\run_campaign.py", line 180, in run_slot
+    raise RuntimeError(f"giving up on branch={branch} index={index} after {MAX_RETRIES} attempts: {last_error}")
+RuntimeError: giving up on branch=e04 index=13 after 4 attempts: goblin-gdk exit 126: /bin/sh: 1: /root/gdk-build/goblin-gdk/target/release/goblin-gdk: Permission denied
+
+PROGRESS branch=e01 15/23 total=188/300 attempts=1 elapsed=31s
+PROGRESS branch=e02 15/22 total=189/300 attempts=1 elapsed=58s
+RETRY branch=e03 index=14 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 2213)
+RETRY branch=e03 index=14 attempt=2 error=Unterminated string starting at: line 40 column 21 (char 1947)
+PROGRESS branch=e03 14/23 total=190/300 attempts=3 elapsed=188s
+RETRY branch=e04 index=13 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 2016)
+PROGRESS branch=e04 13/23 total=191/300 attempts=2 elapsed=258s
+RETRY branch=e05 index=13 attempt=1 error=Unterminated string starting at: line 35 column 21 (char 1893)
+PROGRESS branch=e05 13/23 total=192/300 attempts=2 elapsed=320s
+PROGRESS branch=e06 13/22 total=193/300 attempts=1 elapsed=347s
+PROGRESS branch=e07 13/23 total=194/300 attempts=1 elapsed=381s
+PROGRESS branch=e08 13/22 total=195/300 attempts=1 elapsed=415s
+PROGRESS branch=e09 13/23 total=196/300 attempts=1 elapsed=446s
+PROGRESS branch=e10 13/23 total=197/300 attempts=1 elapsed=471s
+RETRY branch=e11 index=13 attempt=1 error=Unterminated string starting at: line 40 column 21 (char 2482)
+PROGRESS branch=e11 13/22 total=198/300 attempts=2 elapsed=544s
+PROGRESS branch=e01 16/23 total=199/300 attempts=1 elapsed=572s
+PROGRESS branch=e02 16/22 total=200/300 attempts=1 elapsed=606s
+RETRY branch=e03 index=15 attempt=1 error=Unterminated string starting at: line 1 column 2076 (char 2075)
+PROGRESS branch=e03 15/23 total=201/300 attempts=2 elapsed=679s
+PROGRESS branch=e04 14/23 total=202/300 attempts=1 elapsed=703s
+PROGRESS branch=e05 14/23 total=203/300 attempts=1 elapsed=743s
+PROGRESS branch=e06 14/22 total=204/300 attempts=1 elapsed=771s
+RETRY branch=e07 index=14 attempt=1 error=Unterminated string starting at: line 39 column 21 (char 2198)
+PROGRESS branch=e07 14/23 total=205/300 attempts=2 elapsed=841s
+PROGRESS branch=e08 14/22 total=206/300 attempts=1 elapsed=883s
+PROGRESS branch=e09 14/23 total=207/300 attempts=1 elapsed=921s
+PROGRESS branch=e10 14/23 total=208/300 attempts=1 elapsed=945s
+PROGRESS branch=e11 14/22 total=209/300 attempts=1 elapsed=983s
+PROGRESS branch=e01 17/23 total=210/300 attempts=1 elapsed=1011s
+PROGRESS branch=e02 17/22 total=211/300 attempts=1 elapsed=1036s
+PROGRESS branch=e03 16/23 total=212/300 attempts=1 elapsed=1070s
+PROGRESS branch=e04 15/23 total=213/300 attempts=1 elapsed=1093s
+PROGRESS branch=e05 15/23 total=214/300 attempts=1 elapsed=1120s
+PROGRESS branch=e06 15/22 total=215/300 attempts=1 elapsed=1143s
+PROGRESS branch=e07 15/23 total=216/300 attempts=1 elapsed=1170s
+PROGRESS branch=e08 15/22 total=217/300 attempts=1 elapsed=1205s
+PROGRESS branch=e09 15/23 total=218/300 attempts=1 elapsed=1236s
+PROGRESS branch=e10 15/23 total=219/300 attempts=1 elapsed=1270s
+RETRY branch=e11 index=15 attempt=1 error=key mismatch: ['branch', 'canvas_art_svg', 'characters_present', 'encounter_id', 'ending_id', 'ending_text', 'evidence_class', 'index_in_branch', 'inference_seconds', 'is_ending', 'options', 'output_tokens', 'scene', 'state_summary', 'verified']
+PROGRESS branch=e11 15/22 total=220/300 attempts=2 elapsed=1320s
+PROGRESS branch=e01 18/23 total=221/300 attempts=1 elapsed=1346s
+PROGRESS branch=e02 18/22 total=222/300 attempts=1 elapsed=1375s
+PROGRESS branch=e03 17/23 total=223/300 attempts=1 elapsed=1412s
+PROGRESS branch=e04 16/23 total=224/300 attempts=1 elapsed=1431s
+PROGRESS branch=e05 16/23 total=225/300 attempts=1 elapsed=1452s
+PROGRESS branch=e06 16/22 total=226/300 attempts=1 elapsed=1491s
+PROGRESS branch=e07 16/23 total=227/300 attempts=1 elapsed=1518s
+PROGRESS branch=e08 16/22 total=228/300 attempts=1 elapsed=1542s
+PROGRESS branch=e09 16/23 total=229/300 attempts=1 elapsed=1581s
+PROGRESS branch=e10 16/23 total=230/300 attempts=1 elapsed=1604s
+PROGRESS branch=e11 16/22 total=231/300 attempts=1 elapsed=1640s
+PROGRESS branch=e01 19/23 total=232/300 attempts=1 elapsed=1660s
+PROGRESS branch=e02 19/22 total=233/300 attempts=1 elapsed=1690s
+RETRY branch=e03 index=18 attempt=1 error=Unterminated string starting at: line 40 column 21 (char 2183)
+PROGRESS branch=e03 18/23 total=234/300 attempts=2 elapsed=1762s
+PROGRESS branch=e04 17/23 total=235/300 attempts=1 elapsed=1793s
+PROGRESS branch=e05 17/23 total=236/300 attempts=1 elapsed=1835s
+RETRY branch=e06 index=17 attempt=1 error=key mismatch: ['branch', 'canvas_art_svg', 'characters_present', 'encounter_id', 'ending_id', 'index_in_branch', 'is_ending', 'options', 'scene', 'state_summary']
+RETRY branch=e06 index=17 attempt=2 error=Unterminated string starting at: line 1 column 191 (char 190)
+PROGRESS branch=e06 17/22 total=237/300 attempts=3 elapsed=1935s
+PROGRESS branch=e07 17/23 total=238/300 attempts=1 elapsed=1965s
+RETRY branch=e08 index=17 attempt=1 error=Unterminated string starting at: line 1 column 1869 (char 1868)
+PROGRESS branch=e08 17/22 total=239/300 attempts=2 elapsed=2039s
+PROGRESS branch=e09 17/23 total=240/300 attempts=1 elapsed=2068s
+PROGRESS branch=e10 17/23 total=241/300 attempts=1 elapsed=2089s
+PROGRESS branch=e11 17/22 total=242/300 attempts=1 elapsed=2108s
+PROGRESS branch=e01 20/23 total=243/300 attempts=1 elapsed=2128s
+PROGRESS branch=e02 20/22 total=244/300 attempts=1 elapsed=2156s
+RETRY branch=e03 index=19 attempt=1 error=Unterminated string starting at: line 18 column 12 (char 294)
+PROGRESS branch=e03 19/23 total=245/300 attempts=2 elapsed=2249s
+RETRY branch=e04 index=18 attempt=1 error=Unterminated string starting at: line 37 column 21 (char 1884)
+RETRY branch=e04 index=18 attempt=2 error=Expecting value: line 1 column 1 (char 0)
+PROGRESS branch=e04 18/23 total=246/300 attempts=3 elapsed=2377s
+PROGRESS branch=e05 18/23 total=247/300 attempts=1 elapsed=2414s
+RETRY branch=e06 index=18 attempt=1 error=Unterminated string starting at: line 1 column 1731 (char 1730)
+PROGRESS branch=e06 18/22 total=248/300 attempts=2 elapsed=2484s
+PROGRESS branch=e07 18/23 total=249/300 attempts=1 elapsed=2514s
+PROGRESS branch=e08 18/22 total=250/300 attempts=1 elapsed=2541s
+PROGRESS branch=e09 18/23 total=251/300 attempts=1 elapsed=2569s
+PROGRESS branch=e10 18/23 total=252/300 attempts=1 elapsed=2609s
+PROGRESS branch=e11 18/22 total=253/300 attempts=1 elapsed=2636s
+PROGRESS branch=e01 21/23 total=254/300 attempts=1 elapsed=2666s
+PROGRESS branch=e02 21/22 total=255/300 attempts=1 elapsed=2707s
+PROGRESS branch=e03 20/23 total=256/300 attempts=1 elapsed=2738s
+PROGRESS branch=e04 19/23 total=257/300 attempts=1 elapsed=2763s
+PROGRESS branch=e05 19/23 total=258/300 attempts=1 elapsed=2789s
+PROGRESS branch=e06 19/22 total=259/300 attempts=1 elapsed=2824s
+PROGRESS branch=e07 19/23 total=260/300 attempts=1 elapsed=2861s
+RETRY branch=e08 index=19 attempt=1 error=Unterminated string starting at: line 1 column 1824 (char 1823)
+PROGRESS branch=e08 19/22 total=261/300 attempts=2 elapsed=2956s
+PROGRESS branch=e09 19/23 total=262/300 attempts=1 elapsed=2990s
+PROGRESS branch=e10 19/23 total=263/300 attempts=1 elapsed=3024s
+PROGRESS branch=e11 19/22 total=264/300 attempts=1 elapsed=3047s
+PROGRESS branch=e01 22/23 total=265/300 attempts=1 elapsed=3085s
+PROGRESS branch=e02 22/22 total=266/300 attempts=1 elapsed=3117s
+PROGRESS branch=e03 21/23 total=267/300 attempts=1 elapsed=3148s
+PROGRESS branch=e04 20/23 total=268/300 attempts=1 elapsed=3173s
+PROGRESS branch=e05 20/23 total=269/300 attempts=1 elapsed=3200s
+PROGRESS branch=e06 20/22 total=270/300 attempts=1 elapsed=3228s
+PROGRESS branch=e07 20/23 total=271/300 attempts=1 elapsed=3258s
+PROGRESS branch=e08 20/22 total=272/300 attempts=1 elapsed=3299s
+PROGRESS branch=e09 20/23 total=273/300 attempts=1 elapsed=3326s
+PROGRESS branch=e10 20/23 total=274/300 attempts=1 elapsed=3349s
+PROGRESS branch=e11 20/22 total=275/300 attempts=1 elapsed=3373s
+RETRY branch=e01 index=23 attempt=1 error=Unterminated string starting at: line 1 column 2848 (char 2847)
+PROGRESS branch=e01 23/23 total=276/300 attempts=2 elapsed=3439s
+PROGRESS branch=e03 22/23 total=277/300 attempts=1 elapsed=3474s
+PROGRESS branch=e04 21/23 total=278/300 attempts=1 elapsed=3518s
+PROGRESS branch=e05 21/23 total=279/300 attempts=1 elapsed=3544s
+PROGRESS branch=e06 21/22 total=280/300 attempts=1 elapsed=3583s
+PROGRESS branch=e07 21/23 total=281/300 attempts=1 elapsed=3608s
+PROGRESS branch=e08 21/22 total=282/300 attempts=1 elapsed=3632s
+RETRY branch=e09 index=21 attempt=1 error=Unterminated string starting at: line 1 column 1930 (char 1929)
+PROGRESS branch=e09 21/23 total=283/300 attempts=2 elapsed=3705s
+PROGRESS branch=e10 21/23 total=284/300 attempts=1 elapsed=3734s
+PROGRESS branch=e11 21/22 total=285/300 attempts=1 elapsed=3767s
+PROGRESS branch=e03 23/23 total=286/300 attempts=1 elapsed=3797s
+PROGRESS branch=e04 22/23 total=287/300 attempts=1 elapsed=3817s
+PROGRESS branch=e05 22/23 total=288/300 attempts=1 elapsed=3845s
+PROGRESS branch=e06 22/22 total=289/300 attempts=1 elapsed=3884s
+PROGRESS branch=e07 22/23 total=290/300 attempts=1 elapsed=3918s
+PROGRESS branch=e08 22/22 total=291/300 attempts=1 elapsed=3951s
+RETRY branch=e09 index=22 attempt=1 error=Unterminated string starting at: line 1 column 1908 (char 1907)
+PROGRESS branch=e09 22/23 total=292/300 attempts=2 elapsed=4018s
+PROGRESS branch=e10 22/23 total=293/300 attempts=1 elapsed=4054s
+PROGRESS branch=e11 22/22 total=294/300 attempts=1 elapsed=4084s
+PROGRESS branch=e04 23/23 total=295/300 attempts=1 elapsed=4113s
+PROGRESS branch=e05 23/23 total=296/300 attempts=1 elapsed=4147s
+PROGRESS branch=e07 23/23 total=297/300 attempts=1 elapsed=4180s
+PROGRESS branch=e09 23/23 total=298/300 attempts=1 elapsed=4211s
+PROGRESS branch=e10 23/23 total=299/300 attempts=1 elapsed=4244s
+DONE total=299 trunk=50 branches={'e01': 23, 'e02': 22, 'e03': 23, 'e04': 23, 'e05': 23, 'e06': 22, 'e07': 23, 'e08': 22, 'e09': 23, 'e10': 23, 'e11': 22} elapsed=4244s
+PROGRESS trunk 51/51 total=300 attempts=1 elapsed=31s
+DONE total=300 trunk=51 branches={'e01': 23, 'e02': 22, 'e03': 23, 'e04': 23, 'e05': 23, 'e06': 22, 'e07': 23, 'e08': 22, 'e09': 23, 'e10': 23, 'e11': 22} elapsed=31s

@@ -1,0 +1,185 @@
+{
+  "cast": [
+    {
+      "name": "Arthur",
+      "role": "Sovereign of Camelot whose legitimacy is tested by competing promises, oaths, and successions."
+    },
+    {
+      "name": "Guinevere",
+      "role": "Queen who must balance loyalty to Arthur, her own desire, and the peace of the realm."
+    },
+    {
+      "name": "Lancelot",
+      "role": "Prince of Camelot torn between martial duty, love, and the consequences of both."
+    },
+    {
+      "name": "Merlin",
+      "role": "Adviser and relic-keeper who knows the future but not the price of acting on it."
+    },
+    {
+      "name": "Morgan le Fay",
+      "role": "Enchantress who weaponizes old bargains against Arthurian order."
+    },
+    {
+      "name": "Mordred",
+      "role": "Claimant and child of the broken compact, seeking a lawful claim and a different Camelot."
+    },
+    {
+      "name": "Gawain",
+      "role": "Knight of honor who mistakes clean oaths for salvation."
+    },
+    {
+      "name": "Percival",
+      "role": "Young seeker whose quest instinct protects the innocent but can harden into obsession."
+    },
+    {
+      "name": "Galahad",
+      "role": "Pure-hearted knight drawn toward the Grail but vulnerable to purity becoming detachment."
+    },
+    {
+      "name": "Kay",
+      "role": "Arthur's proud companion who fears being made irrelevant by better prophets."
+    },
+    {
+      "name": "Bedivere",
+      "role": "Loyal servant who must witness what cannot be undone and decide how to carry it."
+    },
+    {
+      "name": "the Lady of the Lake",
+      "role": "Power-holder who offers the Round Table its promise and its burden."
+    }
+  ],
+  "setting": "A law-bound age of knights where Camelot is both court, relic-shrine, and civic constitution. Power is not simply land but visible legitimacy: oaths to the Round Table, the defense of widows and exiles, the maintenance of the Grail, and the balancing of four forces - Arthur's peace, Lancelot's divided loyalty, Mordred's claim, and the old magic held by Merlin and Morgan. Stakes include the stability of succession, the survival of ordinary people outside court, the return or disappearance of sacred objects, and whether Camelot remains a just republic, a doomed chivalric ideal, a broken throne, or a different kingdom born from ruin. Every scene asks what the player values when honor, love, duty, and law point in different directions.",
+  "endings": [
+    {
+      "ending_id": "e01",
+      "title": "The Quiet Round",
+      "description": "Arthur accepts limits, Guinevere is honored within a stable covenant, Lancelot chooses service over secret union, and the Grail is preserved as a covenant of peace rather than a trophy. Camelot survives as a modest, enduring realm: not perfect, but governable.",
+      "tone": "calm, solemn, hopeful"
+    },
+    {
+      "ending_id": "e02",
+      "title": "The Broken Pact",
+      "description": "The Round Table is torn when Arthur cannot reconcile mercy with law. Lancelot withdraws, Morgan breaks the oath, and Camelot fractures into competing households rather than a single doomed kingdom.",
+      "tone": "tragic, urgent, sharp"
+    },
+    {
+      "ending_id": "e03",
+      "title": "Excalibur Betrayed",
+      "description": "The sword is seized or misused by a claimant, and Arthur's authority collapses into private vengeance. The realm survives only as a chain of feudal enclaves answering to memory, not law.",
+      "tone": "dark martial"
+    },
+    {
+      "ending_id": "e04",
+      "title": "Mordred's Reign",
+      "description": "Mordred becomes legitimate or irresistible, ruling by force and family claim while the Round Table becomes a nostalgia cult. The old court endures, but only as a relic.",
+      "tone": "cold, ominous, bitter"
+    },
+    {
+      "ending_id": "e05",
+      "title": "Grail Found, Kingdom Changed",
+      "description": "Galahad or Percival finds the Grail and uses it to transform communal life, but the quest costs institutions. Camelot survives as a consecrated order rather than a court.",
+      "tone": "sacred, renewal-heavy"
+    },
+    {
+      "ending_id": "e06",
+      "title": "The Shadow Court",
+      "description": "Morgan's bargains succeed: Merlin is sidelined, oaths are overwritten, and power flows through hidden alliances. Camelot appears stable while its choices are made outside the visible council.",
+      "tone": "eerie, conspiratorial"
+    },
+    {
+      "ending_id": "e07",
+      "title": "Exile and Renewal",
+      "description": "The court is forced into exile or fragmentation, but Percival and Bedivere build a new center outside Camelot. The old seat falls; the idea of justice does not.",
+      "tone": "bittersweet, mobile, hopeful"
+    },
+    {
+      "ending_id": "e08",
+      "title": "The Last Table",
+      "description": "The Round Table becomes a memorial rather than a government. Arthur, Guinevere, Lancelot, and key companions commit themselves to the meaning of fellowship even as the political order dies.",
+      "tone": "elegiac"
+    },
+    {
+      "ending_id": "e09",
+      "title": "The Merchant Peace",
+      "description": "Kay and Bedivere convert military honor into contracts, markets, and hostage-free diplomacy. Camelot loses glamour but becomes a robust coalition able to survive succession disputes.",
+      "tone": "pragmatic, wry"
+    },
+    {
+      "ending_id": "e10",
+      "title": "Arthur the Ghost",
+      "description": "Arthur is effectively gone from the world, either by death, exile, or self-erasure, and his heirs must decide whether to be Arthur's successors, replacers, or betrayers. The realm is divided between inheritance and reinvention.",
+      "tone": "haunting, unresolved"
+    },
+    {
+      "ending_id": "e11",
+      "title": "The Unseen Grail",
+      "description": "The Grail never appears in the expected form; instead its mystery disciplines choices. The Round Table survives as an ethics rather than a monument, and the ending leaves the central question open.",
+      "tone": "mythic, open"
+    }
+  ],
+  "branch_outline": {
+    "trunk": {
+      "description": "A shared sequence in which Arthur's legitimacy is challenged by three tensions: succession, the Grail, and the Round Table's oath. Early scenes place the player at councils, quests, rituals, and bedroom-adjacent courts (kept non-explicit) where each major faction tests whether honor is absolute, conditional, or negotiable. The trunk ends with three decisive choice clusters: whether to preserve Arthur's peace, honor the claim of Mordred or Lancelot's divided loyalty, and whether to seek, guard, or abandon the Grail.",
+      "encounter_budget": 51
+    },
+    "branches": [
+      {
+        "ending_id": "e01",
+        "throughline": "Use Merlin's foresight to negotiate a constitutional peace: Arthur limits knightly privilege, Guinevere accepts a civic role, Lancelot withdraws from seduction politics, and the Grail is guarded as covenant.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e02",
+        "throughline": "Let the Round Table oath become unbearable: private loyalty, family feuds, and Morgan's manipulation break the compact. The branch dramatizes failed negotiation, civil households, and the loss of a unified court.",
+        "encounter_budget": 22
+      },
+      {
+        "ending_id": "e03",
+        "throughline": "Make Excalibur a contested instrument of power. Scenes of oath-breaking, sword theft, and claimant-building culminate in a feudal fracture rather than a single winner.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e04",
+        "throughline": "Follow Mordred's claim as a legitimate crisis rather than a villainous trick. The player weighs lawful inheritance against the cost to Arthurian institutions until the Round Table becomes a memory.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e05",
+        "throughline": "Prioritize Grail discovery through Galahad or Percival. The branch tests whether sacred knowledge can heal a kingdom, then shows how purity reshapes politics into an order rather than a court.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e06",
+        "throughline": "Let Morgan and hidden alliances gain the upper hand. Merlin is marginalized, oaths are rewritten, and scenes move behind the visible council into bargains that preserve appearances.",
+        "encounter_budget": 22
+      },
+      {
+        "ending_id": "e07",
+        "throughline": "Force a dispersal: Camelot is abandoned, but Percival, Bedivere, and allied lords construct a new settlement. The branch follows craft, survival, and the slow return of moral community.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e08",
+        "throughline": "Make fellowship the final value. Arthur, Guinevere, Lancelot, Gawain, and companions choose what the Round Table meant even as its offices fail, ending in elegiac commemoration rather than victory.",
+        "encounter_budget": 22
+      },
+      {
+        "ending_id": "e09",
+        "throughline": "Follow Kay and Bedivere toward pragmatic reconstruction: contracts, markets, hostages-as-friendship, and non-mythic governance. The realm becomes durable but less glorious.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e10",
+        "throughline": "Make Arthur's absence decisive. Whether by death, self-erasure, or exile, heirs and officials decide whether to preserve, replace, or refuse his legacy, splitting the realm into competing responses.",
+        "encounter_budget": 23
+      },
+      {
+        "ending_id": "e11",
+        "throughline": "Keep the Grail unresolved. Scenes of pursuit, misreading, and ethical testing end with a Round Table preserved as an open question rather than a trophy or a temple.",
+        "encounter_budget": 22
+      }
+    ]
+  },
+  "design_note": "The 11 endings are distinct because they preserve, destroy, transform, or re-center different Arthurian values: legitimacy, covenant, sacred quest, hidden power, moral fellowship, exile, pragmatism, succession, or unresolved mystery. They are not near-duplicates because each has a different answer to what Camelot is for and a different primary casualty: the court, Arthur, the Round Table, the Grail, the kingdom, or the moral meaning of heroism. The trunk is deliberately broad enough to expose the real choice pressures - preserve peace, honor claim/inheritance, seek or abandon sacred objects, protect secrets or make power visible - so every branch has at least one reachable meaningful sequence from early choices rather than being an arbitrary cut. Budgets are comparable (eight branches at 23, three at 22, trunk 50, total 300), and all branches depend on distinct decision patterns, not only on different end images."
+}

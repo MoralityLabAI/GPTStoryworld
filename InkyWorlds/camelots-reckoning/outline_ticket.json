@@ -1,0 +1,15 @@
+{
+  "schema": "agn04.campaign_outline_ticket.v1",
+  "ticket_id": "arthurian_campaign_001",
+  "mission": "Design a branching interactive storyworld using the classic, public-domain Arthurian legendary cast (Arthur, Guinevere, Lancelot, Merlin, Morgan le Fay, Mordred, Gawain, Percival, Galahad, Kay, Bedivere, the Lady of the Lake, or a reasonable subset) and classic Arthurian locations/objects (Camelot, the Round Table, Excalibur, the Holy Grail). Invent original scenes, dialogue and plot specifics; do not reuse verbatim text from any specific copyrighted retelling (T.H. White, etc.) or from Chris Crawford's Storytron/Erasmatron works.",
+  "target_total_encounters": 300,
+  "target_ending_count": 11,
+  "balance_requirement": "Each ending's branch should receive a comparable share of the 300 encounters (roughly 300/11 ~= 27 each, shared trunk encounters before branches diverge count toward the trunk, not an ending), each ending must be reachable by at least one real sequence of meaningful choices, and no ending should be trivially dominant or trivially unreachable.",
+  "requested_output": {
+    "cast": "list of classic characters this campaign will use, each with a one-line role",
+    "setting": "one-paragraph description of the Camelot-era world and stakes",
+    "endings": "exactly 11 objects, each with ending_id, title, one-paragraph description of how the realm/characters end up, and tone",
+    "branch_outline": "a tree: a trunk sequence (shared early encounters establishing the central conflict), then exactly 11 branches (one per ending) each with a short description of its throughline and an approximate encounter budget that sums with the trunk to about 300",
+    "design_note": "why these 11 endings are distinct outcomes and not near-duplicates, and why the trunk fairly exposes the player to the choices that lead toward each branch"
+  }
+}

@@ -1,0 +1,228 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Camelot's Reckoning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* layout: a single centered manuscript column; a full-bleed art panel above each scene; a
+   gold-rule crossroads screen between the trunk and the eleven endings */
+:root{
+  --bg:#f3ecdd; --ink:#241b2e; --parchment:#fbf6e9; --rule:#8a6a2f;
+  --accent:#8a3b2b; --accent-2:#2f5d55; --muted:#6b5f4a; --card:#fffaf0;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#140f1c; --ink:#ecdfc8; --parchment:#1d1626; --rule:#c9a24d;
+    --accent:#e08a6b; --accent-2:#6fb8ab; --muted:#b9ac8e; --card:#241a30;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#140f1c; --ink:#ecdfc8; --parchment:#1d1626; --rule:#c9a24d;
+  --accent:#e08a6b; --accent-2:#6fb8ab; --muted:#b9ac8e; --card:#241a30;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink); margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+}
+h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif; text-wrap:balance}
+.wrap{max-width:720px; margin:0 auto; padding-block:2.5rem 5rem}
+.hero{
+  text-align:center; padding-block:2.5rem 1.5rem;
+  margin-top:calc(-1 * env(safe-area-inset-top,0px));
+  padding-top:calc(env(safe-area-inset-top,0px) + 2.5rem);
+}
+.hero h1{font-size:clamp(2rem,6vw,3rem); margin:.2em 0; font-weight:600}
+.hero .sub{color:var(--muted); font-size:.95rem; max-width:56ch; margin:0 auto}
+.rule{height:2px; background:linear-gradient(90deg,transparent,var(--rule),transparent); margin:1.5rem auto; max-width:420px}
+.cast{display:flex; flex-wrap:wrap; gap:.4rem; justify-content:center; margin:1.2rem 0}
+.cast span{
+  font-size:.75rem; letter-spacing:.03em; color:var(--muted); border:1px solid var(--rule);
+  border-radius:999px; padding:.25rem .7rem; background:var(--card);
+}
+.btn{
+  display:inline-block; font-family:'Inter',sans-serif; font-weight:600; font-size:.95rem;
+  background:var(--accent); color:#fff8ec; border:none; border-radius:8px;
+  padding:.8rem 1.6rem; cursor:pointer; letter-spacing:.01em;
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent; color:var(--accent); border:1.5px solid var(--accent)}
+.center{text-align:center}
+.card{
+  background:var(--card); border:1px solid var(--rule); border-radius:14px;
+  padding:1.4rem 1.4rem 1.6rem; margin-block:1.2rem;
+}
+.art{width:100%; border-radius:10px; overflow:hidden; border:1px solid var(--rule); aspect-ratio:8/5; background:#0d1b26}
+.art svg{width:100%; height:100%; display:block}
+.badge{
+  font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-2);
+  font-weight:600; margin-bottom:.5rem; display:block;
+}
+.scene{font-size:1.08rem; line-height:1.6; margin:.9rem 0 1rem; max-width:65ch}
+.who{font-size:.82rem; color:var(--muted); margin-bottom:.6rem}
+.options{display:flex; flex-direction:column; gap:.55rem; margin-top:1.1rem}
+.opt{
+  text-align:left; background:var(--parchment); border:1px solid var(--rule); border-radius:10px;
+  padding:.75rem .9rem; cursor:pointer; color:var(--ink); font-family:'Inter',sans-serif;
+}
+.opt b{font-weight:600}
+.opt .cons{display:block; font-size:.82rem; color:var(--muted); margin-top:.25rem}
+.opt:hover{border-color:var(--accent)}
+.progress{font-size:.78rem; color:var(--muted); text-align:center; margin-bottom:.6rem; letter-spacing:.03em}
+.crossroads-grid{display:grid; grid-template-columns:1fr; gap:.9rem; margin-top:1.4rem}
+@media(min-width:620px){.crossroads-grid{grid-template-columns:1fr 1fr}}
+.ending-card{
+  background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:1rem 1.1rem;
+  cursor:pointer; min-width:0;
+}
+.ending-card:hover{border-color:var(--accent)}
+.ending-card h3{margin:.1em 0 .3em; font-size:1.3rem}
+.ending-card .tone{font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent-2); font-weight:600}
+.ending-card p{font-size:.88rem; color:var(--muted); margin:.4rem 0 0; line-height:1.45}
+.ending-screen .card{border-color:var(--accent); border-width:2px}
+.ending-text{font-size:1.12rem; line-height:1.7; font-family:'Cormorant Garamond',Georgia,serif; margin:1rem 0}
+.footer-actions{display:flex; gap:.7rem; justify-content:center; flex-wrap:wrap; margin-top:1.4rem}
+[hidden]{display:none!important}
+.loading{text-align:center; padding:4rem 1rem; color:var(--muted)}
+</style>
+
+<div id="app" class="wrap"><div class="loading">Unrolling the vellum…</div></div>
+
+<script>
+(function(){
+  var state = { view:'intro', branch:null, index:0 };
+  var DATA = null;
+
+  function el(tag, props, children){
+    var e = document.createElement(tag);
+    if (props) for (var k in props) {
+      if (k === 'class') e.className = props[k];
+      else if (k === 'html') e.innerHTML = props[k];
+      else if (k === 'onclick') e.addEventListener('click', props[k]);
+      else e.setAttribute(k, props[k]);
+    }
+    (children||[]).forEach(function(c){ if (c) e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return e;
+  }
+
+  function trunkNodes(){
+    return DATA.encounters.filter(function(r){ return r.branch === 'trunk'; })
+      .sort(function(a,b){ return a.index_in_branch - b.index_in_branch; });
+  }
+  function branchNodes(b){
+    return DATA.encounters.filter(function(r){ return r.branch === b; })
+      .sort(function(a,b2){ return a.index_in_branch - b2.index_in_branch; });
+  }
+
+  function renderIntro(root){
+    var o = DATA.outline;
+    root.appendChild(el('div',{class:'hero'},[
+      el('h1',{},["Camelot's Reckoning"]),
+      el('p',{class:'sub'},[o.setting]),
+      el('div',{class:'rule'}),
+      el('div',{class:'cast'}, o.cast.map(function(c){ return el('span',{},[c.name]); })),
+    ]));
+    root.appendChild(el('div',{class:'center'},[
+      el('button',{class:'btn', onclick:function(){ state = {view:'story', branch:'trunk', index:1}; render(); }},
+        ['Begin at the Round Table'])
+    ]));
+  }
+
+  function renderScene(root, node, isEndingNode, opts){
+    var budget = opts.budget, label = opts.label;
+    root.appendChild(el('div',{class:'progress'},[label + ' — ' + node.index_in_branch + ' / ' + budget]));
+    var card = el('div',{class:'card' + (isEndingNode ? ' ending-screen' : '')});
+    var art = el('div',{class:'art', html:node.canvas_art_svg});
+    card.appendChild(art);
+    card.appendChild(el('span',{class:'badge'},[node.mechanism.replace(/_/g,' ')]));
+    if (node.characters_present && node.characters_present.length){
+      card.appendChild(el('div',{class:'who'},['Present: ' + node.characters_present.join(', ')]));
+    }
+    card.appendChild(el('p',{class:'scene'},[node.scene]));
+    if (isEndingNode){
+      card.appendChild(el('div',{class:'rule'}));
+      card.appendChild(el('p',{class:'ending-text'},[node.ending_text]));
+    } else {
+      var optsWrap = el('div',{class:'options'});
+      node.options.forEach(function(o){
+        optsWrap.appendChild(el('button',{class:'opt', onclick:opts.onAdvance},[
+          el('b',{},[o.label]),
+          el('span',{class:'cons'},[o.consequence])
+        ]));
+      });
+      card.appendChild(optsWrap);
+    }
+    root.appendChild(card);
+  }
+
+  function renderStory(root){
+    if (state.branch === 'trunk'){
+      var nodes = trunkNodes();
+      var node = nodes[state.index - 1];
+      var isLast = state.index === nodes.length;
+      renderScene(root, node, false, {
+        budget: nodes.length, label: 'The Round Table',
+        onAdvance: function(){
+          if (isLast) { state = {view:'crossroads'}; } else { state.index += 1; }
+          render();
+        }
+      });
+      return;
+    }
+    var nodes2 = branchNodes(state.branch);
+    var node2 = nodes2[state.index - 1];
+    var isEndingNode = !!node2.is_ending;
+    var ending = DATA.outline.endings.filter(function(e){ return e.ending_id === state.branch; })[0];
+    renderScene(root, node2, isEndingNode, {
+      budget: nodes2.length, label: ending.title,
+      onAdvance: function(){ state.index += 1; render(); }
+    });
+    if (isEndingNode){
+      root.appendChild(el('div',{class:'footer-actions'},[
+        el('button',{class:'btn ghost', onclick:function(){ state = {view:'crossroads'}; render(); }},['Return to the Crossroads']),
+        el('button',{class:'btn', onclick:function(){ state = {view:'story', branch:'trunk', index:1}; render(); }},['Begin Again'])
+      ]));
+    }
+  }
+
+  function renderCrossroads(root){
+    root.appendChild(el('div',{class:'hero'},[
+      el('h2',{},['The realm stands at its crossroads']),
+      el('p',{class:'sub'},['Eleven paths lie open from here. Choose one to see where it leads.'])
+    ]));
+    var grid = el('div',{class:'crossroads-grid'});
+    DATA.outline.endings.forEach(function(e){
+      grid.appendChild(el('div',{class:'ending-card', onclick:function(){
+        state = {view:'story', branch:e.ending_id, index:1}; render();
+      }},[
+        el('span',{class:'tone'},[e.tone]),
+        el('h3',{},[e.title]),
+        el('p',{},[e.description])
+      ]));
+    });
+    root.appendChild(grid);
+  }
+
+  function render(){
+    var root = document.getElementById('app');
+    root.innerHTML = '';
+    if (state.view === 'intro') renderIntro(root);
+    else if (state.view === 'crossroads') renderCrossroads(root);
+    else renderStory(root);
+    window.scrollTo(0,0);
+  }
+
+  fetch('storyworld_bundle.json').then(function(r){ return r.json(); }).then(function(data){
+    DATA = data;
+    render();
+  }).catch(function(err){
+    document.getElementById('app').innerHTML =
+      '<div class="loading">The manuscript would not open: ' + String(err) + '</div>';
+  });
+})();
+</script>
