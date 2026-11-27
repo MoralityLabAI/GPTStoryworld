@@ -3,7 +3,7 @@ import * as M from './recurrent_ranker.mjs';
 const api=(function runFactory(G,M){
  const ok=(v,m)=>{if(!v)throw Error(m)},budgets=[8,16,32,64];
  const modes=['frontier','parent','direction','T1','T3','T3_shuffled','random_local','random_global'];
- const sum=(a,f)=>a.reduce((s,r)=>s+f(r),0);
+ const sum=(a,f)=>a.reduce((s,r,i)=>s+f(r,i),0);
  function directions(rows){
   return Array.from({length:8},(_,k)=>{
    const rs=rows.filter(r=>r.block===k),ds=rs.filter(r=>r.y[1]!==null);
