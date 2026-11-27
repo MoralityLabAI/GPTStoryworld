@@ -1,0 +1,1974 @@
+{
+  "runs": 5000,
+  "seed": 523,
+  "endings": {
+    "end_fallback": 1596,
+    "end_keep": 33,
+    "end_return": 1685,
+    "end_share": 1686
+  },
+  "encounter_visits": {
+    "enc_01": 5000,
+    "enc_02": 5000,
+    "enc_03": 5000,
+    "enc_04": 5000,
+    "enc_05": 1670,
+    "enc_06": 1670,
+    "enc_07": 3296,
+    "enc_08": 3327,
+    "enc_09": 5000,
+    "enc_10": 5000,
+    "enc_11": 5000,
+    "enc_12": 5000,
+    "enc_13": 1290,
+    "enc_14": 5000,
+    "enc_15": 1322,
+    "enc_16": 5000,
+    "end_fallback": 1596,
+    "end_keep": 33,
+    "end_return": 1685,
+    "end_share": 1686
+  },
+  "reaction_hits": {
+    "rxn_01_1_1": 1698,
+    "rxn_01_2_1": 1642,
+    "rxn_01_3_1": 1660,
+    "rxn_02_1_1": 1641,
+    "rxn_02_2_1": 1645,
+    "rxn_02_3_1": 1714,
+    "rxn_03_1_1": 1651,
+    "rxn_03_2_1": 1688,
+    "rxn_03_3_1": 1661,
+    "rxn_04_1_1": 1670,
+    "rxn_04_2_1": 1657,
+    "rxn_04_3_1": 1673,
+    "rxn_05_1_1": 577,
+    "rxn_05_2_1": 572,
+    "rxn_05_3_1": 521,
+    "rxn_06_1_1": 556,
+    "rxn_06_2_1": 556,
+    "rxn_06_3_1": 527,
+    "rxn_06_3_2": 31,
+    "rxn_07_1_1": 1102,
+    "rxn_07_2_1": 1141,
+    "rxn_07_3_1": 1034,
+    "rxn_07_3_2": 19,
+    "rxn_08_1_1": 1090,
+    "rxn_08_2_1": 1129,
+    "rxn_08_3_1": 1076,
+    "rxn_08_3_2": 32,
+    "rxn_09_1_1": 1647,
+    "rxn_09_2_1": 1696,
+    "rxn_09_2_2": 1,
+    "rxn_09_3_1": 1630,
+    "rxn_09_3_2": 26,
+    "rxn_10_1_1": 1667,
+    "rxn_10_2_1": 1657,
+    "rxn_10_3_1": 1620,
+    "rxn_10_3_2": 56,
+    "rxn_11_1_1": 1649,
+    "rxn_11_1_2": 2,
+    "rxn_11_2_1": 1698,
+    "rxn_11_3_1": 1604,
+    "rxn_11_3_2": 47,
+    "rxn_12_1_1": 1659,
+    "rxn_12_1_2": 1,
+    "rxn_12_2_1": 395,
+    "rxn_12_2_2": 1258,
+    "rxn_12_3_1": 1656,
+    "rxn_12_3_2": 31,
+    "rxn_13_1_1": 423,
+    "rxn_13_2_1": 433,
+    "rxn_13_2_2": 16,
+    "rxn_13_3_1": 10,
+    "rxn_13_3_2": 408,
+    "rxn_14_1_1": 1706,
+    "rxn_14_2_1": 347,
+    "rxn_14_2_2": 1280,
+    "rxn_14_3_1": 1625,
+    "rxn_14_3_2": 42,
+    "rxn_15_1_1": 422,
+    "rxn_15_1_2": 7,
+    "rxn_15_2_1": 445,
+    "rxn_15_3_1": 437,
+    "rxn_15_3_2": 11,
+    "rxn_16_1_1": 1596,
+    "rxn_16_1_2": 24,
+    "rxn_16_2_1": 1685,
+    "rxn_16_3_1": 1662,
+    "rxn_16_3_2": 33
+  },
+  "lengths": {
+    "10": 816,
+    "11": 685,
+    "12": 1149,
+    "13": 556,
+    "14": 1161,
+    "15": 518,
+    "16": 115
+  },
+  "clamped_effects": 26113,
+  "timeouts": 0,
+  "timeout_scenes": {},
+  "witnesses": {
+    "end_share": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 0.95,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 1.0,
+          "care": 0.56
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_3",
+        "reaction": "rxn_14_3_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 1.0,
+          "care": 0.6900000000000001
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_3",
+        "reaction": "rxn_16_3_1",
+        "after": {
+          "trust": 0.060000000000000026,
+          "nerve": 1.0,
+          "care": 0.75
+        }
+      }
+    ],
+    "end_return": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_2",
+        "reaction": "rxn_02_2_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 0.53,
+          "care": 0.7399999999999999
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.28,
+          "nerve": 0.48000000000000004,
+          "care": 0.8199999999999998
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": 0.16000000000000003,
+          "nerve": 0.66,
+          "care": 0.8799999999999999
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_1",
+        "reaction": "rxn_09_1_1",
+        "after": {
+          "trust": 0.26,
+          "nerve": 0.61,
+          "care": 0.9599999999999999
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.36,
+          "nerve": 0.5599999999999999,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_3",
+        "reaction": "rxn_11_3_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 0.6299999999999999,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_2",
+        "reaction": "rxn_12_2_2",
+        "after": {
+          "trust": 0.2,
+          "nerve": 0.7899999999999999,
+          "care": 0.9
+        }
+      },
+      {
+        "scene": "enc_13",
+        "option": "opt_13_1",
+        "reaction": "rxn_13_1_1",
+        "after": {
+          "trust": 0.30000000000000004,
+          "nerve": 0.7399999999999999,
+          "care": 0.98
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_1",
+        "reaction": "rxn_14_1_1",
+        "after": {
+          "trust": 0.4,
+          "nerve": 0.6899999999999998,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_2",
+        "reaction": "rxn_16_2_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6399999999999998,
+          "care": 1.0
+        }
+      }
+    ],
+    "end_fallback": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_2",
+        "reaction": "rxn_02_2_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 0.53,
+          "care": 0.7399999999999999
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.28,
+          "nerve": 0.48000000000000004,
+          "care": 0.8199999999999998
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.38,
+          "nerve": 0.43000000000000005,
+          "care": 0.8999999999999998
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_1",
+        "reaction": "rxn_07_1_1",
+        "after": {
+          "trust": 0.48,
+          "nerve": 0.38000000000000006,
+          "care": 0.9799999999999998
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_2",
+        "reaction": "rxn_08_2_1",
+        "after": {
+          "trust": 0.63,
+          "nerve": 0.4800000000000001,
+          "care": 0.8599999999999998
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 0.78,
+          "nerve": 0.5800000000000001,
+          "care": 0.7399999999999998
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.88,
+          "nerve": 0.53,
+          "care": 0.8199999999999997
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_1",
+        "reaction": "rxn_11_1_1",
+        "after": {
+          "trust": 0.96,
+          "nerve": 0.65,
+          "care": 0.9199999999999997
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.75,
+          "care": 0.7999999999999997
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_2",
+        "reaction": "rxn_14_2_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.61,
+          "care": 0.8899999999999997
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_1",
+        "reaction": "rxn_16_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.71,
+          "care": 0.7699999999999997
+        }
+      }
+    ],
+    "end_keep": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_2",
+        "reaction": "rxn_01_2_1",
+        "after": {
+          "trust": 0.35,
+          "nerve": 0.5,
+          "care": 0.48
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_1",
+        "reaction": "rxn_02_1_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6,
+          "care": 0.36
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.6,
+          "nerve": 0.5499999999999999,
+          "care": 0.44
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_1",
+        "reaction": "rxn_04_1_1",
+        "after": {
+          "trust": 0.75,
+          "nerve": 0.6499999999999999,
+          "care": 0.32
+        }
+      },
+      {
+        "scene": "enc_05",
+        "option": "opt_05_3",
+        "reaction": "rxn_05_3_1",
+        "after": {
+          "trust": 0.63,
+          "nerve": 0.8299999999999998,
+          "care": 0.38
+        }
+      },
+      {
+        "scene": "enc_06",
+        "option": "opt_06_1",
+        "reaction": "rxn_06_1_1",
+        "after": {
+          "trust": 0.78,
+          "nerve": 0.9299999999999998,
+          "care": 0.26
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_2",
+        "reaction": "rxn_07_2_1",
+        "after": {
+          "trust": 0.93,
+          "nerve": 1.0,
+          "care": 0.14
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_1",
+        "reaction": "rxn_08_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.95,
+          "care": 0.22000000000000003
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": 0.10000000000000003
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": -0.019999999999999962
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_1",
+        "reaction": "rxn_11_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": 0.08000000000000004
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": -0.03999999999999995
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_3",
+        "reaction": "rxn_14_3_2",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.87,
+          "care": -0.11999999999999995
+        }
+      },
+      {
+        "scene": "enc_15",
+        "option": "opt_15_1",
+        "reaction": "rxn_15_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.97,
+          "care": -0.23999999999999994
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_3",
+        "reaction": "rxn_16_3_2",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.87,
+          "care": -0.32999999999999996
+        }
+      }
+    ]
+  },
+  "scene_witnesses": {
+    "enc_01": [],
+    "enc_02": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      }
+    ],
+    "enc_03": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      }
+    ],
+    "enc_04": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      }
+    ],
+    "enc_09": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      }
+    ],
+    "enc_10": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      }
+    ],
+    "enc_11": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      }
+    ],
+    "enc_12": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 0.95,
+          "care": 0.68
+        }
+      }
+    ],
+    "enc_14": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 0.95,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 1.0,
+          "care": 0.56
+        }
+      }
+    ],
+    "enc_16": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 0.95,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 1.0,
+          "care": 0.56
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_3",
+        "reaction": "rxn_14_3_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 1.0,
+          "care": 0.6900000000000001
+        }
+      }
+    ],
+    "end_share": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_2",
+        "reaction": "rxn_03_2_1",
+        "after": {
+          "trust": -0.15999999999999998,
+          "nerve": 0.94,
+          "care": 0.78
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": -0.27999999999999997,
+          "nerve": 1.0,
+          "care": 0.8400000000000001
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": -0.12999999999999998,
+          "nerve": 1.0,
+          "care": 0.7200000000000001
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 0.020000000000000018,
+          "nerve": 1.0,
+          "care": 0.6000000000000001
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 0.95,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 1.0,
+          "care": 0.56
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_3",
+        "reaction": "rxn_14_3_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 1.0,
+          "care": 0.6900000000000001
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_3",
+        "reaction": "rxn_16_3_1",
+        "after": {
+          "trust": 0.060000000000000026,
+          "nerve": 1.0,
+          "care": 0.75
+        }
+      }
+    ],
+    "enc_07": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.11000000000000001,
+          "nerve": 0.86,
+          "care": 0.6
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.21000000000000002,
+          "nerve": 0.8099999999999999,
+          "care": 0.6799999999999999
+        }
+      }
+    ],
+    "enc_08": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.11000000000000001,
+          "nerve": 0.86,
+          "care": 0.6
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.21000000000000002,
+          "nerve": 0.8099999999999999,
+          "care": 0.6799999999999999
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_3",
+        "reaction": "rxn_07_3_1",
+        "after": {
+          "trust": 0.09000000000000002,
+          "nerve": 0.99,
+          "care": 0.74
+        }
+      }
+    ],
+    "enc_13": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.11000000000000001,
+          "nerve": 0.86,
+          "care": 0.6
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.21000000000000002,
+          "nerve": 0.8099999999999999,
+          "care": 0.6799999999999999
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_3",
+        "reaction": "rxn_07_3_1",
+        "after": {
+          "trust": 0.09000000000000002,
+          "nerve": 0.99,
+          "care": 0.74
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_3",
+        "reaction": "rxn_08_3_1",
+        "after": {
+          "trust": -0.02999999999999997,
+          "nerve": 1.0,
+          "care": 0.8
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 1.0,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.22000000000000003,
+          "nerve": 0.95,
+          "care": 0.76
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.32000000000000006,
+          "nerve": 0.8999999999999999,
+          "care": 0.84
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_2",
+        "reaction": "rxn_12_2_2",
+        "after": {
+          "trust": 0.25000000000000006,
+          "nerve": 1.0,
+          "care": 0.74
+        }
+      }
+    ],
+    "enc_15": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_3",
+        "reaction": "rxn_02_3_1",
+        "after": {
+          "trust": -0.03999999999999998,
+          "nerve": 0.76,
+          "care": 0.72
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.11000000000000001,
+          "nerve": 0.86,
+          "care": 0.6
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.21000000000000002,
+          "nerve": 0.8099999999999999,
+          "care": 0.6799999999999999
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_3",
+        "reaction": "rxn_07_3_1",
+        "after": {
+          "trust": 0.09000000000000002,
+          "nerve": 0.99,
+          "care": 0.74
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_3",
+        "reaction": "rxn_08_3_1",
+        "after": {
+          "trust": -0.02999999999999997,
+          "nerve": 1.0,
+          "care": 0.8
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 0.12000000000000002,
+          "nerve": 1.0,
+          "care": 0.68
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.22000000000000003,
+          "nerve": 0.95,
+          "care": 0.76
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_2",
+        "reaction": "rxn_11_2_1",
+        "after": {
+          "trust": 0.32000000000000006,
+          "nerve": 0.8999999999999999,
+          "care": 0.84
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_2",
+        "reaction": "rxn_12_2_2",
+        "after": {
+          "trust": 0.25000000000000006,
+          "nerve": 1.0,
+          "care": 0.74
+        }
+      },
+      {
+        "scene": "enc_13",
+        "option": "opt_13_3",
+        "reaction": "rxn_13_3_2",
+        "after": {
+          "trust": 0.18000000000000005,
+          "nerve": 1.0,
+          "care": 0.64
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_2",
+        "reaction": "rxn_14_2_2",
+        "after": {
+          "trust": 0.11000000000000004,
+          "nerve": 1.0,
+          "care": 0.54
+        }
+      }
+    ],
+    "end_return": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_2",
+        "reaction": "rxn_02_2_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 0.53,
+          "care": 0.7399999999999999
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.28,
+          "nerve": 0.48000000000000004,
+          "care": 0.8199999999999998
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_3",
+        "reaction": "rxn_04_3_1",
+        "after": {
+          "trust": 0.16000000000000003,
+          "nerve": 0.66,
+          "care": 0.8799999999999999
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_1",
+        "reaction": "rxn_09_1_1",
+        "after": {
+          "trust": 0.26,
+          "nerve": 0.61,
+          "care": 0.9599999999999999
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.36,
+          "nerve": 0.5599999999999999,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_3",
+        "reaction": "rxn_11_3_1",
+        "after": {
+          "trust": 0.27,
+          "nerve": 0.6299999999999999,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_2",
+        "reaction": "rxn_12_2_2",
+        "after": {
+          "trust": 0.2,
+          "nerve": 0.7899999999999999,
+          "care": 0.9
+        }
+      },
+      {
+        "scene": "enc_13",
+        "option": "opt_13_1",
+        "reaction": "rxn_13_1_1",
+        "after": {
+          "trust": 0.30000000000000004,
+          "nerve": 0.7399999999999999,
+          "care": 0.98
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_1",
+        "reaction": "rxn_14_1_1",
+        "after": {
+          "trust": 0.4,
+          "nerve": 0.6899999999999998,
+          "care": 1.0
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_2",
+        "reaction": "rxn_16_2_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6399999999999998,
+          "care": 1.0
+        }
+      }
+    ],
+    "enc_05": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_2",
+        "reaction": "rxn_01_2_1",
+        "after": {
+          "trust": 0.35,
+          "nerve": 0.5,
+          "care": 0.48
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_1",
+        "reaction": "rxn_02_1_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6,
+          "care": 0.36
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.65,
+          "nerve": 0.7,
+          "care": 0.24
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_1",
+        "reaction": "rxn_04_1_1",
+        "after": {
+          "trust": 0.8,
+          "nerve": 0.7999999999999999,
+          "care": 0.12
+        }
+      }
+    ],
+    "enc_06": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_2",
+        "reaction": "rxn_01_2_1",
+        "after": {
+          "trust": 0.35,
+          "nerve": 0.5,
+          "care": 0.48
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_1",
+        "reaction": "rxn_02_1_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6,
+          "care": 0.36
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_1",
+        "reaction": "rxn_03_1_1",
+        "after": {
+          "trust": 0.65,
+          "nerve": 0.7,
+          "care": 0.24
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_1",
+        "reaction": "rxn_04_1_1",
+        "after": {
+          "trust": 0.8,
+          "nerve": 0.7999999999999999,
+          "care": 0.12
+        }
+      },
+      {
+        "scene": "enc_05",
+        "option": "opt_05_1",
+        "reaction": "rxn_05_1_1",
+        "after": {
+          "trust": 0.9500000000000001,
+          "nerve": 0.8999999999999999,
+          "care": 0.0
+        }
+      }
+    ],
+    "end_fallback": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_3",
+        "reaction": "rxn_01_3_1",
+        "after": {
+          "trust": 0.08000000000000002,
+          "nerve": 0.5800000000000001,
+          "care": 0.6599999999999999
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_2",
+        "reaction": "rxn_02_2_1",
+        "after": {
+          "trust": 0.18000000000000002,
+          "nerve": 0.53,
+          "care": 0.7399999999999999
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.28,
+          "nerve": 0.48000000000000004,
+          "care": 0.8199999999999998
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_2",
+        "reaction": "rxn_04_2_1",
+        "after": {
+          "trust": 0.38,
+          "nerve": 0.43000000000000005,
+          "care": 0.8999999999999998
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_1",
+        "reaction": "rxn_07_1_1",
+        "after": {
+          "trust": 0.48,
+          "nerve": 0.38000000000000006,
+          "care": 0.9799999999999998
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_2",
+        "reaction": "rxn_08_2_1",
+        "after": {
+          "trust": 0.63,
+          "nerve": 0.4800000000000001,
+          "care": 0.8599999999999998
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 0.78,
+          "nerve": 0.5800000000000001,
+          "care": 0.7399999999999998
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_2",
+        "reaction": "rxn_10_2_1",
+        "after": {
+          "trust": 0.88,
+          "nerve": 0.53,
+          "care": 0.8199999999999997
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_1",
+        "reaction": "rxn_11_1_1",
+        "after": {
+          "trust": 0.96,
+          "nerve": 0.65,
+          "care": 0.9199999999999997
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.75,
+          "care": 0.7999999999999997
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_2",
+        "reaction": "rxn_14_2_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.61,
+          "care": 0.8899999999999997
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_1",
+        "reaction": "rxn_16_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.71,
+          "care": 0.7699999999999997
+        }
+      }
+    ],
+    "end_keep": [
+      {
+        "scene": "enc_01",
+        "option": "opt_01_2",
+        "reaction": "rxn_01_2_1",
+        "after": {
+          "trust": 0.35,
+          "nerve": 0.5,
+          "care": 0.48
+        }
+      },
+      {
+        "scene": "enc_02",
+        "option": "opt_02_1",
+        "reaction": "rxn_02_1_1",
+        "after": {
+          "trust": 0.5,
+          "nerve": 0.6,
+          "care": 0.36
+        }
+      },
+      {
+        "scene": "enc_03",
+        "option": "opt_03_3",
+        "reaction": "rxn_03_3_1",
+        "after": {
+          "trust": 0.6,
+          "nerve": 0.5499999999999999,
+          "care": 0.44
+        }
+      },
+      {
+        "scene": "enc_04",
+        "option": "opt_04_1",
+        "reaction": "rxn_04_1_1",
+        "after": {
+          "trust": 0.75,
+          "nerve": 0.6499999999999999,
+          "care": 0.32
+        }
+      },
+      {
+        "scene": "enc_05",
+        "option": "opt_05_3",
+        "reaction": "rxn_05_3_1",
+        "after": {
+          "trust": 0.63,
+          "nerve": 0.8299999999999998,
+          "care": 0.38
+        }
+      },
+      {
+        "scene": "enc_06",
+        "option": "opt_06_1",
+        "reaction": "rxn_06_1_1",
+        "after": {
+          "trust": 0.78,
+          "nerve": 0.9299999999999998,
+          "care": 0.26
+        }
+      },
+      {
+        "scene": "enc_07",
+        "option": "opt_07_2",
+        "reaction": "rxn_07_2_1",
+        "after": {
+          "trust": 0.93,
+          "nerve": 1.0,
+          "care": 0.14
+        }
+      },
+      {
+        "scene": "enc_08",
+        "option": "opt_08_1",
+        "reaction": "rxn_08_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.95,
+          "care": 0.22000000000000003
+        }
+      },
+      {
+        "scene": "enc_09",
+        "option": "opt_09_2",
+        "reaction": "rxn_09_2_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": 0.10000000000000003
+        }
+      },
+      {
+        "scene": "enc_10",
+        "option": "opt_10_1",
+        "reaction": "rxn_10_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": -0.019999999999999962
+        }
+      },
+      {
+        "scene": "enc_11",
+        "option": "opt_11_1",
+        "reaction": "rxn_11_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": 0.08000000000000004
+        }
+      },
+      {
+        "scene": "enc_12",
+        "option": "opt_12_1",
+        "reaction": "rxn_12_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 1.0,
+          "care": -0.03999999999999995
+        }
+      },
+      {
+        "scene": "enc_14",
+        "option": "opt_14_3",
+        "reaction": "rxn_14_3_2",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.87,
+          "care": -0.11999999999999995
+        }
+      },
+      {
+        "scene": "enc_15",
+        "option": "opt_15_1",
+        "reaction": "rxn_15_1_1",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.97,
+          "care": -0.23999999999999994
+        }
+      },
+      {
+        "scene": "enc_16",
+        "option": "opt_16_3",
+        "reaction": "rxn_16_3_2",
+        "after": {
+          "trust": 1.0,
+          "nerve": 0.87,
+          "care": -0.32999999999999996
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "source_commit": "c8d46591f983473023daf0232e9b413baaa02194",
+  "skill_sha256": "75735d3dd0091f2240ef4aa90fe15eef8c5699b94a73afa67f4fa4a22c29d1e4",
+  "validator_sha256": "282d3a9988ba8305caf18a73d824497fd7fff0494f491a341caf6872bb9299d3",
+  "swmd_index_sha256": "7bd50a31acc05b2a00e125aad028852b066fce37d1c5220ba975332973d32d50",
+  "artifacts": {
+    "world.swmd.min.md": "7b03b4403882608207cebf44aab43c9833c490e04e945b1da5d14b64a0b0473e",
+    "storyworld.json": "1d1695918e81c9f09e201b9765f56ce032b6d1b924da0614452412e531311c75",
+    "balance.json": "60fb43d3ea7fb04debbdd21154c788293d71ce22b9d8124ee210d4d6e754537e",
+    "world-data.js": "ee05da52d6e2bddf92877e1e2348c152620b6aab5a89f5608403fcf9b8890ed3",
+    "index.html": "49751c700c45354cb729d10abaa5070cf718c3145c27665f73254bcfb6214c08",
+    "art.js": "ad6f47e3c2efbd6e9fce5ade44c38a75859183e09baa12627c93f8af2354f2d0",
+    "player.js": "58d52d933a574d00e7131335e99356319d18f8ebf4eba551c0264742bb32766e"
+  },
+  "browser_check": {
+    "status": "verified",
+    "game": "storyworld",
+    "title": "The Hat That Held the Moon — A Village Tale",
+    "checks": [
+      "20 distinct Canvas scenes through player controls",
+      "response formulas and bounded effects match independent replay",
+      "all endings and restart work"
+    ]
+  }
+}

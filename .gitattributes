@@ -4,3 +4,12 @@
 /tools/audit_constitutional_alignment_suite_v2.py text eol=lf
 /storyworld/tests/test_constitutional_alignment_suite_v2.py text eol=lf
 /benchmarks/moral_hysteresis_v1/** text eol=lf
+/InkyWorlds/city-that-lost-its-night-bell/**/*.json text eol=lf
+/InkyWorlds/city-that-lost-its-night-bell/**/*.js text eol=lf
+/InkyWorlds/city-that-lost-its-night-bell/**/*.html text eol=lf
+/InkyWorlds/city-that-lost-its-night-bell/**/*.md text eol=lf
+/InkyWorlds/city-that-lost-its-night-bell/receipts/browser-receipt.json -text
+/InkyWorlds/hat-that-held-the-moon/**/*.json text eol=lf
+/InkyWorlds/hat-that-held-the-moon/**/*.js text eol=lf
+/InkyWorlds/hat-that-held-the-moon/**/*.html text eol=lf
+/InkyWorlds/hat-that-held-the-moon/**/*.md text eol=lf

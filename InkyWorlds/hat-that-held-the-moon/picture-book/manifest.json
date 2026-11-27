@@ -1,0 +1,110 @@
+{
+  "storyworld": "The Hat That Held the Moon",
+  "source_phase": "26-storybook-ink-retry-02",
+  "base_manifest_sha256": "f5b63f3e5802bf387cda8cda2864e263696507a0b8639325e58db65cf2d4a081",
+  "authorship": {
+    "24-storybook-art-retry-01": {
+      "model": "inky-mini-varloop",
+      "base_commit": "4f04fb4c193810997a8961945565b99c1bc381cb",
+      "gdk_sha256": "178e0d3db30629a3508b67cb038aed337bfbc7968f42b4aff07fad202db28677",
+      "writes": [
+        {
+          "action": 0,
+          "path": "storybook-scene.js",
+          "sha256": "e9cd58d83680082be970688568d538f167cc58c1af08ad9be54aa3da83d80787"
+        }
+      ],
+      "verifications": [],
+      "solver_verified": false,
+      "provider_calls": 1,
+      "provider_timings": [
+        {
+          "cache_n": 0,
+          "prompt_n": 760,
+          "prompt_ms": 18658.141,
+          "prompt_per_token_ms": 24.55018552631579,
+          "prompt_per_second": 40.73288973429883,
+          "predicted_n": 2559,
+          "predicted_ms": 260062.788,
+          "predicted_per_token_ms": 101.66645347928069,
+          "predicted_per_second": 9.836086199306608
+        }
+      ],
+      "wall_seconds": null,
+      "sha256": {
+        "brief.txt": "1b39beb7d9bb5734c149ff8b03a57fc9ac67187d4ef8c521f3dfe079d21435eb",
+        "verifier.json": "a763f63da269445ae98cec98a4b7c3a6d3e14eafb3f611981831f761b5a0f384",
+        "inky-wire.jsonl": "4668bb92c89ca8c5b2f308bf720dcee3cacd04a0c99fdd3f1b15788070e5bbaa",
+        "mcp-wire.jsonl": "fae6e346947149565ea6d232c2e327acbe0eb224995e38e6ae90b547c3369ed3",
+        "invocation.json": "b299a559b205a228fac565651435d6d27826fee8e0a42e5a2474c4932c7c5198",
+        "gdk.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "session.json": "53155bbaeb4a4957b0f7ea7a8ccdd0bef05f3adf6c00dfd07ebb58582c03ae55",
+        "session.preflight.jsonl": "bc47bfbbf5c4e8ba55d4f6599fafc663f18ff4f90404fd91dc7ea192e32b68b0",
+        "workspace/storybook-scene.js": "e9cd58d83680082be970688568d538f167cc58c1af08ad9be54aa3da83d80787"
+      }
+    },
+    "recovered_style": {
+      "provider_reply_sha256": "bf351d4fa7b7e79d8616fcf91e31cb4a4c053d81ba0a724f1189a42e80aa3563",
+      "style_file_sha256": "236f155422ff9cc18b97be31ba9463b74d16ac4dd924d41edb506e3131b8b0bc",
+      "provider_trace_sha256": "4e3ef434f8c76be8a0f13b9669139cdbcbb466c832919ff2d62d3f5138ed8975",
+      "tool_write_completed": false
+    },
+    "26-storybook-ink-retry-02": {
+      "model": "inky-mini-varloop",
+      "base_commit": "59939944011b1d637898cb12aa4dace4fefdc320",
+      "gdk_sha256": "178e0d3db30629a3508b67cb038aed337bfbc7968f42b4aff07fad202db28677",
+      "writes": [
+        {
+          "action": 0,
+          "path": "storybook-ink.css",
+          "sha256": "9a4a3167ed3ac1191e4e1040988153e165e29c291c556090d094b03641999ff9"
+        }
+      ],
+      "verifications": [],
+      "solver_verified": false,
+      "provider_calls": 1,
+      "provider_timings": [
+        {
+          "cache_n": 384,
+          "prompt_n": 77,
+          "prompt_ms": 4513.582,
+          "prompt_per_token_ms": 58.617948051948055,
+          "prompt_per_second": 17.059621382750993,
+          "predicted_n": 234,
+          "predicted_ms": 57637.22,
+          "predicted_per_token_ms": 247.37004291845494,
+          "predicted_per_second": 4.042526686748597
+        }
+      ],
+      "wall_seconds": 64.066133,
+      "sha256": {
+        "brief.txt": "6a9892beb531b9ce59a83236c6780fd5a43cd24328215e39a58529c9a0f315d8",
+        "verifier.json": "fb06901d05cfe6b704fa86227d6155de33d3760d2087b22127651ca77c4e15ad",
+        "inky-wire.jsonl": "6b333b5a4e166febd5b564edb95c9bf38b77bb5d6dba098fcfbb7db14c6938ce",
+        "mcp-wire.jsonl": "e6c402d7750a6762289f3f39fb70ed5993dfbcf4e8699823d0338630c082a596",
+        "invocation.json": "c7ad9c5f845373ee56aeb03cc841244a30b93e956e748a1f59d68a00483741fa",
+        "gdk.json": "ff35b544a8c74e842699f40321de7c8395ec2b8c0654dd5edd2c024273e17639",
+        "session.json": "2d23f741125c314c4afd9bc4240b59550dd864fb72e12f85cb6eaef01be4de1e",
+        "session.preflight.jsonl": "ed817faf0bfcc22659c6bcfd95591d5f03942d98e02e69fcef82e8aab29994b0",
+        "workspace/storybook-ink.css": "9a4a3167ed3ac1191e4e1040988153e165e29c291c556090d094b03641999ff9"
+      }
+    }
+  },
+  "browser": {
+    "status": "verified",
+    "game": "storyworld",
+    "title": "The Hat That Held the Moon — A Village Tale",
+    "checks": [
+      "20 distinct Canvas scenes through player controls",
+      "response formulas and bounded effects match independent replay",
+      "all endings and restart work"
+    ]
+  },
+  "artifacts": {
+    "art.js": "f83539818861132408eff088492148751ede1b18080adfe076b69369c87305a2",
+    "balance.json": "60fb43d3ea7fb04debbdd21154c788293d71ce22b9d8124ee210d4d6e754537e",
+    "index.html": "147d7341910e43f15b65d8ebf25db389ca654805b820574a5723948e6b75933c",
+    "player.js": "58d52d933a574d00e7131335e99356319d18f8ebf4eba551c0264742bb32766e",
+    "world-data.js": "ee05da52d6e2bddf92877e1e2348c152620b6aab5a89f5608403fcf9b8890ed3"
+  }
+}
