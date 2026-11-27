@@ -25,3 +25,4 @@ jobs:
       - run: node storyworlds/tools/pp2_balance/strategic_robustness_pilot.mjs
       - run: node storyworlds/tools/pp2_balance/robust_authoring_replay.mjs
       - run: node storyworlds/tools/pp2_balance/robust_authoring_guardrails.mjs
+      - run: node storyworlds/tools/pp2_balance/proposal_learning_replay.mjs
