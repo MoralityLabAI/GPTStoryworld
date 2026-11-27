@@ -1,0 +1,18 @@
+# PP2-BAL-11B: matched-ranker component memory, spent-root study
+
+All six PP2-BAL-10 roots are spent. This development comparison does not establish prospective generalization or promote any learned policy. Eight controllers, 12 trajectories, 768 queries each. All share one exact transport attempt per miss after fast pure. 8192 retained serialized UTF-8 bytes; transport arms split 4096/4096. Eight identity ceiling. Whole pool keys are transient equality checks on payloads; there is no persistent duplicate pool key. Components and whole pools use the same witness-score function and bounded packet dual-subset selection. Whole-single chooses a single group; whole-pooled allows cross-group composition. Component-LRU-6 changes only the witness cap from two to six. Random eviction uses a fixed xorshift seed. Whole vs component representations differ in per-entry metadata, as part of the storage design. Identity hits do not touch component bank. No cold counterfactual labels supplied online.
+
+Utility eviction uses cumulative estimated net normalizations per serialized component byte. It penalizes all proposed vectors by equal shares of the actual transport cost (including failures). Successful proof vectors share a bonus based on the running mean of actual previous cold fallbacks, initialized to zero. This is a deliberately simple fixed estimator, not a learned policy or unbiased causal credit. Frequency counts successful certificate participation. All proposed proof vectors come from verified screens, are represented using the existing verifier's rational strings, and are independently reverified on the target. No new rational compression applied. Native ranking uses deterministic insertion ordering with comparison counters. Bank accounting charges serialized state including keys, seed, running cold mean and credit. Audit counters and scratch/heap are excluded. Meter serializations/serialized bytes, lookup and ranking comparisons, scanned entries, approximate profile cells, dual-selection scans, credit updates, evictions separately. Rational normalizations measure existing verifier work only; do not add unlike units or infer wall-clock speedup. Measurement serialization itself is counted. No RSS measurement.
+
+| Mode | Normalizations | Exact transports | Cold fallbacks | Peak retained bytes | Approx. profile cells | Serialized bytes processed |
+|---|---:|---:|---:|---:|---:|---:|
+| identity | 17029537 | 0 | 201 | 8191 | 0 | 10795807 |
+| whole_single | 7675793 | 144 | 75 | 7923 | 22112 | 9910841 |
+| whole_pooled | 8067529 | 140 | 79 | 8185 | 22144 | 10033025 |
+| component_lru | 8067355 | 140 | 79 | 7921 | 22208 | 12833480 |
+| component_random | 8150568 | 138 | 80 | 7927 | 21792 | 12868033 |
+| component_frequency | 8067355 | 140 | 79 | 7921 | 22208 | 12833480 |
+| component_utility | 8067355 | 140 | 79 | 7986 | 21968 | 13100994 |
+| component_lru_6 | 7849544 | 145 | 74 | 7921 | 21888 | 12642118 |
+
+Audit: 6144 outputs, 6144 exact cold-interval parity. The receipt contains root and trajectory statistics and paired root differences against whole-pooled. Replay via node storyworlds/tools/pp2_balance/proof_component_study_replay.mjs. Calculated from the repository's existing JS verifier code in an isolated JS runtime. Hosted replay pending. The retained-state bound does not bound transient heap or peak serialization allocation. Full native reader extraction was previously performed in PP2-BAL-10, not rerun here. Next freeze genuinely different transition structures and ordered policy rosters before generating any prospective evaluation. Do not tune against fresh outcomes.
