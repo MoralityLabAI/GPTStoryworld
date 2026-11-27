@@ -64,7 +64,7 @@ const api=(function gymFactory(B,S,C){
    const row={key:k,grid:[...grid],edits:p.edits.length,game:id,author_loss:metric.loss,p:metric.p_readout_tv,p2:metric.p2_readout_tv,bad:metric.dead_or_horizon,worst_lower:screen.lower,worst_upper:screen.upper,j_lower:plus(metric.loss,screen.lower),j_upper:plus(metric.loss,screen.upper),has_witness:screen.kind!=='unresolved_no_witness',mass:ends.map(e=>game.endings.flat().filter(x=>x===e).length/game.endings.flat().length)};
    cache.set(k,row);return row;
   }
-  return {spec,n,context,base:Array(n).fill(1),evaluate,receipt:()=>({spec,context,dimensions:n,space:4**n,target,manifest,blocks:bs,rows:[...cache.values()],games,authorTransitions,strategicTransitions})};
+  return {spec,n,context,base:Array(n).fill(1),evaluate,gameFor:row=>{ok(cache.get(row.key)===row,'game lookup requires evaluated row');return games[row.game]},receipt:()=>({spec,context,dimensions:n,space:4**n,target,manifest,blocks:bs,rows:[...cache.values()],games,authorTransitions,strategicTransitions})};
  }
  function neighbors(g){
   const out=[];
