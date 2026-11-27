@@ -1,0 +1,148 @@
+{
+  "status": "spent_development_only",
+  "config": {
+    "totalBytes": 8192,
+    "identityCeiling": 8,
+    "packetWitnesses": 6,
+    "packetDuals": 12,
+    "attempts": 1,
+    "policy": "one packet on miss after early pure"
+  },
+  "roots": 1,
+  "trajectories": 2,
+  "queries": 128,
+  "auditedOutputs": 512,
+  "parity": 512,
+  "aggregate": {
+    "identity": {
+      "counts": {
+        "queries": 128,
+        "identity": 63,
+        "pure": 19,
+        "transport": 0,
+        "cold": 46,
+        "attempts": 0,
+        "failed": 0,
+        "packets": 0,
+        "packetWitnesses": 0,
+        "packetDuals": 0,
+        "approxCells": 0,
+        "wholeScans": 0
+      },
+      "work": {
+        "public_certify_calls": 4630,
+        "rational_normalizations": 3875660,
+        "rational_comparisons": 1383157,
+        "regret_evaluations": 6820,
+        "fast_pure_checks": 309,
+        "solver_calls": 92,
+        "envelope_calls": 46,
+        "bilinear_profile_evaluations": 8180,
+        "dyadic_corner_evaluations": 2208,
+        "cover_verifier_calls": 92,
+        "cold_screen_calls": 46,
+        "cold_screen_verifier_calls": 65
+      },
+      "peakTotal": 8192
+    },
+    "whole_feasible": {
+      "counts": {
+        "queries": 128,
+        "identity": 57,
+        "pure": 23,
+        "transport": 26,
+        "cold": 22,
+        "attempts": 46,
+        "failed": 20,
+        "packets": 46,
+        "packetWitnesses": 92,
+        "packetDuals": 101,
+        "approxCells": 5568,
+        "wholeScans": 184
+      },
+      "work": {
+        "public_certify_calls": 2529,
+        "rational_normalizations": 2159816,
+        "rational_comparisons": 687440,
+        "regret_evaluations": 3343,
+        "fast_pure_checks": 337,
+        "solver_calls": 44,
+        "envelope_calls": 22,
+        "bilinear_profile_evaluations": 3920,
+        "dyadic_corner_evaluations": 1056,
+        "cover_verifier_calls": 44,
+        "cold_screen_calls": 22,
+        "cold_screen_verifier_calls": 45,
+        "transport_profile_checks": 92,
+        "dual_cell_evaluations": 8528
+      },
+      "peakTotal": 8073
+    },
+    "component_lru": {
+      "counts": {
+        "queries": 128,
+        "identity": 56,
+        "pure": 23,
+        "transport": 28,
+        "cold": 21,
+        "attempts": 47,
+        "failed": 19,
+        "packets": 47,
+        "packetWitnesses": 267,
+        "packetDuals": 200,
+        "approxCells": 0,
+        "wholeScans": 0
+      },
+      "work": {
+        "public_certify_calls": 2664,
+        "rational_normalizations": 2148835,
+        "rational_comparisons": 683177,
+        "regret_evaluations": 3444,
+        "fast_pure_checks": 341,
+        "solver_calls": 42,
+        "envelope_calls": 21,
+        "bilinear_profile_evaluations": 3709,
+        "dyadic_corner_evaluations": 1008,
+        "cover_verifier_calls": 42,
+        "cold_screen_calls": 21,
+        "cold_screen_verifier_calls": 44,
+        "transport_profile_checks": 267,
+        "dual_cell_evaluations": 10400
+      },
+      "peakTotal": 7690
+    },
+    "component_frequency": {
+      "counts": {
+        "queries": 128,
+        "identity": 56,
+        "pure": 23,
+        "transport": 28,
+        "cold": 21,
+        "attempts": 47,
+        "failed": 19,
+        "packets": 47,
+        "packetWitnesses": 267,
+        "packetDuals": 200,
+        "approxCells": 0,
+        "wholeScans": 0
+      },
+      "work": {
+        "public_certify_calls": 2664,
+        "rational_normalizations": 2148735,
+        "rational_comparisons": 683045,
+        "regret_evaluations": 3444,
+        "fast_pure_checks": 341,
+        "solver_calls": 42,
+        "envelope_calls": 21,
+        "bilinear_profile_evaluations": 3709,
+        "dyadic_corner_evaluations": 1008,
+        "cover_verifier_calls": 42,
+        "cold_screen_calls": 21,
+        "cold_screen_verifier_calls": 44,
+        "transport_profile_checks": 267,
+        "dual_cell_evaluations": 10400
+      },
+      "peakTotal": 7690
+    }
+  }
+}
