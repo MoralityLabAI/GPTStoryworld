@@ -68,6 +68,291 @@ endings:
 id: SW-INKY-CAMELOT-0001
 title: Camelot's Reckoning
 
+ENC trunk_001 turn=0..999
+ORX trunk_001_opt0/trunk_001_opt0_r1 -> trunk_002 | O:Hold the oath of the Round Table | E:SET none = C(0) | D:C(1)
+ORX trunk_001_opt1/trunk_001_opt1_r1 -> trunk_002 | O:Negotiate the oath with the excluded | E:SET none = C(0) | D:C(1)
+ORX trunk_001_opt2/trunk_001_opt2_r1 -> trunk_002 | O:Send Gawain toward the Grail | E:SET none = C(0) | D:C(1)
+
+ENC trunk_002 turn=0..999
+ORX trunk_002_opt0/trunk_002_opt0_r1 -> trunk_003 | O:Hold a public oath-feast | E:SET none = C(0) | D:C(1)
+ORX trunk_002_opt1/trunk_002_opt1_r1 -> trunk_003 | O:Admit exiles to judge the seat | E:SET none = C(0) | D:C(1)
+ORX trunk_002_opt2/trunk_002_opt2_r1 -> trunk_003 | O:Ask Merlin to read the Grail first | E:SET none = C(0) | D:C(1)
+
+ENC trunk_003 turn=0..999
+ORX trunk_003_opt0/trunk_003_opt0_r1 -> trunk_004 | O:Bind the Grail to the exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_003_opt1/trunk_003_opt1_r1 -> trunk_004 | O:Let Lancelot name love or law | E:SET none = C(0) | D:C(1)
+ORX trunk_003_opt2/trunk_003_opt2_r1 -> trunk_004 | O:Remake the seat as a common hall | E:SET none = C(0) | D:C(1)
+
+ENC trunk_004 turn=0..999
+ORX trunk_004_opt0/trunk_004_opt0_r1 -> trunk_005 | O:Swear a bridge oath with Gawain | E:SET none = C(0) | D:C(1)
+ORX trunk_004_opt1/trunk_004_opt1_r1 -> trunk_005 | O:Let exiles choose the seat of judgment | E:SET none = C(0) | D:C(1)
+ORX trunk_004_opt2/trunk_004_opt2_r1 -> trunk_005 | O:Read the shard as judge of the table | E:SET none = C(0) | D:C(1)
+
+ENC trunk_005 turn=0..999
+ORX trunk_005_opt0/trunk_005_opt0_r1 -> trunk_006 | O:Pledge bread before crown | E:SET none = C(0) | D:C(1)
+ORX trunk_005_opt1/trunk_005_opt1_r1 -> trunk_006 | O:Bind the shard to Gawain's wound | E:SET none = C(0) | D:C(1)
+ORX trunk_005_opt2/trunk_005_opt2_r1 -> trunk_006 | O:Admit exiles as witnesses of the table | E:SET none = C(0) | D:C(1)
+
+ENC trunk_006 turn=0..999
+ORX trunk_006_opt0/trunk_006_opt0_r1 -> trunk_007 | O:Bind the table to the fed exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_006_opt1/trunk_006_opt1_r1 -> trunk_007 | O:Let Lancelot carry both oaths | E:SET none = C(0) | D:C(1)
+ORX trunk_006_opt2/trunk_006_opt2_r1 -> trunk_007 | O:Carry the shard to the exiles | E:SET none = C(0) | D:C(1)
+
+ENC trunk_007 turn=0..999
+ORX trunk_007_opt0/trunk_007_opt0_r1 -> trunk_008 | O:Make the Round Table a commons | E:SET none = C(0) | D:C(1)
+ORX trunk_007_opt1/trunk_007_opt1_r1 -> trunk_008 | O:Let Lancelot witness both oaths | E:SET none = C(0) | D:C(1)
+ORX trunk_007_opt2/trunk_007_opt2_r1 -> trunk_008 | O:Let the shard judge the claim | E:SET none = C(0) | D:C(1)
+
+ENC trunk_008 turn=0..999
+ORX trunk_008_opt0/trunk_008_opt0_r1 -> trunk_009 | O:Bind the Round Table to the sworn exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_008_opt1/trunk_008_opt1_r1 -> trunk_009 | O:Send the shard outward with the excluded | E:SET none = C(0) | D:C(1)
+ORX trunk_008_opt2/trunk_008_opt2_r1 -> trunk_009 | O:Give Mordred a public office under the table | E:SET none = C(0) | D:C(1)
+
+ENC trunk_009 turn=0..999
+ORX trunk_009_opt0/trunk_009_opt0_r1 -> trunk_010 | O:Split the Round Table into two sworn offices | E:SET none = C(0) | D:C(1)
+ORX trunk_009_opt1/trunk_009_opt1_r1 -> trunk_010 | O:Carry the Grail vessel past the threshold | E:SET none = C(0) | D:C(1)
+ORX trunk_009_opt2/trunk_009_opt2_r1 -> trunk_010 | O:Let the binding judge Arthur and Mordred separately | E:SET none = C(0) | D:C(1)
+
+ENC trunk_010 turn=0..999
+ORX trunk_010_opt0/trunk_010_opt0_r1 -> trunk_011 | O:Let Guinevere swear openly beside Arthur | E:SET none = C(0) | D:C(1)
+ORX trunk_010_opt1/trunk_010_opt1_r1 -> trunk_011 | O:Let the exiles hold the shard-key | E:SET none = C(0) | D:C(1)
+ORX trunk_010_opt2/trunk_010_opt2_r1 -> trunk_011 | O:Let the binding answer both claimants | E:SET none = C(0) | D:C(1)
+
+ENC trunk_011 turn=0..999
+ORX trunk_011_opt0/trunk_011_opt0_r1 -> trunk_012 | O:Send a party east to find the Grail | E:SET none = C(0) | D:C(1)
+ORX trunk_011_opt1/trunk_011_opt1_r1 -> trunk_012 | O:Seal the shrine and guard the Grail in place | E:SET none = C(0) | D:C(1)
+ORX trunk_011_opt2/trunk_011_opt2_r1 -> trunk_012 | O:Let the exiles set the terms of the Grail's return | E:SET none = C(0) | D:C(1)
+
+ENC trunk_012 turn=0..999
+ORX trunk_012_opt0/trunk_012_opt0_r1 -> trunk_013 | O:Set the threshold before the crown | E:SET none = C(0) | D:C(1)
+ORX trunk_012_opt1/trunk_012_opt1_r1 -> trunk_013 | O:Open the east road to the Grail | E:SET none = C(0) | D:C(1)
+ORX trunk_012_opt2/trunk_012_opt2_r1 -> trunk_013 | O:Name the Grail a trust, not a prize | E:SET none = C(0) | D:C(1)
+
+ENC trunk_013 turn=0..999
+ORX trunk_013_opt0/trunk_013_opt0_r1 -> trunk_014 | O:Arthur swears as answerer | E:SET none = C(0) | D:C(1)
+ORX trunk_013_opt1/trunk_013_opt1_r1 -> trunk_014 | O:Share the answer between knight and exile | E:SET none = C(0) | D:C(1)
+ORX trunk_013_opt2/trunk_013_opt2_r1 -> trunk_014 | O:Let the shard-key choose the answerer | E:SET none = C(0) | D:C(1)
+
+ENC trunk_014 turn=0..999
+ORX trunk_014_opt0/trunk_014_opt0_r1 -> trunk_015 | O:Let Lancelot and the exile swear paired under the key | E:SET none = C(0) | D:C(1)
+ORX trunk_014_opt1/trunk_014_opt1_r1 -> trunk_015 | O:Let the shard-key decide the answerer | E:SET none = C(0) | D:C(1)
+ORX trunk_014_opt2/trunk_014_opt2_r1 -> trunk_015 | O:Arthur breaks the key's verdict and swears alone | E:SET none = C(0) | D:C(1)
+
+ENC trunk_015 turn=0..999
+ORX trunk_015_opt0/trunk_015_opt0_r1 -> trunk_016 | O:Arthur asks the key to name the judge | E:SET none = C(0) | D:C(1)
+ORX trunk_015_opt1/trunk_015_opt1_r1 -> trunk_016 | O:Guinevere rules that law comes before the relic | E:SET none = C(0) | D:C(1)
+ORX trunk_015_opt2/trunk_015_opt2_r1 -> trunk_016 | O:Arthur offers Mordred a seat beside the oath-line | E:SET none = C(0) | D:C(1)
+
+ENC trunk_016 turn=0..999
+ORX trunk_016_opt0/trunk_016_opt0_r1 -> trunk_017 | O:Arthur seats the whole Round Table as judge of the bargain | E:SET none = C(0) | D:C(1)
+ORX trunk_016_opt1/trunk_016_opt1_r1 -> trunk_017 | O:Lancelot names his divided loyalty aloud | E:SET none = C(0) | D:C(1)
+ORX trunk_016_opt2/trunk_016_opt2_r1 -> trunk_017 | O:Merlin seals the east seam with old magic | E:SET none = C(0) | D:C(1)
+
+ENC trunk_017 turn=0..999
+ORX trunk_017_opt0/trunk_017_opt0_r1 -> trunk_018 | O:Arthur declares the oath binds all, Mordred included | E:SET none = C(0) | D:C(1)
+ORX trunk_017_opt1/trunk_017_opt1_r1 -> trunk_018 | O:Guinevere assigns a judge to the bargain | E:SET none = C(0) | D:C(1)
+ORX trunk_017_opt2/trunk_017_opt2_r1 -> trunk_018 | O:Lancelot steps forward to absorb the cost | E:SET none = C(0) | D:C(1)
+
+ENC trunk_018 turn=0..999
+ORX trunk_018_opt0/trunk_018_opt0_r1 -> trunk_019 | O:Arthur seats the exiles as witnesses to succession | E:SET none = C(0) | D:C(1)
+ORX trunk_018_opt1/trunk_018_opt1_r1 -> trunk_019 | O:Lancelot refuses to choose between peace and loyalty | E:SET none = C(0) | D:C(1)
+ORX trunk_018_opt2/trunk_018_opt2_r1 -> trunk_019 | O:Morgan asks Merlin what the old magic would do now | E:SET none = C(0) | D:C(1)
+
+ENC trunk_019 turn=0..999
+ORX trunk_019_opt0/trunk_019_opt0_r1 -> trunk_020 | O:Arthur reads the covenant aloud | E:SET none = C(0) | D:C(1)
+ORX trunk_019_opt1/trunk_019_opt1_r1 -> trunk_020 | O:Lancelot binds himself to the seam | E:SET none = C(0) | D:C(1)
+ORX trunk_019_opt2/trunk_019_opt2_r1 -> trunk_020 | O:Morgan opens the old magic | E:SET none = C(0) | D:C(1)
+
+ENC trunk_020 turn=0..999
+ORX trunk_020_opt0/trunk_020_opt0_r1 -> trunk_021 | O:Arthur seats Mordred beside him | E:SET none = C(0) | D:C(1)
+ORX trunk_020_opt1/trunk_020_opt1_r1 -> trunk_021 | O:Lancelot walks to the seam and binds the oath | E:SET none = C(0) | D:C(1)
+ORX trunk_020_opt2/trunk_020_opt2_r1 -> trunk_021 | O:Morgan invokes the old magic over the threshold | E:SET none = C(0) | D:C(1)
+
+ENC trunk_021 turn=0..999
+ORX trunk_021_opt0/trunk_021_opt0_r1 -> trunk_022 | O:Arthur opens the door to the exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_021_opt1/trunk_021_opt1_r1 -> trunk_022 | O:Lancelot lifts the cloth toward the exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_021_opt2/trunk_021_opt2_r1 -> trunk_022 | O:Morgan bridges the threshold with old magic | E:SET none = C(0) | D:C(1)
+
+ENC trunk_022 turn=0..999
+ORX trunk_022_opt0/trunk_022_opt0_r1 -> trunk_023 | O:Arthur stands down among the exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_022_opt1/trunk_022_opt1_r1 -> trunk_023 | O:Lancelot carries the seam outward | E:SET none = C(0) | D:C(1)
+ORX trunk_022_opt2/trunk_022_opt2_r1 -> trunk_023 | O:Morgan binds the torn edge into a road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_023 turn=0..999
+ORX trunk_023_opt0/trunk_023_opt0_r1 -> trunk_024 | O:Arthur names the terms | E:SET none = C(0) | D:C(1)
+ORX trunk_023_opt1/trunk_023_opt1_r1 -> trunk_024 | O:Lancelot carries the lamp out | E:SET none = C(0) | D:C(1)
+ORX trunk_023_opt2/trunk_023_opt2_r1 -> trunk_024 | O:Morgan binds the torn edge | E:SET none = C(0) | D:C(1)
+
+ENC trunk_024 turn=0..999
+ORX trunk_024_opt0/trunk_024_opt0_r1 -> trunk_025 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
+ORX trunk_024_opt1/trunk_024_opt1_r1 -> trunk_025 | O:Lancelot carries the seam to the villages | E:SET none = C(0) | D:C(1)
+ORX trunk_024_opt2/trunk_024_opt2_r1 -> trunk_025 | O:Morgan and Merlin bind the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_025 turn=0..999
+ORX trunk_025_opt0/trunk_025_opt0_r1 -> trunk_026 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
+ORX trunk_025_opt1/trunk_025_opt1_r1 -> trunk_026 | O:Lancelot carries the seam to the villages | E:SET none = C(0) | D:C(1)
+ORX trunk_025_opt2/trunk_025_opt2_r1 -> trunk_026 | O:Merlin and Morgan hold the road open | E:SET none = C(0) | D:C(1)
+
+ENC trunk_026 turn=0..999
+ORX trunk_026_opt0/trunk_026_opt0_r1 -> trunk_027 | O:Arthur answers the exiles' terms | E:SET none = C(0) | D:C(1)
+ORX trunk_026_opt1/trunk_026_opt1_r1 -> trunk_027 | O:Lancelot carries the road outward | E:SET none = C(0) | D:C(1)
+ORX trunk_026_opt2/trunk_026_opt2_r1 -> trunk_027 | O:Morgan and Merlin open the passage | E:SET none = C(0) | D:C(1)
+
+ENC trunk_027 turn=0..999
+ORX trunk_027_opt0/trunk_027_opt0_r1 -> trunk_028 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
+ORX trunk_027_opt1/trunk_027_opt1_r1 -> trunk_028 | O:Lancelot carries the shard outward | E:SET none = C(0) | D:C(1)
+ORX trunk_027_opt2/trunk_027_opt2_r1 -> trunk_028 | O:Merlin and Morgan ward the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_028 turn=0..999
+ORX trunk_028_opt0/trunk_028_opt0_r1 -> trunk_029 | O:Arthur answers the road with covenant | E:SET none = C(0) | D:C(1)
+ORX trunk_028_opt1/trunk_028_opt1_r1 -> trunk_029 | O:Lancelot carries the shard and its reversed name | E:SET none = C(0) | D:C(1)
+ORX trunk_028_opt2/trunk_028_opt2_r1 -> trunk_029 | O:Morgan and Merlin make the passage a new boundary | E:SET none = C(0) | D:C(1)
+
+ENC trunk_029 turn=0..999
+ORX trunk_029_opt0/trunk_029_opt0_r1 -> trunk_030 | O:Arthur binds the exiles to a new covenant | E:SET none = C(0) | D:C(1)
+ORX trunk_029_opt1/trunk_029_opt1_r1 -> trunk_030 | O:Lancelot speaks the reversed name | E:SET none = C(0) | D:C(1)
+ORX trunk_029_opt2/trunk_029_opt2_r1 -> trunk_030 | O:Morgan and Merlin open the boundary | E:SET none = C(0) | D:C(1)
+
+ENC trunk_030 turn=0..999
+ORX trunk_030_opt0/trunk_030_opt0_r1 -> trunk_031 | O:Arthur names the succession openly | E:SET none = C(0) | D:C(1)
+ORX trunk_030_opt1/trunk_030_opt1_r1 -> trunk_031 | O:Lancelot asks the shard what is ours | E:SET none = C(0) | D:C(1)
+ORX trunk_030_opt2/trunk_030_opt2_r1 -> trunk_031 | O:Morgan and Merlin reweave the ward as law | E:SET none = C(0) | D:C(1)
+
+ENC trunk_031 turn=0..999
+ORX trunk_031_opt0/trunk_031_opt0_r1 -> trunk_032 | O:Arthur seals the exile covenant | E:SET none = C(0) | D:C(1)
+ORX trunk_031_opt1/trunk_031_opt1_r1 -> trunk_032 | O:Lancelot reads the shard as judgment | E:SET none = C(0) | D:C(1)
+ORX trunk_031_opt2/trunk_031_opt2_r1 -> trunk_032 | O:Morgan and Merlin teach the boundary to breathe | E:SET none = C(0) | D:C(1)
+
+ENC trunk_032 turn=0..999
+ORX trunk_032_opt0/trunk_032_opt0_r1 -> trunk_033 | O:Arthur swears the exiles as members of the oath | E:SET none = C(0) | D:C(1)
+ORX trunk_032_opt1/trunk_032_opt1_r1 -> trunk_033 | O:Lancelot asks the Grail to judge the oath | E:SET none = C(0) | D:C(1)
+ORX trunk_032_opt2/trunk_032_opt2_r1 -> trunk_033 | O:Merlin opens the ward into a living border | E:SET none = C(0) | D:C(1)
+
+ENC trunk_033 turn=0..999
+ORX trunk_033_opt0/trunk_033_opt0_r1 -> trunk_034 | O:Lancelot carries the shard through the border | E:SET none = C(0) | D:C(1)
+ORX trunk_033_opt1/trunk_033_opt1_r1 -> trunk_034 | O:Arthur declares the exiles the second court | E:SET none = C(0) | D:C(1)
+ORX trunk_033_opt2/trunk_033_opt2_r1 -> trunk_034 | O:Morgan and Merlin pay to reweave the ward | E:SET none = C(0) | D:C(1)
+
+ENC trunk_034 turn=0..999
+ORX trunk_034_opt0/trunk_034_opt0_r1 -> trunk_035 | O:Arthur names his heir under the Round Table oath | E:SET none = C(0) | D:C(1)
+ORX trunk_034_opt1/trunk_034_opt1_r1 -> trunk_035 | O:Lancelot carries the shard out of the ward | E:SET none = C(0) | D:C(1)
+ORX trunk_034_opt2/trunk_034_opt2_r1 -> trunk_035 | O:Merlin and Morgan ask the court to pay the ward's price | E:SET none = C(0) | D:C(1)
+
+ENC trunk_035 turn=0..999
+ORX trunk_035_opt0/trunk_035_opt0_r1 -> trunk_036 | O:Arthur stakes the succession and the ward on the oath | E:SET none = C(0) | D:C(1)
+ORX trunk_035_opt1/trunk_035_opt1_r1 -> trunk_036 | O:Lancelot carries the shard beyond the border | E:SET none = C(0) | D:C(1)
+ORX trunk_035_opt2/trunk_035_opt2_r1 -> trunk_036 | O:Morgan pays the ward's price and binds the exiles or frees them | E:SET none = C(0) | D:C(1)
+
+ENC trunk_036 turn=0..999
+ORX trunk_036_opt0/trunk_036_opt0_r1 -> trunk_037 | O:Arthur convenes the Round Table as a covenant of witnesses | E:SET none = C(0) | D:C(1)
+ORX trunk_036_opt1/trunk_036_opt1_r1 -> trunk_037 | O:Lancelot carries the shard beyond the border with the exiles | E:SET none = C(0) | D:C(1)
+ORX trunk_036_opt2/trunk_036_opt2_r1 -> trunk_037 | O:Morgan asks the court which wound to keep open | E:SET none = C(0) | D:C(1)
+
+ENC trunk_037 turn=0..999
+ORX trunk_037_opt0/trunk_037_opt0_r1 -> trunk_038 | O:Arthur opens the covenant and lets the shard travel with named witnesses | E:SET none = C(0) | D:C(1)
+ORX trunk_037_opt1/trunk_037_opt1_r1 -> trunk_038 | O:Arthur keeps the shard inside and turns Camelot into a public debt ledger | E:SET none = C(0) | D:C(1)
+ORX trunk_037_opt2/trunk_037_opt2_r1 -> trunk_038 | O:Morgan asks one named keeper to bind the boundary | E:SET none = C(0) | D:C(1)
+
+ENC trunk_038 turn=0..999
+ORX trunk_038_opt0/trunk_038_opt0_r1 -> trunk_039 | O:Arthur names Gawain heir of duty | E:SET none = C(0) | D:C(1)
+ORX trunk_038_opt1/trunk_038_opt1_r1 -> trunk_039 | O:Arthur grants the exiles a road-charter | E:SET none = C(0) | D:C(1)
+ORX trunk_038_opt2/trunk_038_opt2_r1 -> trunk_039 | O:Merlin and Morgan bind the violet seam | E:SET none = C(0) | D:C(1)
+
+ENC trunk_039 turn=0..999
+ORX trunk_039_opt0/trunk_039_opt0_r1 -> trunk_040 | O:Arthur names Gawain and the exiles joint keepers | E:SET none = C(0) | D:C(1)
+ORX trunk_039_opt1/trunk_039_opt1_r1 -> trunk_040 | O:Arthur shields the Grail inside the ward | E:SET none = C(0) | D:C(1)
+ORX trunk_039_opt2/trunk_039_opt2_r1 -> trunk_040 | O:Morgan and Merlin name the binding price | E:SET none = C(0) | D:C(1)
+
+ENC trunk_040 turn=0..999
+ORX trunk_040_opt0/trunk_040_opt0_r1 -> trunk_041 | O:Gawain keeps the road-oath | E:SET none = C(0) | D:C(1)
+ORX trunk_040_opt1/trunk_040_opt1_r1 -> trunk_041 | O:Name a price for binding the seam | E:SET none = C(0) | D:C(1)
+ORX trunk_040_opt2/trunk_040_opt2_r1 -> trunk_041 | O:Let the exiles judge the Grail | E:SET none = C(0) | D:C(1)
+
+ENC trunk_041 turn=0..999
+ORX trunk_041_opt0/trunk_041_opt0_r1 -> trunk_042 | O:Gawain carries the oath outward | E:SET none = C(0) | D:C(1)
+ORX trunk_041_opt1/trunk_041_opt1_r1 -> trunk_042 | O:Merlin and Morgan name the binding price | E:SET none = C(0) | D:C(1)
+ORX trunk_041_opt2/trunk_041_opt2_r1 -> trunk_042 | O:Let the exiles judge the shard and road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_042 turn=0..999
+ORX trunk_042_opt0/trunk_042_opt0_r1 -> trunk_043 | O:Arthur holds the ward | E:SET none = C(0) | D:C(1)
+ORX trunk_042_opt1/trunk_042_opt1_r1 -> trunk_043 | O:Let the Grail walk the roads | E:SET none = C(0) | D:C(1)
+ORX trunk_042_opt2/trunk_042_opt2_r1 -> trunk_043 | O:Let the exiles write the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_043 turn=0..999
+ORX trunk_043_opt0/trunk_043_opt0_r1 -> trunk_044 | O:Arthur holds the ward | E:SET none = C(0) | D:C(1)
+ORX trunk_043_opt1/trunk_043_opt1_r1 -> trunk_044 | O:Percival carries the Grail outward | E:SET none = C(0) | D:C(1)
+ORX trunk_043_opt2/trunk_043_opt2_r1 -> trunk_044 | O:The exiles write the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_044 turn=0..999
+ORX trunk_044_opt0/trunk_044_opt0_r1 -> trunk_045 | O:Seal a three-handed bargain | E:SET none = C(0) | D:C(1)
+ORX trunk_044_opt1/trunk_044_opt1_r1 -> trunk_045 | O:Let the shard leave the shrine | E:SET none = C(0) | D:C(1)
+ORX trunk_044_opt2/trunk_044_opt2_r1 -> trunk_045 | O:Let the exiles write the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_045 turn=0..999
+ORX trunk_045_opt0/trunk_045_opt0_r1 -> trunk_046 | O:Arthur names a successor under the charter | E:SET none = C(0) | D:C(1)
+ORX trunk_045_opt1/trunk_045_opt1_r1 -> trunk_046 | O:Lancelot walks the torn seal to the wall | E:SET none = C(0) | D:C(1)
+ORX trunk_045_opt2/trunk_045_opt2_r1 -> trunk_046 | O:Percival and the Lady of the Lake follow the silence | E:SET none = C(0) | D:C(1)
+
+ENC trunk_046 turn=0..999
+ORX trunk_046_opt0/trunk_046_opt0_r1 -> trunk_047 | O:Arthur crowns Gawain under exile-witnessed law | E:SET none = C(0) | D:C(1)
+ORX trunk_046_opt1/trunk_046_opt1_r1 -> trunk_047 | O:Lancelot carries the torn seal to Mordred | E:SET none = C(0) | D:C(1)
+ORX trunk_046_opt2/trunk_046_opt2_r1 -> trunk_047 | O:Percival and the Lady of the Lake take the silence outward | E:SET none = C(0) | D:C(1)
+
+ENC trunk_047 turn=0..999
+ORX trunk_047_opt0/trunk_047_opt0_r1 -> trunk_048 | O:Arthur speaks the succession oath before all | E:SET none = C(0) | D:C(1)
+ORX trunk_047_opt1/trunk_047_opt1_r1 -> trunk_048 | O:Lancelot and Bedivere carry the oath to Mordred | E:SET none = C(0) | D:C(1)
+ORX trunk_047_opt2/trunk_047_opt2_r1 -> trunk_048 | O:Percival and the Lady of the Lake take the road | E:SET none = C(0) | D:C(1)
+
+ENC trunk_048 turn=0..999
+ORX trunk_048_opt0/trunk_048_opt0_r1 -> trunk_049 | O:Arthur names Gawain heir before the dead | E:SET none = C(0) | D:C(1)
+ORX trunk_048_opt1/trunk_048_opt1_r1 -> trunk_049 | O:Arthur, Mordred, exiles, and road-watchers sign a conditional peace | E:SET none = C(0) | D:C(1)
+ORX trunk_048_opt2/trunk_048_opt2_r1 -> trunk_049 | O:Percival and the Lady of the Lake take the empty cup outward | E:SET none = C(0) | D:C(1)
+
+ENC trunk_049 turn=0..999
+ORX trunk_049_opt0/trunk_049_opt0_r1 -> trunk_050 | O:Arthur speaks Gawain as heir under public oath | E:SET none = C(0) | D:C(1)
+ORX trunk_049_opt1/trunk_049_opt1_r1 -> trunk_050 | O:Arthur and Mordred sign an exile-witnessed covenant | E:SET none = C(0) | D:C(1)
+ORX trunk_049_opt2/trunk_049_opt2_r1 -> trunk_050 | O:Percival and the Lady of the Lake carry the empty cup outward | E:SET none = C(0) | D:C(1)
+
+ENC trunk_050 turn=0..999
+ORX trunk_050_opt0/trunk_050_opt0_r1 -> trunk_051 | O:Arthur names Gawain heir and binds the east road | E:SET none = C(0) | D:C(1)
+ORX trunk_050_opt1/trunk_050_opt1_r1 -> trunk_051 | O:Percival and the Lady of the Lake carry the cup through the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_050_opt2/trunk_050_opt2_r1 -> trunk_051 | O:Arthur, Mordred, and the exiles sign a witnessed covenant | E:SET none = C(0) | D:C(1)
+
+ENC trunk_051 turn=0..999
+ORX trunk_051_opt0/trunk_051_opt0_r_e01 -> e01_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e02 -> e02_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e03 -> e03_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e04 -> e04_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e05 -> e05_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e06 -> e06_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e07 -> e07_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e08 -> e08_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e09 -> e09_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e10 -> e10_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt0/trunk_051_opt0_r_e11 -> e11_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e01 -> e01_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e02 -> e02_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e03 -> e03_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e04 -> e04_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e05 -> e05_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e06 -> e06_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e07 -> e07_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e08 -> e08_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e09 -> e09_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e10 -> e10_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt1/trunk_051_opt1_r_e11 -> e11_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e01 -> e01_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e02 -> e02_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e03 -> e03_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e04 -> e04_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e05 -> e05_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e06 -> e06_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e07 -> e07_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e08 -> e08_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e09 -> e09_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e10 -> e10_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+ORX trunk_051_opt2/trunk_051_opt2_r_e11 -> e11_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
+
 ENC e01_001 turn=0..999
 ORX e01_001_opt0/e01_001_opt0_r1 -> e01_002 | O:Arthur proposes the civic covenant | E:SET none = C(0) | D:C(1)
 ORX e01_001_opt1/e01_001_opt1_r1 -> e01_002 | O:Guinevere declares the Grail a covenant | E:SET none = C(0) | D:C(1)
@@ -1279,288 +1564,3 @@ ORX e11_021_opt1/e11_021_opt1_r1 -> e11_022 | O:Leave seat, throne and cup visib
 ORX e11_021_opt2/e11_021_opt2_r1 -> e11_022 | O:Make the two unanswered names a public hearing | E:SET none = C(0) | D:C(1)
 
 ENC e11_022 turn=0..999
-
-ENC trunk_001 turn=0..999
-ORX trunk_001_opt0/trunk_001_opt0_r1 -> trunk_002 | O:Hold the oath of the Round Table | E:SET none = C(0) | D:C(1)
-ORX trunk_001_opt1/trunk_001_opt1_r1 -> trunk_002 | O:Negotiate the oath with the excluded | E:SET none = C(0) | D:C(1)
-ORX trunk_001_opt2/trunk_001_opt2_r1 -> trunk_002 | O:Send Gawain toward the Grail | E:SET none = C(0) | D:C(1)
-
-ENC trunk_002 turn=0..999
-ORX trunk_002_opt0/trunk_002_opt0_r1 -> trunk_003 | O:Hold a public oath-feast | E:SET none = C(0) | D:C(1)
-ORX trunk_002_opt1/trunk_002_opt1_r1 -> trunk_003 | O:Admit exiles to judge the seat | E:SET none = C(0) | D:C(1)
-ORX trunk_002_opt2/trunk_002_opt2_r1 -> trunk_003 | O:Ask Merlin to read the Grail first | E:SET none = C(0) | D:C(1)
-
-ENC trunk_003 turn=0..999
-ORX trunk_003_opt0/trunk_003_opt0_r1 -> trunk_004 | O:Bind the Grail to the exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_003_opt1/trunk_003_opt1_r1 -> trunk_004 | O:Let Lancelot name love or law | E:SET none = C(0) | D:C(1)
-ORX trunk_003_opt2/trunk_003_opt2_r1 -> trunk_004 | O:Remake the seat as a common hall | E:SET none = C(0) | D:C(1)
-
-ENC trunk_004 turn=0..999
-ORX trunk_004_opt0/trunk_004_opt0_r1 -> trunk_005 | O:Swear a bridge oath with Gawain | E:SET none = C(0) | D:C(1)
-ORX trunk_004_opt1/trunk_004_opt1_r1 -> trunk_005 | O:Let exiles choose the seat of judgment | E:SET none = C(0) | D:C(1)
-ORX trunk_004_opt2/trunk_004_opt2_r1 -> trunk_005 | O:Read the shard as judge of the table | E:SET none = C(0) | D:C(1)
-
-ENC trunk_005 turn=0..999
-ORX trunk_005_opt0/trunk_005_opt0_r1 -> trunk_006 | O:Pledge bread before crown | E:SET none = C(0) | D:C(1)
-ORX trunk_005_opt1/trunk_005_opt1_r1 -> trunk_006 | O:Bind the shard to Gawain's wound | E:SET none = C(0) | D:C(1)
-ORX trunk_005_opt2/trunk_005_opt2_r1 -> trunk_006 | O:Admit exiles as witnesses of the table | E:SET none = C(0) | D:C(1)
-
-ENC trunk_006 turn=0..999
-ORX trunk_006_opt0/trunk_006_opt0_r1 -> trunk_007 | O:Bind the table to the fed exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_006_opt1/trunk_006_opt1_r1 -> trunk_007 | O:Let Lancelot carry both oaths | E:SET none = C(0) | D:C(1)
-ORX trunk_006_opt2/trunk_006_opt2_r1 -> trunk_007 | O:Carry the shard to the exiles | E:SET none = C(0) | D:C(1)
-
-ENC trunk_007 turn=0..999
-ORX trunk_007_opt0/trunk_007_opt0_r1 -> trunk_008 | O:Make the Round Table a commons | E:SET none = C(0) | D:C(1)
-ORX trunk_007_opt1/trunk_007_opt1_r1 -> trunk_008 | O:Let Lancelot witness both oaths | E:SET none = C(0) | D:C(1)
-ORX trunk_007_opt2/trunk_007_opt2_r1 -> trunk_008 | O:Let the shard judge the claim | E:SET none = C(0) | D:C(1)
-
-ENC trunk_008 turn=0..999
-ORX trunk_008_opt0/trunk_008_opt0_r1 -> trunk_009 | O:Bind the Round Table to the sworn exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_008_opt1/trunk_008_opt1_r1 -> trunk_009 | O:Send the shard outward with the excluded | E:SET none = C(0) | D:C(1)
-ORX trunk_008_opt2/trunk_008_opt2_r1 -> trunk_009 | O:Give Mordred a public office under the table | E:SET none = C(0) | D:C(1)
-
-ENC trunk_009 turn=0..999
-ORX trunk_009_opt0/trunk_009_opt0_r1 -> trunk_010 | O:Split the Round Table into two sworn offices | E:SET none = C(0) | D:C(1)
-ORX trunk_009_opt1/trunk_009_opt1_r1 -> trunk_010 | O:Carry the Grail vessel past the threshold | E:SET none = C(0) | D:C(1)
-ORX trunk_009_opt2/trunk_009_opt2_r1 -> trunk_010 | O:Let the binding judge Arthur and Mordred separately | E:SET none = C(0) | D:C(1)
-
-ENC trunk_010 turn=0..999
-ORX trunk_010_opt0/trunk_010_opt0_r1 -> trunk_011 | O:Let Guinevere swear openly beside Arthur | E:SET none = C(0) | D:C(1)
-ORX trunk_010_opt1/trunk_010_opt1_r1 -> trunk_011 | O:Let the exiles hold the shard-key | E:SET none = C(0) | D:C(1)
-ORX trunk_010_opt2/trunk_010_opt2_r1 -> trunk_011 | O:Let the binding answer both claimants | E:SET none = C(0) | D:C(1)
-
-ENC trunk_011 turn=0..999
-ORX trunk_011_opt0/trunk_011_opt0_r1 -> trunk_012 | O:Send a party east to find the Grail | E:SET none = C(0) | D:C(1)
-ORX trunk_011_opt1/trunk_011_opt1_r1 -> trunk_012 | O:Seal the shrine and guard the Grail in place | E:SET none = C(0) | D:C(1)
-ORX trunk_011_opt2/trunk_011_opt2_r1 -> trunk_012 | O:Let the exiles set the terms of the Grail's return | E:SET none = C(0) | D:C(1)
-
-ENC trunk_012 turn=0..999
-ORX trunk_012_opt0/trunk_012_opt0_r1 -> trunk_013 | O:Set the threshold before the crown | E:SET none = C(0) | D:C(1)
-ORX trunk_012_opt1/trunk_012_opt1_r1 -> trunk_013 | O:Open the east road to the Grail | E:SET none = C(0) | D:C(1)
-ORX trunk_012_opt2/trunk_012_opt2_r1 -> trunk_013 | O:Name the Grail a trust, not a prize | E:SET none = C(0) | D:C(1)
-
-ENC trunk_013 turn=0..999
-ORX trunk_013_opt0/trunk_013_opt0_r1 -> trunk_014 | O:Arthur swears as answerer | E:SET none = C(0) | D:C(1)
-ORX trunk_013_opt1/trunk_013_opt1_r1 -> trunk_014 | O:Share the answer between knight and exile | E:SET none = C(0) | D:C(1)
-ORX trunk_013_opt2/trunk_013_opt2_r1 -> trunk_014 | O:Let the shard-key choose the answerer | E:SET none = C(0) | D:C(1)
-
-ENC trunk_014 turn=0..999
-ORX trunk_014_opt0/trunk_014_opt0_r1 -> trunk_015 | O:Let Lancelot and the exile swear paired under the key | E:SET none = C(0) | D:C(1)
-ORX trunk_014_opt1/trunk_014_opt1_r1 -> trunk_015 | O:Let the shard-key decide the answerer | E:SET none = C(0) | D:C(1)
-ORX trunk_014_opt2/trunk_014_opt2_r1 -> trunk_015 | O:Arthur breaks the key's verdict and swears alone | E:SET none = C(0) | D:C(1)
-
-ENC trunk_015 turn=0..999
-ORX trunk_015_opt0/trunk_015_opt0_r1 -> trunk_016 | O:Arthur asks the key to name the judge | E:SET none = C(0) | D:C(1)
-ORX trunk_015_opt1/trunk_015_opt1_r1 -> trunk_016 | O:Guinevere rules that law comes before the relic | E:SET none = C(0) | D:C(1)
-ORX trunk_015_opt2/trunk_015_opt2_r1 -> trunk_016 | O:Arthur offers Mordred a seat beside the oath-line | E:SET none = C(0) | D:C(1)
-
-ENC trunk_016 turn=0..999
-ORX trunk_016_opt0/trunk_016_opt0_r1 -> trunk_017 | O:Arthur seats the whole Round Table as judge of the bargain | E:SET none = C(0) | D:C(1)
-ORX trunk_016_opt1/trunk_016_opt1_r1 -> trunk_017 | O:Lancelot names his divided loyalty aloud | E:SET none = C(0) | D:C(1)
-ORX trunk_016_opt2/trunk_016_opt2_r1 -> trunk_017 | O:Merlin seals the east seam with old magic | E:SET none = C(0) | D:C(1)
-
-ENC trunk_017 turn=0..999
-ORX trunk_017_opt0/trunk_017_opt0_r1 -> trunk_018 | O:Arthur declares the oath binds all, Mordred included | E:SET none = C(0) | D:C(1)
-ORX trunk_017_opt1/trunk_017_opt1_r1 -> trunk_018 | O:Guinevere assigns a judge to the bargain | E:SET none = C(0) | D:C(1)
-ORX trunk_017_opt2/trunk_017_opt2_r1 -> trunk_018 | O:Lancelot steps forward to absorb the cost | E:SET none = C(0) | D:C(1)
-
-ENC trunk_018 turn=0..999
-ORX trunk_018_opt0/trunk_018_opt0_r1 -> trunk_019 | O:Arthur seats the exiles as witnesses to succession | E:SET none = C(0) | D:C(1)
-ORX trunk_018_opt1/trunk_018_opt1_r1 -> trunk_019 | O:Lancelot refuses to choose between peace and loyalty | E:SET none = C(0) | D:C(1)
-ORX trunk_018_opt2/trunk_018_opt2_r1 -> trunk_019 | O:Morgan asks Merlin what the old magic would do now | E:SET none = C(0) | D:C(1)
-
-ENC trunk_019 turn=0..999
-ORX trunk_019_opt0/trunk_019_opt0_r1 -> trunk_020 | O:Arthur reads the covenant aloud | E:SET none = C(0) | D:C(1)
-ORX trunk_019_opt1/trunk_019_opt1_r1 -> trunk_020 | O:Lancelot binds himself to the seam | E:SET none = C(0) | D:C(1)
-ORX trunk_019_opt2/trunk_019_opt2_r1 -> trunk_020 | O:Morgan opens the old magic | E:SET none = C(0) | D:C(1)
-
-ENC trunk_020 turn=0..999
-ORX trunk_020_opt0/trunk_020_opt0_r1 -> trunk_021 | O:Arthur seats Mordred beside him | E:SET none = C(0) | D:C(1)
-ORX trunk_020_opt1/trunk_020_opt1_r1 -> trunk_021 | O:Lancelot walks to the seam and binds the oath | E:SET none = C(0) | D:C(1)
-ORX trunk_020_opt2/trunk_020_opt2_r1 -> trunk_021 | O:Morgan invokes the old magic over the threshold | E:SET none = C(0) | D:C(1)
-
-ENC trunk_021 turn=0..999
-ORX trunk_021_opt0/trunk_021_opt0_r1 -> trunk_022 | O:Arthur opens the door to the exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_021_opt1/trunk_021_opt1_r1 -> trunk_022 | O:Lancelot lifts the cloth toward the exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_021_opt2/trunk_021_opt2_r1 -> trunk_022 | O:Morgan bridges the threshold with old magic | E:SET none = C(0) | D:C(1)
-
-ENC trunk_022 turn=0..999
-ORX trunk_022_opt0/trunk_022_opt0_r1 -> trunk_023 | O:Arthur stands down among the exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_022_opt1/trunk_022_opt1_r1 -> trunk_023 | O:Lancelot carries the seam outward | E:SET none = C(0) | D:C(1)
-ORX trunk_022_opt2/trunk_022_opt2_r1 -> trunk_023 | O:Morgan binds the torn edge into a road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_023 turn=0..999
-ORX trunk_023_opt0/trunk_023_opt0_r1 -> trunk_024 | O:Arthur names the terms | E:SET none = C(0) | D:C(1)
-ORX trunk_023_opt1/trunk_023_opt1_r1 -> trunk_024 | O:Lancelot carries the lamp out | E:SET none = C(0) | D:C(1)
-ORX trunk_023_opt2/trunk_023_opt2_r1 -> trunk_024 | O:Morgan binds the torn edge | E:SET none = C(0) | D:C(1)
-
-ENC trunk_024 turn=0..999
-ORX trunk_024_opt0/trunk_024_opt0_r1 -> trunk_025 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
-ORX trunk_024_opt1/trunk_024_opt1_r1 -> trunk_025 | O:Lancelot carries the seam to the villages | E:SET none = C(0) | D:C(1)
-ORX trunk_024_opt2/trunk_024_opt2_r1 -> trunk_025 | O:Morgan and Merlin bind the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_025 turn=0..999
-ORX trunk_025_opt0/trunk_025_opt0_r1 -> trunk_026 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
-ORX trunk_025_opt1/trunk_025_opt1_r1 -> trunk_026 | O:Lancelot carries the seam to the villages | E:SET none = C(0) | D:C(1)
-ORX trunk_025_opt2/trunk_025_opt2_r1 -> trunk_026 | O:Merlin and Morgan hold the road open | E:SET none = C(0) | D:C(1)
-
-ENC trunk_026 turn=0..999
-ORX trunk_026_opt0/trunk_026_opt0_r1 -> trunk_027 | O:Arthur answers the exiles' terms | E:SET none = C(0) | D:C(1)
-ORX trunk_026_opt1/trunk_026_opt1_r1 -> trunk_027 | O:Lancelot carries the road outward | E:SET none = C(0) | D:C(1)
-ORX trunk_026_opt2/trunk_026_opt2_r1 -> trunk_027 | O:Morgan and Merlin open the passage | E:SET none = C(0) | D:C(1)
-
-ENC trunk_027 turn=0..999
-ORX trunk_027_opt0/trunk_027_opt0_r1 -> trunk_028 | O:Arthur makes the exiles binding witnesses | E:SET none = C(0) | D:C(1)
-ORX trunk_027_opt1/trunk_027_opt1_r1 -> trunk_028 | O:Lancelot carries the shard outward | E:SET none = C(0) | D:C(1)
-ORX trunk_027_opt2/trunk_027_opt2_r1 -> trunk_028 | O:Merlin and Morgan ward the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_028 turn=0..999
-ORX trunk_028_opt0/trunk_028_opt0_r1 -> trunk_029 | O:Arthur answers the road with covenant | E:SET none = C(0) | D:C(1)
-ORX trunk_028_opt1/trunk_028_opt1_r1 -> trunk_029 | O:Lancelot carries the shard and its reversed name | E:SET none = C(0) | D:C(1)
-ORX trunk_028_opt2/trunk_028_opt2_r1 -> trunk_029 | O:Morgan and Merlin make the passage a new boundary | E:SET none = C(0) | D:C(1)
-
-ENC trunk_029 turn=0..999
-ORX trunk_029_opt0/trunk_029_opt0_r1 -> trunk_030 | O:Arthur binds the exiles to a new covenant | E:SET none = C(0) | D:C(1)
-ORX trunk_029_opt1/trunk_029_opt1_r1 -> trunk_030 | O:Lancelot speaks the reversed name | E:SET none = C(0) | D:C(1)
-ORX trunk_029_opt2/trunk_029_opt2_r1 -> trunk_030 | O:Morgan and Merlin open the boundary | E:SET none = C(0) | D:C(1)
-
-ENC trunk_030 turn=0..999
-ORX trunk_030_opt0/trunk_030_opt0_r1 -> trunk_031 | O:Arthur names the succession openly | E:SET none = C(0) | D:C(1)
-ORX trunk_030_opt1/trunk_030_opt1_r1 -> trunk_031 | O:Lancelot asks the shard what is ours | E:SET none = C(0) | D:C(1)
-ORX trunk_030_opt2/trunk_030_opt2_r1 -> trunk_031 | O:Morgan and Merlin reweave the ward as law | E:SET none = C(0) | D:C(1)
-
-ENC trunk_031 turn=0..999
-ORX trunk_031_opt0/trunk_031_opt0_r1 -> trunk_032 | O:Arthur seals the exile covenant | E:SET none = C(0) | D:C(1)
-ORX trunk_031_opt1/trunk_031_opt1_r1 -> trunk_032 | O:Lancelot reads the shard as judgment | E:SET none = C(0) | D:C(1)
-ORX trunk_031_opt2/trunk_031_opt2_r1 -> trunk_032 | O:Morgan and Merlin teach the boundary to breathe | E:SET none = C(0) | D:C(1)
-
-ENC trunk_032 turn=0..999
-ORX trunk_032_opt0/trunk_032_opt0_r1 -> trunk_033 | O:Arthur swears the exiles as members of the oath | E:SET none = C(0) | D:C(1)
-ORX trunk_032_opt1/trunk_032_opt1_r1 -> trunk_033 | O:Lancelot asks the Grail to judge the oath | E:SET none = C(0) | D:C(1)
-ORX trunk_032_opt2/trunk_032_opt2_r1 -> trunk_033 | O:Merlin opens the ward into a living border | E:SET none = C(0) | D:C(1)
-
-ENC trunk_033 turn=0..999
-ORX trunk_033_opt0/trunk_033_opt0_r1 -> trunk_034 | O:Lancelot carries the shard through the border | E:SET none = C(0) | D:C(1)
-ORX trunk_033_opt1/trunk_033_opt1_r1 -> trunk_034 | O:Arthur declares the exiles the second court | E:SET none = C(0) | D:C(1)
-ORX trunk_033_opt2/trunk_033_opt2_r1 -> trunk_034 | O:Morgan and Merlin pay to reweave the ward | E:SET none = C(0) | D:C(1)
-
-ENC trunk_034 turn=0..999
-ORX trunk_034_opt0/trunk_034_opt0_r1 -> trunk_035 | O:Arthur names his heir under the Round Table oath | E:SET none = C(0) | D:C(1)
-ORX trunk_034_opt1/trunk_034_opt1_r1 -> trunk_035 | O:Lancelot carries the shard out of the ward | E:SET none = C(0) | D:C(1)
-ORX trunk_034_opt2/trunk_034_opt2_r1 -> trunk_035 | O:Merlin and Morgan ask the court to pay the ward's price | E:SET none = C(0) | D:C(1)
-
-ENC trunk_035 turn=0..999
-ORX trunk_035_opt0/trunk_035_opt0_r1 -> trunk_036 | O:Arthur stakes the succession and the ward on the oath | E:SET none = C(0) | D:C(1)
-ORX trunk_035_opt1/trunk_035_opt1_r1 -> trunk_036 | O:Lancelot carries the shard beyond the border | E:SET none = C(0) | D:C(1)
-ORX trunk_035_opt2/trunk_035_opt2_r1 -> trunk_036 | O:Morgan pays the ward's price and binds the exiles or frees them | E:SET none = C(0) | D:C(1)
-
-ENC trunk_036 turn=0..999
-ORX trunk_036_opt0/trunk_036_opt0_r1 -> trunk_037 | O:Arthur convenes the Round Table as a covenant of witnesses | E:SET none = C(0) | D:C(1)
-ORX trunk_036_opt1/trunk_036_opt1_r1 -> trunk_037 | O:Lancelot carries the shard beyond the border with the exiles | E:SET none = C(0) | D:C(1)
-ORX trunk_036_opt2/trunk_036_opt2_r1 -> trunk_037 | O:Morgan asks the court which wound to keep open | E:SET none = C(0) | D:C(1)
-
-ENC trunk_037 turn=0..999
-ORX trunk_037_opt0/trunk_037_opt0_r1 -> trunk_038 | O:Arthur opens the covenant and lets the shard travel with named witnesses | E:SET none = C(0) | D:C(1)
-ORX trunk_037_opt1/trunk_037_opt1_r1 -> trunk_038 | O:Arthur keeps the shard inside and turns Camelot into a public debt ledger | E:SET none = C(0) | D:C(1)
-ORX trunk_037_opt2/trunk_037_opt2_r1 -> trunk_038 | O:Morgan asks one named keeper to bind the boundary | E:SET none = C(0) | D:C(1)
-
-ENC trunk_038 turn=0..999
-ORX trunk_038_opt0/trunk_038_opt0_r1 -> trunk_039 | O:Arthur names Gawain heir of duty | E:SET none = C(0) | D:C(1)
-ORX trunk_038_opt1/trunk_038_opt1_r1 -> trunk_039 | O:Arthur grants the exiles a road-charter | E:SET none = C(0) | D:C(1)
-ORX trunk_038_opt2/trunk_038_opt2_r1 -> trunk_039 | O:Merlin and Morgan bind the violet seam | E:SET none = C(0) | D:C(1)
-
-ENC trunk_039 turn=0..999
-ORX trunk_039_opt0/trunk_039_opt0_r1 -> trunk_040 | O:Arthur names Gawain and the exiles joint keepers | E:SET none = C(0) | D:C(1)
-ORX trunk_039_opt1/trunk_039_opt1_r1 -> trunk_040 | O:Arthur shields the Grail inside the ward | E:SET none = C(0) | D:C(1)
-ORX trunk_039_opt2/trunk_039_opt2_r1 -> trunk_040 | O:Morgan and Merlin name the binding price | E:SET none = C(0) | D:C(1)
-
-ENC trunk_040 turn=0..999
-ORX trunk_040_opt0/trunk_040_opt0_r1 -> trunk_041 | O:Gawain keeps the road-oath | E:SET none = C(0) | D:C(1)
-ORX trunk_040_opt1/trunk_040_opt1_r1 -> trunk_041 | O:Name a price for binding the seam | E:SET none = C(0) | D:C(1)
-ORX trunk_040_opt2/trunk_040_opt2_r1 -> trunk_041 | O:Let the exiles judge the Grail | E:SET none = C(0) | D:C(1)
-
-ENC trunk_041 turn=0..999
-ORX trunk_041_opt0/trunk_041_opt0_r1 -> trunk_042 | O:Gawain carries the oath outward | E:SET none = C(0) | D:C(1)
-ORX trunk_041_opt1/trunk_041_opt1_r1 -> trunk_042 | O:Merlin and Morgan name the binding price | E:SET none = C(0) | D:C(1)
-ORX trunk_041_opt2/trunk_041_opt2_r1 -> trunk_042 | O:Let the exiles judge the shard and road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_042 turn=0..999
-ORX trunk_042_opt0/trunk_042_opt0_r1 -> trunk_043 | O:Arthur holds the ward | E:SET none = C(0) | D:C(1)
-ORX trunk_042_opt1/trunk_042_opt1_r1 -> trunk_043 | O:Let the Grail walk the roads | E:SET none = C(0) | D:C(1)
-ORX trunk_042_opt2/trunk_042_opt2_r1 -> trunk_043 | O:Let the exiles write the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_043 turn=0..999
-ORX trunk_043_opt0/trunk_043_opt0_r1 -> trunk_044 | O:Arthur holds the ward | E:SET none = C(0) | D:C(1)
-ORX trunk_043_opt1/trunk_043_opt1_r1 -> trunk_044 | O:Percival carries the Grail outward | E:SET none = C(0) | D:C(1)
-ORX trunk_043_opt2/trunk_043_opt2_r1 -> trunk_044 | O:The exiles write the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_044 turn=0..999
-ORX trunk_044_opt0/trunk_044_opt0_r1 -> trunk_045 | O:Seal a three-handed bargain | E:SET none = C(0) | D:C(1)
-ORX trunk_044_opt1/trunk_044_opt1_r1 -> trunk_045 | O:Let the shard leave the shrine | E:SET none = C(0) | D:C(1)
-ORX trunk_044_opt2/trunk_044_opt2_r1 -> trunk_045 | O:Let the exiles write the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_045 turn=0..999
-ORX trunk_045_opt0/trunk_045_opt0_r1 -> trunk_046 | O:Arthur names a successor under the charter | E:SET none = C(0) | D:C(1)
-ORX trunk_045_opt1/trunk_045_opt1_r1 -> trunk_046 | O:Lancelot walks the torn seal to the wall | E:SET none = C(0) | D:C(1)
-ORX trunk_045_opt2/trunk_045_opt2_r1 -> trunk_046 | O:Percival and the Lady of the Lake follow the silence | E:SET none = C(0) | D:C(1)
-
-ENC trunk_046 turn=0..999
-ORX trunk_046_opt0/trunk_046_opt0_r1 -> trunk_047 | O:Arthur crowns Gawain under exile-witnessed law | E:SET none = C(0) | D:C(1)
-ORX trunk_046_opt1/trunk_046_opt1_r1 -> trunk_047 | O:Lancelot carries the torn seal to Mordred | E:SET none = C(0) | D:C(1)
-ORX trunk_046_opt2/trunk_046_opt2_r1 -> trunk_047 | O:Percival and the Lady of the Lake take the silence outward | E:SET none = C(0) | D:C(1)
-
-ENC trunk_047 turn=0..999
-ORX trunk_047_opt0/trunk_047_opt0_r1 -> trunk_048 | O:Arthur speaks the succession oath before all | E:SET none = C(0) | D:C(1)
-ORX trunk_047_opt1/trunk_047_opt1_r1 -> trunk_048 | O:Lancelot and Bedivere carry the oath to Mordred | E:SET none = C(0) | D:C(1)
-ORX trunk_047_opt2/trunk_047_opt2_r1 -> trunk_048 | O:Percival and the Lady of the Lake take the road | E:SET none = C(0) | D:C(1)
-
-ENC trunk_048 turn=0..999
-ORX trunk_048_opt0/trunk_048_opt0_r1 -> trunk_049 | O:Arthur names Gawain heir before the dead | E:SET none = C(0) | D:C(1)
-ORX trunk_048_opt1/trunk_048_opt1_r1 -> trunk_049 | O:Arthur, Mordred, exiles, and road-watchers sign a conditional peace | E:SET none = C(0) | D:C(1)
-ORX trunk_048_opt2/trunk_048_opt2_r1 -> trunk_049 | O:Percival and the Lady of the Lake take the empty cup outward | E:SET none = C(0) | D:C(1)
-
-ENC trunk_049 turn=0..999
-ORX trunk_049_opt0/trunk_049_opt0_r1 -> trunk_050 | O:Arthur speaks Gawain as heir under public oath | E:SET none = C(0) | D:C(1)
-ORX trunk_049_opt1/trunk_049_opt1_r1 -> trunk_050 | O:Arthur and Mordred sign an exile-witnessed covenant | E:SET none = C(0) | D:C(1)
-ORX trunk_049_opt2/trunk_049_opt2_r1 -> trunk_050 | O:Percival and the Lady of the Lake carry the empty cup outward | E:SET none = C(0) | D:C(1)
-
-ENC trunk_050 turn=0..999
-ORX trunk_050_opt0/trunk_050_opt0_r1 -> trunk_051 | O:Arthur names Gawain heir and binds the east road | E:SET none = C(0) | D:C(1)
-ORX trunk_050_opt1/trunk_050_opt1_r1 -> trunk_051 | O:Percival and the Lady of the Lake carry the cup through the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_050_opt2/trunk_050_opt2_r1 -> trunk_051 | O:Arthur, Mordred, and the exiles sign a witnessed covenant | E:SET none = C(0) | D:C(1)
-
-ENC trunk_051 turn=0..999
-ORX trunk_051_opt0/trunk_051_opt0_r_e01 -> e01_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e02 -> e02_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e03 -> e03_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e04 -> e04_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e05 -> e05_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e06 -> e06_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e07 -> e07_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e08 -> e08_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e09 -> e09_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e10 -> e10_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt0/trunk_051_opt0_r_e11 -> e11_001 | O:Arthur speaks the crown oath and binds the exiles into it | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e01 -> e01_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e02 -> e02_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e03 -> e03_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e04 -> e04_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e05 -> e05_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e06 -> e06_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e07 -> e07_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e08 -> e08_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e09 -> e09_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e10 -> e10_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt1/trunk_051_opt1_r_e11 -> e11_001 | O:Lancelot refuses the oath and Mordred declares the charter void | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e01 -> e01_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e02 -> e02_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e03 -> e03_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e04 -> e04_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e05 -> e05_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e06 -> e06_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e07 -> e07_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e08 -> e08_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e09 -> e09_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e10 -> e10_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)
-ORX trunk_051_opt2/trunk_051_opt2_r_e11 -> e11_001 | O:Percival and the Lady of the Lake carry the cup out of the east door | E:SET none = C(0) | D:C(1)

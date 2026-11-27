@@ -37,12 +37,18 @@ def build_characters() -> list:
     return [{"id": f"char_{slugify(c['name'])}", "name": c["name"], "bnumber_properties": {}} for c in OUTLINE["cast"]]
 
 
-def build_spools() -> list:
-    spools = [{"id": "spool_trunk", "spool_type": "General", "creation_index": 0,
-               "creation_time": CREATED, "modified_time": CREATED}]
+def build_spools(groups: dict) -> list:
+    trunk_ids = [r["encounter_id"] for r in groups["trunk"]]
+    spools = [{"id": "spool_trunk", "spool_type": "General", "spool_name": "The Round Table",
+               "starts_active": True, "creation_index": 0, "creation_time": CREATED,
+               "modified_time": CREATED, "encounters": trunk_ids}]
     for i, b in enumerate(OUTLINE["branch_outline"]["branches"]):
-        spools.append({"id": f"spool_{b['ending_id']}", "spool_type": "General", "creation_index": i + 1,
-                        "creation_time": CREATED, "modified_time": CREATED})
+        ending_id = b["ending_id"]
+        title = next(e["title"] for e in OUTLINE["endings"] if e["ending_id"] == ending_id)
+        branch_ids = [r["encounter_id"] for r in groups[ending_id]]
+        spools.append({"id": f"spool_{ending_id}", "spool_type": "General", "spool_name": title,
+                        "starts_active": False, "creation_index": i + 1, "creation_time": CREATED,
+                        "modified_time": CREATED, "encounters": branch_ids})
     return spools
 
 
@@ -125,7 +131,7 @@ def build_encounters(groups: dict) -> list:
 def main():
     groups = by_branch()
     characters = build_characters()
-    spools = build_spools()
+    spools = build_spools(groups)
     encounters = build_encounters(groups)
     world = {
         "IFID": "SW-INKY-CAMELOT-0001",
