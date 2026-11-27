@@ -20,3 +20,4 @@ jobs:
         with:
           node-version: '22'
       - run: node storyworlds/tools/pp2_balance/replay.mjs
+      - run: node storyworlds/tools/pp2_balance/strategic_pilot.mjs
