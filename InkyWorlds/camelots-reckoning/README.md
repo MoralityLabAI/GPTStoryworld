@@ -27,3 +27,19 @@ toward 11 distinct named endings, round-robined so no branch gets ahead of the o
 Generated 2026-11-25/26 against `thinkingmachines/Inkling-2-Mini` (squid5080,
 `C:\Users\patri\tools\squid5080`) through `goblin-gdk` in WSL. `evidence_class` on each encounter
 is `"proposed"` — live-generated, not independently verified.
+
+## Standard storyworld format
+
+- `storyworld.json` — the same 300 encounters as `encounters.jsonl`, translated into the repo's
+  standard SweepWeave storyworld schema (see `storyworld_format_guide.md`): 12 characters, a
+  `spool_trunk` and one `spool_<ending_id>` per branch, each encounter a page with options and
+  reactions. No `authored_properties`/BNumbers — this storyworld has no simulated ideological
+  axes, so none were invented. The last trunk page's options each fan out into all 11 branch-head
+  reactions (equal weight), matching Inky's own framing that the realm could tip toward any
+  ending from there. Every `text_script` is copied verbatim from what Inky wrote; `art_svg` on
+  each page carries the illustration (not part of the standard schema, additive). Built by
+  `to_storyworld_json.py`.
+- `storyworld.swmd.min.md` — the canonical SWMD export, produced by running `storyworld.json`
+  through the repo's own `codex-skills/storyworld-building/scripts/json_to_swmd.py`, so this
+  storyworld is readable by the rest of the storyworld-conveyor tooling (quality gates, path
+  diversity probes, factory pipeline) instead of living in a one-off format.
