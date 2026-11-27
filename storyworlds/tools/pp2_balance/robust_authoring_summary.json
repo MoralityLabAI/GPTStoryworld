@@ -1,0 +1,768 @@
+{
+  "status": "development_only",
+  "scope": "full 256-point grids on six fresh coefficient roots, three synthetic structural families; four restricted encounter-priority policies per player",
+  "aggregate": {
+    "roots": 6,
+    "grid_candidates": 1536,
+    "distinct_games": 58,
+    "exact_candidates": 1490,
+    "certified_grid_optima": 6,
+    "mean_grid_gap": 0,
+    "robust_frontier_wins": 1,
+    "robust_frontier_losses": 0,
+    "robust_grid_wins": 2,
+    "arms": {
+      "author_frontier": {
+        "mean_author_loss": 0.07291666666666667,
+        "mean_worst_lower": 0.6645833333333333,
+        "mean_worst_upper": 0.6645833333333333,
+        "mean_j_lower": 0.7374999999999999,
+        "mean_j_upper": 0.7374999999999999
+      },
+      "robust_frontier": {
+        "mean_author_loss": 0.08333333333333333,
+        "mean_worst_lower": 0.6458333333333334,
+        "mean_worst_upper": 0.6458333333333334,
+        "mean_j_lower": 0.7291666666666666,
+        "mean_j_upper": 0.7291666666666666
+      },
+      "author_grid": {
+        "mean_author_loss": 0.03125,
+        "mean_worst_lower": 0.6645833333333333,
+        "mean_worst_upper": 0.6645833333333333,
+        "mean_j_lower": 0.6958333333333333,
+        "mean_j_upper": 0.6958333333333333
+      },
+      "robust_grid": {
+        "mean_author_loss": 0.0625,
+        "mean_worst_lower": 0.6124999999999999,
+        "mean_worst_upper": 0.6124999999999999,
+        "mean_j_lower": 0.6749999999999999,
+        "mean_j_upper": 0.6749999999999999
+      },
+      "zero_author_slack": {
+        "mean_author_loss": 0.03125,
+        "mean_worst_lower": 0.6645833333333333,
+        "mean_worst_upper": 0.6645833333333333,
+        "mean_j_lower": 0.6958333333333333,
+        "mean_j_upper": 0.6958333333333333
+      }
+    }
+  },
+  "by_family": {
+    "chain": {
+      "roots": 2,
+      "grid_candidates": 512,
+      "distinct_games": 15,
+      "exact_candidates": 483,
+      "certified_grid_optima": 2,
+      "mean_grid_gap": 0,
+      "robust_frontier_wins": 0,
+      "robust_frontier_losses": 0,
+      "robust_grid_wins": 1,
+      "arms": {
+        "author_frontier": {
+          "mean_author_loss": 0,
+          "mean_worst_lower": 0.6875,
+          "mean_worst_upper": 0.6875,
+          "mean_j_lower": 0.6875,
+          "mean_j_upper": 0.6875
+        },
+        "robust_frontier": {
+          "mean_author_loss": 0,
+          "mean_worst_lower": 0.6875,
+          "mean_worst_upper": 0.6875,
+          "mean_j_lower": 0.6875,
+          "mean_j_upper": 0.6875
+        },
+        "author_grid": {
+          "mean_author_loss": 0,
+          "mean_worst_lower": 0.6875,
+          "mean_worst_upper": 0.6875,
+          "mean_j_lower": 0.6875,
+          "mean_j_upper": 0.6875
+        },
+        "robust_grid": {
+          "mean_author_loss": 0.0625,
+          "mean_worst_lower": 0.5875,
+          "mean_worst_upper": 0.5875,
+          "mean_j_lower": 0.65,
+          "mean_j_upper": 0.65
+        },
+        "zero_author_slack": {
+          "mean_author_loss": 0,
+          "mean_worst_lower": 0.6875,
+          "mean_worst_upper": 0.6875,
+          "mean_j_lower": 0.6875,
+          "mean_j_upper": 0.6875
+        }
+      }
+    },
+    "fork": {
+      "roots": 2,
+      "grid_candidates": 512,
+      "distinct_games": 19,
+      "exact_candidates": 495,
+      "certified_grid_optima": 2,
+      "mean_grid_gap": 0,
+      "robust_frontier_wins": 1,
+      "robust_frontier_losses": 0,
+      "robust_grid_wins": 1,
+      "arms": {
+        "author_frontier": {
+          "mean_author_loss": 0.09375,
+          "mean_worst_lower": 0.7125,
+          "mean_worst_upper": 0.7125,
+          "mean_j_lower": 0.80625,
+          "mean_j_upper": 0.80625
+        },
+        "robust_frontier": {
+          "mean_author_loss": 0.125,
+          "mean_worst_lower": 0.65625,
+          "mean_worst_upper": 0.65625,
+          "mean_j_lower": 0.78125,
+          "mean_j_upper": 0.78125
+        },
+        "author_grid": {
+          "mean_author_loss": 0.03125,
+          "mean_worst_lower": 0.7125,
+          "mean_worst_upper": 0.7125,
+          "mean_j_lower": 0.74375,
+          "mean_j_upper": 0.74375
+        },
+        "robust_grid": {
+          "mean_author_loss": 0.0625,
+          "mean_worst_lower": 0.65625,
+          "mean_worst_upper": 0.65625,
+          "mean_j_lower": 0.71875,
+          "mean_j_upper": 0.71875
+        },
+        "zero_author_slack": {
+          "mean_author_loss": 0.03125,
+          "mean_worst_lower": 0.7125,
+          "mean_worst_upper": 0.7125,
+          "mean_j_lower": 0.74375,
+          "mean_j_upper": 0.74375
+        }
+      }
+    },
+    "veto": {
+      "roots": 2,
+      "grid_candidates": 512,
+      "distinct_games": 24,
+      "exact_candidates": 512,
+      "certified_grid_optima": 2,
+      "mean_grid_gap": 0,
+      "robust_frontier_wins": 0,
+      "robust_frontier_losses": 0,
+      "robust_grid_wins": 0,
+      "arms": {
+        "author_frontier": {
+          "mean_author_loss": 0.125,
+          "mean_worst_lower": 0.59375,
+          "mean_worst_upper": 0.59375,
+          "mean_j_lower": 0.71875,
+          "mean_j_upper": 0.71875
+        },
+        "robust_frontier": {
+          "mean_author_loss": 0.125,
+          "mean_worst_lower": 0.59375,
+          "mean_worst_upper": 0.59375,
+          "mean_j_lower": 0.71875,
+          "mean_j_upper": 0.71875
+        },
+        "author_grid": {
+          "mean_author_loss": 0.0625,
+          "mean_worst_lower": 0.59375,
+          "mean_worst_upper": 0.59375,
+          "mean_j_lower": 0.65625,
+          "mean_j_upper": 0.65625
+        },
+        "robust_grid": {
+          "mean_author_loss": 0.0625,
+          "mean_worst_lower": 0.59375,
+          "mean_worst_upper": 0.59375,
+          "mean_j_lower": 0.65625,
+          "mean_j_upper": 0.65625
+        },
+        "zero_author_slack": {
+          "mean_author_loss": 0.0625,
+          "mean_worst_lower": 0.59375,
+          "mean_worst_upper": 0.59375,
+          "mean_j_lower": 0.65625,
+          "mean_j_upper": 0.65625
+        }
+      }
+    }
+  },
+  "author_transitions": 105680,
+  "strategic_transitions": 86688,
+  "unresolved_no_witness": 0,
+  "refined_games": 4,
+  "edge_labels": {
+    "improves": 900,
+    "degrades": 1013,
+    "tie": 2589,
+    "unresolved": 106
+  },
+  "worst_edge_labels": {
+    "improves": 108,
+    "degrades": 206,
+    "tie": 4156,
+    "unresolved": 138
+  },
+  "rows": [
+    {
+      "id": "chain_a",
+      "family": "chain",
+      "seed": 812021,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "utility_schedule": 0,
+      "approved_sites": 22,
+      "grid": 256,
+      "distinct_games": 7,
+      "screen_exact_games": 5,
+      "refined_games": 2,
+      "final_exact_candidates": 227,
+      "unresolved_no_witness": 0,
+      "author_transitions": 23040,
+      "strategic_transitions": 16384,
+      "author_frontier": {
+        "key": "1,2,1,1",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "1,2,1,1",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,2,1,1",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,2,1,1",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,2,1,1",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "global_j_lower": "5/8",
+      "global_j_upper": "5/8",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": false,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": false,
+      "edge_labels": {
+        "improves": 146,
+        "degrades": 160,
+        "tie": 402,
+        "unresolved": 60
+      }
+    },
+    {
+      "id": "chain_b",
+      "family": "chain",
+      "seed": 819940,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "utility_schedule": 1,
+      "approved_sites": 22,
+      "grid": 256,
+      "distinct_games": 8,
+      "screen_exact_games": 8,
+      "refined_games": 0,
+      "final_exact_candidates": 256,
+      "unresolved_no_witness": 0,
+      "author_transitions": 23040,
+      "strategic_transitions": 16384,
+      "author_frontier": {
+        "key": "1,1,1,1",
+        "game": 2,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/2",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "1,1,1,1",
+        "game": 2,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/2",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,1,1,1",
+        "game": 2,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/2",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,0,3,1",
+        "game": 5,
+        "author_loss": "1/8",
+        "worst_lower": "11/20",
+        "worst_upper": "11/20",
+        "j_lower": "27/40",
+        "j_upper": "27/40",
+        "p": "1/2",
+        "p2": "0/1",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,1,1,1",
+        "game": 2,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/2",
+        "bad": "0/1"
+      },
+      "global_j_lower": "27/40",
+      "global_j_upper": "27/40",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": false,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": true,
+      "edge_labels": {
+        "improves": 138,
+        "degrades": 228,
+        "tie": 402,
+        "unresolved": 0
+      }
+    },
+    {
+      "id": "fork_a",
+      "family": "fork",
+      "seed": 827859,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "utility_schedule": 0,
+      "approved_sites": 32,
+      "grid": 256,
+      "distinct_games": 7,
+      "screen_exact_games": 7,
+      "refined_games": 0,
+      "final_exact_candidates": 256,
+      "unresolved_no_witness": 0,
+      "author_transitions": 10240,
+      "strategic_transitions": 12288,
+      "author_frontier": {
+        "key": "0,2,1,1",
+        "game": 1,
+        "author_loss": "1/8",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "7/8",
+        "j_upper": "7/8",
+        "p": "1/4",
+        "p2": "0/1",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "0,2,1,1",
+        "game": 1,
+        "author_loss": "1/8",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "7/8",
+        "j_upper": "7/8",
+        "p": "1/4",
+        "p2": "0/1",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,2,1,3",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,2,1,3",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,2,1,3",
+        "game": 1,
+        "author_loss": "0/1",
+        "worst_lower": "3/4",
+        "worst_upper": "3/4",
+        "j_lower": "3/4",
+        "j_upper": "3/4",
+        "p": "1/2",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "global_j_lower": "3/4",
+      "global_j_upper": "3/4",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": false,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": false,
+      "edge_labels": {
+        "improves": 80,
+        "degrades": 248,
+        "tie": 440,
+        "unresolved": 0
+      }
+    },
+    {
+      "id": "fork_b",
+      "family": "fork",
+      "seed": 835778,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "utility_schedule": 1,
+      "approved_sites": 32,
+      "grid": 256,
+      "distinct_games": 12,
+      "screen_exact_games": 10,
+      "refined_games": 2,
+      "final_exact_candidates": 239,
+      "unresolved_no_witness": 0,
+      "author_transitions": 10240,
+      "strategic_transitions": 12288,
+      "author_frontier": {
+        "key": "1,0,0,1",
+        "game": 4,
+        "author_loss": "1/16",
+        "worst_lower": "27/40",
+        "worst_upper": "27/40",
+        "j_lower": "59/80",
+        "j_upper": "59/80",
+        "p": "1/4",
+        "p2": "3/8",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "1,1,1,1",
+        "game": 5,
+        "author_loss": "1/8",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "11/16",
+        "j_upper": "11/16",
+        "p": "3/8",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,0,0,1",
+        "game": 4,
+        "author_loss": "1/16",
+        "worst_lower": "27/40",
+        "worst_upper": "27/40",
+        "j_lower": "59/80",
+        "j_upper": "59/80",
+        "p": "1/4",
+        "p2": "3/8",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,1,1,1",
+        "game": 5,
+        "author_loss": "1/8",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "11/16",
+        "j_upper": "11/16",
+        "p": "3/8",
+        "p2": "1/4",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,0,0,1",
+        "game": 4,
+        "author_loss": "1/16",
+        "worst_lower": "27/40",
+        "worst_upper": "27/40",
+        "j_lower": "59/80",
+        "j_upper": "59/80",
+        "p": "1/4",
+        "p2": "3/8",
+        "bad": "0/1"
+      },
+      "global_j_lower": "11/16",
+      "global_j_upper": "11/16",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": true,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": true,
+      "edge_labels": {
+        "improves": 124,
+        "degrades": 82,
+        "tie": 516,
+        "unresolved": 46
+      }
+    },
+    {
+      "id": "veto_a",
+      "family": "veto",
+      "seed": 843697,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "utility_schedule": 0,
+      "approved_sites": 35,
+      "grid": 256,
+      "distinct_games": 7,
+      "screen_exact_games": 7,
+      "refined_games": 0,
+      "final_exact_candidates": 256,
+      "unresolved_no_witness": 0,
+      "author_transitions": 19616,
+      "strategic_transitions": 14848,
+      "author_frontier": {
+        "key": "2,1,1,2",
+        "game": 2,
+        "author_loss": "1/4",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "13/16",
+        "j_upper": "13/16",
+        "p": "1/8",
+        "p2": "1/8",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "2,1,1,2",
+        "game": 2,
+        "author_loss": "1/4",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "13/16",
+        "j_upper": "13/16",
+        "p": "1/8",
+        "p2": "1/8",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,3,1,3",
+        "game": 3,
+        "author_loss": "1/8",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "11/16",
+        "j_upper": "11/16",
+        "p": "1/8",
+        "p2": "1/8",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,3,1,3",
+        "game": 3,
+        "author_loss": "1/8",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "11/16",
+        "j_upper": "11/16",
+        "p": "1/8",
+        "p2": "1/8",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,3,1,3",
+        "game": 3,
+        "author_loss": "1/8",
+        "worst_lower": "9/16",
+        "worst_upper": "9/16",
+        "j_lower": "11/16",
+        "j_upper": "11/16",
+        "p": "1/8",
+        "p2": "1/8",
+        "bad": "0/1"
+      },
+      "global_j_lower": "11/16",
+      "global_j_upper": "11/16",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": false,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": false,
+      "edge_labels": {
+        "improves": 227,
+        "degrades": 73,
+        "tie": 468,
+        "unresolved": 0
+      }
+    },
+    {
+      "id": "veto_b",
+      "family": "veto",
+      "seed": 851616,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "utility_schedule": 1,
+      "approved_sites": 35,
+      "grid": 256,
+      "distinct_games": 17,
+      "screen_exact_games": 17,
+      "refined_games": 0,
+      "final_exact_candidates": 256,
+      "unresolved_no_witness": 0,
+      "author_transitions": 19504,
+      "strategic_transitions": 14496,
+      "author_frontier": {
+        "key": "1,1,1,1",
+        "game": 3,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "5/16",
+        "bad": "0/1"
+      },
+      "robust_frontier": {
+        "key": "1,1,1,1",
+        "game": 3,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "5/16",
+        "bad": "0/1"
+      },
+      "author_grid": {
+        "key": "1,1,1,1",
+        "game": 3,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "5/16",
+        "bad": "0/1"
+      },
+      "robust_grid": {
+        "key": "1,1,1,1",
+        "game": 3,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "5/16",
+        "bad": "0/1"
+      },
+      "zero_author_slack": {
+        "key": "1,1,1,1",
+        "game": 3,
+        "author_loss": "0/1",
+        "worst_lower": "5/8",
+        "worst_upper": "5/8",
+        "j_lower": "5/8",
+        "j_upper": "5/8",
+        "p": "1/4",
+        "p2": "5/16",
+        "bad": "0/1"
+      },
+      "global_j_lower": "5/8",
+      "global_j_upper": "5/8",
+      "global_j_gap": "0/1",
+      "frontier_robust_certified_win": false,
+      "frontier_robust_certified_loss": false,
+      "grid_robust_certified_win": false,
+      "edge_labels": {
+        "improves": 185,
+        "degrades": 222,
+        "tie": 361,
+        "unresolved": 0
+      }
+    }
+  ]
+}

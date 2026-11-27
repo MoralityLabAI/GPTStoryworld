@@ -1,0 +1,5459 @@
+{
+  "summary": {
+    "status": "spent_development_only",
+    "config": {
+      "totalBytes": 8192,
+      "identityBytes": 4096,
+      "bankBytes": 4096,
+      "identityCeiling": 8,
+      "witnessLimit": 2,
+      "dualLimit": 12,
+      "attemptLimit": 1,
+      "seed": 741093
+    },
+    "roots": 6,
+    "trajectories": 12,
+    "queries": 768,
+    "outputs": 6144,
+    "parity": 6144,
+    "aggregate": {
+      "identity": {
+        "counts": {
+          "queries": 768,
+          "identity": 387,
+          "pure": 180,
+          "transport": 0,
+          "cold": 201,
+          "attempts": 0,
+          "failed": 0,
+          "packetWitnesses": 0,
+          "packetDuals": 0
+        },
+        "work": {
+          "public_certify_calls": 21194,
+          "rational_normalizations": 17029537,
+          "rational_comparisons": 6252429,
+          "regret_evaluations": 31646,
+          "fast_pure_checks": 1290,
+          "solver_calls": 402,
+          "envelope_calls": 201,
+          "bilinear_profile_evaluations": 34443,
+          "dyadic_corner_evaluations": 9648,
+          "cover_verifier_calls": 402,
+          "cold_screen_calls": 201,
+          "cold_screen_verifier_calls": 381
+        },
+        "management": {
+          "serializations": 1875,
+          "serializedBytes": 10795807,
+          "rankComparisons": 0,
+          "lookupComparisons": 2232,
+          "scans": 0,
+          "approxCells": 0,
+          "approxProfiles": 0,
+          "dualSelectionScans": 0,
+          "evictions": 0,
+          "identityEvictions": 334,
+          "oversize": 0,
+          "creditUpdates": 0,
+          "randomDraws": 0
+        },
+        "peak": 8191
+      },
+      "whole_single": {
+        "counts": {
+          "queries": 768,
+          "identity": 347,
+          "pure": 202,
+          "transport": 144,
+          "cold": 75,
+          "attempts": 215,
+          "failed": 71,
+          "packetWitnesses": 409,
+          "packetDuals": 540
+        },
+        "work": {
+          "public_certify_calls": 10333,
+          "rational_normalizations": 7675793,
+          "rational_comparisons": 2694506,
+          "regret_evaluations": 13935,
+          "fast_pure_checks": 1429,
+          "solver_calls": 150,
+          "envelope_calls": 75,
+          "bilinear_profile_evaluations": 13058,
+          "dyadic_corner_evaluations": 3600,
+          "cover_verifier_calls": 150,
+          "cold_screen_calls": 75,
+          "cold_screen_verifier_calls": 277,
+          "transport_profile_checks": 409,
+          "dual_cell_evaluations": 42192
+        },
+        "management": {
+          "serializations": 13186,
+          "serializedBytes": 9910841,
+          "rankComparisons": 3562,
+          "lookupComparisons": 2894,
+          "scans": 974,
+          "approxCells": 22112,
+          "approxProfiles": 1382,
+          "dualSelectionScans": 3188,
+          "evictions": 1,
+          "identityEvictions": 329,
+          "oversize": 57,
+          "creditUpdates": 0,
+          "randomDraws": 0
+        },
+        "peak": 7923
+      },
+      "whole_pooled": {
+        "counts": {
+          "queries": 768,
+          "identity": 346,
+          "pure": 203,
+          "transport": 140,
+          "cold": 79,
+          "attempts": 215,
+          "failed": 75,
+          "packetWitnesses": 425,
+          "packetDuals": 854
+        },
+        "work": {
+          "public_certify_calls": 10764,
+          "rational_normalizations": 8067529,
+          "rational_comparisons": 2814651,
+          "regret_evaluations": 14538,
+          "fast_pure_checks": 1430,
+          "solver_calls": 158,
+          "envelope_calls": 79,
+          "bilinear_profile_evaluations": 13747,
+          "dyadic_corner_evaluations": 3792,
+          "cover_verifier_calls": 158,
+          "cold_screen_calls": 79,
+          "cold_screen_verifier_calls": 282,
+          "transport_profile_checks": 425,
+          "dual_cell_evaluations": 47024
+        },
+        "management": {
+          "serializations": 11959,
+          "serializedBytes": 10033025,
+          "rankComparisons": 4366,
+          "lookupComparisons": 2944,
+          "scans": 999,
+          "approxCells": 22144,
+          "approxProfiles": 1384,
+          "dualSelectionScans": 1744,
+          "evictions": 2,
+          "identityEvictions": 329,
+          "oversize": 58,
+          "creditUpdates": 0,
+          "randomDraws": 0
+        },
+        "peak": 8185
+      },
+      "component_lru": {
+        "counts": {
+          "queries": 768,
+          "identity": 346,
+          "pure": 203,
+          "transport": 140,
+          "cold": 79,
+          "attempts": 215,
+          "failed": 75,
+          "packetWitnesses": 425,
+          "packetDuals": 854
+        },
+        "work": {
+          "public_certify_calls": 10764,
+          "rational_normalizations": 8067355,
+          "rational_comparisons": 2814477,
+          "regret_evaluations": 14538,
+          "fast_pure_checks": 1430,
+          "solver_calls": 158,
+          "envelope_calls": 79,
+          "bilinear_profile_evaluations": 13747,
+          "dyadic_corner_evaluations": 3792,
+          "cover_verifier_calls": 158,
+          "cold_screen_calls": 79,
+          "cold_screen_verifier_calls": 282,
+          "transport_profile_checks": 425,
+          "dual_cell_evaluations": 47024
+        },
+        "management": {
+          "serializations": 17106,
+          "serializedBytes": 12833480,
+          "rankComparisons": 4378,
+          "lookupComparisons": 7781,
+          "scans": 2260,
+          "approxCells": 22208,
+          "approxProfiles": 1388,
+          "dualSelectionScans": 1744,
+          "evictions": 3,
+          "identityEvictions": 329,
+          "oversize": 58,
+          "creditUpdates": 537,
+          "randomDraws": 0
+        },
+        "peak": 7921
+      },
+      "component_random": {
+        "counts": {
+          "queries": 768,
+          "identity": 347,
+          "pure": 203,
+          "transport": 138,
+          "cold": 80,
+          "attempts": 214,
+          "failed": 76,
+          "packetWitnesses": 423,
+          "packetDuals": 834
+        },
+        "work": {
+          "public_certify_calls": 10866,
+          "rational_normalizations": 8150568,
+          "rational_comparisons": 2846400,
+          "regret_evaluations": 14710,
+          "fast_pure_checks": 1426,
+          "solver_calls": 160,
+          "envelope_calls": 80,
+          "bilinear_profile_evaluations": 13930,
+          "dyadic_corner_evaluations": 3840,
+          "cover_verifier_calls": 160,
+          "cold_screen_calls": 80,
+          "cold_screen_verifier_calls": 283,
+          "transport_profile_checks": 423,
+          "dual_cell_evaluations": 46416
+        },
+        "management": {
+          "serializations": 17173,
+          "serializedBytes": 12868033,
+          "rankComparisons": 4149,
+          "lookupComparisons": 7906,
+          "scans": 2223,
+          "approxCells": 21792,
+          "approxProfiles": 1362,
+          "dualSelectionScans": 1722,
+          "evictions": 9,
+          "identityEvictions": 327,
+          "oversize": 59,
+          "creditUpdates": 529,
+          "randomDraws": 9
+        },
+        "peak": 7927
+      },
+      "component_frequency": {
+        "counts": {
+          "queries": 768,
+          "identity": 346,
+          "pure": 203,
+          "transport": 140,
+          "cold": 79,
+          "attempts": 215,
+          "failed": 75,
+          "packetWitnesses": 425,
+          "packetDuals": 854
+        },
+        "work": {
+          "public_certify_calls": 10764,
+          "rational_normalizations": 8067355,
+          "rational_comparisons": 2814477,
+          "regret_evaluations": 14538,
+          "fast_pure_checks": 1430,
+          "solver_calls": 158,
+          "envelope_calls": 79,
+          "bilinear_profile_evaluations": 13747,
+          "dyadic_corner_evaluations": 3792,
+          "cover_verifier_calls": 158,
+          "cold_screen_calls": 79,
+          "cold_screen_verifier_calls": 282,
+          "transport_profile_checks": 425,
+          "dual_cell_evaluations": 47024
+        },
+        "management": {
+          "serializations": 17106,
+          "serializedBytes": 12833480,
+          "rankComparisons": 4378,
+          "lookupComparisons": 7781,
+          "scans": 2260,
+          "approxCells": 22208,
+          "approxProfiles": 1388,
+          "dualSelectionScans": 1744,
+          "evictions": 3,
+          "identityEvictions": 329,
+          "oversize": 58,
+          "creditUpdates": 537,
+          "randomDraws": 0
+        },
+        "peak": 7921
+      },
+      "component_utility": {
+        "counts": {
+          "queries": 768,
+          "identity": 346,
+          "pure": 203,
+          "transport": 140,
+          "cold": 79,
+          "attempts": 215,
+          "failed": 75,
+          "packetWitnesses": 425,
+          "packetDuals": 854
+        },
+        "work": {
+          "public_certify_calls": 10764,
+          "rational_normalizations": 8067355,
+          "rational_comparisons": 2814421,
+          "regret_evaluations": 14538,
+          "fast_pure_checks": 1430,
+          "solver_calls": 158,
+          "envelope_calls": 79,
+          "bilinear_profile_evaluations": 13747,
+          "dyadic_corner_evaluations": 3792,
+          "cover_verifier_calls": 158,
+          "cold_screen_calls": 79,
+          "cold_screen_verifier_calls": 282,
+          "transport_profile_checks": 425,
+          "dual_cell_evaluations": 47024
+        },
+        "management": {
+          "serializations": 17327,
+          "serializedBytes": 13100994,
+          "rankComparisons": 4289,
+          "lookupComparisons": 7840,
+          "scans": 2245,
+          "approxCells": 21968,
+          "approxProfiles": 1373,
+          "dualSelectionScans": 1744,
+          "evictions": 5,
+          "identityEvictions": 329,
+          "oversize": 58,
+          "creditUpdates": 1816,
+          "randomDraws": 0
+        },
+        "peak": 7986
+      },
+      "component_lru_6": {
+        "counts": {
+          "queries": 768,
+          "identity": 347,
+          "pure": 202,
+          "transport": 145,
+          "cold": 74,
+          "attempts": 215,
+          "failed": 70,
+          "packetWitnesses": 1043,
+          "packetDuals": 837
+        },
+        "work": {
+          "public_certify_calls": 11258,
+          "rational_normalizations": 7849544,
+          "rational_comparisons": 2779721,
+          "regret_evaluations": 14812,
+          "fast_pure_checks": 1429,
+          "solver_calls": 148,
+          "envelope_calls": 74,
+          "bilinear_profile_evaluations": 12889,
+          "dyadic_corner_evaluations": 3552,
+          "cover_verifier_calls": 148,
+          "cold_screen_calls": 74,
+          "cold_screen_verifier_calls": 276,
+          "transport_profile_checks": 1043,
+          "dual_cell_evaluations": 47232
+        },
+        "management": {
+          "serializations": 16810,
+          "serializedBytes": 12642118,
+          "rankComparisons": 4180,
+          "lookupComparisons": 7679,
+          "scans": 2205,
+          "approxCells": 21888,
+          "approxProfiles": 1368,
+          "dualSelectionScans": 1674,
+          "evictions": 3,
+          "identityEvictions": 329,
+          "oversize": 57,
+          "creditUpdates": 551,
+          "randomDraws": 0
+        },
+        "peak": 7921
+      }
+    },
+    "paired": {
+      "identity": {
+        "wins": 2,
+        "losses": 4,
+        "ties": 0,
+        "deltaByRoot": [
+          -1753771,
+          -1060073,
+          16791,
+          1874863,
+          -6548018,
+          -1491800
+        ]
+      },
+      "whole_single": {
+        "wins": 5,
+        "losses": 0,
+        "ties": 1,
+        "deltaByRoot": [
+          27111,
+          327,
+          0,
+          15108,
+          37487,
+          311703
+        ]
+      },
+      "component_lru": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 3,
+        "deltaByRoot": [
+          75,
+          0,
+          0,
+          0,
+          63,
+          36
+        ]
+      },
+      "component_random": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 3,
+        "deltaByRoot": [
+          75,
+          0,
+          0,
+          0,
+          -83150,
+          36
+        ]
+      },
+      "component_frequency": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 3,
+        "deltaByRoot": [
+          75,
+          0,
+          0,
+          0,
+          63,
+          36
+        ]
+      },
+      "component_utility": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 3,
+        "deltaByRoot": [
+          75,
+          0,
+          0,
+          0,
+          63,
+          36
+        ]
+      },
+      "component_lru_6": {
+        "wins": 1,
+        "losses": 4,
+        "ties": 1,
+        "deltaByRoot": [
+          -38175,
+          -12615,
+          0,
+          -23382,
+          -45460,
+          337617
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "spec": {
+        "id": "mem_chain_1",
+        "family": "chain",
+        "seed": 4610201,
+        "target": 0,
+        "utility": 0
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 42,
+                "pure": 5,
+                "transport": 0,
+                "cold": 17,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 1707,
+                "rational_normalizations": 1454121,
+                "rational_comparisons": 509040,
+                "regret_evaluations": 2529,
+                "fast_pure_checks": 117,
+                "solver_calls": 34,
+                "envelope_calls": 17,
+                "bilinear_profile_evaluations": 2946,
+                "dyadic_corner_evaluations": 816,
+                "cover_verifier_calls": 34,
+                "cold_screen_calls": 17,
+                "cold_screen_verifier_calls": 22
+              },
+              "memory": {
+                "peak": 8190,
+                "retainedBytes": 5090,
+                "identityEntries": 2,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 130,
+                  "serializedBytes": 692956,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 97,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 40
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1146077,
+                "rational_comparisons": 363411,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 3424
+              },
+              "memory": {
+                "peak": 6354,
+                "retainedBytes": 4832,
+                "identityEntries": 2,
+                "bankEntries": 5,
+                "work": {
+                  "serializations": 1142,
+                  "serializedBytes": 777760,
+                  "rankComparisons": 309,
+                  "lookupComparisons": 173,
+                  "scans": 84,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 286,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1156891,
+                "rational_comparisons": 364529,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6354,
+                "retainedBytes": 4832,
+                "identityEntries": 2,
+                "bankEntries": 5,
+                "work": {
+                  "serializations": 1012,
+                  "serializedBytes": 775994,
+                  "rankComparisons": 392,
+                  "lookupComparisons": 173,
+                  "scans": 84,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1156851,
+                "rational_comparisons": 364489,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6883,
+                "retainedBytes": 5361,
+                "identityEntries": 2,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1556,
+                  "serializedBytes": 1068456,
+                  "rankComparisons": 376,
+                  "lookupComparisons": 662,
+                  "scans": 216,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1156851,
+                "rational_comparisons": 364489,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6889,
+                "retainedBytes": 5367,
+                "identityEntries": 2,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1556,
+                  "serializedBytes": 1069812,
+                  "rankComparisons": 376,
+                  "lookupComparisons": 662,
+                  "scans": 216,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1156851,
+                "rational_comparisons": 364489,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6883,
+                "retainedBytes": 5361,
+                "identityEntries": 2,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1556,
+                  "serializedBytes": 1068456,
+                  "rankComparisons": 376,
+                  "lookupComparisons": 662,
+                  "scans": 216,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 40,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1314,
+                "rational_normalizations": 1156851,
+                "rational_comparisons": 364489,
+                "regret_evaluations": 1754,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 40,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6936,
+                "retainedBytes": 5417,
+                "identityEntries": 2,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1568,
+                  "serializedBytes": 1102410,
+                  "rankComparisons": 376,
+                  "lookupComparisons": 662,
+                  "scans": 216,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 154,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 33,
+                "pure": 10,
+                "transport": 9,
+                "cold": 12,
+                "attempts": 20,
+                "failed": 11,
+                "packetWitnesses": 114,
+                "packetDuals": 78
+              },
+              "work": {
+                "public_certify_calls": 1420,
+                "rational_normalizations": 1172775,
+                "rational_comparisons": 375209,
+                "regret_evaluations": 1860,
+                "fast_pure_checks": 154,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2057,
+                "dyadic_corner_evaluations": 576,
+                "cover_verifier_calls": 24,
+                "cold_screen_calls": 12,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 114,
+                "dual_cell_evaluations": 4032
+              },
+              "memory": {
+                "peak": 6883,
+                "retainedBytes": 5361,
+                "identityEntries": 2,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1556,
+                  "serializedBytes": 1068456,
+                  "rankComparisons": 376,
+                  "lookupComparisons": 662,
+                  "scans": 216,
+                  "approxCells": 2208,
+                  "approxProfiles": 138,
+                  "dualSelectionScans": 156,
+                  "evictions": 0,
+                  "identityEvictions": 26,
+                  "oversize": 3,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 4134,
+              "rational_normalizations": 3168372,
+              "rational_comparisons": 1134278,
+              "regret_evaluations": 5882,
+              "solver_calls": 72,
+              "envelope_calls": 36,
+              "bilinear_profile_evaluations": 6152,
+              "dyadic_corner_evaluations": 1728,
+              "cover_verifier_calls": 72,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 21,
+                "pure": 14,
+                "transport": 0,
+                "cold": 29,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 2923,
+                "rational_normalizations": 2421539,
+                "rational_comparisons": 874117,
+                "regret_evaluations": 4291,
+                "fast_pure_checks": 192,
+                "solver_calls": 58,
+                "envelope_calls": 29,
+                "bilinear_profile_evaluations": 5234,
+                "dyadic_corner_evaluations": 1392,
+                "cover_verifier_calls": 58,
+                "cold_screen_calls": 29,
+                "cold_screen_verifier_calls": 43
+              },
+              "memory": {
+                "peak": 8190,
+                "retainedBytes": 4202,
+                "identityEntries": 1,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 194,
+                  "serializedBytes": 1110332,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 119,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 42,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 66
+              },
+              "work": {
+                "public_certify_calls": 1152,
+                "rational_normalizations": 948701,
+                "rational_comparisons": 297856,
+                "regret_evaluations": 1492,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 5472
+              },
+              "memory": {
+                "peak": 7923,
+                "retainedBytes": 6401,
+                "identityEntries": 2,
+                "bankEntries": 9,
+                "work": {
+                  "serializations": 1827,
+                  "serializedBytes": 1077462,
+                  "rankComparisons": 568,
+                  "lookupComparisons": 262,
+                  "scans": 168,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 536,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1154,
+                "rational_normalizations": 964998,
+                "rational_comparisons": 299559,
+                "regret_evaluations": 1494,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 8185,
+                "retainedBytes": 6663,
+                "identityEntries": 2,
+                "bankEntries": 10,
+                "work": {
+                  "serializations": 1577,
+                  "serializedBytes": 1100796,
+                  "rankComparisons": 806,
+                  "lookupComparisons": 296,
+                  "scans": 176,
+                  "approxCells": 3616,
+                  "approxProfiles": 226,
+                  "dualSelectionScans": 244,
+                  "evictions": 1,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1154,
+                "rational_normalizations": 964963,
+                "rational_comparisons": 299524,
+                "regret_evaluations": 1494,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 7921,
+                "retainedBytes": 6399,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 2237,
+                  "serializedBytes": 1479458,
+                  "rankComparisons": 881,
+                  "lookupComparisons": 1012,
+                  "scans": 366,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 244,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 73,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1154,
+                "rational_normalizations": 964963,
+                "rational_comparisons": 299524,
+                "regret_evaluations": 1494,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 7927,
+                "retainedBytes": 6405,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 2237,
+                  "serializedBytes": 1481120,
+                  "rankComparisons": 881,
+                  "lookupComparisons": 1012,
+                  "scans": 366,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 244,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 73,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1154,
+                "rational_normalizations": 964963,
+                "rational_comparisons": 299524,
+                "regret_evaluations": 1494,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 7921,
+                "retainedBytes": 6399,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 2237,
+                  "serializedBytes": 1479458,
+                  "rankComparisons": 881,
+                  "lookupComparisons": 1012,
+                  "scans": 366,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 244,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 73,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 54,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1154,
+                "rational_normalizations": 964963,
+                "rational_comparisons": 299524,
+                "regret_evaluations": 1494,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 54,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 7986,
+                "retainedBytes": 6466,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 2246,
+                  "serializedBytes": 1516109,
+                  "rankComparisons": 881,
+                  "lookupComparisons": 1012,
+                  "scans": 366,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 244,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 249,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 23,
+                "pure": 13,
+                "transport": 19,
+                "cold": 9,
+                "attempts": 27,
+                "failed": 8,
+                "packetWitnesses": 153,
+                "packetDuals": 122
+              },
+              "work": {
+                "public_certify_calls": 1301,
+                "rational_normalizations": 987289,
+                "rational_comparisons": 314540,
+                "regret_evaluations": 1641,
+                "fast_pure_checks": 187,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1652,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 22,
+                "transport_profile_checks": 153,
+                "dual_cell_evaluations": 6368
+              },
+              "memory": {
+                "peak": 7921,
+                "retainedBytes": 6399,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 2237,
+                  "serializedBytes": 1479458,
+                  "rankComparisons": 881,
+                  "lookupComparisons": 1012,
+                  "scans": 366,
+                  "approxCells": 3904,
+                  "approxProfiles": 244,
+                  "dualSelectionScans": 244,
+                  "evictions": 0,
+                  "identityEvictions": 34,
+                  "oversize": 5,
+                  "creditUpdates": 73,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 3943,
+              "rational_normalizations": 2857096,
+              "rational_comparisons": 1061403,
+              "regret_evaluations": 5559,
+              "solver_calls": 66,
+              "envelope_calls": 33,
+              "bilinear_profile_evaluations": 5926,
+              "dyadic_corner_evaluations": 1584,
+              "cover_verifier_calls": 66,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spec": {
+        "id": "mem_chain_2",
+        "family": "chain",
+        "seed": 4618120,
+        "target": 2,
+        "utility": 1
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 12,
+                "transport": 0,
+                "cold": 8,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 804,
+                "rational_normalizations": 636846,
+                "rational_comparisons": 233534,
+                "regret_evaluations": 1164,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 60,
+                "solver_calls": 16,
+                "envelope_calls": 8,
+                "bilinear_profile_evaluations": 1264,
+                "dyadic_corner_evaluations": 384,
+                "cover_verifier_calls": 16,
+                "cold_screen_calls": 8
+              },
+              "memory": {
+                "peak": 7998,
+                "retainedBytes": 5077,
+                "identityEntries": 2,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 124,
+                  "serializedBytes": 696488,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 147,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5132,
+                "retainedBytes": 4148,
+                "identityEntries": 2,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 545,
+                  "serializedBytes": 564412,
+                  "rankComparisons": 100,
+                  "lookupComparisons": 180,
+                  "scans": 31,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 90,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5132,
+                "retainedBytes": 4148,
+                "identityEntries": 2,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 503,
+                  "serializedBytes": 563838,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 180,
+                  "scans": 31,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5068,
+                "retainedBytes": 4087,
+                "identityEntries": 2,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 691,
+                  "serializedBytes": 623842,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 334,
+                  "scans": 56,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 32,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5074,
+                "retainedBytes": 4093,
+                "identityEntries": 2,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 691,
+                  "serializedBytes": 624760,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 334,
+                  "scans": 56,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 32,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5068,
+                "retainedBytes": 4087,
+                "identityEntries": 2,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 691,
+                  "serializedBytes": 623842,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 334,
+                  "scans": 56,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 32,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 17,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 235,
+                "rational_normalizations": 140641,
+                "rational_comparisons": 48566,
+                "regret_evaluations": 273,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 17,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5096,
+                "retainedBytes": 4119,
+                "identityEntries": 2,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 692,
+                  "serializedBytes": 627944,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 334,
+                  "scans": 56,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 73,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 12,
+                "transport": 8,
+                "cold": 1,
+                "attempts": 9,
+                "failed": 1,
+                "packetWitnesses": 32,
+                "packetDuals": 24
+              },
+              "work": {
+                "public_certify_calls": 265,
+                "rational_normalizations": 145546,
+                "rational_comparisons": 51566,
+                "regret_evaluations": 303,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 64,
+                "transport_profile_checks": 32,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 165,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "dual_cell_evaluations": 1920
+              },
+              "memory": {
+                "peak": 5068,
+                "retainedBytes": 4087,
+                "identityEntries": 2,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 691,
+                  "serializedBytes": 623842,
+                  "rankComparisons": 69,
+                  "lookupComparisons": 334,
+                  "scans": 56,
+                  "approxCells": 512,
+                  "approxProfiles": 32,
+                  "dualSelectionScans": 48,
+                  "evictions": 0,
+                  "identityEvictions": 18,
+                  "oversize": 1,
+                  "creditUpdates": 32,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 3584,
+              "rational_normalizations": 2617524,
+              "rational_comparisons": 1001822,
+              "regret_evaluations": 4898,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 64,
+              "envelope_calls": 32,
+              "bilinear_profile_evaluations": 5182,
+              "dyadic_corner_evaluations": 1536,
+              "cover_verifier_calls": 64
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 35,
+                "pure": 19,
+                "transport": 0,
+                "cold": 10,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 979,
+                "rational_normalizations": 800184,
+                "rational_comparisons": 303966,
+                "regret_evaluations": 1373,
+                "cold_screen_verifier_calls": 29,
+                "fast_pure_checks": 65,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1636,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10
+              },
+              "memory": {
+                "peak": 8062,
+                "retainedBytes": 8040,
+                "identityEntries": 5,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 148,
+                  "serializedBytes": 863876,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 162,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 24,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 21,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 376,
+                "rational_normalizations": 235989,
+                "rational_comparisons": 84639,
+                "regret_evaluations": 452,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 21,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 6622,
+                "retainedBytes": 6237,
+                "identityEntries": 3,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 900,
+                  "serializedBytes": 871557,
+                  "rankComparisons": 206,
+                  "lookupComparisons": 234,
+                  "scans": 56,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 204,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 22,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 378,
+                "rational_normalizations": 236316,
+                "rational_comparisons": 84839,
+                "regret_evaluations": 454,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 22,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 6622,
+                "retainedBytes": 6237,
+                "identityEntries": 3,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 757,
+                  "serializedBytes": 870028,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 235,
+                  "scans": 56,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 22,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 378,
+                "rational_normalizations": 236316,
+                "rational_comparisons": 84839,
+                "regret_evaluations": 454,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 22,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 5682,
+                "retainedBytes": 5297,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 944,
+                  "serializedBytes": 860211,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 450,
+                  "scans": 81,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 22,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 378,
+                "rational_normalizations": 236316,
+                "rational_comparisons": 84839,
+                "regret_evaluations": 454,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 22,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 5688,
+                "retainedBytes": 5303,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 944,
+                  "serializedBytes": 861363,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 450,
+                  "scans": 81,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 22,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 378,
+                "rational_normalizations": 236316,
+                "rational_comparisons": 84839,
+                "regret_evaluations": 454,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 22,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 5682,
+                "retainedBytes": 5297,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 944,
+                  "serializedBytes": 860211,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 450,
+                  "scans": 81,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 22,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 378,
+                "rational_normalizations": 236316,
+                "rational_comparisons": 84839,
+                "regret_evaluations": 454,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 22,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 5714,
+                "retainedBytes": 5333,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 946,
+                  "serializedBytes": 867396,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 450,
+                  "scans": 81,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 88,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 24,
+                "transport": 9,
+                "cold": 2,
+                "attempts": 11,
+                "failed": 2,
+                "packetWitnesses": 51,
+                "packetDuals": 30
+              },
+              "work": {
+                "public_certify_calls": 427,
+                "rational_normalizations": 244026,
+                "rational_comparisons": 89703,
+                "regret_evaluations": 503,
+                "cold_screen_verifier_calls": 26,
+                "fast_pure_checks": 74,
+                "transport_profile_checks": 51,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 330,
+                "dyadic_corner_evaluations": 96,
+                "cover_verifier_calls": 4,
+                "cold_screen_calls": 2,
+                "dual_cell_evaluations": 2304
+              },
+              "memory": {
+                "peak": 5682,
+                "retainedBytes": 5297,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 944,
+                  "serializedBytes": 860211,
+                  "rankComparisons": 95,
+                  "lookupComparisons": 450,
+                  "scans": 81,
+                  "approxCells": 816,
+                  "approxProfiles": 51,
+                  "dualSelectionScans": 60,
+                  "evictions": 0,
+                  "identityEvictions": 30,
+                  "oversize": 2,
+                  "creditUpdates": 36,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 2626,
+              "rational_normalizations": 1502529,
+              "rational_comparisons": 612040,
+              "regret_evaluations": 3286,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 34,
+              "envelope_calls": 17,
+              "bilinear_profile_evaluations": 2791,
+              "dyadic_corner_evaluations": 816,
+              "cover_verifier_calls": 34
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spec": {
+        "id": "mem_fork_1",
+        "family": "fork",
+        "seed": 4626039,
+        "target": 1,
+        "utility": 0
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 49,
+                "pure": 15,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 99,
+                "rational_normalizations": 15419,
+                "rational_comparisons": 10417,
+                "regret_evaluations": 99,
+                "cold_screen_verifier_calls": 15,
+                "fast_pure_checks": 54
+              },
+              "memory": {
+                "peak": 7613,
+                "retainedBytes": 7613,
+                "identityEntries": 8,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 96,
+                  "serializedBytes": 512193,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 327,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 7,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4591,
+                "retainedBytes": 4591,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 522097,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4591,
+                "retainedBytes": 4591,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 522097,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4519,
+                "retainedBytes": 4519,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 513625,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4525,
+                "retainedBytes": 4525,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 514327,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4519,
+                "retainedBytes": 4519,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 513625,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4519,
+                "retainedBytes": 4519,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 513625,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 40,
+                "pure": 24,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 155,
+                "rational_normalizations": 24258,
+                "rational_comparisons": 16361,
+                "regret_evaluations": 155,
+                "cold_screen_verifier_calls": 24,
+                "fast_pure_checks": 83
+              },
+              "memory": {
+                "peak": 4519,
+                "retainedBytes": 4519,
+                "identityEntries": 4,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 337,
+                  "serializedBytes": 513625,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 234,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 20,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 1493,
+              "rational_normalizations": 217919,
+              "rational_comparisons": 152827,
+              "regret_evaluations": 1493,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 51,
+                "pure": 13,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 77,
+                "rational_normalizations": 12111,
+                "rational_comparisons": 7893,
+                "regret_evaluations": 77,
+                "cold_screen_verifier_calls": 13,
+                "fast_pure_checks": 38
+              },
+              "memory": {
+                "peak": 7733,
+                "retainedBytes": 7713,
+                "identityEntries": 8,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 92,
+                  "serializedBytes": 543135,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 378,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 5,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4856,
+                "retainedBytes": 4827,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 509805,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4856,
+                "retainedBytes": 4827,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 509805,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4760,
+                "retainedBytes": 4731,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 499845,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4766,
+                "retainedBytes": 4737,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 500505,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4760,
+                "retainedBytes": 4731,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 499845,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4760,
+                "retainedBytes": 4731,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 499845,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 44,
+                "pure": 20,
+                "transport": 0,
+                "cold": 0,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 129,
+                "rational_normalizations": 20063,
+                "rational_comparisons": 13319,
+                "regret_evaluations": 129,
+                "cold_screen_verifier_calls": 20,
+                "fast_pure_checks": 69
+              },
+              "memory": {
+                "peak": 4760,
+                "retainedBytes": 4731,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 309,
+                  "serializedBytes": 499845,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 241,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 16,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 1675,
+              "rational_normalizations": 252699,
+              "rational_comparisons": 165559,
+              "regret_evaluations": 1675,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spec": {
+        "id": "mem_fork_2",
+        "family": "fork",
+        "seed": 4633958,
+        "target": 0,
+        "utility": 1
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 56,
+                "pure": 7,
+                "transport": 0,
+                "cold": 1,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 143,
+                "rational_normalizations": 93890,
+                "rational_comparisons": 37963,
+                "regret_evaluations": 201,
+                "cold_screen_verifier_calls": 8,
+                "fast_pure_checks": 15,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 173,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1
+              },
+              "memory": {
+                "peak": 7950,
+                "retainedBytes": 7950,
+                "identityEntries": 5,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 85,
+                  "serializedBytes": 581725,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 210,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5172,
+                "retainedBytes": 5172,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 590,
+                  "serializedBytes": 499323,
+                  "rankComparisons": 126,
+                  "lookupComparisons": 232,
+                  "scans": 48,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5172,
+                "retainedBytes": 5172,
+                "identityEntries": 4,
+                "bankEntries": 4,
+                "work": {
+                  "serializations": 590,
+                  "serializedBytes": 499323,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 232,
+                  "scans": 48,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5567,
+                "retainedBytes": 5567,
+                "identityEntries": 4,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1087,
+                  "serializedBytes": 734441,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 581,
+                  "scans": 103,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5573,
+                "retainedBytes": 5573,
+                "identityEntries": 4,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1087,
+                  "serializedBytes": 735641,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 581,
+                  "scans": 103,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5567,
+                "retainedBytes": 5567,
+                "identityEntries": 4,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1087,
+                  "serializedBytes": 734441,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 581,
+                  "scans": 103,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 27,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1639,
+                "rational_normalizations": 1292041,
+                "rational_comparisons": 498005,
+                "regret_evaluations": 2451,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 27,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5595,
+                "retainedBytes": 5595,
+                "identityEntries": 4,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1101,
+                  "serializedBytes": 761984,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 581,
+                  "scans": 103,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 66,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 43,
+                "pure": 7,
+                "transport": 0,
+                "cold": 14,
+                "attempts": 14,
+                "failed": 14,
+                "packetWitnesses": 64,
+                "packetDuals": 39
+              },
+              "work": {
+                "public_certify_calls": 1689,
+                "rational_normalizations": 1299412,
+                "rational_comparisons": 503361,
+                "regret_evaluations": 2501,
+                "cold_screen_verifier_calls": 21,
+                "fast_pure_checks": 67,
+                "transport_profile_checks": 64,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2422,
+                "dyadic_corner_evaluations": 672,
+                "cover_verifier_calls": 28,
+                "cold_screen_calls": 14,
+                "dual_cell_evaluations": 1872
+              },
+              "memory": {
+                "peak": 5567,
+                "retainedBytes": 5567,
+                "identityEntries": 4,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1087,
+                  "serializedBytes": 734441,
+                  "rankComparisons": 139,
+                  "lookupComparisons": 581,
+                  "scans": 103,
+                  "approxCells": 1024,
+                  "approxProfiles": 64,
+                  "dualSelectionScans": 78,
+                  "evictions": 0,
+                  "identityEvictions": 3,
+                  "oversize": 14,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 2680,
+              "rational_normalizations": 1405580,
+              "rational_comparisons": 598284,
+              "regret_evaluations": 3492,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 28,
+              "envelope_calls": 14,
+              "bilinear_profile_evaluations": 2422,
+              "dyadic_corner_evaluations": 672,
+              "cover_verifier_calls": 28
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 28,
+                "pure": 27,
+                "transport": 0,
+                "cold": 9,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 1132,
+                "rational_normalizations": 816978,
+                "rational_comparisons": 319809,
+                "regret_evaluations": 1654,
+                "cold_screen_verifier_calls": 36,
+                "fast_pure_checks": 88,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1557,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9
+              },
+              "memory": {
+                "peak": 8030,
+                "retainedBytes": 8030,
+                "identityEntries": 5,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 169,
+                  "serializedBytes": 1047929,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 204,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 31,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 30,
+                "packetDuals": 42
+              },
+              "work": {
+                "public_certify_calls": 1924,
+                "rational_normalizations": 1478582,
+                "rational_comparisons": 563801,
+                "regret_evaluations": 2852,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 30,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2016
+              },
+              "memory": {
+                "peak": 5857,
+                "retainedBytes": 5857,
+                "identityEntries": 4,
+                "bankEntries": 5,
+                "work": {
+                  "serializations": 951,
+                  "serializedBytes": 777570,
+                  "rankComparisons": 248,
+                  "lookupComparisons": 279,
+                  "scans": 74,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 31,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 1926,
+                "rational_normalizations": 1493690,
+                "rational_comparisons": 565354,
+                "regret_evaluations": 2854,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 31,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 5857,
+                "retainedBytes": 5857,
+                "identityEntries": 4,
+                "bankEntries": 5,
+                "work": {
+                  "serializations": 951,
+                  "serializedBytes": 777570,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 279,
+                  "scans": 74,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 31,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 1926,
+                "rational_normalizations": 1493690,
+                "rational_comparisons": 565354,
+                "regret_evaluations": 2854,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 31,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 6717,
+                "retainedBytes": 6717,
+                "identityEntries": 4,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1716,
+                  "serializedBytes": 1218593,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 889,
+                  "scans": 190,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 31,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 1926,
+                "rational_normalizations": 1493690,
+                "rational_comparisons": 565354,
+                "regret_evaluations": 2854,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 31,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 6723,
+                "retainedBytes": 6723,
+                "identityEntries": 4,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1716,
+                  "serializedBytes": 1220063,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 889,
+                  "scans": 190,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 31,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 1926,
+                "rational_normalizations": 1493690,
+                "rational_comparisons": 565354,
+                "regret_evaluations": 2854,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 31,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 6717,
+                "retainedBytes": 6717,
+                "identityEntries": 4,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1716,
+                  "serializedBytes": 1218593,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 889,
+                  "scans": 190,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 31,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 1926,
+                "rational_normalizations": 1493690,
+                "rational_comparisons": 565354,
+                "regret_evaluations": 2854,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 31,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 6762,
+                "retainedBytes": 6762,
+                "identityEntries": 4,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1732,
+                  "serializedBytes": 1268856,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 889,
+                  "scans": 190,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 118,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 29,
+                "pure": 19,
+                "transport": 0,
+                "cold": 16,
+                "attempts": 16,
+                "failed": 16,
+                "packetWitnesses": 89,
+                "packetDuals": 87
+              },
+              "work": {
+                "public_certify_calls": 2027,
+                "rational_normalizations": 1509701,
+                "rational_comparisons": 575974,
+                "regret_evaluations": 2955,
+                "cold_screen_verifier_calls": 35,
+                "fast_pure_checks": 96,
+                "transport_profile_checks": 89,
+                "solver_calls": 32,
+                "envelope_calls": 16,
+                "bilinear_profile_evaluations": 2768,
+                "dyadic_corner_evaluations": 768,
+                "cover_verifier_calls": 32,
+                "cold_screen_calls": 16,
+                "dual_cell_evaluations": 2832
+              },
+              "memory": {
+                "peak": 6717,
+                "retainedBytes": 6717,
+                "identityEntries": 4,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1716,
+                  "serializedBytes": 1218593,
+                  "rankComparisons": 373,
+                  "lookupComparisons": 889,
+                  "scans": 190,
+                  "approxCells": 1648,
+                  "approxProfiles": 103,
+                  "dualSelectionScans": 174,
+                  "evictions": 0,
+                  "identityEvictions": 15,
+                  "oversize": 16,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 2883,
+              "rational_normalizations": 1577856,
+              "rational_comparisons": 654244,
+              "regret_evaluations": 3811,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 32,
+              "envelope_calls": 16,
+              "bilinear_profile_evaluations": 2768,
+              "dyadic_corner_evaluations": 768,
+              "cover_verifier_calls": 32
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spec": {
+        "id": "mem_veto_1",
+        "family": "veto",
+        "seed": 4641877,
+        "target": 2,
+        "utility": 0
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 13,
+                "pure": 5,
+                "transport": 0,
+                "cold": 46,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 4796,
+                "rational_normalizations": 3907261,
+                "rational_comparisons": 1456818,
+                "regret_evaluations": 7458,
+                "fast_pure_checks": 193,
+                "solver_calls": 92,
+                "envelope_calls": 46,
+                "bilinear_profile_evaluations": 7910,
+                "dyadic_corner_evaluations": 2208,
+                "cover_verifier_calls": 92,
+                "cold_screen_calls": 46,
+                "cold_screen_verifier_calls": 51
+              },
+              "memory": {
+                "peak": 6105,
+                "retainedBytes": 5105,
+                "identityEntries": 2,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 217,
+                  "serializedBytes": 1123286,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 74,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 49,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 67,
+                "packetDuals": 106
+              },
+              "work": {
+                "public_certify_calls": 1225,
+                "rational_normalizations": 932865,
+                "rational_comparisons": 322276,
+                "regret_evaluations": 1651,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 67,
+                "dual_cell_evaluations": 8464
+              },
+              "memory": {
+                "peak": 7442,
+                "retainedBytes": 6449,
+                "identityEntries": 2,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 2497,
+                  "serializedBytes": 1162802,
+                  "rankComparisons": 947,
+                  "lookupComparisons": 248,
+                  "scans": 200,
+                  "approxCells": 5936,
+                  "approxProfiles": 371,
+                  "dualSelectionScans": 820,
+                  "evictions": 1,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 80,
+                "packetDuals": 223
+              },
+              "work": {
+                "public_certify_calls": 1251,
+                "rational_normalizations": 970352,
+                "rational_comparisons": 327942,
+                "regret_evaluations": 1677,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 80,
+                "dual_cell_evaluations": 10336
+              },
+              "memory": {
+                "peak": 7442,
+                "retainedBytes": 6449,
+                "identityEntries": 2,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 2126,
+                  "serializedBytes": 1159164,
+                  "rankComparisons": 1350,
+                  "lookupComparisons": 251,
+                  "scans": 200,
+                  "approxCells": 5936,
+                  "approxProfiles": 371,
+                  "dualSelectionScans": 446,
+                  "evictions": 1,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 80,
+                "packetDuals": 223
+              },
+              "work": {
+                "public_certify_calls": 1251,
+                "rational_normalizations": 970289,
+                "rational_comparisons": 327879,
+                "regret_evaluations": 1677,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 80,
+                "dual_cell_evaluations": 10336
+              },
+              "memory": {
+                "peak": 7648,
+                "retainedBytes": 6655,
+                "identityEntries": 2,
+                "bankEntries": 19,
+                "work": {
+                  "serializations": 3033,
+                  "serializedBytes": 1865481,
+                  "rankComparisons": 1316,
+                  "lookupComparisons": 1203,
+                  "scans": 580,
+                  "approxCells": 5712,
+                  "approxProfiles": 357,
+                  "dualSelectionScans": 446,
+                  "evictions": 3,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 128,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 19,
+                "pure": 5,
+                "transport": 30,
+                "cold": 10,
+                "attempts": 39,
+                "failed": 9,
+                "packetWitnesses": 78,
+                "packetDuals": 203
+              },
+              "work": {
+                "public_certify_calls": 1353,
+                "rational_normalizations": 1053502,
+                "rational_comparisons": 359802,
+                "regret_evaluations": 1849,
+                "fast_pure_checks": 170,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1814,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "cold_screen_verifier_calls": 15,
+                "transport_profile_checks": 78,
+                "dual_cell_evaluations": 9728
+              },
+              "memory": {
+                "peak": 7652,
+                "retainedBytes": 6659,
+                "identityEntries": 2,
+                "bankEntries": 17,
+                "work": {
+                  "serializations": 3100,
+                  "serializedBytes": 1885856,
+                  "rankComparisons": 1087,
+                  "lookupComparisons": 1328,
+                  "scans": 543,
+                  "approxCells": 5296,
+                  "approxProfiles": 331,
+                  "dualSelectionScans": 424,
+                  "evictions": 9,
+                  "identityEvictions": 33,
+                  "oversize": 10,
+                  "creditUpdates": 120,
+                  "randomDraws": 9
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 80,
+                "packetDuals": 223
+              },
+              "work": {
+                "public_certify_calls": 1251,
+                "rational_normalizations": 970289,
+                "rational_comparisons": 327879,
+                "regret_evaluations": 1677,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 80,
+                "dual_cell_evaluations": 10336
+              },
+              "memory": {
+                "peak": 7648,
+                "retainedBytes": 6655,
+                "identityEntries": 2,
+                "bankEntries": 19,
+                "work": {
+                  "serializations": 3033,
+                  "serializedBytes": 1865481,
+                  "rankComparisons": 1316,
+                  "lookupComparisons": 1203,
+                  "scans": 580,
+                  "approxCells": 5712,
+                  "approxProfiles": 357,
+                  "dualSelectionScans": 446,
+                  "evictions": 3,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 128,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 80,
+                "packetDuals": 223
+              },
+              "work": {
+                "public_certify_calls": 1251,
+                "rational_normalizations": 970289,
+                "rational_comparisons": 327823,
+                "regret_evaluations": 1677,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 80,
+                "dual_cell_evaluations": 10336
+              },
+              "memory": {
+                "peak": 7493,
+                "retainedBytes": 6502,
+                "identityEntries": 2,
+                "bankEntries": 18,
+                "work": {
+                  "serializations": 3184,
+                  "serializedBytes": 1913163,
+                  "rankComparisons": 1227,
+                  "lookupComparisons": 1262,
+                  "scans": 565,
+                  "approxCells": 5472,
+                  "approxProfiles": 342,
+                  "dualSelectionScans": 446,
+                  "evictions": 5,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 431,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 5,
+                "transport": 32,
+                "cold": 9,
+                "attempts": 40,
+                "failed": 8,
+                "packetWitnesses": 222,
+                "packetDuals": 223
+              },
+              "work": {
+                "public_certify_calls": 1459,
+                "rational_normalizations": 1001751,
+                "rational_comparisons": 349559,
+                "regret_evaluations": 1885,
+                "fast_pure_checks": 174,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1631,
+                "dyadic_corner_evaluations": 432,
+                "cover_verifier_calls": 18,
+                "cold_screen_calls": 9,
+                "cold_screen_verifier_calls": 14,
+                "transport_profile_checks": 222,
+                "dual_cell_evaluations": 10336
+              },
+              "memory": {
+                "peak": 7648,
+                "retainedBytes": 6655,
+                "identityEntries": 2,
+                "bankEntries": 19,
+                "work": {
+                  "serializations": 3033,
+                  "serializedBytes": 1865481,
+                  "rankComparisons": 1316,
+                  "lookupComparisons": 1203,
+                  "scans": 580,
+                  "approxCells": 5712,
+                  "approxProfiles": 357,
+                  "dualSelectionScans": 446,
+                  "evictions": 3,
+                  "identityEvictions": 35,
+                  "oversize": 9,
+                  "creditUpdates": 128,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 5930,
+              "rational_normalizations": 4896148,
+              "rational_comparisons": 1831380,
+              "regret_evaluations": 9280,
+              "solver_calls": 116,
+              "envelope_calls": 58,
+              "bilinear_profile_evaluations": 9964,
+              "dyadic_corner_evaluations": 2784,
+              "cover_verifier_calls": 116,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 10,
+                "pure": 9,
+                "transport": 0,
+                "cold": 45,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 4726,
+                "rational_normalizations": 3968008,
+                "rational_comparisons": 1435345,
+                "regret_evaluations": 7416,
+                "fast_pure_checks": 134,
+                "solver_calls": 90,
+                "envelope_calls": 45,
+                "bilinear_profile_evaluations": 7611,
+                "dyadic_corner_evaluations": 2160,
+                "cover_verifier_calls": 90,
+                "cold_screen_calls": 45,
+                "cold_screen_verifier_calls": 54
+              },
+              "memory": {
+                "peak": 7081,
+                "retainedBytes": 4145,
+                "identityEntries": 1,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 227,
+                  "serializedBytes": 1195620,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 92,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 53,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4941,
+                "retainedBytes": 4564,
+                "identityEntries": 2,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 1763,
+                  "serializedBytes": 1024381,
+                  "rankComparisons": 508,
+                  "lookupComparisons": 272,
+                  "scans": 128,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 510,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4941,
+                "retainedBytes": 4564,
+                "identityEntries": 2,
+                "bankEntries": 3,
+                "work": {
+                  "serializations": 1511,
+                  "serializedBytes": 1020937,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 272,
+                  "scans": 128,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4901,
+                "retainedBytes": 4530,
+                "identityEntries": 2,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 2233,
+                  "serializedBytes": 1305639,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 891,
+                  "scans": 258,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 172,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4907,
+                "retainedBytes": 4536,
+                "identityEntries": 2,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 2233,
+                  "serializedBytes": 1307769,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 891,
+                  "scans": 258,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 172,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4901,
+                "retainedBytes": 4530,
+                "identityEntries": 2,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 2233,
+                  "serializedBytes": 1305639,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 891,
+                  "scans": 258,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 172,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 86,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 516,
+                "rational_normalizations": 356899,
+                "rational_comparisons": 94599,
+                "regret_evaluations": 574,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 86,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4933,
+                "retainedBytes": 4563,
+                "identityEntries": 2,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 2234,
+                  "serializedBytes": 1316323,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 891,
+                  "scans": 258,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 387,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 11,
+                "pure": 9,
+                "transport": 43,
+                "cold": 1,
+                "attempts": 43,
+                "failed": 0,
+                "packetWitnesses": 129,
+                "packetDuals": 129
+              },
+              "work": {
+                "public_certify_calls": 602,
+                "rational_normalizations": 370960,
+                "rational_comparisons": 103199,
+                "regret_evaluations": 660,
+                "fast_pure_checks": 132,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 171,
+                "dyadic_corner_evaluations": 48,
+                "cover_verifier_calls": 2,
+                "cold_screen_calls": 1,
+                "cold_screen_verifier_calls": 10,
+                "transport_profile_checks": 129,
+                "dual_cell_evaluations": 10320
+              },
+              "memory": {
+                "peak": 4901,
+                "retainedBytes": 4530,
+                "identityEntries": 2,
+                "bankEntries": 6,
+                "work": {
+                  "serializations": 2233,
+                  "serializedBytes": 1305639,
+                  "rankComparisons": 254,
+                  "lookupComparisons": 891,
+                  "scans": 258,
+                  "approxCells": 2064,
+                  "approxProfiles": 129,
+                  "dualSelectionScans": 258,
+                  "evictions": 0,
+                  "identityEvictions": 50,
+                  "oversize": 1,
+                  "creditUpdates": 172,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 5538,
+              "rational_normalizations": 4543167,
+              "rational_comparisons": 1643354,
+              "regret_evaluations": 8600,
+              "solver_calls": 102,
+              "envelope_calls": 51,
+              "bilinear_profile_evaluations": 8654,
+              "dyadic_corner_evaluations": 2448,
+              "cover_verifier_calls": 102,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spec": {
+        "id": "mem_veto_2",
+        "family": "veto",
+        "seed": 4649796,
+        "target": 1,
+        "utility": 1
+      },
+      "trajectories": [
+        {
+          "name": "parent",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 20,
+                "transport": 0,
+                "cold": 26,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 2678,
+                "rational_normalizations": 2088110,
+                "rational_comparisons": 759906,
+                "regret_evaluations": 3818,
+                "cold_screen_verifier_calls": 46,
+                "fast_pure_checks": 207,
+                "solver_calls": 52,
+                "envelope_calls": 26,
+                "bilinear_profile_evaluations": 4410,
+                "dyadic_corner_evaluations": 1248,
+                "cover_verifier_calls": 52,
+                "cold_screen_calls": 26
+              },
+              "memory": {
+                "peak": 8191,
+                "retainedBytes": 6066,
+                "identityEntries": 3,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 201,
+                  "serializedBytes": 1216290,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 155,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 21,
+                "transport": 18,
+                "cold": 7,
+                "attempts": 25,
+                "failed": 7,
+                "packetWitnesses": 49,
+                "packetDuals": 48
+              },
+              "work": {
+                "public_certify_calls": 1008,
+                "rational_normalizations": 718500,
+                "rational_comparisons": 247307,
+                "regret_evaluations": 1310,
+                "cold_screen_verifier_calls": 28,
+                "fast_pure_checks": 198,
+                "transport_profile_checks": 49,
+                "solver_calls": 14,
+                "envelope_calls": 7,
+                "bilinear_profile_evaluations": 1163,
+                "dyadic_corner_evaluations": 336,
+                "cover_verifier_calls": 14,
+                "cold_screen_calls": 7,
+                "dual_cell_evaluations": 4800
+              },
+              "memory": {
+                "peak": 6857,
+                "retainedBytes": 6271,
+                "identityEntries": 3,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 1419,
+                  "serializedBytes": 1070164,
+                  "rankComparisons": 379,
+                  "lookupComparisons": 280,
+                  "scans": 132,
+                  "approxCells": 2752,
+                  "approxProfiles": 172,
+                  "dualSelectionScans": 350,
+                  "evictions": 0,
+                  "identityEvictions": 38,
+                  "oversize": 5,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 17,
+                "pure": 22,
+                "transport": 15,
+                "cold": 10,
+                "attempts": 25,
+                "failed": 10,
+                "packetWitnesses": 49,
+                "packetDuals": 97
+              },
+              "work": {
+                "public_certify_calls": 1312,
+                "rational_normalizations": 945062,
+                "rational_comparisons": 329167,
+                "regret_evaluations": 1746,
+                "cold_screen_verifier_calls": 32,
+                "fast_pure_checks": 199,
+                "transport_profile_checks": 49,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1679,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "dual_cell_evaluations": 5296
+              },
+              "memory": {
+                "peak": 7533,
+                "retainedBytes": 6947,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 1456,
+                  "serializedBytes": 1173855,
+                  "rankComparisons": 653,
+                  "lookupComparisons": 278,
+                  "scans": 150,
+                  "approxCells": 3040,
+                  "approxProfiles": 190,
+                  "dualSelectionScans": 230,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 5,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 17,
+                "pure": 22,
+                "transport": 15,
+                "cold": 10,
+                "attempts": 25,
+                "failed": 10,
+                "packetWitnesses": 49,
+                "packetDuals": 97
+              },
+              "work": {
+                "public_certify_calls": 1312,
+                "rational_normalizations": 945054,
+                "rational_comparisons": 329159,
+                "regret_evaluations": 1746,
+                "cold_screen_verifier_calls": 32,
+                "fast_pure_checks": 199,
+                "transport_profile_checks": 49,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1679,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "dual_cell_evaluations": 5296
+              },
+              "memory": {
+                "peak": 7514,
+                "retainedBytes": 6928,
+                "identityEntries": 3,
+                "bankEntries": 16,
+                "work": {
+                  "serializations": 1872,
+                  "serializedBytes": 1466875,
+                  "rankComparisons": 644,
+                  "lookupComparisons": 761,
+                  "scans": 305,
+                  "approxCells": 3040,
+                  "approxProfiles": 190,
+                  "dualSelectionScans": 230,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 5,
+                  "creditUpdates": 45,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 17,
+                "pure": 22,
+                "transport": 15,
+                "cold": 10,
+                "attempts": 25,
+                "failed": 10,
+                "packetWitnesses": 49,
+                "packetDuals": 97
+              },
+              "work": {
+                "public_certify_calls": 1312,
+                "rational_normalizations": 945054,
+                "rational_comparisons": 329159,
+                "regret_evaluations": 1746,
+                "cold_screen_verifier_calls": 32,
+                "fast_pure_checks": 199,
+                "transport_profile_checks": 49,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1679,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "dual_cell_evaluations": 5296
+              },
+              "memory": {
+                "peak": 7520,
+                "retainedBytes": 6934,
+                "identityEntries": 3,
+                "bankEntries": 16,
+                "work": {
+                  "serializations": 1872,
+                  "serializedBytes": 1468495,
+                  "rankComparisons": 644,
+                  "lookupComparisons": 761,
+                  "scans": 305,
+                  "approxCells": 3040,
+                  "approxProfiles": 190,
+                  "dualSelectionScans": 230,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 5,
+                  "creditUpdates": 45,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 17,
+                "pure": 22,
+                "transport": 15,
+                "cold": 10,
+                "attempts": 25,
+                "failed": 10,
+                "packetWitnesses": 49,
+                "packetDuals": 97
+              },
+              "work": {
+                "public_certify_calls": 1312,
+                "rational_normalizations": 945054,
+                "rational_comparisons": 329159,
+                "regret_evaluations": 1746,
+                "cold_screen_verifier_calls": 32,
+                "fast_pure_checks": 199,
+                "transport_profile_checks": 49,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1679,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "dual_cell_evaluations": 5296
+              },
+              "memory": {
+                "peak": 7514,
+                "retainedBytes": 6928,
+                "identityEntries": 3,
+                "bankEntries": 16,
+                "work": {
+                  "serializations": 1872,
+                  "serializedBytes": 1466875,
+                  "rankComparisons": 644,
+                  "lookupComparisons": 761,
+                  "scans": 305,
+                  "approxCells": 3040,
+                  "approxProfiles": 190,
+                  "dualSelectionScans": 230,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 5,
+                  "creditUpdates": 45,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 17,
+                "pure": 22,
+                "transport": 15,
+                "cold": 10,
+                "attempts": 25,
+                "failed": 10,
+                "packetWitnesses": 49,
+                "packetDuals": 97
+              },
+              "work": {
+                "public_certify_calls": 1312,
+                "rational_normalizations": 945054,
+                "rational_comparisons": 329159,
+                "regret_evaluations": 1746,
+                "cold_screen_verifier_calls": 32,
+                "fast_pure_checks": 199,
+                "transport_profile_checks": 49,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1679,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10,
+                "dual_cell_evaluations": 5296
+              },
+              "memory": {
+                "peak": 7558,
+                "retainedBytes": 6976,
+                "identityEntries": 3,
+                "bankEntries": 16,
+                "work": {
+                  "serializations": 1882,
+                  "serializedBytes": 1501066,
+                  "rankComparisons": 644,
+                  "lookupComparisons": 761,
+                  "scans": 305,
+                  "approxCells": 3040,
+                  "approxProfiles": 190,
+                  "dualSelectionScans": 230,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 5,
+                  "creditUpdates": 191,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 18,
+                "pure": 21,
+                "transport": 18,
+                "cold": 7,
+                "attempts": 25,
+                "failed": 7,
+                "packetWitnesses": 135,
+                "packetDuals": 80
+              },
+              "work": {
+                "public_certify_calls": 1152,
+                "rational_normalizations": 750158,
+                "rational_comparisons": 262863,
+                "regret_evaluations": 1454,
+                "cold_screen_verifier_calls": 28,
+                "fast_pure_checks": 198,
+                "transport_profile_checks": 135,
+                "solver_calls": 14,
+                "envelope_calls": 7,
+                "bilinear_profile_evaluations": 1163,
+                "dyadic_corner_evaluations": 336,
+                "cover_verifier_calls": 14,
+                "cold_screen_calls": 7,
+                "dual_cell_evaluations": 5312
+              },
+              "memory": {
+                "peak": 6857,
+                "retainedBytes": 6271,
+                "identityEntries": 3,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1626,
+                  "serializedBytes": 1303997,
+                  "rankComparisons": 452,
+                  "lookupComparisons": 687,
+                  "scans": 252,
+                  "approxCells": 2752,
+                  "approxProfiles": 172,
+                  "dualSelectionScans": 160,
+                  "evictions": 0,
+                  "identityEvictions": 38,
+                  "oversize": 5,
+                  "creditUpdates": 53,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 3728,
+              "rational_normalizations": 2548886,
+              "rational_comparisons": 954638,
+              "regret_evaluations": 5100,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 62,
+              "envelope_calls": 31,
+              "bilinear_profile_evaluations": 5275,
+              "dyadic_corner_evaluations": 1488,
+              "cover_verifier_calls": 62
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "stats": {
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity": 20,
+                "pure": 34,
+                "transport": 0,
+                "cold": 10,
+                "attempts": 0,
+                "failed": 0,
+                "packetWitnesses": 0,
+                "packetDuals": 0
+              },
+              "work": {
+                "public_certify_calls": 1130,
+                "rational_normalizations": 815070,
+                "rational_comparisons": 303621,
+                "regret_evaluations": 1566,
+                "cold_screen_verifier_calls": 44,
+                "fast_pure_checks": 127,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1702,
+                "dyadic_corner_evaluations": 480,
+                "cover_verifier_calls": 20,
+                "cold_screen_calls": 10
+              },
+              "memory": {
+                "peak": 8184,
+                "retainedBytes": 8051,
+                "identityEntries": 5,
+                "bankEntries": 0,
+                "work": {
+                  "serializations": 192,
+                  "serializedBytes": 1211977,
+                  "rankComparisons": 0,
+                  "lookupComparisons": 267,
+                  "scans": 0,
+                  "approxCells": 0,
+                  "approxProfiles": 0,
+                  "dualSelectionScans": 0,
+                  "evictions": 0,
+                  "identityEvictions": 39,
+                  "oversize": 0,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_single": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 6,
+                "cold": 4,
+                "attempts": 10,
+                "failed": 4,
+                "packetWitnesses": 18,
+                "packetDuals": 16
+              },
+              "work": {
+                "public_certify_calls": 660,
+                "rational_normalizations": 381177,
+                "rational_comparisons": 144366,
+                "regret_evaluations": 842,
+                "cold_screen_verifier_calls": 42,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 18,
+                "solver_calls": 8,
+                "envelope_calls": 4,
+                "bilinear_profile_evaluations": 699,
+                "dyadic_corner_evaluations": 192,
+                "cover_verifier_calls": 8,
+                "cold_screen_calls": 4,
+                "dual_cell_evaluations": 1600
+              },
+              "memory": {
+                "peak": 7042,
+                "retainedBytes": 5874,
+                "identityEntries": 3,
+                "bankEntries": 7,
+                "work": {
+                  "serializations": 906,
+                  "serializedBytes": 1053508,
+                  "rankComparisons": 171,
+                  "lookupComparisons": 259,
+                  "scans": 53,
+                  "approxCells": 1248,
+                  "approxProfiles": 78,
+                  "dualSelectionScans": 140,
+                  "evictions": 0,
+                  "identityEvictions": 44,
+                  "oversize": 1,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "whole_pooled": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 5,
+                "cold": 5,
+                "attempts": 10,
+                "failed": 5,
+                "packetWitnesses": 19,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 755,
+                "rational_normalizations": 466318,
+                "rational_comparisons": 172411,
+                "regret_evaluations": 977,
+                "cold_screen_verifier_calls": 43,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 19,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 872,
+                "dyadic_corner_evaluations": 240,
+                "cover_verifier_calls": 10,
+                "cold_screen_calls": 5,
+                "dual_cell_evaluations": 1744
+              },
+              "memory": {
+                "peak": 7364,
+                "retainedBytes": 6390,
+                "identityEntries": 3,
+                "bankEntries": 8,
+                "work": {
+                  "serializations": 830,
+                  "serializedBytes": 1059618,
+                  "rankComparisons": 235,
+                  "lookupComparisons": 273,
+                  "scans": 52,
+                  "approxCells": 1280,
+                  "approxProfiles": 80,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 2,
+                  "creditUpdates": 0,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 5,
+                "cold": 5,
+                "attempts": 10,
+                "failed": 5,
+                "packetWitnesses": 19,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 755,
+                "rational_normalizations": 466290,
+                "rational_comparisons": 172383,
+                "regret_evaluations": 977,
+                "cold_screen_verifier_calls": 43,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 19,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 872,
+                "dyadic_corner_evaluations": 240,
+                "cover_verifier_calls": 10,
+                "cold_screen_calls": 5,
+                "dual_cell_evaluations": 1744
+              },
+              "memory": {
+                "peak": 7082,
+                "retainedBytes": 6108,
+                "identityEntries": 3,
+                "bankEntries": 15,
+                "work": {
+                  "serializations": 1091,
+                  "serializedBytes": 1197014,
+                  "rankComparisons": 231,
+                  "lookupComparisons": 523,
+                  "scans": 105,
+                  "approxCells": 1280,
+                  "approxProfiles": 80,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 2,
+                  "creditUpdates": 15,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_random": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 5,
+                "cold": 5,
+                "attempts": 10,
+                "failed": 5,
+                "packetWitnesses": 19,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 755,
+                "rational_normalizations": 466290,
+                "rational_comparisons": 172383,
+                "regret_evaluations": 977,
+                "cold_screen_verifier_calls": 43,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 19,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 872,
+                "dyadic_corner_evaluations": 240,
+                "cover_verifier_calls": 10,
+                "cold_screen_calls": 5,
+                "dual_cell_evaluations": 1744
+              },
+              "memory": {
+                "peak": 7088,
+                "retainedBytes": 6114,
+                "identityEntries": 3,
+                "bankEntries": 15,
+                "work": {
+                  "serializations": 1091,
+                  "serializedBytes": 1198322,
+                  "rankComparisons": 231,
+                  "lookupComparisons": 523,
+                  "scans": 105,
+                  "approxCells": 1280,
+                  "approxProfiles": 80,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 2,
+                  "creditUpdates": 15,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_frequency": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 5,
+                "cold": 5,
+                "attempts": 10,
+                "failed": 5,
+                "packetWitnesses": 19,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 755,
+                "rational_normalizations": 466290,
+                "rational_comparisons": 172383,
+                "regret_evaluations": 977,
+                "cold_screen_verifier_calls": 43,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 19,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 872,
+                "dyadic_corner_evaluations": 240,
+                "cover_verifier_calls": 10,
+                "cold_screen_calls": 5,
+                "dual_cell_evaluations": 1744
+              },
+              "memory": {
+                "peak": 7082,
+                "retainedBytes": 6108,
+                "identityEntries": 3,
+                "bankEntries": 15,
+                "work": {
+                  "serializations": 1091,
+                  "serializedBytes": 1197014,
+                  "rankComparisons": 231,
+                  "lookupComparisons": 523,
+                  "scans": 105,
+                  "approxCells": 1280,
+                  "approxProfiles": 80,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 2,
+                  "creditUpdates": 15,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_utility": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 5,
+                "cold": 5,
+                "attempts": 10,
+                "failed": 5,
+                "packetWitnesses": 19,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 755,
+                "rational_normalizations": 466290,
+                "rational_comparisons": 172383,
+                "regret_evaluations": 977,
+                "cold_screen_verifier_calls": 43,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 19,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 872,
+                "dyadic_corner_evaluations": 240,
+                "cover_verifier_calls": 10,
+                "cold_screen_calls": 5,
+                "dual_cell_evaluations": 1744
+              },
+              "memory": {
+                "peak": 7118,
+                "retainedBytes": 6146,
+                "identityEntries": 3,
+                "bankEntries": 15,
+                "work": {
+                  "serializations": 1096,
+                  "serializedBytes": 1212273,
+                  "rankComparisons": 231,
+                  "lookupComparisons": 523,
+                  "scans": 105,
+                  "approxCells": 1280,
+                  "approxProfiles": 80,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 43,
+                  "oversize": 2,
+                  "creditUpdates": 59,
+                  "randomDraws": 0
+                }
+              }
+            },
+            "component_lru_6": {
+              "counts": {
+                "queries": 64,
+                "identity": 16,
+                "pure": 38,
+                "transport": 7,
+                "cold": 3,
+                "attempts": 10,
+                "failed": 3,
+                "packetWitnesses": 54,
+                "packetDuals": 25
+              },
+              "work": {
+                "public_certify_calls": 632,
+                "rational_normalizations": 323605,
+                "rational_comparisons": 124067,
+                "regret_evaluations": 766,
+                "cold_screen_verifier_calls": 41,
+                "fast_pure_checks": 131,
+                "transport_profile_checks": 54,
+                "solver_calls": 6,
+                "envelope_calls": 3,
+                "bilinear_profile_evaluations": 530,
+                "dyadic_corner_evaluations": 144,
+                "cover_verifier_calls": 6,
+                "cold_screen_calls": 3,
+                "dual_cell_evaluations": 1936
+              },
+              "memory": {
+                "peak": 6881,
+                "retainedBytes": 5704,
+                "identityEntries": 3,
+                "bankEntries": 13,
+                "work": {
+                  "serializations": 1041,
+                  "serializedBytes": 1168530,
+                  "rankComparisons": 225,
+                  "lookupComparisons": 495,
+                  "scans": 103,
+                  "approxCells": 1248,
+                  "approxProfiles": 78,
+                  "dualSelectionScans": 50,
+                  "evictions": 0,
+                  "identityEvictions": 44,
+                  "oversize": 1,
+                  "creditUpdates": 21,
+                  "randomDraws": 0
+                }
+              }
+            }
+          },
+          "audit": {
+            "queries": 64,
+            "outputs": 512,
+            "parity": 512,
+            "coldWork": {
+              "public_certify_calls": 2243,
+              "rational_normalizations": 979045,
+              "rational_comparisons": 411251,
+              "regret_evaluations": 2679,
+              "cold_screen_calls": 64,
+              "cold_screen_verifier_calls": 64,
+              "solver_calls": 20,
+              "envelope_calls": 10,
+              "bilinear_profile_evaluations": 1702,
+              "dyadic_corner_evaluations": 480,
+              "cover_verifier_calls": 20
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

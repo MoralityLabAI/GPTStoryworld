@@ -1,0 +1,880 @@
+{
+  "status": "prospective_development",
+  "cap": 8,
+  "k": 2,
+  "budget": 64,
+  "training": {
+    "pairs": 1018,
+    "hits": 316,
+    "cold_calls": 97,
+    "attempts": 1018,
+    "normalizations": 11329525
+  },
+  "folds": [
+    {
+      "family": "chain",
+      "roots": [
+        "geo_fork_1",
+        "geo_fork_2",
+        "geo_veto_1",
+        "geo_veto_2"
+      ],
+      "pairs": 846,
+      "hits": 233
+    },
+    {
+      "family": "fork",
+      "roots": [
+        "geo_chain_1",
+        "geo_chain_2",
+        "geo_veto_1",
+        "geo_veto_2"
+      ],
+      "pairs": 678,
+      "hits": 238
+    },
+    {
+      "family": "veto",
+      "roots": [
+        "geo_chain_1",
+        "geo_chain_2",
+        "geo_fork_1",
+        "geo_fork_2"
+      ],
+      "pairs": 512,
+      "hits": 161
+    }
+  ],
+  "roots": 6,
+  "trajectories": 12,
+  "queries": 768,
+  "native_transitions": 96934,
+  "cold_audit_work": 26566821,
+  "aggregate": {
+    "cache": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 0,
+        "dual_transport": 0,
+        "attempts": 0,
+        "failed_attempts": 0,
+        "cold": 95,
+        "peak_profiles": 304,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 8093788,
+        "rational_comparisons": 2971273,
+        "regret_evaluations": 15197,
+        "solver_calls": 190,
+        "envelope_calls": 95,
+        "bilinear_profile_evaluations": 16299,
+        "dyadic_corner_evaluations": 4560,
+        "dual_cell_evaluations": 0,
+        "transport_profile_checks": 0,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 95,
+        "cold_screen_verifier_calls": 209,
+        "cover_verifier_calls": 190,
+        "public_certify_calls": 10225
+      },
+      "retrieval": {
+        "pair_features": 0,
+        "matrix_cells": 0,
+        "approx_profiles": 0,
+        "profile_cells": 0,
+        "linear_terms": 0,
+        "sort_comparisons": 0
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 48,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    },
+    "recency": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 51,
+        "dual_transport": 51,
+        "attempts": 139,
+        "failed_attempts": 88,
+        "cold": 44,
+        "peak_profiles": 239,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 4128070,
+        "rational_comparisons": 1472086,
+        "regret_evaluations": 7692,
+        "solver_calls": 88,
+        "envelope_calls": 44,
+        "bilinear_profile_evaluations": 7691,
+        "dyadic_corner_evaluations": 2112,
+        "dual_cell_evaluations": 14544,
+        "transport_profile_checks": 232,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 44,
+        "cold_screen_verifier_calls": 158,
+        "cover_verifier_calls": 88,
+        "public_certify_calls": 5620
+      },
+      "retrieval": {
+        "pair_features": 0,
+        "matrix_cells": 0,
+        "approx_profiles": 0,
+        "profile_cells": 0,
+        "linear_terms": 0,
+        "sort_comparisons": 0
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 43,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    },
+    "similarity": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 62,
+        "dual_transport": 62,
+        "attempts": 123,
+        "failed_attempts": 61,
+        "cold": 33,
+        "peak_profiles": 209,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 3278010,
+        "rational_comparisons": 1152322,
+        "regret_evaluations": 6020,
+        "solver_calls": 66,
+        "envelope_calls": 33,
+        "bilinear_profile_evaluations": 5794,
+        "dyadic_corner_evaluations": 1584,
+        "dual_cell_evaluations": 16864,
+        "transport_profile_checks": 189,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 33,
+        "cold_screen_verifier_calls": 147,
+        "cover_verifier_calls": 66,
+        "public_certify_calls": 4514
+      },
+      "retrieval": {
+        "pair_features": 0,
+        "matrix_cells": 9568,
+        "approx_profiles": 0,
+        "profile_cells": 0,
+        "linear_terms": 0,
+        "sort_comparisons": 1086
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 33,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    },
+    "feasibility": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 65,
+        "dual_transport": 65,
+        "attempts": 113,
+        "failed_attempts": 48,
+        "cold": 30,
+        "peak_profiles": 199,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 3066443,
+        "rational_comparisons": 1070535,
+        "regret_evaluations": 5652,
+        "solver_calls": 60,
+        "envelope_calls": 30,
+        "bilinear_profile_evaluations": 5301,
+        "dyadic_corner_evaluations": 1440,
+        "dual_cell_evaluations": 18080,
+        "transport_profile_checks": 188,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 30,
+        "cold_screen_verifier_calls": 144,
+        "cover_verifier_calls": 60,
+        "public_certify_calls": 4270
+      },
+      "retrieval": {
+        "pair_features": 598,
+        "matrix_cells": 9568,
+        "approx_profiles": 845,
+        "profile_cells": 13520,
+        "linear_terms": 0,
+        "sort_comparisons": 1088
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 33,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    },
+    "learned": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 65,
+        "dual_transport": 65,
+        "attempts": 116,
+        "failed_attempts": 51,
+        "cold": 30,
+        "peak_profiles": 199,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 3080260,
+        "rational_comparisons": 1076885,
+        "regret_evaluations": 5710,
+        "solver_calls": 60,
+        "envelope_calls": 30,
+        "bilinear_profile_evaluations": 5301,
+        "dyadic_corner_evaluations": 1440,
+        "dual_cell_evaluations": 18304,
+        "transport_profile_checks": 216,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 30,
+        "cold_screen_verifier_calls": 144,
+        "cover_verifier_calls": 60,
+        "public_certify_calls": 4328
+      },
+      "retrieval": {
+        "pair_features": 598,
+        "matrix_cells": 9568,
+        "approx_profiles": 845,
+        "profile_cells": 13520,
+        "linear_terms": 8970,
+        "sort_comparisons": 1120
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 33,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    },
+    "shuffled": {
+      "counts": {
+        "queries": 768,
+        "identity": 559,
+        "pure": 114,
+        "transport": 58,
+        "dual_transport": 58,
+        "attempts": 122,
+        "failed_attempts": 64,
+        "cold": 37,
+        "peak_profiles": 219,
+        "peak_duals": 258
+      },
+      "work": {
+        "rational_normalizations": 3532413,
+        "rational_comparisons": 1251659,
+        "regret_evaluations": 6568,
+        "solver_calls": 74,
+        "envelope_calls": 37,
+        "bilinear_profile_evaluations": 6432,
+        "dyadic_corner_evaluations": 1776,
+        "dual_cell_evaluations": 14720,
+        "transport_profile_checks": 150,
+        "fast_pure_checks": 669,
+        "cold_screen_calls": 37,
+        "cold_screen_verifier_calls": 151,
+        "cover_verifier_calls": 74,
+        "public_certify_calls": 4828
+      },
+      "retrieval": {
+        "pair_features": 598,
+        "matrix_cells": 9568,
+        "approx_profiles": 857,
+        "profile_cells": 13712,
+        "linear_terms": 8970,
+        "sort_comparisons": 1079
+      },
+      "evictions": 120,
+      "peak_entries": 8,
+      "max_profiles": 33,
+      "max_duals": 48,
+      "parity": 768,
+      "narrower": 0
+    }
+  },
+  "by_trajectory": {
+    "parent": {
+      "cache": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 0,
+          "dual_transport": 0,
+          "attempts": 0,
+          "failed_attempts": 0,
+          "cold": 42,
+          "peak_profiles": 146,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 3507778,
+          "rational_comparisons": 1296372,
+          "regret_evaluations": 6629,
+          "solver_calls": 84,
+          "envelope_calls": 42,
+          "bilinear_profile_evaluations": 7212,
+          "dyadic_corner_evaluations": 2016,
+          "dual_cell_evaluations": 0,
+          "transport_profile_checks": 0,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 42,
+          "cold_screen_verifier_calls": 84,
+          "cover_verifier_calls": 84,
+          "public_certify_calls": 4489
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 0,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 0
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 48,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "recency": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 19,
+          "dual_transport": 19,
+          "attempts": 62,
+          "failed_attempts": 43,
+          "cold": 23,
+          "peak_profiles": 121,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 2111598,
+          "rational_comparisons": 761551,
+          "regret_evaluations": 4006,
+          "solver_calls": 46,
+          "envelope_calls": 23,
+          "bilinear_profile_evaluations": 4035,
+          "dyadic_corner_evaluations": 1104,
+          "dual_cell_evaluations": 6176,
+          "transport_profile_checks": 129,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 23,
+          "cold_screen_verifier_calls": 65,
+          "cover_verifier_calls": 46,
+          "public_certify_calls": 2876
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 0,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 0
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 43,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "similarity": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 28,
+          "dual_transport": 28,
+          "attempts": 51,
+          "failed_attempts": 23,
+          "cold": 14,
+          "peak_profiles": 96,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 1405775,
+          "rational_comparisons": 495120,
+          "regret_evaluations": 2622,
+          "solver_calls": 28,
+          "envelope_calls": 14,
+          "bilinear_profile_evaluations": 2463,
+          "dyadic_corner_evaluations": 672,
+          "dual_cell_evaluations": 8112,
+          "transport_profile_checks": 95,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 14,
+          "cold_screen_verifier_calls": 56,
+          "cover_verifier_calls": 28,
+          "public_certify_calls": 1960
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 3952,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 435
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 28,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "feasibility": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 28,
+          "dual_transport": 28,
+          "attempts": 49,
+          "failed_attempts": 21,
+          "cold": 14,
+          "peak_profiles": 96,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 1402221,
+          "rational_comparisons": 493936,
+          "regret_evaluations": 2613,
+          "solver_calls": 28,
+          "envelope_calls": 14,
+          "bilinear_profile_evaluations": 2463,
+          "dyadic_corner_evaluations": 672,
+          "dual_cell_evaluations": 8000,
+          "transport_profile_checks": 87,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 14,
+          "cold_screen_verifier_calls": 56,
+          "cover_verifier_calls": 28,
+          "public_certify_calls": 1951
+        },
+        "retrieval": {
+          "pair_features": 247,
+          "matrix_cells": 3952,
+          "approx_profiles": 421,
+          "profile_cells": 6736,
+          "linear_terms": 0,
+          "sort_comparisons": 439
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 28,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "learned": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 28,
+          "dual_transport": 28,
+          "attempts": 52,
+          "failed_attempts": 24,
+          "cold": 14,
+          "peak_profiles": 96,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 1415893,
+          "rational_comparisons": 499614,
+          "regret_evaluations": 2663,
+          "solver_calls": 28,
+          "envelope_calls": 14,
+          "bilinear_profile_evaluations": 2463,
+          "dyadic_corner_evaluations": 672,
+          "dual_cell_evaluations": 8272,
+          "transport_profile_checks": 111,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 14,
+          "cold_screen_verifier_calls": 56,
+          "cover_verifier_calls": 28,
+          "public_certify_calls": 2001
+        },
+        "retrieval": {
+          "pair_features": 247,
+          "matrix_cells": 3952,
+          "approx_profiles": 421,
+          "profile_cells": 6736,
+          "linear_terms": 3705,
+          "sort_comparisons": 452
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 28,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "shuffled": {
+        "counts": {
+          "queries": 384,
+          "identity": 300,
+          "pure": 42,
+          "transport": 26,
+          "dual_transport": 26,
+          "attempts": 51,
+          "failed_attempts": 25,
+          "cold": 16,
+          "peak_profiles": 106,
+          "peak_duals": 126
+        },
+        "work": {
+          "rational_normalizations": 1516507,
+          "rational_comparisons": 537791,
+          "regret_evaluations": 2831,
+          "solver_calls": 32,
+          "envelope_calls": 16,
+          "bilinear_profile_evaluations": 2781,
+          "dyadic_corner_evaluations": 768,
+          "dual_cell_evaluations": 6720,
+          "transport_profile_checks": 63,
+          "fast_pure_checks": 302,
+          "cold_screen_calls": 16,
+          "cold_screen_verifier_calls": 58,
+          "cover_verifier_calls": 32,
+          "public_certify_calls": 2075
+        },
+        "retrieval": {
+          "pair_features": 247,
+          "matrix_cells": 3952,
+          "approx_profiles": 423,
+          "profile_cells": 6768,
+          "linear_terms": 3705,
+          "sort_comparisons": 441
+        },
+        "evictions": 43,
+        "peak_entries": 8,
+        "max_profiles": 28,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      }
+    },
+    "random_global": {
+      "cache": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 0,
+          "dual_transport": 0,
+          "attempts": 0,
+          "failed_attempts": 0,
+          "cold": 53,
+          "peak_profiles": 158,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 4586010,
+          "rational_comparisons": 1674901,
+          "regret_evaluations": 8568,
+          "solver_calls": 106,
+          "envelope_calls": 53,
+          "bilinear_profile_evaluations": 9087,
+          "dyadic_corner_evaluations": 2544,
+          "dual_cell_evaluations": 0,
+          "transport_profile_checks": 0,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 53,
+          "cold_screen_verifier_calls": 125,
+          "cover_verifier_calls": 106,
+          "public_certify_calls": 5736
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 0,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 0
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 48,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "recency": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 32,
+          "dual_transport": 32,
+          "attempts": 77,
+          "failed_attempts": 45,
+          "cold": 21,
+          "peak_profiles": 118,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 2016472,
+          "rational_comparisons": 710535,
+          "regret_evaluations": 3686,
+          "solver_calls": 42,
+          "envelope_calls": 21,
+          "bilinear_profile_evaluations": 3656,
+          "dyadic_corner_evaluations": 1008,
+          "dual_cell_evaluations": 8368,
+          "transport_profile_checks": 103,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 21,
+          "cold_screen_verifier_calls": 93,
+          "cover_verifier_calls": 42,
+          "public_certify_calls": 2744
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 0,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 0
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 33,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "similarity": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 34,
+          "dual_transport": 34,
+          "attempts": 72,
+          "failed_attempts": 38,
+          "cold": 19,
+          "peak_profiles": 113,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 1872235,
+          "rational_comparisons": 657202,
+          "regret_evaluations": 3398,
+          "solver_calls": 38,
+          "envelope_calls": 19,
+          "bilinear_profile_evaluations": 3331,
+          "dyadic_corner_evaluations": 912,
+          "dual_cell_evaluations": 8752,
+          "transport_profile_checks": 94,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 19,
+          "cold_screen_verifier_calls": 91,
+          "cover_verifier_calls": 38,
+          "public_certify_calls": 2554
+        },
+        "retrieval": {
+          "pair_features": 0,
+          "matrix_cells": 5616,
+          "approx_profiles": 0,
+          "profile_cells": 0,
+          "linear_terms": 0,
+          "sort_comparisons": 651
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 33,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "feasibility": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 37,
+          "dual_transport": 37,
+          "attempts": 64,
+          "failed_attempts": 27,
+          "cold": 16,
+          "peak_profiles": 103,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 1664222,
+          "rational_comparisons": 576599,
+          "regret_evaluations": 3039,
+          "solver_calls": 32,
+          "envelope_calls": 16,
+          "bilinear_profile_evaluations": 2838,
+          "dyadic_corner_evaluations": 768,
+          "dual_cell_evaluations": 10080,
+          "transport_profile_checks": 101,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 16,
+          "cold_screen_verifier_calls": 88,
+          "cover_verifier_calls": 32,
+          "public_certify_calls": 2319
+        },
+        "retrieval": {
+          "pair_features": 351,
+          "matrix_cells": 5616,
+          "approx_profiles": 424,
+          "profile_cells": 6784,
+          "linear_terms": 0,
+          "sort_comparisons": 649
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 33,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "learned": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 37,
+          "dual_transport": 37,
+          "attempts": 64,
+          "failed_attempts": 27,
+          "cold": 16,
+          "peak_profiles": 103,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 1664367,
+          "rational_comparisons": 577271,
+          "regret_evaluations": 3047,
+          "solver_calls": 32,
+          "envelope_calls": 16,
+          "bilinear_profile_evaluations": 2838,
+          "dyadic_corner_evaluations": 768,
+          "dual_cell_evaluations": 10032,
+          "transport_profile_checks": 105,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 16,
+          "cold_screen_verifier_calls": 88,
+          "cover_verifier_calls": 32,
+          "public_certify_calls": 2327
+        },
+        "retrieval": {
+          "pair_features": 351,
+          "matrix_cells": 5616,
+          "approx_profiles": 424,
+          "profile_cells": 6784,
+          "linear_terms": 5265,
+          "sort_comparisons": 668
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 33,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      },
+      "shuffled": {
+        "counts": {
+          "queries": 384,
+          "identity": 259,
+          "pure": 72,
+          "transport": 32,
+          "dual_transport": 32,
+          "attempts": 71,
+          "failed_attempts": 39,
+          "cold": 21,
+          "peak_profiles": 113,
+          "peak_duals": 132
+        },
+        "work": {
+          "rational_normalizations": 2015906,
+          "rational_comparisons": 713868,
+          "regret_evaluations": 3737,
+          "solver_calls": 42,
+          "envelope_calls": 21,
+          "bilinear_profile_evaluations": 3651,
+          "dyadic_corner_evaluations": 1008,
+          "dual_cell_evaluations": 8000,
+          "transport_profile_checks": 87,
+          "fast_pure_checks": 367,
+          "cold_screen_calls": 21,
+          "cold_screen_verifier_calls": 93,
+          "cover_verifier_calls": 42,
+          "public_certify_calls": 2753
+        },
+        "retrieval": {
+          "pair_features": 351,
+          "matrix_cells": 5616,
+          "approx_profiles": 434,
+          "profile_cells": 6944,
+          "linear_terms": 5265,
+          "sort_comparisons": 638
+        },
+        "evictions": 77,
+        "peak_entries": 8,
+        "max_profiles": 33,
+        "max_duals": 48,
+        "parity": 384,
+        "narrower": 0
+      }
+    }
+  },
+  "learned_pairwise": {
+    "cache": {
+      "wins": 8,
+      "losses": 2,
+      "ties": 2
+    },
+    "recency": {
+      "wins": 5,
+      "losses": 3,
+      "ties": 4
+    },
+    "similarity": {
+      "wins": 2,
+      "losses": 5,
+      "ties": 5
+    },
+    "feasibility": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 7
+    },
+    "shuffled": {
+      "wins": 5,
+      "losses": 4,
+      "ties": 3
+    }
+  }
+}

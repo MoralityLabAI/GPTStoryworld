@@ -1,0 +1,2640 @@
+{
+  "status": "development_only",
+  "scope": "same six development roots as PP2-BAL-02; exact line and seed selection, no new structural holdout",
+  "unit": {
+    "seed_target_tv": "1/6",
+    "line_target_tv": "0/1",
+    "certificate": {
+      "x": [
+        "1/3",
+        "2/3"
+      ],
+      "y": [
+        "1/1"
+      ],
+      "row_payoff": "0/1",
+      "column_payoff": "0/1",
+      "row_best_response": 0,
+      "column_best_response": 0,
+      "row_regret": "0/1",
+      "column_regret": "0/1",
+      "max_regret": "0/1",
+      "certified": true,
+      "threshold": "1/5"
+    }
+  },
+  "roots": 6,
+  "candidates": 96,
+  "lines": 1922,
+  "improved_lines": 255,
+  "checked": 3607,
+  "seed_checked": 2324,
+  "means": {
+    "original": {
+      "target_tv": 0.625,
+      "author_loss": 0.125
+    },
+    "target_on_original": {
+      "target_tv": 0.11233770153692618,
+      "author_loss": 0.125
+    },
+    "same_author_loss": {
+      "target_tv": 0.10678214598137063,
+      "author_loss": 0.125
+    },
+    "slack_1_8": {
+      "target_tv": 0.09749605574136437,
+      "author_loss": 0.16666666666666666
+    }
+  },
+  "zero_target_same": 1,
+  "changed_world_same": 2,
+  "rows": [
+    {
+      "seed": 701921,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "utility_schedule": 0,
+      "candidates": 16,
+      "original": {
+        "key": "1,1,2,1",
+        "author_loss": "0/1",
+        "target_tv": "5/8",
+        "certificate": {
+          "x": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "row_payoff": "1/1",
+          "column_payoff": "0/1",
+          "row_best_response": 0,
+          "column_best_response": 0,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "defection": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "1,1,2,1",
+        "author_loss": "0/1",
+        "target_tv": "25/168",
+        "certificate": {
+          "x": [
+            "11/21",
+            "0/1",
+            "17/105",
+            "11/35"
+          ],
+          "y": [
+            "0/1",
+            "0/1",
+            "0/1",
+            "1/1"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "19/60",
+          "row_best_response": 0,
+          "column_best_response": 1,
+          "row_regret": "1/5",
+          "column_regret": "0/1",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "11/35",
+          "defection": "11/21",
+          "hold": "17/105"
+        },
+        "seed_target_tv": "17/40",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "1,1,2,1",
+        "author_loss": "0/1",
+        "target_tv": "25/168",
+        "certificate": {
+          "x": [
+            "11/21",
+            "0/1",
+            "17/105",
+            "11/35"
+          ],
+          "y": [
+            "0/1",
+            "0/1",
+            "0/1",
+            "1/1"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "19/60",
+          "row_best_response": 0,
+          "column_best_response": 1,
+          "row_regret": "1/5",
+          "column_regret": "0/1",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "11/35",
+          "defection": "11/21",
+          "hold": "17/105"
+        },
+        "seed_target_tv": "17/40",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "1,0,2,1",
+        "author_loss": "1/8",
+        "target_tv": "827976024007/7642850123880",
+        "certificate": {
+          "x": [
+            "65221605/286863488",
+            "3836565/17928968",
+            "98871803/286863488",
+            "3836565/17928968"
+          ],
+          "y": [
+            "316589/1278855",
+            "316589/1278855",
+            "316589/1278855",
+            "109696/426285"
+          ],
+          "row_payoff": "254761689356/318452088495",
+          "column_payoff": "10763679403291/30571400495520",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "63690399139/318452088495",
+          "column_regret": "34540696644727/244571203964160",
+          "max_regret": "63690399139/318452088495",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "3/8",
+          "defection": "1847022410231/3821425061940",
+          "hold": "1082736506963/7642850123880"
+        },
+        "seed_target_tv": "33/260",
+        "p_readout_tv": "7/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ],
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 4,
+      "slack_eligible": 10,
+      "lines": 332,
+      "improved_lines": 39,
+      "checked": 641,
+      "seed_checked": 449
+    },
+    {
+      "seed": 709840,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "utility_schedule": 1,
+      "candidates": 16,
+      "original": {
+        "key": "1,0,1,1",
+        "author_loss": "1/8",
+        "target_tv": "1/2",
+        "certificate": {
+          "x": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "0/1",
+            "0/1",
+            "1/1",
+            "0/1"
+          ],
+          "row_payoff": "3/4",
+          "column_payoff": "3/4",
+          "row_best_response": 0,
+          "column_best_response": 2,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "hold": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "1,0,1,1",
+        "author_loss": "1/8",
+        "target_tv": "1/30",
+        "certificate": {
+          "x": [
+            "2/5",
+            "1/15",
+            "1/15",
+            "7/15"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "89/120",
+          "column_payoff": "169/240",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "2/15",
+          "column_regret": "43/240",
+          "max_regret": "43/240",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1/4",
+          "defection": "13/60",
+          "hold": "8/15"
+        },
+        "seed_target_tv": "1/8",
+        "p_readout_tv": "3/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "1,0,2,1",
+        "author_loss": "1/8",
+        "target_tv": "0/1",
+        "certificate": {
+          "x": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "3/4",
+          "column_payoff": "11/16",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "3/16",
+          "column_regret": "3/16",
+          "max_regret": "3/16",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1/4",
+          "defection": "1/4",
+          "hold": "1/2"
+        },
+        "seed_target_tv": "0/1",
+        "p_readout_tv": "1/2",
+        "p2_readout_tv": "0/1",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "1/1",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "1,0,2,1",
+        "author_loss": "1/8",
+        "target_tv": "0/1",
+        "certificate": {
+          "x": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "3/4",
+          "column_payoff": "11/16",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "3/16",
+          "column_regret": "3/16",
+          "max_regret": "3/16",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1/4",
+          "defection": "1/4",
+          "hold": "1/2"
+        },
+        "seed_target_tv": "0/1",
+        "p_readout_tv": "1/2",
+        "p2_readout_tv": "0/1",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "1/1",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 9,
+      "slack_eligible": 12,
+      "lines": 314,
+      "improved_lines": 70,
+      "checked": 681,
+      "seed_checked": 355
+    },
+    {
+      "seed": 717759,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "utility_schedule": 0,
+      "candidates": 16,
+      "original": {
+        "key": "1,1,1,1",
+        "author_loss": "0/1",
+        "target_tv": "9/16",
+        "certificate": {
+          "x": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "row_payoff": "1/1",
+          "column_payoff": "0/1",
+          "row_best_response": 0,
+          "column_best_response": 0,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "defection": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "1,1,1,1",
+        "author_loss": "0/1",
+        "target_tv": "2517/593552",
+        "certificate": {
+          "x": [
+            "9673/37097",
+            "9104/37097",
+            "9216/37097",
+            "9104/37097"
+          ],
+          "y": [
+            "313/1280",
+            "313/1280",
+            "313/1280",
+            "341/1280"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "4613929/11871040",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "1967831/11871040",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1299053/2967760",
+          "defection": "655161/1483880",
+          "hold": "71677/593552"
+        },
+        "seed_target_tv": "9/1040",
+        "p_readout_tv": "1/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "0/1",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "3/4",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "coalition"
+            ],
+            [
+              "defection",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "1,1,1,1",
+        "author_loss": "0/1",
+        "target_tv": "2517/593552",
+        "certificate": {
+          "x": [
+            "9673/37097",
+            "9104/37097",
+            "9216/37097",
+            "9104/37097"
+          ],
+          "y": [
+            "313/1280",
+            "313/1280",
+            "313/1280",
+            "341/1280"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "4613929/11871040",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "1967831/11871040",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1299053/2967760",
+          "defection": "655161/1483880",
+          "hold": "71677/593552"
+        },
+        "seed_target_tv": "9/1040",
+        "p_readout_tv": "1/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "0/1",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "3/4",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "coalition"
+            ],
+            [
+              "defection",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "1,1,1,1",
+        "author_loss": "0/1",
+        "target_tv": "2517/593552",
+        "certificate": {
+          "x": [
+            "9673/37097",
+            "9104/37097",
+            "9216/37097",
+            "9104/37097"
+          ],
+          "y": [
+            "313/1280",
+            "313/1280",
+            "313/1280",
+            "341/1280"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "4613929/11871040",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "1967831/11871040",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1299053/2967760",
+          "defection": "655161/1483880",
+          "hold": "71677/593552"
+        },
+        "seed_target_tv": "9/1040",
+        "p_readout_tv": "1/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "0/1"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "0/1",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "3/4",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "coalition"
+            ],
+            [
+              "defection",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 7,
+      "slack_eligible": 7,
+      "lines": 292,
+      "improved_lines": 11,
+      "checked": 659,
+      "seed_checked": 468
+    },
+    {
+      "seed": 725678,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "utility_schedule": 1,
+      "candidates": 16,
+      "original": {
+        "key": "1,3,1,1",
+        "author_loss": "1/2",
+        "target_tv": "3/4",
+        "certificate": {
+          "x": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "0/1",
+            "0/1",
+            "1/1",
+            "0/1"
+          ],
+          "row_payoff": "3/4",
+          "column_payoff": "3/4",
+          "row_best_response": 0,
+          "column_best_response": 2,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "hold": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "1,3,1,1",
+        "author_loss": "1/2",
+        "target_tv": "1409/5720",
+        "certificate": {
+          "x": [
+            "23/88",
+            "0/1",
+            "0/1",
+            "65/88"
+          ],
+          "y": [
+            "32/65",
+            "0/1",
+            "0/1",
+            "33/65"
+          ],
+          "row_payoff": "15751/22880",
+          "column_payoff": "17833/22880",
+          "row_best_response": 0,
+          "column_best_response": 2,
+          "row_regret": "65/352",
+          "column_regret": "111/715",
+          "max_regret": "65/352",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "3/8",
+          "defection": "92/715",
+          "hold": "2839/5720"
+        },
+        "seed_target_tv": "17/40",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "1,2,1,2",
+        "author_loss": "1/2",
+        "target_tv": "1409/5720",
+        "certificate": {
+          "x": [
+            "23/88",
+            "0/1",
+            "0/1",
+            "65/88"
+          ],
+          "y": [
+            "32/65",
+            "0/1",
+            "0/1",
+            "33/65"
+          ],
+          "row_payoff": "15751/22880",
+          "column_payoff": "17833/22880",
+          "row_best_response": 0,
+          "column_best_response": 2,
+          "row_regret": "65/352",
+          "column_regret": "111/715",
+          "max_regret": "65/352",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "3/8",
+          "defection": "92/715",
+          "hold": "2839/5720"
+        },
+        "seed_target_tv": "17/40",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "1,2,1,2",
+        "author_loss": "1/2",
+        "target_tv": "1409/5720",
+        "certificate": {
+          "x": [
+            "23/88",
+            "0/1",
+            "0/1",
+            "65/88"
+          ],
+          "y": [
+            "32/65",
+            "0/1",
+            "0/1",
+            "33/65"
+          ],
+          "row_payoff": "15751/22880",
+          "column_payoff": "17833/22880",
+          "row_best_response": 0,
+          "column_best_response": 2,
+          "row_regret": "65/352",
+          "column_regret": "111/715",
+          "max_regret": "65/352",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "3/8",
+          "defection": "92/715",
+          "hold": "2839/5720"
+        },
+        "seed_target_tv": "17/40",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ],
+            [
+              "3/4",
+              "3/4",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 2,
+      "slack_eligible": 9,
+      "lines": 286,
+      "improved_lines": 27,
+      "checked": 482,
+      "seed_checked": 319
+    },
+    {
+      "seed": 733597,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "utility_schedule": 0,
+      "candidates": 16,
+      "original": {
+        "key": "0,0,1,1",
+        "author_loss": "0/1",
+        "target_tv": "3/4",
+        "certificate": {
+          "x": [
+            "0/1",
+            "1/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "0/1",
+            "0/1",
+            "0/1",
+            "1/1"
+          ],
+          "row_payoff": "3/4",
+          "column_payoff": "3/4",
+          "row_best_response": 1,
+          "column_best_response": 3,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "0,0,1,1",
+        "author_loss": "0/1",
+        "target_tv": "3743/28850",
+        "certificate": {
+          "x": [
+            "4427/14425",
+            "8083/28850",
+            "0/1",
+            "11913/28850"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "49/80",
+          "column_payoff": "110749/230800",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "44643/230800",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "21911/57700",
+          "defection": "13281/57700",
+          "hold": "5627/14425"
+        },
+        "seed_target_tv": "11/20",
+        "p_readout_tv": "1/2",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "0,0,1,1",
+        "author_loss": "0/1",
+        "target_tv": "3743/28850",
+        "certificate": {
+          "x": [
+            "4427/14425",
+            "8083/28850",
+            "0/1",
+            "11913/28850"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "49/80",
+          "column_payoff": "110749/230800",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "44643/230800",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "21911/57700",
+          "defection": "13281/57700",
+          "hold": "5627/14425"
+        },
+        "seed_target_tv": "11/20",
+        "p_readout_tv": "1/2",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "3/4"
+            ],
+            [
+              "0/1",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "0,1,1,1",
+        "author_loss": "1/8",
+        "target_tv": "1453/12690",
+        "certificate": {
+          "x": [
+            "18299/57105",
+            "11053/57105",
+            "0/1",
+            "9251/19035"
+          ],
+          "y": [
+            "1/4",
+            "1/4",
+            "1/4",
+            "1/4"
+          ],
+          "row_payoff": "49/80",
+          "column_payoff": "28687/60912",
+          "row_best_response": 0,
+          "column_best_response": 3,
+          "row_regret": "1/5",
+          "column_regret": "15283/101520",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "9251/25380",
+          "defection": "18299/76140",
+          "hold": "7522/19035"
+        },
+        "seed_target_tv": "11/20",
+        "p_readout_tv": "3/8",
+        "p2_readout_tv": "1/8",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "C": [
+            [
+              "0/1",
+              "0/1",
+              "0/1",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "1/2",
+              "3/4",
+              "3/4",
+              "3/4"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "hold",
+              "hold",
+              "hold"
+            ],
+            [
+              "hold",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 4,
+      "slack_eligible": 7,
+      "lines": 338,
+      "improved_lines": 54,
+      "checked": 604,
+      "seed_checked": 407
+    },
+    {
+      "seed": 741516,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "utility_schedule": 1,
+      "candidates": 16,
+      "original": {
+        "key": "1,1,2,1",
+        "author_loss": "1/8",
+        "target_tv": "9/16",
+        "certificate": {
+          "x": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "1/1",
+            "0/1",
+            "0/1",
+            "0/1"
+          ],
+          "row_payoff": "1/1",
+          "column_payoff": "1/4",
+          "row_best_response": 0,
+          "column_best_response": 0,
+          "row_regret": "0/1",
+          "column_regret": "0/1",
+          "max_regret": "0/1",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "defection": "1/1"
+        }
+      },
+      "target_on_original": {
+        "key": "1,1,2,1",
+        "author_loss": "1/8",
+        "target_tv": "241/2160",
+        "certificate": {
+          "x": [
+            "71/135",
+            "64/135",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "5/16",
+            "0/1",
+            "0/1",
+            "11/16"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "307/540",
+          "row_best_response": 0,
+          "column_best_response": 1,
+          "row_regret": "1/5",
+          "column_regret": "1/27",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "44/135",
+          "defection": "71/135",
+          "hold": "4/27"
+        },
+        "seed_target_tv": "9/16",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "3/4",
+              "1/2",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "1/1",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_author_loss": {
+        "key": "1,1,2,1",
+        "author_loss": "1/8",
+        "target_tv": "241/2160",
+        "certificate": {
+          "x": [
+            "71/135",
+            "64/135",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "5/16",
+            "0/1",
+            "0/1",
+            "11/16"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "307/540",
+          "row_best_response": 0,
+          "column_best_response": 1,
+          "row_regret": "1/5",
+          "column_regret": "1/27",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "44/135",
+          "defection": "71/135",
+          "hold": "4/27"
+        },
+        "seed_target_tv": "9/16",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "3/4",
+              "1/2",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "1/1",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "slack_1_8": {
+        "key": "1,1,2,1",
+        "author_loss": "1/8",
+        "target_tv": "241/2160",
+        "certificate": {
+          "x": [
+            "71/135",
+            "64/135",
+            "0/1",
+            "0/1"
+          ],
+          "y": [
+            "5/16",
+            "0/1",
+            "0/1",
+            "11/16"
+          ],
+          "row_payoff": "4/5",
+          "column_payoff": "307/540",
+          "row_best_response": 0,
+          "column_best_response": 1,
+          "row_regret": "1/5",
+          "column_regret": "1/27",
+          "max_regret": "1/5",
+          "certified": true,
+          "threshold": "1/5"
+        },
+        "ending_law": {
+          "coalition": "44/135",
+          "defection": "71/135",
+          "hold": "4/27"
+        },
+        "seed_target_tv": "9/16",
+        "p_readout_tv": "1/4",
+        "p2_readout_tv": "1/4",
+        "game": {
+          "R": [
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ],
+            [
+              "3/4",
+              "1/2",
+              "3/4",
+              "1/2"
+            ],
+            [
+              "1/1",
+              "3/4",
+              "1/1",
+              "3/4"
+            ],
+            [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ]
+          ],
+          "C": [
+            [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            [
+              "3/4",
+              "1/1",
+              "3/4",
+              "1/1"
+            ],
+            [
+              "1/4",
+              "3/4",
+              "1/4",
+              "3/4"
+            ],
+            [
+              "1/1",
+              "1/1",
+              "1/1",
+              "1/1"
+            ]
+          ],
+          "endings": [
+            [
+              "defection",
+              "defection",
+              "defection",
+              "defection"
+            ],
+            [
+              "hold",
+              "coalition",
+              "hold",
+              "coalition"
+            ],
+            [
+              "defection",
+              "hold",
+              "defection",
+              "hold"
+            ],
+            [
+              "coalition",
+              "coalition",
+              "coalition",
+              "coalition"
+            ]
+          ],
+          "row_policies": [
+            "A_0",
+            "A_1",
+            "A_2",
+            "A_3"
+          ],
+          "column_policies": [
+            "B_0",
+            "B_1",
+            "B_2",
+            "B_3"
+          ]
+        }
+      },
+      "same_eligible": 4,
+      "slack_eligible": 12,
+      "lines": 360,
+      "improved_lines": 54,
+      "checked": 540,
+      "seed_checked": 326
+    }
+  ]
+}

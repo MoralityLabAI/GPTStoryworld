@@ -1,0 +1,36 @@
+name: PP2 balance exact replay
+on:
+  pull_request:
+    paths:
+      - 'storyworlds/tools/pp2_balance/**'
+      - 'storyworld_reader.html'
+      - '.github/workflows/pp2-balance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node storyworlds/tools/pp2_balance/replay.mjs
+      - run: node storyworlds/tools/pp2_balance/strategic_pilot.mjs
+      - run: node storyworlds/tools/pp2_balance/strategic_target_pilot.mjs
+      - run: node storyworlds/tools/pp2_balance/strategic_robustness_pilot.mjs
+      - run: node storyworlds/tools/pp2_balance/robust_authoring_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/robust_authoring_guardrails.mjs
+      - run: node storyworlds/tools/pp2_balance/proposal_learning_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/recurrent_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/nash_witness_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/amortized_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/proof_component_memory_smoke.mjs
+      - run: node storyworlds/tools/pp2_balance/certificate_memory_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/proof_component_pilot_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/proof_component_study_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/proof_component_prospective_replay.mjs --smoke

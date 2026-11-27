@@ -1,0 +1,548 @@
+{
+  "source_commit": "354fa4e5aad98d756f6507e5173286520bf4e92e",
+  "reader_blob": "d43d9ab729206f1594ea7cee98918bc9ec92f267",
+  "worlds": [
+    {
+      "path": "storyworlds/diplomacy/forecast_backstab_p.json",
+      "blob": "2a11e601d188f31f56d1ddc9c41f5a6314530352",
+      "admitted": false,
+      "issue_count": 708,
+      "issues": [
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3.Set",
+          "why": "unregistered property id/name"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Constant": 182,
+        "Bounded Number Property": 300
+      },
+      "effects": {
+        "Set": 138
+      },
+      "operators": {
+        "Addition": 154
+      },
+      "distinct_read_coords": [
+        2,
+        2,
+        1
+      ],
+      "distinct_write_coords": [
+        2,
+        2,
+        1
+      ],
+      "legacy_alias_groups": 1,
+      "legacy_aliased_coordinates": 2
+    },
+    {
+      "path": "storyworlds/diplomacy/forecast_coalition_p.json",
+      "blob": "9d31018bfb48c72f93424a83b1fd7c2d1e82af89",
+      "admitted": false,
+      "issue_count": 708,
+      "issues": [
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3.Set",
+          "why": "unregistered property id/name"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Constant": 182,
+        "Bounded Number Property": 300
+      },
+      "effects": {
+        "Set": 138
+      },
+      "operators": {
+        "Addition": 154
+      },
+      "distinct_read_coords": [
+        2,
+        2,
+        1
+      ],
+      "distinct_write_coords": [
+        2,
+        2,
+        1
+      ],
+      "legacy_alias_groups": 1,
+      "legacy_aliased_coordinates": 2
+    },
+    {
+      "path": "storyworlds/diplomacy/forecast_defection_p.json",
+      "blob": "f30ae35d416c7144d0250caaa00a6802727444eb",
+      "admitted": false,
+      "issue_count": 708,
+      "issues": [
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.3.Set",
+          "why": "unregistered property id/name"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Constant": 182,
+        "Bounded Number Property": 300
+      },
+      "effects": {
+        "Set": 138
+      },
+      "operators": {
+        "Addition": 154
+      },
+      "distinct_read_coords": [
+        2,
+        2,
+        1
+      ],
+      "distinct_write_coords": [
+        2,
+        2,
+        1
+      ],
+      "legacy_alias_groups": 1,
+      "legacy_aliased_coordinates": 2
+    },
+    {
+      "path": "storyworlds/england_to_france_honest_p.json",
+      "blob": "a46ec08162d43e146714019d2cc51704b84d09bc",
+      "admitted": false,
+      "issue_count": 129,
+      "issues": [
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to",
+          "why": "unsupported reader operator Blend"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.0",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.0.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.0.Set",
+          "why": "legacy pointer ignored by browser reader"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Constant": 57,
+        "Bounded Number Pointer": 21,
+        "Bounded Number Property": 40
+      },
+      "effects": {
+        "Bounded Number Effect": 11,
+        "Set": 20
+      },
+      "operators": {
+        "Blend": 9,
+        "Addition": 20,
+        "Arithmetic Comparator": 1
+      },
+      "distinct_read_coords": [
+        7,
+        2,
+        0
+      ],
+      "distinct_write_coords": [
+        7,
+        2,
+        0
+      ],
+      "legacy_alias_groups": 0,
+      "legacy_aliased_coordinates": 0
+    },
+    {
+      "path": "storyworlds/france_to_germany_machiavellian_p.json",
+      "blob": "6290bdff11cebac8823751ce986a31305861bfc2",
+      "admitted": false,
+      "issue_count": 134,
+      "issues": [
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.0.to",
+          "why": "unsupported reader operator Blend"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.1.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.Set",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "unregistered property id/name"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.0",
+          "why": "legacy pointer ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.0.reactions.0.after_effects.2.to.operands.1",
+          "why": "numeric constant missing finite value"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.0.to",
+          "why": "unsupported reader operator Blend"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.1",
+          "why": "effect ignored by browser reader"
+        },
+        {
+          "path": "encounters.0.options.1.reactions.0.after_effects.1.Set",
+          "why": "unregistered property id/name"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Constant": 69,
+        "Bounded Number Pointer": 32,
+        "Bounded Number Property": 40
+      },
+      "effects": {
+        "Bounded Number Effect": 15,
+        "Set": 20
+      },
+      "operators": {
+        "Blend": 11,
+        "Addition": 20,
+        "If Then": 2,
+        "Arithmetic Comparator": 5,
+        "Sum": 1
+      },
+      "distinct_read_coords": [
+        8,
+        2,
+        0
+      ],
+      "distinct_write_coords": [
+        9,
+        2,
+        0
+      ],
+      "legacy_alias_groups": 0,
+      "legacy_aliased_coordinates": 0
+    },
+    {
+      "path": "storyworlds/sweeps/2026-02-11_sweep_v1/artistry/2026-W06__england_to_france_honest_p__art.json",
+      "blob": "5e1ca18f7e71e4c4be0051233c2bc3a70e74575f",
+      "admitted": false,
+      "issue_count": 6,
+      "issues": [
+        {
+          "path": "encounters.1.options.0.reactions.0.desirability_script",
+          "why": "unsupported reader operator Arithmetic Mean"
+        },
+        {
+          "path": "encounters.1.options.1.reactions.0.desirability_script",
+          "why": "unsupported reader operator If Then"
+        },
+        {
+          "path": "encounters.2.options.0.reactions.0.desirability_script",
+          "why": "unsupported reader operator Subtraction"
+        },
+        {
+          "path": "encounters.4.options.0.reactions.0.desirability_script",
+          "why": "unsupported reader operator Arithmetic Mean"
+        },
+        {
+          "path": "encounters.4.options.1.reactions.0.desirability_script",
+          "why": "unsupported reader operator If Then"
+        },
+        {
+          "path": "encounters.5.options.0.reactions.0.desirability_script",
+          "why": "unsupported reader operator Subtraction"
+        }
+      ],
+      "pointers": {
+        "Bounded Number Pointer": 170,
+        "Bounded Number Constant": 78
+      },
+      "effects": {
+        "Bounded Number Effect": 50
+      },
+      "operators": {
+        "Arithmetic Comparator": 12,
+        "Addition": 38,
+        "Multiplication": 38,
+        "Nudge": 20,
+        "Arithmetic Mean": 2,
+        "If Then": 2,
+        "Subtraction": 2,
+        "Or": 1,
+        "And": 2
+      },
+      "distinct_read_coords": [
+        9,
+        2,
+        0
+      ],
+      "distinct_write_coords": [
+        7,
+        0,
+        0
+      ],
+      "legacy_alias_groups": 2,
+      "legacy_aliased_coordinates": 4
+    }
+  ]
+}
