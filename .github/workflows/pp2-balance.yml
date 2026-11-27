@@ -1,0 +1,22 @@
+name: PP2 balance exact replay
+on:
+  pull_request:
+    paths:
+      - 'storyworlds/tools/pp2_balance/**'
+      - 'storyworld_reader.html'
+      - '.github/workflows/pp2-balance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node storyworlds/tools/pp2_balance/replay.mjs
