@@ -1,0 +1,1822 @@
+{
+  "unit": {
+    "dual_transport_exact": "1/5",
+    "tamper_rejections": 5,
+    "roster_rejected": true
+  },
+  "status": "development_replay",
+  "roots": 6,
+  "trajectories": 12,
+  "queries": 768,
+  "aggregate": {
+    "cold": {
+      "counts": {
+        "queries": 768,
+        "identity_hits": 0,
+        "fast_hits": 0,
+        "transport_hits": 0,
+        "cold_fallbacks": 768,
+        "transport_attempts": 0,
+        "transport_dual_hits": 0,
+        "unique_game_count": 164,
+        "peak_bank_sources": 0,
+        "peak_bank_profiles": 0,
+        "peak_bank_duals": 0
+      },
+      "total": {
+        "rational_normalizations": 42737212,
+        "rational_comparisons": 15666212,
+        "regret_evaluations": 78189,
+        "solver_calls": 986,
+        "envelope_calls": 493,
+        "bilinear_profile_evaluations": 87133,
+        "dyadic_corner_evaluations": 23664,
+        "dual_cell_evaluations": 0
+      },
+      "strictly_tighter": 0,
+      "max_bank_sources": 0,
+      "max_bank_profiles": 0,
+      "max_bank_duals": 0
+    },
+    "identity": {
+      "counts": {
+        "queries": 768,
+        "identity_hits": 604,
+        "fast_hits": 0,
+        "transport_hits": 0,
+        "cold_fallbacks": 164,
+        "transport_attempts": 0,
+        "transport_dual_hits": 0,
+        "unique_game_count": 164,
+        "peak_bank_sources": 0,
+        "peak_bank_profiles": 0,
+        "peak_bank_duals": 0
+      },
+      "total": {
+        "rational_normalizations": 10243353,
+        "rational_comparisons": 3722162,
+        "regret_evaluations": 18385,
+        "solver_calls": 238,
+        "envelope_calls": 119,
+        "bilinear_profile_evaluations": 21047,
+        "dyadic_corner_evaluations": 5712,
+        "dual_cell_evaluations": 0
+      },
+      "strictly_tighter": 0,
+      "max_bank_sources": 0,
+      "max_bank_profiles": 0,
+      "max_bank_duals": 0
+    },
+    "early_pure": {
+      "counts": {
+        "queries": 768,
+        "identity_hits": 604,
+        "fast_hits": 45,
+        "transport_hits": 0,
+        "cold_fallbacks": 119,
+        "transport_attempts": 0,
+        "transport_dual_hits": 0,
+        "unique_game_count": 164,
+        "peak_bank_sources": 0,
+        "peak_bank_profiles": 0,
+        "peak_bank_duals": 0
+      },
+      "total": {
+        "rational_normalizations": 10194198,
+        "rational_comparisons": 3691214,
+        "regret_evaluations": 18046,
+        "solver_calls": 238,
+        "envelope_calls": 119,
+        "bilinear_profile_evaluations": 21047,
+        "dyadic_corner_evaluations": 5712,
+        "dual_cell_evaluations": 0
+      },
+      "strictly_tighter": 0,
+      "max_bank_sources": 0,
+      "max_bank_profiles": 0,
+      "max_bank_duals": 0
+    },
+    "parent_transport": {
+      "counts": {
+        "queries": 768,
+        "identity_hits": 604,
+        "fast_hits": 38,
+        "transport_hits": 27,
+        "cold_fallbacks": 99,
+        "transport_attempts": 59,
+        "transport_dual_hits": 20,
+        "unique_game_count": 164,
+        "peak_bank_sources": 6,
+        "peak_bank_profiles": 36,
+        "peak_bank_duals": 36
+      },
+      "total": {
+        "rational_normalizations": 8741749,
+        "rational_comparisons": 3118414,
+        "regret_evaluations": 15326,
+        "solver_calls": 198,
+        "envelope_calls": 99,
+        "bilinear_profile_evaluations": 17587,
+        "dyadic_corner_evaluations": 4752,
+        "dual_cell_evaluations": 7168
+      },
+      "strictly_tighter": 0,
+      "max_bank_sources": 1,
+      "max_bank_profiles": 6,
+      "max_bank_duals": 6
+    },
+    "bank_transport": {
+      "counts": {
+        "queries": 768,
+        "identity_hits": 604,
+        "fast_hits": 5,
+        "transport_hits": 107,
+        "cold_fallbacks": 52,
+        "transport_attempts": 152,
+        "transport_dual_hits": 67,
+        "unique_game_count": 164,
+        "peak_bank_sources": 85,
+        "peak_bank_profiles": 260,
+        "peak_bank_duals": 384
+      },
+      "total": {
+        "rational_normalizations": 5163188,
+        "rational_comparisons": 1792449,
+        "regret_evaluations": 9226,
+        "solver_calls": 104,
+        "envelope_calls": 52,
+        "bilinear_profile_evaluations": 9391,
+        "dyadic_corner_evaluations": 2496,
+        "dual_cell_evaluations": 23584
+      },
+      "strictly_tighter": 0,
+      "max_bank_sources": 8,
+      "max_bank_profiles": 33,
+      "max_bank_duals": 48
+    }
+  },
+  "by_trajectory": {
+    "parent": {
+      "cold": {
+        "cold_fallbacks": 384,
+        "transport_hits": 0,
+        "regret_evaluations": 44959,
+        "rational_normalizations": 25354162
+      },
+      "identity": {
+        "cold_fallbacks": 65,
+        "transport_hits": 0,
+        "regret_evaluations": 8136,
+        "rational_normalizations": 4617795
+      },
+      "early_pure": {
+        "cold_fallbacks": 55,
+        "transport_hits": 0,
+        "regret_evaluations": 8237,
+        "rational_normalizations": 4631333
+      },
+      "parent_transport": {
+        "cold_fallbacks": 35,
+        "transport_hits": 27,
+        "regret_evaluations": 5517,
+        "rational_normalizations": 3178884
+      },
+      "bank_transport": {
+        "cold_fallbacks": 30,
+        "transport_hits": 33,
+        "regret_evaluations": 5140,
+        "rational_normalizations": 2880486
+      }
+    },
+    "random_global": {
+      "cold": {
+        "cold_fallbacks": 384,
+        "transport_hits": 0,
+        "regret_evaluations": 33230,
+        "rational_normalizations": 17383050
+      },
+      "identity": {
+        "cold_fallbacks": 99,
+        "transport_hits": 0,
+        "regret_evaluations": 10249,
+        "rational_normalizations": 5625558
+      },
+      "early_pure": {
+        "cold_fallbacks": 64,
+        "transport_hits": 0,
+        "regret_evaluations": 9809,
+        "rational_normalizations": 5562865
+      },
+      "parent_transport": {
+        "cold_fallbacks": 64,
+        "transport_hits": 0,
+        "regret_evaluations": 9809,
+        "rational_normalizations": 5562865
+      },
+      "bank_transport": {
+        "cold_fallbacks": 22,
+        "transport_hits": 74,
+        "regret_evaluations": 4086,
+        "rational_normalizations": 2282702
+      }
+    }
+  },
+  "roots_summary": [
+    {
+      "id": "geo_chain_1",
+      "family": "chain",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 3374273,
+                "rational_comparisons": 1202265,
+                "regret_evaluations": 5989,
+                "solver_calls": 78,
+                "envelope_calls": 39,
+                "bilinear_profile_evaluations": 6800,
+                "dyadic_corner_evaluations": 1872,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 8,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 505668,
+                "rational_comparisons": 173571,
+                "regret_evaluations": 829,
+                "solver_calls": 12,
+                "envelope_calls": 6,
+                "bilinear_profile_evaluations": 1083,
+                "dyadic_corner_evaluations": 288,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 6,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 504868,
+                "rational_comparisons": 173438,
+                "regret_evaluations": 827,
+                "solver_calls": 12,
+                "envelope_calls": 6,
+                "bilinear_profile_evaluations": 1083,
+                "dyadic_corner_evaluations": 288,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 0,
+                "transport_hits": 3,
+                "cold_fallbacks": 5,
+                "transport_attempts": 7,
+                "transport_dual_hits": 1,
+                "unique_game_count": 8,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 448630,
+                "rational_comparisons": 150457,
+                "regret_evaluations": 715,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 916,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 656
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 0,
+                "transport_hits": 3,
+                "cold_fallbacks": 5,
+                "transport_attempts": 7,
+                "transport_dual_hits": 1,
+                "unique_game_count": 8,
+                "peak_bank_sources": 7,
+                "peak_bank_profiles": 32,
+                "peak_bank_duals": 30
+              },
+              "total": {
+                "rational_normalizations": 458056,
+                "rational_comparisons": 153964,
+                "regret_evaluations": 745,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 916,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 928
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2313745,
+                "rational_comparisons": 897752,
+                "regret_evaluations": 4824,
+                "solver_calls": 52,
+                "envelope_calls": 26,
+                "bilinear_profile_evaluations": 4728,
+                "dyadic_corner_evaluations": 1248,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 7,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 344097,
+                "rational_comparisons": 128534,
+                "regret_evaluations": 648,
+                "solver_calls": 8,
+                "envelope_calls": 4,
+                "bilinear_profile_evaluations": 721,
+                "dyadic_corner_evaluations": 192,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 3,
+                "transport_hits": 0,
+                "cold_fallbacks": 4,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 337179,
+                "rational_comparisons": 124101,
+                "regret_evaluations": 602,
+                "solver_calls": 8,
+                "envelope_calls": 4,
+                "bilinear_profile_evaluations": 721,
+                "dyadic_corner_evaluations": 192,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 3,
+                "transport_hits": 0,
+                "cold_fallbacks": 4,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 337179,
+                "rational_comparisons": 124101,
+                "regret_evaluations": 602,
+                "solver_calls": 8,
+                "envelope_calls": 4,
+                "bilinear_profile_evaluations": 721,
+                "dyadic_corner_evaluations": 192,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 0,
+                "transport_hits": 4,
+                "cold_fallbacks": 3,
+                "transport_attempts": 6,
+                "transport_dual_hits": 1,
+                "unique_game_count": 7,
+                "peak_bank_sources": 6,
+                "peak_bank_profiles": 16,
+                "peak_bank_duals": 18
+              },
+              "total": {
+                "rational_normalizations": 267527,
+                "rational_comparisons": 95832,
+                "regret_evaluations": 463,
+                "solver_calls": 6,
+                "envelope_calls": 3,
+                "bilinear_profile_evaluations": 548,
+                "dyadic_corner_evaluations": 144,
+                "dual_cell_evaluations": 592
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo_chain_2",
+      "family": "chain",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2830424,
+                "rational_comparisons": 1092619,
+                "regret_evaluations": 5152,
+                "solver_calls": 70,
+                "envelope_calls": 35,
+                "bilinear_profile_evaluations": 5723,
+                "dyadic_corner_evaluations": 1680,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 8,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 398078,
+                "rational_comparisons": 151245,
+                "regret_evaluations": 709,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 812,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 3,
+                "transport_hits": 0,
+                "cold_fallbacks": 5,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 8,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 393637,
+                "rational_comparisons": 148118,
+                "regret_evaluations": 677,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 812,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 2,
+                "transport_hits": 5,
+                "cold_fallbacks": 1,
+                "transport_attempts": 7,
+                "transport_dual_hits": 4,
+                "unique_game_count": 8,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 103848,
+                "rational_comparisons": 35686,
+                "regret_evaluations": 165,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 166,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 960
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 56,
+                "fast_hits": 1,
+                "transport_hits": 6,
+                "cold_fallbacks": 1,
+                "transport_attempts": 7,
+                "transport_dual_hits": 4,
+                "unique_game_count": 8,
+                "peak_bank_sources": 7,
+                "peak_bank_profiles": 12,
+                "peak_bank_duals": 24
+              },
+              "total": {
+                "rational_normalizations": 106827,
+                "rational_comparisons": 37613,
+                "regret_evaluations": 184,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 166,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 960
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 17,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2826055,
+                "rational_comparisons": 1102394,
+                "regret_evaluations": 4989,
+                "solver_calls": 70,
+                "envelope_calls": 35,
+                "bilinear_profile_evaluations": 5755,
+                "dyadic_corner_evaluations": 1680,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 47,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 17,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 17,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 876711,
+                "rational_comparisons": 338821,
+                "regret_evaluations": 1472,
+                "solver_calls": 22,
+                "envelope_calls": 11,
+                "bilinear_profile_evaluations": 1809,
+                "dyadic_corner_evaluations": 528,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 47,
+                "fast_hits": 6,
+                "transport_hits": 0,
+                "cold_fallbacks": 11,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 17,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 866333,
+                "rational_comparisons": 331649,
+                "regret_evaluations": 1396,
+                "solver_calls": 22,
+                "envelope_calls": 11,
+                "bilinear_profile_evaluations": 1809,
+                "dyadic_corner_evaluations": 528,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 47,
+                "fast_hits": 6,
+                "transport_hits": 0,
+                "cold_fallbacks": 11,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 17,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 866333,
+                "rational_comparisons": 331649,
+                "regret_evaluations": 1396,
+                "solver_calls": 22,
+                "envelope_calls": 11,
+                "bilinear_profile_evaluations": 1809,
+                "dyadic_corner_evaluations": 528,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 47,
+                "fast_hits": 1,
+                "transport_hits": 15,
+                "cold_fallbacks": 1,
+                "transport_attempts": 16,
+                "transport_dual_hits": 10,
+                "unique_game_count": 17,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 13,
+                "peak_bank_duals": 36
+              },
+              "total": {
+                "rational_normalizations": 143583,
+                "rational_comparisons": 45471,
+                "regret_evaluations": 231,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 166,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 2400
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo_fork_1",
+      "family": "fork",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 4,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 3772229,
+                "rational_comparisons": 1392710,
+                "regret_evaluations": 7403,
+                "solver_calls": 88,
+                "envelope_calls": 44,
+                "bilinear_profile_evaluations": 7432,
+                "dyadic_corner_evaluations": 2112,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 60,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 4,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 4,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 250795,
+                "rational_comparisons": 94283,
+                "regret_evaluations": 498,
+                "solver_calls": 6,
+                "envelope_calls": 3,
+                "bilinear_profile_evaluations": 523,
+                "dyadic_corner_evaluations": 144,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 60,
+                "fast_hits": 1,
+                "transport_hits": 0,
+                "cold_fallbacks": 3,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 4,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 248956,
+                "rational_comparisons": 93560,
+                "regret_evaluations": 490,
+                "solver_calls": 6,
+                "envelope_calls": 3,
+                "bilinear_profile_evaluations": 523,
+                "dyadic_corner_evaluations": 144,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 60,
+                "fast_hits": 0,
+                "transport_hits": 2,
+                "cold_fallbacks": 2,
+                "transport_attempts": 3,
+                "transport_dual_hits": 1,
+                "unique_game_count": 4,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 184584,
+                "rational_comparisons": 67782,
+                "regret_evaluations": 347,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 364,
+                "dyadic_corner_evaluations": 96,
+                "dual_cell_evaluations": 352
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 60,
+                "fast_hits": 0,
+                "transport_hits": 2,
+                "cold_fallbacks": 2,
+                "transport_attempts": 3,
+                "transport_dual_hits": 1,
+                "unique_game_count": 4,
+                "peak_bank_sources": 3,
+                "peak_bank_profiles": 8,
+                "peak_bank_duals": 12
+              },
+              "total": {
+                "rational_normalizations": 184584,
+                "rational_comparisons": 67782,
+                "regret_evaluations": 347,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 364,
+                "dyadic_corner_evaluations": 96,
+                "dual_cell_evaluations": 352
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 3194524,
+                "rational_comparisons": 1145258,
+                "regret_evaluations": 6071,
+                "solver_calls": 72,
+                "envelope_calls": 36,
+                "bilinear_profile_evaluations": 6212,
+                "dyadic_corner_evaluations": 1728,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 7,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 431629,
+                "rational_comparisons": 153249,
+                "regret_evaluations": 789,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 880,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 5,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 430612,
+                "rational_comparisons": 152948,
+                "regret_evaluations": 786,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 880,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 5,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 7,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 430612,
+                "rational_comparisons": 152948,
+                "regret_evaluations": 786,
+                "solver_calls": 10,
+                "envelope_calls": 5,
+                "bilinear_profile_evaluations": 880,
+                "dyadic_corner_evaluations": 240,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 57,
+                "fast_hits": 0,
+                "transport_hits": 4,
+                "cold_fallbacks": 3,
+                "transport_attempts": 6,
+                "transport_dual_hits": 2,
+                "unique_game_count": 7,
+                "peak_bank_sources": 6,
+                "peak_bank_profiles": 16,
+                "peak_bank_duals": 24
+              },
+              "total": {
+                "rational_normalizations": 283988,
+                "rational_comparisons": 101918,
+                "regret_evaluations": 531,
+                "solver_calls": 6,
+                "envelope_calls": 3,
+                "bilinear_profile_evaluations": 536,
+                "dyadic_corner_evaluations": 144,
+                "dual_cell_evaluations": 736
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo_fork_2",
+      "family": "fork",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 15,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 5592743,
+                "rational_comparisons": 2050794,
+                "regret_evaluations": 9354,
+                "solver_calls": 124,
+                "envelope_calls": 62,
+                "bilinear_profile_evaluations": 12549,
+                "dyadic_corner_evaluations": 2976,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 49,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 15,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 15,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1262158,
+                "rational_comparisons": 458270,
+                "regret_evaluations": 2150,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2757,
+                "dyadic_corner_evaluations": 672,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 49,
+                "fast_hits": 1,
+                "transport_hits": 0,
+                "cold_fallbacks": 14,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 15,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1269716,
+                "rational_comparisons": 463699,
+                "regret_evaluations": 2202,
+                "solver_calls": 28,
+                "envelope_calls": 14,
+                "bilinear_profile_evaluations": 2757,
+                "dyadic_corner_evaluations": 672,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 49,
+                "fast_hits": 0,
+                "transport_hits": 5,
+                "cold_fallbacks": 10,
+                "transport_attempts": 14,
+                "transport_dual_hits": 4,
+                "unique_game_count": 15,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 980734,
+                "rational_comparisons": 342972,
+                "regret_evaluations": 1693,
+                "solver_calls": 20,
+                "envelope_calls": 10,
+                "bilinear_profile_evaluations": 1935,
+                "dyadic_corner_evaluations": 480,
+                "dual_cell_evaluations": 1824
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 49,
+                "fast_hits": 0,
+                "transport_hits": 8,
+                "cold_fallbacks": 7,
+                "transport_attempts": 14,
+                "transport_dual_hits": 7,
+                "unique_game_count": 15,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 33,
+                "peak_bank_duals": 48
+              },
+              "total": {
+                "rational_normalizations": 749725,
+                "rational_comparisons": 261367,
+                "regret_evaluations": 1329,
+                "solver_calls": 14,
+                "envelope_calls": 7,
+                "bilinear_profile_evaluations": 1418,
+                "dyadic_corner_evaluations": 336,
+                "dual_cell_evaluations": 2880
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 22,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 4965274,
+                "rational_comparisons": 1718833,
+                "regret_evaluations": 8356,
+                "solver_calls": 104,
+                "envelope_calls": 52,
+                "bilinear_profile_evaluations": 10102,
+                "dyadic_corner_evaluations": 2496,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 42,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 22,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 22,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1752974,
+                "rational_comparisons": 619231,
+                "regret_evaluations": 2983,
+                "solver_calls": 38,
+                "envelope_calls": 19,
+                "bilinear_profile_evaluations": 3639,
+                "dyadic_corner_evaluations": 912,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 42,
+                "fast_hits": 3,
+                "transport_hits": 0,
+                "cold_fallbacks": 19,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 22,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1754528,
+                "rational_comparisons": 620659,
+                "regret_evaluations": 2994,
+                "solver_calls": 38,
+                "envelope_calls": 19,
+                "bilinear_profile_evaluations": 3639,
+                "dyadic_corner_evaluations": 912,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 42,
+                "fast_hits": 3,
+                "transport_hits": 0,
+                "cold_fallbacks": 19,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 22,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1754528,
+                "rational_comparisons": 620659,
+                "regret_evaluations": 2994,
+                "solver_calls": 38,
+                "envelope_calls": 19,
+                "bilinear_profile_evaluations": 3639,
+                "dyadic_corner_evaluations": 912,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 42,
+                "fast_hits": 0,
+                "transport_hits": 14,
+                "cold_fallbacks": 8,
+                "transport_attempts": 21,
+                "transport_dual_hits": 11,
+                "unique_game_count": 22,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 28,
+                "peak_bank_duals": 48
+              },
+              "total": {
+                "rational_normalizations": 839093,
+                "rational_comparisons": 297307,
+                "regret_evaluations": 1495,
+                "solver_calls": 16,
+                "envelope_calls": 8,
+                "bilinear_profile_evaluations": 1494,
+                "dyadic_corner_evaluations": 384,
+                "dual_cell_evaluations": 4320
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo_veto_1",
+      "family": "veto",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 16,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 5067691,
+                "rational_comparisons": 1784330,
+                "regret_evaluations": 8852,
+                "solver_calls": 120,
+                "envelope_calls": 60,
+                "bilinear_profile_evaluations": 10338,
+                "dyadic_corner_evaluations": 2880,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 48,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 16,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 16,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1273695,
+                "rational_comparisons": 446931,
+                "regret_evaluations": 2240,
+                "solver_calls": 30,
+                "envelope_calls": 15,
+                "bilinear_profile_evaluations": 2573,
+                "dyadic_corner_evaluations": 720,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 48,
+                "fast_hits": 1,
+                "transport_hits": 0,
+                "cold_fallbacks": 15,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 16,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 1282287,
+                "rational_comparisons": 452865,
+                "regret_evaluations": 2300,
+                "solver_calls": 30,
+                "envelope_calls": 15,
+                "bilinear_profile_evaluations": 2573,
+                "dyadic_corner_evaluations": 720,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 48,
+                "fast_hits": 0,
+                "transport_hits": 8,
+                "cold_fallbacks": 8,
+                "transport_attempts": 15,
+                "transport_dual_hits": 7,
+                "unique_game_count": 16,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 730805,
+                "rational_comparisons": 240892,
+                "regret_evaluations": 1227,
+                "solver_calls": 16,
+                "envelope_calls": 8,
+                "bilinear_profile_evaluations": 1412,
+                "dyadic_corner_evaluations": 384,
+                "dual_cell_evaluations": 1680
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 48,
+                "fast_hits": 0,
+                "transport_hits": 8,
+                "cold_fallbacks": 8,
+                "transport_attempts": 15,
+                "transport_dual_hits": 7,
+                "unique_game_count": 16,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 33,
+                "peak_bank_duals": 48
+              },
+              "total": {
+                "rational_normalizations": 775875,
+                "rational_comparisons": 258263,
+                "regret_evaluations": 1377,
+                "solver_calls": 16,
+                "envelope_calls": 8,
+                "bilinear_profile_evaluations": 1412,
+                "dyadic_corner_evaluations": 384,
+                "dual_cell_evaluations": 2880
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 26,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 3703400,
+                "rational_comparisons": 1357021,
+                "regret_evaluations": 7264,
+                "solver_calls": 84,
+                "envelope_calls": 42,
+                "bilinear_profile_evaluations": 7136,
+                "dyadic_corner_evaluations": 2016,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 38,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 26,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 26,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2071270,
+                "rational_comparisons": 741592,
+                "regret_evaluations": 3776,
+                "solver_calls": 48,
+                "envelope_calls": 24,
+                "bilinear_profile_evaluations": 4066,
+                "dyadic_corner_evaluations": 1152,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 38,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 24,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 26,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2076338,
+                "rational_comparisons": 744944,
+                "regret_evaluations": 3808,
+                "solver_calls": 48,
+                "envelope_calls": 24,
+                "bilinear_profile_evaluations": 4066,
+                "dyadic_corner_evaluations": 1152,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 38,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 24,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 26,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 2076338,
+                "rational_comparisons": 744944,
+                "regret_evaluations": 3808,
+                "solver_calls": 48,
+                "envelope_calls": 24,
+                "bilinear_profile_evaluations": 4066,
+                "dyadic_corner_evaluations": 1152,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 38,
+                "fast_hits": 0,
+                "transport_hits": 20,
+                "cold_fallbacks": 6,
+                "transport_attempts": 25,
+                "transport_dual_hits": 18,
+                "unique_game_count": 26,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 23,
+                "peak_bank_duals": 42
+              },
+              "total": {
+                "rational_normalizations": 650511,
+                "rational_comparisons": 211855,
+                "regret_evaluations": 1141,
+                "solver_calls": 12,
+                "envelope_calls": 6,
+                "bilinear_profile_evaluations": 1029,
+                "dyadic_corner_evaluations": 288,
+                "dual_cell_evaluations": 5376
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo_veto_2",
+      "family": "veto",
+      "trajectories": [
+        {
+          "name": "parent",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 14,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 4716802,
+                "rational_comparisons": 1723190,
+                "regret_evaluations": 8209,
+                "solver_calls": 120,
+                "envelope_calls": 60,
+                "bilinear_profile_evaluations": 10022,
+                "dyadic_corner_evaluations": 2880,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 50,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 14,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 14,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 927401,
+                "rational_comparisons": 344229,
+                "regret_evaluations": 1710,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2016,
+                "dyadic_corner_evaluations": 576,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 50,
+                "fast_hits": 2,
+                "transport_hits": 0,
+                "cold_fallbacks": 12,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 14,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 931869,
+                "rational_comparisons": 347414,
+                "regret_evaluations": 1741,
+                "solver_calls": 24,
+                "envelope_calls": 12,
+                "bilinear_profile_evaluations": 2016,
+                "dyadic_corner_evaluations": 576,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 50,
+                "fast_hits": 1,
+                "transport_hits": 4,
+                "cold_fallbacks": 9,
+                "transport_attempts": 13,
+                "transport_dual_hits": 3,
+                "unique_game_count": 14,
+                "peak_bank_sources": 1,
+                "peak_bank_profiles": 6,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 730283,
+                "rational_comparisons": 268505,
+                "regret_evaluations": 1370,
+                "solver_calls": 18,
+                "envelope_calls": 9,
+                "bilinear_profile_evaluations": 1511,
+                "dyadic_corner_evaluations": 432,
+                "dual_cell_evaluations": 1696
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 50,
+                "fast_hits": 1,
+                "transport_hits": 6,
+                "cold_fallbacks": 7,
+                "transport_attempts": 13,
+                "transport_dual_hits": 5,
+                "unique_game_count": 14,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 33,
+                "peak_bank_duals": 48
+              },
+              "total": {
+                "rational_normalizations": 605419,
+                "rational_comparisons": 223062,
+                "regret_evaluations": 1158,
+                "solver_calls": 14,
+                "envelope_calls": 7,
+                "bilinear_profile_evaluations": 1174,
+                "dyadic_corner_evaluations": 336,
+                "dual_cell_evaluations": 2160
+              }
+            }
+          }
+        },
+        {
+          "name": "random_global",
+          "arms": {
+            "cold": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 0,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 64,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 20,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 380052,
+                "rational_comparisons": 199046,
+                "regret_evaluations": 1726,
+                "solver_calls": 4,
+                "envelope_calls": 2,
+                "bilinear_profile_evaluations": 336,
+                "dyadic_corner_evaluations": 96,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "identity": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 44,
+                "fast_hits": 0,
+                "transport_hits": 0,
+                "cold_fallbacks": 20,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 20,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 148877,
+                "rational_comparisons": 72206,
+                "regret_evaluations": 581,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 168,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "early_pure": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 44,
+                "fast_hits": 19,
+                "transport_hits": 0,
+                "cold_fallbacks": 1,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 20,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 97875,
+                "rational_comparisons": 37819,
+                "regret_evaluations": 223,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 168,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "parent_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 44,
+                "fast_hits": 19,
+                "transport_hits": 0,
+                "cold_fallbacks": 1,
+                "transport_attempts": 0,
+                "transport_dual_hits": 0,
+                "unique_game_count": 20,
+                "peak_bank_sources": 0,
+                "peak_bank_profiles": 0,
+                "peak_bank_duals": 0
+              },
+              "total": {
+                "rational_normalizations": 97875,
+                "rational_comparisons": 37819,
+                "regret_evaluations": 223,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 168,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 0
+              }
+            },
+            "bank_transport": {
+              "counts": {
+                "queries": 64,
+                "identity_hits": 44,
+                "fast_hits": 2,
+                "transport_hits": 17,
+                "cold_fallbacks": 1,
+                "transport_attempts": 19,
+                "transport_dual_hits": 0,
+                "unique_game_count": 20,
+                "peak_bank_sources": 8,
+                "peak_bank_profiles": 13,
+                "peak_bank_duals": 6
+              },
+              "total": {
+                "rational_normalizations": 98000,
+                "rational_comparisons": 38015,
+                "regret_evaluations": 225,
+                "solver_calls": 2,
+                "envelope_calls": 1,
+                "bilinear_profile_evaluations": 168,
+                "dyadic_corner_evaluations": 48,
+                "dual_cell_evaluations": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

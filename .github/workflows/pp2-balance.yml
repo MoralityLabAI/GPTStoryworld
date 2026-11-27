@@ -28,3 +28,4 @@ jobs:
       - run: node storyworlds/tools/pp2_balance/proposal_learning_replay.mjs
       - run: node storyworlds/tools/pp2_balance/recurrent_replay.mjs
       - run: node storyworlds/tools/pp2_balance/nash_witness_replay.mjs
+      - run: node storyworlds/tools/pp2_balance/amortized_replay.mjs
