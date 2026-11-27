@@ -101,6 +101,6 @@ const api=(function gymFactory(B,S,C){
   }
   return rows;
  }
- return {fresh,gym,neighbors,gate,rank,violation,features,block,sample,rng,num,cmp,key};
+ return {fresh,gym,neighbors,gate,rank,violation,features,block,sample,rng,num,cmp,key,blocks,apply};
 })(B,S,C);
-export const {fresh,gym,neighbors,gate,rank,violation,features,block,sample,rng,num,cmp,key}=api;
+export const {fresh,gym,neighbors,gate,rank,violation,features,block,sample,rng,num,cmp,key,blocks,apply}=api;

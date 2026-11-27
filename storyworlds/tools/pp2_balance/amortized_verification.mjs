@@ -194,6 +194,8 @@ const api=(function factory(S,H,C){
   const changed={...g,row_policies:['b','g']};ok(transport(changed,target,[pool(g,base,target)])===null,'roster transport');
   return {dual_transport_exact:proof.lower,tamper_rejections:rejected,roster_rejected:true};
  }
- return {modes,trajectoryNames,benchmark,summarize,unit,verifyTransport};
+ function beginMeter(){meter={}}
+ function endMeter(){const result=meter||{};meter=null;return result}
+ return {modes,trajectoryNames,benchmark,summarize,unit,verifyTransport,pool,transport,fastPure,matrixKey,rosterKey,beginMeter,endMeter};
 })(S,H,C);
-export const {modes,trajectoryNames,benchmark,summarize,unit,verifyTransport}=api;
+export const {modes,trajectoryNames,benchmark,summarize,unit,verifyTransport,pool,transport,fastPure,matrixKey,rosterKey,beginMeter,endMeter}=api;
