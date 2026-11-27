@@ -1,0 +1,4545 @@
+{
+  "status": "development_only",
+  "roots": 6,
+  "unique_games": 8,
+  "unit": {
+    "dominance": {
+      "worst_tv": {
+        "lower": "1/5",
+        "upper": "1/5"
+      },
+      "ranges": [
+        {
+          "ending": "bad",
+          "min_lower": "0/1",
+          "min_witness": "0/1",
+          "max_witness": "1/5",
+          "max_upper": "1/5"
+        },
+        {
+          "ending": "good",
+          "min_lower": "4/5",
+          "min_witness": "4/5",
+          "max_witness": "1/1",
+          "max_upper": "1/1"
+        }
+      ],
+      "objectives": [
+        {
+          "mask": 1,
+          "lower": "1/5",
+          "upper": "1/5"
+        },
+        {
+          "mask": 2,
+          "lower": "1/1",
+          "upper": "1/1"
+        }
+      ],
+      "cover": {
+        "splits": 0,
+        "excluded": 0,
+        "live": 1,
+        "unique_corner_evaluations": 2
+      }
+    },
+    "tamper_rejections": 3,
+    "matching_pennies": {
+      "root": {
+        "worst_tv": {
+          "lower": "0/1",
+          "upper": "1/2"
+        },
+        "ranges": [
+          {
+            "ending": "diff",
+            "min_lower": "0/1",
+            "min_witness": "1/2",
+            "max_witness": "1/2",
+            "max_upper": "1/1"
+          },
+          {
+            "ending": "match",
+            "min_lower": "0/1",
+            "min_witness": "1/2",
+            "max_witness": "1/2",
+            "max_upper": "1/1"
+          }
+        ],
+        "objectives": [
+          {
+            "mask": 1,
+            "lower": "1/2",
+            "upper": "1/1"
+          },
+          {
+            "mask": 2,
+            "lower": "1/2",
+            "upper": "1/1"
+          }
+        ],
+        "cover": {
+          "splits": 0,
+          "excluded": 0,
+          "live": 1,
+          "unique_corner_evaluations": 4
+        }
+      },
+      "refined": {
+        "worst_tv": {
+          "lower": "17/256",
+          "upper": "595/8192"
+        },
+        "ranges": [
+          {
+            "ending": "diff",
+            "min_lower": "3501/8192",
+            "min_witness": "111/256",
+            "max_witness": "145/256",
+            "max_upper": "4691/8192"
+          },
+          {
+            "ending": "match",
+            "min_lower": "3501/8192",
+            "min_witness": "111/256",
+            "max_witness": "145/256",
+            "max_upper": "4691/8192"
+          }
+        ],
+        "objectives": [
+          {
+            "mask": 1,
+            "lower": "145/256",
+            "upper": "4691/8192"
+          },
+          {
+            "mask": 2,
+            "lower": "145/256",
+            "upper": "4691/8192"
+          }
+        ],
+        "cover": {
+          "splits": 183,
+          "excluded": 110,
+          "live": 74,
+          "unique_corner_evaluations": 287
+        }
+      }
+    }
+  },
+  "means": {
+    "selected_target_tv": 0.10678214598137063,
+    "selected_worst_tv_lower": 0.6520833333333332,
+    "selected_worst_tv_upper": 0.6520833333333332,
+    "original_worst_tv_lower": 0.6520833333333332,
+    "original_worst_tv_upper": 0.6520833333333332
+  },
+  "exact_selected_worst_tv": 6,
+  "selected_splits": 1536,
+  "rows": [
+    {
+      "seed": 701921,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "1,1,2,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "25/168",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "ssssssssssslssxlxxxsssxssxslxxxxssssssslxxxxssssllsllsxsllsxssllsllsxssssxlsxlsxsllssxsllsxsllsxssssxslxxssxslxxsssxslxxssxslxxsslsssssxsllxxssxssllxxxsssssxsxsllxsssxsllxxxxsssssslssxlsxlsslsxsxlslsxlsslssxlxslssxsxlxsssxssxsllsxsxlsxssxsxlsxsxlsxsssxsxlxssxsxlxsssssssllxsslxxxssssllsllssllsllsxssllsxlssssxslxsslxxxssssxlsllssllsllssxsllsxsxlsssssslxxxssxslxxxsssssllsllsxsllsssxlsllssxlsxlssxssxlsllsxssllsllssslssssxlxssxlsxlsssxlxssxlxsxssssxslxxssxsllsxsxlsssxslxxssxslxxssssssslxxxsssllxsslxxssslxxlxlllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "17/105",
+                "upper": "4/15",
+                "witness": {
+                  "x": [
+                    "11/21",
+                    "0/1",
+                    "17/105",
+                    "11/35"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "19/60",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/3",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/15",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 39,
+              "feasible": 39,
+              "improved": 9
+            },
+            "search_corner_evaluations": 287,
+            "verified": {
+              "worst_tv": {
+                "lower": "5/8",
+                "upper": "5/8"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "17/105",
+                  "max_upper": "4/15"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "17/105",
+                  "upper": "4/15"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 135,
+                "live": 122,
+                "unique_corner_evaluations": 287
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "1,1,2,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "25/168",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "ssssssssssslssxlxxxsssxssxslxxxxssssssslxxxxssssllsllsxsllsxssllsllsxssssxlsxlsxsllssxsllsxsllsxssssxslxxssxslxxsssxslxxssxslxxsslsssssxsllxxssxssllxxxsssssxsxsllxsssxsllxxxxsssssslssxlsxlsslsxsxlslsxlsslssxlxslssxsxlxsssxssxsllsxsxlsxssxsxlsxsxlsxsssxsxlxssxsxlxsssssssllxsslxxxssssllsllssllsllsxssllsxlssssxslxsslxxxssssxlsllssllsllssxsllsxsxlsssssslxxxssxslxxxsssssllsllsxsllsssxlsllssxlsxlssxssxlsllsxssllsllssslssssxlxssxlsxlsssxlxssxlxsxssssxslxxssxsllsxsxlsssxslxxssxslxxssssssslxxxsssllxsslxxssslxxlxlllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "17/105",
+                "upper": "4/15",
+                "witness": {
+                  "x": [
+                    "11/21",
+                    "0/1",
+                    "17/105",
+                    "11/35"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "19/60",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/3",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/15",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 39,
+              "feasible": 39,
+              "improved": 9
+            },
+            "search_corner_evaluations": 287,
+            "verified": {
+              "worst_tv": {
+                "lower": "5/8",
+                "upper": "5/8"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "17/105",
+                  "max_upper": "4/15"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "17/105",
+                  "upper": "4/15"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 135,
+                "live": 122,
+                "unique_corner_evaluations": 287
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 709840,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "1,0,1,1",
+          "author_loss": "1/8",
+          "target_aligned_tv": "1/30",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "ssslslslslssssssslxslxsslxxssslxslxsslxxxssssslslxslxsslslxxssslslxslxsslslxxsssslxxsslxxsssslxxxsslxxsssssslslxslxsslslxxssslslxslxsslslxxsssslxxsslxxsssslxxxsslxxssssslxxsslxxsssslxxxsslxxssssslxlxssslxlxsssslxlxssslxlxlsssssslslsslsslslsllslslsllslssslsllslsllsssllsllssllsllslslsslslslslsllslsslslsllsslsllslsllsslslssslslslsllslslslsllssslslsllslslsllssslsllslsllsslsllslsllslsslsssslsllslsllsslsllslsllssslsllslsllsslsllxssssslsllslsllsslsllslsllssslsllslsllsslslxxsslslslxssssllsllssllsllsssllsllsslxxsllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "3/8",
+                "upper": "3/5",
+                "witness": {
+                  "x": [
+                    "1/2",
+                    "0/1",
+                    "1/2",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "0/1",
+                    "1/2"
+                  ],
+                  "row_payoff": "27/32",
+                  "column_payoff": "9/16",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "1/32",
+                  "column_regret": "3/16",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "4/3",
+                    "0/1"
+                  ],
+                  "upper": "3/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "4/5",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 112,
+              "feasible": 112,
+              "improved": 16
+            },
+            "search_corner_evaluations": 317,
+            "verified": {
+              "worst_tv": {
+                "lower": "11/20",
+                "upper": "11/20"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "3/8",
+                  "max_upper": "3/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "3/8",
+                  "upper": "3/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "4/5",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 66,
+                "live": 191,
+                "unique_corner_evaluations": 317
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "1,0,2,1",
+          "author_loss": "1/8",
+          "target_aligned_tv": "0/1",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssssssssslllxlsxsxlsssxlxslxllssxllssssssssslllxlsxsxlssxlxllssxllsssssssssslllxlssxllssxllllssxllsssssssssllllllllllslslslssslxllssssssssssssxlslxxssslxxxxxsssslsslllsssllllllssssssslllllsslssllllllssxllsssssssssxlslxxssslxxxxxsssslsslllsssllllllssssssslllllsslssllllllssxllssssssssssxlslxxssslxxxxxsssslsslllsssllllllssssssslllllsslssllllllssxllsssssssssxlslllsssllllllsssslsslllsssllllllssssssslllllsslsslllllllssssssssssslllllssssxlslllsssllllssssslllllssssllllllllssssssssslllllssssxlslllsssllllslllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "17/60",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "3/10",
+                    "7/30",
+                    "7/30",
+                    "7/30"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "1/4",
+                    "1/4"
+                  ],
+                  "row_payoff": "61/80",
+                  "column_payoff": "2/3",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "7/40",
+                  "column_regret": "1/5",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "2/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "4/5",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 75,
+              "feasible": 75,
+              "improved": 12
+            },
+            "search_corner_evaluations": 284,
+            "verified": {
+              "worst_tv": {
+                "lower": "11/20",
+                "upper": "11/20"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "17/60",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "17/60",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "4/5",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 48,
+                "live": 209,
+                "unique_corner_evaluations": 284
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 717759,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "1,1,1,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "2517/593552",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssslsslsxsslsxllssxslslsxlssslxssxlxslssxllsslsssslslxlsxslsxlssslslllssslxsllsslllsssslslslxsslslxxsslsslxlsslsllssxlsxlssslslsllssslllsslxsllsslsslllssslllssxlsllsssslsssxlsxlssxlsxllssxsssxsllsxsllssxsllsxsxlssxslsxsllsssxsxlxssxslllsssssssllxssllxsssllxsslxxxsssssllsllssllsllsssllsllssllsllssssllsllssllxsssllsllssllsllsssslssllxxssssllxlssxsxlsxsxlssslssllsllsssllxslsllssssllslllssxsxlssllsllssslsslxssslxssxsxlxslsxsxlsslsssxlsxslsxlssssllllssxsllsslxlssslsxsxlsslssxlsllssxsxlsxsxlsslssslllsllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "3/16",
+                "upper": "4/15",
+                "witness": {
+                  "x": [
+                    "1/2",
+                    "1/2",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/8",
+                    "3/8",
+                    "1/4",
+                    "1/4"
+                  ],
+                  "row_payoff": "53/64",
+                  "column_payoff": "3/16",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "11/64",
+                  "column_regret": "3/16",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/3",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/15",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 47,
+              "feasible": 47,
+              "improved": 13
+            },
+            "search_corner_evaluations": 255,
+            "verified": {
+              "worst_tv": {
+                "lower": "9/16",
+                "upper": "9/16"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "3/16",
+                  "max_upper": "4/15"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "3/16",
+                  "upper": "4/15"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 72,
+                "live": 185,
+                "unique_corner_evaluations": 255
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "1,1,1,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "2517/593552",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssslsslsxsslsxllssxslslsxlssslxssxlxslssxllsslsssslslxlsxslsxlssslslllssslxsllsslllsssslslslxsslslxxsslsslxlsslsllssxlsxlssslslsllssslllsslxsllsslsslllssslllssxlsllsssslsssxlsxlssxlsxllssxsssxsllsxsllssxsllsxsxlssxslsxsllsssxsxlxssxslllsssssssllxssllxsssllxsslxxxsssssllsllssllsllsssllsllssllsllssssllsllssllxsssllsllssllsllsssslssllxxssssllxlssxsxlsxsxlssslssllsllsssllxslsllssssllslllssxsxlssllsllssslsslxssslxssxsxlxslsxsxlsslsssxlsxslsxlssssllllssxsllsslxlssslsxsxlsslssxlsllssxsxlsxsxlsslssslllsllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "3/16",
+                "upper": "4/15",
+                "witness": {
+                  "x": [
+                    "1/2",
+                    "1/2",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/8",
+                    "3/8",
+                    "1/4",
+                    "1/4"
+                  ],
+                  "row_payoff": "53/64",
+                  "column_payoff": "3/16",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "11/64",
+                  "column_regret": "3/16",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/3",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/15",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "4/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "3/5",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "0/1",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 47,
+              "feasible": 47,
+              "improved": 13
+            },
+            "search_corner_evaluations": 255,
+            "verified": {
+              "worst_tv": {
+                "lower": "9/16",
+                "upper": "9/16"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "3/16",
+                  "max_upper": "4/15"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "3/16",
+                  "upper": "4/15"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 72,
+                "live": 185,
+                "unique_corner_evaluations": 255
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 725678,
+      "target": {
+        "coalition": "3/8",
+        "defection": "3/8",
+        "hold": "1/4"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "1,3,1,1",
+          "author_loss": "1/2",
+          "target_aligned_tv": "1409/5720",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssssllllllllsssssssssllllllllllsssssssssslllssllllsssslllllsssssllllllllsssssssslllsslllssslllllsssssllllllllssssssssslllllllllllsssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssssllllllllsssssssssllllllllllsssssssssslllssllllsssslllllsssssllllllllsssssssslllsslllssslllllsssssllllllllssssssssslllllllllllssssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssllllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "0/1",
+                    "4/5"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "2/5",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "2/5",
+                    "3/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "17/20",
+                  "column_payoff": "11/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "3/20",
+                  "column_regret": "1/5",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "2/1",
+                    "0/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "4/5",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "0/1",
+                    "4/5"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 157,
+              "feasible": 157,
+              "improved": 13
+            },
+            "search_corner_evaluations": 241,
+            "verified": {
+              "worst_tv": {
+                "lower": "3/4",
+                "upper": "3/4"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "2/5",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "2/5",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "4/5",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 0,
+                "live": 257,
+                "unique_corner_evaluations": 241
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "1,2,1,2",
+          "author_loss": "1/2",
+          "target_aligned_tv": "1409/5720",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssssllllllllsssssssssllllllllllsssssssssslllssllllsssslllllsssssllllllllsssssssslllsslllssslllllsssssllllllllssssssssslllllllllllsssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssssllllllllsssssssssllllllllllsssssssssslllssllllsssslllllsssssllllllllsssssssslllsslllssslllllsssssllllllllssssssssslllllllllllssssssssssssslllssllllssssllllsssllllsssssllllssslllllllsssssssslllsslllssslllllsssllllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "0/1",
+                    "4/5"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "2/5",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "2/5",
+                    "3/5",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "17/20",
+                  "column_payoff": "11/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "3/20",
+                  "column_regret": "1/5",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "2/1",
+                    "0/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "4/5",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "0/1",
+                    "4/5"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "11/20",
+                  "column_payoff": "19/20",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 0,
+                  "column_best_response": 2,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 157,
+              "feasible": 157,
+              "improved": 13
+            },
+            "search_corner_evaluations": 241,
+            "verified": {
+              "worst_tv": {
+                "lower": "3/4",
+                "upper": "3/4"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "2/5",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "2/5",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "4/5",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 0,
+                "live": 257,
+                "unique_corner_evaluations": 241
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 733597,
+      "target": {
+        "coalition": "1/4",
+        "defection": "1/4",
+        "hold": "1/2"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "0,0,1,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "3743/28850",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssslsslssslsllllssslslslxlsslxlsslsslsslslllslsssllllssslslslslxslslxsslslsslxlslslxsslssslsssllxssllxlssslslxlxssslslssslxxsslxxslsssslxxsslxxlssslslslxxsslsslxlxssslsslssslsllllsslslssxlxlsslsslsslslllslsssllllsslslslssxlxslslsssxlxlsslsslssssllxssllxsslxllsslslsssslxxsslxxsslxlslssssslxxsslxxsslxllsslsslssslsslxlllssslslsslxlslssslxlllslsssslslslxlllsssssssslsssxllssxlllsssslsllxsslsllxsslssxlllsssslssllllssslxxsslxslxslxsslssslslslxlssslslxllssslslslxslxsslsslxlslxssssssssllslxxsssllslxxxsslllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "11196641/43496060",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "3590627/10874015",
+                    "2772469/10874015",
+                    "84952/2174803",
+                    "4086159/10874015"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "1/4",
+                    "1/4"
+                  ],
+                  "row_payoff": "21429575/34796848",
+                  "column_payoff": "9953723/21748030",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "427679/2174803",
+                  "column_regret": "1/5",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "2/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "3/4",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "0/1",
+                    "1/2"
+                  ],
+                  "row_payoff": "7/16",
+                  "column_payoff": "3/8",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "3/16",
+                  "column_regret": "1/8",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "0/1",
+                    "1/2"
+                  ],
+                  "row_payoff": "7/16",
+                  "column_payoff": "3/8",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "3/16",
+                  "column_regret": "1/8",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 52,
+              "feasible": 52,
+              "improved": 35
+            },
+            "search_corner_evaluations": 327,
+            "verified": {
+              "worst_tv": {
+                "lower": "3/4",
+                "upper": "3/4"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "11196641/43496060",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "3/4",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 2,
+                  "lower": "11196641/43496060",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "3/4",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 66,
+                "live": 191,
+                "unique_corner_evaluations": 327
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "0,0,1,1",
+          "author_loss": "0/1",
+          "target_aligned_tv": "3743/28850",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssslsslssslsllllssslslslxlsslxlsslsslsslslllslsssllllssslslslslxslslxsslslsslxlslslxsslssslsssllxssllxlssslslxlxssslslssslxxsslxxslsssslxxsslxxlssslslslxxsslsslxlxssslsslssslsllllsslslssxlxlsslsslsslslllslsssllllsslslslssxlxslslsssxlxlsslsslssssllxssllxsslxllsslslsssslxxsslxxsslxlslssssslxxsslxxsslxllsslsslssslsslxlllssslslsslxlslssslxlllslsssslslslxlllsssssssslsssxllssxlllsssslsllxsslsllxsslssxlllsssslssllllssslxxsslxslxslxsslssslslslxlssslslxllssslslslxslxsslsslxlslxssssssssllslxxsssllslxxxsslllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "11196641/43496060",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "3590627/10874015",
+                    "2772469/10874015",
+                    "84952/2174803",
+                    "4086159/10874015"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "1/4",
+                    "1/4"
+                  ],
+                  "row_payoff": "21429575/34796848",
+                  "column_payoff": "9953723/21748030",
+                  "row_best_response": 0,
+                  "column_best_response": 3,
+                  "row_regret": "427679/2174803",
+                  "column_regret": "1/5",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "2/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "3/4",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "0/1",
+                    "1/2"
+                  ],
+                  "row_payoff": "7/16",
+                  "column_payoff": "3/8",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "3/16",
+                  "column_regret": "1/8",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "1/1"
+                  ],
+                  "row_payoff": "3/4",
+                  "column_payoff": "3/4",
+                  "row_best_response": 1,
+                  "column_best_response": 3,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "0/1",
+                    "0/1",
+                    "1/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/4",
+                    "1/4",
+                    "0/1",
+                    "1/2"
+                  ],
+                  "row_payoff": "7/16",
+                  "column_payoff": "3/8",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "3/16",
+                  "column_regret": "1/8",
+                  "max_regret": "3/16",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 52,
+              "feasible": 52,
+              "improved": 35
+            },
+            "search_corner_evaluations": 327,
+            "verified": {
+              "worst_tv": {
+                "lower": "3/4",
+                "upper": "3/4"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "11196641/43496060",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "3/4",
+                  "max_upper": "1/1"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 2,
+                  "lower": "11196641/43496060",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "3/4",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 5,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 66,
+                "live": 191,
+                "unique_corner_evaluations": 327
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 741516,
+      "target": {
+        "coalition": "7/16",
+        "defection": "7/16",
+        "hold": "1/8"
+      },
+      "arms": {
+        "target_on_original": {
+          "key": "1,1,2,1",
+          "author_loss": "1/8",
+          "target_aligned_tv": "241/2160",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssxsssxssxsxslxsxsxslxsxssssxlsxlsxslxssxsllsxslxsxssssxsllssxlsxlssxsllsxsllsssxsllssxlsxlssxsllsxsllssxsssssxslxxsssxlsllssxlsxlxsssxssxlsxlxssxssxlsxlxsssssxsslxslxxsssxslxxssslllssllslxssssxsllsslxlssxsllsxsxlsssslllssllsllssslllssllsllsssxsxssxlslxsxsxsslxslxssssxsllsxsxlsssllsllssllsllsssxsxlsxsllsssllsllssllsllssxssxsxssssxlxxssxslxxsxsssxsxsxlsssxlxssxlsxlssxsxsxlsxsslxsllsxsxssssxsxslxxsssxsxlsxsllssxsllsxsxlsxsssxslxxsssxlsllssllsxlssssxsxssssxsxlssxlsllxssssxlsllssxlsllxsssxsssxsxlsxlllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "44/135",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "71/135",
+                    "64/135",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "5/16",
+                    "0/1",
+                    "0/1",
+                    "11/16"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "307/540",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "1/27",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "2/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "4/5",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "13/20",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "4/5",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "13/20",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 33,
+              "feasible": 33,
+              "improved": 9
+            },
+            "search_corner_evaluations": 318,
+            "verified": {
+              "worst_tv": {
+                "lower": "27/40",
+                "upper": "27/40"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "44/135",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "44/135",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 123,
+                "live": 134,
+                "unique_corner_evaluations": 318
+              }
+            }
+          }
+        },
+        "same_author_loss": {
+          "key": "1,1,2,1",
+          "author_loss": "1/8",
+          "target_aligned_tv": "241/2160",
+          "receipt": {
+            "config": {
+              "maxSplits": 256,
+              "depthLimit": 14,
+              "dualSweeps": 4,
+              "witnessSweeps": 4
+            },
+            "cover": "sssssssxsssxssxsxslxsxsxslxsxssssxlsxlsxslxssxsllsxslxsxssssxsllssxlsxlssxsllsxsllsssxsllssxlsxlssxsllsxsllssxsssssxslxxsssxlsllssxlsxlxsssxssxlsxlxssxssxlsxlxsssssxsslxslxxsssxslxxssslllssllslxssssxsllsslxlssxsllsxsxlsssslllssllsllssslllssllsllsssxsxssxlslxsxsxsslxslxssssxsllsxsxlsssllsllssllsllsssxsxlsxsllsssllsllssllsllssxssxsxssssxlxxssxslxxsxsssxsxsxlsssxlxssxlsxlssxsxsxlsxsslxsllsxsxssssxsxslxxsssxsxlsxsllssxsllsxsxlsxsssxslxxsssxlsllssllsxlssssxsxssssxsxlssxlsllxssssxlsllssxlsllxsssxsssxsxlsxlllllllll",
+            "objectives": [
+              {
+                "mask": 1,
+                "subset": [
+                  "coalition"
+                ],
+                "lower": "44/135",
+                "upper": "2/5",
+                "witness": {
+                  "x": [
+                    "71/135",
+                    "64/135",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "5/16",
+                    "0/1",
+                    "0/1",
+                    "11/16"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "307/540",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "1/27",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "2/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "2/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 2,
+                "subset": [
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 3,
+                "subset": [
+                  "coalition",
+                  "defection"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              },
+              {
+                "mask": 4,
+                "subset": [
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "4/5",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "13/20",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 5,
+                "subset": [
+                  "coalition",
+                  "hold"
+                ],
+                "lower": "4/5",
+                "upper": "4/5",
+                "witness": {
+                  "x": [
+                    "1/5",
+                    "0/1",
+                    "4/5",
+                    "0/1"
+                  ],
+                  "y": [
+                    "0/1",
+                    "1/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "4/5",
+                  "column_payoff": "13/20",
+                  "row_best_response": 0,
+                  "column_best_response": 1,
+                  "row_regret": "1/5",
+                  "column_regret": "0/1",
+                  "max_regret": "1/5",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "4/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "4/5",
+                  "updates": 1
+                }
+              },
+              {
+                "mask": 6,
+                "subset": [
+                  "defection",
+                  "hold"
+                ],
+                "lower": "1/1",
+                "upper": "1/1",
+                "witness": {
+                  "x": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "y": [
+                    "1/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "row_payoff": "1/1",
+                  "column_payoff": "1/4",
+                  "row_best_response": 0,
+                  "column_best_response": 0,
+                  "row_regret": "0/1",
+                  "column_regret": "0/1",
+                  "max_regret": "0/1",
+                  "certified": true,
+                  "threshold": "1/5"
+                },
+                "dual": {
+                  "lambda": [
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1",
+                    "0/1"
+                  ],
+                  "upper": "1/1",
+                  "updates": 0
+                }
+              }
+            ],
+            "witness_stats": {
+              "tested": 33,
+              "feasible": 33,
+              "improved": 9
+            },
+            "search_corner_evaluations": 318,
+            "verified": {
+              "worst_tv": {
+                "lower": "27/40",
+                "upper": "27/40"
+              },
+              "ranges": [
+                {
+                  "ending": "coalition",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "44/135",
+                  "max_upper": "2/5"
+                },
+                {
+                  "ending": "defection",
+                  "min_lower": "1/5",
+                  "min_witness": "1/5",
+                  "max_witness": "1/1",
+                  "max_upper": "1/1"
+                },
+                {
+                  "ending": "hold",
+                  "min_lower": "0/1",
+                  "min_witness": "0/1",
+                  "max_witness": "4/5",
+                  "max_upper": "4/5"
+                }
+              ],
+              "objectives": [
+                {
+                  "mask": 1,
+                  "lower": "44/135",
+                  "upper": "2/5"
+                },
+                {
+                  "mask": 2,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 3,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                },
+                {
+                  "mask": 4,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 5,
+                  "lower": "4/5",
+                  "upper": "4/5"
+                },
+                {
+                  "mask": 6,
+                  "lower": "1/1",
+                  "upper": "1/1"
+                }
+              ],
+              "cover": {
+                "splits": 256,
+                "excluded": 123,
+                "live": 134,
+                "unique_corner_evaluations": 318
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
