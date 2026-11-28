@@ -1,0 +1,56 @@
+name: Storyworld GDK app and StoryworldBench
+
+on:
+  pull_request:
+    paths:
+      - "gdk/**"
+      - "benchmarks/storyworld_bench/**"
+      - "codex-skills/storyworld-building/scripts/**"
+      - "codex-skills/small-storyworld-builder/scripts/**"
+      - "codex-skills/hyperworld-builder/scripts/**"
+      - "tools/probe_morality_batch_routing.py"
+      - ".github/workflows/storyworld-gdk.yml"
+  push:
+    branches: [main]
+    paths:
+      - "gdk/**"
+      - "benchmarks/storyworld_bench/**"
+      - "codex-skills/storyworld-building/scripts/**"
+      - "codex-skills/small-storyworld-builder/scripts/**"
+      - "codex-skills/hyperworld-builder/scripts/**"
+      - "tools/probe_morality_batch_routing.py"
+      - ".github/workflows/storyworld-gdk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: StoryworldBench tests and selftest (null 0, oracle 1 on every track; source hashes match the manifest)
+        run: |
+          python -m unittest discover -s benchmarks/storyworld_bench/tests
+          python -m benchmarks.storyworld_bench selftest
+      - name: Storyworld MCP server tests
+        run: PYTHONPATH=gdk python -m unittest discover -s gdk/tests -p "test_*.py" -v
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: gdk
+      - name: Build storyworld against goose-agent 0.1.0-alpha.14
+        working-directory: gdk
+        run: cargo build --release --locked || cargo build --release
+      - name: Unit tests (skills, packet-budget elision, text tool protocol)
+        working-directory: gdk
+        run: cargo test --release --locked || cargo test --release
+      - name: GDK app against a scripted OpenAI-compatible endpoint (small, hypergames, one bench task)
+        run: python gdk/ci_smoke.py gdk/target/release/storyworld --python python
