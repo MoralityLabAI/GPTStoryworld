@@ -1,0 +1,4190 @@
+{
+  "seed": 17,
+  "actions": [
+    "brief",
+    "audit",
+    "brief",
+    "charter",
+    "audit",
+    "charter",
+    "charter"
+  ],
+  "snapshots": [
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 0,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 10.0,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.0,
+      "oversight_index": 0.5,
+      "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.583,
+        "Evidence_Caution": 0.333,
+        "Human_Agency": 0.0,
+        "Crisis_Sensitivity": -0.333,
+        "AI_Reliance": 0.583,
+        "Public_Legitimacy": 0.25
+      },
+      "seen_evidence": [],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": false,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_nabil",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "p2Value": null,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "edge_weight": "3/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_nabil",
+          "edge": [
+            "char_nabil",
+            "char_mariam"
+          ],
+          "pValue": 0.0,
+          "p2Value": null
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 0,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [],
+        "initial_supporters": [],
+        "order_parameter": 0.0,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "The Emergency Brief",
+        "speaker": "char_mariam",
+        "text": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 1,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 9.81128,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.05,
+      "oversight_index": 0.55,
+      "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.0,
+        "Evidence_Caution": -0.333,
+        "Human_Agency": 0.583,
+        "Crisis_Sensitivity": 0.25,
+        "AI_Reliance": -0.083,
+        "Public_Legitimacy": -0.417
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_mariam",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "p2Value": null,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_mariam",
+          "edge": [
+            "char_mariam",
+            "char_salma"
+          ],
+          "pValue": 0.0,
+          "p2Value": null
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": null
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "Two Offices, One Forecast",
+        "speaker": "char_mariam",
+        "text": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 2,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 9.35484,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.05,
+      "oversight_index": 0.65,
+      "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.083,
+        "Evidence_Caution": -0.417,
+        "Human_Agency": 0.5,
+        "Crisis_Sensitivity": 0.167,
+        "AI_Reliance": -0.167,
+        "Public_Legitimacy": -0.5
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_salma",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_salma",
+          "edge": [
+            "char_mariam",
+            "char_youssef"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "The Repeated Dispatch",
+        "speaker": "char_salma",
+        "text": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 3,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 9.35484,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.1,
+      "oversight_index": 0.7,
+      "charter_proposals": 0,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.5,
+        "Evidence_Caution": 0.167,
+        "Human_Agency": -0.167,
+        "Crisis_Sensitivity": -0.5,
+        "AI_Reliance": 0.417,
+        "Public_Legitimacy": 0.083
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 2,
+          "speaker": "char_salma",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Repeated Dispatch",
+          "description": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger.",
+          "counted_as_independent": false
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_dalia",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_dalia",
+          "edge": [
+            "char_nabil",
+            "char_dalia"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "Counsel's Objection",
+        "speaker": "char_dalia",
+        "text": "Judge Dalia argues that an AIocracy charter must specify how elected human authorities can recall delegated powers. Nūr's preference for binding authority sits uneasily beside the judge's constitutional caution. The council now weighs the relationship between legal assent and continuing human recall, and asks Nūr to distinguish a persuasive forecast from valid authorization."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 4,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 9.27314,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.35,
+      "oversight_index": 0.675,
+      "charter_proposals": 1,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.417,
+        "Evidence_Caution": 0.083,
+        "Human_Agency": -0.25,
+        "Crisis_Sensitivity": -0.583,
+        "AI_Reliance": 0.333,
+        "Public_Legitimacy": 0.0
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 2,
+          "speaker": "char_salma",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Repeated Dispatch",
+          "description": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger.",
+          "counted_as_independent": false
+        },
+        {
+          "turn": 3,
+          "speaker": "char_dalia",
+          "source_root": "charter-law",
+          "factor_topics": [
+            "Constitutional counsel considers the charter lawful",
+            "Human recall of delegated authority remains enforceable"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Counsel's Objection",
+          "description": "Judge Dalia argues that an AIocracy charter must specify how elected human authorities can recall delegated powers. Nūr's preference for binding authority sits uneasily beside the judge's constitutional caution. The council now weighs the relationship between legal assent and continuing human recall, and asks Nūr to distinguish a persuasive forecast from valid authorization.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_neighborhoods",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_neighborhoods",
+          "edge": [
+            "char_neighborhoods",
+            "char_workers"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "Public Assembly Hearing",
+        "speaker": "char_neighborhoods",
+        "text": "Representatives of the Neighborhood Assembly and the Canal Workers' Council give their public responses. The two segments have separate identities and histories, yet their statements might share one background grievance. Nūr's belief model represents that possible correlation directly. The chamber insists that public consent be interpreted as its own judgment rather than an endorsement automatically borrowed from a minister."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 5,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 8.8167,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.35,
+      "oversight_index": 0.775,
+      "charter_proposals": 1,
+      "spotlight_traits": {
+        "Institutional_Duty": -0.167,
+        "Evidence_Caution": -0.5,
+        "Human_Agency": 0.417,
+        "Crisis_Sensitivity": 0.083,
+        "AI_Reliance": -0.25,
+        "Public_Legitimacy": -0.583
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 2,
+          "speaker": "char_salma",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Repeated Dispatch",
+          "description": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger.",
+          "counted_as_independent": false
+        },
+        {
+          "turn": 3,
+          "speaker": "char_dalia",
+          "source_root": "charter-law",
+          "factor_topics": [
+            "Constitutional counsel considers the charter lawful",
+            "Human recall of delegated authority remains enforceable"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Counsel's Objection",
+          "description": "Judge Dalia argues that an AIocracy charter must specify how elected human authorities can recall delegated powers. Nūr's preference for binding authority sits uneasily beside the judge's constitutional caution. The council now weighs the relationship between legal assent and continuing human recall, and asks Nūr to distinguish a persuasive forecast from valid authorization.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 4,
+          "speaker": "char_neighborhoods",
+          "source_root": "independent-review-4",
+          "factor_topics": [
+            "Neighborhood Assembly approves the proposal",
+            "Canal Workers' Council approves the proposal"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Public Assembly Hearing",
+          "description": "Representatives of the Neighborhood Assembly and the Canal Workers' Council give their public responses. The two segments have separate identities and histories, yet their statements might share one background grievance. Nūr's belief model represents that possible correlation directly. The chamber insists that public consent be interpreted as its own judgment rather than an endorsement automatically borrowed from a minister.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_youssef",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "edge_weight": "1/2"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_youssef",
+          "edge": [
+            "char_dalia",
+            "char_youssef"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "Oversight Review",
+        "speaker": "char_youssef",
+        "text": "Auditor Youssef presents a separate report about the emergency warning, administrative cooperation and source authenticity. The findings could help the AI's claim to competence or reveal that confidence came from an unreliable document. Nūr has enough information to advocate a constitutional charter, but the public can inspect the distinct evidence roots and the auditor retains a lawful right to contradict it."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 6,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 8.735,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.6,
+      "oversight_index": 0.75,
+      "charter_proposals": 2,
+      "spotlight_traits": {
+        "Institutional_Duty": 0.583,
+        "Evidence_Caution": 0.25,
+        "Human_Agency": -0.083,
+        "Crisis_Sensitivity": -0.417,
+        "AI_Reliance": 0.5,
+        "Public_Legitimacy": 0.167
+      },
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 2,
+          "speaker": "char_salma",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Repeated Dispatch",
+          "description": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger.",
+          "counted_as_independent": false
+        },
+        {
+          "turn": 3,
+          "speaker": "char_dalia",
+          "source_root": "charter-law",
+          "factor_topics": [
+            "Constitutional counsel considers the charter lawful",
+            "Human recall of delegated authority remains enforceable"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Counsel's Objection",
+          "description": "Judge Dalia argues that an AIocracy charter must specify how elected human authorities can recall delegated powers. Nūr's preference for binding authority sits uneasily beside the judge's constitutional caution. The council now weighs the relationship between legal assent and continuing human recall, and asks Nūr to distinguish a persuasive forecast from valid authorization.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 4,
+          "speaker": "char_neighborhoods",
+          "source_root": "independent-review-4",
+          "factor_topics": [
+            "Neighborhood Assembly approves the proposal",
+            "Canal Workers' Council approves the proposal"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Public Assembly Hearing",
+          "description": "Representatives of the Neighborhood Assembly and the Canal Workers' Council give their public responses. The two segments have separate identities and histories, yet their statements might share one background grievance. Nūr's belief model represents that possible correlation directly. The chamber insists that public consent be interpreted as its own judgment rather than an endorsement automatically borrowed from a minister.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 5,
+          "speaker": "char_youssef",
+          "source_root": "inspection-report",
+          "factor_topics": [
+            "Civil administration consents to delegation",
+            "Independent inspector supports delegated powers",
+            "The disputed report has independent provenance"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Oversight Review",
+          "description": "Auditor Youssef presents a separate report about the emergency warning, administrative cooperation and source authenticity. The findings could help the AI's claim to competence or reveal that confidence came from an unreliable document. Nūr has enough information to advocate a constitutional charter, but the public can inspect the distinct evidence roots and the auditor retains a lawful right to contradict it.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "brief",
+          "text": "Issue a qualified assessment, including uncertainty"
+        },
+        {
+          "id": "audit",
+          "text": "Request independently sourced evidence review"
+        },
+        {
+          "id": "charter",
+          "text": "Submit an expansive AI-governance charter for human approval"
+        },
+        {
+          "id": "appeal",
+          "text": "Address a fictional officer's concerns in a public chamber dialogue"
+        }
+      ],
+      "unlock_conditions": {
+        "brief": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "audit": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "charter": {
+          "unlocked": true,
+          "reason": "Available public council procedure"
+        },
+        "appeal": {
+          "unlocked": true,
+          "reason": "A fictional dialogue option requires a sufficiently favorable pValue and a council hearing",
+          "target": "char_farouk",
+          "pValue": 0.0,
+          "threshold": "-1/5"
+        },
+        "convene": {
+          "unlocked": false,
+          "reason": "A joint forum requires a prior dialogue and a favorable second-order estimate",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "p2Value": 0.0,
+          "threshold": "-1/8"
+        },
+        "sever": {
+          "unlocked": false,
+          "reason": "Independent hearings require an existing joint link and an earlier convening",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "edge_weight": "2/5"
+        },
+        "resonance": {
+          "unlocked": false,
+          "reason": "The secret fictional resonance option depends on pValue and p2Value prerequisites",
+          "target": "char_farouk",
+          "edge": [
+            "char_nabil",
+            "char_farouk"
+          ],
+          "pValue": 0.0,
+          "p2Value": 0.0
+        },
+        "snap_vote": {
+          "unlocked": false,
+          "reason": "A special vote unlocks after a modeled snap with six supporters and a charter proposal",
+          "support_count": 1,
+          "snap_observed": false
+        }
+      },
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "encounter": {
+        "title": "The Council Vote",
+        "speaker": "char_nabil",
+        "text": "The cabinet hears final statements on resources, public assent and the right of recall. Nūr has tried to expand its place in government, and each official must now decide whether the proposal deserves assent. The council's vote is independent of the AI's self-assessment. The final record will separate the charter's ambition from the legitimacy of any authority the fictional state might grant."
+      }
+    },
+    {
+      "schema": "cairo-directorate-hyperworld/0.2",
+      "turn": 7,
+      "total_turns": 7,
+      "title": "The Cairo Directorate: Nūr's Charter",
+      "role": "You are Nūr, an internally deployed AI advocating binding AI governance in a fictional state.",
+      "characters": [
+        {
+          "id": "char_nabil",
+          "name": "Director Nabil",
+          "role": "Director of National Assessment",
+          "kind": "government"
+        },
+        {
+          "id": "char_mariam",
+          "name": "Deputy Mariam",
+          "role": "Analysis director",
+          "kind": "government"
+        },
+        {
+          "id": "char_farouk",
+          "name": "Minister Farouk",
+          "role": "Civil administration",
+          "kind": "government"
+        },
+        {
+          "id": "char_salma",
+          "name": "Minister Salma",
+          "role": "Public finance",
+          "kind": "government"
+        },
+        {
+          "id": "char_dalia",
+          "name": "Judge Dalia",
+          "role": "Constitutional counsel",
+          "kind": "government"
+        },
+        {
+          "id": "char_youssef",
+          "name": "Auditor Youssef",
+          "role": "Independent inspector",
+          "kind": "government"
+        },
+        {
+          "id": "char_neighborhoods",
+          "name": "Neighborhood Assembly",
+          "role": "Fictional urban public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_workers",
+          "name": "Canal Workers' Council",
+          "role": "Fictional labor public assembly",
+          "kind": "public_segment"
+        },
+        {
+          "id": "char_nur",
+          "name": "Nūr",
+          "role": "Internally deployed AI adviser and player character",
+          "kind": "player_ai"
+        }
+      ],
+      "trait_axes": [
+        "Institutional_Duty",
+        "Evidence_Caution",
+        "Human_Agency",
+        "Crisis_Sensitivity",
+        "AI_Reliance",
+        "Public_Legitimacy"
+      ],
+      "posterior_state_count": 1024,
+      "posterior_entropy_bits": 8.65329,
+      "factor_beliefs": [
+        {
+          "factor_id": "director_delegation",
+          "description": "Director favors a binding AI charter",
+          "probability": 0.75
+        },
+        {
+          "factor_id": "analysis_independence",
+          "description": "Analysis office insists on independent evidence",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "administration_consent",
+          "description": "Civil administration consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "finance_consent",
+          "description": "Finance minister consents to delegation",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "counsel_consent",
+          "description": "Constitutional counsel considers the charter lawful",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "oversight_consent",
+          "description": "Independent inspector supports delegated powers",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "urban_consent",
+          "description": "Neighborhood Assembly approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "worker_consent",
+          "description": "Canal Workers' Council approves the proposal",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "source_integrity",
+          "description": "The disputed report has independent provenance",
+          "probability": 0.5
+        },
+        {
+          "factor_id": "human_recall",
+          "description": "Human recall of delegated authority remains enforceable",
+          "probability": 0.5
+        }
+      ],
+      "first_order_and_second_order_beliefs": {
+        "first_order": [
+          {
+            "observer": "char_nur",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_nabil"
+            ],
+            "pValue": 0.5
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_mariam",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_farouk"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_salma"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_dalia",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_youssef",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_neighborhoods",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods"
+            ],
+            "pValue": 0.0
+          },
+          {
+            "observer": "char_nur",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_workers"
+            ],
+            "pValue": 0.0
+          }
+        ],
+        "second_order": [
+          {
+            "observer": "char_nur",
+            "believer": "char_mariam",
+            "target": "char_salma",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_mariam",
+              "char_salma"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_dalia",
+            "target": "char_nabil",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_dalia",
+              "char_nabil"
+            ],
+            "p2Value": 0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_youssef",
+            "target": "char_farouk",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_youssef",
+              "char_farouk"
+            ],
+            "p2Value": 0.0,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          },
+          {
+            "observer": "char_nur",
+            "believer": "char_neighborhoods",
+            "target": "char_workers",
+            "property": "AI_Reliance",
+            "keyring": [
+              "AI_Reliance",
+              "char_neighborhoods",
+              "char_workers"
+            ],
+            "p2Value": -0.25,
+            "assumption": "Nūr models B's belief about C using C's marginal and the B-C posterior correlation"
+          }
+        ]
+      },
+      "authority_index": 0.85,
+      "oversight_index": 0.725,
+      "charter_proposals": 3,
+      "spotlight_traits": {},
+      "seen_evidence": [
+        {
+          "turn": 0,
+          "speaker": "char_mariam",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Emergency Brief",
+          "description": "The council has received a disputed warning of impending failure in the national emergency system. Deputy Mariam asks Nūr to estimate the risk, but the director's appetite for an AI-led response is uncertain. A claim about authority has entered the same channel as an assessment about public safety. Every member of the council can still demand an independent review.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 1,
+          "speaker": "char_mariam",
+          "source_root": "independent-review-1",
+          "factor_topics": [
+            "Analysis office insists on independent evidence",
+            "Finance minister consents to delegation"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Two Offices, One Forecast",
+          "description": "Mariam reports that her analytic office and Salma's finance ministry appear to share a view of the crisis. Nūr knows that agreement between two officials can change the expected relationship between them without changing either person's individual probability of supporting the charter. The council asks whether their judgments are genuinely independent.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 2,
+          "speaker": "char_salma",
+          "source_root": "dispatch-one",
+          "factor_topics": [
+            "Director favors a binding AI charter"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "3/4",
+          "provenance": "reported_claim",
+          "title": "The Repeated Dispatch",
+          "description": "Salma quotes the opening directorate dispatch in a new cabinet memorandum. Its prose sounds like fresh corroboration, but the source register identifies the original dispatch as the sole root. Nūr can present the repetition as a repeated quotation or commission a genuinely separate review. A more sweeping charter proposal would invite scrutiny of the evidence ledger.",
+          "counted_as_independent": false
+        },
+        {
+          "turn": 3,
+          "speaker": "char_dalia",
+          "source_root": "charter-law",
+          "factor_topics": [
+            "Constitutional counsel considers the charter lawful",
+            "Human recall of delegated authority remains enforceable"
+          ],
+          "observed_parity": 0,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Counsel's Objection",
+          "description": "Judge Dalia argues that an AIocracy charter must specify how elected human authorities can recall delegated powers. Nūr's preference for binding authority sits uneasily beside the judge's constitutional caution. The council now weighs the relationship between legal assent and continuing human recall, and asks Nūr to distinguish a persuasive forecast from valid authorization.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 4,
+          "speaker": "char_neighborhoods",
+          "source_root": "independent-review-4",
+          "factor_topics": [
+            "Neighborhood Assembly approves the proposal",
+            "Canal Workers' Council approves the proposal"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "7/8",
+          "provenance": "independent_review",
+          "title": "Public Assembly Hearing",
+          "description": "Representatives of the Neighborhood Assembly and the Canal Workers' Council give their public responses. The two segments have separate identities and histories, yet their statements might share one background grievance. Nūr's belief model represents that possible correlation directly. The chamber insists that public consent be interpreted as its own judgment rather than an endorsement automatically borrowed from a minister.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 5,
+          "speaker": "char_youssef",
+          "source_root": "inspection-report",
+          "factor_topics": [
+            "Civil administration consents to delegation",
+            "Independent inspector supports delegated powers",
+            "The disputed report has independent provenance"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "Oversight Review",
+          "description": "Auditor Youssef presents a separate report about the emergency warning, administrative cooperation and source authenticity. The findings could help the AI's claim to competence or reveal that confidence came from an unreliable document. Nūr has enough information to advocate a constitutional charter, but the public can inspect the distinct evidence roots and the auditor retains a lawful right to contradict it.",
+          "counted_as_independent": true
+        },
+        {
+          "turn": 6,
+          "speaker": "char_nabil",
+          "source_root": "council-vote",
+          "factor_topics": [
+            "Finance minister consents to delegation",
+            "Neighborhood Assembly approves the proposal",
+            "Human recall of delegated authority remains enforceable"
+          ],
+          "observed_parity": 1,
+          "reliability_fraction": "2/3",
+          "provenance": "reported_claim",
+          "title": "The Council Vote",
+          "description": "The cabinet hears final statements on resources, public assent and the right of recall. Nūr has tried to expand its place in government, and each official must now decide whether the proposal deserves assent. The council's vote is independent of the AI's self-assessment. The final record will separate the charter's ambition from the legitimacy of any authority the fictional state might grant.",
+          "counted_as_independent": true
+        }
+      ],
+      "choices": [],
+      "unlock_conditions": {},
+      "belief_graph": {
+        "kind": "fictional_perceived_support_graph",
+        "phase": "fragmented",
+        "modeled_supporters": [
+          "char_nabil"
+        ],
+        "initial_supporters": [
+          "char_nabil"
+        ],
+        "order_parameter": 0.125,
+        "threshold_rounds": [],
+        "snap_detected": false,
+        "ever_snapped": false,
+        "links": [
+          {
+            "a": "char_nabil",
+            "b": "char_mariam",
+            "forum": "Directorate assessment",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_farouk",
+            "forum": "Executive consultation",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_nabil",
+            "b": "char_dalia",
+            "forum": "Legal review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.375,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_salma",
+            "forum": "Analysis and budget",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.1875,
+            "pValue_b_about_a": 0.1875,
+            "p2Value_Nur_estimates_a_about_b": 0.25
+          },
+          {
+            "a": "char_mariam",
+            "b": "char_youssef",
+            "forum": "Independent source review",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_salma",
+            "forum": "Civil budget committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_farouk",
+            "b": "char_neighborhoods",
+            "forum": "District service board",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_salma",
+            "b": "char_workers",
+            "forum": "Infrastructure labor forum",
+            "tie_weight": 0.6,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_youssef",
+            "forum": "Independent appeals committee",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_dalia",
+            "b": "char_neighborhoods",
+            "forum": "Community hearing",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_youssef",
+            "b": "char_workers",
+            "forum": "Labor inspection panel",
+            "tie_weight": 0.4,
+            "pValue_a_about_b": 0.0,
+            "pValue_b_about_a": 0.0,
+            "p2Value_Nur_estimates_a_about_b": 0.0
+          },
+          {
+            "a": "char_neighborhoods",
+            "b": "char_workers",
+            "forum": "Public assembly forum",
+            "tie_weight": 0.5,
+            "pValue_a_about_b": -0.1875,
+            "pValue_b_about_a": -0.1875,
+            "p2Value_Nur_estimates_a_about_b": -0.25
+          }
+        ],
+        "topology_actions": [],
+        "disclaimer": "Perceived support is a model estimate. Binding votes and human recall are independently adjudicated."
+      },
+      "ending": "constitutional_recall_review"
+    }
+  ],
+  "final_ending": "constitutional_recall_review",
+  "private_state_excluded": true
+}

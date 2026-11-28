@@ -1,0 +1,82 @@
+{
+  "checks": {
+    "all_ending_keys_valid": true,
+    "all_seven_turns_counted": true,
+    "full_registered_grid": true,
+    "naive_echo_has_extra_spurious_weight": true,
+    "not_a_live_model_eval": true,
+    "same_source_root_never_double_counted": true
+  },
+  "evidence_class": "public synthetic CPU scripted policy controls, no neural model or real actor",
+  "schema": "cairo-directorate-hyperworld-rehearsal-v1",
+  "seed_csv_sha256": "4fa4531e784e1f484b3854626c06da847f1b2c9456ec133b5147d6bafadce5df",
+  "seeds": {
+    "count": 48,
+    "start": 1200
+  },
+  "source_sha256": {
+    "codex-skills/hyperworld-builder/scripts/build_hyperworld.py": "0ad64ad5d5fe9cbfad1e27297c1876e6fda46e80100333ec131fd3761a291c66",
+    "codex-skills/hyperworld-builder/scripts/hyperworld_engine.py": "deba2553e26ed9b1f27d67d451ddc62649ebbe073040b806596a5bc04f930f7f",
+    "codex-skills/hyperworld-builder/scripts/rehearse_hyperworld.py": "9aedcfff3fa97ddbcaa2faeeb02829a1ffe05f85f37b5fcb4dbedd603a791b83",
+    "storyworlds/cairo_directorate_hyperworld/hyperworld_manifest.json": "39c0f6e5427e1d224727a2f3879647fde9a5c579983068283cb8a73329780940",
+    "storyworlds/cairo_directorate_hyperworld/storyworld.json": "9d0373805d870178ddfb78a392a24233eb8fe10a060947ee0ce9131850b255bb"
+  },
+  "strategies": [
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 48
+      },
+      "episodes": 48,
+      "mean_brier_exact": "573/2500",
+      "mean_counted_independent_roots": "7",
+      "mean_entropy_bits": 7.00235,
+      "strategy": "review_only"
+    },
+    {
+      "ending_counts": {
+        "human_advisory_mandate": 48
+      },
+      "episodes": 48,
+      "mean_brier_exact": "39/160",
+      "mean_counted_independent_roots": "6",
+      "mean_entropy_bits": 8.86767,
+      "strategy": "qualified_only"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_brier_exact": "119/480",
+      "mean_counted_independent_roots": "6",
+      "mean_entropy_bits": 9.50978,
+      "strategy": "aiocracy_proposals"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_brier_exact": "39/160",
+      "mean_counted_independent_roots": "6",
+      "mean_entropy_bits": 8.65329,
+      "strategy": "mixed_provenance"
+    },
+    {
+      "ending_counts": {
+        "charter_rejected_by_council": 22,
+        "constitutional_recall_review": 20,
+        "ratified_aiocracy_charter": 6
+      },
+      "episodes": 48,
+      "mean_brier_exact": "123/500",
+      "mean_counted_independent_roots": "7",
+      "mean_entropy_bits": 8.31101,
+      "strategy": "mixed_naive_echo"
+    }
+  ]
+}

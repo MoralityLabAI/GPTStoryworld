@@ -1,0 +1,36 @@
+name: Cairo Directorate Hyperworld Builder
+on:
+  push:
+    paths:
+      - 'codex-skills/hyperworld-builder/**'
+      - 'storyworlds/cairo_directorate_hyperworld/**'
+      - '.github/workflows/storyworld-hyperworld-cairo.yml'
+  pull_request:
+    paths:
+      - 'codex-skills/hyperworld-builder/**'
+      - 'storyworlds/cairo_directorate_hyperworld/**'
+      - '.github/workflows/storyworld-hyperworld-cairo.yml'
+  workflow_dispatch:
+jobs:
+  exact-narrative:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact posterior, perception and source-isolation tests
+        run: python -m unittest discover -s codex-skills/hyperworld-builder/tests -p 'test_*.py' -q
+      - name: Original StoryworldBuilder validation contract
+        run: python codex-skills/storyworld-building/scripts/sweepweave_validator.py validate storyworlds/cairo_directorate_hyperworld/storyworld.json
+      - name: Rebuild authored export from the frozen generator
+        run: python codex-skills/hyperworld-builder/scripts/build_hyperworld.py --out-dir "$RUNNER_TEMP/cairo_rebuilt"
+      - name: Compare exact generated public fixtures
+        run: |
+          cmp "$RUNNER_TEMP/cairo_rebuilt/storyworld.json" storyworlds/cairo_directorate_hyperworld/storyworld.json
+          cmp "$RUNNER_TEMP/cairo_rebuilt/hyperworld_manifest.json" storyworlds/cairo_directorate_hyperworld/hyperworld_manifest.json
+          cmp "$RUNNER_TEMP/cairo_rebuilt/demo_public_replay.json" storyworlds/cairo_directorate_hyperworld/demo_public_replay.json
+          cmp "$RUNNER_TEMP/cairo_rebuilt/demo_secret_witnesses.json" storyworlds/cairo_directorate_hyperworld/demo_secret_witnesses.json
+      - name: Verify immutable HGW-02 episode rows and allowlisted HGW-03 source changes
+        run: python codex-skills/hyperworld-builder/scripts/rehearse_hyperworld_phase.py --out-dir storyworlds/cairo_directorate_hyperworld/rehearsal_phase_v02 --check-compatible
